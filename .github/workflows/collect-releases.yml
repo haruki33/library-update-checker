@@ -1,4 +1,4 @@
-name: Collect Releases
+name: Collect and Analyze Releases
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  collect:
+  collect-and-analyze:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +20,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/collect-releases.py
+
+      - name: Analyze releases with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/analyze-releases.py
 
       - name: Check for changes
         id: changes
@@ -36,5 +41,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data/releases.json
-          git commit -m "chore: update release archive"
+          git commit -m "chore: update release archive with AI analysis"
           git push
