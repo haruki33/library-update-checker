@@ -4,7 +4,7 @@ import { flexRender, getCoreRowModel, useReactTable, type ColumnDef } from '@tan
 import { fetchReleases } from './lib/releases'
 import type { Impact, LibraryRelease, ReleaseFilters } from './types'
 
-const initialFilters: ReleaseFilters = { dateRange: '30d', exactDate: '', libraries: [], version: '', breaking: 'all', impact: 'all' }
+const initialFilters: ReleaseFilters = { dateRange: '30d', libraries: [], version: '', breaking: 'all', impact: 'all' }
 const categoryLabels: Record<string, string> = { feature: 'Feature', bugfix: 'Bug Fix', performance: 'Performance', breaking: 'Breaking Change', other: 'Other' }
 const impactLabels: Record<Impact, string> = { high: 'High', medium: 'Medium', low: 'Low' }
 
@@ -14,7 +14,6 @@ function isWithinRange(date: string, range: ReleaseFilters['dateRange']) {
   return new Date(date).getTime() >= Date.now() - days * 24 * 60 * 60 * 1000
 }
 function formatDate(value: string) { return new Intl.DateTimeFormat('ja-JP', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(value)) }
-function getJapanDate(value: string) { return new Intl.DateTimeFormat('en-CA', { year: 'numeric', month: '2-digit', day: '2-digit', timeZone: 'Asia/Tokyo' }).format(new Date(value)) }
 
 function App() {
   const [filters, setFilters] = useState(initialFilters)
@@ -25,7 +24,6 @@ function App() {
 
   const filteredReleases = useMemo(() => releases
     .filter((release) => isWithinRange(release.publishedAt, filters.dateRange))
-    .filter((release) => !filters.exactDate || getJapanDate(release.publishedAt) === filters.exactDate)
     .filter((release) => filters.libraries.length === 0 || filters.libraries.includes(release.library))
     .filter((release) => release.version.toLowerCase().includes(filters.version.toLowerCase()))
     .filter((release) => filters.breaking === 'all' || (filters.breaking === 'breaking' ? release.breaking : !release.breaking))
@@ -50,7 +48,6 @@ function App() {
     <header className="hero"><div><p className="eyebrow">LIBRARY RELEASE TRACKER</p><h1>Library Release Tracker</h1><p>Release Notesを「自分が判断しやすい情報」に変換して蓄積する。</p></div><div className="summary-card"><strong>{filteredReleases.length}</strong><span>releases</span></div></header>
     <section className="filters" aria-label="Release filters">
       <label>Date range<select value={filters.dateRange} onChange={(event) => setFilter('dateRange', event.target.value as ReleaseFilters['dateRange'])}><option value="all">All</option><option value="7d">Last 7 days</option><option value="30d">Last 30 days</option><option value="3m">Last 3 months</option></select></label>
-      <label>Exact date<input type="date" value={filters.exactDate} onChange={(event) => setFilter('exactDate', event.target.value)} /></label>
       <label>Version<input value={filters.version} onChange={(event) => setFilter('version', event.target.value)} placeholder="19.2.0" /></label>
       <label>Breaking<select value={filters.breaking} onChange={(event) => setFilter('breaking', event.target.value as ReleaseFilters['breaking'])}><option value="all">All</option><option value="breaking">Breaking only</option><option value="non-breaking">No breaking</option></select></label>
       <label>Impact<select value={filters.impact} onChange={(event) => setFilter('impact', event.target.value as ReleaseFilters['impact'])}><option value="all">All</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></label>
