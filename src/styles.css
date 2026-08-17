@@ -57,7 +57,6 @@ tbody tr:last-child td { border-bottom: 0; }
 .empty { padding: 48px; text-align: center; color: #64748b; }
 .state { display: grid; place-items: center; min-height: 100vh; color: #64748b; }
 .error { color: #991b1b; }
-
 @media (max-width: 760px) {
   .app-shell { padding: 20px 12px 32px; }
   .hero { align-items: stretch; flex-direction: column; gap: 16px; margin-bottom: 18px; }
@@ -74,7 +73,12 @@ tbody tr:last-child td { border-bottom: 0; }
   tbody tr { padding: 14px; border-bottom: 1px solid #edf0f5; }
   tbody tr:last-child { border-bottom: 0; }
   td { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border: 0; }
-  td::before { content: attr(data-label); flex: 0 0 72px; color: #64748b; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+  td::before { flex: 0 0 72px; color: #64748b; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+  td:nth-child(1)::before { content: 'Library'; }
+  td:nth-child(2)::before { content: 'Version'; }
+  td:nth-child(3)::before { content: 'Date'; }
+  td:nth-child(4)::before { content: 'Impact'; }
+  td:nth-child(5)::before { content: 'Status'; }
   td:last-child { display: block; padding-top: 12px; }
   td:last-child::before { display: none; }
   .details { margin-top: 12px; padding: 14px; }
