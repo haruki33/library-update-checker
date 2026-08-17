@@ -14,6 +14,7 @@ DATA_PATH = ROOT / "public" / "data" / "releases.json"
 MODEL = "gemini-2.5-flash"
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models"
 MAX_ATTEMPTS = 3
+MAX_RELEASES_PER_RUN = 10
 
 SCHEMA = {
     "type": "OBJECT",
@@ -49,8 +50,45 @@ SCHEMA = {
 }
 
 
-def request_analysis(api_key: str, record: dict) -> dict:
-    url = f"{API_ROOT}/{MODEL}:generateContent?key={api_key}"
+def _read_http_error(exc: urllib.error.HTTPError) -> str:
+    try:
+        body = exc.read().decode("utf-8", errors="replace")
+        return f"HTTP {exc.code}: {body[:1000]}"
+    except Exception:
+        return f"HTTP {exc.code}: {exc.reason}"
+
+
+def resolve_model(api_key: str) -> str:
+    """Resolve the exact model exposed to the API key instead of assuming availability."""
+    url = f"{API_ROOT}?key={api_key}"
+    request = urllib.request.Request(url, headers={"User-Agent": "library-update-checker"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            result = json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(f"Gemini model discovery failed: {_read_http_error(exc)}") from exc
+
+    models = result.get("models", [])
+    for model in models:
+        name = model.get("name", "")
+        supported = model.get("supportedGenerationMethods", [])
+        if name == f"models/{MODEL}" and "generateContent" in supported:
+            return name
+
+    available = [
+        model.get("name", "")
+        for model in models
+        if "generateContent" in model.get("supportedGenerationMethods", [])
+        and "gemini" in model.get("name", "").lower()
+    ]
+    raise RuntimeError(
+        f"Gemini model '{MODEL}' is not available for this API key. "
+        f"Available generateContent Gemini models: {', '.join(available[:20]) or 'none'}"
+    )
+
+
+def request_analysis(api_key: str, model_name: str, record: dict) -> dict:
+    url = f"{API_ROOT}/{model_name.removeprefix('models/')}:generateContent?key={api_key}"
     prompt = f"""You are a software release analyst. Analyze the following GitHub Release Notes.
 
 Library: {record['library']}
@@ -84,8 +122,11 @@ Rules:
         headers={"Content-Type": "application/json", "User-Agent": "library-update-checker"},
         method="POST",
     )
-    with urllib.request.urlopen(request, timeout=90) as response:
-        result = json.load(response)
+    try:
+        with urllib.request.urlopen(request, timeout=90) as response:
+            result = json.load(response)
+    except urllib.error.HTTPError as exc:
+        raise RuntimeError(_read_http_error(exc)) from exc
 
     try:
         text = result["candidates"][0]["content"]["parts"][0]["text"]
@@ -125,14 +166,24 @@ def validate_analysis(data: dict) -> None:
         ids.add(change["id"])
 
 
-def analyze_with_retry(api_key: str, record: dict) -> dict:
+def analyze_with_retry(api_key: str, model_name: str, record: dict) -> dict:
     last_error = None
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
-            data = request_analysis(api_key, record)
+            data = request_analysis(api_key, model_name, record)
             validate_analysis(data)
             return data
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, ValueError) as exc:
+        except RuntimeError as exc:
+            last_error = exc
+            message = str(exc)
+            # 4xx configuration/model errors are not transient. Only retry rate limits.
+            if not message.startswith("HTTP 429"):
+                raise
+            if attempt < MAX_ATTEMPTS:
+                wait = 2 ** (attempt - 1)
+                print(f"Analysis rate-limited for {record['id']} (attempt {attempt}); retrying in {wait}s")
+                time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError, ValueError) as exc:
             last_error = exc
             if attempt < MAX_ATTEMPTS:
                 wait = 2 ** (attempt - 1)
@@ -146,23 +197,29 @@ def main() -> None:
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY is not set")
 
+    model_name = resolve_model(api_key)
+    print(f"Using Gemini model: {model_name}")
+
     releases = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     if not isinstance(releases, list):
         raise ValueError("releases.json must contain an array")
 
+    pending = [
+        record
+        for record in releases
+        if record.get("releaseNotes") and record.get("aiAnalyzed") is not True
+    ]
     changed = 0
-    for record in releases:
-        if not record.get("releaseNotes") or record.get("aiAnalyzed") is True:
-            continue
+    for record in pending[:MAX_RELEASES_PER_RUN]:
         print(f"Analyzing {record['library']} {record['version']}...")
-        analysis = analyze_with_retry(api_key, record)
+        analysis = analyze_with_retry(api_key, model_name, record)
         record.update(analysis)
         record["aiAnalyzed"] = True
         changed += 1
 
     if changed:
         DATA_PATH.write_text(json.dumps(releases, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Gemini analysis finished: {changed} release(s) analyzed.")
+    print(f"Gemini analysis finished: {changed} release(s) analyzed; {max(0, len(pending) - changed)} pending.")
 
 
 if __name__ == "__main__":
