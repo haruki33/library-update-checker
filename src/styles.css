@@ -12,15 +12,16 @@ h1 { margin: 0; font-size: clamp(30px, 4vw, 46px); letter-spacing: -.04em; }
 .summary-card strong { display: block; font-size: 32px; }
 .summary-card span { color: #64748b; font-size: 13px; }
 .filters { display: grid; grid-template-columns: repeat(4, minmax(120px, 1fr)); gap: 14px; margin-bottom: 18px; padding: 18px; border: 1px solid #dbe1ea; border-radius: 18px; background: white; }
-.filters label, .library-filter > span { display: flex; flex-direction: column; gap: 7px; color: #64748b; font-size: 12px; font-weight: 700; }
+.filters > label { display: flex; flex-direction: column; gap: 7px; color: #64748b; font-size: 12px; font-weight: 700; }
 select, input { width: 100%; min-width: 0; max-width: 100%; min-height: 40px; border: 1px solid #cfd7e3; border-radius: 10px; background: white; color: #172033; padding: 0 11px; outline: none; }
 select:focus, input:focus { border-color: #64748b; }
 .library-filter { grid-column: 1 / -1; }
-.library-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 2px; }
-.checkbox { flex-direction: row !important; align-items: center; gap: 8px !important; min-width: 0; padding: 9px 10px; border: 1px solid #e2e8f0; border-radius: 9px; background: #fafbfc; font-weight: 500 !important; color: #334155 !important; cursor: pointer; }
-.checkbox:hover { background: #f1f5f9; }
-.checkbox input { width: auto; min-width: 16px; min-height: 16px; flex: 0 0 auto; padding: 0; }
-.library-name { display: block; min-width: 0; overflow: hidden; color: #334155; font-size: 13px; font-weight: 500; white-space: nowrap; text-overflow: ellipsis; }
+.library-filter > span { display: block; margin-bottom: 7px; color: #64748b; font-size: 12px; font-weight: 700; }
+.library-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.library-option { display: flex !important; flex-direction: row !important; align-items: center !important; gap: 8px; min-width: 0; width: 100%; margin: 0; padding: 9px 10px; border: 1px solid #e2e8f0; border-radius: 9px; background: #fafbfc; color: #172033 !important; font-size: 13px !important; font-weight: 600 !important; line-height: 1.3; cursor: pointer; }
+.library-option:hover { background: #f1f5f9; }
+.library-option input { display: block; width: 16px !important; height: 16px; min-width: 16px; min-height: 16px; max-width: 16px; margin: 0; padding: 0; flex: 0 0 16px; }
+.library-option > span { display: block; min-width: 0; overflow: hidden; color: #172033 !important; font-size: 13px; font-weight: 600; line-height: 1.3; white-space: nowrap; text-overflow: ellipsis; }
 .release-list { overflow-x: auto; border: 1px solid #dbe1ea; border-radius: 18px; background: white; box-shadow: 0 8px 30px rgba(15, 23, 42, .05); }
 table { width: 100%; border-collapse: collapse; }
 th, td { padding: 16px; border-bottom: 1px solid #edf0f5; text-align: left; vertical-align: top; }
@@ -60,13 +61,12 @@ tbody tr:last-child td { border-bottom: 0; }
   .summary-card { width: 100%; min-width: 0; padding: 12px 16px; }
   .summary-card strong { font-size: 26px; }
   .filters { grid-template-columns: 1fr; gap: 10px; padding: 12px; border-radius: 14px; }
-  .filters label { min-width: 0; width: 100%; }
+  .filters > label { min-width: 0; width: 100%; }
   .filters input, .filters select { width: 100%; min-width: 0; max-width: 100%; }
   .library-filter { grid-column: auto; }
   .library-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; max-height: 180px; overflow-y: auto; padding: 4px 0; }
-  .checkbox { padding: 8px; overflow: hidden; }
-  .library-name { min-width: 0; }
-  .checkbox input { margin: 0; }
+  .library-option { min-width: 0; padding: 8px; }
+  .library-option > span { min-width: 0; }
   .release-list { overflow-x: visible; border-radius: 14px; }
   table, tbody, tr, td { display: block; width: 100%; }
   table { min-width: 0; }
