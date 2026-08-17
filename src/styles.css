@@ -40,7 +40,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .detail-heading { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
 .detail-heading h2 { margin: 0; font-size: 21px; }
 .detail-heading p { margin: 7px 0 0; color: #64748b; }
-.detail-heading a { display: inline-block; margin-top: 8px; color: #334155; font-size: 13px; font-weight: 700; }
+.detail-heading a { display: inline-block; margin-top: 24px; padding: 8px 12px; color: #334155; font-size: 13px; font-weight: 700; border: 1px solid #dbe1ea; border-radius: 8px; background: #fafbfc; text-decoration: none; }
+.detail-heading a:hover { background: #f1f5f9; }
 .migration-box { margin: 18px 0; padding: 14px 16px; border-radius: 12px; background: #fffbeb; border: 1px solid #fde68a; }
 .migration-box strong { color: #92400e; }
 .migration-box ol { margin: 10px 0 0; padding-left: 22px; color: #78350f; }
@@ -62,9 +63,8 @@ tbody tr:last-child td { border-bottom: 0; }
   .filters input, .filters select { width: 100%; min-width: 0; max-width: 100%; }
   .library-filter { grid-column: auto; }
   .library-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; max-height: 180px; overflow-y: auto; padding: 4px 0; }
-  .checkbox { padding: 8px; overflow: hidden; }
+  .checkbox { padding: 8px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
   .checkbox input { margin: 0; }
-  .checkbox { white-space: nowrap; text-overflow: ellipsis; }
   .release-list { overflow-x: visible; border-radius: 14px; }
   table, tbody, tr, td { display: block; width: 100%; }
   table { min-width: 0; }
@@ -83,7 +83,7 @@ tbody tr:last-child td { border-bottom: 0; }
   .details { margin-top: 12px; padding: 14px; }
   .detail-heading { flex-direction: column; gap: 10px; }
   .detail-heading h2 { font-size: 18px; }
-  .detail-heading a { margin-top: 6px; }
+  .detail-heading a { margin-top: 14px; width: 100%; text-align: center; }
   .change-item summary { align-items: flex-start; flex-direction: column; gap: 8px; }
   .change-meta { width: 100%; }
 }
