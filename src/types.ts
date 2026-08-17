@@ -30,7 +30,6 @@ export interface LibraryRelease {
 
 export interface ReleaseFilters {
   dateRange: 'all' | '7d' | '30d' | '3m'
-  exactDate: string
   libraries: string[]
   version: string
   breaking: 'all' | 'breaking' | 'non-breaking'
