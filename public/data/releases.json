@@ -14,7 +14,57 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "entrypoint-bigint",
+        "category": "feature",
+        "title": "bigint 用エントリポイントの追加",
+        "summary": "es-toolkit/bigint エントリポイントが追加され、BigInt に対応した数学関数群（sum、max、clamp 等）が利用可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "new-utility-functions",
+        "category": "feature",
+        "title": "新規ユーティリティ関数の追加",
+        "summary": "dedent、deepFreeze、mapValuesAsync、mapKeysAsync などの新しい関数が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "object-key-casing",
+        "category": "feature",
+        "title": "オブジェクトキーのケース変換関数および型定義の追加",
+        "summary": "toPascalCaseKeys、toKebabCaseKeys、toConstantCaseKeys および関連する型定義が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "flatten-object-preserve-arrays",
+        "category": "feature",
+        "title": "flattenObject への preserveArrays オプションの追加",
+        "summary": "flattenObject に配列をフラット化せず保持するための preserveArrays オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "core-bugfixes",
+        "category": "bugfix",
+        "title": "コア機能の修正および readonly 配列対応",
+        "summary": "retry、mergeWith、pullAt の不具合を修正し、at、orderBy などの関数で readonly 配列を受け取れるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "compat-lodash-improvements",
+        "category": "bugfix",
+        "title": "es-toolkit/compat の Lodash 互換性向上と不具合修正",
+        "summary": "entries および entriesIn の追加、および多数の compat 関数のエッジケース動作を Lodash の仕様に合わせる修正が行われました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "react-19.2.0",
@@ -72,10 +122,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6534",
+        "category": "bugfix",
+        "title": "初回マウント時のオプション更新の修正",
+        "summary": "初回マウント中にオプションの更新が正しく適用されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#369583389",
@@ -85,14 +145,27 @@
     "publishedAt": "2026-08-12T23:30:25Z",
     "url": "https://github.com/TanStack/query/releases/tag/release-2026-08-12-2330",
     "releaseNotes": "Release 2026-08-12 23:30\n\n## Changes\n\n### Chore\n\n- upgrade to solid v2 rc, rename vite-plugin-solid, move branch to rc (#11173) (7b04d6195) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-query@6.0.0-rc.0\n- @tanstack/solid-query-devtools@6.0.0-rc.0\n- @tanstack/solid-query-persist-client@6.0.0-rc.0\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "Solid v2 RCへのアップデートおよびViteプラグイン名の変更に対応する必要があります。",
+      "steps": [
+        "Solid.jsのバージョンをv2 RCへ更新してください。",
+        "vite-plugin-solidの名称変更に合わせて設定ファイルの記述を更新してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11173",
+        "category": "other",
+        "title": "Solid v2 RCへのアップデートと関連設定の変更",
+        "summary": "Solid v2 RCへの移行、vite-plugin-solidの名称変更、RCブランチへの移動を実施しました。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#369583377",
@@ -106,10 +179,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11173",
+        "category": "other",
+        "title": "Solid.js v2 RCへのアップグレードとViteプラグインの更新",
+        "summary": "Solid.js v2 RCへのアップグレードが行われ、vite-plugin-solidが@solidjs/vite-pluginに変更されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#369583353",
@@ -126,7 +209,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11173",
+        "category": "other",
+        "title": "Solid v2 RCへのアップグレードおよびViteプラグインの更新",
+        "summary": "Solid v2 RCへのアップグレードが行われ、vite-plugin-solidから@solidjs/vite-pluginへの変更が適用されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#369583343",
@@ -137,13 +230,23 @@
     "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query%406.0.0-rc.0",
     "releaseNotes": "### Patch Changes\n\n-   [#11173](https://github.com/TanStack/query/pull/11173) [`7b04d61`](https://github.com/TanStack/query/commit/7b04d6195571b40383163e691c757a20c27c9392) - chore: upgrade to solid v2 rc and rename `vite-plugin-solid` to `@solidjs/vite-plugin`\n",
     "breaking": false,
-    "impact": "low",
+    "impact": "medium",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特に必要な移行作業はありません。必要に応じてViteプラグインのパッケージ名（@solidjs/vite-plugin）を確認してください。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11173",
+        "category": "other",
+        "title": "Solid v2 RCへの移行とViteプラグインの名称変更",
+        "summary": "Solid v2 RCへのアップグレードを実施し、vite-plugin-solidから@solidjs/vite-pluginへのパッケージ名変更に対応しました。",
+        "impact": "medium",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vite-7.1.0",
@@ -189,10 +292,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別に必要な移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1154",
+        "category": "bugfix",
+        "title": "Yarn audit の警告修正",
+        "summary": "再帰的な yarn audit 警告を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "1155",
+        "category": "other",
+        "title": "Astro のバージョン更新",
+        "summary": "Astro を 6.4.8 から 7.1.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "1156",
+        "category": "other",
+        "title": "SVGO のバージョン更新",
+        "summary": "svgo を 3.3.3 から 3.3.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "1157",
+        "category": "other",
+        "title": "immutable のバージョン更新",
+        "summary": "immutable を 5.1.7 から 5.1.9 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitest-dev/vitest#368910992",
@@ -202,14 +339,156 @@
     "publishedAt": "2026-08-11T23:41:46Z",
     "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.0-rc.1",
     "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚨 Breaking Changes\n\n- Inline projects extend the root config by default &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10750 [<samp>(fec00)</samp>](https://github.com/vitest-dev/vitest/commit/fec001ad3)\n- Enable mocking Temporal without fake timers &nbsp;-&nbsp; by @fabon-f, **Hiroshi Ogawa** and **OpenCode** in https://github.com/vitest-dev/vitest/issues/10757 [<samp>(ac2d4)</samp>](https://github.com/vitest-dev/vitest/commit/ac2d46b42)\n- Support nested projects &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10846 [<samp>(ec367)</samp>](https://github.com/vitest-dev/vitest/commit/ec367cf2a)\n- Use `>` as separator in `-t`, calculate `only` once &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10686 [<samp>(a0b20)</samp>](https://github.com/vitest-dev/vitest/commit/a0b20bc86)\n- Fail the test when an asynchronous assertion is not awaited &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10868 [<samp>(86d4a)</samp>](https://github.com/vitest-dev/vitest/commit/86d4a9da9)\n- Share the Vite server between inline projects &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10848 [<samp>(d87c9)</samp>](https://github.com/vitest-dev/vitest/commit/d87c96ee4)\n- **browser**: Save failure screenshots in `attachmentsDir` &nbsp;-&nbsp; by @macarie in https://github.com/vitest-dev/vitest/issues/10917 [<samp>(3b5bb)</samp>](https://github.com/vitest-dev/vitest/commit/3b5bbd8b4)\n- **spy**: Preserve class mock prototype methods on instances &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10910 [<samp>(6093d)</samp>](https://github.com/vitest-dev/vitest/commit/6093d764a)\n- **types**: Add better promise support in expects and matchers &nbsp;-&nbsp; by @samchungy and @sheremet-va in https://github.com/vitest-dev/vitest/issues/8266 [<samp>(41f55)</samp>](https://github.com/vitest-dev/vitest/commit/41f551bce)\n\n### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- Report the duration breakdown as percentages &nbsp;-&nbsp; by @sheremet-va and @AriPerkkio in https://github.com/vitest-dev/vitest/issues/10820 [<samp>(c67d2)</samp>](https://github.com/vitest-dev/vitest/commit/c67d296f4)\n- **cli**: Support -p shorthand for --project &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10826 [<samp>(1addd)</samp>](https://github.com/vitest-dev/vitest/commit/1adddde12)\n- **vm**: Support `require(esm)` in vm pools &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10829 [<samp>(01298)</samp>](https://github.com/vitest-dev/vitest/commit/01298e5b3)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Coalesce concurrent watch-mode restarts, deflake the pool stderr fixture &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10822 [<samp>(a31f8)</samp>](https://github.com/vitest-dev/vitest/commit/a31f86af7)\n- Prevent `vitest --typecheck` from reporting a false success when the `tsc` process crashes &nbsp;-&nbsp; by @hitenkalda and **Hiten Kalda** in https://github.com/vitest-dev/vitest/issues/10705 [<samp>(a1b05)</samp>](https://github.com/vitest-dev/vitest/commit/a1b0565c9)\n- Collect in-source tests when the module is cached &nbsp;-&nbsp; by @koutaro-masaki in https://github.com/vitest-dev/vitest/issues/10577 and https://github.com/vitest-dev/vitest/issues/10589 [<samp>(a7bf2)</samp>](https://github.com/vitest-dev/vitest/commit/a7bf2b2c8)\n- Swap replace() arguments so timeout error stack shows the real message &nbsp;-&nbsp; by @lazerg in https://github.com/vitest-dev/vitest/issues/10875 [<samp>(aba0f)</samp>](https://github.com/vitest-dev/vitest/commit/aba0f9b7b)\n- Stale mock metadata breaks automocking with isolate:false &nbsp;-&nbsp; by @kade-robertson in https://github.com/vitest-dev/vitest/issues/10145 and https://github.com/vitest-dev/vitest/issues/10541 [<samp>(8e210)</samp>](https://github.com/vitest-dev/vitest/commit/8e2108dda)\n- Don't lose worker output on teardown, deflake timing-sensitive tests &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10842 [<samp>(1216b)</samp>](https://github.com/vitest-dev/vitest/commit/1216b5af9)\n- **browser**:\n  - Ignore channel events in a tester opened as a top-level window &nbsp;-&nbsp; by @simshanith in https://github.com/vitest-dev/vitest/issues/9379 and https://github.com/vitest-dev/vitest/issues/9381 [<samp>(46a3c)</samp>](https://github.com/vitest-dev/vitest/commit/46a3cf750)\n  - Resolve `connectTimeout` from the project config &nbsp;-&nbsp; by @lazerg in https://github.com/vitest-dev/vitest/issues/10879 and https://github.com/vitest-dev/vitest/issues/10880 [<samp>(62c79)</samp>](https://github.com/vitest-dev/vitest/commit/62c795d63)\n  - Prebundle vite module runner with vitest &nbsp;-&nbsp; by @lebovvskii and @sheremet-va in https://github.com/vitest-dev/vitest/issues/10836 and https://github.com/vitest-dev/vitest/issues/10856 [<samp>(37c24)</samp>](https://github.com/vitest-dev/vitest/commit/37c240158)\n  - Restore dependency reload warning &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode** in https://github.com/vitest-dev/vitest/issues/10913 [<samp>(90d69)</samp>](https://github.com/vitest-dev/vitest/commit/90d696d44)\n  - Configure internal optimizer dependencies &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode** in https://github.com/vitest-dev/vitest/issues/10915 [<samp>(a72f4)</samp>](https://github.com/vitest-dev/vitest/commit/a72f46eac)\n- **cache**:\n  - Improve `fsModuleCache` resiliency during external modifications &nbsp;-&nbsp; by @jszumski in https://github.com/vitest-dev/vitest/issues/10869 [<samp>(5eb35)</samp>](https://github.com/vitest-dev/vitest/commit/5eb3570e8)\n- **cli**:\n  - Exit on `CTRL+c` even when `globalSetup` runs blocked code &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/10863 [<samp>(d568f)</samp>](https://github.com/vitest-dev/vitest/commit/d568f8ce3)\n- **deps**:\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/9958 [<samp>(7faa7)</samp>](https://github.com/vitest-dev/vitest/commit/7faa7b04a)\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10861 [<samp>(0188c)</samp>](https://github.com/vitest-dev/vitest/commit/0188c8135)\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10898 [<samp>(61c4b)</samp>](https://github.com/vitest-dev/vitest/commit/61c4b8024)\n- **expect**:\n  - Handle nullish toHaveProperty values &nbsp;-&nbsp; by @liyimil in https://github.com/vitest-dev/vitest/issues/10735 and https://github.com/vitest-dev/vitest/issues/10811 [<samp>(99e59)</samp>](https://github.com/vitest-dev/vitest/commit/99e596d33)\n- **reporters**:\n  - Print parent describe suites when the passed-test list is hidden &nbsp;-&nbsp; by @ChihebBENCHEIKH1, **Chiheb Bencheikh** and @sheremet-va in https://github.com/vitest-dev/vitest/issues/10606 and https://github.com/vitest-dev/vitest/issues/10768 [<samp>(658af)</samp>](https://github.com/vitest-dev/vitest/commit/658affeb3)\n- **runner**:\n  - Don't fail collection when accessing `error.stack` throws &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10839 [<samp>(202e2)</samp>](https://github.com/vitest-dev/vitest/commit/202e27f3d)\n- **spy**:\n  - Point ESM namespace spy error to module mocking docs &nbsp;-&nbsp; by @ryandiginomad and **Ryan Tang** in https://github.com/vitest-dev/vitest/issues/10707 [<samp>(d6cec)</samp>](https://github.com/vitest-dev/vitest/commit/d6ceca9d7)\n- **typecheck**:\n  - Report a checker crash on Windows instead of a spawn failure &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10907 [<samp>(77aac)</samp>](https://github.com/vitest-dev/vitest/commit/77aac87dd)\n- **vitest**:\n  - Remove broken \"./src/*\" export from package.json &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10918 [<samp>(2e5df)</samp>](https://github.com/vitest-dev/vitest/commit/2e5df7543)\n- **vm**:\n  - Stop retaining every finished test file in vm pool workers &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10854 [<samp>(38503)</samp>](https://github.com/vitest-dev/vitest/commit/3850323e2)\n\n### &nbsp;&nbsp;&nbsp;🏎 Performance\n\n- Lowers peak memory usage when using `--changed` on a large graph &nbsp;-&nbsp; by @jszumski in https://github.com/vitest-dev/vitest/issues/10866 [<samp>(9f23f)</samp>](https://github.com/vitest-dev/vitest/commit/9f23f8ec3)\n- **browser**: Serve framework assets as immutable &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10729 [<samp>(7af87)</samp>](https://github.com/vitest-dev/vitest/commit/7af8755ae)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.0-beta.7...v5.0.0-rc.1)",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "high",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "Vitest v5.0.0-rc.1 では複数の非互換的変更（破壊的変更）が含まれています。特に非同期アサーションの await 必須化や、`-t` オプションの区切り文字変更、インラインプロジェクトの設定継承に関する対応が必要です。",
+      "steps": [
+        "await されていない非同期アサーション (expect(...).resolves や rejects など) がある場合、テストが失敗するため明示的に await を付与してください。",
+        "`-t` オプションでネストしたテストを指定している場合、区切り文字が `>` に変更されたためコマンドライン引数を見直してください。",
+        "インラインプロジェクトを使用している場合、ルート設定の拡張や Vite サーバー共有の変更による挙動の変化を確認してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "fec00",
+        "category": "breaking",
+        "title": "インラインプロジェクトがデフォルトでルート設定を拡張",
+        "summary": "インラインプロジェクトがデフォルトでルートの設定を継承・拡張するようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "ac2d4",
+        "category": "breaking",
+        "title": "フェイクタイマーなしでの Temporal モックを有効化",
+        "summary": "フェイクタイマーを使用しなくても Temporal のモックが可能になりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "ec367",
+        "category": "breaking",
+        "title": "ネストされたプロジェクトのサポート",
+        "summary": "プロジェクトのネスト構造をサポートしました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "a0b20",
+        "category": "breaking",
+        "title": "`-t` のセパレータ変更と `only` 計算の最適化",
+        "summary": "`-t` オプションのセパレータとして `>` を使用し、`only` の計算を1回のみ行うよう変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "86d4a",
+        "category": "breaking",
+        "title": "未 await の非同期アサーションでテストを失敗化",
+        "summary": "非同期アサーションが await されていない場合にテストを失敗させるように変更されました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "d87c9",
+        "category": "breaking",
+        "title": "インラインプロジェクト間で Vite サーバーを共有",
+        "summary": "インラインプロジェクト間で Vite サーバーインスタンスを共有するようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "3b5bb",
+        "category": "breaking",
+        "title": "ブラウザモードでの失敗スクリーンショット保存先変更",
+        "summary": "失敗時のスクリーンショットが `attachmentsDir` に保存されるようになりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "6093d",
+        "category": "breaking",
+        "title": "スパイ処理でクラスモックのプロトタイプメソッドを保持",
+        "summary": "インスタンス上でクラスモックのプロトタイプメソッドが保持されるようになりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "41f55",
+        "category": "breaking",
+        "title": "型定義における Promise サポートの向上",
+        "summary": "expect および matcher における Promise の型サポートを改善しました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "c67d2",
+        "category": "feature",
+        "title": "実行時間内訳のパーセンテージ表示",
+        "summary": "テスト実行時間の詳細な内訳をパーセンテージで報告する機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "1addd",
+        "category": "feature",
+        "title": "CLIで `--project` の `-p` ショートハンドをサポート",
+        "summary": "CLI引数において `--project` の短縮形 `-p` が利用可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "01298",
+        "category": "feature",
+        "title": "vm プールにおける `require(esm)` サポート",
+        "summary": "vm プール内で ESM の require 呼び出しをサポートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a31f8",
+        "category": "bugfix",
+        "title": "ウォッチモードの並行再起動の一体化とテスト不確実性の改善",
+        "summary": "連続したウォッチモードの再起動をまとめ、テストの不安定さを解消しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a1b05",
+        "category": "bugfix",
+        "title": "`tsc` クラッシュ時の誤成功レポートを防止",
+        "summary": "`vitest --typecheck` 実行時に `tsc` プロセスがクラッシュした場合、成功と誤報告されないよう修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "a7bf2",
+        "category": "bugfix",
+        "title": "モジュールキャッシュ時のインソーステスト収集修正",
+        "summary": "モジュールがキャッシュされている場合でもインソーステストを正しく収集できるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9f23f",
+        "category": "performance",
+        "title": "`--changed` 使用時のピークメモリ削減",
+        "summary": "大規模依存グラフで `--changed` を使用した際のピークメモリ使用量を低減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7af87",
+        "category": "performance",
+        "title": "ブラウザモードでのフレームワークアセットの immutable 配信",
+        "summary": "ブラウザテストにおいてフレームワークのアセットを immutable として配信しパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#368872181",
@@ -223,10 +502,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11168",
+        "category": "bugfix",
+        "title": "solid-queryにおけるハイドレーションデータのストリーミング消費の修正",
+        "summary": "プロバイダーが所有するストリーミングチャネルを介してクライアント側でハイドレーションデータを消費するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#368872163",
@@ -236,14 +525,26 @@
     "publishedAt": "2026-08-11T21:43:03Z",
     "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-devtools%406.0.0-beta.8",
     "releaseNotes": "### Patch Changes\n\n-   [#11168](https://github.com/TanStack/query/pull/11168) [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085) - chore: upgrade to solid v2 beta 33. `@tanstack/solid-query` now requires solid-js >= 2.0.0-beta.33 (peer range floor raised): the provider-owned hydration channel depends on beta.33's `normalizeIterator` buffered-replay conflation fix — on beta.32 and earlier, hydration that begins after multiple stream chunks have arrived silently drops later channel yields, leaving queries never primed and their components frozen.\n\n-   Updated dependencies \\[[`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085), [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085)]:\n    -   @tanstack/solid-query@6.0.0-beta.8\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "solid-js のバージョンを 2.0.0-beta.33 以降にアップグレードしてください。",
+      "steps": [
+        "solid-js を 2.0.0-beta.33 以降に更新します。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11168",
+        "category": "breaking",
+        "title": "solid-js ピア依存関係の最小バージョン引き上げ",
+        "summary": "@tanstack/solid-query の solid-js ピア依存関係の要件が >= 2.0.0-beta.33 に引き上げられました。これにより、beta.32 以前で発生していたハイドレーション時にクエリが完了せずコンポーネントがフリーズする問題が解消されます。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#368872141",
