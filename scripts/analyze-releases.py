@@ -14,7 +14,9 @@ DATA_PATH = ROOT / "public" / "data" / "releases.json"
 MODEL = "gemini-3.6-flash"
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models"
 MAX_ATTEMPTS = 3
+RETRY_DELAYS_SECONDS = (10, 30, 60)
 MAX_RELEASES_PER_RUN = 10
+RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
 
 SCHEMA = {
     "type": "OBJECT",
@@ -34,6 +36,10 @@ def _read_http_error(exc: urllib.error.HTTPError) -> str:
         return f"HTTP {exc.code}: {body[:1000]}"
     except Exception:
         return f"HTTP {exc.code}: {exc.reason}"
+
+
+def _is_retryable_error(exc: RuntimeError) -> bool:
+    return any(str(exc).startswith(f"HTTP {code}") for code in RETRYABLE_HTTP_CODES)
 
 
 def resolve_model(api_key: str) -> str:
@@ -122,19 +128,19 @@ def analyze_with_retry(api_key: str, model_name: str, record: dict) -> dict:
             return data
         except RuntimeError as exc:
             last_error = exc
-            if not str(exc).startswith("HTTP 429"):
+            if not _is_retryable_error(exc):
                 raise
             if attempt < MAX_ATTEMPTS:
-                wait = 2 ** (attempt - 1)
-                print(f"Analysis rate-limited for {record['id']} (attempt {attempt}); retrying in {wait}s")
+                wait = RETRY_DELAYS_SECONDS[attempt - 1]
+                print(f"Analysis temporarily unavailable for {record['id']} (attempt {attempt}/{MAX_ATTEMPTS}): {exc}; retrying in {wait}s")
                 time.sleep(wait)
         except (urllib.error.URLError, TimeoutError, ValueError) as exc:
             last_error = exc
             if attempt < MAX_ATTEMPTS:
-                wait = 2 ** (attempt - 1)
-                print(f"Analysis failed for {record['id']} (attempt {attempt}): {exc}; retrying in {wait}s")
+                wait = RETRY_DELAYS_SECONDS[attempt - 1]
+                print(f"Analysis failed for {record['id']} (attempt {attempt}/{MAX_ATTEMPTS}): {exc}; retrying in {wait}s")
                 time.sleep(wait)
-    raise RuntimeError(f"Gemini analysis failed for {record['id']}: {last_error}")
+    raise RuntimeError(f"Gemini analysis failed for {record['id']} after {MAX_ATTEMPTS} attempts: {last_error}")
 
 
 def main() -> None:
@@ -148,14 +154,20 @@ def main() -> None:
         raise ValueError("releases.json must contain an array")
     pending = [r for r in releases if r.get("releaseNotes") and r.get("aiAnalyzed") is not True]
     changed = 0
+    skipped = 0
     for record in pending[:MAX_RELEASES_PER_RUN]:
         print(f"Analyzing {record['library']} {record['version']}...")
-        record.update(analyze_with_retry(api_key, model_name, record))
-        record["aiAnalyzed"] = True
-        changed += 1
+        try:
+            record.update(analyze_with_retry(api_key, model_name, record))
+            record["aiAnalyzed"] = True
+            changed += 1
+        except RuntimeError as exc:
+            skipped += 1
+            print(f"WARNING: Skipping {record['id']} after analysis failure: {exc}", file=sys.stderr)
+            continue
     if changed:
         DATA_PATH.write_text(json.dumps(releases, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Gemini analysis finished: {changed} release(s) analyzed; {max(0, len(pending) - changed)} pending.")
+    print(f"Gemini analysis finished: {changed} release(s) analyzed, {skipped} skipped; {max(0, len(pending) - changed - skipped)} pending.")
 
 
 if __name__ == "__main__":
