@@ -2,11 +2,13 @@
 import json
 from pathlib import Path
 
+LIBUARYS_COUNT = 22
+
 ROOT = Path(__file__).resolve().parents[1]
 config = json.loads((ROOT / "config" / "libraries.json").read_text(encoding="utf-8"))
 releases = json.loads((ROOT / "public" / "data" / "releases.json").read_text(encoding="utf-8"))
 
-assert isinstance(config, list) and len(config) == 18
+assert isinstance(config, list) and len(config) == LIBUARYS_COUNT
 assert len({item["github"] for item in config}) == len(config)
 for item in config:
     assert set(item) == {"name", "github", "enabled"}
