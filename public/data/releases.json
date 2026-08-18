@@ -1,5 +1,253 @@
 [
   {
+    "id": "remix-run/react-router#372432966",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@6.30.6",
+    "publishedAt": "2026-08-18T14:55:01Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%406.30.6",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/v6/CHANGELOG.md#v6306",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースに関する詳細な変更内容は記述されておらず、特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#372407567",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v4.1.11",
+    "publishedAt": "2026-08-18T14:21:05Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v4.1.11",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Revive global concurrency limit for test lifecycle [backport to v4] &nbsp;-&nbsp; by @sheremet-va and @hi-ogawa in https://github.com/vitest-dev/vitest/issues/10992 [<samp>(5146d)</samp>](https://github.com/vitest-dev/vitest/commit/5146df80b)\n- **browser**:\n  - Encode iframeId in tester iframe URL [backport to v4] &nbsp;-&nbsp; by @sheremet-va, **Pduhard** and **Claude Opus 4.8** in https://github.com/vitest-dev/vitest/issues/10955 [<samp>(10b2c)</samp>](https://github.com/vitest-dev/vitest/commit/10b2cd201)\n  - Trigger playwright/chromium gc on lower disk availability [backport to v4] &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode** in https://github.com/vitest-dev/vitest/issues/10951 [<samp>(9851d)</samp>](https://github.com/vitest-dev/vitest/commit/9851dbc41)\n- **mocker**:\n  - Restrict redirect mocks to the fs allowlist [backport to v4] &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10974 [<samp>(fe5a1)</samp>](https://github.com/vitest-dev/vitest/commit/fe5a11d3c)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v4.1.10...v4.1.11)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "10992",
+        "category": "bugfix",
+        "title": "テストライフサイクルのグローバル並列実行制限の復元",
+        "summary": "テストのライフサイクルにおけるグローバルな並列実行制限を復元しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "10955",
+        "category": "bugfix",
+        "title": "ブラウザモードにおけるiframeIdのURLエンコード",
+        "summary": "テスターiframeのURLに含まれるiframeIdを正しくエンコードするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "10951",
+        "category": "bugfix",
+        "title": "ディスク容量低下時におけるPlaywright/ChromiumのGCトリガー",
+        "summary": "利用可能なディスク容量が少なくなった際にPlaywright/Chromiumのガベージコレクションを発生させるように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "10974",
+        "category": "bugfix",
+        "title": "モッカーにおけるリダイレクトモックのfsアローリスト制限",
+        "summary": "リダイレクトモックの対象をfsアローリスト内に制限するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#371773032",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.0-rc.2",
+    "publishedAt": "2026-08-17T13:23:20Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.0-rc.2",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- **reporter**: Add custom GitHub Actions summary title &nbsp;-&nbsp; by @heyJonBray and @macarie in https://github.com/vitest-dev/vitest/issues/10891 [<samp>(4363c)</samp>](https://github.com/vitest-dev/vitest/commit/4363cdb49)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Revive global concurrency limit for test lifecycle &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **OpenCode (claude-opus-4-8)** and @sheremet-va in https://github.com/vitest-dev/vitest/issues/10928 [<samp>(cf917)</samp>](https://github.com/vitest-dev/vitest/commit/cf9176bfc)\n- Own the post-restart rerun, keep `process.exit` disabled in workers &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10963 [<samp>(5e69a)</samp>](https://github.com/vitest-dev/vitest/commit/5e69aba65)\n- Preserve correct root during resolve config &nbsp;-&nbsp; by @AriPerkkio and @sheremet-va in https://github.com/vitest-dev/vitest/issues/10909 [<samp>(210ba)</samp>](https://github.com/vitest-dev/vitest/commit/210ba00cb)\n- **browser**:\n  - Trigger playwright/chromium gc on lower disk availability &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode (claude-opus-4-8)** in https://github.com/vitest-dev/vitest/issues/10912 [<samp>(032d3)</samp>](https://github.com/vitest-dev/vitest/commit/032d31892)\n  - Disallow filter-only options in getBy* locators &nbsp;-&nbsp; by @arjun2075 in https://github.com/vitest-dev/vitest/issues/10295 and https://github.com/vitest-dev/vitest/issues/10933 [<samp>(9b4df)</samp>](https://github.com/vitest-dev/vitest/commit/9b4df4b05)\n  - Fail instead of hanging when the browser stops responding &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10956 [<samp>(c496c)</samp>](https://github.com/vitest-dev/vitest/commit/c496c2e33)\n  - Exit gracefully when the browser disconnects during cancellation &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10962 [<samp>(67e84)</samp>](https://github.com/vitest-dev/vitest/commit/67e848564)\n  - Don't redirect vitest in client environment &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10975 [<samp>(aeb67)</samp>](https://github.com/vitest-dev/vitest/commit/aeb672095)\n- **deps**:\n  - Update all non-major dependencies &nbsp;-&nbsp; in https://github.com/vitest-dev/vitest/issues/10966 [<samp>(65263)</samp>](https://github.com/vitest-dev/vitest/commit/65263d74e)\n- **mocker**:\n  - Restrict redirect mocks to the fs allowlist &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10972 [<samp>(8ff9b)</samp>](https://github.com/vitest-dev/vitest/commit/8ff9b9a9e)\n- **pool**:\n  - Worker init to handle queued synchronous messages &nbsp;-&nbsp; by @lazerg and @AriPerkkio in https://github.com/vitest-dev/vitest/issues/10932 [<samp>(76096)</samp>](https://github.com/vitest-dev/vitest/commit/76096c769)\n  - Report the worker exit instead of a pipe error that raced it &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10964 [<samp>(59a03)</samp>](https://github.com/vitest-dev/vitest/commit/59a037354)\n- **reporters**:\n  - Display `test.name` in GitHub Actions reporter summary header &nbsp;-&nbsp; by @macarie in https://github.com/vitest-dev/vitest/issues/10887 [<samp>(49e24)</samp>](https://github.com/vitest-dev/vitest/commit/49e24fa38)\n- **snapshot**:\n  - Support no-unsafe-eval CSP by evaluating snapshot files on server &nbsp;-&nbsp; by @hi-ogawa in https://github.com/vitest-dev/vitest/issues/10665 [<samp>(667c1)</samp>](https://github.com/vitest-dev/vitest/commit/667c13954)\n- **ui**:\n  - Fix code editor error and annotations gadgets layout shifts &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode (claude-opus-4-8)** in https://github.com/vitest-dev/vitest/issues/10969 [<samp>(438ed)</samp>](https://github.com/vitest-dev/vitest/commit/438eda13f)\n  - Synchronize watch-run UI state on file removal &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode (claude-opus-4-8)** in https://github.com/vitest-dev/vitest/issues/10941 [<samp>(30c21)</samp>](https://github.com/vitest-dev/vitest/commit/30c21e668)\n  - Require auth for coverage report and all UI subtree requests &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10971 [<samp>(5622f)</samp>](https://github.com/vitest-dev/vitest/commit/5622f0959)\n- **utils**:\n  - Don't crash on a malformed inline source map &nbsp;-&nbsp; by @lazerg, **Hiroshi Ogawa**, **OpenCode (claude-opus-4-8)** and @hi-ogawa in https://github.com/vitest-dev/vitest/issues/10892 and https://github.com/vitest-dev/vitest/issues/10893 [<samp>(fe790)</samp>](https://github.com/vitest-dev/vitest/commit/fe7906275)\n- **vitest**:\n  - Render non-Error causes from env setup so the actual diagnostic is not dropped &nbsp;-&nbsp; by @spokodev in https://github.com/vitest-dev/vitest/issues/10567 [<samp>(b298d)</samp>](https://github.com/vitest-dev/vitest/commit/b298df609)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.0-rc.1...v5.0.0-rc.2)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "reporter-custom-gha-summary-title",
+        "category": "feature",
+        "title": "GitHub Actionsサマリータイトルのカスタム対応",
+        "summary": "GitHub Actionsリポーターでカスタムサマリータイトルを指定可能にしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-global-concurrency-limit",
+        "category": "bugfix",
+        "title": "テストライフサイクルのグローバル並列実行制限を復帰",
+        "summary": "テストライフサイクルに対するグローバル並列実行制限の処理を復元しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-post-restart-rerun",
+        "category": "bugfix",
+        "title": "再起動後の再実行管理とワーカーのprocess.exit無効化維持",
+        "summary": "再起動後のテスト再実行処理を改善し、ワーカープロセス内でのprocess.exit無効化を維持するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-preserve-root-resolve-config",
+        "category": "bugfix",
+        "title": "設定解決時の正しいルートパスの保持",
+        "summary": "設定解決処理中に正しいルートディレクトリが維持されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-browser-gc-low-disk",
+        "category": "bugfix",
+        "title": "ブラウザテストでのディスク空き容量低下時のGCトリガー",
+        "summary": "利用可能なディスク容量が低下した際にPlaywright/Chromiumのガベージコレクションを実行するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-browser-getby-locators-filter-options",
+        "category": "bugfix",
+        "title": "getBy*ロケーターでのフィルター専用オプション制限",
+        "summary": "getBy*ロケーターにおいてフィルター専用オプションの使用を制限しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-browser-hang-on-unresponsive",
+        "category": "bugfix",
+        "title": "ブラウザ無応答時のハング防止",
+        "summary": "ブラウザが応答を停止した際にハングアップせずテストを失敗させるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-browser-cancellation-disconnect",
+        "category": "bugfix",
+        "title": "テストキャンセル時のブラウザ切断の正常終了",
+        "summary": "テストのキャンセル処理中にブラウザが切断された場合でも正常に終了するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-browser-client-redirect",
+        "category": "bugfix",
+        "title": "クライアント環境でのVitestリダイレクトの防止",
+        "summary": "クライアント環境においてVitestがリダイレクトされないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-deps-update",
+        "category": "bugfix",
+        "title": "非メジャー依存パッケージの更新",
+        "summary": "すべての非メジャー依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-mocker-fs-allowlist",
+        "category": "bugfix",
+        "title": "モックリダイレクトのfs許可リスト制限",
+        "summary": "モックのリダイレクト先をファイルシステムの許可リスト（fs allowlist）内に制限しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-pool-worker-sync-messages",
+        "category": "bugfix",
+        "title": "ワーカー初期化時の同期メッセージ処理",
+        "summary": "キューに溜まった同期メッセージをワーカー初期化時に正しく処理できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-pool-worker-exit-report",
+        "category": "bugfix",
+        "title": "ワーカー終了エラーの優先レポート",
+        "summary": "パイプエラーとの競合時にワーカーの終了エラーを正確に報告するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-reporters-gha-test-name",
+        "category": "bugfix",
+        "title": "GitHub Actionsサマリーでのtest.name表示",
+        "summary": "GitHub Actionsリポーターのサマリーヘッダーにtest.nameを表示するよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-snapshot-csp-no-unsafe-eval",
+        "category": "bugfix",
+        "title": "no-unsafe-eval CSP環境でのスナップショット対応",
+        "summary": "スナップショットファイルをサーバー側で評価することにより、no-unsafe-eval CSP環境に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-ui-layout-shifts",
+        "category": "bugfix",
+        "title": "UIのレイアウトシフト修正",
+        "summary": "コードエディタのエラー表示およびアノテーション表示に伴うレイアウトズレを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-ui-watch-run-sync",
+        "category": "bugfix",
+        "title": "ファイル削除時のUI状態同期",
+        "summary": "ファイルが削除された際にウォッチ実行UIの状態が正常に同期されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-ui-auth-requirement",
+        "category": "bugfix",
+        "title": "UIサブツリーおよびカバレッジレポートの認証必須化",
+        "summary": "カバレッジレポートおよび全UIサブツリーへのリクエストに認証を必須としました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-utils-malformed-source-map",
+        "category": "bugfix",
+        "title": "不正なインラインソースマップによるクラッシュ防止",
+        "summary": "形式が不正なインラインソースマップを処理する際にクラッシュしないよう保護を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-vitest-env-setup-causes",
+        "category": "bugfix",
+        "title": "環境セットアップエラー時の原因出力",
+        "summary": "環境セットアップにおいてErrorオブジェクト以外の原因が発生した場合でも診断情報が破棄されないよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "toss/es-toolkit#371498638",
     "library": "es-toolkit",
     "repository": "toss/es-toolkit",
@@ -554,14 +802,34 @@
     "publishedAt": "2026-08-11T21:43:00Z",
     "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query%406.0.0-beta.8",
     "releaseNotes": "### Patch Changes\n\n-   [#11168](https://github.com/TanStack/query/pull/11168) [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085) - chore: upgrade to solid v2 beta 33. `@tanstack/solid-query` now requires solid-js >= 2.0.0-beta.33 (peer range floor raised): the provider-owned hydration channel depends on beta.33's `normalizeIterator` buffered-replay conflation fix — on beta.32 and earlier, hydration that begins after multiple stream chunks have arrived silently drops later channel yields, leaving queries never primed and their components frozen.\n\n-   [#11168](https://github.com/TanStack/query/pull/11168) [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085) - fix: prime the query cache during hydration through a provider-owned dehydration channel, so SSR-fetched queries come up warm instead of refetching on mount. `QueryClientProvider` streams dehydrated cache entries (query-core `dehydrate()` shapes) as each query settles during SSR — entries ride the same flush as the content that awaited them — and applies them on the client via query-core `hydrate()` (newer-wins) as they arrive, attaching each hydrated component's observer as soon as its entry is primed. The vestigial per-observer-result `hydrationData` copy is no longer serialized.\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "solid-js のバージョンを 2.0.0-beta.33 以降に更新する必要があります。",
+      "steps": [
+        "プロジェクトの solid-js 依存関係を 2.0.0-beta.33 以降にアップグレードしてください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11168-solid-v2-beta-33-upgrade",
+        "category": "breaking",
+        "title": "solid-js 必須バージョンの引き上げ",
+        "summary": "@tanstack/solid-query が solid-js >= 2.0.0-beta.33 を要求するようになりました。beta.32 以前のバージョンでは、ストリーミングハイドレーション時にクエリが初期化されずコンポーネントがフリーズする問題が発生します。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "11168-hydration-cache-fix",
+        "category": "bugfix",
+        "title": "SSRハイドレーション時のクエリキャッシュ初期化処理の修正",
+        "summary": "SSRでフェッチされたクエリがクライアントマウント時に再取得されるのを防ぐため、脱水化されたキャッシュエントリをストリーミング配信して即座にハイドレート・初期化するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#368872125",
@@ -571,14 +839,26 @@
     "publishedAt": "2026-08-11T21:42:57Z",
     "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-persist-client%406.0.0-beta.8",
     "releaseNotes": "### Patch Changes\n\n-   [#11168](https://github.com/TanStack/query/pull/11168) [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085) - chore: upgrade to solid v2 beta 33. `@tanstack/solid-query` now requires solid-js >= 2.0.0-beta.33 (peer range floor raised): the provider-owned hydration channel depends on beta.33's `normalizeIterator` buffered-replay conflation fix — on beta.32 and earlier, hydration that begins after multiple stream chunks have arrived silently drops later channel yields, leaving queries never primed and their components frozen.\n\n-   Updated dependencies \\[[`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085), [`67c8179`](https://github.com/TanStack/query/commit/67c817940dbea2be197d007c59982a756556d085)]:\n    -   @tanstack/solid-query@6.0.0-beta.8\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "solid-js のバージョンを 2.0.0-beta.33 以降に更新する必要があります。",
+      "steps": [
+        "solid-js の依存関係を 2.0.0-beta.33 以降にアップグレードします。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11168",
+        "category": "breaking",
+        "title": "solid-js のピア依存関係の最小バージョンを v2.0.0-beta.33 に引き上げ",
+        "summary": "solid-js >= 2.0.0-beta.33 が必須になりました。beta.32 以前で複数のストリームチャンク到着後にハイドレーションが開始されると、クエリが未完了のままコンポーネントがフリーズする不具合が修正されます。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "tanstack-query-5.85.5",
@@ -616,10 +896,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ff43666",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-core が 9.1.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#367364899",
@@ -636,7 +926,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ff436663f808e22091e8a4d2ee7ca81b37ea99c2",
+        "category": "other",
+        "title": "@tanstack/table-coreの依存関係更新",
+        "summary": "依存パッケージである @tanstack/table-core がバージョン 9.1.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#367364887",
@@ -650,10 +950,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependency-table-core-9.1.2",
+        "category": "other",
+        "title": "@tanstack/table-coreの依存関係更新",
+        "summary": "@tanstack/table-coreがバージョン9.1.2に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#367364878",
@@ -670,7 +980,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6532",
+        "category": "bugfix",
+        "title": "状態更新処理の集約による無限レンダリングループの解消",
+        "summary": "内部状態の更新処理を setStateSlice ユーティリティへ集約し、構造的等価性チェックを導入しました。これにより、データ参照の変更に伴う自動リセットなどで同一値の新しいオブジェクトが生成された際に発生していた無駄な再レンダリングや無限ループを防止します。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#367364873",
@@ -684,10 +1004,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-9-1-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtoolsをバージョン9.1.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#367364863",
