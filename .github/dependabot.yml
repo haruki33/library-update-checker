@@ -1,0 +1,49 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Python依存関係の更新設定
+  - package-ecosystem: "npm"
+    directory: "/"
+ 
+    # スケジュール設定：毎週月曜日の午前9時（JST）にチェック
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Tokyo"
+ 
+    # 同時にオープンできるPR数の上限(最初は大量のPRが発生するため、5に制限しています)
+    open-pull-requests-limit: 5
+ 
+    # グループ化：バージョンタイプ別に分類してPRをまとめることで、ライブラリ単位ではなく、バージョンタイプごとでPRを管理します
+    groups:
+      # パッチバージョン更新（1.0.0 → 1.0.1）
+      patch-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "patch"
+ 
+      # マイナーバージョン更新（1.0.0 → 1.1.0）
+      minor-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+ 
+      # メジャーバージョン更新（1.0.0 → 2.0.0）
+      major-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "major"
+ 
+    # PRに付与するカスタムラベル
+    labels:
+      - "dependencies"
+      - "python"
+      - "dependabot"
