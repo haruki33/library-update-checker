@@ -1,20 +1,112 @@
 [
-  { "name": "React", "github": "facebook/react", "enabled": true },
-  { "name": "React Router", "github": "remix-run/react-router", "enabled": true },
-  { "name": "Vite", "github": "vitejs/vite", "enabled": true },
-  { "name": "TypeScript", "github": "microsoft/TypeScript", "enabled": true },
-  { "name": "TanStack Query", "github": "TanStack/query", "enabled": true },
-  { "name": "TanStack Table", "github": "TanStack/table", "enabled": true },
-  { "name": "React Hook Form", "github": "react-hook-form/react-hook-form", "enabled": true },
-  { "name": "Chakra UI", "github": "chakra-ui/chakra-ui", "enabled": true },
-  { "name": "Emotion", "github": "emotion-js/emotion", "enabled": true },
-  { "name": "React Icons", "github": "react-icons/react-icons", "enabled": true },
-  { "name": "React Calendar", "github": "wojtekmaj/react-calendar", "enabled": true },
-  { "name": "es-toolkit", "github": "toss/es-toolkit", "enabled": true },
-  { "name": "Zod", "github": "colinhacks/zod", "enabled": true },
-  { "name": "Vitest", "github": "vitest-dev/vitest", "enabled": true },
-  { "name": "ESLint", "github": "eslint/eslint", "enabled": true },
-  { "name": "Prettier", "github": "prettier/prettier", "enabled": true },
-  { "name": "Axios", "github": "axios/axios", "enabled": true },
-  { "name": "date-fns", "github": "date-fns/date-fns", "enabled": true }
+  {
+    "name": "React",
+    "github": "facebook/react",
+    "enabled": true
+  },
+  {
+    "name": "React Router",
+    "github": "remix-run/react-router",
+    "enabled": true
+  },
+  {
+    "name": "Vite",
+    "github": "vitejs/vite",
+    "enabled": true
+  },
+  {
+    "name": "TypeScript",
+    "github": "microsoft/TypeScript",
+    "enabled": true
+  },
+  {
+    "name": "TanStack Query",
+    "github": "TanStack/query",
+    "enabled": true
+  },
+  {
+    "name": "TanStack Table",
+    "github": "TanStack/table",
+    "enabled": true
+  },
+  {
+    "name": "React Hook Form",
+    "github": "react-hook-form/react-hook-form",
+    "enabled": true
+  },
+  {
+    "name": "Emotion",
+    "github": "emotion-js/emotion",
+    "enabled": true
+  },
+  {
+    "name": "Zod",
+    "github": "colinhacks/zod",
+    "enabled": true
+  },
+  {
+    "name": "Vitest",
+    "github": "vitest-dev/vitest",
+    "enabled": true
+  },
+  {
+    "name": "ESLint",
+    "github": "eslint/eslint",
+    "enabled": true
+  },
+  {
+    "name": "date-fns",
+    "github": "date-fns/date-fns",
+    "enabled": true
+  },
+  {
+    "name": "Material UI",
+    "github": "mui/material-ui",
+    "enabled": true
+  },
+  {
+    "name": "TanStack Router",
+    "github": "TanStack/router",
+    "enabled": true
+  },
+  {
+    "name": "Zustand",
+    "github": "pmndrs/zustand",
+    "enabled": true
+  },
+  {
+    "name": "Axios",
+    "github": "axios/axios",
+    "enabled": true
+  },
+  {
+    "name": "react-i18next",
+    "github": "i18next/react-i18next",
+    "enabled": true
+  },
+  {
+    "name": "dnd-kit",
+    "github": "clauderic/dnd-kit",
+    "enabled": true
+  },
+  {
+    "name": "React Virtuoso",
+    "github": "petyosi/react-virtuoso",
+    "enabled": true
+  },
+  {
+    "name": "react-pdf",
+    "github": "wojtekmaj/react-pdf",
+    "enabled": true
+  },
+  {
+    "name": "encoding-japanese",
+    "github": "shogo82148/encoding-japanese",
+    "enabled": true
+  },
+  {
+    "name": "MSW",
+    "github": "mswjs/msw",
+    "enabled": true
+  }
 ]
