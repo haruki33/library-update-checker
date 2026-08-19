@@ -101,7 +101,7 @@
   },
   {
     "name": "encoding-japanese",
-    "github": "shogo82148/encoding-japanese",
+    "github": "polygonplanet/encoding.js",
     "enabled": true
   },
   {
