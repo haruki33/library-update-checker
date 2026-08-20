@@ -1,5 +1,402 @@
 [
   {
+    "id": "wojtekmaj/react-pdf#373990202",
+    "library": "react-pdf",
+    "repository": "wojtekmaj/react-pdf",
+    "version": "v10.5.0",
+    "publishedAt": "2026-08-20T19:48:00Z",
+    "url": "https://github.com/wojtekmaj/react-pdf/releases/tag/v10.5.0",
+    "releaseNotes": "## What's changed?\n\n- Text layer styles are now in sync with PDF.js 5.4.296 (#2077).\n    If you were customizing text layer styles, note that `--highlight-bg-color` and `--highlight-selected-bg-color` moved from `:root` to `.textLayer .highlight` and are now semi-transparent, and that `.textLayer` `z-index` changed from `2` to `0`.\n- Documented [legacy PDF.js worker](https://github.com/wojtekmaj/react-pdf/blob/main/packages/react-pdf/README.md#legacy-pdfjs-worker), reported to work on iOS 16.4 and newer.\n- Updated pnpm hoisting instructions for pnpm 11+ (#2114).\n- Clarified that filtering of HTML returned by `customTextRenderer` is best-effort, and sanitizing it is up to you.\n\n## Bug fixes\n\n- Fixed text layer being misaligned with page content (#2064).\n- Fixed crash when `<Document />` was hidden and revealed by `<Activity>` (#2128).\n- Disallowed `data:` URLs in URL attributes returned by `customTextRenderer`.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "テキストレイヤーのCSSカスタマイズを行っている場合のみ、スタイルの調整が必要になることがあります。",
+      "steps": [
+        "テキストレイヤーのハイライト色をカスタマイズしている場合は、--highlight-bg-color および --highlight-selected-bg-color の定義位置を :root から .textLayer .highlight へ移動してください。",
+        ".textLayer の z-index が 2 から 0 に変更されたため、必要に応じて独自CSSの z-index を調整してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "2077",
+        "category": "other",
+        "title": "テキストレイヤースタイルのPDF.js 5.4.296同期",
+        "summary": "テキストレイヤーのスタイルをPDF.js 5.4.296に同期しました。ハイライト用CSS変数の定義場所変更や.textLayerのz-index変更が含まれます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "doc-legacy-worker",
+        "category": "other",
+        "title": "レガシーPDF.jsワーカーのドキュメント追加",
+        "summary": "iOS 16.4以降で動作するレガシーPDF.jsワーカーに関するドキュメントを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2114",
+        "category": "other",
+        "title": "pnpm 11+ 向けホイスティング指示の更新",
+        "summary": "pnpm 11以降に向けたホイスティング設定の指示を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "clarify-custom-text-renderer",
+        "category": "other",
+        "title": "customTextRendererのHTMLサニタイズに関する説明追加",
+        "summary": "customTextRendererから返されるHTMLのフィルタリングはベストエフォートであり、必要に応じたサニタイズは利用者側で行う必要がある旨を明確化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2064",
+        "category": "bugfix",
+        "title": "テキストレイヤーの位置ずれ修正",
+        "summary": "テキストレイヤーがページコンテンツとずれて表示される不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2128",
+        "category": "bugfix",
+        "title": "Activityによる非表示・再表示時のクラッシュ修正",
+        "summary": "DocumentコンポーネントがActivityによって非表示・再表示された際に発生するクラッシュを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "disallow-data-urls",
+        "category": "bugfix",
+        "title": "customTextRendererでのdata: URL禁止",
+        "summary": "customTextRendererが返すURL属性において、セキュリティ上の理由からdata: URLの使用を禁止しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "microsoft/TypeScript#373932089",
+    "library": "TypeScript",
+    "repository": "microsoft/TypeScript",
+    "version": "v7.0.2",
+    "publishedAt": "2026-08-20T18:09:49Z",
+    "url": "https://github.com/microsoft/TypeScript/releases/tag/v7.0.2",
+    "releaseNotes": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/\r\n\r\nThis tag was originally released at: https://github.com/microsoft/typescript-go/releases/tag/typescript%2Fv7.0.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "ts-702-bugfixes",
+        "category": "bugfix",
+        "title": "TypeScript 7.0.2におけるバグ修正と安定性の向上",
+        "summary": "TypeScript 7.0.2における不具合修正と安定性の向上が行われました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#373484014",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.2.2",
+    "publishedAt": "2026-08-20T04:08:13Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.2.2",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.2.2/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "詳細な変更内容がリリースノートに記載されていないため、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375894",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-08-19-2203",
+    "publishedAt": "2026-08-19T22:03:48Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-08-19-2203",
+    "releaseNotes": "Release 2026-08-19 22:03\n\n## Changes\n\n### Features\n\n- solid-router: delegate lazyRouteComponent to Solid 2's lazy() (#8081) (252caa8534) by @brenelz\n- solid-router: adopt Solid 2's useHead registry for head management (#8080) (b60b741a88) by @brenelz\n- integrate solid v2 query (#6938) (69da50126a) by @brenelz\n- upgrade outer-devtools-core to Solid 2.0 (868d2bfbc3) by @brenelz\n\n### Fix\n\n- solid-router: make the global loading boundary opt-in and server/client-symmetric (#8027) (41cffa00f3) by @ryansolid\n- solid-start: resolve SSR'd lazy() client assets via vite-plugin-solid's manifest (99756c0710) by @brenelz\n- solid-router: keep Transitioner hydration ids in sync between server and client (e021c7a352) by @brenelz\n- benchmarks: Solid v2 type fixes for new benchmark scenarios (2bb318bdcf) by @brenelz\n- benchmarks: adapt new solid benchmarks from main to Solid v2 (26d94d93fc) by @brenelz\n- lockfile: restore @rspack/binding@2.0.8 platform binaries (01dbb52d06) by @brenelz\n- solid-router: resolve defaultNotFoundComponent at render time to avoid hydration desync (#7734) (f9b0e57ce0) by @brenelz\n- update solid ssr benchmark types (3fe770ad17) by @brenelz\n- solid-router-v2: use TSR_DEFERRED_PROMISE (#7532) (ff136aaea6) by @birkskyum\n- solid-router: prevent HeadContent hydration warnings (#7510) (129d043f2d) by @brenelz\n- move HydrationScript to HeadContent (#7296) (67b46d7546) by @birkskyum\n- pin solid v2 beta.6 (#7171) (85eb16c6ad) by @birkskyum\n- adjust pre-release ranges to use caret (#7130) (72ebb55236) by @birkskyum\n- better rollupOptions/rolldownOptions handling (#6990) (56e28e47ce) by @birkskyum\n- use solid v2 query pre-release (#6977) (da2b8d9e96) by @birkskyum\n- vite 8 compat (dfd64e4a08)\n- Upgrade to solid v2 beta.3 (#6943) (c3e19322e3) by @brenelz\n- more tweaks (82e6d42fec) by @brenelz\n- test (0dc0cd0b9a) by @brenelz\n- down to one failure (faa3280b98) by @brenelz\n- solid-start basic e2e (187cc84d51) by @brenelz\n- e2e tests (d026877263) by @brenelz\n- work on solid v2  upgrade (59017534d8) by @brenelz\n- build (1021e6c7d8) by @brenelz\n\n### Performance\n\n- solid-router: proxy-free link props in the spread hot path (#7609) (51b4bd4f37) by @brenelz\n\n### Chore\n\n- e2e: migrate selective-ssr pending-min route to Solid 2 onSettled (5c400bc32e) by @brenelz\n- bump @tanstack/solid-query to 6.0.0-beta.5 (#7702) (e56bb22fc3) by @brenelz\n- upgrade solid-js to 2.0.0-beta.15 (#7688) (259efbe530) by @brenelz\n- remove unneeded changesets (144ddc748e) by @brenelz\n- fix tests (545866dd47) by @brenelz\n- sync main (440a0c9270)\n- solid router v2 pre main sync (#7517) (0a7e958c80) by @brenelz\n- bump to solid v2 beta 10 (#7284) (401272e306) by @brenelz\n- solid v2 beta 8 (#7241) (b3fedfcd4e) by @brenelz\n- upgrade Solid to v2 beta.7 (#7210) (2332fb26f9) by @brenelz\n- sync main to pre-release branch (#7106) (bb6285d888) by @birkskyum\n- merge main to solid v2 (#7105) (14d39cea3e) by @birkskyum\n- bump solid-query and vite-plugin-solid (#7103) (15652a590d) by @birkskyum\n- upgrade solid to 2.0.0-beta.5 (#7102) (bf15f69973) by @brenelz\n- bump to solidjs/signals 0.13.8 (#7076) (5cdb8115df) by @brenelz\n- bump solid-query to 6.0.0-alpha.2 (#7020) (e9e805b744) by @2wheeh\n- bump solid-query to 6.0.0-alpha.1 (#7016) (0fb8dfa67b) by @birkskyum\n- sync main branch with store refactor (#7001) (72323492af) by @brenelz\n- use solid-query v6.0.0-alpha.0 (#6989) (f5023cac3d) by @birkskyum\n- bump solid-refresh, fix deepEqual (#6910) (9ce7f97ef2) by @brenelz\n- more fixes (32b9dfb25a) by @brenelz\n\n### Build\n\n- bundle packages with rolldown (#6931) (b95b1061d3) by @birkskyum\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.1\n- @tanstack/solid-router-devtools@2.0.0-rc.1\n- @tanstack/solid-router-ssr-query@2.0.0-rc.1\n- @tanstack/solid-start@2.0.0-rc.1\n- @tanstack/solid-start-client@2.0.0-rc.1\n- @tanstack/solid-start-server@2.0.0-rc.1\n",
+    "breaking": false,
+    "impact": "medium",
+    "migration": {
+      "required": false,
+      "summary": "このリリースで必須となる移行手順は指定されていません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "feature",
+        "title": "lazyRouteComponent を Solid 2 の lazy() へ委譲",
+        "summary": "solid-router において lazyRouteComponent の処理を Solid 2 の lazy() に委譲するように変更しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "ヘッド管理に Solid 2 の useHead レジストリを採用",
+        "summary": "solid-router の HEAD タグ管理において Solid 2 の useHead レジストリを使用するよう更新しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "6938",
+        "category": "feature",
+        "title": "Solid v2 Query の統合",
+        "summary": "Solid v2 クエリサポートの統合を行いました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "8027",
+        "category": "bugfix",
+        "title": "グローバルローディングバウンダリのオプトイン化とサーバー/クライアント間の対称化",
+        "summary": "solid-router において、グローバルローディングバウンダリの適用をオプトイン形式に変更し、SSR時とクライアント時の挙動の一貫性を保つように修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "7734",
+        "category": "bugfix",
+        "title": "defaultNotFoundComponent 解決タイミングの変更によるハイドレーション不整合の回避",
+        "summary": "描画時に defaultNotFoundComponent を解決することで、ハイドレーション時の不整合を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7510",
+        "category": "bugfix",
+        "title": "HeadContent のハイドレーション警告の防止",
+        "summary": "solid-router で HeadContent の不必要なハイドレーション警告が発生する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7296",
+        "category": "bugfix",
+        "title": "HydrationScript を HeadContent 内に移動",
+        "summary": "ハイドレーションスクリプトを HeadContent の要素内に移動しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-compat",
+        "category": "bugfix",
+        "title": "Vite 8 との互換性サポート",
+        "summary": "Vite 8 環境との互換性のための調整を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7609",
+        "category": "performance",
+        "title": "Link プロパティ展開パスにおける Proxy 除去による軽量化",
+        "summary": "Link コンポーネントの Hot Path でプロキシ処理を排除し、パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375769",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router@2.0.0-rc.1",
+    "publishedAt": "2026-08-19T22:03:27Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router%402.0.0-rc.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#8081](https://github.com/TanStack/router/pull/8081) [`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2) - `lazyRouteComponent` now delegates to Solid's `lazy()` using its `{ export }`\n    option (solid-js 2.0.0-rc.1): the module namespace passes through untouched,\n    so SSR'd route chunks resolve their client assets (stylesheet links,\n    modulepreload hints, hydration gating) through the client-assets manifest,\n    and hydration claims the component synchronously from the preloaded module.\n    Failed chunk downloads are retried by the next preload or render, and the\n    module-not-found reload-once behavior is unchanged. Solid packages are\n    bumped to the 2.0.0-rc.1 line (`@solidjs/vite-plugin` 3.0.0-next.30).\n\n-   [#8080](https://github.com/TanStack/router/pull/8080) [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e) - Register head tags through Solid's `useHead` registry. `HeadContent` now\n    feeds the route-derived tags to Solid's head registry as one reactive group\n    instead of rendering elements in-tree: the registry owns head emission on\n    both runtimes (SSR splicing/streaming and client-side patching), replacing\n    the manual relocate-into-head, imperative script injection, and\n    `document.title` syncing. Inline scripts and styles carry a stable\n    content-derived key so server and client reconcile on the same identity.\n    `HeadContent` can now be rendered anywhere in the tree. The dedicated\n    development entry (`index.dev`) and its `development` export conditions are\n    retired along with it.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "feature",
+        "title": "lazyRouteComponent の Solid lazy() への委譲とアセット処理の改善",
+        "summary": "lazyRouteComponent が Solid の lazy() に委譲して処理するようになり、SSR ルートチャンクのクライアントアセット解決およびハイドレーション処理が向上しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "HeadContent の useHead レジストリ統合と描画位置の自由化",
+        "summary": "HeadContent が Solid の useHead レジストリ経由で head タグを管理するようになり、コンポーネントツリー内の任意の場所で描画可能になりました。開発用の index.dev エントリは廃止されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375721",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-client@2.0.0-rc.1",
+    "publishedAt": "2026-08-19T22:03:21Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-client%402.0.0-rc.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#8081](https://github.com/TanStack/router/pull/8081) [`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2) - `lazyRouteComponent` now delegates to Solid's `lazy()` using its `{ export }`\n    option (solid-js 2.0.0-rc.1): the module namespace passes through untouched,\n    so SSR'd route chunks resolve their client assets (stylesheet links,\n    modulepreload hints, hydration gating) through the client-assets manifest,\n    and hydration claims the component synchronously from the preloaded module.\n    Failed chunk downloads are retried by the next preload or render, and the\n    module-not-found reload-once behavior is unchanged. Solid packages are\n    bumped to the 2.0.0-rc.1 line (`@solidjs/vite-plugin` 3.0.0-next.30).\n\n-   [#8080](https://github.com/TanStack/router/pull/8080) [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e) - Register head tags through Solid's `useHead` registry. `HeadContent` now\n    feeds the route-derived tags to Solid's head registry as one reactive group\n    instead of rendering elements in-tree: the registry owns head emission on\n    both runtimes (SSR splicing/streaming and client-side patching), replacing\n    the manual relocate-into-head, imperative script injection, and\n    `document.title` syncing. Inline scripts and styles carry a stable\n    content-derived key so server and client reconcile on the same identity.\n    `HeadContent` can now be rendered anywhere in the tree. The dedicated\n    development entry (`index.dev`) and its `development` export conditions are\n    retired along with it.\n\n-   Updated dependencies \\[[`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2), [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e)]:\n    -   @tanstack/solid-router@2.0.0-rc.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "feature",
+        "title": "lazyRouteComponentのSolid lazy統合とハイドレーション改善",
+        "summary": "lazyRouteComponentがSolidのlazy()のexportオプションを利用するように変更され、SSRクライアントアセットの解決やハイドレーション処理、チャンクダウンロード失敗時の再試行動作が改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "HeadContentのSolid useHeadレジストリ統合",
+        "summary": "HeadContentがSolidのuseHeadレジストリを通じてヘッドタグを管理するようになり、コンポーネントツリー内のどこにでも配置可能になりました。あわせて開発専用エントリ(index.dev)が削除されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-updated",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/solid-routerが2.0.0-rc.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375693",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start@2.0.0-rc.1",
+    "publishedAt": "2026-08-19T22:03:19Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start%402.0.0-rc.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#8081](https://github.com/TanStack/router/pull/8081) [`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2) - `lazyRouteComponent` now delegates to Solid's `lazy()` using its `{ export }`\n    option (solid-js 2.0.0-rc.1): the module namespace passes through untouched,\n    so SSR'd route chunks resolve their client assets (stylesheet links,\n    modulepreload hints, hydration gating) through the client-assets manifest,\n    and hydration claims the component synchronously from the preloaded module.\n    Failed chunk downloads are retried by the next preload or render, and the\n    module-not-found reload-once behavior is unchanged. Solid packages are\n    bumped to the 2.0.0-rc.1 line (`@solidjs/vite-plugin` 3.0.0-next.30).\n\n-   [#8080](https://github.com/TanStack/router/pull/8080) [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e) - Register head tags through Solid's `useHead` registry. `HeadContent` now\n    feeds the route-derived tags to Solid's head registry as one reactive group\n    instead of rendering elements in-tree: the registry owns head emission on\n    both runtimes (SSR splicing/streaming and client-side patching), replacing\n    the manual relocate-into-head, imperative script injection, and\n    `document.title` syncing. Inline scripts and styles carry a stable\n    content-derived key so server and client reconcile on the same identity.\n    `HeadContent` can now be rendered anywhere in the tree. The dedicated\n    development entry (`index.dev`) and its `development` export conditions are\n    retired along with it.\n\n-   Updated dependencies \\[[`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2), [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e)]:\n    -   @tanstack/solid-start-client@2.0.0-rc.1\n    -   @tanstack/solid-start-server@2.0.0-rc.1\n    -   @tanstack/solid-router@2.0.0-rc.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "feature",
+        "title": "lazyRouteComponent の Solid lazy() への委譲とアセット解決の改善",
+        "summary": "lazyRouteComponent が Solid の lazy() を利用するように変更され、SSR ルートチャンクによるクライアントアセットの解決やハイドレーション、ダウンロード失敗時の再試行処理が改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "HeadContent の useHead レジストリ統合と開発用エントリの廃止",
+        "summary": "ルート由来のヘッドタグ管理が Solid の useHead レジストリに統合され、HeadContent がツリー内の任意の場所でレンダリング可能になりました。また、開発専用エントリ (index.dev) および関連する export 条件が廃止されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375682",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router-ssr-query@2.0.0-rc.1",
+    "publishedAt": "2026-08-19T22:03:15Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router-ssr-query%402.0.0-rc.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#8081](https://github.com/TanStack/router/pull/8081) [`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2) - `lazyRouteComponent` now delegates to Solid's `lazy()` using its `{ export }`\n    option (solid-js 2.0.0-rc.1): the module namespace passes through untouched,\n    so SSR'd route chunks resolve their client assets (stylesheet links,\n    modulepreload hints, hydration gating) through the client-assets manifest,\n    and hydration claims the component synchronously from the preloaded module.\n    Failed chunk downloads are retried by the next preload or render, and the\n    module-not-found reload-once behavior is unchanged. Solid packages are\n    bumped to the 2.0.0-rc.1 line (`@solidjs/vite-plugin` 3.0.0-next.30).\n\n-   [#8080](https://github.com/TanStack/router/pull/8080) [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e) - Register head tags through Solid's `useHead` registry. `HeadContent` now\n    feeds the route-derived tags to Solid's head registry as one reactive group\n    instead of rendering elements in-tree: the registry owns head emission on\n    both runtimes (SSR splicing/streaming and client-side patching), replacing\n    the manual relocate-into-head, imperative script injection, and\n    `document.title` syncing. Inline scripts and styles carry a stable\n    content-derived key so server and client reconcile on the same identity.\n    `HeadContent` can now be rendered anywhere in the tree. The dedicated\n    development entry (`index.dev`) and its `development` export conditions are\n    retired along with it.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "performance",
+        "title": "lazyRouteComponentのSolid lazyへの委譲とSSR・ハイドレーション処理の改善",
+        "summary": "lazyRouteComponentがSolidのlazy()に委譲されるよう変更され、SSRルートチャンクのアセット解決、同期的なハイドレーション処理、失敗したチャンクダウンロードの再試行などが向上しました。またSolid関連パッケージが2.0.0-rc.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "HeadContentのuseHeadレジストリ統合とコンポーネント配置の柔軟化",
+        "summary": "HeadContentがSolidのuseHeadレジストリを介してヘッダータグを管理するように改善され、コンポーネントツリー内のどこにでも配置可能になりました。これに伴い開発用エントリ(index.dev)およびその輸出条件が廃止されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#373375662",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-server@2.0.0-rc.1",
+    "publishedAt": "2026-08-19T22:03:13Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-server%402.0.0-rc.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#8081](https://github.com/TanStack/router/pull/8081) [`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2) - `lazyRouteComponent` now delegates to Solid's `lazy()` using its `{ export }`\n    option (solid-js 2.0.0-rc.1): the module namespace passes through untouched,\n    so SSR'd route chunks resolve their client assets (stylesheet links,\n    modulepreload hints, hydration gating) through the client-assets manifest,\n    and hydration claims the component synchronously from the preloaded module.\n    Failed chunk downloads are retried by the next preload or render, and the\n    module-not-found reload-once behavior is unchanged. Solid packages are\n    bumped to the 2.0.0-rc.1 line (`@solidjs/vite-plugin` 3.0.0-next.30).\n\n-   [#8080](https://github.com/TanStack/router/pull/8080) [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e) - Register head tags through Solid's `useHead` registry. `HeadContent` now\n    feeds the route-derived tags to Solid's head registry as one reactive group\n    instead of rendering elements in-tree: the registry owns head emission on\n    both runtimes (SSR splicing/streaming and client-side patching), replacing\n    the manual relocate-into-head, imperative script injection, and\n    `document.title` syncing. Inline scripts and styles carry a stable\n    content-derived key so server and client reconcile on the same identity.\n    `HeadContent` can now be rendered anywhere in the tree. The dedicated\n    development entry (`index.dev`) and its `development` export conditions are\n    retired along with it.\n\n-   Updated dependencies \\[[`252caa8`](https://github.com/TanStack/router/commit/252caa85343cdb6ff8d599b266f213bd14f6ece2), [`b60b741`](https://github.com/TanStack/router/commit/b60b741a882ef5f55544b437decb29b09e7e547e)]:\n    -   @tanstack/solid-router@2.0.0-rc.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースにおける必須の移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8081",
+        "category": "performance",
+        "title": "lazyRouteComponentのSolid.lazyへの委譲とアセット解決の最適化",
+        "summary": "lazyRouteComponentがSolidのlazy()のexportオプションに委譲するようになり、SSRルートチャンクのクライアントアセット解決やハイドレーション処理が最適化されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8080",
+        "category": "feature",
+        "title": "SolidのuseHeadレジストリ統合とHeadContentの配置柔軟化",
+        "summary": "HeadContentがルート定義のタグをSolidのheadレジストリに提供する形に変更され、ツリー内の任意の場所でレンダリング可能になりました。また、index.devなどの開発専用エントリーが廃止されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#373003561",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -316,7 +713,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-170-26",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "依存ライブラリ（@tanstack/router-core, @tanstack/start-storage-context）を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003217",
