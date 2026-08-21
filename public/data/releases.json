@@ -1,5 +1,72 @@
 [
   {
+    "id": "eslint/eslint#374405842",
+    "library": "ESLint",
+    "repository": "eslint/eslint",
+    "version": "v10.9.0",
+    "publishedAt": "2026-08-21T13:05:50Z",
+    "url": "https://github.com/eslint/eslint/releases/tag/v10.9.0",
+    "releaseNotes": "## Features\n* [`08de88e`](https://github.com/eslint/eslint/commit/08de88e50294c4e01f6cae97eceeb578da55792b) feat: handle underflow in no-loss-of-precision (#21218) (Rithish S)\n* [`55db479`](https://github.com/eslint/eslint/commit/55db4791120ae591d88089c43127b7b0e16866d4) feat: add checkConditionalExpressions to `no-unmodified-loop-condition` (#21175) (sethamus)\n\n## Bug Fixes\n* [`2ba3025`](https://github.com/eslint/eslint/commit/2ba302554e7a24e9909bbdd026fd0c2d1d0d8638) fix: prevent unsafe `no-var` autofix with hoisted functions (#21213) (sethamus)\n* [`8e69622`](https://github.com/eslint/eslint/commit/8e6962219a605c5f5add10953aa31027da839194) fix: Prevent no-var autofix when var is shadowed by catch parameter (#21204) (Yang Hyeonjong)\n* [`684b579`](https://github.com/eslint/eslint/commit/684b57972e1ddf25e076fb36189c60bbcacee635) fix: prefer-template invalid autofix creates a tagged template call (#21207) (김채영)\n\n## Documentation\n* [`9ef407a`](https://github.com/eslint/eslint/commit/9ef407a3b051e74f50dc7fb8914e2bd89b3e5e53) docs: use eslint.config.* wherever config file names are listed (#21216) (Marry (Subin Yang))\n* [`87f66f4`](https://github.com/eslint/eslint/commit/87f66f4435c4df7f4f6815c939d153196ec03e3c) docs: Update README (GitHub Actions Bot)\n* [`585ef37`](https://github.com/eslint/eslint/commit/585ef37516c0dc29ddb91ce2a2cdcc46fdbbd610) docs: update architecture documentation (#21112) (Francesco Trotta)\n* [`f3993b0`](https://github.com/eslint/eslint/commit/f3993b0547bace7370e9728ee7408af49d367d76) docs: Update README (GitHub Actions Bot)\n* [`ffc87d6`](https://github.com/eslint/eslint/commit/ffc87d6234b2aa4335eec069e5c4d6ac04832b9e) docs: fix broken links in Further Reading sections (#21203) (Minsu)\n* [`1a761e1`](https://github.com/eslint/eslint/commit/1a761e1d11b011fcb6bee181231a51010c500e4d) docs: update moved JSX specification links (#21198) (Imran Mustafa)\n* [`4d00ca4`](https://github.com/eslint/eslint/commit/4d00ca4064ae0d1a75b604a16c68ab9f386ad388) docs: update ESLint peer dependency to `^10.0.0` in shareable configs (#21202) (lumir)\n* [`510d1a2`](https://github.com/eslint/eslint/commit/510d1a2e87bc197219f42e195ddb638d2b183a5a) docs: Update README (GitHub Actions Bot)\n\n## Chores\n* [`899dbf1`](https://github.com/eslint/eslint/commit/899dbf131ce12a194b394bb8d67307df23509d17) chore: update github/codeql-action action to v4.37.7 (#21243) (renovate[bot])\n* [`9aa3873`](https://github.com/eslint/eslint/commit/9aa38732177935bd1d7f1493732c0b67666be28a) chore: update ecosystem plugins (#21235) (ESLint Bot)\n* [`dc1e7a8`](https://github.com/eslint/eslint/commit/dc1e7a8416937edefe04cf836ee202a6fc03bedd) chore: update ecosystem plugins (#21208) (ESLint Bot)\n* [`f878d21`](https://github.com/eslint/eslint/commit/f878d212e9622da9513bcd60d2aedb2e8bb4fc8b) ci: bump pnpm/action-setup from 6.0.9 to 6.0.10 (#21200) (dependabot[bot])\n* [`4891e50`](https://github.com/eslint/eslint/commit/4891e50aceadb0e886ad7d8ab5ae2beab563de85) ci: bump github/codeql-action from 4.37.4 to 4.37.6 (#21199) (dependabot[bot])",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "08de88e",
+        "category": "feature",
+        "title": "no-loss-of-precision ルールにおけるアンダーフローのハンドリング追加",
+        "summary": "no-loss-of-precision ルールで数値のアンダーフローケースが適切に処理されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "55db479",
+        "category": "feature",
+        "title": "no-unmodified-loop-condition ルールに checkConditionalExpressions オプションを追加",
+        "summary": "no-unmodified-loop-condition ルールにおいて条件式をチェックするための checkConditionalExpressions オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2ba3025",
+        "category": "bugfix",
+        "title": "ホイスティングされた関数に対する no-var の安全でない自動修正を防止",
+        "summary": "関数がホイスティングされている場合における no-var ルールの不完全な自動修正を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8e69622",
+        "category": "bugfix",
+        "title": "catch パラメータでシャドーイングされた変数の no-var 自動修正を防止",
+        "summary": "catch ブロックのパラメータによりシャドーイングされた var 変数に対する no-var の自動修正を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "684b579",
+        "category": "bugfix",
+        "title": "prefer-template の不適切な自動修正でタグ付きテンプレートが生成される問題を修正",
+        "summary": "prefer-template ルールの自動修正によって誤ってタグ付きテンプレート呼び出しが生成される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9ef407a",
+        "category": "other",
+        "title": "ドキュメントの更新および各種依存関係の更新",
+        "summary": "eslint.config.* への記載統一やアーキテクチャドキュメントの更新、CI/依存関係のビルド設定更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "wojtekmaj/react-pdf#373990202",
     "library": "react-pdf",
     "repository": "wojtekmaj/react-pdf",
@@ -737,10 +804,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1-168-46",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "内部の依存関係（@tanstack/solid-router、@tanstack/solid-start-client、@tanstack/solid-start-server、@tanstack/start-client-core、@tanstack/start-plugin-core、@tanstack/start-server-core）が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003192",
@@ -754,10 +831,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみのため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1-167-31",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/start-client-core、@tanstack/react-start、および@tanstack/solid-startを最新のパッチバージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003173",
@@ -774,7 +861,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1.168.29",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、および@tanstack/start-client-coreの依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003143",
@@ -788,10 +885,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "3e016ac",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.26に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003120",
@@ -808,7 +915,41 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8108",
+        "category": "performance",
+        "title": "buildLocationのパス解決の最適化",
+        "summary": "buildLocation処理におけるパス解決パフォーマンスを最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8112",
+        "category": "performance",
+        "title": "無効時の検索バリデーション構築のスキップ",
+        "summary": "無効化されている場合に検索バリデーションの構築処理をスキップするように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8110",
+        "category": "performance",
+        "title": "ロケーション状態の不要な共有のスキップ",
+        "summary": "共有が不可能な状況でのロケーション状態の共有処理をスキップするように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8111",
+        "category": "bugfix",
+        "title": "マスク解決キャッシュの修正",
+        "summary": "エントリがnullの場合におけるマスク解決キャッシュヒットの不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003094",
@@ -822,10 +963,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-167-31",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "依存ライブラリ（@tanstack/router-core、@tanstack/start-client-core、@tanstack/vue-router）を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003072",
@@ -842,7 +993,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1.168.48",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-router や @tanstack/react-start-client などの関連パッケージの依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003046",
@@ -856,10 +1017,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "3e016ac",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/solid-router、@tanstack/start-client-core などの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373003024",
@@ -873,10 +1044,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新において特別な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "3e016ac84ffec8119f0c25cfdd1fb17e5292bd34",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-core)",
+        "summary": "@tanstack/router-core がバージョン 1.171.26 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#373002998",
