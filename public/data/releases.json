@@ -1,5 +1,665 @@
 [
   {
+    "id": "TanStack/query#376730511",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-08-25-2128",
+    "publishedAt": "2026-08-25T21:28:10Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-08-25-2128",
+    "releaseNotes": "Release 2026-08-25 21:28\n\n## Changes\n\n### Fix\n\n- query-core: Avoid scheduling stale timeouts for disabled query observers (#11293) (a05df6aef) by @TkDodo\n\n### Chore\n\n- examples,docs: replace deprecated 'prefetchQuery'/'fetchQuery' calls with 'query' (#11282) (8fbfc14d4) by @sukvvon\n- scripts/create-github-release: fix release-notes diff range after 'Version Packages' PR is squash-merged (#11279) (bceba4a14) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.102.4\n- @tanstack/eslint-plugin-query@5.102.4\n- @tanstack/lit-query@0.2.16\n- @tanstack/preact-query@5.102.4\n- @tanstack/preact-query-devtools@5.102.4\n- @tanstack/preact-query-persist-client@5.102.4\n- @tanstack/query-async-storage-persister@5.102.4\n- @tanstack/query-broadcast-client-experimental@5.102.4\n- @tanstack/query-core@5.102.4\n- @tanstack/query-devtools@5.102.4\n- @tanstack/query-persist-client-core@5.102.4\n- @tanstack/query-sync-storage-persister@5.102.4\n- @tanstack/react-query@5.102.4\n- @tanstack/react-query-devtools@5.102.4\n- @tanstack/react-query-next-experimental@5.102.4\n- @tanstack/react-query-persist-client@5.102.4\n- @tanstack/solid-query@5.102.4\n- @tanstack/solid-query-devtools@5.102.4\n- @tanstack/solid-query-persist-client@5.102.4\n- @tanstack/svelte-query@6.1.44\n- @tanstack/svelte-query-devtools@6.1.44\n- @tanstack/svelte-query-persist-client@6.1.44\n- @tanstack/vue-query@5.102.4\n- @tanstack/vue-query-devtools@6.1.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う移行作業はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11293",
+        "category": "bugfix",
+        "title": "無効化されたクエリオブザーバーに対する古いタイムアウトのスケジューリング回避",
+        "summary": "@tanstack/query-coreにて、無効化されたクエリオブザーバーに対して古いタイムアウトがスケジュールされないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11282",
+        "category": "other",
+        "title": "サンプルおよびドキュメント内の非推奨APIの置き換え",
+        "summary": "ドキュメントとサンプルコードにおける非推奨となった'prefetchQuery'および'fetchQuery'の呼び出しを'query'へ置き換えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11279",
+        "category": "other",
+        "title": "リリースノート作成スクリプトの差分計算修正",
+        "summary": "Version Packages PRがスカッシュマージされた後にリリースノートの差分範囲を正しく計算できるようにスクリプトを修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730468",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.102.4",
+    "publishedAt": "2026-08-25T21:28:04Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-devtools@5.102.4\n    -   @tanstack/react-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730446",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.102.4",
+    "publishedAt": "2026-08-25T21:28:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n    -   @tanstack/query-persist-client-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "依存ライブラリ (@tanstack/query-core および @tanstack/query-persist-client-core) を 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730417",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/vue-query-devtools@6.1.44",
+    "publishedAt": "2026-08-25T21:27:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/vue-query-devtools%406.1.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-devtools@5.102.4\n    -   @tanstack/vue-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-6-1-44",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/vue-query をバージョン 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730399",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.102.4",
+    "publishedAt": "2026-08-25T21:27:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   [#11293](https://github.com/TanStack/query/pull/11293) [`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec) - Avoid scheduling stale timeouts for disabled query observers.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11293",
+        "category": "bugfix",
+        "title": "無効化されたクエリオブザーバーでの不要なタイムアウトスケジューリングを回避",
+        "summary": "無効化（disabled）されたクエリオブザーバーに対して古くなったタイムアウトがスケジュールされる問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730374",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.102.4",
+    "publishedAt": "2026-08-25T21:27:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query を 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730351",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query@5.102.4",
+    "publishedAt": "2026-08-25T21:27:49Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-deps-query-core-5-102-4",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core を 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730335",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.102.4",
+    "publishedAt": "2026-08-25T21:27:46Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/preact-query@5.102.4\n    -   @tanstack/query-persist-client-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5.102.4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730308",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/svelte-query-persist-client@6.1.44",
+    "publishedAt": "2026-08-25T21:27:43Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/svelte-query-persist-client%406.1.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-persist-client-core@5.102.4\n    -   @tanstack/svelte-query@6.1.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-6-1-44",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core (5.102.4) および @tanstack/svelte-query (6.1.44) への依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730295",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/svelte-query-devtools@6.1.44",
+    "publishedAt": "2026-08-25T21:27:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/svelte-query-devtools%406.1.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-devtools@5.102.4\n    -   @tanstack/svelte-query@6.1.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-6-1-44",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools (@5.102.4) および @tanstack/svelte-query (@6.1.44) の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#376730272",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-devtools@5.102.4",
+    "publishedAt": "2026-08-25T21:27:37Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-devtools%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-devtools@5.102.4\n    -   @tanstack/solid-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730246",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/vue-query@5.102.4",
+    "publishedAt": "2026-08-25T21:27:34Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/vue-query%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730226",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.102.4",
+    "publishedAt": "2026-08-25T21:27:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-persist-client-core@5.102.4\n    -   @tanstack/react-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730204",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.102.4",
+    "publishedAt": "2026-08-25T21:27:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.102.4",
+    "releaseNotes": "\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730177",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/svelte-query@6.1.44",
+    "publishedAt": "2026-08-25T21:27:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/svelte-query%406.1.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730151",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.102.4",
+    "publishedAt": "2026-08-25T21:27:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/preact-query@5.102.4\n    -   @tanstack/query-devtools@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730124",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-persist-client@5.102.4",
+    "publishedAt": "2026-08-25T21:27:19Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-persist-client%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-persist-client-core@5.102.4\n    -   @tanstack/solid-query@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730096",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.102.4",
+    "publishedAt": "2026-08-25T21:27:16Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730081",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.102.4",
+    "publishedAt": "2026-08-25T21:27:13Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730061",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.102.4",
+    "publishedAt": "2026-08-25T21:27:10Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376730037",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.102.4",
+    "publishedAt": "2026-08-25T21:27:07Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376729991",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.102.4",
+    "publishedAt": "2026-08-25T21:27:04Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.102.4",
+    "releaseNotes": "\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376729964",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.102.4",
+    "publishedAt": "2026-08-25T21:27:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n    -   @tanstack/query-persist-client-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376729936",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.16",
+    "publishedAt": "2026-08-25T21:26:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.16",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#376729908",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/angular-query-experimental@5.102.4",
+    "publishedAt": "2026-08-25T21:26:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/angular-query-experimental%405.102.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a05df6a`](https://github.com/TanStack/query/commit/a05df6aefb0e2489ec2c879ae16e2ee7cb3123ec)]:\n    -   @tanstack/query-core@5.102.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376610193",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-08-25-1811",
+    "publishedAt": "2026-08-25T18:11:11Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-08-25-1811",
+    "releaseNotes": "Release 2026-08-25 18:11\n\n## Changes\n\n### Chore\n\n- solid: bump to solid-js 2.0.0-rc.2 and @solidjs/vite-plugin 3.0.0-next.32 (#8166) (eaa2e8d5ce) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.2\n- @tanstack/solid-router-devtools@2.0.0-rc.2\n- @tanstack/solid-router-ssr-query@2.0.0-rc.2\n- @tanstack/solid-start@2.0.0-rc.2\n- @tanstack/solid-start-client@2.0.0-rc.2\n- @tanstack/solid-start-server@2.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376610153",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-server@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:11:08Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-server%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n\n-   Updated dependencies \\[[`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548)]:\n    -   @tanstack/solid-router@2.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376610094",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router-devtools@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:11:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router-devtools%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n\n-   Updated dependencies \\[[`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548)]:\n    -   @tanstack/solid-router@2.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376610074",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:11:02Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n\n-   Updated dependencies \\[[`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548)]:\n    -   @tanstack/solid-router@2.0.0-rc.2\n    -   @tanstack/solid-start-client@2.0.0-rc.2\n    -   @tanstack/solid-start-server@2.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376610031",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-client@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:10:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-client%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n\n-   Updated dependencies \\[[`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548)]:\n    -   @tanstack/solid-router@2.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376609999",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:10:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#376609968",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router-ssr-query@2.0.0-rc.2",
+    "publishedAt": "2026-08-25T18:10:52Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router-ssr-query%402.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8166](https://github.com/TanStack/router/pull/8166) [`eaa2e8d`](https://github.com/TanStack/router/commit/eaa2e8d5ce0df6b55e3bb787844e44e1a49f6548) - Bump solid-js and @solidjs/web to ^2.0.0-rc.2 and @solidjs/vite-plugin to ^3.0.0-next.32 across the monorepo.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#375937136",
     "library": "TanStack Query",
     "repository": "TanStack/query",
