@@ -1,5 +1,155 @@
 [
   {
+    "id": "polygonplanet/encoding.js#379043998",
+    "library": "encoding-japanese",
+    "repository": "polygonplanet/encoding.js",
+    "version": "2.3.0",
+    "publishedAt": "2026-08-30T15:10:24Z",
+    "url": "https://github.com/polygonplanet/encoding.js/releases/tag/2.3.0",
+    "releaseNotes": "## What's Changed\r\n\r\n### Features\r\n\r\n* feat: add CP932 extensions in SJIS detection and conversion (#65) (Resolves #54, #22)\r\n  * Detect CP932 extended character areas as SJIS\r\n  * Convert CP932 IBM extended characters (`0xFA40 - 0xFC4B`)\r\n  * Remap duplicate codes for CP932 NEC special characters and `0xEEF9` to their JIS X 0208 counterparts\r\n\r\n### Bug Fixes\r\n\r\n* fix: convert wa-row voiced kana (`U+30F8/U+30F9`) in `toHiraganaCase` and `toKatakanaCase` by @mahirhir in https://github.com/polygonplanet/encoding.js/pull/62\r\n* Encode JIS X 0212 characters with the standard 3-byte form by @gaoflow in https://github.com/polygonplanet/encoding.js/pull/63\r\n* fix(detect): treat C0 control characters as valid UTF-8 by @hiros0921 in https://github.com/polygonplanet/encoding.js/pull/64 (Resolves #49)\r\n\r\n### Changes\r\n\r\n* Update `engines.node` to `>=18.0.0` to match the tested versions ([c6008d0](https://github.com/polygonplanet/encoding.js/commit/c6008d0))\r\n\r\n### CI\r\n\r\n* Update the CI matrix to test Node.js 18, 20, 22, and 24 ([1bd48ac](https://github.com/polygonplanet/encoding.js/commit/1bd48ac))\r\n\r\n### Maintenance\r\n\r\n* Update devDependencies and remove unused `power-assert` and `uglifyify` ([4cf36da](https://github.com/polygonplanet/encoding.js/commit/4cf36da), [1142dd9](https://github.com/polygonplanet/encoding.js/commit/1142dd9))\r\n* Bump dependencies by @dependabot in https://github.com/polygonplanet/encoding.js/pull/45, https://github.com/polygonplanet/encoding.js/pull/48, https://github.com/polygonplanet/encoding.js/pull/52, https://github.com/polygonplanet/encoding.js/pull/53, https://github.com/polygonplanet/encoding.js/pull/57, https://github.com/polygonplanet/encoding.js/pull/59, https://github.com/polygonplanet/encoding.js/pull/60, https://github.com/polygonplanet/encoding.js/pull/61\r\n\r\n### Documentation\r\n\r\n* docs(readme): fix wrong character codes (#51)\r\n* Add the Playground to the demo links ([770161a](https://github.com/polygonplanet/encoding.js/commit/770161a))\r\n\r\n## New Contributors\r\n* @mahirhir made their first contribution in https://github.com/polygonplanet/encoding.js/pull/62\r\n* @gaoflow made their first contribution in https://github.com/polygonplanet/encoding.js/pull/63\r\n* @hiros0921 made their first contribution in https://github.com/polygonplanet/encoding.js/pull/64\r\n\r\n**Full Changelog**: https://github.com/polygonplanet/encoding.js/compare/2.2.0...2.3.0\r\n",
+    "breaking": false,
+    "impact": "medium",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順はありませんが、動作環境としてNode.js 18.0.0以降が必要となります。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "PR-65",
+        "category": "feature",
+        "title": "SJIS検出および変換におけるCP932拡張のサポート",
+        "summary": "CP932拡張文字領域のSJIS検出、IBM拡張文字(0xFA40-0xFC4B)の変換、およびNEC特殊文字等の重複コードのJIS X 0208対応文字へのマッピングを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-62",
+        "category": "bugfix",
+        "title": "toHiraganaCaseおよびtoKatakanaCaseでのワ行濁点カナ変換の修正",
+        "summary": "toHiraganaCaseおよびtoKatakanaCaseにおいて、ワ行濁点カナ(U+30F8/U+30F9)が正しく変換されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-63",
+        "category": "bugfix",
+        "title": "JIS X 0212文字の標準3バイトエンコード形式への修正",
+        "summary": "JIS X 0212文字を標準的な3バイト形式でエンコードするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-64",
+        "category": "bugfix",
+        "title": "UTF-8検出時のC0制御文字の取り扱い修正",
+        "summary": "文字コード検出処理においてC0制御文字を有効なUTF-8として扱うように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "commit-c6008d0",
+        "category": "other",
+        "title": "Node.jsサポートバージョンの変更",
+        "summary": "engines.nodeの条件を>=18.0.0に更新しました。",
+        "impact": "medium",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "react-hook-form/react-hook-form#379162350",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.87.0",
+    "publishedAt": "2026-08-30T02:41:55Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.87.0",
+    "releaseNotes": "## ✨ Features\r\n\r\n* **Add `shouldTouch` option to `trigger()`** ([[#13671](https://github.com/react-hook-form/react-hook-form/pull/13671)](https://github.com/react-hook-form/react-hook-form/pull/13671))\r\n\r\n  `setValue` already supported `shouldTouch`; `trigger()` now does too. This allows you to mark field(s) as touched after manual or programmatic validation, such as validate-on-mount or multi-step form navigation, without needing a `setValue` workaround:\r\n\r\n  ```tsx\r\n  // Mark a single field as touched after validating it\r\n  await trigger('firstName', { shouldTouch: true });\r\n\r\n  // Mark every mounted field as touched after validating the whole form\r\n  await trigger(undefined, { shouldTouch: true });\r\n  ```\r\n\r\n* **Add `OpaqueTypes` registry for opaque leaf types** ([[#13676](https://github.com/react-hook-form/react-hook-form/pull/13676)](https://github.com/react-hook-form/react-hook-form/pull/13676))\r\n\r\n  Recursive type helpers (`Path`, `DeepPartial`, `DeepRequired`, `FieldErrorsImpl`, etc.) previously stopped only at `Primitive | BrowserNativeObject`. As a result, rich third-party value types such as `Dayjs` and `Decimal` could be recursively traversed member-by-member, potentially causing TypeScript to report **\"Excessive complexity\"** diagnostics on large form types.\r\n\r\n  You can now register a type as an opaque leaf via declaration merging:\r\n\r\n  ```tsx\r\n  import type { Dayjs } from 'dayjs';\r\n\r\n  declare module 'react-hook-form' {\r\n    interface OpaqueTypes {\r\n      dayjs: Dayjs;\r\n    }\r\n  }\r\n  ```\r\n\r\n  While the registry is empty, types remain identical to the existing behavior. This is purely opt-in.\r\n\r\n## 🐞 Fixes\r\n\r\n* Fix inconsistent behavior among `useController().field.onChange()`-like APIs. ([[#13673](https://github.com/react-hook-form/react-hook-form/pull/13673)](https://github.com/react-hook-form/react-hook-form/pull/13673))\r\n* Fix `Controller` under a null parent submitting `undefined` instead of a value. ([[#13675](https://github.com/react-hook-form/react-hook-form/pull/13675)](https://github.com/react-hook-form/react-hook-form/pull/13675))\r\n* Fix `ERR_MODULE_NOT_FOUND` when resolving `react-hook-form` due to a `react-server` declaration in Next.js builds. ([[#13682](https://github.com/react-hook-form/react-hook-form/pull/13682)](https://github.com/react-hook-form/react-hook-form/pull/13682))\r\n* Fix `useWatch` never reconciling when an Activity subtree is hidden on its first render. ([[#13683](https://github.com/react-hook-form/react-hook-form/pull/13683)](https://github.com/react-hook-form/react-hook-form/pull/13683))\r\n* Fix `resetField` not recomputing `isValid` for subscribe-only consumers. ([[#13684](https://github.com/react-hook-form/react-hook-form/pull/13684)](https://github.com/react-hook-form/react-hook-form/pull/13684))\r\n* Fix `generateWatchOutput` ignoring `defaultValue` for an array of names. ([[#13686](https://github.com/react-hook-form/react-hook-form/pull/13686)](https://github.com/react-hook-form/react-hook-form/pull/13686))\r\n* Fix `useFormState` never reconciling when an Activity subtree is hidden on its first render. ([[#13687](https://github.com/react-hook-form/react-hook-form/pull/13687)](https://github.com/react-hook-form/react-hook-form/pull/13687))\r\n\r\n## ❤️ Thank You\r\n\r\nThanks to @giaBaoJS, @dfedoryshchev, @Alioth-91, @Masatoshi0227, @modosc, and @bluebill1049 for their contributions! 🎉\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "破壊的変更はないため、移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "13671",
+        "category": "feature",
+        "title": "trigger() に shouldTouch オプションを追加",
+        "summary": "trigger() 関数に shouldTouch オプションを追加し、手動またはプログラムによるバリデーション実行後にフィールドを touched 状態にマークできるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13676",
+        "category": "feature",
+        "title": "OpaqueTypes レジストリの追加",
+        "summary": "型定義の宣言マージを使用して Dayjs などのサードパーティ型をリーフ型として登録可能にし、TypeScript の Excessive complexity エラーを防止できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13673",
+        "category": "bugfix",
+        "title": "useController の onChange 関連 API の不整合を修正",
+        "summary": "useController().field.onChange などの API 間における動作の不整合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13675",
+        "category": "bugfix",
+        "title": "null 親要素下における Controller の送信値を修正",
+        "summary": "null の親要素下に配置された Controller が値の代わりに undefined を送信する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13682",
+        "category": "bugfix",
+        "title": "Next.js ビルド時の ERR_MODULE_NOT_FOUND エラーを修正",
+        "summary": "Next.js ビルド環境において react-server 宣言が原因で発生していた ERR_MODULE_NOT_FOUND エラーを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13683",
+        "category": "bugfix",
+        "title": "初回レンダリングで非表示の Activity サブツリーにおける useWatch の修正",
+        "summary": "初回レンダリング時に Activity サブツリーが非表示である場合、useWatch が再調整されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13684",
+        "category": "bugfix",
+        "title": "resetField 実行時の isValid 再計算を修正",
+        "summary": "購読専用コンシューマにおいて、resetField の実行時に isValid が再計算されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13686",
+        "category": "bugfix",
+        "title": "generateWatchOutput が defaultValue を無視する問題を修正",
+        "summary": "名前の配列を渡した際に generateWatchOutput が defaultValue を無視する不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13687",
+        "category": "bugfix",
+        "title": "初回レンダリングで非表示の Activity サブツリーにおける useFormState の修正",
+        "summary": "初回レンダリング時に Activity サブツリーが非表示である場合、useFormState が再調整されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "colinhacks/zod#379059757",
     "library": "Zod",
     "repository": "colinhacks/zod",
@@ -801,10 +951,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-table-core-9.2.4",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/table-core@9.2.4)",
+        "summary": "内部依存ライブラリである @tanstack/table-core がバージョン 9.2.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656721",
@@ -821,7 +981,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-table-core-924",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-coreがバージョン9.2.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656692",
@@ -838,7 +1008,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "f72e5164bcfe749403ec173035c226f8719647fc",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-core をバージョン 9.2.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656664",
@@ -855,7 +1035,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-table-core-9.2.4",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/table-core)",
+        "summary": "@tanstack/table-coreがバージョン9.2.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656636",
@@ -872,7 +1062,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-9-2-4",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core@9.2.4 および @tanstack/table-devtools@9.2.0 への依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656611",
@@ -886,10 +1086,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6561",
+        "category": "performance",
+        "title": "flexRenderインスタンスの再利用改善とアダプター割当の削減",
+        "summary": "flexRenderのインスタンス再利用を改善し、アダプターのメモリアロケーションを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-table-core-924",
+        "category": "other",
+        "title": "@tanstack/table-coreの更新",
+        "summary": "依存パッケージである@tanstack/table-coreをバージョン9.2.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656596",
@@ -906,7 +1124,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-table-core-924",
+        "category": "other",
+        "title": "@tanstack/table-coreの更新",
+        "summary": "依存パッケージ @tanstack/table-core がバージョン 9.2.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#378656569",
@@ -923,7 +1151,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6561",
+        "category": "bugfix",
+        "title": "Workerのrow-modelペイロード再構築時におけるクラッシュの修正",
+        "summary": "古いWorkerの処理結果によってテーブルがクラッシュするのを防ぐため、ペイロード再構築時に存在しないコア行をスキップするように変更されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitest-dev/vitest#378628637",
