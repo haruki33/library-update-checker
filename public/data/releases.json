@@ -1,5 +1,98 @@
 [
   {
+    "id": "vitest-dev/vitest#379690007",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.0-rc.4",
+    "publishedAt": "2026-08-31T11:08:10Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.0-rc.4",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚨 Breaking Changes\n\n- Parse files statically in vitest list by default &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11088 [<samp>(51e94)</samp>](https://github.com/vitest-dev/vitest/commit/51e949416)\n\n### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- Promote clearCache out of experimental &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11086 [<samp>(d4fe1)</samp>](https://github.com/vitest-dev/vitest/commit/d4fe1986f)\n- **ui**: Add link to open playwright trace &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode (gpt-5.6-sol)** in https://github.com/vitest-dev/vitest/issues/11059 [<samp>(58f02)</samp>](https://github.com/vitest-dev/vitest/commit/58f02ae36)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Don't duplicte `oxc.target` if user provides a custom array &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11095 [<samp>(848d7)</samp>](https://github.com/vitest-dev/vitest/commit/848d7243e)\n- Propagate --maxWorkers to projects &nbsp;-&nbsp; by @Gaurav1112 in https://github.com/vitest-dev/vitest/issues/11102 [<samp>(2122f)</samp>](https://github.com/vitest-dev/vitest/commit/2122ffdfb)\n- **browser**: Report the action error when a task times out &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11101 [<samp>(dc10f)</samp>](https://github.com/vitest-dev/vitest/commit/dc10f5f8f)\n- **ui**: Add suite level report view &nbsp;-&nbsp; by @dvmhmdsd, **Hiroshi Ogawa**, **OpenCode (gpt-5.6-sol)** and @hi-ogawa in https://github.com/vitest-dev/vitest/issues/11038 [<samp>(602d2)</samp>](https://github.com/vitest-dev/vitest/commit/602d215ae)\n- **vm**: Link module graphs one at a time &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11096 [<samp>(3f2dd)</samp>](https://github.com/vitest-dev/vitest/commit/3f2ddc21a)\n\n### &nbsp;&nbsp;&nbsp;🏎 Performance\n\n- **expect**: Lazily format spy matcher failures &nbsp;-&nbsp; by @scttcper and **Codex** in https://github.com/vitest-dev/vitest/issues/11090 [<samp>(e08c4)</samp>](https://github.com/vitest-dev/vitest/commit/e08c45c39)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.0-rc.3...v5.0.0-rc.4)",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "vitest list コマンドのデフォルト動作が静的ファイル解析に変更されました。",
+      "steps": [
+        "vitest list コマンドの出力結果や動的なテスト一覧取得に依存している処理がある場合は、挙動を確認してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "vitest-list-static-parse",
+        "category": "breaking",
+        "title": "vitest list でのファイルをデフォルトで静的に解析",
+        "summary": "vitest list コマンド実行時にデフォルトでテストファイルを静的に解析するよう変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "promote-clearcache",
+        "category": "feature",
+        "title": "clearCache を実験的機能から正式機能へ昇格",
+        "summary": "clearCache 機能が実験的（experimental）ステータスから正式機能へと昇格しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ui-playwright-trace-link",
+        "category": "feature",
+        "title": "UIに Playwright Trace を開くリンクを追加",
+        "summary": "Vitest UI 上で Playwright Trace を開くためのリンクが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-oxc-target-duplication",
+        "category": "bugfix",
+        "title": "カスタム配列指定時の oxc.target の重複防止",
+        "summary": "ユーザーがカスタム配列を指定した際に oxc.target が重複して生成されないよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "propagate-maxworkers-to-projects",
+        "category": "bugfix",
+        "title": "--maxWorkers をプロジェクトへ伝播させる修正",
+        "summary": "CLIオプションの --maxWorkers 設定が各プロジェクトに正しく伝播するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "browser-report-timeout-action-error",
+        "category": "bugfix",
+        "title": "ブラウザモードでタスクタイムアウト時にアクションエラーを報告",
+        "summary": "ブラウザモードにおいて、タスクがタイムアウトした際に発生したアクションエラーを正しくレポートするように改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ui-suite-level-report-view",
+        "category": "bugfix",
+        "title": "UIにスイートレベルのレポートビューを追加",
+        "summary": "Vitest UI にスイートレベルでのレポート表示ビューが追加修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vm-link-module-graphs-one-by-one",
+        "category": "bugfix",
+        "title": "VM環境でモジュールグラフを1つずつリンクするように修正",
+        "summary": "VM環境でのモジュールグラフ構築時に、リンク処理を1つずつ順次行うように変更されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "expect-lazy-format-spy-matcher-failures",
+        "category": "performance",
+        "title": "Spy マッチャー失敗時のフォーマット処理の遅延化",
+        "summary": "expect において spy マッチャーの失敗メッセージフォーマット処理を遅延（Lazy）評価にすることでパフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "polygonplanet/encoding.js#379043998",
     "library": "encoding-japanese",
     "repository": "polygonplanet/encoding.js",
@@ -1175,10 +1268,84 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれておらず、特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "feat-parse-specifications",
+        "category": "feature",
+        "title": "parseSpecifications の安定版昇格",
+        "summary": "parseSpecifications を実験的（experimental）機能から正式な機能に昇格させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-coverage-istanbuljs",
+        "category": "feature",
+        "title": "@vitest/istanbuljs パッケージへの切り替え",
+        "summary": "カバレッジ機能において @vitest/istanbuljs パッケージを使用するように切り替えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-ui-improvements",
+        "category": "feature",
+        "title": "UI機能の強化（ハイライト・キーボード操作・URL保存）",
+        "summary": "UIにおいてエディタのソース位置ハイライト、キーボードによるトレースステップ操作、URLへの選択状態保持、ハイライト切り替えなどの機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-project-filters",
+        "category": "bugfix",
+        "title": "複数の --project フィルタ結合処理の修正",
+        "summary": "複数の --project フィルタが指定された場合に正しく結合して適用されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-setup-files-invalidation",
+        "category": "bugfix",
+        "title": "解決済み setup files のキャッシュ無効化修正",
+        "summary": "解決された setup files が適切に無効化されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-vi-when-thenresolve",
+        "category": "bugfix",
+        "title": "vi.when thenResolve での awaited 値の受け入れ",
+        "summary": "vi.when の thenResolve において await された値を正しく受け入れられるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-snapshot-conflict",
+        "category": "bugfix",
+        "title": "スナップショットファイル重複使用時のエラー検知",
+        "summary": "toMatchFileSnapshot が toMatchSnapshot と同じスナップショットファイルを使用した場合に Reject するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-vm-code-cache-fallback",
+        "category": "bugfix",
+        "title": "VMコードキャッシュ拒否時のソースコンパイルフォールバック",
+        "summary": "モジュールのコードキャッシュが拒否された場合に、ソースコードからのコンパイルへフォールバックするよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-vm-and-cache-optimizations",
+        "category": "performance",
+        "title": "VM・キャッシュ・マッチャー実行性能の向上",
+        "summary": "ワーカーごとのトレースビュー初期化の一回化、fsモジュールキャッシュキーのハッシュ計算最適化、マッチャーステート再定義の回避、未要求モジュールのウォームアップ抑制を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "remix-run/react-router#378551019",
@@ -1192,10 +1359,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は含まれていません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "remix-run/react-router#378541765",
@@ -1209,10 +1377,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースに関する詳細な変更点が本文に含まれていないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "mui/material-ui#377919856",
@@ -1563,7 +1732,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-8",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.102.8 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377956839",
@@ -1580,7 +1759,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-8",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-coreおよび@tanstack/solid-queryをバージョン5.102.8に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377956814",
@@ -1597,7 +1786,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-102-8",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/vue-query を 5.102.8 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377956785",
@@ -1614,7 +1813,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "solid-query-5-102-8-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.102.8に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377956754",
@@ -1628,10 +1837,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "query-persist-client-core-5-102-8-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.102.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377956726",
@@ -1648,7 +1867,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-8",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/solid-query がバージョン 5.102.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377671198",
