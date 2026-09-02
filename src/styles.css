@@ -122,6 +122,13 @@ input:focus {
   grid-column: 1 / -1;
 }
 
+.custom-date-filter {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 14px;
+}
+
 .library-options {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -405,6 +412,11 @@ tbody tr:last-child td {
 
   .library-filter {
     grid-column: auto;
+  }
+
+  .custom-date-filter {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .library-options {
