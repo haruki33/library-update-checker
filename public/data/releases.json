@@ -1,5 +1,425 @@
 [
   {
+    "id": "TanStack/query#381608096",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-02-2220",
+    "publishedAt": "2026-09-02T22:20:16Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-02-2220",
+    "releaseNotes": "Release 2026-09-02 22:20\n\n## Changes\n\n### Features\n\n- solid-query: built-in single-flight consumer via FLIGHT_DATA_SOURCE (#11326) (72f818550) by @ryansolid\n\n### Fix\n\n- solid-query: scope useMutation's cache subscription to the flight (#11325) (209f9f515) by @ryansolid\n\n\n## Packages\n\n- @tanstack/solid-query@6.0.0-rc.2\n- @tanstack/solid-query-devtools@6.0.0-rc.2\n- @tanstack/solid-query-persist-client@6.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "solid-query-flight-data-source",
+        "category": "feature",
+        "title": "solid-query: FLIGHT_DATA_SOURCEによるシングルフライトコンシューマーの組み込み",
+        "summary": "FLIGHT_DATA_SOURCEを通じてビルトインのシングルフライトコンシューマー機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "solid-query-use-mutation-cache-subscription",
+        "category": "bugfix",
+        "title": "solid-query: useMutationのキャッシュサブスクリプション範囲の修正",
+        "summary": "useMutationのキャッシュサブスクリプションをフライトのスコープに制限するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#381608060",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-devtools@6.0.0-rc.2",
+    "publishedAt": "2026-09-02T22:20:12Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-devtools%406.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#11326](https://github.com/TanStack/query/pull/11326) [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497) - Require solid-js and @solidjs/web 2.0.0-rc.6+. rc.6 ships the named flight-data source API the single-flight consumer uses, plus the async settle fix the adapter depends on (rc.5's settle-walk regression breaks query hydration).\n\n-   Updated dependencies \\[[`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497), [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497), [`209f9f5`](https://github.com/TanStack/query/commit/209f9f5153cab810337c6b8ad9e0cd90945c5c6f), [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497)]:\n    -   @tanstack/solid-query@6.0.0-rc.2\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "solid-js および @solidjs/web のバージョンを 2.0.0-rc.6 以降にアップデートする必要があります。",
+      "steps": [
+        "solid-js および @solidjs/web を 2.0.0-rc.6 以降に更新してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "11326",
+        "category": "breaking",
+        "title": "solid-js および @solidjs/web 2.0.0-rc.6+ の要求",
+        "summary": "solid-js および @solidjs/web の最小要求バージョンが 2.0.0-rc.6+ に更新されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "dep-update-solid-query-6.0.0-rc.2",
+        "category": "other",
+        "title": "@tanstack/solid-query の更新",
+        "summary": "@tanstack/solid-query が 6.0.0-rc.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#381608036",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-persist-client@6.0.0-rc.2",
+    "publishedAt": "2026-09-02T22:20:09Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-persist-client%406.0.0-rc.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#11326](https://github.com/TanStack/query/pull/11326) [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497) - Require solid-js and @solidjs/web 2.0.0-rc.6+. rc.6 ships the named flight-data source API the single-flight consumer uses, plus the async settle fix the adapter depends on (rc.5's settle-walk regression breaks query hydration).\n\n-   Updated dependencies \\[[`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497), [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497), [`209f9f5`](https://github.com/TanStack/query/commit/209f9f5153cab810337c6b8ad9e0cd90945c5c6f), [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497)]:\n    -   @tanstack/solid-query@6.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#381608011",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query@6.0.0-rc.2",
+    "publishedAt": "2026-09-02T22:20:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query%406.0.0-rc.2",
+    "releaseNotes": "### Minor Changes\n\n-   [#11326](https://github.com/TanStack/query/pull/11326) [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497) - SSR lifecycle utilities: new `dehydrateSettled` awaits in-flight queries before dehydrating so streamed HTML carries settled data; `QueryClientProvider` tears the client down after server render disposal (`cancelQueries` + `clear`, preventing cross-request leaks) and dehydration now respects `defaultOptions.dehydrate.shouldDehydrateQuery` filtering.\n\n-   [#11326](https://github.com/TanStack/query/pull/11326) [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497) - Built-in single-flight consumer: `QueryClientProvider` now subscribes the query cache's slice of Solid's multi-source single-flight channel under the exported `FLIGHT_DATA_SOURCE` id (`\"sq\"`). Mutation responses carrying that slice — a `DehydratedState` produced by a server collector registered with `registerFlightDataSource(FLIGHT_DATA_SOURCE, hook)` — hydrate the provider's client before the mutation's promise resolves, so every mounted query on those keys updates with no follow-up refetches and no per-app wiring. Subscribing is inert when no server collector exists. Requires the `@solidjs/web` release following 2.0.0-rc.4 (the named-source single-flight protocol).\n\n### Patch Changes\n\n-   [#11325](https://github.com/TanStack/query/pull/11325) [`209f9f5`](https://github.com/TanStack/query/commit/209f9f5153cab810337c6b8ad9e0cd90945c5c6f) - fix: scope useMutation's mutation-cache subscription to the flight. The\n    hook subscribed at mount with a bare reactive `client()` read (tripping\n    Solid's STRICT_READ_UNTRACKED dev diagnostic) and held the subscription\n    for its whole life even though the listener only matters while a mutation\n    is in flight. The subscription now starts in `run` against the same\n    client the mutation is built on and ends at settle: nothing reactive is\n    read at setup, the listener and the mutation can never sit on different\n    clients, and idle hooks hold no cache subscription.\n\n-   [#11326](https://github.com/TanStack/query/pull/11326) [`72f8185`](https://github.com/TanStack/query/commit/72f818550ed6bb87267c6c367761b7175a611497) - Require solid-js and @solidjs/web 2.0.0-rc.6+. rc.6 ships the named flight-data source API the single-flight consumer uses, plus the async settle fix the adapter depends on (rc.5's settle-walk regression breaks query hydration).\n",
+    "breaking": false,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "solid-jsおよび@solidjs/webのバージョンを2.0.0-rc.6以降に更新する必要があります。",
+      "steps": [
+        "solid-jsおよび@solidjs/webのバージョンを2.0.0-rc.6以降に更新してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "11326-ssr-lifecycle",
+        "category": "feature",
+        "title": "SSRライフサイクルユーティリティの追加",
+        "summary": "dehydrateSettled関数の追加、QueryClientProviderでのサーバーレンダリング破棄時の自動クリーンアップ、およびdehydrateフィルタリング適用に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11326-single-flight-consumer",
+        "category": "feature",
+        "title": "組み込みシングルフライトコンシューマーの追加",
+        "summary": "QueryClientProviderがSolidのシングルフライトチャネルを購読し、ミューテーションレスポンスに含まれるDehydratedStateによる自動ハイドレーションに対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11325-use-mutation-subscription",
+        "category": "bugfix",
+        "title": "useMutationのキャッシュ購読タイミングの修正",
+        "summary": "useMutationのキャッシュ購読をマウント時ではなくミューテーション実行中のみに限定し、STRICT_READ_UNTRACKED警告の発生を解消しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11326-dependency-bump",
+        "category": "other",
+        "title": "solid-jsおよび@solidjs/webの最小要求バージョンの更新",
+        "summary": "シングルフライトデータソースAPIおよび非同期settle修正のため、solid-jsおよび@solidjs/web 2.0.0-rc.6以上が必須となりました。",
+        "impact": "medium",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#381100556",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.4.0",
+    "publishedAt": "2026-09-02T08:50:18Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.4.0",
+    "releaseNotes": "### Minor Changes\n\n- [#1491](https://github.com/petyosi/react-virtuoso/pull/1491) [`bbf108f`](https://github.com/petyosi/react-virtuoso/commit/bbf108fad247b8190109492bfce5728d24ec021c) Thanks [@deshiknaves](https://github.com/deshiknaves)! - Add `model.updateData(data)` for applying a same-shape data snapshot (same length, same rows and stable row keys at the same indices) without resetting the known row-size tree, so mounted cells keep their DOM nodes and local state (focused inputs, popovers, etc.) across the update. `setData()` is unchanged and still resets the size tree.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1491",
+        "category": "feature",
+        "title": "model.updateData(data) メソッドの追加",
+        "summary": "同じ形状のデータスナップショットを行サイズツリーをリセットせずに適用できる model.updateData(data) メソッドが追加されました。これにより、データ更新時にもマウント済みのセルDOMノードやローカル状態（フォーカスやポップオーバー等）が保持されます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#381095823",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.0-beta.0",
+    "publishedAt": "2026-09-02T08:42:32Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0-beta.0",
+    "releaseNotes": "### Features\n\n* accept Rolldown watch options in `server.watch` ([#23133](https://github.com/vitejs/vite/issues/23133)) ([1b5cfe3](https://github.com/vitejs/vite/commit/1b5cfe3d3777d4ceb7f35fcee9d3c4279316a084))\n* add closeServer and closePreviewServer hooks ([#23110](https://github.com/vitejs/vite/issues/23110)) ([e17d2d5](https://github.com/vitejs/vite/commit/e17d2d565b0288f169c7995adb2b192f917548e7))\n* add top-level `tsconfig` option ([#23310](https://github.com/vitejs/vite/issues/23310)) ([93164c3](https://github.com/vitejs/vite/commit/93164c3530a7b4fc7bbedfb986d6afa9546cdef3))\n* add warning for unsupported hooks in plugin returned from `applyToEnvironment` hook ([#23191](https://github.com/vitejs/vite/issues/23191)) ([fdef04f](https://github.com/vitejs/vite/commit/fdef04f112aadfea40ad3c448d96a49a04c168bd))\n* **cli:** support naming the CPU profile via --profile [name] ([#23042](https://github.com/vitejs/vite/issues/23042)) ([a500dee](https://github.com/vitejs/vite/commit/a500deeb6f52d93ca501a0fc612a5392b939f2f5))\n* **config:** warn on named imports from JSON modules ([#23378](https://github.com/vitejs/vite/issues/23378)) ([472385e](https://github.com/vitejs/vite/commit/472385e6ec4b21e3167c7abf9769883d1c9675f8))\n* **css:** minify style tag ([#23183](https://github.com/vitejs/vite/issues/23183)) ([8156684](https://github.com/vitejs/vite/commit/8156684572bdcf73e9d8568ed67971f0467fab60))\n* searched params attached to workers are now preserved ([#22280](https://github.com/vitejs/vite/issues/22280)) ([517b97f](https://github.com/vitejs/vite/commit/517b97f57ab9473e7417da856eb641d76870a56e))\n* support subpath imports in dynamic import statements ([#23185](https://github.com/vitejs/vite/issues/23185)) ([b78e2f1](https://github.com/vitejs/vite/commit/b78e2f1bc1cba404c4bd9faf518d26ec85e89fc7))\n* use `import.meta.ROLLDOWN_FILE_URL_*` for assets in JS ([#22888](https://github.com/vitejs/vite/issues/22888)) ([4366ac4](https://github.com/vitejs/vite/commit/4366ac468343252df6d5706361a6348afa66f9cc))\n* use `import.meta.ROLLDOWN_FILE_URL_*` for other plugins ([#22894](https://github.com/vitejs/vite/issues/22894)) ([e38f29e](https://github.com/vitejs/vite/commit/e38f29ee48bea5ea3178faec5b78708e86f38afb))\n* **worker:** remove worker chunk if it's detected that it's not referenced ([#22473](https://github.com/vitejs/vite/issues/22473)) ([924997a](https://github.com/vitejs/vite/commit/924997a4bdda9115faee9bdb622fcec4fc8357f0))\n\n### Bug Fixes\n\n* **config:** close bundles when generation fails ([#23256](https://github.com/vitejs/vite/issues/23256)) ([6bacc95](https://github.com/vitejs/vite/commit/6bacc956df5a76cc5653b9de4493453b953439fd))\n* **css:** keep newline-separated srcset candidates intact ([#23265](https://github.com/vitejs/vite/issues/23265)) ([4f9d2f4](https://github.com/vitejs/vite/commit/4f9d2f4dadc83191200de7d2154c957a711e8c3d))\n* **deps:** update all non-major dependencies ([#23337](https://github.com/vitejs/vite/issues/23337)) ([d550815](https://github.com/vitejs/vite/commit/d55081581ddd4d55667fef38e85d02ab7f879f15))\n* **deps:** update all non-major dependencies ([#23404](https://github.com/vitejs/vite/issues/23404)) ([238ad81](https://github.com/vitejs/vite/commit/238ad811c7fb9e4730cbd317d0657867ed3447b3))\n* **deps:** update rolldown-related dependencies ([#23338](https://github.com/vitejs/vite/issues/23338)) ([76e8082](https://github.com/vitejs/vite/commit/76e8082c56a2872dc8017c5672bc36cba8dcf75d))\n* **deps:** update rolldown-related dependencies ([#23405](https://github.com/vitejs/vite/issues/23405)) ([b882566](https://github.com/vitejs/vite/commit/b88256607e3a051b7bcb0b338b3c4665926b55a8))\n* **dev:** run closeBundle after buildEnd failure ([#23165](https://github.com/vitejs/vite/issues/23165)) ([8cb872e](https://github.com/vitejs/vite/commit/8cb872e7fb65b03f6068923c6aa7fcf3e71baf21))\n* **hmr:** handle `import.meta.hot.invalidate` in virtual module ([#23171](https://github.com/vitejs/vite/issues/23171)) ([6162968](https://github.com/vitejs/vite/commit/616296895bd135386d35069a479a5f188c7de298))\n* **utils:** handle dot in srcset density descriptor ([#23346](https://github.com/vitejs/vite/issues/23346)) ([b50e1b4](https://github.com/vitejs/vite/commit/b50e1b4a3d66128a4076e19769b2e29657985516))\n* **utils:** match timestamp query parameter with proper delimiters ([#23364](https://github.com/vitejs/vite/issues/23364)) ([41f3c6f](https://github.com/vitejs/vite/commit/41f3c6fff88ade015669cac5c42db946e0b6f5c9))\n\n### Miscellaneous Chores\n\n* delete unused `PluginContainerOptions` ([#23382](https://github.com/vitejs/vite/issues/23382)) ([ee64401](https://github.com/vitejs/vite/commit/ee644014aab61e546742b862a7d7b0d6c7d67a7b))\n* use oxfmt `sortImports` ([#23319](https://github.com/vitejs/vite/issues/23319)) ([97ad042](https://github.com/vitejs/vite/commit/97ad042170f4c71b518239723b733dd98e8e3e76))\n\n### Code Refactoring\n\n* delete unused `esbuildPlugin` ([#23381](https://github.com/vitejs/vite/issues/23381)) ([f40efef](https://github.com/vitejs/vite/commit/f40efefbb3630cdb7235286bc2b51673d9fbfc27))\n* exclude postfix from `__VITE_ASSET__` ([#22886](https://github.com/vitejs/vite/issues/22886)) ([a6c08e1](https://github.com/vitejs/vite/commit/a6c08e10a624bd89b78683ff1b0e8cfa1d89aa45))\n* remove HmrUrl concept ([#23172](https://github.com/vitejs/vite/issues/23172)) ([67a6807](https://github.com/vitejs/vite/commit/67a680767317f8e2cb28b6b0500192f993a567cf))\n* use `urlId` of `import.meta.ROLLDOWN_FILE_URL` in wasm plugin ([#22962](https://github.com/vitejs/vite/issues/22962)) ([92bd2a7](https://github.com/vitejs/vite/commit/92bd2a7f325ed102349cdc6c1ad4b5cd25e1d72f))\n\n### Tests\n\n* add `renderBuiltUrl` change changes hash ([#23118](https://github.com/vitejs/vite/issues/23118)) ([0291408](https://github.com/vitejs/vite/commit/0291408b8443129ce6f6d1d440be8facabe9683b))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "23133",
+        "category": "feature",
+        "title": "server.watchでのRolldown監視オプションのサポート",
+        "summary": "server.watchオプションにおいてRolldownの監視設定を受け入れられるように対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23110",
+        "category": "feature",
+        "title": "closeServerおよびclosePreviewServerフックの追加",
+        "summary": "開発サーバーやプレビューサーバー終了時に呼び出される新しいプラグインフックを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23310",
+        "category": "feature",
+        "title": "トップレベルtsconfigオプションの追加",
+        "summary": "設定ファイルで直接tsconfigのパス等を指定できるトップレベルのtsconfigオプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23191",
+        "category": "feature",
+        "title": "applyToEnvironmentから返されたプラグインの未サポートフックへの警告",
+        "summary": "applyToEnvironmentフックから返されたプラグイン内で、サポートされていないフックが定義されている場合に警告を出力します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23042",
+        "category": "feature",
+        "title": "CLIで--profile [name]によるCPUプロファイル名のカスタマイズ対応",
+        "summary": "CLIオプションの--profileでプロファイル名を任意に指定して出力できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23378",
+        "category": "feature",
+        "title": "JSONモジュールからの名前付きインポートに対する警告機能",
+        "summary": "JSONモジュールから名前付きインポート（named import）を行った場合に警告を発行するよう変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23183",
+        "category": "feature",
+        "title": "styleタグのminify対応",
+        "summary": "HTML内のstyleタグに含まれるCSSコードをビルド時に圧縮（minify）するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22280",
+        "category": "feature",
+        "title": "Worker指定時のクエリパラメータの保持",
+        "summary": "Worker読み込み時に付与された検索クエリパラメータがビルド結果でも正しく保持されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23185",
+        "category": "feature",
+        "title": "動的インポートにおけるサブパスインポートのサポート",
+        "summary": "dynamic import構文でのサブパスインポート（package.jsonのimportsフィールド利用）に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22888",
+        "category": "feature",
+        "title": "JS内アセットへのimport.meta.ROLLDOWN_FILE_URL_*の導入",
+        "summary": "JavaScript内のアセットURL参照処理においてimport.meta.ROLLDOWN_FILE_URL_*を使用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22894",
+        "category": "feature",
+        "title": "他プラグイン向けimport.meta.ROLLDOWN_FILE_URL_*の利用",
+        "summary": "他プラグイン向け処理でimport.meta.ROLLDOWN_FILE_URL_*を利用するよう拡張しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22473",
+        "category": "feature",
+        "title": "未参照Workerチャンクの自動削除",
+        "summary": "どこからも参照されていないWorkerチャンクが検出された場合、不要なファイルとして自動削除します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23256",
+        "category": "bugfix",
+        "title": "ビルド生成失敗時のバンドルクローズ処理の修正",
+        "summary": "バンドル生成中にエラーが発生した場合でも、適切にバンドルリソースをクローズするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23265",
+        "category": "bugfix",
+        "title": "改行区切りのsrcset属性の保持",
+        "summary": "HTML等のsrcset属性で改行区切りされた候補文字列が崩れず維持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23337",
+        "category": "bugfix",
+        "title": "依存パッケージのアップデート",
+        "summary": "メジャーバージョン以外の依存関係を最新版に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23404",
+        "category": "bugfix",
+        "title": "依存パッケージの追加アップデート",
+        "summary": "メジャーバージョン以外の依存関係の更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23338",
+        "category": "bugfix",
+        "title": "Rolldown関連依存パッケージの更新",
+        "summary": "Rolldownに関連する内部依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23405",
+        "category": "bugfix",
+        "title": "Rolldown関連依存パッケージの追加更新",
+        "summary": "Rolldownに関連する内部依存関係の追加更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23165",
+        "category": "bugfix",
+        "title": "buildEndフック失敗後のcloseBundle実行補正",
+        "summary": "buildEndフック内で失敗が発生した場合でも、後続のcloseBundleフックを実行するよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23171",
+        "category": "bugfix",
+        "title": "仮想モジュールにおけるimport.meta.hot.invalidateのハンドリング修正",
+        "summary": "仮想モジュール内でimport.meta.hot.invalidateが呼び出された際の処理を正しく行うよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23346",
+        "category": "bugfix",
+        "title": "srcset解像度記述子に含まれるドットの解釈修正",
+        "summary": "srcset属性の密度指定（例: 1.5x）に含まれるドットを正しく認識できるようパース処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23364",
+        "category": "bugfix",
+        "title": "タイムスタンプクエリパラメータのマッチング精度向上",
+        "summary": "URLのタイムスタンプパラメータを削除・置換する際、適切な区切り文字で識別するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23382",
+        "category": "other",
+        "title": "未使用のPluginContainerOptionsの削除",
+        "summary": "使われていなかったPluginContainerOptions型定義をコードベースから削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23319",
+        "category": "other",
+        "title": "oxfmtソートルールの適用",
+        "summary": "コードベースのインポート順序整理にoxfmt sortImportsを適用しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23381",
+        "category": "other",
+        "title": "未使用のesbuildPluginの削除",
+        "summary": "使用されなくなった内部のesbuildPluginを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22886",
+        "category": "other",
+        "title": "__VITE_ASSET__からのポストフィックス除外",
+        "summary": "アセット識別用プレースホルダー__VITE_ASSET__から不要なポストフィックスを除外しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23172",
+        "category": "other",
+        "title": "HmrUrl概念の削除",
+        "summary": "内部のHmrUrl概念を整理および削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22962",
+        "category": "other",
+        "title": "wasmプラグインでのROLLDOWN_FILE_URLのurlId利用",
+        "summary": "wasmプラグイン内部でimport.meta.ROLLDOWN_FILE_URLのurlIdを使用するようにリファクタリングしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23118",
+        "category": "other",
+        "title": "renderBuiltUrl変更時のハッシュ生成テスト追加",
+        "summary": "renderBuiltUrlの変更が出力ハッシュに影響を与えることを確認するテストを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "vitest-dev/vitest#379690007",
     "library": "Vitest",
     "repository": "vitest-dev/vitest",
@@ -2161,10 +2581,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-query-core-5-102-7",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係の更新",
+        "summary": "内部依存パッケージである @tanstack/query-core がバージョン 5.102.7 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377670826",
@@ -2178,10 +2608,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.102.7",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreのバージョンが5.102.7に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377670804",
@@ -2195,10 +2635,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "vue-query-5.102.7-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core のバージョンが 5.102.7 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377670745",
@@ -2215,7 +2665,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-102-7",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-core をバージョン 5.102.7 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377670684",
