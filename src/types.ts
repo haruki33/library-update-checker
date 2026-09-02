@@ -28,10 +28,15 @@ export interface LibraryRelease {
   changes: ReleaseChange[]
 }
 
+export type DateRangePreset = 'all' | '7d' | '30d' | '3m' | 'custom'
+
 export interface ReleaseFilters {
-  dateRange: 'all' | '7d' | '30d' | '3m'
+  dateRange: DateRangePreset
+  startDate: string
+  endDate: string
   libraries: string[]
   version: string
   breaking: 'all' | 'breaking' | 'non-breaking'
   impact: 'all' | Impact
 }
+
