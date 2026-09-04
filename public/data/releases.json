@@ -1,5 +1,357 @@
 [
   {
+    "id": "TanStack/query#383046117",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-04-2228",
+    "publishedAt": "2026-09-04T22:28:51Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-04-2228",
+    "releaseNotes": "Release 2026-09-04 22:28\n\n## Changes\n\n### Features\n\n- solid-query: sweep X-Revalidate keys in the single-flight consumer (#11394) (f41ac714d) by @ryansolid\n\n\n## Packages\n\n- @tanstack/solid-query@6.0.0-rc.3\n- @tanstack/solid-query-devtools@6.0.0-rc.3\n- @tanstack/solid-query-persist-client@6.0.0-rc.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "solid-query-11394",
+        "category": "feature",
+        "title": "solid-query: single-flight consumerにおけるX-Revalidateキーのスイープ処理",
+        "summary": "single-flight consumerにおいてX-Revalidateキーをスイープ（クリーンアップ）する機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#383046095",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query@6.0.0-rc.3",
+    "publishedAt": "2026-09-04T22:28:48Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query%406.0.0-rc.3",
+    "releaseNotes": "### Patch Changes\n\n-   [#11394](https://github.com/TanStack/query/pull/11394) [`f41ac71`](https://github.com/TanStack/query/commit/f41ac714d0e70d3e68c6ef568cc1728ef6006147) - Sweep `X-Revalidate` keys in the single-flight consumer. A mutation can declare its invalidation scope with Solid's `reload`/`redirect` `revalidate` option; the flight payload covers what the server recomputed, and whatever a declared key matches beyond it (parameterized instances only the client holds, queries no loader owns) is now invalidated client-side — active queries refetch in the background, inactive ones are marked stale. Keys match by queryKey prefix, mirroring Solid Router's consumption of the same header.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11394",
+        "category": "feature",
+        "title": "シングルフライトコンシューマーにおけるX-Revalidateキーの処理を追加",
+        "summary": "ミューテーションがSolidのreload/redirectのrevalidateオプションを通じて無効化スコープを宣言できるようになりました。サーバーで再計算された範囲を超えて宣言されたキーに一致するクエリは、クライアント側でアクティブなものはバックグラウンドで再取得され、非アクティブなものは古い状態（stale）としてマークされます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#383046082",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-persist-client@6.0.0-rc.3",
+    "publishedAt": "2026-09-04T22:28:45Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-persist-client%406.0.0-rc.3",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f41ac71`](https://github.com/TanStack/query/commit/f41ac714d0e70d3e68c6ef568cc1728ef6006147)]:\n    -   @tanstack/solid-query@6.0.0-rc.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "f41ac714d0e70d3e68c6ef568cc1728ef6006147",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/solid-query を 6.0.0-rc.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#383046068",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/solid-query-devtools@6.0.0-rc.3",
+    "publishedAt": "2026-09-04T22:28:42Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/solid-query-devtools%406.0.0-rc.3",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f41ac71`](https://github.com/TanStack/query/commit/f41ac714d0e70d3e68c6ef568cc1728ef6006147)]:\n    -   @tanstack/solid-query@6.0.0-rc.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-solid-query-6-0-0-rc-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/solid-queryがバージョン6.0.0-rc.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#382904355",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-04-1728",
+    "publishedAt": "2026-09-04T17:28:26Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-04-1728",
+    "releaseNotes": "Release 2026-09-04 17:28\n\n## Changes\n\n### Fix\n\n- solid-router: remove router-owned Loading boundaries, ack startTransition at settlement (#8236) (cc25e82278) by @ryansolid\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.6\n- @tanstack/solid-start@2.0.0-rc.6\n- @tanstack/solid-start-client@2.0.0-rc.6\n- @tanstack/solid-start-server@2.0.0-rc.6\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースに伴う移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "solid-router-loading-boundaries-8236",
+        "category": "bugfix",
+        "title": "solid-routerのLoading境界の削除とstartTransition処理の修正",
+        "summary": "solid-routerにおいて、ルーター固有のLoading境界を削除し、トランジション完了時にstartTransitionを正しく完了（ack）するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#382904317",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start@2.0.0-rc.6",
+    "publishedAt": "2026-09-04T17:28:23Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start%402.0.0-rc.6",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31)]:\n    -   @tanstack/solid-router@2.0.0-rc.6\n    -   @tanstack/solid-start-client@2.0.0-rc.6\n    -   @tanstack/solid-start-server@2.0.0-rc.6\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "patch-deps-update-2-0-0-rc-6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ (@tanstack/solid-router, @tanstack/solid-start-client, @tanstack/solid-start-server) をバージョン 2.0.0-rc.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#382904293",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router@2.0.0-rc.6",
+    "publishedAt": "2026-09-04T17:28:20Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router%402.0.0-rc.6",
+    "releaseNotes": "### Patch Changes\n\n-   [#8236](https://github.com/TanStack/router/pull/8236) [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31) - Remove all router-owned `Loading` boundaries from `Matches`, `Match`, and `Outlet`, and only install one in `Await` when a `fallback` is provided. Async reads in route components are no longer caught by an invisible router boundary, so Solid's implicit transitions hold the previous view — live and interactive — until the new route settles, then swap atomically. `pendingComponent` is presented through router pending state (`pendingMs`/`pendingMinMs`) as before; loading boundaries are now exclusively user-provided.\n\n-   [#8236](https://github.com/TanStack/router/pull/8236) [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31) - Resolve the `router.startTransition` render acknowledgement when the commit's transition actually settles instead of immediately after flush. View transitions, `onRendered` (scroll restoration), pending minimum-display timing, and `status: 'idle'` now observe the committed swap instead of firing against held DOM; superseded or rolled-back commits acknowledge `false` instead of leaking. Synchronous navigations still acknowledge within the same flush.\n\n-   [#8236](https://github.com/TanStack/router/pull/8236) [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31) - Stop force-flushing Solid's scheduler on every router-core batch. Store writes now coalesce through the scheduler (one settle per navigation instead of 3-5 full synchronous flushes) while reads stay synchronously fresh via a shadow value in the store bridge.\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "ルーター内部のローディングバウンダリ削除に伴い、非同期表示の挙動調整が必要になる場合があります。",
+      "steps": [
+        "非同期読み込みを行うルートでローディング表示が必要な場合は、ユーザー定義の Suspense や Loading バウンダリを明示的に設置するか、pendingComponent などのルーター待機状態設定を使用してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "8236-1",
+        "category": "breaking",
+        "title": "Matches、Match、Outletからのルーター標準Loadingバウンダリの削除",
+        "summary": "Matches、Match、Outletからルーター固有のLoadingバウンダリが削除されました。ローディングバウンダリはユーザー定義のみとなり、Solidの暗黙的なトランジションによって新しいルートが解決するまで前の画面が保持されます。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8236-2",
+        "category": "bugfix",
+        "title": "router.startTransitionの完了タイミング修正",
+        "summary": "router.startTransitionのレンダー完了通知が、フラッシュ直後ではなくトランジションが実際に完了・定着したタイミングで解決されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8236-3",
+        "category": "performance",
+        "title": "Solidスケジューラの強制フラッシュ停止とストア書き込みの合算処理",
+        "summary": "ルーターコアのバッチごとにSolidスケジューラを強制フラッシュする処理を停止し、1回のナビゲーションにつき1回の定着処理に集約して描画パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#382904256",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-client@2.0.0-rc.6",
+    "publishedAt": "2026-09-04T17:28:17Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-client%402.0.0-rc.6",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31)]:\n    -   @tanstack/solid-router@2.0.0-rc.6\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-deps-solid-router-rc-6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/solid-router がバージョン 2.0.0-rc.6 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#382904230",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-server@2.0.0-rc.6",
+    "publishedAt": "2026-09-04T17:28:14Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-server%402.0.0-rc.6",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31), [`cc25e82`](https://github.com/TanStack/router/commit/cc25e8227829a938aa3ff7b67648a45f84f9df31)]:\n    -   @tanstack/solid-router@2.0.0-rc.6\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "patch-dep-update-solid-router",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/solid-routerが2.0.0-rc.6に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "eslint/eslint#382793134",
+    "library": "ESLint",
+    "repository": "eslint/eslint",
+    "version": "v10.10.0",
+    "publishedAt": "2026-09-04T14:30:17Z",
+    "url": "https://github.com/eslint/eslint/releases/tag/v10.10.0",
+    "releaseNotes": "## Features\n* [`264b434`](https://github.com/eslint/eslint/commit/264b4346d1963701df0c398b4aeb2f6e8b2af93e) feat: add `d` and `v` flags to `no-unexpected-multiline` (#21305) (Gihyeon Jeong / 정기현)\n* [`c6cc6c5`](https://github.com/eslint/eslint/commit/c6cc6c592f30901345d94ef75e0d42c1894fae6c) feat: check `Object.prototype` property names in `new-cap` (#21269) (crimsonjay0)\n* [`5661fa6`](https://github.com/eslint/eslint/commit/5661fa65fde9fd4c14f0b730e3cee6a42fc657c1) feat: no-extra-bind false negatives with class fields and static blocks (#21260) (synthex-byte)\n\n## Bug Fixes\n* [`bb47dc6`](https://github.com/eslint/eslint/commit/bb47dc6da2399a8f76c0c0c3273e6bc314c480e5) fix: update dependency file-entry-cache to v11 (#20801) (Milos Djermanovic)\n* [`427ac0a`](https://github.com/eslint/eslint/commit/427ac0a014066c36aa57fa8fa9af20fd9fb591e1) fix: use format strings in debug calls (#21247) (Francesco Trotta)\n* [`9d81532`](https://github.com/eslint/eslint/commit/9d8153223dbf47b9aecdc1474202aaee4845f146) fix: support `__proto__` in `/* exported */` comments (#21261) (sethamus)\n* [`87e0a08`](https://github.com/eslint/eslint/commit/87e0a082438264ad90b87fd74165ab4fd90f63ef) fix: prefer-object-has-own autofix breaks when Object is shadowed (#21282) (김채영)\n* [`8e2cb14`](https://github.com/eslint/eslint/commit/8e2cb142217f2efee1d10dcc02bfb75145ae775d) fix: `new-cap` false positive for `UTC` calls with `properties: false` (#21275) (Pixel)\n* [`9f4a364`](https://github.com/eslint/eslint/commit/9f4a364ab0ade048dfce1f37792b1d461d866e55) fix: Ignore static imports in no-unreachable (#21276) (Taha Kotil)\n\n## Documentation\n* [`2417cad`](https://github.com/eslint/eslint/commit/2417cad57d7d1bc4cf3ecf0f0575cfb10ff2011c) docs: Update README (GitHub Actions Bot)\n* [`9cecb8a`](https://github.com/eslint/eslint/commit/9cecb8a0a2348070abf72321965d41919c7cc626) docs: document `\\c` control letter escapes in no-control-regex (#21286) (한국)\n* [`8724829`](https://github.com/eslint/eslint/commit/8724829f69f8ed80c876e3a5a017da199ce78739) docs: update compat table links (#21263) (fnx)\n* [`5634542`](https://github.com/eslint/eslint/commit/5634542be580750ffb1a5766470f9e9c72719696) docs: Clarify eqeqeq suggestion behavior (#21256) (Müslüm Yılmaz)\n\n## Chores\n* [`b3d876b`](https://github.com/eslint/eslint/commit/b3d876b46083d67899eb1d9613118c1c583632a2) chore: disable npm audit in ecosystem tests (#21306) (Francesco Trotta)\n* [`1696682`](https://github.com/eslint/eslint/commit/1696682791661c13167eb905da2f38d1b8f4a3bf) ci: restore EMFILE test on Node.js 26 (#21297) (Marry (Subin Yang))\n* [`2c7f5d6`](https://github.com/eslint/eslint/commit/2c7f5d6f47a92e8c0847af103e40fdb2f4dc61ef) chore: update github/codeql-action action to v4.37.9 (#21296) (renovate[bot])\n* [`3c753f1`](https://github.com/eslint/eslint/commit/3c753f18b461bfbf36d41a79a7863c093ef48489) chore: update eslint (#21289) (renovate[bot])\n* [`1c73469`](https://github.com/eslint/eslint/commit/1c734690bf6f4f9c542bec428d5a1a5c6cc4a19b) chore: update ecosystem plugins (#21280) (ESLint Bot)\n* [`08a02be`](https://github.com/eslint/eslint/commit/08a02be429e21fc93d86c8dd16cec6dc945ea2c1) test: add error locations to `no-extra-boolean-cast` (#21266) (lumir)\n* [`77bb1db`](https://github.com/eslint/eslint/commit/77bb1db8e730b7da2347c647d60f215706aa349a) chore: update github/codeql-action action to v4.37.8 (#21270) (renovate[bot])\n* [`007e81a`](https://github.com/eslint/eslint/commit/007e81ac0ad66bd0be4887d88a276df292ae0bed) ci: skip EMFILE test on Node.js 26 (#21265) (lumir)\n* [`0430280`](https://github.com/eslint/eslint/commit/0430280e7cca9dc0fdbf0bc50464e98e84285c49) chore: improve ecosystem tests compatibility on Windows (#21178) (crimsonjay0)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "264b434",
+        "category": "feature",
+        "title": "no-unexpected-multiline ルールへの d および v フラグの追加",
+        "summary": "no-unexpected-multiline ルールにおいて、正規表現の d および v フラグがサポートされました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "c6cc6c5",
+        "category": "feature",
+        "title": "new-cap ルールでの Object.prototype プロパティ名のチェック",
+        "summary": "new-cap ルールで Object.prototype のプロパティ名がチェック対象に含まれるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "5661fa6",
+        "category": "feature",
+        "title": "no-extra-bind ルールにおけるクラスフィールドと静的ブロックの検出改善",
+        "summary": "no-extra-bind ルールで、クラスフィールドおよび静的ブロック内で不要な bind が検出されない偽陰性の問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bb47dc6",
+        "category": "bugfix",
+        "title": "file-entry-cache 依存関係の更新",
+        "summary": "file-entry-cache 依存関係を v11 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "427ac0a",
+        "category": "bugfix",
+        "title": "デバッグ呼び出しにおけるフォーマット文字列の使用",
+        "summary": "内部デバッグログ出力でフォーマット文字列を正しく使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9d81532",
+        "category": "bugfix",
+        "title": "/* exported */ コメントにおける __proto__ のサポート",
+        "summary": "/* exported */ コメントで __proto__ を認識・サポートするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "87e0a08",
+        "category": "bugfix",
+        "title": "prefer-object-has-own 自動修正時の Object シャドウイング問題の修正",
+        "summary": "スコープ内で Object がシャドウイングされている場合に prefer-object-has-own の自動修正が破損する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8e2cb14",
+        "category": "bugfix",
+        "title": "new-cap ルールにおける UTC 呼び出しの偽陽性修正",
+        "summary": "properties: false 設定時に UTC 呼び出しに対して new-cap ルールが誤判定を起こす問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9f4a364",
+        "category": "bugfix",
+        "title": "no-unreachable ルールにおける静的インポートの無視",
+        "summary": "no-unreachable ルールが静的インポート文（static imports）を適切に無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#382304432",
     "library": "TanStack Router",
     "repository": "TanStack/router",
