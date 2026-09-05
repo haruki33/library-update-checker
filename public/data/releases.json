@@ -1,5 +1,32 @@
 [
   {
+    "id": "petyosi/react-virtuoso#383270129",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.13",
+    "publishedAt": "2026-09-05T14:27:57Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.13",
+    "releaseNotes": "### Patch Changes\n\n- [#1493](https://github.com/petyosi/react-virtuoso/pull/1493) [`d3c437e`](https://github.com/petyosi/react-virtuoso/commit/d3c437eaf55946143dea4b70d4116fe1b44bdfe8) Thanks [@albertcalasanzs](https://github.com/albertcalasanzs)! - Fix the transcript blanking for a frame when an older page is prepended.\n\n  The compensation for a prepend was a deviation that grows the content followed, one\n  `requestAnimationFrame` later, by the scroll that cancels it. In between there is a painted frame in\n  which the list is displaced by the whole page — and because prepends fire near `scrollTop` 0, that\n  displacement is the entire viewport.\n\n  The scroll now runs as soon as the renderer acknowledges, from a layout effect, that the deviation\n  has reached the DOM: after the mutation, before paint. Both land in the same paint, and because the\n  content has already grown the scroll can no longer be clamped to the old maximum. If nothing\n  acknowledges by the next frame the previous deferred behaviour still applies, so the worst case is\n  unchanged.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1493",
+        "category": "bugfix",
+        "title": "古いページの追加時に1フレーム空白が表示される問題を修正",
+        "summary": "データ追加（prepend）時のスクロール補正処理をDOM変更後・描画前（layout effect）に実行するように改善し、1フレーム分の画面ズレや白画面の発生を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/query#383046117",
     "library": "TanStack Query",
     "repository": "TanStack/query",
@@ -3732,7 +3759,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-table-core-9-2-3",
+        "category": "other",
+        "title": "@tanstack/table-coreの依存関係更新",
+        "summary": "@tanstack/table-coreがバージョン9.2.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372845",
@@ -3749,7 +3786,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-table-core-923",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-coreがバージョン9.2.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372808",
@@ -3763,10 +3810,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-table-core-923",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-coreが9.2.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372783",
@@ -3780,10 +3837,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみのため、特別に対応が必要な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "patch-dep-update-9-2-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-core@9.2.3 および @tanstack/table-devtools@9.2.0 へ依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372754",
@@ -3800,7 +3867,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-table-core-923",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-core が 9.2.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372727",
@@ -3831,10 +3908,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6568",
+        "category": "bugfix",
+        "title": "階層的フィルタ行モデルとWorker行モデルの修正",
+        "summary": "どちらのフィルタリングモードでもflatRowsが子孫より前に親をリストするように修正し、複製された行のフィルターメタデータを保持し、Workerバックの行モデルでネストされたデータが正しくラウンドトリップするようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6576",
+        "category": "bugfix",
+        "title": "グループ化およびDownstream WorkerにおけるflatRowsの順序の修正",
+        "summary": "グループ化およびDownstream WorkerのflatRowsを親優先の行きがけ順（preorder）で出力するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340477",
@@ -3851,7 +3946,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11305",
+        "category": "bugfix",
+        "title": "react-query: falsyなエラーのエラーバウンダリへの伝播を修正",
+        "summary": "falsyな値（0や空文字列、nullなど）のエラーが発生した場合に、Error Boundaryへと正常に伝播しない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340373",
@@ -3868,7 +3973,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-6-1-46",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/svelte-query を最新のパッチバージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340350",
