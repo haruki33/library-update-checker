@@ -1,5 +1,96 @@
 [
   {
+    "id": "vitejs/vite#384044624",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.0-beta.1",
+    "publishedAt": "2026-09-07T11:38:41Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0-beta.1",
+    "releaseNotes": "### Features\n\n* **devtools:** enable dev server integration ([#23333](https://github.com/vitejs/vite/issues/23333)) ([68aeb8a](https://github.com/vitejs/vite/commit/68aeb8a3b5a5a2ccd505288999bae1a5e6942ee1))\n\n### Bug Fixes\n\n* **build:** keep hash placeholders as-is in `resolveFileUrl` hook ([#23422](https://github.com/vitejs/vite/issues/23422)) ([e8d6a4d](https://github.com/vitejs/vite/commit/e8d6a4d3399c739772080d70c7f3c4d548a637c9))\n* **bundled-dev:** mark payload delivered on client report ([#23373](https://github.com/vitejs/vite/issues/23373)) ([a6d43bc](https://github.com/vitejs/vite/commit/a6d43bc9e3464faa4d49f090e75e1ab334ffb7b0))\n* **deps:** update all non-major dependencies ([#23445](https://github.com/vitejs/vite/issues/23445)) ([fc7c104](https://github.com/vitejs/vite/commit/fc7c104e74d35a97fa313d5dd6f1b5e7d5b26159))\n* **html:** don't inline preload link targets (fix [#13355](https://github.com/vitejs/vite/issues/13355)) ([#23387](https://github.com/vitejs/vite/issues/23387)) ([12e709c](https://github.com/vitejs/vite/commit/12e709ca4df1059747db1cb7c5d1cd71aba79a24))\n* resolve the actual package root in findNearestMainPackageData for nested package.json ([#23356](https://github.com/vitejs/vite/issues/23356)) ([8492422](https://github.com/vitejs/vite/commit/8492422b8f110625a90c702f42f30784e8cf19dc))\n* shortcuts extend error ([#23447](https://github.com/vitejs/vite/issues/23447)) ([4ec58d1](https://github.com/vitejs/vite/commit/4ec58d159df4a1b4799356a1fda62db88ed14752))\n\n### Miscellaneous Chores\n\n* introducing `@e18e/eslint-plugin` ([#23357](https://github.com/vitejs/vite/issues/23357)) ([f794133](https://github.com/vitejs/vite/commit/f79413353995a2344879014410a9128b1b9f8e9a))\n* remove unnecessary comment ([#23448](https://github.com/vitejs/vite/issues/23448)) ([b919a1a](https://github.com/vitejs/vite/commit/b919a1a8b5a7c694667f993d677973f42d349458))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "23333",
+        "category": "feature",
+        "title": "devtools: 開発サーバー統合の有効化",
+        "summary": "devtoolsにおいて開発サーバーとの統合を有効にしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23422",
+        "category": "bugfix",
+        "title": "build: resolveFileUrlフックでのハッシュ保持",
+        "summary": "resolveFileUrlフックにおいてハッシュプレースホルダーをそのまま維持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23373",
+        "category": "bugfix",
+        "title": "bundled-dev: クライアントレポート時の配信マーク処理",
+        "summary": "クライアントレポート時にペイロードを配信済みとしてマークするよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23445",
+        "category": "bugfix",
+        "title": "deps: マイナー・パッチ依存関係の更新",
+        "summary": "メジャーバージョン以外のすべての依存パッケージを最新状態に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23387",
+        "category": "bugfix",
+        "title": "html: preloadリンクのインライン化防止",
+        "summary": "preloadリンクのターゲットが誤ってインライン化されないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23356",
+        "category": "bugfix",
+        "title": "ネストされたpackage.jsonに対するパッケージルートの解決修正",
+        "summary": "findNearestMainPackageDataにおいて、ネストされたpackage.jsonが存在する場合の正しいパッケージルート解決を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23447",
+        "category": "bugfix",
+        "title": "shortcuts: 拡張エラーの修正",
+        "summary": "ショートカット拡張時に発生していたエラーを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23357",
+        "category": "other",
+        "title": "@e18e/eslint-pluginの導入",
+        "summary": "リポジトリに@e18e/eslint-pluginを導入しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23448",
+        "category": "other",
+        "title": "不要なコメントの削除",
+        "summary": "ソースコード内の不要なコメントを削除しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#383722795",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -444,7 +535,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-170-28",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core および @tanstack/start-storage-context の依存関係バージョンを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722594",
@@ -461,7 +562,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-167-38",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-server-core への依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722585",
@@ -472,13 +583,57 @@
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/vue-router%401.170.30",
     "releaseNotes": "### Patch Changes\n\n-   [#8165](https://github.com/TanStack/router/pull/8165) [`2f20c00`](https://github.com/TanStack/router/commit/2f20c00224c5ba63467551914e0c37012588c4c2) - Exclude structural descendants below error and not-found boundaries from route lifecycle callbacks. Preserve lifecycle membership through invalidation, hydration, background reloads, and superseded navigation publication.\n\n-   [#8209](https://github.com/TanStack/router/pull/8209) [`28a5e45`](https://github.com/TanStack/router/commit/28a5e4504e4ea5cb1480667a4bea2588a53e110f) - Preserve falsy thrown values in React and Vue error boundaries. Type React and Vue boundary error components and `onCatch` callbacks as `unknown`. Solid boundary errors remain typed as `Error`; SSR now wraps non-`Error` loader errors to match Solid’s native boundary behavior, preserving the original value in `cause`. Router state and loader `onError` values are unchanged.\n\n    When upgrading React or Vue, narrow boundary errors (for example, with `error instanceof Error`) before reading `message` or `stack`. `ErrorComponentProps<TError>` remains available for values narrowed to a specific error type. Route `onError` types are unchanged.\n\n-   [#8161](https://github.com/TanStack/router/pull/8161) [`f0b5eda`](https://github.com/TanStack/router/commit/f0b5eda544606686a8a8d675a686ca1366428b96) - Retain successful not-found matches as terminal shared boundaries during client navigation, preserving route context while the destination loads.\n\n-   [#8251](https://github.com/TanStack/router/pull/8251) [`0497cae`](https://github.com/TanStack/router/commit/0497caeef3ff7e1c1c6080eca38bca24e7ec320b) - Use URL.canParse for absolute URL checks in links, navigation, redirects, and build configuration. Preserve a URL constructor fallback for older browsers.\n\n-   [#8169](https://github.com/TanStack/router/pull/8169) [`0caf6b9`](https://github.com/TanStack/router/commit/0caf6b9a2b7e14b0b146c74cc27cb05c19d700a5) - Fix route-scoped `useMatch`, `useSearch`, and `useParams` APIs to forward the `shouldThrow` option and preserve optional return types when `shouldThrow: false`.\n\n-   Updated dependencies \\[[`edf0e16`](https://github.com/TanStack/router/commit/edf0e16ebfe82ec6e8f68f403a1fda8de9e28889), [`2f20c00`](https://github.com/TanStack/router/commit/2f20c00224c5ba63467551914e0c37012588c4c2), [`28a5e45`](https://github.com/TanStack/router/commit/28a5e4504e4ea5cb1480667a4bea2588a53e110f), [`08eff50`](https://github.com/TanStack/router/commit/08eff50c447a154a3373909009e9e4375cea17ce), [`216c0c4`](https://github.com/TanStack/router/commit/216c0c48036fd1a33163b70dcabfed2b893808b0), [`2f91503`](https://github.com/TanStack/router/commit/2f9150309bc472f4a75cbe98adcdb50c76b12c7a), [`f0b5eda`](https://github.com/TanStack/router/commit/f0b5eda544606686a8a8d675a686ca1366428b96), [`50eafca`](https://github.com/TanStack/router/commit/50eafcaebbbedb6fde3b2816de7a0ace8cde4832), [`0497cae`](https://github.com/TanStack/router/commit/0497caeef3ff7e1c1c6080eca38bca24e7ec320b), [`ee28348`](https://github.com/TanStack/router/commit/ee283480dfa51150a2e0b096a6eff94a89ff8b3f), [`9035abc`](https://github.com/TanStack/router/commit/9035abc41163d83409ef582f7743a3c7be57dd93), [`c18e690`](https://github.com/TanStack/router/commit/c18e69081475a7c98f9d40bd0fe6da78ccb84598)]:\n    -   @tanstack/router-core@1.171.28\n    -   @tanstack/history@1.162.2\n",
     "breaking": false,
-    "impact": "low",
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "エラー境界コンポーネントやonCatchコールバックでエラープロパティ（messageやstackなど）を参照している場合、型の絞り込みが必要です。",
+      "steps": [
+        "エラー境界コンポーネントやonCatchコールバックで受け取るerrorがunknown型に変更されたため、`error.message`などを直接参照している箇所で`error instanceof Error`等の型絞り込みを追加してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8165",
+        "category": "bugfix",
+        "title": "エラー・Not-Found境界下におけるライフサイクルコールバックの修正",
+        "summary": "エラー境界およびNot-Found境界の下にある構造的子孫要素をルートライフサイクルコールバックから除外するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8209",
+        "category": "bugfix",
+        "title": "エラー境界およびonCatchでのエラー型のunknown化",
+        "summary": "React/Vueのエラー境界とonCatchコールバックのエラー型をunknownに変更し、偽値のthrowも保持するように改善しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "8161",
+        "category": "bugfix",
+        "title": "ナビゲーション中のNot-Found境界の保持",
+        "summary": "クライアントナビゲーション中、目的地のロード完了まで成功したNot-Foundマッチを保持してルートコンテキストを維持するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8251",
+        "category": "feature",
+        "title": "URL.canParseを使用した絶対URL判定への最適化",
+        "summary": "リンクやナビゲーション等の絶対URLチェックにURL.canParseを使用し、非対応環境向けにはフォールバックを維持します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8169",
+        "category": "bugfix",
+        "title": "useMatch / useSearch / useParams の shouldThrow オプション修正",
+        "summary": "shouldThrowオプションが正しく伝搬され、shouldThrow: false 設定時にオプショナルな戻り値型が維持されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722572",
@@ -495,7 +650,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-router-plugin",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-pluginのバージョンを1.168.36に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722561",
@@ -512,7 +677,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-168-47",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "内部で利用している @tanstack/vue-router や @tanstack/start-plugin-core などの関連パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722548",
@@ -529,7 +704,33 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8164",
+        "category": "performance",
+        "title": "Rsbuildのインポート保護パフォーマンスの向上",
+        "summary": "コンパイルグラフのスキャンを1回のみにし、違反が発見されるまで診断処理を遅延させることで、Rsbuildのインポート保護パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8251",
+        "category": "bugfix",
+        "title": "絶対URLチェックでのURL.canParseの採用",
+        "summary": "リンク、ナビゲーション、リダイレクト、ビルド設定における絶対URLチェックにURL.canParseを使用するように変更し、古いブラウザ向けにフォールバックを維持しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-1.171.40",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-coreや@tanstack/router-generatorなどの内部依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722542",
@@ -563,7 +764,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-167-33",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-core、@tanstack/vue-router、@tanstack/start-client-core などの内部依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722527",
