@@ -1,5 +1,140 @@
 [
   {
+    "id": "TanStack/router#384398453",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-08-0152",
+    "publishedAt": "2026-09-08T01:52:41Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-08-0152",
+    "releaseNotes": "Release 2026-09-08 01:52\n\n## Changes\n\n### Fix\n\n- solid-router: respect server flag during development SSR (#8254) (a09b50cac1) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.7\n- @tanstack/solid-start@2.0.0-rc.7\n- @tanstack/solid-start-client@2.0.0-rc.7\n- @tanstack/solid-start-server@2.0.0-rc.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-solid-router-server-flag-dev-ssr",
+        "category": "bugfix",
+        "title": "solid-router: 開発時SSRでのserverフラグ尊重の修正",
+        "summary": "開発時のSSR処理において、serverフラグが正しく考慮されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#384398435",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-client@2.0.0-rc.7",
+    "publishedAt": "2026-09-08T01:52:37Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-client%402.0.0-rc.7",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a09b50c`](https://github.com/TanStack/router/commit/a09b50cac19250236455cce0ce76e2551a0afe59)]:\n    -   @tanstack/solid-router@2.0.0-rc.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "a09b50cac19250236455cce0ce76e2551a0afe59",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/solid-router がバージョン 2.0.0-rc.7 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#384398417",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router@2.0.0-rc.7",
+    "publishedAt": "2026-09-08T01:52:34Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router%402.0.0-rc.7",
+    "releaseNotes": "### Patch Changes\n\n-   [#8254](https://github.com/TanStack/router/pull/8254) [`a09b50c`](https://github.com/TanStack/router/commit/a09b50cac19250236455cce0ce76e2551a0afe59) - Fall back to the router instance's server flag during development SSR. This prevents router construction from entering client hydration on the server and restores provider-owned loading and match-state serialization.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "この変更に伴う移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8254",
+        "category": "bugfix",
+        "title": "開発環境SSRにおけるサーバーフラグのフォールバック処理の修正",
+        "summary": "開発環境のSSR時にルーターインスタンスのサーバーフラグにフォールバックするよう修正しました。これによりサーバー上での誤ったクライアントハイドレーションの発生を防ぎ、プロバイダーによるローディングおよびマッチ状態のシリアライズ機能を復元します。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#384398402",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-server@2.0.0-rc.7",
+    "publishedAt": "2026-09-08T01:52:31Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-server%402.0.0-rc.7",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a09b50c`](https://github.com/TanStack/router/commit/a09b50cac19250236455cce0ce76e2551a0afe59)]:\n    -   @tanstack/solid-router@2.0.0-rc.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-solid-router-rc-7",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/solid-router が 2.0.0-rc.7 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#384398391",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start@2.0.0-rc.7",
+    "publishedAt": "2026-09-08T01:52:29Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start%402.0.0-rc.7",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`a09b50c`](https://github.com/TanStack/router/commit/a09b50cac19250236455cce0ce76e2551a0afe59)]:\n    -   @tanstack/solid-router@2.0.0-rc.7\n    -   @tanstack/solid-start-client@2.0.0-rc.7\n    -   @tanstack/solid-start-server@2.0.0-rc.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-a09b50c",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/solid-router、@tanstack/solid-start-client、@tanstack/solid-start-serverのバージョンが2.0.0-rc.7に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "vitejs/vite#384044624",
     "library": "Vite",
     "repository": "vitejs/vite",
@@ -741,13 +876,106 @@
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-core%401.171.28",
     "releaseNotes": "### Patch Changes\n\n-   [#8222](https://github.com/TanStack/router/pull/8222) [`edf0e16`](https://github.com/TanStack/router/commit/edf0e16ebfe82ec6e8f68f403a1fda8de9e28889) - Make each load transaction's completion follow its current successor so a burst of back-to-back loads wakes each superseded waiter once instead of once per successor. Previously every superseded `load()` re-polled the current transaction on each later completion, which was quadratic in microtask work.\n\n-   [#8165](https://github.com/TanStack/router/pull/8165) [`2f20c00`](https://github.com/TanStack/router/commit/2f20c00224c5ba63467551914e0c37012588c4c2) - Exclude structural descendants below error and not-found boundaries from route lifecycle callbacks. Preserve lifecycle membership through invalidation, hydration, background reloads, and superseded navigation publication.\n\n-   [#8209](https://github.com/TanStack/router/pull/8209) [`28a5e45`](https://github.com/TanStack/router/commit/28a5e4504e4ea5cb1480667a4bea2588a53e110f) - Preserve falsy thrown values in React and Vue error boundaries. Type React and Vue boundary error components and `onCatch` callbacks as `unknown`. Solid boundary errors remain typed as `Error`; SSR now wraps non-`Error` loader errors to match Solid’s native boundary behavior, preserving the original value in `cause`. Router state and loader `onError` values are unchanged.\n\n    When upgrading React or Vue, narrow boundary errors (for example, with `error instanceof Error`) before reading `message` or `stack`. `ErrorComponentProps<TError>` remains available for values narrowed to a specific error type. Route `onError` types are unchanged.\n\n-   [#8207](https://github.com/TanStack/router/pull/8207) [`08eff50`](https://github.com/TanStack/router/commit/08eff50c447a154a3373909009e9e4375cea17ce) - Fix consumer typechecking with `skipLibCheck: false` by omitting the internal beforeLoad context field from published dehydrated match declarations.\n\n    Retain the exported `isAbsoluteUrl` declaration used by framework bindings so the package entry point does not reference a stripped symbol.\n\n-   [#8259](https://github.com/TanStack/router/pull/8259) [`216c0c4`](https://github.com/TanStack/router/commit/216c0c48036fd1a33163b70dcabfed2b893808b0) - Reduce Promise allocations during client navigation and static server SSR policy resolution. Skip cancellable waits for synchronous beforeLoad results while preserving navigation cancellation.\n\n-   [#8240](https://github.com/TanStack/router/pull/8240) [`2f91503`](https://github.com/TanStack/router/commit/2f9150309bc472f4a75cbe98adcdb50c76b12c7a) - Avoid quadratic resource handoff scans when navigating with many cached route matches.\n\n-   [#8161](https://github.com/TanStack/router/pull/8161) [`f0b5eda`](https://github.com/TanStack/router/commit/f0b5eda544606686a8a8d675a686ca1366428b96) - Retain successful not-found matches as terminal shared boundaries during client navigation, preserving route context while the destination loads.\n\n-   [#8142](https://github.com/TanStack/router/pull/8142) [`50eafca`](https://github.com/TanStack/router/commit/50eafcaebbbedb6fde3b2816de7a0ace8cde4832) - Avoid unnecessary JSON.parse calls for search parameter values that cannot begin valid JSON, while preserving custom parser behavior.\n\n-   [#8251](https://github.com/TanStack/router/pull/8251) [`0497cae`](https://github.com/TanStack/router/commit/0497caeef3ff7e1c1c6080eca38bca24e7ec320b) - Use URL.canParse for absolute URL checks in links, navigation, redirects, and build configuration. Preserve a URL constructor fallback for older browsers.\n\n-   [#8230](https://github.com/TanStack/router/pull/8230) [`ee28348`](https://github.com/TanStack/router/commit/ee283480dfa51150a2e0b096a6eff94a89ff8b3f) - Replace the internal LRU cache behind path resolution, route matching and the SSR manifest lookup with a smaller SIEVE cache whose hits no longer relink a list, and fix an eviction edge case in the old implementation.\n\n-   [#8244](https://github.com/TanStack/router/pull/8244) [`c18e690`](https://github.com/TanStack/router/commit/c18e69081475a7c98f9d40bd0fe6da78ccb84598) - Reduce promise allocations during client navigation when loader data and route components are already available.\n\n-   Updated dependencies \\[[`9035abc`](https://github.com/TanStack/router/commit/9035abc41163d83409ef582f7743a3c7be57dd93)]:\n    -   @tanstack/history@1.162.2\n",
     "breaking": false,
-    "impact": "low",
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "ReactおよびVueにおけるエラー境界のエラー型がunknownに変更されたため、エラープロパティアクセス前に型ガードが必要になります。",
+      "steps": [
+        "ReactまたはVueのエラー境界コンポーネントやonCatchコールバック内でerror.messageやerror.stackを参照しているコードを確認します。",
+        "error instanceof Errorなどの型ガードを追加してエラー型を適切に絞り込んでからアクセスするように修復します。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8222",
+        "category": "performance",
+        "title": "ロード処理待機の最適化",
+        "summary": "連続するロード処理時のマイクロスキャン再計算による二次的な処理コストを排除し、処理パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8165",
+        "category": "bugfix",
+        "title": "エラーおよびNot-Found境界配下のライフサイクルコールバック除外",
+        "summary": "エラーおよびNot-Found境界より下の構造的子要素をルートライフサイクルコールバックから除外するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8209",
+        "category": "bugfix",
+        "title": "ReactおよびVueのエラー境界におけるエラー型の変更",
+        "summary": "ReactおよびVueのエラー境界コンポーネントおよびonCatchの型をunknownに変更し、falsyなスロー値を保持するように修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "8207",
+        "category": "bugfix",
+        "title": "skipLibCheck: false 環境での型チェックエラーの修正",
+        "summary": "Dehydrated matchの宣言から内部のbeforeLoadコンテキストフィールドを除外し、skipLibCheck: falseでの型チェックエラーを解消しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8259",
+        "category": "performance",
+        "title": "同期的なbeforeLoadにおけるPromise割り当ての削減",
+        "summary": "同期的なbeforeLoad結果に対して不要なキャンセル可能待機をスキップすることで、Promiseの割り当てを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8240",
+        "category": "performance",
+        "title": "多数のキャッシュルートマッチ遷移時のスキャン最適化",
+        "summary": "多数のキャッシュされたルートマッチが存在するナビゲーション時の二次的なリソースハンドオフスキャンを回避しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8161",
+        "category": "bugfix",
+        "title": "クライアント遷移時のNot-Foundマッチの保持",
+        "summary": "目的地がロードされている間、成功したNot-Foundマッチを終端共有境界として保持し、ルートコンテキストを維持するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8142",
+        "category": "performance",
+        "title": "検索パラメータのJSON.parse呼び出し最適化",
+        "summary": "有効なJSONとなり得ない検索パラメータ値に対する不要なJSON.parseの呼び出しを回避するように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8251",
+        "category": "performance",
+        "title": "絶対URL判定における URL.canParse の使用",
+        "summary": "絶対URLチェックに URL.canParse を使用するよう改善し、古いブラウザ向けにはURLコンストラクタのフォールバックを維持しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8230",
+        "category": "performance",
+        "title": "内部キャッシュのSIEVEキャッシュへの置き換え",
+        "summary": "パス解決やルートマッチング等で使用していた内部LRUキャッシュを、より軽量で効率的なSIEVEキャッシュに置き換えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8244",
+        "category": "performance",
+        "title": "既存データ利用時のPromise割り当て削減",
+        "summary": "ローダーデータやルートコンポーネントが利用可能な場合、クライアントナビゲーション中のPromise割り当てを削減しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722535",
@@ -791,7 +1019,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8264",
+        "category": "bugfix",
+        "title": "go() ナビゲーションにおける ignoreBlocker の尊重とブロック時の履歴復元",
+        "summary": "go() ナビゲーション中に ignoreBlocker 設定を適切に尊重するよう改善し、戻る・進む操作時の beforeunload 警告やブロック状態のクリア処理を修正しました。また、ナビゲーションがブロックされた際に元のブラウザ履歴エントリを正しく復元するようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722516",
@@ -805,10 +1043,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8251",
+        "category": "bugfix",
+        "title": "絶対URL判定ロジックの改善とフォールバックの維持",
+        "summary": "リンク、ナビゲーション、リダイレクト、およびビルド設定における絶対URL判定にURL.canParseを使用するよう変更されました。古いブラウザ用にURLコンストラクタによるフォールバックも維持されています。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722505",
@@ -825,7 +1073,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.169.32",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "関連パッケージ（@tanstack/router-core, @tanstack/history, @tanstack/start-client-core, @tanstack/start-storage-context）が最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722494",
@@ -842,7 +1100,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.168.31",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-client-core などの内部依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722483",
