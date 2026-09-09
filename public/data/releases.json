@@ -1,5 +1,719 @@
 [
   {
+    "id": "colinhacks/zod#385870653",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.1",
+    "publishedAt": "2026-09-09T21:50:36Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.1",
+    "releaseNotes": "A patch on top of [4.6.0](https://github.com/colinhacks/zod/releases/tag/v4.6.0).\n\n- [`b12aa523`](https://github.com/colinhacks/zod/commit/b12aa523) fix: preserve unique tags with defaulted discriminators ([#6582](https://github.com/colinhacks/zod/pull/6582)) — closes [#6577](https://github.com/colinhacks/zod/issues/6577)\n- [`dd9c36fa`](https://github.com/colinhacks/zod/commit/dd9c36fa) fix(v4): defer recursive object index inference ([#6580](https://github.com/colinhacks/zod/pull/6580))\n- [`3b154992`](https://github.com/colinhacks/zod/commit/3b154992) feat(lang): add Tajik (`tg`) locale ([#6581](https://github.com/colinhacks/zod/pull/6581)) by [@ismoil77](https://github.com/ismoil77)\n- [`2efa8b80`](https://github.com/colinhacks/zod/commit/2efa8b80) ci: give the npm wait a real budget and drop the back-publish path ([#6583](https://github.com/colinhacks/zod/pull/6583))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新において特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "b12aa523",
+        "category": "bugfix",
+        "title": "デフォルト値付き識別子での一意タグの保持",
+        "summary": "デフォルト値を持つ識別子（discriminator）において、一意のタグが消失せず保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dd9c36fa",
+        "category": "bugfix",
+        "title": "再帰的オブジェクトのインデックス型推論の遅延処理",
+        "summary": "再帰的なオブジェクトでのインデックス型推論の評価を遅延させるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "3b154992",
+        "category": "feature",
+        "title": "タジク語（tg）ロケールの追加",
+        "summary": "エラーメッセージ用の多言語サポートにタジク語（tg）ロケールを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2efa8b80",
+        "category": "other",
+        "title": "CIパイプラインの調整",
+        "summary": "npmの待機時間に適切なタイムアウトを設定し、バックパブリッシュ用パスを削除しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869689",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-09-2148",
+    "publishedAt": "2026-09-09T21:48:13Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-09-2148",
+    "releaseNotes": "Release 2026-09-09 21:48\n\n## Changes\n\n### Fix\n\n- harden URL handling across Router and Start (#8308) (9c1871ccc8) by @Sheraff\n- router-core: reload documents for cross-origin rewrites (#8287) (0654c0a1a4) by @Sheraff\n\n### Performance\n\n- router-core: avoid empty query serializer allocations (#8313) (f9836f16f0) by @schiller-manuel\n- react-router: avoid redundant Link state prop allocations (#8311) (9aec5a7012) by @schiller-manuel\n- router-core: index cache membership checks per commit (#8288) (9871c06258) by @LadyBluenotes\n- start-plugin-core: skip unused manifest build data (#8261) (919c397149) by @LadyBluenotes\n- react-router: avoid unnecessary composed handlers (#8279) (aee42c6b64) by @Sheraff\n\n### Chore\n\n- refresh Router and Start dependencies (#8300) (49bcd4db74) by @LadyBluenotes\n\n\n## Packages\n\n- @tanstack/history@1.162.3\n- @tanstack/nitro-v2-vite-plugin@1.155.2\n- @tanstack/react-router@1.170.34\n- @tanstack/react-start@1.168.51\n- @tanstack/react-start-client@1.168.32\n- @tanstack/react-start-rsc@0.1.50\n- @tanstack/react-start-server@1.167.39\n- @tanstack/router-cli@1.167.35\n- @tanstack/router-core@1.171.29\n- @tanstack/router-generator@1.167.35\n- @tanstack/router-plugin@1.168.37\n- @tanstack/router-utils@1.162.3\n- @tanstack/router-vite-plugin@1.167.37\n- @tanstack/solid-router@1.170.32\n- @tanstack/solid-start@1.168.49\n- @tanstack/solid-start-client@1.168.31\n- @tanstack/solid-start-server@1.167.38\n- @tanstack/start-client-core@1.170.29\n- @tanstack/start-plugin-core@1.171.41\n- @tanstack/start-server-core@1.169.33\n- @tanstack/start-static-server-functions@1.167.34\n- @tanstack/start-storage-context@1.167.31\n- @tanstack/vue-router@1.170.31\n- @tanstack/vue-start@1.168.48\n- @tanstack/vue-start-client@1.167.34\n- @tanstack/vue-start-server@1.167.38\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8308",
+        "category": "bugfix",
+        "title": "RouterおよびStartにおけるURL処理の強化",
+        "summary": "RouterおよびStart全体でURL処理の堅牢性を強化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8287",
+        "category": "bugfix",
+        "title": "クロスオリジン書き換え時のドキュメント再読み込み",
+        "summary": "router-coreにおいて、クロスオリジンのリライト時にドキュメントをリロードする処理を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8313",
+        "category": "performance",
+        "title": "空のクエリシリアライザのメモリ割り当て回避",
+        "summary": "router-coreにおいて、空のクエリシリアライザに対する不要な割り当てを回避するように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8311",
+        "category": "performance",
+        "title": "Link componentの冗長なstate prop割り当て削減",
+        "summary": "react-routerにおいて、Linkコンポーネントの不要なstateプロパティ割当を削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8288",
+        "category": "performance",
+        "title": "コミットごとのキャッシュチェックインデックス化",
+        "summary": "router-coreにおいて、コミット単位でキャッシュ所属チェックをインデックス化しパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8261",
+        "category": "performance",
+        "title": "未使用マニフェストビルドデータのスキップ",
+        "summary": "start-plugin-coreにおいて、使用されないマニフェストビルドデータをスキップして処理を最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8279",
+        "category": "performance",
+        "title": "不必要な合成ハンドラーの削減",
+        "summary": "react-routerにおいて、不要な合成ハンドラーの生成を回避しパフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8300",
+        "category": "other",
+        "title": "RouterおよびStartの依存関係の更新",
+        "summary": "RouterとStartのパッケージ依存関係をリフレッシュしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869641",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-client@1.168.31",
+    "publishedAt": "2026-09-09T21:48:07Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-client%401.168.31",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/solid-router@1.170.32\n    -   @tanstack/start-client-core@1.170.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-168-31",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ（@tanstack/router-core、@tanstack/solid-router、@tanstack/start-client-core）を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869616",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/vue-start-client@1.167.34",
+    "publishedAt": "2026-09-09T21:48:04Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/vue-start-client%401.167.34",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/vue-router@1.170.31\n    -   @tanstack/start-client-core@1.170.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-1.167.34",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/vue-router、および@tanstack/start-client-coreが最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869593",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.34",
+    "publishedAt": "2026-09-09T21:48:01Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.34",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/start-client-core@1.170.29\n    -   @tanstack/react-start@1.168.51\n    -   @tanstack/solid-start@1.168.49\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-167-34",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "内部の依存パッケージ（@tanstack/start-client-core、@tanstack/react-start、@tanstack/solid-start）が最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869571",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/vue-start@1.168.48",
+    "publishedAt": "2026-09-09T21:47:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/vue-start%401.168.48",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`919c397`](https://github.com/TanStack/router/commit/919c3971493374cccc963e75b9b2a4e98ebf878a)]:\n    -   @tanstack/start-plugin-core@1.171.41\n    -   @tanstack/vue-router@1.170.31\n    -   @tanstack/start-server-core@1.169.33\n    -   @tanstack/start-client-core@1.170.29\n    -   @tanstack/vue-start-client@1.167.34\n    -   @tanstack/vue-start-server@1.167.38\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "この更新には特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.168.48",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core、@tanstack/vue-router などの関連パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869544",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-core@1.171.29",
+    "publishedAt": "2026-09-09T21:47:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-core%401.171.29",
+    "releaseNotes": "### Patch Changes\n\n-   [#8313](https://github.com/TanStack/router/pull/8313) [`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725) - Avoid constructing a query serializer when search is empty or all values are undefined.\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   [#8288](https://github.com/TanStack/router/pull/8288) [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91) - Reduce cache maintenance work during navigation by indexing incoming match IDs once per commit.\n\n-   [#8287](https://github.com/TanStack/router/pull/8287) [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9) - Use full-document navigation when an output rewrite produces a cross-origin destination, including the public URL of a route mask.\n\n    Respect registered history blockers during document navigation, passing history locations and the requested push or replace action.\n\n-   Updated dependencies \\[[`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/history@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8313",
+        "category": "performance",
+        "title": "空の検索条件でのクエリシリアライザ構築の最適化",
+        "summary": "検索パラメータ（search）が空またはすべての値がundefinedの場合に、不要なクエリシリアライザの構築を回避するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8308",
+        "category": "bugfix",
+        "title": "ナビゲーション・リダイレクト先の検証強化およびバンドルサイズの削減",
+        "summary": "リダイレクト先の検証とオリジン制御を強化し、サーバー関数のレスポンスにリダイレクトヘッダーが含まれるのを防止しました。また、React、Solid、Vueにおけるリンク処理の共通化によりバンドルサイズを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8288",
+        "category": "performance",
+        "title": "ナビゲーション時のキャッシュメンテナンスの最適化",
+        "summary": "コミットごとに受信したマッチIDを1回のみインデックス化することで、ナビゲーション中のキャッシュ処理の負荷を軽減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8287",
+        "category": "bugfix",
+        "title": "クロスオリジン宛先に対するフルドキュメントナビゲーションの適用",
+        "summary": "出力書き換えによってルートマスクのパブリックURLなどのクロスオリジン宛先が生成された際にフルドキュメントナビゲーションを使用し、登録された履歴ブロッカーを尊重するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869528",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.51",
+    "publishedAt": "2026-09-09T21:47:52Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.51",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6), [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc), [`919c397`](https://github.com/TanStack/router/commit/919c3971493374cccc963e75b9b2a4e98ebf878a)]:\n    -   @tanstack/react-router@1.170.34\n    -   @tanstack/router-utils@1.162.3\n    -   @tanstack/start-plugin-core@1.171.41\n    -   @tanstack/start-server-core@1.169.33\n    -   @tanstack/react-start-client@1.168.32\n    -   @tanstack/react-start-rsc@0.1.50\n    -   @tanstack/react-start-server@1.167.39\n    -   @tanstack/start-client-core@1.170.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-168-51",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "関連するTanStack Routerパッケージ（@tanstack/react-router、@tanstack/start-plugin-coreなど）の依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869505",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.29",
+    "publishedAt": "2026-09-09T21:47:49Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.29",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/start-storage-context@1.167.31\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-170-29",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core および @tanstack/start-storage-context を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869442",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.37",
+    "publishedAt": "2026-09-09T21:47:46Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292)]:\n    -   @tanstack/router-plugin@1.168.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "49bcd4db743dba4a783d5533a42a0f97a5721292",
+        "category": "other",
+        "title": "@tanstack/router-pluginの依存関係更新",
+        "summary": "依存ライブラリである@tanstack/router-pluginをバージョン1.168.37に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#385869228",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start@1.168.49",
+    "publishedAt": "2026-09-09T21:47:43Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start%401.168.49",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`919c397`](https://github.com/TanStack/router/commit/919c3971493374cccc963e75b9b2a4e98ebf878a)]:\n    -   @tanstack/start-plugin-core@1.171.41\n    -   @tanstack/solid-router@1.170.32\n    -   @tanstack/start-server-core@1.169.33\n    -   @tanstack/solid-start-client@1.168.31\n    -   @tanstack/solid-start-server@1.167.38\n    -   @tanstack/start-client-core@1.170.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385869203",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-utils@1.162.3",
+    "publishedAt": "2026-09-09T21:47:40Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-utils%401.162.3",
+    "releaseNotes": "### Patch Changes\n\n-   [#8300](https://github.com/TanStack/router/pull/8300) [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292) - Refresh compatible build and runtime dependencies.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385869177",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.41",
+    "publishedAt": "2026-09-09T21:47:37Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.41",
+    "releaseNotes": "### Patch Changes\n\n-   [#8300](https://github.com/TanStack/router/pull/8300) [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292) - Refresh compatible build and runtime dependencies.\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   [#8261](https://github.com/TanStack/router/pull/8261) [`919c397`](https://github.com/TanStack/router/commit/919c3971493374cccc963e75b9b2a4e98ebf878a) - Avoid unused build indexes and skip CSS content capture when inline CSS is disabled in Vite and Rsbuild.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/router-plugin@1.168.37\n    -   @tanstack/router-generator@1.167.35\n    -   @tanstack/router-utils@1.162.3\n    -   @tanstack/start-server-core@1.169.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385869130",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-start-server@1.167.38",
+    "publishedAt": "2026-09-09T21:47:34Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-start-server%401.167.38",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/solid-router@1.170.32\n    -   @tanstack/start-server-core@1.169.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868829",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.34",
+    "publishedAt": "2026-09-09T21:47:31Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.34",
+    "releaseNotes": "### Patch Changes\n\n-   [#8279](https://github.com/TanStack/router/pull/8279) [`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6) - Avoid allocating event-handler arrays and wrapper functions for links without user-supplied event handlers.\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   [#8311](https://github.com/TanStack/router/pull/8311) [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc) - React Links resolve state props without temporary class-name arrays or unnecessary style copies.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/history@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868811",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.31",
+    "publishedAt": "2026-09-09T21:47:28Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.31",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868794",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.33",
+    "publishedAt": "2026-09-09T21:47:25Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.33",
+    "releaseNotes": "### Patch Changes\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/history@1.162.3\n    -   @tanstack/start-client-core@1.170.29\n    -   @tanstack/start-storage-context@1.167.31\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868774",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/nitro-v2-vite-plugin@1.155.2",
+    "publishedAt": "2026-09-09T21:47:22Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/nitro-v2-vite-plugin%401.155.2",
+    "releaseNotes": "### Patch Changes\n\n-   [#8300](https://github.com/TanStack/router/pull/8300) [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292) - Refresh compatible build and runtime dependencies.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868754",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/vue-start-server@1.167.38",
+    "publishedAt": "2026-09-09T21:47:19Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/vue-start-server%401.167.38",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/vue-router@1.170.31\n    -   @tanstack/start-server-core@1.169.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868731",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/vue-router@1.170.31",
+    "publishedAt": "2026-09-09T21:47:16Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/vue-router%401.170.31",
+    "releaseNotes": "### Patch Changes\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/history@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868713",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.39",
+    "publishedAt": "2026-09-09T21:47:13Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.39",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/react-router@1.170.34\n    -   @tanstack/start-server-core@1.169.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868697",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.167.35",
+    "publishedAt": "2026-09-09T21:47:10Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.167.35",
+    "releaseNotes": "### Patch Changes\n\n-   [#8300](https://github.com/TanStack/router/pull/8300) [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292) - Refresh compatible build and runtime dependencies.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/router-utils@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868668",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/solid-router@1.170.32",
+    "publishedAt": "2026-09-09T21:47:07Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/solid-router%401.170.32",
+    "releaseNotes": "### Patch Changes\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/history@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868647",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.168.37",
+    "publishedAt": "2026-09-09T21:47:04Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.37",
+    "releaseNotes": "### Patch Changes\n\n-   [#8300](https://github.com/TanStack/router/pull/8300) [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292) - Refresh compatible build and runtime dependencies.\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6), [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/react-router@1.170.34\n    -   @tanstack/router-generator@1.167.35\n    -   @tanstack/router-utils@1.162.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868626",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.50",
+    "publishedAt": "2026-09-09T21:47:01Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.50",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6), [`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`919c397`](https://github.com/TanStack/router/commit/919c3971493374cccc963e75b9b2a4e98ebf878a), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/react-router@1.170.34\n    -   @tanstack/router-utils@1.162.3\n    -   @tanstack/start-plugin-core@1.171.41\n    -   @tanstack/start-client-core@1.170.29\n    -   @tanstack/start-storage-context@1.167.31\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868598",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.32",
+    "publishedAt": "2026-09-09T21:46:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.32",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f9836f1`](https://github.com/TanStack/router/commit/f9836f16f0e25b0a8495f5e01e3f303b1cbc8725), [`aee42c6`](https://github.com/TanStack/router/commit/aee42c6b641d8e919bfed9e0f04bb1b72092f3a6), [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8), [`9aec5a7`](https://github.com/TanStack/router/commit/9aec5a7012c47e83ec23bb4763494b72a5e68bfc), [`9871c06`](https://github.com/TanStack/router/commit/9871c0625806001d6bf373524821a00303438a91), [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9)]:\n    -   @tanstack/router-core@1.171.29\n    -   @tanstack/react-router@1.170.34\n    -   @tanstack/start-client-core@1.170.29\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868580",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/history@1.162.3",
+    "publishedAt": "2026-09-09T21:46:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/history%401.162.3",
+    "releaseNotes": "### Patch Changes\n\n-   [#8308](https://github.com/TanStack/router/pull/8308) [`9c1871c`](https://github.com/TanStack/router/commit/9c1871ccc88bc1157186b8b460941a304ec740b8) - Validate navigation and redirect destinations, keep ambiguous relative URLs on the current origin, and constrain prerender requests and output paths. Prevent redirect headers from appearing in serialized server function response bodies.\n\n    Preserve native form HTTP redirects, route error handling and masks for document redirects, and per-navigation destinations for shared loader redirects. Avoid redundant origin parsing and reduce link styling and server-rendering work. Configured origins must already be normalized.\n\n    Keep blocked-link inactive props consistent during React hydration, honor explicit redirect Location headers before checking route options, and refresh Vue link state when destinations become internal. Reuse the protocol-relative URL check while parsing redirect schemes once.\n\n    Reduce React link bundle size by sharing pathname comparisons, state-prop selection, and element creation.\n\n    Share normalized pathname comparisons in Solid and Vue links to reduce bundle size.\n\n-   [#8287](https://github.com/TanStack/router/pull/8287) [`0654c0a`](https://github.com/TanStack/router/commit/0654c0a1a427db24d9af13c1d6ad1217a588c0c9) - Use full-document navigation when an output rewrite produces a cross-origin destination, including the public URL of a route mask.\n\n    Respect registered history blockers during document navigation, passing history locations and the requested push or replace action.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#385868568",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.167.35",
+    "publishedAt": "2026-09-09T21:46:52Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.167.35",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`49bcd4d`](https://github.com/TanStack/router/commit/49bcd4db743dba4a783d5533a42a0f97a5721292)]:\n    -   @tanstack/router-generator@1.167.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "colinhacks/zod#385786774",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.0",
+    "publishedAt": "2026-09-09T19:25:32Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.0",
+    "releaseNotes": "Zod 4.6 is now available.\n\n```sh\nnpm install zod@latest\n```\n\nAt a glance:\n\n- [`.validate()`](https://zod.dev/blog/zod-4-6#validate) — checks input validity without building a result (up to 35x faster than `.safeParse().success` on a compiled schema)\n- [`z.instanceof().properties()`](https://zod.dev/blog/zod-4-6#zproperties) — validates properties of an instance\n- [`fromJSONSchema()`](https://zod.dev/blog/zod-4-6#fromjsonschema) — enforces six validation keywords it used to ignore\n- [`z.iban()`](https://zod.dev/blog/zod-4-6#ziban) — electronic-format IBAN plus mod-97 checksum\n- [`z.withParser()`](https://zod.dev/blog/zod-4-6#zwithparser) — installs a parser generated elsewhere, for environments without `new Function`\n- [Faster CommonJS](https://zod.dev/blog/zod-4-6#faster-commonjs) — drops the getter on every export (~3x faster `z.validate()` under `require`)\n- [Memory retention in recursive schemas](https://zod.dev/blog/zod-4-6#memory-retention-in-recursive-schemas) — releases the parsed input, fixing a 4.5 out-of-memory regression\n- [`@zod/mini`](https://zod.dev/packages/mini) — Zod Mini as a standalone package, versioned in lockstep with `zod` since 4.5\n\n## `.validate()`\n\nStandalone boolean validation, in Zod, Zod Mini, and Zod Core. It answers \"is this input valid?\" without constructing a `ZodError`, which makes rejection cheap. The return type is a guard on the schema's input type.\n\n```ts\nz.validate(z.string(), \"hi\"); // true\nz.validate(z.string(), 42);   // false\n```\n\nIt is a method on Zod Classic schemas too. ([#6547](https://github.com/colinhacks/zod/pull/6547))\n\n```ts\nconst Player = z.object({\n  username: z.string(),\n  xp: z.number(),\n});\n\nif (Player.validate(data)) {\n  data.username; // narrowed\n}\n```\n\nIn conjunction with [`z.compile()`](https://zod.dev/compile), this can be up to 35x faster than `.safeParse().success` on invalid input.\n\n![Time per call on invalid input, schemas compiled with z.compile(), safeParse().success as a gray bar with .validate() as a blue bar inside it: a union of 3 objects 28 ns (34.9x faster), an array of 10 strings 23 ns (24.6x), a 3-element tuple 28 ns (16.1x), a 5-key object 21 ns (16.3x), a discriminated union of 3 21 ns (15.7x), z.number() 19 ns (13.8x), z.string() 19 ns (13.2x), z.boolean() 19 ns (13.7x); up to 34.9x faster](https://raw.githubusercontent.com/colinhacks/zod/5cc3549ac77b33c1b7156a6ef158f593990cda60/packages/docs/public/blog/validate-compiled-invalid.svg)\n\n*Time per call on invalid input, compiled with z.compile() — lower is better ([benchmark](https://github.com/colinhacks/zod/blob/5cc3549ac77b33c1b7156a6ef158f593990cda60/packages/bench/validate-vs-safeparse.ts))*\n\n<details>\n<summary><b>Uncompiled schemas</b></summary>\n\nWithout compilation it is up to 5.9x faster. The saving is the result object: `.safeParse()` allocates one with an accessor pair on every call, and `.validate()` allocates nothing.\n\n![Time per call on invalid input, plain schemas, safeParse().success as a gray bar with .validate() as a blue bar inside it: a union of 3 objects 659 ns (1.5x faster), an array of 10 strings 211 ns (2.3x), a 3-element tuple 166 ns (2.5x), a discriminated union of 3 93 ns (3.3x), a 5-key object 75 ns (3.9x), z.number() 47 ns (5.3x), z.string() 42 ns (5.8x), z.boolean() 42 ns (5.9x); up to 5.9x faster](https://raw.githubusercontent.com/colinhacks/zod/5cc3549ac77b33c1b7156a6ef158f593990cda60/packages/docs/public/blog/validate-invalid.svg)\n\n*Time per call on invalid input, plain schemas — lower is better ([benchmark](https://github.com/colinhacks/zod/blob/5cc3549ac77b33c1b7156a6ef158f593990cda60/packages/bench/validate-vs-safeparse.ts))*\n\n</details>\n\nBoth charts measure the failure path. The key feature of `.validate()` is that it can *short-circuit* on the first issue it encounters, instead of aggregating a full `ZodIssue[]` array.\n\n> [!NOTE]\n> Async refinements are covered by `.validateAsync()`.\n\n## `z.properties()`\n\nA new API for validating specific properties of an object. Unlike `z.object()` it validates *in-place*, so it plays nice with class instances. ([#6536](https://github.com/colinhacks/zod/pull/6536))\n\n```ts\nconst responseLike = z.properties({ status: z.number().min(200).max(299) });\n\nresponseLike.parse(new Response(\"ok\", { status: 200 }));  // ✅ a real Response\nresponseLike.parse({ status: 204 });                      // ✅ a plain object\n```\n\nA corresponding `.properties()` method has been added to `ZodInstanceOf`.\n\n**Zod**\n\n```ts\nconst okResponse = z.instanceof(Response).properties({\n  ok: z.literal(true),\n  status: z.number().min(200).max(299),\n});\n```\n\n**Zod Mini**\n\n```ts\nconst okResponse = z.instanceof(Response).check(...z.properties({\n  ok: z.literal(true),\n  status: z.number().check(z.minimum(200), z.maximum(299)),\n}));\n```\n\nThe input comes back untouched, so the prototype survives and the methods still work. That is the part `z.object()` cannot do: it would hand back a plain object and the `Response` would be gone.\n\n```ts\nconst res = await fetch(\"/api/user\");\n\nokResponse.parse(res) === res; // ✅ true\n```\n\n## `fromJSONSchema()`\n\nSix additional JSON Schema keywords are now supported in `z.fromJSONSchema()`. ([#6535](https://github.com/colinhacks/zod/pull/6535))\n\n- [`minProperties`](https://json-schema.org/understanding-json-schema/reference/object#size) / [`maxProperties`](https://json-schema.org/understanding-json-schema/reference/object#size)\n- [`uniqueItems`](https://json-schema.org/understanding-json-schema/reference/array#uniqueItems)\n- [`contains`](https://json-schema.org/understanding-json-schema/reference/array#contains)\n- [`minContains`](https://json-schema.org/understanding-json-schema/reference/array#mincontains-maxcontains) / [`maxContains`](https://json-schema.org/understanding-json-schema/reference/array#mincontains-maxcontains)\n\n```ts\nconst schema = z.fromJSONSchema({\n  type: \"object\",\n  minProperties: 2,      // also maxProperties\n});\n\nschema.parse({ a: 1 });        // ❌ too few properties\nschema.parse({ a: 1, b: 2 });  // ✅\n```\n\nBoth property bounds count the input's own keys. Array uniqueness is structural, so `[{ a: 1 }, { a: 1 }]` is a duplicate.\n\n```ts\nz.fromJSONSchema({ type: \"array\", uniqueItems: true }).parse([{ a: 1 }, { a: 1 }]); // ❌\n\nz.fromJSONSchema({\n  type: \"array\",\n  contains: { type: \"number\" },   // also minContains and maxContains\n  minContains: 2,\n}).parse([\"a\", 2]);               // ❌ only one number\n```\n\n## `z.iban()`\n\nA new string format: an IBAN in electronic format, with a valid ISO 7064 MOD 97-10 checksum. ([#6571](https://github.com/colinhacks/zod/pull/6571))\n\n```ts\nz.iban().parse(\"DE89370400440532013000\"); // ✅\nz.iban().parse(\"DE89370400440532013001\"); // ❌ bad checksum\n```\n\n## `z.withParser()`\n\n`z.compile()` builds its parser with `new Function`, which a strict Content Security Policy blocks. `z.withParser()` is that installer on its own: it takes a parser generated somewhere else, at build time or by a native compiler, and installs it under the same contract. ([#6575](https://github.com/colinhacks/zod/pull/6575))\n\n```ts\nconst Player = z.object({ username: z.string(), xp: z.number() });\n\n// isPlayer is a type guard your build step generated\nconst Fast = z.withParser(Player, (input) =>\n  isPlayer(input) ? { username: input.username, xp: input.xp } : z.INVALID\n);\n```\n\nThe supplied parser owns the whole result, so it has to return what the schema would have returned. This one rebuilds the object rather than handing back its input, because `z.object()` strips unknown keys. Returning `z.INVALID` hands the input to the runtime, which stays the only source of `ZodError`s.\n\n## Faster CommonJS\n\nTypeScript compiles a re-export to a getter, and 252 of the 255 exports on Zod 4.5's CommonJS entrypoint were getters. V8 could not see a constant callee behind one, so it could not inline the call. The 4.6 build emits plain properties and freezes the exports object. On a compiled schema, `z.validate()` under `require` is about 3x faster than it was in Zod 4.5. ([#6564](https://github.com/colinhacks/zod/pull/6564))\n\n```ts\nconst { z } = require(\"zod\");\nconst CompiledPlayer = z.compile(Player);\n\nz.validate(CompiledPlayer, data); // ~3x faster than Zod 4.5\n```\n\nOnly calls through the namespace were affected. A method call like `Player.safeParse(data)` never reads the exports object, and the ESM build is unchanged.\n\n## Memory retention in recursive schemas\n\nA recursive schema held the input and output of its last parse until the next parse replaced it, so one long-lived schema pinned every object it had touched. Zod 4.4 released that input and Zod 4.5 did not, which surfaced as an out-of-memory failure on a repository-wide lint run. The parse state is weak throughout now: one parse of a 29k-node tree retains 2.2 MB where it used to retain 10.1 MB, and recursive parses give up about 6% for it. ([#6572](https://github.com/colinhacks/zod/pull/6572))\n\n```ts\nconst Category = z.object({\n  name: z.string(),\n  get children() {\n    return z.array(Category);\n  },\n});\n```\n\n## Bug fixes\n\n### ⚠️ Error maps run on the first read of `error`\n\nBecause `safeParse()` now builds its error lazily, error maps — global, locale, and per-schema `error` — run when `result.error` is first read, not at parse time. Code that swaps `z.config()` between the parse and the read gets the newer configuration. ([#6519](https://github.com/colinhacks/zod/pull/6519))\n\n```ts\nconst result = schema.safeParse(12);\nz.config(z.locales.fr());\nresult.error.issues[0].message; // French in 4.6, English in 4.5\n```\n\nAn error map with a side effect never runs if nothing reads the error. Throwing parses are unaffected — `.parse()` builds and throws its error immediately, never takes the lazy path, and its stack still points at your call site.\n\n### ⚠️ `z.emoji()` rejects component-only strings\n\nUnicode's `Emoji_Component` property covers the pieces that attach to an emoji, so `z.emoji()` accepted `\"123\"`, `\"#\"`, `\"*\"`, and a lone zero-width joiner, variation selector, or skin tone modifier. The pattern now requires at least one pictograph, regional indicator, or keycap. ([#6532](https://github.com/colinhacks/zod/pull/6532))\n\n```ts\nz.emoji().parse(\"😀\");   // ✅\nz.emoji().parse(\"1️⃣\");   // ✅ the keycap is the anchor\nz.emoji().parse(\"123\");  // ❌ was accepted in 4.5\n```\n\nFlags, subdivision flags, skin-tone-modified emoji, and ZWJ sequences are unchanged. Closes [#6515](https://github.com/colinhacks/zod/issues/6515).\n\n### ⚠️ Numeric enum options no longer include the reverse mappings\n\nA numeric TypeScript enum also carries its reverse mapping (`0` to `\"UK\"`) at runtime. The parser already ignored those keys, but `.options` was read straight off the enum object, so a three-member enum listed six values and three of them failed to parse. ([#6542](https://github.com/colinhacks/zod/pull/6542))\n\n```ts\nenum Country { UK, Germany, France }\n\nz.enum(Country).options; // 4.5: [\"UK\", \"Germany\", \"France\", 0, 1, 2] — 4.6: [0, 1, 2]\n```\n\n### ⚠️ base64 patterns\n\nThe runtime patterns for `z.base64()` and `z.base64url()` are the character sets, with length and padding enforced in code, so a multi-megabyte string can no longer overflow the regex stack through a composed schema. The JSON Schema output still emits the exact block forms, so `z.toJSONSchema()` is unchanged. ([#6534](https://github.com/colinhacks/zod/pull/6534), [#6527](https://github.com/colinhacks/zod/pull/6527))\n\nComposing `z.base64()` into a template literal now checks the alphabet but not the length, which is how `z.creditCard()` already behaves there. The exported `z.regexes.base64url` is now the length-aware form, so it overflows on a multi-megabyte input the same way `z.regexes.base64` does.\n\n### ⚠️ The email pattern dropped its lookaheads\n\n`z.email()` opened with two lookaheads, and the second scanned the whole string before the match began. Both are gone, and the rule they enforced — no empty segment in the local part — is expressed structurally instead, so `z.email()` accepts and rejects exactly what it did before. Valid addresses validate roughly twice as fast. ([#6573](https://github.com/colinhacks/zod/pull/6573))\n\nThe pattern string is user-visible, and every copy of it changes: `z.regexes.email`, which has no capture groups now — neither of the two it used to expose held a usable value; `issue.pattern` on a failed `z.email()`; and the `pattern` that `z.toJSONSchema()` emits, which no longer carries a lookahead, so validators outside ECMAScript can compile it.\n\nComposing an email into a template literal also stops applying its no-consecutive-dots rule to the rest of the string.\n\n```ts\nz.templateLiteral([z.email(), \"|\", z.string()]).parse(\"a@b.cc|a..b\");\n// 4.5: ❌ — the lookahead reached past the email segment — 4.6: ✅\n```\n\n### ⚠️ Chained checks no longer overwrite each other in JSON Schema\n\nEach check used to write its own bounds into the schema as it attached, in chain order, so a format check applied after `.min()` and `.max()` replaced the tighter values with its own range. The converter folds the checks as a conjunction now. The order they are chained in no longer changes the output. ([#6554](https://github.com/colinhacks/zod/pull/6554), [#6553](https://github.com/colinhacks/zod/pull/6553))\n\n```ts\nz.toJSONSchema(z.number().min(0).max(23).int());\n// 4.5: { minimum: -9007199254740991, maximum: 9007199254740991 }\n// 4.6: { minimum: 0, maximum: 23 }\n```\n\nRuntime parsing enforced the bounds in every version. Only the emitted schema was wrong. The same fold fixes two more cases: a repeated `multipleOf` kept the first divisor and dropped the rest, so `z.number().multipleOf(2).multipleOf(3)` emitted a schema that accepts 4, and `z.string().min(8).length(5)` emitted `minLength: 5`, widening a bound the runtime still rejected. Closes [#6550](https://github.com/colinhacks/zod/issues/6550).\n\n### ⚠️ Metadata members materialize on first read\n\nEight members on a Zod Classic schema — `.format`, `.minLength`, `.maxLength`, `.minValue`, `.maxValue`, `.isInt`, `.minDate` and `.maxDate` — are computed from the checks now instead of being written onto every instance at construction. Each one is a prototype getter that becomes an own property on first read. ([#6554](https://github.com/colinhacks/zod/pull/6554))\n\n```ts\nconst s = z.string().min(3).max(9);\n\nObject.keys(s); // 4.5: [\"def\", \"type\", \"format\", \"minLength\", \"maxLength\"] — 4.6: [\"def\", \"type\"]\ns.minLength;    // 3 in both\nObject.keys(s); // 4.6: [\"def\", \"type\", \"minLength\"]\n```\n\nA key is absent until something reads it, and `Object.assign({}, schema)` copies only the members that have been read. Deleting one restores the getter, and the next read recomputes it.\n\nThe values can move too, because the getters read the same fold the JSON Schema converter does. An order-dependent chain reports the tighter bound now instead of whichever check wrote last.\n\n```ts\nz.string().min(8).length(5).minLength; // 4.5: 5 — 4.6: 8\n```\n\n## Commits\n\nZod 4.6 rolls up 72 commits.\n\n- [`661673ae`](https://github.com/colinhacks/zod/commit/661673ae) docs: make the 9thCO logo visible on the light theme by [@colinhacks](https://github.com/colinhacks)\n- [`6de10dce`](https://github.com/colinhacks/zod/commit/6de10dce) docs: reconcile the sponsor listings against every active sponsorship ([#6579](https://github.com/colinhacks/zod/pull/6579)) by [@colinhacks](https://github.com/colinhacks)\n- [`213ee75d`](https://github.com/colinhacks/zod/commit/213ee75d) feat(compile): add z.withParser for externally generated parsers ([#6575](https://github.com/colinhacks/zod/pull/6575)) by [@colinhacks](https://github.com/colinhacks)\n- [`f9465d4e`](https://github.com/colinhacks/zod/commit/f9465d4e) docs: reconcile the sponsor listings with active sponsorships ([#6576](https://github.com/colinhacks/zod/pull/6576)) by [@colinhacks](https://github.com/colinhacks)\n- [`f7fd5548`](https://github.com/colinhacks/zod/commit/f7fd5548) perf(v4): drop the lookaheads from the email regex ([#6573](https://github.com/colinhacks/zod/pull/6573)) by [@colinhacks](https://github.com/colinhacks)\n- [`36f17960`](https://github.com/colinhacks/zod/commit/36f17960) fix(v4): stop the memoizer from pinning a finished parse ([#6572](https://github.com/colinhacks/zod/pull/6572)) by [@colinhacks](https://github.com/colinhacks)\n- [`22bed613`](https://github.com/colinhacks/zod/commit/22bed613) feat(v4): add z.iban() string format with mod-97 checksum ([#6571](https://github.com/colinhacks/zod/pull/6571)) by [@colinhacks](https://github.com/colinhacks)\n- [`c5b9bcb3`](https://github.com/colinhacks/zod/commit/c5b9bcb3) bench: measure what a runtime island's leaked indent cost the generated source by [@colinhacks](https://github.com/colinhacks)\n- [`e54716cb`](https://github.com/colinhacks/zod/commit/e54716cb) docs(ecosystem): add @apical-ts/craft ([#5946](https://github.com/colinhacks/zod/pull/5946)) by [@gunzip](https://github.com/gunzip)\n- [`dcbcf052`](https://github.com/colinhacks/zod/commit/dcbcf052) fix(compile): unwind the doc indent when a child generator throws ([#6570](https://github.com/colinhacks/zod/pull/6570)) by [@colinhacks](https://github.com/colinhacks)\n- [`277613a6`](https://github.com/colinhacks/zod/commit/277613a6) docs: move the release procedure to the maintainer-local notes by [@colinhacks](https://github.com/colinhacks)\n- [`eb1c1089`](https://github.com/colinhacks/zod/commit/eb1c1089) ci: release only on workflow_dispatch behind the npm environment ([#6569](https://github.com/colinhacks/zod/pull/6569)) by [@colinhacks](https://github.com/colinhacks)\n- [`741981ff`](https://github.com/colinhacks/zod/commit/741981ff) perf(compile): for-in record walk, cheaper issue finalization, and a generative compile differential ([#6567](https://github.com/colinhacks/zod/pull/6567)) by [@colinhacks](https://github.com/colinhacks)\n- [`804e0f52`](https://github.com/colinhacks/zod/commit/804e0f52) perf: seal the CommonJS exports so require(\"zod\") stops reading through a getter ([#6564](https://github.com/colinhacks/zod/pull/6564)) by [@colinhacks](https://github.com/colinhacks)\n- [`6f048367`](https://github.com/colinhacks/zod/commit/6f048367) fix(v4): derive JSON Schema constraints by folding checks in the converter ([#6554](https://github.com/colinhacks/zod/pull/6554)) by [@colinhacks](https://github.com/colinhacks)\n- [`e4d67f3e`](https://github.com/colinhacks/zod/commit/e4d67f3e) Migrate development and CI to Nub ([#6562](https://github.com/colinhacks/zod/pull/6562)) by [@colinhacks](https://github.com/colinhacks)\n- [`7a002366`](https://github.com/colinhacks/zod/commit/7a002366) fix(v4): don't let format checks overwrite tighter min/max bounds ([#6553](https://github.com/colinhacks/zod/pull/6553)) by [@colinhacks](https://github.com/colinhacks)\n- [`5489a532`](https://github.com/colinhacks/zod/commit/5489a532) test(v4): pin the check-chain case that keeps compiled validate's definite guard ([#6551](https://github.com/colinhacks/zod/pull/6551)) by [@colinhacks](https://github.com/colinhacks)\n- [`e7604717`](https://github.com/colinhacks/zod/commit/e7604717) docs: attribute the compiled failure cost to the fallback, not the double pass by [@colinhacks](https://github.com/colinhacks)\n- [`764ac59f`](https://github.com/colinhacks/zod/commit/764ac59f) perf(v4): settle z.validate on the first failure in parse order ([#6544](https://github.com/colinhacks/zod/pull/6544)) by [@colinhacks](https://github.com/colinhacks)\n- [`07917f4c`](https://github.com/colinhacks/zod/commit/07917f4c) test(v4): pin the lazy safeParse error's stack behavior ([#6548](https://github.com/colinhacks/zod/pull/6548)) by [@colinhacks](https://github.com/colinhacks)\n- [`62e6624b`](https://github.com/colinhacks/zod/commit/62e6624b) feat(v4): add .validate() and .validateAsync() to Zod Classic ([#6547](https://github.com/colinhacks/zod/pull/6547)) by [@colinhacks](https://github.com/colinhacks)\n- [`cafbee47`](https://github.com/colinhacks/zod/commit/cafbee47) fix(v4): parse recursive schemas built by a factory ([#6530](https://github.com/colinhacks/zod/pull/6530)) by [@colinhacks](https://github.com/colinhacks)\n- [`4d730882`](https://github.com/colinhacks/zod/commit/4d730882) Release the parsed input once a failing safeParse builds its error ([#6543](https://github.com/colinhacks/zod/pull/6543)) by [@colinhacks](https://github.com/colinhacks)\n- [`90269c60`](https://github.com/colinhacks/zod/commit/90269c60) Keep a numeric TS enum's reverse-mapping keys out of `.options` ([#6542](https://github.com/colinhacks/zod/pull/6542)) by [@colinhacks](https://github.com/colinhacks)\n- [`18e71c71`](https://github.com/colinhacks/zod/commit/18e71c71) Rename the JSON Schema `process` helper so bundler polyfills cannot collide ([#6541](https://github.com/colinhacks/zod/pull/6541)) by [@colinhacks](https://github.com/colinhacks)\n- [`68aca3dc`](https://github.com/colinhacks/zod/commit/68aca3dc) docs: cover the 4.5 API surface that never made it into the reference by [@colinhacks](https://github.com/colinhacks)\n- [`eca96871`](https://github.com/colinhacks/zod/commit/eca96871) fix(v4): enforce the six JSON Schema keywords fromJSONSchema silently dropped ([#6535](https://github.com/colinhacks/zod/pull/6535)) by [@colinhacks](https://github.com/colinhacks)\n- [`81ded991`](https://github.com/colinhacks/zod/commit/81ded991) perf: answer z.validate from the compiled fast path on invalid input ([#6538](https://github.com/colinhacks/zod/pull/6538)) by [@colinhacks](https://github.com/colinhacks)\n- [`51caf010`](https://github.com/colinhacks/zod/commit/51caf010) refactor: collapse cachedInternal back into cached ([#6540](https://github.com/colinhacks/zod/pull/6540)) by [@colinhacks](https://github.com/colinhacks)\n- [`abfb3897`](https://github.com/colinhacks/zod/commit/abfb3897) feat(v4): make z.properties() a schema, and give z.instanceof() a .properties() method ([#6536](https://github.com/colinhacks/zod/pull/6536)) by [@colinhacks](https://github.com/colinhacks)\n- [`69f2a7ff`](https://github.com/colinhacks/zod/commit/69f2a7ff) Collapse toZod's normalizer and move its docs to the API reference ([#6539](https://github.com/colinhacks/zod/pull/6539)) by [@colinhacks](https://github.com/colinhacks)\n- [`bf990216`](https://github.com/colinhacks/zod/commit/bf990216) perf: move util.cached's accessor to a prototype ([#6537](https://github.com/colinhacks/zod/pull/6537)) by [@colinhacks](https://github.com/colinhacks)\n- [`bec73bea`](https://github.com/colinhacks/zod/commit/bec73bea) perf(v4): build the safeParse error on first read ([#6519](https://github.com/colinhacks/zod/pull/6519)) by [@colinhacks](https://github.com/colinhacks)\n- [`07c43e2a`](https://github.com/colinhacks/zod/commit/07c43e2a) Keep the runtime base64 regexes linear so composed parse paths cannot overflow ([#6534](https://github.com/colinhacks/zod/pull/6534)) by [@colinhacks](https://github.com/colinhacks)\n- [`bc1157e7`](https://github.com/colinhacks/zod/commit/bc1157e7) docs: use a Response example for z.properties() by [@colinhacks](https://github.com/colinhacks)\n- [`2ec972ec`](https://github.com/colinhacks/zod/commit/2ec972ec) refactor: collapse toZod's enum leaf normalizer to a dummy union ([#6533](https://github.com/colinhacks/zod/pull/6533)) by [@colinhacks](https://github.com/colinhacks)\n- [`68a609ac`](https://github.com/colinhacks/zod/commit/68a609ac) Widen literal inputs in property check types ([#6520](https://github.com/colinhacks/zod/pull/6520)) by [@colinhacks](https://github.com/colinhacks)\n- [`0227e53d`](https://github.com/colinhacks/zod/commit/0227e53d) docs: bump the star pill's GitHub mark to 20px by [@colinhacks](https://github.com/colinhacks)\n- [`84dd3b0f`](https://github.com/colinhacks/zod/commit/84dd3b0f) perf: build literal and enum pattern regexes lazily ([#6531](https://github.com/colinhacks/zod/pull/6531)) by [@colinhacks](https://github.com/colinhacks)\n- [`f83ab511`](https://github.com/colinhacks/zod/commit/f83ab511) fix(v4): reject component-only strings from z.emoji() ([#6532](https://github.com/colinhacks/zod/pull/6532)) by [@colinhacks](https://github.com/colinhacks)\n- [`74f9a6d3`](https://github.com/colinhacks/zod/commit/74f9a6d3) docs: drop the toZod enum block from basics and pin the page's curation rule in a comment by [@colinhacks](https://github.com/colinhacks)\n- [`a2a019a5`](https://github.com/colinhacks/zod/commit/a2a019a5) Accept enum-typed targets in z.toZod ([#6528](https://github.com/colinhacks/zod/pull/6528)) by [@colinhacks](https://github.com/colinhacks)\n- [`319f47f4`](https://github.com/colinhacks/zod/commit/319f47f4) Emit a length-aware base64url pattern in toJSONSchema ([#6527](https://github.com/colinhacks/zod/pull/6527)) by [@colinhacks](https://github.com/colinhacks)\n- [`08ba069e`](https://github.com/colinhacks/zod/commit/08ba069e) perf(v4): read Luhn digits with charCodeAt instead of string indexing ([#6529](https://github.com/colinhacks/zod/pull/6529)) by [@colinhacks](https://github.com/colinhacks)\n- [`1ec6b7c5`](https://github.com/colinhacks/zod/commit/1ec6b7c5) docs: add an RSS feed to the blog at /blog/rss.xml by [@colinhacks](https://github.com/colinhacks)\n- [`b801439b`](https://github.com/colinhacks/zod/commit/b801439b) bench: add typebox (compiled and dynamic) to the moltar cross-library harness by [@colinhacks](https://github.com/colinhacks)\n- [`7ae49d64`](https://github.com/colinhacks/zod/commit/7ae49d64) docs: drop the circle around the star pill's GitHub mark and center it on the pill's arc by [@colinhacks](https://github.com/colinhacks)\n- [`93f3ab32`](https://github.com/colinhacks/zod/commit/93f3ab32) docs: replace the blog navbar's GitHub icon with a star-count pill by [@colinhacks](https://github.com/colinhacks)\n- [`fb2fedfd`](https://github.com/colinhacks/zod/commit/fb2fedfd) docs: tighten the memory chart callout, pad the canvas, say \"less memory\" by [@colinhacks](https://github.com/colinhacks)\n- [`ff56a551`](https://github.com/colinhacks/zod/commit/ff56a551) docs: center the memory chart callout labels and pad them off the number by [@colinhacks](https://github.com/colinhacks)\n- [`8cd1250f`](https://github.com/colinhacks/zod/commit/8cd1250f) docs: center the memory chart callout labels by [@colinhacks](https://github.com/colinhacks)\n- [`3195ed01`](https://github.com/colinhacks/zod/commit/3195ed01) docs: label the memory chart like the compile chart by [@colinhacks](https://github.com/colinhacks)\n- [`a6b49390`](https://github.com/colinhacks/zod/commit/a6b49390) Mark the compile internals @internal instead of hiding them ([#6518](https://github.com/colinhacks/zod/pull/6518)) by [@colinhacks](https://github.com/colinhacks)\n- [`40b4d0b3`](https://github.com/colinhacks/zod/commit/40b4d0b3) fix(ci): read zod's latest version with npm view when picking the backfill dist-tag by [@colinhacks](https://github.com/colinhacks)\n- [`5ff95665`](https://github.com/colinhacks/zod/commit/5ff95665) Stop re-exporting the compile internals from zod/v4/core ([#6511](https://github.com/colinhacks/zod/pull/6511)) by [@colinhacks](https://github.com/colinhacks)\n- [`f412178d`](https://github.com/colinhacks/zod/commit/f412178d) ci: publish @zod/mini to JSR in lockstep with npm ([#6510](https://github.com/colinhacks/zod/pull/6510)) by [@colinhacks](https://github.com/colinhacks)\n- [`f3e7c72e`](https://github.com/colinhacks/zod/commit/f3e7c72e) fix(docs): render the docs 404 page inside the (doc) layout once by [@colinhacks](https://github.com/colinhacks)\n- [`f3cb3644`](https://github.com/colinhacks/zod/commit/f3cb3644) docs: surface the blog on the home page and in the sidebar by [@colinhacks](https://github.com/colinhacks)\n- [`cd4f9a67`](https://github.com/colinhacks/zod/commit/cd4f9a67) perf(v4): report Standard Schema issues without constructing a ZodError ([#6509](https://github.com/colinhacks/zod/pull/6509)) by [@colinhacks](https://github.com/colinhacks)\n- [`43b9bfc5`](https://github.com/colinhacks/zod/commit/43b9bfc5) docs: drop the bound-methods section from the Zod package page by [@colinhacks](https://github.com/colinhacks)\n- [`70eb2c07`](https://github.com/colinhacks/zod/commit/70eb2c07) docs: drop the traits section and the compilation feature bullet by [@colinhacks](https://github.com/colinhacks)\n- [`1c0bce0c`](https://github.com/colinhacks/zod/commit/1c0bce0c) docs: bring the 4.5 charts and worked examples into the docs pages by [@colinhacks](https://github.com/colinhacks)\n- [`a0898b4b`](https://github.com/colinhacks/zod/commit/a0898b4b) ci: wait hours for npm to serve a publish, not ten minutes ([#6502](https://github.com/colinhacks/zod/pull/6502)) by [@colinhacks](https://github.com/colinhacks)\n- [`c46eeff0`](https://github.com/colinhacks/zod/commit/c46eeff0) chore: narrow blanket biome-ignore comments ([#6504](https://github.com/colinhacks/zod/pull/6504)) by [@pullfrog[bot]](https://github.com/pullfrog[bot])\n- [`c7ec94d3`](https://github.com/colinhacks/zod/commit/c7ec94d3) ci: check zod and @zod/mini lockstep on npm after every publish ([#6507](https://github.com/colinhacks/zod/pull/6507)) by [@colinhacks](https://github.com/colinhacks)\n- [`81065739`](https://github.com/colinhacks/zod/commit/81065739) chore(docs): build with Turbopack by [@colinhacks](https://github.com/colinhacks)\n- [`abd41adb`](https://github.com/colinhacks/zod/commit/abd41adb) docs(wiki): move plans and comparisons into a gitignored internal/ ([#6506](https://github.com/colinhacks/zod/pull/6506)) by [@colinhacks](https://github.com/colinhacks)\n- [`2956c4c2`](https://github.com/colinhacks/zod/commit/2956c4c2) chore(mini): sync @zod/mini to 4.5.4 by [@colinhacks](https://github.com/colinhacks)\n- [`8ce9e8d5`](https://github.com/colinhacks/zod/commit/8ce9e8d5) feat(mini): publish Zod Mini as the standalone @zod/mini package ([#6491](https://github.com/colinhacks/zod/pull/6491)) by [@colinhacks](https://github.com/colinhacks)\n- [`93186cab`](https://github.com/colinhacks/zod/commit/93186cab) docs(wiki): drop the zod-compiler benchmark ([#6505](https://github.com/colinhacks/zod/pull/6505)) by [@colinhacks](https://github.com/colinhacks)\n- [`908c9e17`](https://github.com/colinhacks/zod/commit/908c9e17) fix(docs): retry the GitHub stars fetch and log the real status by [@colinhacks](https://github.com/colinhacks)\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "facebook/react#385715000",
+    "library": "React",
+    "repository": "facebook/react",
+    "version": "v19.3.0",
+    "publishedAt": "2026-09-09T18:01:33Z",
+    "url": "https://github.com/react/react/releases/tag/v19.3.0",
+    "releaseNotes": "Below is a list of all new features, APIs, and bug fixes.\r\n\r\nRead the [React 19.3 release post](https://react.dev/blog/2026/09/09/react-19-3) for more information.\r\n\r\n## New React Features\r\n\r\n- `<ViewTransition />`: Adds `<ViewTransition />` and `addTransitionType` APIs to power View Transition animations in React (@sebmarkbage, @jackpope, @gaearon: [#31975](https://github.com/facebook/react/pull/31975), [#31987](https://github.com/facebook/react/pull/31987), [#31996](https://github.com/facebook/react/pull/31996), [#31999](https://github.com/facebook/react/pull/31999), [#32001](https://github.com/facebook/react/pull/32001), [#32002](https://github.com/facebook/react/pull/32002), [#32028](https://github.com/facebook/react/pull/32028), [#32029](https://github.com/facebook/react/pull/32029), [#32031](https://github.com/facebook/react/pull/32031), [#32034](https://github.com/facebook/react/pull/32034), [#32038](https://github.com/facebook/react/pull/32038), [#32041](https://github.com/facebook/react/pull/32041), [#32050](https://github.com/facebook/react/pull/32050), [#32090](https://github.com/facebook/react/pull/32090), [#32105](https://github.com/facebook/react/pull/32105), [#32254](https://github.com/facebook/react/pull/32254), [#32379](https://github.com/facebook/react/pull/32379), [#32422](https://github.com/facebook/react/pull/32422), [#32462](https://github.com/facebook/react/pull/32462), [#32540](https://github.com/facebook/react/pull/32540), [#32545](https://github.com/facebook/react/pull/32545), [#32585](https://github.com/facebook/react/pull/32585), [#32599](https://github.com/facebook/react/pull/32599), [#32611](https://github.com/facebook/react/pull/32611), [#32612](https://github.com/facebook/react/pull/32612), [#32617](https://github.com/facebook/react/pull/32617), [#32651](https://github.com/facebook/react/pull/32651), [#32653](https://github.com/facebook/react/pull/32653), [#32656](https://github.com/facebook/react/pull/32656), [#32664](https://github.com/facebook/react/pull/32664), [#32699](https://github.com/facebook/react/pull/32699), [#32723](https://github.com/facebook/react/pull/32723), [#32734](https://github.com/facebook/react/pull/32734), [#32751](https://github.com/facebook/react/pull/32751), [#32752](https://github.com/facebook/react/pull/32752), [#32760](https://github.com/facebook/react/pull/32760), [#32761](https://github.com/facebook/react/pull/32761), [#32764](https://github.com/facebook/react/pull/32764), [#32772](https://github.com/facebook/react/pull/32772), [#32790](https://github.com/facebook/react/pull/32790), [#32819](https://github.com/facebook/react/pull/32819), [#32820](https://github.com/facebook/react/pull/32820), [#32822](https://github.com/facebook/react/pull/32822), [#32833](https://github.com/facebook/react/pull/32833), [#32849](https://github.com/facebook/react/pull/32849), [#33094](https://github.com/facebook/react/pull/33094), [#33191](https://github.com/facebook/react/pull/33191), [#33200](https://github.com/facebook/react/pull/33200), [#33206](https://github.com/facebook/react/pull/33206), [#33293](https://github.com/facebook/react/pull/33293), [#33330](https://github.com/facebook/react/pull/33330), [#33331](https://github.com/facebook/react/pull/33331), [#33332](https://github.com/facebook/react/pull/33332), [#33357](https://github.com/facebook/react/pull/33357), [#33362](https://github.com/facebook/react/pull/33362), [#33433](https://github.com/facebook/react/pull/33433), [#33576](https://github.com/facebook/react/pull/33576), [#34374](https://github.com/facebook/react/pull/34374), [#34450](https://github.com/facebook/react/pull/34450), [#34481](https://github.com/facebook/react/pull/34481), [#34500](https://github.com/facebook/react/pull/34500), [#34502](https://github.com/facebook/react/pull/34502), [#34510](https://github.com/facebook/react/pull/34510), [#34511](https://github.com/facebook/react/pull/34511), [#34539](https://github.com/facebook/react/pull/34539), [#35567](https://github.com/facebook/react/pull/35567), [#35564](https://github.com/facebook/react/pull/35564), [#35485](https://github.com/facebook/react/pull/35485), [#35380](https://github.com/facebook/react/pull/35380), [#35063](https://github.com/facebook/react/pull/35063), [#35060](https://github.com/facebook/react/pull/35060), [#34676](https://github.com/facebook/react/pull/34676), [#36917](https://github.com/facebook/react/pull/36917), [#35337](https://github.com/facebook/react/pull/35337), [#35520](https://github.com/facebook/react/pull/35520))\r\n- Fragment Refs: Add Refs to `<Fragment />` to support composable platform behavior (@jackpope, @sebmarkbage, @eps1lon, @Dhakshin2007, @chirokas, @teamleaderleo, @fallintoplace: [#32465](https://github.com/facebook/react/pull/32465), [#32613](https://github.com/facebook/react/pull/32613), [#32619](https://github.com/facebook/react/pull/32619), [#32654](https://github.com/facebook/react/pull/32654), [#32660](https://github.com/facebook/react/pull/32660), [#32682](https://github.com/facebook/react/pull/32682), [#32722](https://github.com/facebook/react/pull/32722), [#32813](https://github.com/facebook/react/pull/32813), [#32814](https://github.com/facebook/react/pull/32814), [#33056](https://github.com/facebook/react/pull/33056), [#33058](https://github.com/facebook/react/pull/33058), [#33093](https://github.com/facebook/react/pull/33093), [#34069](https://github.com/facebook/react/pull/34069), [#34103](https://github.com/facebook/react/pull/34103), [#34544](https://github.com/facebook/react/pull/34544), [#34545](https://github.com/facebook/react/pull/34545), [#37062](https://github.com/facebook/react/pull/37062), [#37061](https://github.com/facebook/react/pull/37061), [#37060](https://github.com/facebook/react/pull/37060), [#36047](https://github.com/facebook/react/pull/36047), [#36010](https://github.com/facebook/react/pull/36010), [#35642](https://github.com/facebook/react/pull/35642), [#35641](https://github.com/facebook/react/pull/35641), [#35637](https://github.com/facebook/react/pull/35637), [#35630](https://github.com/facebook/react/pull/35630), [#34935](https://github.com/facebook/react/pull/34935), [#37457](https://github.com/facebook/react/pull/37457), [#37408](https://github.com/facebook/react/pull/37408), [#37326](https://github.com/facebook/react/pull/37326), [#37251](https://github.com/facebook/react/pull/37251), [#37171](https://github.com/facebook/react/pull/37171), [#37169](https://github.com/facebook/react/pull/37169), [#37168](https://github.com/facebook/react/pull/37168), [#37167](https://github.com/facebook/react/pull/37167), [#37166](https://github.com/facebook/react/pull/37166), [#37165](https://github.com/facebook/react/pull/37165), [#37164](https://github.com/facebook/react/pull/37164), [#37163](https://github.com/facebook/react/pull/37163), [#37162](https://github.com/facebook/react/pull/37162), [#37161](https://github.com/facebook/react/pull/37161), [#37160](https://github.com/facebook/react/pull/37160), [#37125](https://github.com/facebook/react/pull/37125), [#37063](https://github.com/facebook/react/pull/37063))\r\n\r\n## New React DOM Features\r\n\r\n- `browser()`: a new `react-dom` API that returns a usable which errors during server rendering and resolves in the browser. `use(browser())` inside a `<Suspense>` boundary marks a subtree as browser-only without reporting a recoverable error (@gnoff: [#37143](https://github.com/facebook/react/pull/37143), [#37241](https://github.com/facebook/react/pull/37241))\r\n  - Added an `onBrowserBailout` option to the `react-dom/server` APIs to observe when a subtree defers to the browser (@gnoff [#37193](https://github.com/facebook/react/pull/37193))\r\n\r\n## Notable changes\r\n\r\n- Enable Trusted Types API integration (@rickhanlonii [#35816](https://github.com/facebook/react/pull/35816))\r\n- Transitions now render independently instead of being entangled into a single render, so a slow transition no longer holds up unrelated ones (@acdlite [#37290](https://github.com/facebook/react/pull/37290))\r\n- Added a DEV-only warning when a component appears to have been unblocked by calling `use()` conditionally (@hoxyq, @eps1lon: [#37104](https://github.com/facebook/react/pull/37104), [#37203](https://github.com/facebook/react/pull/37203), [#37491](https://github.com/facebook/react/pull/37491))\r\n\r\n## All Changes\r\n\r\n### React\r\n\r\n- Fast Refresh Fixes\r\n  - Fix Fast Refresh to find and remount edits to components wrapped behind `lazy()` (@sophiebits [#36965](https://github.com/facebook/react/pull/36965))\r\n  - Fix Fast Refresh so edits to a `memo()` comparison function take effect (@sophiebits [#36964](https://github.com/facebook/react/pull/36964))\r\n  - Fix Fast Refresh crash when an edit changes the kind of a component's type (@sophiebits [#36963](https://github.com/facebook/react/pull/36963))\r\n  - Unify hot reload type resolution for Fast Refresh (@sophiebits [#36962](https://github.com/facebook/react/pull/36962))\r\n  - Fix Fast Refresh to remount correctly when an edit changes the component kind (@sophiebits [#36950](https://github.com/facebook/react/pull/36950))\r\n  - Double invoke effects in StrictMode after Fast Refresh (@eps1lon [#35962](https://github.com/facebook/react/pull/35962))\r\n- Performance Track Fixes\r\n  - Prevent crash when accessing `$$typeof` in Performance Tracks (@eps1lon [#35679](https://github.com/facebook/react/pull/35679))\r\n  - Handle non-string function names in Performance Tracks (@eps1lon [#35659](https://github.com/facebook/react/pull/35659))\r\n  - Use minus (`-`) instead of en dash for removed props in Performance Tracks (@eps1lon [#35649](https://github.com/facebook/react/pull/35649))\r\n  - Handle arrays with bigints in deep objects in Performance Tracks (@eps1lon [#35648](https://github.com/facebook/react/pull/35648))\r\n  - Don't enumerate typed array props in Performance Tracks in DEV (@UditDewan [#36913](https://github.com/facebook/react/pull/36913))\r\n  - Bail out of diffing wide objects and arrays in Performance Tracks (@eps1lon [#34742](https://github.com/facebook/react/pull/34742))\r\n  - Clear potentially large performance measures in DEV (@hoxyq [#34803](https://github.com/facebook/react/pull/34803))\r\n  - Fix missing else branch for renders with no props change in Performance Tracks (@hoxyq [#34837](https://github.com/facebook/react/pull/34837))\r\n- Activity Fixes\r\n  - Fix `useSyncExternalStore` missing store mutations that happened while an Activity tree was hidden (@sophiebits [#36947](https://github.com/facebook/react/pull/36947))\r\n  - Hide portal contents when an Activity is hidden (@acdlite [#35091](https://github.com/facebook/react/pull/35091))\r\n  - Prevent metadata hoisting in hidden `<Activity>` trees (@ronnakamoto [#34983](https://github.com/facebook/react/pull/34983))\r\n  - Prevent errors thrown inside a hidden Activity from escaping to the visible UI (@acdlite [#35074](https://github.com/facebook/react/pull/35074))\r\n  - Don't unhide a node if a direct parent Offscreen is still hidden (@sebmarkbage [#34821](https://github.com/facebook/react/pull/34821))\r\n  - Don't show internal `<Offscreen>` component in error messages (@rickhanlonii [#35763](https://github.com/facebook/react/pull/35763))\r\n- Warn in DEV when a component appears to have been unblocked by a conditional `use()` (@hoxyq, @eps1lon: [#37104](https://github.com/facebook/react/pull/37104), [#37203](https://github.com/facebook/react/pull/37203), [#37491](https://github.com/facebook/react/pull/37491))\r\n- Render transitions independently instead of entangling them into a single render (@acdlite [#37290](https://github.com/facebook/react/pull/37290))\r\n- Fix hang when updating a dehydrated boundary inside a hidden tree (@gaearon [#37135](https://github.com/facebook/react/pull/37135))\r\n- Don't reacquire Host Singletons during dev effect validation (@gnoff [#37113](https://github.com/facebook/react/pull/37113))\r\n- Only remove properties from Host Singletons on release (@gnoff [#37112](https://github.com/facebook/react/pull/37112))\r\n- Don't invoke effects on moved children in StrictMode (@sophiebits [#36948](https://github.com/facebook/react/pull/36948))\r\n- Throw a clearer error when a rejected Promise is incorrectly instrumented (@eps1lon [#36328](https://github.com/facebook/react/pull/36328))\r\n- Fix context propagation into Suspense fallbacks (@acdlite [#36160](https://github.com/facebook/react/pull/36160))\r\n- Fix context propagation through suspended Suspense boundaries (@acdlite [#35839](https://github.com/facebook/react/pull/35839))\r\n- Fix `useDeferredValue` getting stuck (@gaearon [#36134](https://github.com/facebook/react/pull/36134))\r\n- Update `useActionState` error message to say \"action state\" instead of \"form state\" (@rickhanlonii [#35790](https://github.com/facebook/react/pull/35790))\r\n- Don't warn when rendering data block scripts (@eps1lon [#35953](https://github.com/facebook/react/pull/35953))\r\n- Treat fibers with alternates as mounted in `getNearestMountedFiber` (@sebmarkbage [#35578](https://github.com/facebook/react/pull/35578))\r\n- Always instrument the lazy initializer thenable (@gnoff [#35521](https://github.com/facebook/react/pull/35521))\r\n- Annotate cascading updates for DevTools performance tracks in DEV (@huntie [#34961](https://github.com/facebook/react/pull/34961))\r\n- Resolve the `.default` export of a `React.lazy` as the canonical value (@sebmarkbage [#34906](https://github.com/facebook/react/pull/34906))\r\n- Limit owner stacks to 10 frames (@eps1lon [#34864](https://github.com/facebook/react/pull/34864))\r\n- Ensure `useEffectEvent` reads latest values in `forwardRef` and `memo()` components (@eps1lon [#34831](https://github.com/facebook/react/pull/34831))\r\n\r\n### React DOM\r\n\r\n- Copy `source` onto the synthetic `toggle` event (@lazerg [#37389](https://github.com/facebook/react/pull/37389))\r\n- Update HTML parser rules for the new `<select>` parser (@josepharhar [#34804](https://github.com/facebook/react/pull/34804))\r\n- Update `defaultValue` for `type=\"number\"` inputs to match other input types (@sophiebits [#36980](https://github.com/facebook/react/pull/36980))\r\n- Avoid setting `innerHTML` when it hasn't changed (@sophiebits [#36949](https://github.com/facebook/react/pull/36949))\r\n- Forward the `nonce` option in `ReactDOM.preloadModule()` (@UditDewan [#36851](https://github.com/facebook/react/pull/36851))\r\n- Support `fetchPriority` for module resources (@TheAlexLichter [#36835](https://github.com/facebook/react/pull/36835))\r\n- Track stylesheet preloads when explicitly preloaded to avoid unnecessary suspension (@gnoff [#36386](https://github.com/facebook/react/pull/36386))\r\n- Suggest correct casing for the misspelled `credentialless` iframe attribute (@vmx906 [#36322](https://github.com/facebook/react/pull/36322))\r\n- Add `credentialless` as a recognized boolean attribute for iframes (@vmx906 [#36148](https://github.com/facebook/react/pull/36148))\r\n- Prevent reentrant `finishedTask` from calling `completeAll` multiple times (@gnoff [#36287](https://github.com/facebook/react/pull/36287))\r\n- Update the CSS shorthand property list (@kidonng [#35636](https://github.com/facebook/react/pull/35636))\r\n- Support the `maskType` SVG prop (@sleitor [#35921](https://github.com/facebook/react/pull/35921))\r\n- Add support for `onFullscreenChange` and `onFullscreenError` events (@chirokas [#34621](https://github.com/facebook/react/pull/34621))\r\n- Include `submitter` in `submit` events (@eps1lon [#35590](https://github.com/facebook/react/pull/35590))\r\n- Fire `onReset` when automatically resetting forms (@eps1lon [#35176](https://github.com/facebook/react/pull/35176))\r\n- Use the `FormData` `submitter` parameter (@jenseng [#29028](https://github.com/facebook/react/pull/29028))\r\n- Fix form status reset when component state is updated (@eps1lon [#34075](https://github.com/facebook/react/pull/34075))\r\n- Batch updates from `resize` events until the next frame (@eps1lon [#35117](https://github.com/facebook/react/pull/35117))\r\n\r\n### React Server\r\n\r\n- Add `nonce` to rendered import maps (@mattcosta7 [#37339](https://github.com/facebook/react/pull/37339))\r\n- Add an `onBrowserBailout` option to observe subtrees that defer to the browser (@gnoff [#37193](https://github.com/facebook/react/pull/37193))\r\n- Stop the caller's signal from retaining a finished render (@unstubbable [#37315](https://github.com/facebook/react/pull/37315))\r\n- Construct the render lifetime controller only when it is needed (@unstubbable [#37357](https://github.com/facebook/react/pull/37357))\r\n- Fix `react-dom/server` hanging on Deno (@fraidev [#35235](https://github.com/facebook/react/pull/35235))\r\n- Extend stack overflow recovery to retries in SSR (@jackpope [#36977](https://github.com/facebook/react/pull/36977))\r\n- Fix false-positive hydration mismatch on `nonce` attributes (@MaxwellCohen [#37030](https://github.com/facebook/react/pull/37030))\r\n- Guard shell-error callbacks instead of nulling them out on the request (@eps1lon [#36916](https://github.com/facebook/react/pull/36916))\r\n- Stop firing `onAllReady` after the shell errored (@eps1lon [#36903](https://github.com/facebook/react/pull/36903))\r\n- Treat an incomplete tree as an error during error recovery (@acdlite [#36911](https://github.com/facebook/react/pull/36911))\r\n- Fix non-script `modulepreload` tracking (@fallintoplace [#36564](https://github.com/facebook/react/pull/36564))\r\n- Finalize postponed `nextSegmentId` after the prelude flush (@gaojude [#36779](https://github.com/facebook/react/pull/36779))\r\n- Preserve `referrerPolicy` in image preload headers (@ulises-jeremias [#36803](https://github.com/facebook/react/pull/36803))\r\n- Allow pending work to specialize abort reasons (@gnoff [#36586](https://github.com/facebook/react/pull/36586))\r\n- Abort tasks that suspend after aborting during render (@gnoff [#36585](https://github.com/facebook/react/pull/36585))\r\n- Finish abort in a scheduled task (@gnoff [#36580](https://github.com/facebook/react/pull/36580))\r\n- Fix aborts during resumed rendering (@gnoff [#36584](https://github.com/facebook/react/pull/36584))\r\n- Track abort state on the request (@gnoff [#36583](https://github.com/facebook/react/pull/36583))\r\n- Model external work scheduling explicitly in the fb bundle (@gnoff [#36576](https://github.com/facebook/react/pull/36576))\r\n- Continue reporting aborted task errors after a fatal abort (@gnoff [#36575](https://github.com/facebook/react/pull/36575))\r\n- Disallow abort reentrancy (@gnoff [#36574](https://github.com/facebook/react/pull/36574))\r\n- Stop transpiling computed property names (@eps1lon [#36542](https://github.com/facebook/react/pull/36542))\r\n- Fix crash when capturing the callsite of a stalled `use()` of a rejected Flight chunk (@lubieowoce [#36544](https://github.com/facebook/react/pull/36544))\r\n- Double invoke effects in Strict Mode during hydration (@eps1lon [#35961](https://github.com/facebook/react/pull/35961))\r\n- Add additional task reentrancy protections in Fizz (@gnoff [#36291](https://github.com/facebook/react/pull/36291))\r\n- Don't outline Suspense boundaries with suspensey CSS during shell flush (@gnoff [#35824](https://github.com/facebook/react/pull/35824))\r\n- Push a stalled `use()` to the owner stack and debug task (@eps1lon [#35226](https://github.com/facebook/react/pull/35226))\r\n- Fix `useId` tracking on replay (@gnoff [#35518](https://github.com/facebook/react/pull/35518))\r\n- Correctly handle replaying when hydrating (@gnoff [#35494](https://github.com/facebook/react/pull/35494))\r\n- Simplify the `createSuspenseBoundary` path (@sebmarkbage [#35087](https://github.com/facebook/react/pull/35087))\r\n- Unify preamble-only fields to save a field on Suspense boundaries (@sebmarkbage [#35068](https://github.com/facebook/react/pull/35068))\r\n- Unify prerender-only fields to save a field on Suspense boundaries (@sebmarkbage [#35067](https://github.com/facebook/react/pull/35067))\r\n- Push halted awaits to the owner stack for late-arriving I/O info (@unstubbable [#35019](https://github.com/facebook/react/pull/35019))\r\n- Include all Node.js APIs in the Bun entrypoint for `react-dom/server` (@RiskyMH [#34193](https://github.com/facebook/react/pull/34193))\r\n- Detach a Suspense boundary after flushing its segment (@gnoff [#34694](https://github.com/facebook/react/pull/34694))\r\n\r\n### React Server Components\r\n\r\n- Keep an element pending while a referenced row is resolving (@unstubbable [#37542](https://github.com/facebook/react/pull/37542))\r\n- Fix `RangeError` from exponential debug info growth (@unstubbable [#37481](https://github.com/facebook/react/pull/37481))\r\n- Abort the cache signal when debug objects are retained (@unstubbable [#37342](https://github.com/facebook/react/pull/37342))\r\n- Transfer key validation of lazy nodes when they are unwrapped (@unstubbable [#37258](https://github.com/facebook/react/pull/37258))\r\n- Add `pending_weak` to the Flight thenable protocol (@acdlite [#37154](https://github.com/facebook/react/pull/37154))\r\n- Outline and dedupe repeated strings (@gaearon [#37147](https://github.com/facebook/react/pull/37147))\r\n- Port Reply Server traversal guards to the Flight Client (@eps1lon [#37144](https://github.com/facebook/react/pull/37144))\r\n- Define Flight chunk `.then` with `Object.defineProperty` (@eps1lon [#37109](https://github.com/facebook/react/pull/37109))\r\n- Support Turbopack's experimental array format for chunks (@sampoder [#37095](https://github.com/facebook/react/pull/37095))\r\n- Limit fake JSX call site stacks to 10 frames (@timneutkens [#37086](https://github.com/facebook/react/pull/37086))\r\n- Improve performance when decoding Flight replies (@gnoff [#37090](https://github.com/facebook/react/pull/37090))\r\n- Recognize Node 22+ V8 frames for `Promise` statics in debug info (@gaearon [#36969](https://github.com/facebook/react/pull/36969))\r\n- Tailor the warning for binary data serialized through `toJSON` (Node `Buffer`) (@unstubbable [#36873](https://github.com/facebook/react/pull/36873))\r\n- Resolve models before `JSON.stringify` for faster serialization (@mhart [#36795](https://github.com/facebook/react/pull/36795))\r\n- Prune debug info when chunks error (@gnoff [#36782](https://github.com/facebook/react/pull/36782))\r\n- Avoid main-thread stalls from large debug strings (@unstubbable [#36570](https://github.com/facebook/react/pull/36570))\r\n- Fix stranded row content under Node stream backpressure (@unstubbable [#36516](https://github.com/facebook/react/pull/36516))\r\n- Fix dropped `FormData` entries in `decodeReplyFromBusboy` (@unstubbable [#36468](https://github.com/facebook/react/pull/36468))\r\n- Harden types and improve performance of Flight replies (@eps1lon [#36425](https://github.com/facebook/react/pull/36425))\r\n- Add more cycle protections to Flight replies (@eps1lon [#36236](https://github.com/facebook/react/pull/36236))\r\n- Transport `AggregateError.errors` (@eps1lon [#36156](https://github.com/facebook/react/pull/36156))\r\n- Bail out early when a backing entry for `Blob` deserialization is not a `Blob` (@eps1lon [#36055](https://github.com/facebook/react/pull/36055))\r\n- Clear chunk reason after successful module initialization (@unstubbable [#36024](https://github.com/facebook/react/pull/36024))\r\n- Add support for transporting `Error.cause` (@eps1lon [#35810](https://github.com/facebook/react/pull/35810))\r\n- Walk parsed JSON instead of using a reviver for faster RSC payload parsing (@timneutkens [#35776](https://github.com/facebook/react/pull/35776))\r\n- Skip `transferReferencedDebugInfo` during debug info resolution (@unstubbable [#35795](https://github.com/facebook/react/pull/35795))\r\n- Add `unstable_allowPartialStream` option to Flight Client (@unstubbable [#35731](https://github.com/facebook/react/pull/35731))\r\n- Fix `encodeReply` for JSX with temporary references (@unstubbable [#35730](https://github.com/facebook/react/pull/35730))\r\n- Fix debug channel flag in Node.js `renderToPipeableStream` (@feedthejim [#35724](https://github.com/facebook/react/pull/35724))\r\n- Fix stack overflow in `visitAsyncNode` with deep async chains (@unstubbable [#35612](https://github.com/facebook/react/pull/35612))\r\n- Allow Server Components to render context providers from client modules (@rickhanlonii [#35675](https://github.com/facebook/react/pull/35675))\r\n- Allow overriding `request.timeOrigin` via `options.startTime` (@lubieowoce [#35598](https://github.com/facebook/react/pull/35598))\r\n- Warn once if `eval` is disabled in the dev environment (@eps1lon [#35661](https://github.com/facebook/react/pull/35661))\r\n- Restore original function name in dev server callstacks served with `unsafe-eval` (@eps1lon [#35650](https://github.com/facebook/react/pull/35650))\r\n- Fix `react-markup` types for server references (@eps1lon [#35634](https://github.com/facebook/react/pull/35634))\r\n- Add more DoS mitigations to Flight replies and harden Flight (@unstubbable [#35632](https://github.com/facebook/react/pull/35632))\r\n- Allow cyclic references to be serialized when unwrapping lazy elements (@unstubbable [#35471](https://github.com/facebook/react/pull/35471))\r\n- Improve cyclic thenable detection in Flight reply server (@cvan20191 [#35369](https://github.com/facebook/react/pull/35369))\r\n- Add extra loop protection to Flight reply server (@sebmarkbage [#35351](https://github.com/facebook/react/pull/35351))\r\n- Patch Promise cycles and `toString` on Server Functions (@sebmarkbage [#35345](https://github.com/facebook/react/pull/35345))\r\n- Move `react-server-dom-webpack/*.unbundled` to private `react-server-dom-unbundled` (@eps1lon [#35290](https://github.com/facebook/react/pull/35290))\r\n- Never parse `then` functions in Flight replies (@sebmarkbage [#35289](https://github.com/facebook/react/pull/35289))\r\n- Patch Flight reply server with fixes from Flight Client (@sebmarkbage [#35277](https://github.com/facebook/react/pull/35277))\r\n- Complete the list of Node.js internal Promise awaits (@eps1lon [#35161](https://github.com/facebook/react/pull/35161))\r\n- Reduce risk of maximum call stack exceeded when emitting async sequences (@eps1lon [#35159](https://github.com/facebook/react/pull/35159))\r\n- Fix pending chunks count for streams and async iterables in DEV (@unstubbable [#35143](https://github.com/facebook/react/pull/35143))\r\n- Fix broken byte stream parsing caused by buffer detachment (@unstubbable [#35127](https://github.com/facebook/react/pull/35127))\r\n- Fix `hasReadable` flag in Node.js clients' debug channel (@unstubbable [#35039](https://github.com/facebook/react/pull/35039))\r\n- Fix debug info filtering to include later resolved I/O (@unstubbable [#35036](https://github.com/facebook/react/pull/35036))\r\n- Cache the value when visiting the same I/O or Promise along different paths (@sebmarkbage [#35005](https://github.com/facebook/react/pull/35005))\r\n- Clone subsequent I/O nodes when resolved more than once (@sebmarkbage [#35003](https://github.com/facebook/react/pull/35003))\r\n- Fix hang after resolving cyclic references (@unstubbable [#34988](https://github.com/facebook/react/pull/34988))\r\n- Allow passing DEV-only `startTime` as an option (@sebmarkbage [#34912](https://github.com/facebook/react/pull/34912))\r\n- Ignore bound-anonymous-fn resources as they're not considered I/O (@sebmarkbage [#34911](https://github.com/facebook/react/pull/34911))\r\n- Fix detached `ArrayBuffer` error when streaming typed arrays (@unstubbable [#34849](https://github.com/facebook/react/pull/34849))\r\n- Exclude RSC stream if the stream resolves in a task (@sebmarkbage [#34838](https://github.com/facebook/react/pull/34838))\r\n- Forward the current environment when forwarding I/O entries (@sebmarkbage [#34836](https://github.com/facebook/react/pull/34836))\r\n- Look for moved debug info when logging component performance track (@sebmarkbage [#34839](https://github.com/facebook/react/pull/34839))\r\n- Respect `displayName` of Promise instances on the server (@sebmarkbage [#34825](https://github.com/facebook/react/pull/34825))\r\n- Avoid unnecessary indirection when serializing debug info (@unstubbable [#34797](https://github.com/facebook/react/pull/34797))\r\n- Fix preload `as` attribute for stylesheets (@unstubbable [#34760](https://github.com/facebook/react/pull/34760))\r\n- Don't serialize `toJSON` in debug path and omit wide arrays (@sebmarkbage [#34759](https://github.com/facebook/react/pull/34759))\r\n- Add support for `<Activity>` (@eps1lon [#34697](https://github.com/facebook/react/pull/34697))",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#384398453",
     "library": "TanStack Router",
     "repository": "TanStack/router",
