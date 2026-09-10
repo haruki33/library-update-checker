@@ -11,8 +11,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "public" / "data" / "releases.json"
+EXCLUDE_CONFIG_PATH = ROOT / "config" / "excluded_words.json"
 MODEL = "gemini-3.6-flash"
 API_ROOT = "https://generativelanguage.googleapis.com/v1beta/models"
+
+
+def is_version_excluded(version: str, excluded_words: list[str]) -> bool:
+    if not version or not excluded_words:
+        return False
+    lower_version = version.lower()
+    return any(word.lower() in lower_version for word in excluded_words if word)
 MAX_ATTEMPTS = 3
 RETRY_DELAYS_SECONDS = (10, 30, 60)
 MAX_RELEASES_PER_RUN = 10
@@ -152,7 +160,13 @@ def main() -> None:
     releases = json.loads(DATA_PATH.read_text(encoding="utf-8"))
     if not isinstance(releases, list):
         raise ValueError("releases.json must contain an array")
-    pending = [r for r in releases if r.get("releaseNotes") and r.get("aiAnalyzed") is not True]
+    excluded_words = json.loads(EXCLUDE_CONFIG_PATH.read_text(encoding="utf-8")) if EXCLUDE_CONFIG_PATH.exists() else []
+    pending = [
+        r for r in releases
+        if r.get("releaseNotes")
+        and r.get("aiAnalyzed") is not True
+        and not is_version_excluded(r.get("version", ""), excluded_words)
+    ]
     changed = 0
     skipped = 0
     for record in pending[:MAX_RELEASES_PER_RUN]:
