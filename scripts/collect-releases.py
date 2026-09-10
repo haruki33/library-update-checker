@@ -15,8 +15,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "libraries.json"
+EXCLUDE_CONFIG_PATH = ROOT / "config" / "excluded_words.json"
 DATA_PATH = ROOT / "public" / "data" / "releases.json"
 API_ROOT = "https://api.github.com/repos"
+
+
+def is_version_excluded(version: str, excluded_words: list[str]) -> bool:
+    if not version or not excluded_words:
+        return False
+    lower_version = version.lower()
+    return any(word.lower() in lower_version for word in excluded_words if word)
 
 
 def github_get(url: str):
@@ -65,18 +73,28 @@ def release_to_record(library: dict, release: dict) -> dict:
     }
 
 
-def collect_library(library: dict):
+def collect_library(library: dict, excluded_words: list[str]):
     url = f"{API_ROOT}/{library['github']}/releases?per_page=30"
     releases = github_get(url)
-    return [release_to_record(library, release) for release in releases if not release.get("draft")]
+    return [
+        release_to_record(library, release)
+        for release in releases
+        if not release.get("draft") and not is_version_excluded(release.get("tag_name", ""), excluded_words)
+    ]
 
 
 def main():
     config = load_json(CONFIG_PATH)
+    excluded_words = load_json(EXCLUDE_CONFIG_PATH) if EXCLUDE_CONFIG_PATH.exists() else []
+    if not isinstance(excluded_words, list):
+        raise ValueError("config/excluded_words.json must contain an array")
+
     existing = load_json(DATA_PATH)
     if not isinstance(existing, list):
         raise ValueError("public/data/releases.json must contain an array")
 
+    # Filter out existing records matching excluded words
+    existing = [item for item in existing if not is_version_excluded(item.get("version", ""), excluded_words)]
     existing_by_id = {item["id"]: item for item in existing if item.get("id")}
     collected = []
 
@@ -86,7 +104,7 @@ def main():
         if not library.get("name") or not library.get("github"):
             raise ValueError("Each library must have name, github, and enabled fields")
         print(f"Collecting {library['name']} ({library['github']})...")
-        collected.extend(collect_library(library))
+        collected.extend(collect_library(library, excluded_words))
 
     new_count = 0
     for record in collected:

@@ -3,10 +3,17 @@ import { useQuery } from '@tanstack/react-query'
 import { flexRender, getCoreRowModel, useReactTable, type ColumnDef } from '@tanstack/react-table'
 import { fetchReleases } from './lib/releases'
 import type { Impact, LibraryRelease, ReleaseFilters } from './types'
+import excludedWords from '../config/excluded_words.json'
 
 const initialFilters: ReleaseFilters = { dateRange: '30d', startDate: '', endDate: '', libraries: [], version: '', breaking: 'all', impact: 'all' }
 const categoryLabels: Record<string, string> = { feature: 'Feature', bugfix: 'Bug Fix', performance: 'Performance', breaking: 'Breaking Change', other: 'Other' }
 const impactLabels: Record<Impact, string> = { high: 'High', medium: 'Medium', low: 'Low' }
+
+function isVersionExcluded(version: string, words: string[]) {
+  if (!version || !words.length) return false
+  const lower = version.toLowerCase()
+  return words.some((word) => lower.includes(word.toLowerCase()))
+}
 
 function isWithinRange(dateStr: string, filters: ReleaseFilters) {
   const { dateRange, startDate, endDate } = filters
@@ -38,6 +45,7 @@ function App() {
   const libraries = useMemo(() => [...new Set(releases.map((release) => release.library))].sort(), [releases])
 
   const filteredReleases = useMemo(() => releases
+    .filter((release) => !isVersionExcluded(release.version, excludedWords))
     .filter((release) => isWithinRange(release.publishedAt, filters))
     .filter((release) => filters.libraries.length === 0 || filters.libraries.includes(release.library))
     .filter((release) => release.version.toLowerCase().includes(filters.version.toLowerCase()))

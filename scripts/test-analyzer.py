@@ -9,6 +9,13 @@ module = importlib.util.module_from_spec(spec)
 assert spec.loader is not None
 spec.loader.exec_module(module)
 
+assert module.is_version_excluded("@tanstack/solid-query@5.0.0", ["solid"]) is True
+assert module.is_version_excluded("v1.0.0-beta.1", ["beta"]) is True
+assert module.is_version_excluded("v1.0.0-RC.1", ["rc"]) is True
+assert module.is_version_excluded("v1.0.0", ["beta", "rc"]) is False
+assert module.is_version_excluded("", ["beta"]) is False
+assert module.is_version_excluded("v1.0.0", []) is False
+
 valid = {
     "breaking": True,
     "impact": "high",
