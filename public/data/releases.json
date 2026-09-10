@@ -1,5 +1,426 @@
 [
   {
+    "id": "colinhacks/zod#386643457",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.2",
+    "publishedAt": "2026-09-10T21:44:50Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.2",
+    "releaseNotes": "## Commits:\n\n- a00c3f348abb8b56ccb6281ac4c946141e2728d5 docs: use Trigger.dev's brand-kit lockups for the platinum card\n- 0c483c58849fdb6445aea4f54b1bac6b57ab3d22 docs: Zod 4.6 announcement post (#6546)\n- 9446b5cc14c5bf137790f1f66abf602044871223 fix: preserve undefined prefault outputs and object keys (#6587)\n- e359f7378fe56d695134701cda1e9055a08892dc 4.6.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "a00c3f348abb8b56ccb6281ac4c946141e2728d5",
+        "category": "other",
+        "title": "ドキュメントのTrigger.devロゴ更新",
+        "summary": "ドキュメント内のプラチナカードでTrigger.devのブランドキットロゴを使用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0c483c58849fdb6445aea4f54b1bac6b57ab3d22",
+        "category": "other",
+        "title": "Zod 4.6 アナウンス記事の追加",
+        "summary": "ドキュメントにZod 4.6のリリースポストを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9446b5cc14c5bf137790f1f66abf602044871223",
+        "category": "bugfix",
+        "title": "undefinedの出力およびオブジェクトキーの保持に関する修正",
+        "summary": "オブジェクトのキーおよびprefault出力においてundefinedが保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386519220",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-10-1817",
+    "publishedAt": "2026-09-10T18:17:11Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-10-1817",
+    "releaseNotes": "Release 2026-09-10 18:17\n\n## Changes\n\n### Fix\n\n- upgrade TanStack Store to latest (#7824) (8c43c71252) by @crutchcorn\n- nx: cache benchmark checks and build measurements (#8343) (0ba4e9f03b) by @Sheraff\n- nx: remove deprecated self dependencies from Playwright plugin (#8342) (0a89977174) by @Sheraff\n- start-server-core: correctly iterate response headers (#8340) (d914b085bb) by @Sheraff\n- solid: avoid repeated hydration scans and script execution (#8270) (76239a34b7) by @LadyBluenotes\n\n### Performance\n\n- solid-router: skip client setup for all server links (#8316) (b1c9219439) by @Sheraff\n\n### Chore\n\n- update nx to 23.2.0 (#8341) (1eb8b03595) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-router@1.170.35\n- @tanstack/react-start@1.168.52\n- @tanstack/react-start-client@1.168.33\n- @tanstack/react-start-rsc@0.1.51\n- @tanstack/react-start-server@1.167.40\n- @tanstack/solid-router@1.170.33\n- @tanstack/solid-start@1.168.50\n- @tanstack/solid-start-client@1.168.32\n- @tanstack/solid-start-server@1.167.39\n- @tanstack/start-plugin-core@1.171.42\n- @tanstack/start-server-core@1.169.34\n- @tanstack/vue-router@1.170.32\n- @tanstack/vue-start@1.168.49\n- @tanstack/vue-start-client@1.167.35\n- @tanstack/vue-start-server@1.167.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "7824",
+        "category": "bugfix",
+        "title": "TanStack Storeの最新版への更新",
+        "summary": "TanStack Storeの依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8343",
+        "category": "other",
+        "title": "Nxベンチマークチェックとビルド計測のキャッシュ",
+        "summary": "Nxにおいてベンチマークチェックとビルド計測結果をキャッシュするように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8342",
+        "category": "bugfix",
+        "title": "Playwrightプラグインからの非推奨依存関係削除",
+        "summary": "Playwrightプラグインから非推奨のself依存関係を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8340",
+        "category": "bugfix",
+        "title": "start-server-coreでのレスポンスヘッダー反復処理の修正",
+        "summary": "start-server-coreにおいてレスポンスヘッダーを正しく反復処理するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8270",
+        "category": "bugfix",
+        "title": "Solidでの重複ハイドレーション走査とスクリプト実行の防止",
+        "summary": "Solid利用時における重複したハイドレーション走査およびスクリプト実行を回避するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8316",
+        "category": "performance",
+        "title": "solid-routerでのサーバーリンクセットアップのスキップ",
+        "summary": "solid-routerにおいて、全サーバーリンクのクライアントセットアップをスキップしパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8341",
+        "category": "other",
+        "title": "Nxの23.2.0への更新",
+        "summary": "Nxをバージョン23.2.0にアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386519123",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.40",
+    "publishedAt": "2026-09-10T18:17:02Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.40",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8c43c71`](https://github.com/TanStack/router/commit/8c43c712523fc63dc3a814f3a19617e270ce8ed1), [`d914b08`](https://github.com/TanStack/router/commit/d914b085bb4bf29ec18a531201e377c10681b661)]:\n    -   @tanstack/react-router@1.170.35\n    -   @tanstack/start-server-core@1.169.34\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-167-40",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router および @tanstack/start-server-core の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386519095",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.42",
+    "publishedAt": "2026-09-10T18:16:59Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.42",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`d914b08`](https://github.com/TanStack/router/commit/d914b085bb4bf29ec18a531201e377c10681b661)]:\n    -   @tanstack/start-server-core@1.169.34\n    -   @tanstack/router-generator@1.167.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.171.42",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-server-core および @tanstack/router-generator の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386519073",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.35",
+    "publishedAt": "2026-09-10T18:16:56Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.35",
+    "releaseNotes": "### Patch Changes\n\n-   [#7824](https://github.com/TanStack/router/pull/7824) [`8c43c71`](https://github.com/TanStack/router/commit/8c43c712523fc63dc3a814f3a19617e270ce8ed1) - Upgrade TanStack Store to 0.11 and migrate router subscriptions to useSelector, preserving selector comparisons and Vue subscription cleanup.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "7824",
+        "category": "other",
+        "title": "TanStack Store 0.11への更新とuseSelectorへの移行",
+        "summary": "TanStack Storeを0.11にアップグレードし、ルーターのサブスクリプションをuseSelectorへ移行しました。セレクター比較やVueのサブスクリプションのクリーンアップ処理は維持されます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386519011",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.34",
+    "publishedAt": "2026-09-10T18:16:50Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.34",
+    "releaseNotes": "### Patch Changes\n\n-   [#8340](https://github.com/TanStack/router/pull/8340) [`d914b08`](https://github.com/TanStack/router/commit/d914b085bb4bf29ec18a531201e377c10681b661) - Fix `setResponseHeaders` to iterate `Headers` entries, replace existing values, and preserve separate `Set-Cookie` values.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8340",
+        "category": "bugfix",
+        "title": "setResponseHeadersの動作修正",
+        "summary": "setResponseHeadersがHeadersのエントリを正しく反復処理し、既存の値を置換しつつ個別のSet-Cookieヘッダー値を維持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386518876",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.33",
+    "publishedAt": "2026-09-10T18:16:35Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.33",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8c43c71`](https://github.com/TanStack/router/commit/8c43c712523fc63dc3a814f3a19617e270ce8ed1)]:\n    -   @tanstack/react-router@1.170.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-router-1-170-35",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/react-router)",
+        "summary": "@tanstack/react-router を 1.170.35 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386518779",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.52",
+    "publishedAt": "2026-09-10T18:16:26Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.52",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8c43c71`](https://github.com/TanStack/router/commit/8c43c712523fc63dc3a814f3a19617e270ce8ed1), [`d914b08`](https://github.com/TanStack/router/commit/d914b085bb4bf29ec18a531201e377c10681b661)]:\n    -   @tanstack/react-router@1.170.35\n    -   @tanstack/start-server-core@1.169.34\n    -   @tanstack/react-start-client@1.168.33\n    -   @tanstack/react-start-rsc@0.1.51\n    -   @tanstack/react-start-server@1.167.40\n    -   @tanstack/start-plugin-core@1.171.42\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.168.52",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router や @tanstack/start-server-core などの内部および関連パッケージの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#386518752",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.51",
+    "publishedAt": "2026-09-10T18:16:23Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.51",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8c43c71`](https://github.com/TanStack/router/commit/8c43c712523fc63dc3a814f3a19617e270ce8ed1)]:\n    -   @tanstack/react-router@1.170.35\n    -   @tanstack/start-plugin-core@1.171.42\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-8c43c71",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router (1.170.35) および @tanstack/start-plugin-core (1.171.42) の依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "wojtekmaj/react-pdf#386459113",
+    "library": "react-pdf",
+    "repository": "wojtekmaj/react-pdf",
+    "version": "v11.0.0",
+    "publishedAt": "2026-09-10T16:44:23Z",
+    "url": "https://github.com/wojtekmaj/react-pdf/releases/tag/v11.0.0",
+    "releaseNotes": "See [Upgrade guide from version 10.x to 11.x](https://github.com/wojtekmaj/react-pdf/wiki/Upgrade-guide-from-version-10.x-to-11.x).\n\nReact-PDF 11 brings PDF loading into React's Suspense flow. Use the same loading fallbacks and Error Boundaries as the rest of your application, or keep your existing viewer behavior with `suspense={false}`.\n\nThis release also upgrades PDF.js to version 6, with improvements to rendering, accessibility, and performance, along with some important compatibility changes.\n\n👀 Want to see exciting features more often? Consider [sponsoring React-PDF](https://github.com/wojtekmaj/react-pdf?sponsor=1).\n\n❗️ = breaking change\n\n## What's new?\n\n- ❗️ Added Suspense and Error Boundary support, enabled by default (#2144).\n  - `Document`, `Page`, `Thumbnail`, and `Outline` now use your boundary fallbacks for loading and failures.\n  - Set `suspense={false}` on `Document` to keep the previous loading and error behavior.\n  - Use `startTransition` to keep previously revealed content visible while loading another file or page.\n- Updated PDF.js from 5.4.296 to [6.3.289](https://github.com/mozilla/pdf.js/releases/tag/v6.3.289) (#2142), bringing improvements to annotation rendering, image decoding, font conversion, text selection, accessibility, and performance.\n\n## What's changed?\n\n- ❗️ React 19 is now required (#2143). Support for React 16.8, 17, and 18 has been dropped.\n- ❗️ Dropped support for older browsers and Node.js versions. See the [upgrade guide](https://github.com/wojtekmaj/react-pdf/wiki/Upgrade-guide-from-version-10.x-to-11.x#dropped-support-for-older-browsers-and-nodejs-versions) for details.\n- ❗️ Several PDF.js APIs have changed. If you use `pdfjs` directly, document/page proxies, or custom data factories, check the upgrade guide.\n- `onRenderAnnotationLayerSuccess` now runs after asynchronous annotation rendering finishes, and rendering failures are reported through `onRenderAnnotationLayerError`.\n- In Suspense mode, plain `file` and `options` objects are compared by value.\n",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "React 19へのアップグレード、サポート対象外環境の更新、Suspenseへの対応、およびPDF.js API変更に伴う調整が必要です。",
+      "steps": [
+        "React 19へアップグレードします。",
+        "従来の表示・エラー挙動を維持したい場合は Document コンポーネントに suspense={false} を設定するか、React Suspense と Error Boundary を利用するようにコードを対応させます。",
+        "サポート対象外となった古いブラウザおよび Node.js バージョンから動作環境を更新します。",
+        "PDF.js の API を直接使用している場合は、PDF.js v6 の非推奨・変更 API に合わせてコードを更新します。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "suspense-support",
+        "category": "breaking",
+        "title": "SuspenseおよびError Boundaryサポートの標準有効化",
+        "summary": "Document、Page、Thumbnail、Outline で Suspense と Error Boundary がデフォルトで有効になりました。suspense={false} を指定することで従来の動作を維持可能です。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "pdfjs-upgrade",
+        "category": "performance",
+        "title": "PDF.js 6.3.289 へのアップデート",
+        "summary": "PDF.js が v6.3.289 に更新され、注釈描画、画像デコード、フォント変換、テキスト選択、アクセシビリティ、パフォーマンスが向上しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "react-19-requirement",
+        "category": "breaking",
+        "title": "React 19の必須化",
+        "summary": "React 19 が必須となり、React 16.8、17、18 のサポートが終了しました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "dropped-legacy-environment-support",
+        "category": "breaking",
+        "title": "古いブラウザおよび Node.js のサポート終了",
+        "summary": "古いブラウザおよび Node.js バージョンのサポートが終了しました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "pdfjs-api-changes",
+        "category": "breaking",
+        "title": "PDF.js 関連 API の変更",
+        "summary": "PDF.js の複数 API が変更されました。pdfjs を直接利用している場合やドキュメント/ページプロキシ等を利用している場合に調整が必要な場合があります。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "annotation-layer-rendering-callback",
+        "category": "other",
+        "title": "注釈レイヤー描画成功・エラーハンドリングの改善",
+        "summary": "onRenderAnnotationLayerSuccess が非同期注釈描画の完了後に呼び出されるようになり、エラーは onRenderAnnotationLayerError を通じて報告されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "suspense-value-comparison",
+        "category": "other",
+        "title": "Suspenseモードにおける file および options オブジェクトの値比較",
+        "summary": "Suspense モードにおいて、file および options プレーンオブジェクトが参照ではなく値で比較されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#386231550",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.2.1",
+    "publishedAt": "2026-09-10T11:41:17Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.2.1",
+    "releaseNotes": "### Bug Fixes\n\n* **deps:** update all non-major dependencies ([#23404](https://github.com/vitejs/vite/issues/23404)) ([238ad81](https://github.com/vitejs/vite/commit/238ad811c7fb9e4730cbd317d0657867ed3447b3))\n* **deps:** update all non-major dependencies ([#23445](https://github.com/vitejs/vite/issues/23445)) ([fc7c104](https://github.com/vitejs/vite/commit/fc7c104e74d35a97fa313d5dd6f1b5e7d5b26159))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitejs/vite#386220675",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.0",
+    "publishedAt": "2026-09-10T11:25:16Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.0",
+    "releaseNotes": "### Features\n\n* **build:** avoid settling seen preload dependencies for performance ([#23446](https://github.com/vitejs/vite/issues/23446)) ([e6f6b3e](https://github.com/vitejs/vite/commit/e6f6b3e3119256daa837b2dc399058c8aa45b470))\n\n### Bug Fixes\n\n* handle CRLF line endings in code frame positions ([#23219](https://github.com/vitejs/vite/issues/23219)) ([9913672](https://github.com/vitejs/vite/commit/9913672bee9c34a2df7fff4c2538783cd4f43b4e))\n* only treat whole `node_modules` path segments as dependencies (fix [#17467](https://github.com/vitejs/vite/issues/17467)) ([#23437](https://github.com/vitejs/vite/issues/23437)) ([ef0dc17](https://github.com/vitejs/vite/commit/ef0dc17ada53d1169ae5a89cb8f6482831466755))\n\n### Performance Improvements\n\n* **proxy:** pre-compile context matchers at server creation ([#23263](https://github.com/vitejs/vite/issues/23263)) ([8abf700](https://github.com/vitejs/vite/commit/8abf700eeb2411d8402d08f8e2696effafdbe774))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "colinhacks/zod#385870653",
     "library": "Zod",
     "repository": "colinhacks/zod",
