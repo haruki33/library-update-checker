@@ -1,5 +1,112 @@
 [
   {
+    "id": "react-hook-form/react-hook-form#387369162",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.88.0",
+    "publishedAt": "2026-09-11T22:30:09Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.88.0",
+    "releaseNotes": "## ✨ Features\r\n\r\n- Add Error Message component (#13472)\r\n- Add the Error Message component for displaying validation errors from React Hook Form.\r\n\r\n## 🐞 Fixes\r\n\r\n- Fix stale validating state after `resetField()` (#13735)\r\n- Fix errors and touched state remaining for rows removed by `replace()` (#13734)\r\n- Fix stale resolver results updating form state after `reset()` during `handleSubmit()` (#13733)\r\n- Fix nested registered errors being removed when `trigger()` targets their parent (#13732)\r\n- Fix resolver-reported root errors being dropped during `handleSubmit()` (#13731)\r\n- Fix parent errors being incorrectly set when `trigger()` targets a field with only nested resolver errors (#13730)\r\n- Fix `useWatch` compute cache not being initialized with the initial output (#13728)\r\n- Fix `FileList` being lost during flatten/expand and omit undefined values in `jsonToFormData` (#13725)\r\n- Fix `schemaErrorLookup` reporting nested containers as exact-name errors (#13727)\r\n- Fix `isValidating` not being recomputed after `unregister()` clears validating fields (#13723)\r\n- Fix stale resolver state updates after `reset()` (#13722)\r\n- Fix `iterateFieldsByAction` only breaking out of one loop level (#13718)\r\n- Fix stale validation types surviving `setError()` overwrites (#13716)\r\n- Fix `reset()` not clearing validating fields (#13714)\r\n- Fix `remove()` leaking deleted values onto surviving field-array items (#13713)\r\n- Fix the React Server build being unpublished (#13709)\r\n- Fix `validateField` calling `setCustomValidity` once per key in validate-object mode (#13707)\r\n- Fix `useFieldArray` focus behavior for checkboxes and radio buttons in appended rows (#13705)\r\n- Fix `getFieldState` reading `isValidating` from the supplied form state (#13704)\r\n- Fix `unregister()` stripping kept values from the submit payload (#13703)\r\n- Fix `useFormState` not re-subscribing when control changes (#13702)\r\n- Fix `reset()` keeping `dirtyFields` out of sync with `isDirty` when `keepValues` is enabled (#13701)\r\n- Fix `useForm` not reconciling correctly when an Activity subtree is initially hidden (#13698)\r\n- Fix cleared errors returning after the `delayError` timer fires (#13697)\r\n- Fix `cloneObject` throwing when checking `Blob` with `instanceof` (#13694)\r\n- Fix `useFieldArray` retaining stale fields after an Activity subtree reconnects (#13688)\r\n\r\n## 🧹 Refactors\r\n\r\n- Extend `_isTracked` to the remaining multi-key proxy/subscribe form-state checks (#13699)\r\n- Extract `_isTracked` helper for proxy/subscribe form-state checks (#13690)\r\n- Remove the unused `abortEarly` parameter from `iterateFieldsByAction` (#13689)\r\n- Remove redundant optional chaining from `clearErrors` (#13696)\r\n\r\n## 📝 Documentation\r\n\r\n- Fix `useWatch` compute example variable names in JSDoc (#13700)\r\n\r\n## 📦 Dependencies\r\n\r\n- Bump `joi` from 18.2.1 to 18.2.5 (#13719)\r\n\r\n## ❤️ Thank You\r\n\r\n- Thanks to @soroush5, @bluebill1049, @Tnalxmsk, @zigzagdev, @dfedoryshchev, @Alioth-91, @giaBaoJS and @jliew for their contributions! 🎉",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "互換性を破る変更はないため、特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "13472",
+        "category": "feature",
+        "title": "ErrorMessageコンポーネントの追加",
+        "summary": "React Hook Formからのバリデーションエラーを表示するためのErrorMessageコンポーネントが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13735",
+        "category": "bugfix",
+        "title": "resetField実行後の検証状態の不具合修正",
+        "summary": "resetField()呼び出し後に検証中状態(validating state)が残ってしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13734",
+        "category": "bugfix",
+        "title": "replaceにより削除された行のエラーとtouched状態の修正",
+        "summary": "replace()によって削除された行のエラーおよびtouched状態が残存する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13733",
+        "category": "bugfix",
+        "title": "handleSubmit中のresetによる古くなったリゾルバ結果の修正",
+        "summary": "handleSubmit()実行中にreset()が呼ばれた際、古いリゾルバ結果がフォーム状態を更新してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13732",
+        "category": "bugfix",
+        "title": "親フィールドへのtrigger実行時のネストエラー消失修正",
+        "summary": "trigger()が親要素をターゲットにした際に、ネストされた登録済みエラーが削除される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13731",
+        "category": "bugfix",
+        "title": "handleSubmit実行時のルートエラー脱落修正",
+        "summary": "handleSubmit()の処理中に、リゾルバから報告されたルートエラーがドロップされる不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13728",
+        "category": "bugfix",
+        "title": "useWatchの計算キャッシュ初期化修正",
+        "summary": "useWatchの計算キャッシュが初期出力で正しく初期化されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13725",
+        "category": "bugfix",
+        "title": "jsonToFormDataにおけるFileListとundefined処理の修正",
+        "summary": "flatten/expand処理におけるFileListの消失およびjsonToFormDataでのundefined値の省略処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13709",
+        "category": "bugfix",
+        "title": "React Serverビルドの未公開問題修正",
+        "summary": "React Server用のビルドが未公開となっていた問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13702",
+        "category": "bugfix",
+        "title": "control変更時のuseFormState再購読修正",
+        "summary": "controlが変更された際にuseFormStateが正しく再購読されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13719",
+        "category": "other",
+        "title": "joiパッケージの更新",
+        "summary": "joi依存関係を18.2.1から18.2.5に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "colinhacks/zod#386643457",
     "library": "Zod",
     "repository": "colinhacks/zod",
@@ -398,10 +505,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "23404",
+        "category": "bugfix",
+        "title": "依存関係の更新 (#23404)",
+        "summary": "メジャーバージョン以外の依存関係を最新化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23445",
+        "category": "bugfix",
+        "title": "依存関係の更新 (#23445)",
+        "summary": "メジャーバージョン以外の依存関係を最新化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#386220675",
@@ -415,10 +540,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新に伴う特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "vite-8-3-0-23446",
+        "category": "feature",
+        "title": "ビルド時のプリロード依存関係処理の最適化",
+        "summary": "すでに確認済みのプリロード依存関係の解決処理を回避することで、ビルドパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-0-23219",
+        "category": "bugfix",
+        "title": "コードフレーム位置でのCRLF改行コードの修正",
+        "summary": "コードフレームの位置計算において、CRLF改行コードを適切に処理できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-0-23437",
+        "category": "bugfix",
+        "title": "node_modulesパスセグメント判定の修正",
+        "summary": "パス文字列の一部ではなく完全なnode_modulesパスセグメントのみを依存関係として扱うように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-0-23263",
+        "category": "performance",
+        "title": "サーバー作成時のプロキシコンテキストマッチャーの事前コンパイル",
+        "summary": "開発サーバー作成時にプロキシのコンテキストマッチャーを事前にコンパイルすることで、処理性能を改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "colinhacks/zod#385870653",
@@ -725,10 +884,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8300",
+        "category": "other",
+        "title": "互換性のあるビルドおよび実行時依存関係の更新",
+        "summary": "ビルドおよび実行時に使用される互換性のある依存関係パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385869177",
@@ -742,10 +911,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8300",
+        "category": "other",
+        "title": "ビルドおよび実行時依存関係の更新",
+        "summary": "互換性のあるビルド依存関係および実行時依存関係を刷新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8308",
+        "category": "bugfix",
+        "title": "ナビゲーション・リダイレクト検証の強化およびパフォーマンスの向上",
+        "summary": "ナビゲーションとリダイレクト先の検証、プリレンダーリクエストと出力パスの制限、サーバー関数レスポンスにおけるリダイレクトヘッダーの修正、各種フレームワーク（React, Vue, Solid）向けリンクのバンドルサイズ削減と最適化を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8261",
+        "category": "performance",
+        "title": "Vite/RsbuildにおけるインラインCSS無効化時のビルド最適化",
+        "summary": "インラインCSSが無効になっている場合に未使用のビルドインデックスを回避し、CSSコンテンツのキャプチャをスキップするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "内部依存パッケージの更新",
+        "summary": "@tanstack/router-core, @tanstack/router-plugin などの関連パッケージを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868829",
@@ -762,7 +965,33 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8279",
+        "category": "performance",
+        "title": "ユーザー定義イベントハンドラーのないLinkのメモリアロケーション削減",
+        "summary": "ユーザー指定のイベントハンドラーが存在しないLinkコンポーネントにおいて、配列やラッパー関数の不要な生成・割り当てを回避するように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8308",
+        "category": "bugfix",
+        "title": "ナビゲーションとリダイレクトの検証強化および最適化",
+        "summary": "ナビゲーションおよびリダイレクト先の検証を強化し、曖昧な相対URLを同一オリジンに制限する処理やサーバー関数のレスポンス修正を行いました。またLinkコンポーネントのバンドルサイズ削減も含んでいます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8311",
+        "category": "performance",
+        "title": "React Linkのstate props解決時のオブジェクト生成最適化",
+        "summary": "React Linkにおいて、一時的なクラス名配列や不要なスタイルの複製を行わずにstate propsを解決できるように改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868811",
@@ -779,7 +1008,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-router-core-1-171-29",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.29に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868794",
@@ -793,10 +1032,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-8308-bugfix",
+        "category": "bugfix",
+        "title": "ナビゲーション・リダイレクト先の検証強化と不具合修正",
+        "summary": "ナビゲーションやリダイレクト先の検証を強化し、サーバー関数レスポンス内へのリダイレクトヘッダー混入を防止しました。またハイドレーション時の整合性やエラーハンドリングを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-8308-performance",
+        "category": "performance",
+        "title": "リンクコンポーネントのバンドルサイズ削減とパフォーマンス最適化",
+        "summary": "React、Vue、Solidのリンク処理においてパス名比較ロジックなどを共通化し、バンドルサイズの削減とサーバーレンダリング等の処理軽量化を実現しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868774",
@@ -813,7 +1070,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8300",
+        "category": "other",
+        "title": "互換性のあるビルドおよび実行時依存関係の更新",
+        "summary": "互換性のあるビルド依存関係および実行時依存関係を最新の状態に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868713",
@@ -827,10 +1094,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースによる移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.167.39",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-server-core の依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#385868697",
