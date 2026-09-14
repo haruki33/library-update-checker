@@ -1,5 +1,223 @@
 [
   {
+    "id": "polygonplanet/encoding.js#388512241",
+    "library": "encoding-japanese",
+    "repository": "polygonplanet/encoding.js",
+    "version": "2.4.0",
+    "publishedAt": "2026-09-14T15:36:08Z",
+    "url": "https://github.com/polygonplanet/encoding.js/releases/tag/2.4.0",
+    "releaseNotes": "## What's Changed\r\n\r\nInclude TypeScript definitions (`index.d.ts`) migrated from DefinitelyTyped. Installing `@types/encoding-japanese` separately is no longer required. Thanks to DefinitelyTyped contributors!\r\n\r\n### Features\r\n\r\n* feat(types): bundle TypeScript definitions (migrated from DefinitelyTyped) in https://github.com/polygonplanet/encoding.js/pull/68\r\n  * Add `index.d.ts` and the `\"types\"` field to `package.json`\r\n  * The definitions are imported unchanged from `@types/encoding-japanese` 2.2.1.\r\n* feat(convert): support Unicode characters that differ between CP932 and JIS X 0208 mappings when converting to `SJIS`, `EUCJP` and `JIS` in https://github.com/polygonplanet/encoding.js/pull/67\r\n\r\n### Bug Fixes\r\n\r\n* Fix `U+301C` (`〜`) being mapped to JIS X 0212 instead of JIS X 0208 when converting to `EUCJP` and `JIS` (e.g., `0x8FA1C1` instead of `0xA1C1` in `EUCJP`) in https://github.com/polygonplanet/encoding.js/pull/67\r\n* Fix invalid SJIS trail byte `0x7F` being converted as `0x7E` instead of falling back to `?` on conversion from `SJIS` ([b848595](https://github.com/polygonplanet/encoding.js/commit/b848595))\r\n\r\n### CI\r\n\r\n* Update GitHub Actions and split linting from tests in https://github.com/polygonplanet/encoding.js/pull/66\r\n\r\n### Maintenance\r\n\r\n* Add type tests adapted from DefinitelyTyped to run with `tsc`, and include them in `npm test` (https://github.com/polygonplanet/encoding.js/pull/68)\r\n* Upgrade ESLint to v10 and migrate from `.eslintrc.json` to flat config with `@stylistic/eslint-plugin` (https://github.com/polygonplanet/encoding.js/pull/66)\r\n\r\n**Full Changelog**: https://github.com/polygonplanet/encoding.js/compare/2.3.0...2.4.0\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。必要に応じて@types/encoding-japaneseパッケージをアンインストールできます。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "feat-bundled-ts-types",
+        "category": "feature",
+        "title": "TypeScript型定義の同梱",
+        "summary": "DefinitelyTypedから移行されたTypeScript型定義（index.d.ts）をパッケージに同梱しました。@types/encoding-japaneseの別個のインストールは不要になります。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-cp932-jisx0208-mapping",
+        "category": "feature",
+        "title": "CP932とJIS X 0208で差異があるUnicode文字変換のサポート",
+        "summary": "SJIS、EUCJP、JISへの変換時、CP932とJIS X 0208のマッピング定義が異なるUnicode文字の変換をサポートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-u301c-eucjp-jis-mapping",
+        "category": "bugfix",
+        "title": "U+301C (〜) のEUCJP/JIS変換マッピングの修正",
+        "summary": "EUCJPおよびJISへの変換時に、U+301C (〜) がJIS X 0208ではなくJIS X 0212にマッピングされていた不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-sjis-invalid-trail-byte-0x7f",
+        "category": "bugfix",
+        "title": "SJIS変換時の不正なバイト0x7Fの処理修正",
+        "summary": "SJISからの変換時に、不正な2バイト目0x7Fが0x7Eとして変換されていた問題を修正し、'?'へフォールバックするように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "other-ci-and-maintenance",
+        "category": "other",
+        "title": "CIおよびメンテナンスの更新",
+        "summary": "GitHub Actionsの修正、型テストの追加、ESLint v10へのアップグレードとフラットコンフィグへの移行を実施しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#388287490",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-14-0945",
+    "publishedAt": "2026-09-14T09:45:17Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-14-0945",
+    "releaseNotes": "Release 2026-09-14 09:45\n\n## Changes\n\n### Fix\n\n- e2e: serialize Playwright runners per Nx agent (#8356) (702d9efe8b) by @Sheraff\n\n### Chore\n\n- deps: upgrade Rsbuild to 2.2.5 (#8397) (ab99818225) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-start@1.168.54\n- @tanstack/react-start-rsc@0.1.53\n- @tanstack/solid-start@1.168.52\n- @tanstack/start-plugin-core@1.171.44\n- @tanstack/vue-start@1.168.51\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-8356",
+        "category": "bugfix",
+        "title": "e2eテストにおけるPlaywrightランナーの直列化",
+        "summary": "NxエージェントごとにPlaywrightテストランナーの実行をシリアライズしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chore-8397",
+        "category": "other",
+        "title": "Rsbuild依存関係の更新",
+        "summary": "依存ライブラリRsbuildを2.2.5に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#388287423",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.54",
+    "publishedAt": "2026-09-14T09:45:10Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.54",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`ab99818`](https://github.com/TanStack/router/commit/ab99818225835a1553a9f3513cd2093ff1b257be)]:\n    -   @tanstack/start-plugin-core@1.171.44\n    -   @tanstack/react-start-rsc@0.1.53\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.168.54",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core (1.171.44) および @tanstack/react-start-rsc (0.1.53) の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#388287402",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.53",
+    "publishedAt": "2026-09-14T09:45:07Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.53",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`ab99818`](https://github.com/TanStack/router/commit/ab99818225835a1553a9f3513cd2093ff1b257be)]:\n    -   @tanstack/start-plugin-core@1.171.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "ab99818225835a1553a9f3513cd2093ff1b257be",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core がバージョン 1.171.44 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#388287335",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.44",
+    "publishedAt": "2026-09-14T09:45:01Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.44",
+    "releaseNotes": "### Patch Changes\n\n-   [#8397](https://github.com/TanStack/router/pull/8397) [`ab99818`](https://github.com/TanStack/router/commit/ab99818225835a1553a9f3513cd2093ff1b257be) - Support Rsbuild 2.2: preserve function-based Rspack watch exclusions and regular-expression flags when adding monorepo build-output exclusions, and leave string-valued Babel loader options intact in the Solid Start plugin.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8397",
+        "category": "bugfix",
+        "title": "Rsbuild 2.2のサポートおよび関連ビルド設定の最適化",
+        "summary": "Rsbuild 2.2をサポートしました。モノレポのビルド出力除外追加時における関数ベースのRspack watch除外や正規表現フラグの保持、Solid Startプラグインにおける文字列値のBabelローダーオプションの保持に対応しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "colinhacks/zod#388066930",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.5",
+    "publishedAt": "2026-09-13T23:25:34Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.5",
+    "releaseNotes": "## Commits:\n\n- d2b135cfb7a3582b9eb515756b9166bcb9521f4a docs: add the 4.6.x patch highlights to the 4.6 post\n- f1448f7cee00df9fe1e9ad84a000aa1828cc8bc1 docs: fold the 4.6.x patch highlights into the 4.6 post's own sections\n- de65a5cb39ed22a507fac935788f718fa88d104f docs: lead the properties section with the check and add a Zod Mini tab (#6598)\n- 56222cd1532c07bcb91b67df529cab4c0a215330 feat(instanceof): key the .properties() shape off the instance type (#6600)\n- ca0229a404818290e6cdcfefcd7eb2d04bcbb543 Revert \"feat: add z.currencyCode() over a vendored ISO 4217 list, refreshed weekly by CI (#6595)\"\n- cc4cd4ee9c52fcaa10964e48cc144541e41a5ed9 Revert \"Revert \"feat: add z.currencyCode() over a vendored ISO 4217 list, refreshed weekly by CI (#6595)\"\"\n- 0f3f5ee3ca56c7574bf849e54f79e9a6e02562ee 4.6.5\n- 59bbc03e10c636b9eb3c393dfeb552819774ec21 chore: re-pin the integration peers to the workspace zod after the 4.6.5 bump\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "feat-instanceof-properties",
+        "category": "feature",
+        "title": "instanceofにおける.properties()の型解決の強化",
+        "summary": "instanceofの.properties()シェイプをインスタンス型から型判定するように調整されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-currency-code",
+        "category": "feature",
+        "title": "z.currencyCode()の追加",
+        "summary": "ISO 4217に準拠した通貨コードバリデータz.currencyCode()が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "docs-and-maintenance",
+        "category": "other",
+        "title": "ドキュメントの更新および内部維持管理",
+        "summary": "4.6.xパッチ内容に関するドキュメントの整理とビルド/テスト設定の修正が行われました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "axios/axios#387963200",
     "library": "Axios",
     "repository": "axios/axios",
@@ -565,10 +783,76 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8390-link-ssr-performance",
+        "category": "performance",
+        "title": "LinkのSSRパフォーマンス向上とプロップ優先順位の調整",
+        "summary": "Linkのロケーションキャッシュをサーバーバンドルから除外し、SSR時のレンダリング速度を向上させました。また、activePropsとinactivePropsの優先順位ルールを統一しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8382-build-location-search-state",
+        "category": "bugfix",
+        "title": "buildLocationにおけるsearchおよびstateの非破壊処理とシリアライズ動作の改善",
+        "summary": "searchのキー順序が変更された場合に新しい履歴エントリを作成するように修正し、navigateやbuildLocationに渡されたstateオブジェクトの不変性を維持するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8327-path-params-allowed-characters",
+        "category": "other",
+        "title": "pathParamsAllowedCharactersの初期化時限定化",
+        "summary": "pathParamsAllowedCharactersの設定をルーター作成時のみにし、動的なデコーダー変更のオーバーヘッドとチェック処理を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8370-stop-exporting-internal-helpers",
+        "category": "other",
+        "title": "内部ヘルパー（isPlainObject, isPlainArray）のエクスポート停止",
+        "summary": "内部で使用されていた isPlainObject および isPlainArray ヘルパー関数の外部エクスポートを廃止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8410-splat-falsy-value-handling",
+        "category": "bugfix",
+        "title": "パス補間における _splat の数値 0 および false の扱い修正",
+        "summary": "_splat に 0 や false が指定された場合も他のパスパラメータと同様に文字列化して保持し、undefined、null、空文字列のみを省略対象とするよう変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8354-ssr-request-history",
+        "category": "feature",
+        "title": "SSRリクエスト履歴とサーバーナビゲーションの最適化",
+        "summary": "SSR用に軽量なリクエスト履歴を使用し、サーバー上でのナビゲーションをno-opにしました。リダイレクトには redirect() を使用します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "performance-optimizations-path-route-cache",
+        "category": "performance",
+        "title": "パス補間・ルート構造・Linkの統合パフォーマンス最適化",
+        "summary": "ルート分岐やパス補間のキャッシュ再利用、ルートツリー初期化処理の改善、JITコンパイル時のメモリ消費削減など、ルーター全体のパフォーマンスを最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dependencies-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/history を 1.162.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906237",
@@ -582,10 +866,68 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンでは必須の移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8390-link-ssr-perf",
+        "category": "performance",
+        "title": "Link の SSR レンダリング速度の向上とプロップス処理の最適化",
+        "summary": "サーバー環境での Location キャッシュ生成を抑制し、Link の SSR レンダリング速度を 20〜40% 向上させました。また、activeProps/inactiveProps の優先順位ルールと useLinkProps の返り値を整理しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8324-hydration-snapshot",
+        "category": "performance",
+        "title": "ハイドレーション時の不要なストア更新の回避",
+        "summary": "ハイドレーションスナップショットの getter を再利用することで、Link やその他のコンポーネント再レンダリング時における不要なエフェクト更新を回避しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8318-link-props-override",
+        "category": "feature",
+        "title": "Link の active/inactive プロップスによるベース要素プロップスの上書き対応",
+        "summary": "React および Solid において、クラス/スタイルのマージを保持しながら active/inactive プロップスでベース要素のプロップスを上書きできるよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8327-path-params-allowed-chars",
+        "category": "other",
+        "title": "pathParamsAllowedCharacters 設定の初期化時固定化",
+        "summary": "pathParamsAllowedCharacters をルーター作成時の初期化専用オプションに変更し、ルートパスキャッシュからの動的な変更チェックを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8370-stop-export-internal-helpers",
+        "category": "other",
+        "title": "内部ヘルパー関数 isPlainObject / isPlainArray のエクスポート停止",
+        "summary": "内部的に利用されていた isPlainObject および isPlainArray 関数のエクスポートを停止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8252-pathname-interpolation-perf",
+        "category": "performance",
+        "title": "パス名補間のバンドルサイズ削減と最適化",
+        "summary": "パス名とメタデータの補間処理を 1 パスに統合し、バンドルサイズの削減およびプロップスマージ処理の簡素化を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8370-location-cache-reuse",
+        "category": "performance",
+        "title": "現在の Location に依存しない Link 位置計算のキャッシュ・再利用",
+        "summary": "現在の Location に依存しない Link の位置計算結果をルーターオプション単位でキャッシュし、ナビゲーション時の再計算コストを削減しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906218",
@@ -599,10 +941,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-router-plugin-116838",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-plugin)",
+        "summary": "@tanstack/router-plugin をバージョン 1.168.38 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906192",
@@ -619,7 +971,33 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8321",
+        "category": "performance",
+        "title": "内部パス補間の整理と最適化",
+        "summary": "内部のパス補間処理を interpolatePath に集約し、要求された場合のみメタデータを収集してパス名を直接返すように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8327-1",
+        "category": "performance",
+        "title": "パス生成時における解析済みルートセグメントの再利用",
+        "summary": "ナビゲーション、Links、Devtoolsのパス生成時に解析済みのルートセグメントを再利用し、テンプレートの再解析を回避するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8327-2",
+        "category": "performance",
+        "title": "マッチングと補間におけるルートセグメント共有と最適化",
+        "summary": "ルートセグメントをマッチングと補間で共有し、ルートツリー走査の簡素化やDevtools専用ナビゲーション検証の分離を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906177",
