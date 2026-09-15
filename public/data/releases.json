@@ -1,5 +1,220 @@
 [
   {
+    "id": "remix-run/react-router#389257669",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@8.4.0",
+    "publishedAt": "2026-09-15T15:22:42Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.4.0",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v840",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "リリースノートに具体的な変更点の記述がないため、移行手順はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "remix-run/react-router#389244634",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@7.18.4",
+    "publishedAt": "2026-09-15T15:05:10Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.4",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/v7/CHANGELOG.md#v7184",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#388987631",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.1",
+    "publishedAt": "2026-09-15T08:43:24Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.1",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- **ui**:\n  - Move trace attempts selector to viewer header &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Codex** in https://github.com/vitest-dev/vitest/issues/11189 [<samp>(5dc4b)</samp>](https://github.com/vitest-dev/vitest/commit/5dc4b5c92)\n  - Add focused trace view layout mode &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **OpenCode (gpt-5.6-sol)** and **Codex** in https://github.com/vitest-dev/vitest/issues/11190 [<samp>(376dc)</samp>](https://github.com/vitest-dev/vitest/commit/376dc3bc1)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Exit 1 when vitest list fails collection &nbsp;-&nbsp; by @hamed-bavar in https://github.com/vitest-dev/vitest/issues/11145 and https://github.com/vitest-dev/vitest/issues/11146 [<samp>(6108b)</samp>](https://github.com/vitest-dev/vitest/commit/6108b8197)\n- Keep parse error details in static collection &nbsp;-&nbsp; by @hamed-bavar in https://github.com/vitest-dev/vitest/issues/11150 and https://github.com/vitest-dev/vitest/issues/11151 [<samp>(7c818)</samp>](https://github.com/vitest-dev/vitest/commit/7c818153a)\n- Avoid recursive prototype in automocking &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11195 [<samp>(99fc5)</samp>](https://github.com/vitest-dev/vitest/commit/99fc52591)\n- Prevent false Vitest import resolution &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11196 [<samp>(b426c)</samp>](https://github.com/vitest-dev/vitest/commit/b426c1976)\n- Keep metadata file when clearing the cache &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11199 [<samp>(73614)</samp>](https://github.com/vitest-dev/vitest/commit/73614654a)\n- Correct typos in error message and comments &nbsp;-&nbsp; by @shinji00222 and **Shinji** in https://github.com/vitest-dev/vitest/issues/11187 [<samp>(115c3)</samp>](https://github.com/vitest-dev/vitest/commit/115c3f6d2)\n- Resolve ResolvedConfig exactOptionalPropertyTypes errors &nbsp;-&nbsp; by @LukeAbby in https://github.com/vitest-dev/vitest/issues/11175 [<samp>(498fb)</samp>](https://github.com/vitest-dev/vitest/commit/498fbe922)\n- Share the server on self-referencing `extends` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11034 [<samp>(23dda)</samp>](https://github.com/vitest-dev/vitest/commit/23dda738c)\n- Warn when deprecated `deps.optimizer.web` is used &nbsp;-&nbsp; by @im10furry in https://github.com/vitest-dev/vitest/issues/11214 [<samp>(2ce29)</samp>](https://github.com/vitest-dev/vitest/commit/2ce29d5fa)\n- **browser**:\n  - Avoid double quotes in `config.define` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11198 [<samp>(972e2)</samp>](https://github.com/vitest-dev/vitest/commit/972e24bab)\n- **doctor**:\n  - Measure vm pools for custom environments &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11212 [<samp>(91ab1)</samp>](https://github.com/vitest-dev/vitest/commit/91ab1588c)\n- **expect**:\n  - Correct return value in `toMatchAriaSnapshot` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11208 [<samp>(c119b)</samp>](https://github.com/vitest-dev/vitest/commit/c119be016)\n- **fakeTimers**:\n  - Force `queueMicrotask` and `nextTick` in `toNotFake` &nbsp;-&nbsp; by @kingmakeruix, **kingmakeruix**, **Hiroshi Ogawa**, **Codex** and @hi-ogawa in https://github.com/vitest-dev/vitest/issues/11261 [<samp>(a47d7)</samp>](https://github.com/vitest-dev/vitest/commit/a47d7908f)\n- **snapshot**:\n  - Report obsolete keys next to skipped tests &nbsp;-&nbsp; by @hamed-bavar, **Hiroshi Ogawa** and **OpenCode (gpt-5.6-sol)** in https://github.com/vitest-dev/vitest/issues/11157 and https://github.com/vitest-dev/vitest/issues/11158 [<samp>(17e2b)</samp>](https://github.com/vitest-dev/vitest/commit/17e2b22dd)\n- **types**:\n  - Make public declarations self-contained &nbsp;-&nbsp; by @ZoeySigel in https://github.com/vitest-dev/vitest/issues/11141 [<samp>(45546)</samp>](https://github.com/vitest-dev/vitest/commit/455466c16)\n- **ui**:\n  - Fix collapse/expand suite with file name search &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Codex** in https://github.com/vitest-dev/vitest/issues/11260 [<samp>(0a712)</samp>](https://github.com/vitest-dev/vitest/commit/0a7122daa)\n  - Fix explorer file summary count &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **OpenCode (gpt-5.6-sol)** and **Codex** in https://github.com/vitest-dev/vitest/issues/11125 [<samp>(05982)</samp>](https://github.com/vitest-dev/vitest/commit/05982297d)\n- **utils**:\n  - Fix `deepMerge` to handle prototype &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Codex** in https://github.com/vitest-dev/vitest/issues/11215 [<samp>(4944c)</samp>](https://github.com/vitest-dev/vitest/commit/4944cf498)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.0...v5.0.1)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "5dc4b",
+        "category": "feature",
+        "title": "UI: トレース試行セレクターをビューアヘッダーへ移動",
+        "summary": "UIのトレース試行セレクターをビューアのヘッダー位置へ移動しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "376dc",
+        "category": "feature",
+        "title": "UI: フォーカスされたトレースビューレイアウトモードの追加",
+        "summary": "UIにフォーカスされたトレース表示レイアウトモードを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6108b",
+        "category": "bugfix",
+        "title": "vitest list の収集失敗時に終了コード1を返す修正",
+        "summary": "vitest list コマンドでテスト収集が失敗した際にプロセスが終了コード1で終了するように修復しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7c818",
+        "category": "bugfix",
+        "title": "静的収集における構文解析エラー詳細の保持",
+        "summary": "静的なテスト収集の処理中に構文解析エラーの詳細が保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "99fc5",
+        "category": "bugfix",
+        "title": "オートモックでの再帰的プロトタイプの回避",
+        "summary": "自動モック生成時に再帰的なプロトタイプ参照が発生しないよう対策しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b426c",
+        "category": "bugfix",
+        "title": "誤ったVitestインポート解決の防止",
+        "summary": "Vitestのインポートが誤って解決されてしまう問題を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "73614",
+        "category": "bugfix",
+        "title": "キャッシュクリア時のメタデータファイルの保持",
+        "summary": "キャッシュのクリア処理時にメタデータファイルが削除されず保持されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "115c3",
+        "category": "bugfix",
+        "title": "エラーメッセージとコメントのタイポ修正",
+        "summary": "エラーメッセージおよびソースコード内のコメントの誤字脱字を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "498fb",
+        "category": "bugfix",
+        "title": "ResolvedConfig の exactOptionalPropertyTypes エラー解消",
+        "summary": "TypeScript の exactOptionalPropertyTypes 設定による ResolvedConfig の型エラーを解消しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23dda",
+        "category": "bugfix",
+        "title": "自己参照 extends 時のサーバー共有",
+        "summary": "設定の extends が自己参照している場合にサーバーを適切に共有するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2ce29",
+        "category": "bugfix",
+        "title": "非推奨の deps.optimizer.web 利用時の警告追加",
+        "summary": "非推奨となった deps.optimizer.web オプションが使用された際に警告を出力するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "972e2",
+        "category": "bugfix",
+        "title": "browser: config.define での二重引用符の回避",
+        "summary": "ブラウザ環境の config.define 設定で不要な二重引用符が付与される問題を回避しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "91ab1",
+        "category": "bugfix",
+        "title": "doctor: カスタム環境向け vm プールの計測",
+        "summary": "doctor 機能でカスタム環境向けの vm プール測定に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "c119b",
+        "category": "bugfix",
+        "title": "expect: toMatchAriaSnapshot の返り値修正",
+        "summary": "toMatchAriaSnapshot マッチャーの返り値を正しい仕様に修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a47d7",
+        "category": "bugfix",
+        "title": "fakeTimers: toNotFake での queueMicrotask と nextTick の強制",
+        "summary": "toNotFake 設定時に queueMicrotask および nextTick を正しく扱えるよう強制しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "17e2b",
+        "category": "bugfix",
+        "title": "snapshot: スキップされたテストの隣に非推奨キーを報告",
+        "summary": "スキップされたテストに関連する不要なスナップショットキーを直近に報告するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "45546",
+        "category": "bugfix",
+        "title": "types: 公開型宣言の自己完結化",
+        "summary": "外部依存なしで完結するように公開型宣言を改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0a712",
+        "category": "bugfix",
+        "title": "ui: ファイル名検索時のスイート折りたたみ/展開の修正",
+        "summary": "UIのファイル名検索時にテストスイートの折りたたみ/展開が正常に動作しない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "05982",
+        "category": "bugfix",
+        "title": "ui: エクスプローラーのファイルサマリーカウント修正",
+        "summary": "UIのエクスプローラーにおけるファイル要約カウント表示の不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "4944c",
+        "category": "bugfix",
+        "title": "utils: deepMerge でのプロトタイプ処理修正",
+        "summary": "deepMerge ユーティリティでプロトタイプが正しくハンドリングされるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "polygonplanet/encoding.js#388512241",
     "library": "encoding-japanese",
     "repository": "polygonplanet/encoding.js",
@@ -1014,7 +1229,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-170-30",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core および @tanstack/start-storage-context を最新のパッチバージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906163",
@@ -1028,10 +1253,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1.167.36",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreをバージョン1.171.30に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906148",
@@ -1045,10 +1280,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-0-1-52",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-client-core などの関連依存パッケージが最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906135",
@@ -1062,10 +1307,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1-167-41",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-server-core の依存パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906103",
@@ -1079,10 +1334,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-1.167.2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、および @tanstack/router-devtools-core が最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906085",
@@ -1099,7 +1364,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-deps-1-167-36",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-generator を 1.167.36 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#387906071",
@@ -1113,10 +1388,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみのため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-168-34",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-client-core の依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "colinhacks/zod#387743515",
