@@ -1,5 +1,687 @@
 [
   {
+    "id": "TanStack/router#390298679",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-16-2153",
+    "publishedAt": "2026-09-16T21:54:00Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-16-2153",
+    "releaseNotes": "Release 2026-09-16 21:53\n\n## Changes\n\n### Performance\n\n- router-core: reduce replaceEqualDeep allocations (#8411) (ce10dcd4d9) by @Sheraff\n- router-core: split replaceEqualDeep into an equality scan and a copy phase (#8389) (bbd2336b84) by @schiller-manuel\n- router-core: skip symbol enumeration for plain replaceEqualDeep inputs (#8364) (01035782e5) by @schiller-manuel\n- router-core: check plain objects by constructor (#8363) (cecae5440b) by @schiller-manuel\n- router-core: allocate replaceEqualDeep copies lazily (#8362) (84936cc045) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/react-router@1.170.38\n- @tanstack/react-start@1.168.56\n- @tanstack/react-start-client@1.168.36\n- @tanstack/react-start-rsc@0.1.55\n- @tanstack/react-start-server@1.167.43\n- @tanstack/router-cli@1.167.38\n- @tanstack/router-core@1.171.32\n- @tanstack/router-generator@1.167.38\n- @tanstack/router-plugin@1.168.40\n- @tanstack/router-vite-plugin@1.167.40\n- @tanstack/solid-router@1.170.36\n- @tanstack/solid-start@1.168.54\n- @tanstack/solid-start-client@1.168.35\n- @tanstack/solid-start-server@1.167.42\n- @tanstack/start-client-core@1.170.32\n- @tanstack/start-plugin-core@1.171.46\n- @tanstack/start-server-core@1.169.37\n- @tanstack/start-static-server-functions@1.167.37\n- @tanstack/start-storage-context@1.167.34\n- @tanstack/vue-router@1.170.35\n- @tanstack/vue-start@1.168.53\n- @tanstack/vue-start-client@1.167.38\n- @tanstack/vue-start-server@1.167.42\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "ce10dcd4d9",
+        "category": "performance",
+        "title": "replaceEqualDeep のメモリ割り当て削減",
+        "summary": "router-core における replaceEqualDeep のメモリ割り当てを削減し、パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bbd2336b84",
+        "category": "performance",
+        "title": "replaceEqualDeep のフェーズ分離",
+        "summary": "replaceEqualDeep の処理を等価性のスキャンとコピーの2つのフェーズに分離することで効率化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "01035782e5",
+        "category": "performance",
+        "title": "プレーン入力でのシンボル列挙スキップ",
+        "summary": "replaceEqualDeep のプレーンな入力に対する Symbol の列挙処理をスキップするように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "cecae5440b",
+        "category": "performance",
+        "title": "コンストラクタによるプレーンオブジェクト判定",
+        "summary": "プレーンオブジェクトの判定を constructor で行うようにして判定コストを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "84936cc045",
+        "category": "performance",
+        "title": "replaceEqualDeep のコピー遅延割り当て",
+        "summary": "replaceEqualDeep でコピーが発生する際のメモリ割り当てを遅延（Lazy）で行うように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390298638",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.34",
+    "publishedAt": "2026-09-16T21:53:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.34",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cecae54`](https://github.com/TanStack/router/commit/cecae5440b8edaea77c5448fe3d74bbd20fe10a4), [`0103578`](https://github.com/TanStack/router/commit/01035782e53af9b929c784b94ddd64b95efb89c7), [`ce10dcd`](https://github.com/TanStack/router/commit/ce10dcd4d9d3d23738744e453205aad5c6dbd716), [`84936cc`](https://github.com/TanStack/router/commit/84936cc04530bba11059c57b293a794922bbc5aa), [`bbd2336`](https://github.com/TanStack/router/commit/bbd2336b8446de3f7dd85070895e7cf43980183e)]:\n    -   @tanstack/router-core@1.171.32\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-deps-router-core",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.32に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390298580",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.46",
+    "publishedAt": "2026-09-16T21:53:46Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.46",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cecae54`](https://github.com/TanStack/router/commit/cecae5440b8edaea77c5448fe3d74bbd20fe10a4), [`0103578`](https://github.com/TanStack/router/commit/01035782e53af9b929c784b94ddd64b95efb89c7), [`ce10dcd`](https://github.com/TanStack/router/commit/ce10dcd4d9d3d23738744e453205aad5c6dbd716), [`84936cc`](https://github.com/TanStack/router/commit/84936cc04530bba11059c57b293a794922bbc5aa), [`bbd2336`](https://github.com/TanStack/router/commit/bbd2336b8446de3f7dd85070895e7cf43980183e)]:\n    -   @tanstack/router-core@1.171.32\n    -   @tanstack/router-generator@1.167.38\n    -   @tanstack/router-plugin@1.168.40\n    -   @tanstack/start-server-core@1.169.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-171-46",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ（@tanstack/router-core、@tanstack/router-generator、@tanstack/router-plugin、@tanstack/start-server-core）を最新のパッチバージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390298461",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.37",
+    "publishedAt": "2026-09-16T21:53:31Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cecae54`](https://github.com/TanStack/router/commit/cecae5440b8edaea77c5448fe3d74bbd20fe10a4), [`0103578`](https://github.com/TanStack/router/commit/01035782e53af9b929c784b94ddd64b95efb89c7), [`ce10dcd`](https://github.com/TanStack/router/commit/ce10dcd4d9d3d23738744e453205aad5c6dbd716), [`84936cc`](https://github.com/TanStack/router/commit/84936cc04530bba11059c57b293a794922bbc5aa), [`bbd2336`](https://github.com/TanStack/router/commit/bbd2336b8446de3f7dd85070895e7cf43980183e)]:\n    -   @tanstack/router-core@1.171.32\n    -   @tanstack/start-client-core@1.170.32\n    -   @tanstack/start-storage-context@1.167.34\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "マイグレーション手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-116937-dep-update",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-core、@tanstack/start-client-core、@tanstack/start-storage-context などの内部依存パッケージが最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390298429",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.32",
+    "publishedAt": "2026-09-16T21:53:28Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.32",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`cecae54`](https://github.com/TanStack/router/commit/cecae5440b8edaea77c5448fe3d74bbd20fe10a4), [`0103578`](https://github.com/TanStack/router/commit/01035782e53af9b929c784b94ddd64b95efb89c7), [`ce10dcd`](https://github.com/TanStack/router/commit/ce10dcd4d9d3d23738744e453205aad5c6dbd716), [`84936cc`](https://github.com/TanStack/router/commit/84936cc04530bba11059c57b293a794922bbc5aa), [`bbd2336`](https://github.com/TanStack/router/commit/bbd2336b8446de3f7dd85070895e7cf43980183e)]:\n    -   @tanstack/router-core@1.171.32\n    -   @tanstack/start-storage-context@1.167.34\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.170.32",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core および @tanstack/start-storage-context が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390298329",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.37",
+    "publishedAt": "2026-09-16T21:53:16Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/start-client-core@1.170.32\n    -   @tanstack/react-start@1.168.56\n    -   @tanstack/solid-start@1.168.54\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-1-167-37",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/start-client-core、@tanstack/react-start、@tanstack/solid-startのバージョンが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390278368",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-16-2114",
+    "publishedAt": "2026-09-16T21:14:43Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-16-2114",
+    "releaseNotes": "Release 2026-09-16 21:14\n\n## Changes\n\n### Performance\n\n- router-core: pass resolvePath arguments positionally (#8419) (a1c8d1aa75) by @schiller-manuel\n- router-core: parse the location once in update and build rewrites without arrays (#8422) (a0b2ad99ae) by @schiller-manuel\n- router-core: pass deepEqual flags positionally (#8418) (e561fa1d71) by @schiller-manuel\n- router-core: skip recursion for identical array elements in deepEqual (#8417) (bc80866f6d) by @schiller-manuel\n\n### Refactor\n\n- router-core: parse masked locations without mutating shared state (#8421) (1ca361ba52) by @schiller-manuel\n- react-router: drop the useLinkProps pass-through wrapper (#8420) (8e164d28f9) by @schiller-manuel\n\n### Chore\n\n- netlify: bump vite plugin and update trust policy (#8414) (34bb302c09) by @harry-whorlow\n\n\n## Packages\n\n- @tanstack/react-router@1.170.37\n- @tanstack/react-router-ssr-query@1.167.3\n- @tanstack/react-start@1.168.55\n- @tanstack/react-start-client@1.168.35\n- @tanstack/react-start-rsc@0.1.54\n- @tanstack/react-start-server@1.167.42\n- @tanstack/router-cli@1.167.37\n- @tanstack/router-core@1.171.31\n- @tanstack/router-generator@1.167.37\n- @tanstack/router-plugin@1.168.39\n- @tanstack/router-ssr-query-core@1.169.3\n- @tanstack/router-vite-plugin@1.167.39\n- @tanstack/solid-router@1.170.35\n- @tanstack/solid-router-ssr-query@1.167.3\n- @tanstack/solid-start@1.168.53\n- @tanstack/solid-start-client@1.168.34\n- @tanstack/solid-start-server@1.167.41\n- @tanstack/start-client-core@1.170.31\n- @tanstack/start-plugin-core@1.171.45\n- @tanstack/start-server-core@1.169.36\n- @tanstack/start-static-server-functions@1.167.36\n- @tanstack/start-storage-context@1.167.33\n- @tanstack/vue-router@1.170.34\n- @tanstack/vue-router-ssr-query@1.167.3\n- @tanstack/vue-start@1.168.52\n- @tanstack/vue-start-client@1.167.37\n- @tanstack/vue-start-server@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8419",
+        "category": "performance",
+        "title": "resolvePathの引数を位置指定渡しに変更",
+        "summary": "router-coreにて、resolvePathの引数を位置指定（positionally）で渡すように変更し、処理パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8422",
+        "category": "performance",
+        "title": "ロケーション解析の一回化とリライト構築の最適化",
+        "summary": "更新処理時のロケーション解析を1回のみに抑え、配列を作成せずにリライトを構築することでパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8418",
+        "category": "performance",
+        "title": "deepEqualのフラグを位置指定渡しに変更",
+        "summary": "router-coreにおけるdeepEqual処理で、フラグを位置指定で渡すように変更し最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8417",
+        "category": "performance",
+        "title": "deepEqualでの同一配列要素の再帰処理スキップ",
+        "summary": "deepEqual処理において、同一の配列要素に対する不必要な再帰比較をスキップするように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8421",
+        "category": "other",
+        "title": "共有状態を変更しないマスクロケーション解析",
+        "summary": "マスクされたロケーションの解析時に共有状態を破壊的に変更しないようリファクタリングを行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8420",
+        "category": "other",
+        "title": "useLinkPropsのパースルーラッパーの削除",
+        "summary": "react-router内部で使われていたuseLinkPropsのパススルーラッパーを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8414",
+        "category": "other",
+        "title": "Netlify Viteプラグインと信頼ポリシーの更新",
+        "summary": "Netlify用Viteプラグインのバージョン更新と信頼ポリシーの更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390278291",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.33",
+    "publishedAt": "2026-09-16T21:14:35Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.33",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-router-core-1-171-31",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.31に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390278090",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.45",
+    "publishedAt": "2026-09-16T21:14:11Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.45",
+    "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Reduce per-request SSR overhead: abort settled route matches with one shared `AbortError`-shaped reason instead of building a stack-capturing `DOMException` per match, skip `JSON.parse` for search values that cannot start JSON, wait on request signals with one listener per wait, and keep resolved server-function modules in production builds instead of re-importing them on every call.\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n    -   @tanstack/start-server-core@1.169.36\n    -   @tanstack/router-generator@1.167.37\n    -   @tanstack/router-plugin@1.168.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8204",
+        "category": "performance",
+        "title": "リクエストごとのSSRオーバーヘッドの削減",
+        "summary": "SSRにおけるパフォーマンス最適化が行われました。ルートマッチAbort処理の軽量化、JSONパースの省略、リクエストシグナルリスナーの最適化、本番環境におけるサーバー関数モジュールの再インポート防止などが含まれます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-deps",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-core、@tanstack/start-server-core、@tanstack/router-generator、@tanstack/router-plugin などの依存パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390277932",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.36",
+    "publishedAt": "2026-09-16T21:13:56Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.36",
+    "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Stream large deferred SSR hydration payloads through a backpressure-aware router transport, fail known setup errors before response creation, and close cancelled or expired transforms safely.\n\n    Start now cancels discarded middleware and HEAD response bodies, including plain streams and derived branches.\n\n    Server-function raw streams share one ordered response. Arbitrary or sequential consumption can require potentially unbounded buffering of unread data on the client. Cancelling one raw stream discards it locally, while aborting the whole call cancels the response and server work. Consume streams concurrently, cancel unused streams promptly, or use separate calls when independent backpressure is required. A raw stream that exceeds its unread-byte limit now fails alone; sibling streams and the JSON result keep flowing.\n\n    The JSON wire shape of a `RawStream` server-function argument changed. Clients and servers must run matching versions for requests that pass a `RawStream`.\n\n    The frame-protocol constants (`FRAME_TYPE_*`, `MAX_FRAME_PAYLOAD_SIZE`, `MAX_FRAMED_STREAMS`) moved from the `@tanstack/start-client-core` root to the `@tanstack/start-client-core/client-rpc` subpath.\n\n    Router requests whose `Accept` header allows neither `text/html` nor `*/*` now receive `406 Not Acceptable` instead of `500`.\n\n    Framework adapters share the body `<Scripts>` composition (`getSsrBodyScriptParts`, `composeSsrBodyScripts`) and the eager HTML response wrapper (`renderSsrHtmlResponse`) from `@tanstack/router-core`.\n\n    Solid SSR now emits one document type and renders late lazy errors through route boundaries. A Solid `<Await>` without a `fallback` no longer holds the streamed shell; it renders inside the nearest `<Suspense>` boundary like React and Vue, and now renders falsy resolved values.\n\n    Static server functions decode cached `RawStream` values with the client deserializer plugins.\n\n    SSR Query integrations now keep request cleanup and stream ownership aligned with the router lifecycle.\n\n-   Updated dependencies \\[[`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26)]:\n    -   @tanstack/start-client-core@1.170.31\n    -   @tanstack/react-start@1.168.55\n    -   @tanstack/solid-start@1.168.53\n",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "RawStreamを利用している場合はクライアントとサーバーのバージョンを合わせる必要があり、フレームプロトコル定数のインポートパスを変更する必要があります。",
+      "steps": [
+        "RawStreamを渡すサーバー関数を利用している場合、クライアントとサーバーで同一のパッケージバージョンを使用するように揃えて更新してください。",
+        "@tanstack/start-client-coreからフレームプロトコル定数(FRAME_TYPE_*、MAX_FRAME_PAYLOAD_SIZE、MAX_FRAMED_STREAMS)をインポートしている場合は、@tanstack/start-client-core/client-rpcからインポートするように更新してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "8204-rawstream-wire-format",
+        "category": "breaking",
+        "title": "RawStreamの通信フォーマット変更",
+        "summary": "サーバー関数のRawStream引数のJSON通信フォーマットが変更されました。RawStreamを使用するリクエストではクライアントとサーバーのバージョンを揃える必要があります。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "8204-frame-protocol-constants",
+        "category": "breaking",
+        "title": "フレームプロトコル定数の移動",
+        "summary": "FRAME_TYPE_*、MAX_FRAME_PAYLOAD_SIZE、MAX_FRAMED_STREAMS定数が@tanstack/start-client-coreルートから@tanstack/start-client-core/client-rpcサブパスへ移動しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8204-ssr-hydration-backpressure",
+        "category": "performance",
+        "title": "SSRハイドレーションペイロードのストリーミング最適化",
+        "summary": "遅延SSRハイドレーションペイロードをバックプレッシャー対応トランスポート経由でストリーミングし、不要になった変換の終了処理を安全に行うように改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8204-accept-header-handling",
+        "category": "bugfix",
+        "title": "不適切なAcceptヘッダーに対する406応答",
+        "summary": "text/htmlおよび*/*のいずれも許可しないAcceptヘッダーのリクエストに対し、500エラーではなく406 Not Acceptableを返すように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8204-static-server-functions-rawstream",
+        "category": "bugfix",
+        "title": "静的サーバー関数におけるRawStreamデコード修正",
+        "summary": "静的サーバー関数がキャッシュされたRawStream値をクライアントデシリアライザープラグインで正しくデコードするようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#390277883",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.31",
+    "publishedAt": "2026-09-16T21:13:50Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.31",
+    "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Stream large deferred SSR hydration payloads through a backpressure-aware router transport, fail known setup errors before response creation, and close cancelled or expired transforms safely.\n\n    Start now cancels discarded middleware and HEAD response bodies, including plain streams and derived branches.\n\n    Server-function raw streams share one ordered response. Arbitrary or sequential consumption can require potentially unbounded buffering of unread data on the client. Cancelling one raw stream discards it locally, while aborting the whole call cancels the response and server work. Consume streams concurrently, cancel unused streams promptly, or use separate calls when independent backpressure is required. A raw stream that exceeds its unread-byte limit now fails alone; sibling streams and the JSON result keep flowing.\n\n    The JSON wire shape of a `RawStream` server-function argument changed. Clients and servers must run matching versions for requests that pass a `RawStream`.\n\n    The frame-protocol constants (`FRAME_TYPE_*`, `MAX_FRAME_PAYLOAD_SIZE`, `MAX_FRAMED_STREAMS`) moved from the `@tanstack/start-client-core` root to the `@tanstack/start-client-core/client-rpc` subpath.\n\n    Router requests whose `Accept` header allows neither `text/html` nor `*/*` now receive `406 Not Acceptable` instead of `500`.\n\n    Framework adapters share the body `<Scripts>` composition (`getSsrBodyScriptParts`, `composeSsrBodyScripts`) and the eager HTML response wrapper (`renderSsrHtmlResponse`) from `@tanstack/router-core`.\n\n    Solid SSR now emits one document type and renders late lazy errors through route boundaries. A Solid `<Await>` without a `fallback` no longer holds the streamed shell; it renders inside the nearest `<Suspense>` boundary like React and Vue, and now renders falsy resolved values.\n\n    Static server functions decode cached `RawStream` values with the client deserializer plugins.\n\n    SSR Query integrations now keep request cleanup and stream ownership aligned with the router lifecycle.\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n    -   @tanstack/start-storage-context@1.167.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#390277863",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.36",
+    "publishedAt": "2026-09-16T21:13:47Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.36",
+    "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Stream large deferred SSR hydration payloads through a backpressure-aware router transport, fail known setup errors before response creation, and close cancelled or expired transforms safely.\n\n    Start now cancels discarded middleware and HEAD response bodies, including plain streams and derived branches.\n\n    Server-function raw streams share one ordered response. Arbitrary or sequential consumption can require potentially unbounded buffering of unread data on the client. Cancelling one raw stream discards it locally, while aborting the whole call cancels the response and server work. Consume streams concurrently, cancel unused streams promptly, or use separate calls when independent backpressure is required. A raw stream that exceeds its unread-byte limit now fails alone; sibling streams and the JSON result keep flowing.\n\n    The JSON wire shape of a `RawStream` server-function argument changed. Clients and servers must run matching versions for requests that pass a `RawStream`.\n\n    The frame-protocol constants (`FRAME_TYPE_*`, `MAX_FRAME_PAYLOAD_SIZE`, `MAX_FRAMED_STREAMS`) moved from the `@tanstack/start-client-core` root to the `@tanstack/start-client-core/client-rpc` subpath.\n\n    Router requests whose `Accept` header allows neither `text/html` nor `*/*` now receive `406 Not Acceptable` instead of `500`.\n\n    Framework adapters share the body `<Scripts>` composition (`getSsrBodyScriptParts`, `composeSsrBodyScripts`) and the eager HTML response wrapper (`renderSsrHtmlResponse`) from `@tanstack/router-core`.\n\n    Solid SSR now emits one document type and renders late lazy errors through route boundaries. A Solid `<Await>` without a `fallback` no longer holds the streamed shell; it renders inside the nearest `<Suspense>` boundary like React and Vue, and now renders falsy resolved values.\n\n    Static server functions decode cached `RawStream` values with the client deserializer plugins.\n\n    SSR Query integrations now keep request cleanup and stream ownership aligned with the router lifecycle.\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n    -   @tanstack/start-client-core@1.170.31\n    -   @tanstack/start-storage-context@1.167.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027802",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-16-1501",
+    "publishedAt": "2026-09-16T15:01:23Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-16-1501",
+    "releaseNotes": "Release 2026-09-16 15:01\n\n## Changes\n\n### Fix\n\n- query-core: handle plain objects with constructor fields (#11512) (8330b2f2d) by @gwagjiug\n- query-core: preserve null streamed query results (#11510) (3212966a3) by @gwagjiug\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.103.1\n- @tanstack/eslint-plugin-query@5.103.1\n- @tanstack/lit-query@0.2.22\n- @tanstack/preact-query@5.103.1\n- @tanstack/preact-query-devtools@5.103.1\n- @tanstack/preact-query-persist-client@5.103.1\n- @tanstack/query-async-storage-persister@5.103.1\n- @tanstack/query-broadcast-client-experimental@5.103.1\n- @tanstack/query-core@5.103.1\n- @tanstack/query-devtools@5.103.1\n- @tanstack/query-persist-client-core@5.103.1\n- @tanstack/query-sync-storage-persister@5.103.1\n- @tanstack/react-query@5.103.1\n- @tanstack/react-query-devtools@5.103.1\n- @tanstack/react-query-next-experimental@5.103.1\n- @tanstack/react-query-persist-client@5.103.1\n- @tanstack/solid-query@5.103.1\n- @tanstack/solid-query-devtools@5.103.1\n- @tanstack/solid-query-persist-client@5.103.1\n- @tanstack/svelte-query@6.2.1\n- @tanstack/svelte-query-devtools@6.2.1\n- @tanstack/svelte-query-persist-client@6.2.1\n- @tanstack/vue-query@5.103.1\n- @tanstack/vue-query-devtools@6.2.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027683",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.103.1",
+    "publishedAt": "2026-09-16T15:01:15Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-devtools@5.103.1\n    -   @tanstack/react-query@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027648",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.103.1",
+    "publishedAt": "2026-09-16T15:01:12Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8330b2f`](https://github.com/TanStack/query/commit/8330b2f2d431f226d7bb95eb727c637be9d4c6d8), [`3212966`](https://github.com/TanStack/query/commit/3212966a3681e02d14eb79e9cce0d3265b046877)]:\n    -   @tanstack/query-core@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027493",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.103.1",
+    "publishedAt": "2026-09-16T15:01:00Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/query-persist-client-core@5.103.1\n    -   @tanstack/react-query@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027453",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.103.1",
+    "publishedAt": "2026-09-16T15:00:57Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8330b2f`](https://github.com/TanStack/query/commit/8330b2f2d431f226d7bb95eb727c637be9d4c6d8), [`3212966`](https://github.com/TanStack/query/commit/3212966a3681e02d14eb79e9cce0d3265b046877)]:\n    -   @tanstack/query-core@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027130",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.103.1",
+    "publishedAt": "2026-09-16T15:00:33Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-query@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#390027044",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.103.1",
+    "publishedAt": "2026-09-16T15:00:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.103.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`8330b2f`](https://github.com/TanStack/query/commit/8330b2f2d431f226d7bb95eb727c637be9d4c6d8), [`3212966`](https://github.com/TanStack/query/commit/3212966a3681e02d14eb79e9cce0d3265b046877)]:\n    -   @tanstack/query-core@5.103.1\n    -   @tanstack/query-persist-client-core@5.103.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#389770746",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.5.0",
+    "publishedAt": "2026-09-16T09:04:42Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.5.0",
+    "releaseNotes": "### Minor Changes\n\n- [#1501](https://github.com/petyosi/react-virtuoso/pull/1501) [`64e187e`](https://github.com/petyosi/react-virtuoso/commit/64e187e3d65b3e8d4a3882832be41cbdd427b189) Thanks [@petyosi](https://github.com/petyosi)! - Add controlled table/card presentation with custom card content and operation headers. Cards use automatically measured uniform CSS layouts, with measurements separate from table rows. Preserve the model and its operations across switches, and support existing scrolling and loading APIs. Grouped data remains table-only.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389701271",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-16-0707",
+    "publishedAt": "2026-09-16T07:07:43Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-16-0707",
+    "releaseNotes": "Release 2026-09-16 07:07\n\n## Changes\n\n### Features\n\n- svelte-query: add 'DefinedInitialDataInfiniteOptions' overload for 'createInfiniteQuery'/'infiniteQueryOptions' (#11356) (f6ae1ccdf) by @sukvvon\n\n### Fix\n\n- query-persist-client-core: restore falsy storage values (#11509) (4c7cdbb86) by @gwagjiug\n- isolate TypeScript test output (#11503) (58ad3e2f0) by @TkDodo\n- query-core: reject longer partial array keys (#11502) (cbf77bf8e) by @gwagjiug\n- declare devtools dependencies and enforce strict workspace checks (#11501) (9567367dd) by @TkDodo\n- vue-query: widen 'queryOptions' input to match 'useQuery' (#11439) (12027efd5) by @tinas\n- vue-query: re-export core filter types (#11287) (2bc8ecf39) by @spaansba\n\n### Chore\n\n- *: use eslint description syntax for grandfathered 'no-restricted-syntax' disables (#11508) (2da46cd13) by @sukvvon\n- scripts/generate-docs: add vue-query entry point (#11374) (a0d8cfb74) by @sukvvon\n- scripts/generate-docs: add solid-query entry point (#11368) (33fe7c476) by @sukvvon\n- scripts/generate-docs: add 'react-query' to TypeDoc generation targets (#11205) (81a51cca5) by @sukvvon\n- use infiniteQuery instead of fetchInfiniteQuery et al (#11344) (1566c16de) by @DogPawHat\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.103.0\n- @tanstack/eslint-plugin-query@5.103.0\n- @tanstack/lit-query@0.2.21\n- @tanstack/preact-query@5.103.0\n- @tanstack/preact-query-devtools@5.103.0\n- @tanstack/preact-query-persist-client@5.103.0\n- @tanstack/query-async-storage-persister@5.103.0\n- @tanstack/query-broadcast-client-experimental@5.103.0\n- @tanstack/query-core@5.103.0\n- @tanstack/query-devtools@5.103.0\n- @tanstack/query-persist-client-core@5.103.0\n- @tanstack/query-sync-storage-persister@5.103.0\n- @tanstack/react-query@5.103.0\n- @tanstack/react-query-devtools@5.103.0\n- @tanstack/react-query-next-experimental@5.103.0\n- @tanstack/react-query-persist-client@5.103.0\n- @tanstack/solid-query@5.103.0\n- @tanstack/solid-query-devtools@5.103.0\n- @tanstack/solid-query-persist-client@5.103.0\n- @tanstack/svelte-query@6.2.0\n- @tanstack/svelte-query-devtools@6.2.0\n- @tanstack/svelte-query-persist-client@6.2.0\n- @tanstack/vue-query@5.103.0\n- @tanstack/vue-query-devtools@6.2.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389701068",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.103.0",
+    "publishedAt": "2026-09-16T07:07:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-query@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389700966",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.103.0",
+    "publishedAt": "2026-09-16T07:07:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   [#11509](https://github.com/TanStack/query/pull/11509) [`4c7cdbb`](https://github.com/TanStack/query/commit/4c7cdbb86d8196e646985cd8a3476d3ac8c12ff5) - Restore non-nullish falsy values from custom query persister storage.\n\n-   Updated dependencies \\[[`e57f816`](https://github.com/TanStack/query/commit/e57f8163b18ab3abfe52ad69cdbdda4d31453393), [`fdae2ce`](https://github.com/TanStack/query/commit/fdae2ce4e5382af7326c7c38ce5d5a12751ada12), [`a1119e5`](https://github.com/TanStack/query/commit/a1119e5a3ffa52534de7390f17c7183d17658051), [`cbf77bf`](https://github.com/TanStack/query/commit/cbf77bf8e1a9ce09caef0cdd9a8ed10fef57edf0)]:\n    -   @tanstack/query-core@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389700942",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.103.0",
+    "publishedAt": "2026-09-16T07:07:05Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`e57f816`](https://github.com/TanStack/query/commit/e57f8163b18ab3abfe52ad69cdbdda4d31453393), [`fdae2ce`](https://github.com/TanStack/query/commit/fdae2ce4e5382af7326c7c38ce5d5a12751ada12), [`a1119e5`](https://github.com/TanStack/query/commit/a1119e5a3ffa52534de7390f17c7183d17658051), [`cbf77bf`](https://github.com/TanStack/query/commit/cbf77bf8e1a9ce09caef0cdd9a8ed10fef57edf0)]:\n    -   @tanstack/query-core@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389700921",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.103.0",
+    "publishedAt": "2026-09-16T07:07:02Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`e57f816`](https://github.com/TanStack/query/commit/e57f8163b18ab3abfe52ad69cdbdda4d31453393), [`4c7cdbb`](https://github.com/TanStack/query/commit/4c7cdbb86d8196e646985cd8a3476d3ac8c12ff5), [`fdae2ce`](https://github.com/TanStack/query/commit/fdae2ce4e5382af7326c7c38ce5d5a12751ada12), [`a1119e5`](https://github.com/TanStack/query/commit/a1119e5a3ffa52534de7390f17c7183d17658051), [`cbf77bf`](https://github.com/TanStack/query/commit/cbf77bf8e1a9ce09caef0cdd9a8ed10fef57edf0)]:\n    -   @tanstack/query-core@5.103.0\n    -   @tanstack/query-persist-client-core@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389700833",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.103.0",
+    "publishedAt": "2026-09-16T07:06:53Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   [#11501](https://github.com/TanStack/query/pull/11501) [`9567367`](https://github.com/TanStack/query/commit/9567367dd916fda01fc0d491348827225a011c49) - Declare dependencies used by the published devtools source and type declarations so they resolve with strict package managers. Keep runtime dependencies bundled in the compiled devtools.\n\n    Declare the React types used by React Query Devtools as a peer dependency, compatible with React 18 and 19.\n\n-   Updated dependencies \\[[`9567367`](https://github.com/TanStack/query/commit/9567367dd916fda01fc0d491348827225a011c49)]:\n    -   @tanstack/query-devtools@5.103.0\n    -   @tanstack/react-query@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#389700661",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.103.0",
+    "publishedAt": "2026-09-16T07:06:29Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.103.0",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`4c7cdbb`](https://github.com/TanStack/query/commit/4c7cdbb86d8196e646985cd8a3476d3ac8c12ff5)]:\n    -   @tanstack/query-persist-client-core@5.103.0\n    -   @tanstack/react-query@5.103.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "remix-run/react-router#389257669",
     "library": "React Router",
     "repository": "remix-run/react-router",
