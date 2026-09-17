@@ -1,5 +1,115 @@
 [
   {
+    "id": "TanStack/router#390960282",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-17-1834",
+    "publishedAt": "2026-09-17T18:34:09Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-17-1834",
+    "releaseNotes": "Release 2026-09-17 18:34\n\n## Changes\n\n### Features\n\n- solid-router: consume server-function response metadata (#8461) (bf7f924b60) by @ryansolid\n- solid-router: declare navigations to Solid's observe tier (#8399) (9de3573f7f) by @ryansolid\n\n### Fix\n\n- solid-router: preserve caller roles on enabled links (#8109) (d46b8ee00b) by @Fnine59\n- solid-router: don't install intent-preload listeners when preloading is off (#8179) (465d15a15d) by @russelgal\n\n### Chore\n\n- solid: bump @tanstack/solid-query to 6.0.0-rc.4 (#8465) (2946ffff52) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.8 and @solidjs/vite-plugin 3.0.0-next.43 (#8348) (8981eb7877) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.8\n- @tanstack/solid-router-devtools@2.0.0-rc.6\n- @tanstack/solid-router-ssr-query@2.0.0-rc.6\n- @tanstack/solid-start@2.0.0-rc.8\n- @tanstack/solid-start-client@2.0.0-rc.8\n- @tanstack/solid-start-server@2.0.0-rc.8\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースによる手動の移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8461",
+        "category": "feature",
+        "title": "サーバー関数のレスポンスメタデータの消費対応",
+        "summary": "solid-routerにおいてサーバー関数からのレスポンスメタデータを消費できるように実装しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8399",
+        "category": "feature",
+        "title": "Solidのobserve層へのナビゲーション宣言",
+        "summary": "solid-routerでのナビゲーションをSolidのobserve tierに宣言するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8109",
+        "category": "bugfix",
+        "title": "有効なリンクにおける呼び出し元roleの保持",
+        "summary": "有効化されたリンクにおいて呼び出し元のrole属性がそのまま保持されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8179",
+        "category": "bugfix",
+        "title": "プリロード無効時のリスナー登録の抑制",
+        "summary": "プリロード機能がオフになっている場合はintent-preloadリスナーを登録しないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8465",
+        "category": "other",
+        "title": "@tanstack/solid-queryのバージョン更新",
+        "summary": "@tanstack/solid-queryを6.0.0-rc.4へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8348",
+        "category": "other",
+        "title": "solid-jsおよび@solidjs/vite-pluginのバージョン更新",
+        "summary": "solid-jsを2.0.0-rc.8、@solidjs/vite-pluginを3.0.0-next.43へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#390541739",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-17-0824",
+    "publishedAt": "2026-09-17T08:24:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-17-0824",
+    "releaseNotes": "Release 2026-09-17 08:24\n\n## Changes\n\n### Fix\n\n- solid-query: don't re-create and refetch a removed query (#11360) (0e6ff548b) by @theRizwan\n- solid-query: sweep X-Revalidate without a slice; reserve '*' for all (#11517) (09f266618) by @ryansolid\n- solid-query: finish SSR when reading a disabled query (#11449) (fd3f1c946) by @mgarcialeniolabs\n\n\n## Packages\n\n- @tanstack/solid-query@6.0.0-rc.4\n- @tanstack/solid-query-devtools@6.0.0-rc.4\n- @tanstack/solid-query-persist-client@6.0.0-rc.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "solid-query-11360",
+        "category": "bugfix",
+        "title": "削除されたクエリの再作成・再取得を防止",
+        "summary": "solid-queryにおいて、削除されたクエリが誤って再作成および再取得されないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "solid-query-11517",
+        "category": "bugfix",
+        "title": "スライスなしのX-Revalidate処理と'*'の予約",
+        "summary": "スライスがない場合にX-Revalidateをスイープ処理するよう変更し、'*'を全体用として予約するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "solid-query-11449",
+        "category": "bugfix",
+        "title": "無効化されたクエリ読み込み時のSSR終了処理を修正",
+        "summary": "disabled状態のクエリを読み込んだ際にSSR（サーバーサイドレンダリング）が正常に完了しない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#390298679",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -400,14 +510,51 @@
     "publishedAt": "2026-09-16T21:13:50Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.31",
     "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Stream large deferred SSR hydration payloads through a backpressure-aware router transport, fail known setup errors before response creation, and close cancelled or expired transforms safely.\n\n    Start now cancels discarded middleware and HEAD response bodies, including plain streams and derived branches.\n\n    Server-function raw streams share one ordered response. Arbitrary or sequential consumption can require potentially unbounded buffering of unread data on the client. Cancelling one raw stream discards it locally, while aborting the whole call cancels the response and server work. Consume streams concurrently, cancel unused streams promptly, or use separate calls when independent backpressure is required. A raw stream that exceeds its unread-byte limit now fails alone; sibling streams and the JSON result keep flowing.\n\n    The JSON wire shape of a `RawStream` server-function argument changed. Clients and servers must run matching versions for requests that pass a `RawStream`.\n\n    The frame-protocol constants (`FRAME_TYPE_*`, `MAX_FRAME_PAYLOAD_SIZE`, `MAX_FRAMED_STREAMS`) moved from the `@tanstack/start-client-core` root to the `@tanstack/start-client-core/client-rpc` subpath.\n\n    Router requests whose `Accept` header allows neither `text/html` nor `*/*` now receive `406 Not Acceptable` instead of `500`.\n\n    Framework adapters share the body `<Scripts>` composition (`getSsrBodyScriptParts`, `composeSsrBodyScripts`) and the eager HTML response wrapper (`renderSsrHtmlResponse`) from `@tanstack/router-core`.\n\n    Solid SSR now emits one document type and renders late lazy errors through route boundaries. A Solid `<Await>` without a `fallback` no longer holds the streamed shell; it renders inside the nearest `<Suspense>` boundary like React and Vue, and now renders falsy resolved values.\n\n    Static server functions decode cached `RawStream` values with the client deserializer plugins.\n\n    SSR Query integrations now keep request cleanup and stream ownership aligned with the router lifecycle.\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n    -   @tanstack/start-storage-context@1.167.33\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "RawStream を使用しているサーバー・クライアント間のバージョン同期と、定数のインポートパス更新が必要です。",
+      "steps": [
+        "クライアントとサーバー双方のパッケージを同じバージョンに更新してください。",
+        "`FRAME_TYPE_*` や `MAX_FRAME_PAYLOAD_SIZE` などの定数をインポートしている場合は、インポート元を `@tanstack/start-client-core` から `@tanstack/start-client-core/client-rpc` へ変更してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "cbbfbe3-rawstream-wire-shape",
+        "category": "breaking",
+        "title": "RawStream のワイヤフォーマット変更および定数のサブパス移動",
+        "summary": "RawStream サーバー関数引数の JSON ワイヤフォーマットが変更されました。また、フレームプロトコル定数が @tanstack/start-client-core/client-rpc サブパスに移動しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "cbbfbe3-backpressure-ssr-transport",
+        "category": "performance",
+        "title": "バックプレッシャー対応トランスポートによる SSR ストリーミングとキャンセル処理",
+        "summary": "遅延 SSR ハイドレーションペイロードのストリーミング配信が改善され、キャンセルされた変換や未使用ストリームが安全に終了処理されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "cbbfbe3-accept-header-handling",
+        "category": "bugfix",
+        "title": "Accept ヘッダー不適合時の 406 エラー応答",
+        "summary": "text/html も */* も受け入れない Accept ヘッダーのリクエストに対し、500 ではなく 406 Not Acceptable を返すように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "cbbfbe3-solid-ssr-improvements",
+        "category": "bugfix",
+        "title": "Solid SSR における Await 挙動およびエラーハンドリングの修正",
+        "summary": "Solid SSR で fallback なしの Await コンポーネントがストリームシェルを保留しなくなり、React や Vue と同様に最寄りの Suspense 内で描画されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#390277863",
@@ -417,14 +564,51 @@
     "publishedAt": "2026-09-16T21:13:47Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.36",
     "releaseNotes": "### Patch Changes\n\n-   [#8204](https://github.com/TanStack/router/pull/8204) [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26) - Stream large deferred SSR hydration payloads through a backpressure-aware router transport, fail known setup errors before response creation, and close cancelled or expired transforms safely.\n\n    Start now cancels discarded middleware and HEAD response bodies, including plain streams and derived branches.\n\n    Server-function raw streams share one ordered response. Arbitrary or sequential consumption can require potentially unbounded buffering of unread data on the client. Cancelling one raw stream discards it locally, while aborting the whole call cancels the response and server work. Consume streams concurrently, cancel unused streams promptly, or use separate calls when independent backpressure is required. A raw stream that exceeds its unread-byte limit now fails alone; sibling streams and the JSON result keep flowing.\n\n    The JSON wire shape of a `RawStream` server-function argument changed. Clients and servers must run matching versions for requests that pass a `RawStream`.\n\n    The frame-protocol constants (`FRAME_TYPE_*`, `MAX_FRAME_PAYLOAD_SIZE`, `MAX_FRAMED_STREAMS`) moved from the `@tanstack/start-client-core` root to the `@tanstack/start-client-core/client-rpc` subpath.\n\n    Router requests whose `Accept` header allows neither `text/html` nor `*/*` now receive `406 Not Acceptable` instead of `500`.\n\n    Framework adapters share the body `<Scripts>` composition (`getSsrBodyScriptParts`, `composeSsrBodyScripts`) and the eager HTML response wrapper (`renderSsrHtmlResponse`) from `@tanstack/router-core`.\n\n    Solid SSR now emits one document type and renders late lazy errors through route boundaries. A Solid `<Await>` without a `fallback` no longer holds the streamed shell; it renders inside the nearest `<Suspense>` boundary like React and Vue, and now renders falsy resolved values.\n\n    Static server functions decode cached `RawStream` values with the client deserializer plugins.\n\n    SSR Query integrations now keep request cleanup and stream ownership aligned with the router lifecycle.\n\n-   Updated dependencies \\[[`bc80866`](https://github.com/TanStack/router/commit/bc80866f6d6eb3e6f152ee3682eb783c96403e83), [`e561fa1`](https://github.com/TanStack/router/commit/e561fa1d7118e3d29267cc3b6ce1130d6581f387), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a1c8d1a`](https://github.com/TanStack/router/commit/a1c8d1aa759c227eae9601a030321ac4c53c24bd), [`cbbfbe3`](https://github.com/TanStack/router/commit/cbbfbe37ab1dbe328c343cb437c5660769cc9f26), [`a0b2ad9`](https://github.com/TanStack/router/commit/a0b2ad99aee64af08d16b0e4ff26b3ba42a99f0a), [`1ca361b`](https://github.com/TanStack/router/commit/1ca361ba52a627d2f76ab33323bd83d1d0aa65a3)]:\n    -   @tanstack/router-core@1.171.31\n    -   @tanstack/start-client-core@1.170.31\n    -   @tanstack/start-storage-context@1.167.33\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "RawStreamを利用する環境でのバージョン整合性の確保と、フレームプロトコル定数のインポートパスの変更が必要です。",
+      "steps": [
+        "クライアントとサーバーで@tanstack/start関連パッケージのバージョンを同一に更新してください。",
+        "@tanstack/start-client-coreからFRAME_TYPE_*などの定数をインポートしている場合は、@tanstack/start-client-core/client-rpcに更新してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8204-ssr-streaming",
+        "category": "feature",
+        "title": "SSRストリーミングとトランスポート処理の改善",
+        "summary": "遅延SSRハイドレーションペイロードのストリーミングおよびキャンセルの安全性を向上させ、破棄されたミドルウェアやHEADレスポンスのキャンセル処理を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8204-rawstream-and-paths",
+        "category": "breaking",
+        "title": "RawStreamの通信フォーマット変更および定数のインポートパス変更",
+        "summary": "RawStream引数のJSON通信形式が変更されたためクライアントとサーバーのバージョン一致が必須となりました。また、フレームプロトコル定数の移動が行われました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8204-accept-header-406",
+        "category": "bugfix",
+        "title": "未対応のAcceptヘッダーに対するステータスコードの修正",
+        "summary": "text/htmlも*/*も許可しないAcceptヘッダーを含むルーターリクエストに対して、500エラーではなく406 Not Acceptableを返すように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8204-framework-solid-updates",
+        "category": "other",
+        "title": "Solid SSRおよびフレームワークアダプターの共通化と改善",
+        "summary": "Solid SSRにおけるAwaitコンポーネントの動作をReact/Vueと統一し、スクリプト構成などの内部処理を共通化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027802",
@@ -441,7 +625,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11512",
+        "category": "bugfix",
+        "title": "query-core: constructorフィールドを持つプレーンオブジェクトの取り扱いを修正",
+        "summary": "constructorフィールドを含むプレーンオブジェクトが正しく処理されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11510",
+        "category": "bugfix",
+        "title": "query-core: ストリーミングされたクエリ結果のnull値を保持",
+        "summary": "ストリーミング配信されるクエリ結果において、null値が破棄されず正しく保持されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027683",
@@ -455,10 +657,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-103-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.103.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027648",
@@ -475,7 +687,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8330b2f-3212966-dep-update",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core が 5.103.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027493",
@@ -492,7 +714,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.103.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027453",
@@ -506,10 +738,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.103.1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.103.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027130",
@@ -526,7 +768,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-103-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query への依存関係を 5.103.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#390027044",
