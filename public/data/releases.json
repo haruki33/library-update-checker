@@ -1,5 +1,22 @@
 [
   {
+    "id": "eslint/eslint#391758580",
+    "library": "ESLint",
+    "repository": "eslint/eslint",
+    "version": "v10.11.0",
+    "publishedAt": "2026-09-18T20:13:06Z",
+    "url": "https://github.com/eslint/eslint/releases/tag/v10.11.0",
+    "releaseNotes": "## Features\n* [`d136fa4`](https://github.com/eslint/eslint/commit/d136fa4b0d2dd4a9e738ca1c012cc674d1441127) feat: object-shorthand handle quoted properties for `ignoreConstructors` (#21271) (Pavel)\n* [`397b3b8`](https://github.com/eslint/eslint/commit/397b3b8134b8ce1a61cbf414d4c29c945ba25690) feat: report unsafe labeled `continue` in `no-unsafe-finally` rule (#21316) (electrohyun)\n* [`d3dd47f`](https://github.com/eslint/eslint/commit/d3dd47f42e4cb5f9da27e3a2e741aa21e02ea1a4) feat: only exempt `new-cap` built-ins that reference the global (#21290) (sethamus)\n\n## Bug Fixes\n* [`22b09f5`](https://github.com/eslint/eslint/commit/22b09f54f67a9512d4cea39ddbab9b6973d5c476) fix: ignore `__proto__` properties in `prefer-object-spread` (#21311) (xbinaryx)\n* [`b684bb1`](https://github.com/eslint/eslint/commit/b684bb1cd7e6be03ad1b7a951baead936d9c2166) fix: make TimePass.parse optional in types and docs (#21313) (ntnyq)\n* [`26d11bc`](https://github.com/eslint/eslint/commit/26d11bce3e0e21f223613d4bb4be3423839b229e) fix: don't report `__proto__` properties in `object-shorthand` (#21310) (xbinaryx)\n\n## Documentation\n* [`9ecfdc5`](https://github.com/eslint/eslint/commit/9ecfdc5319f83580cf3b81beab7e936015fef2fa) docs: note that --cache can serve stale results for cross-file rules (#21312) (bytedoe)\n* [`6c789ff`](https://github.com/eslint/eslint/commit/6c789ff39bc5420e94e8dafeb328bf2b7e3d35ab) docs: Update README (GitHub Actions Bot)\n* [`5997825`](https://github.com/eslint/eslint/commit/5997825635dc9c4e81434894607ef2e3887e0ea3) docs: clarify preserve-caught-error known limitation (#21294) (Akinyemi Toluwalase)\n\n## Chores\n* [`520dd77`](https://github.com/eslint/eslint/commit/520dd77a35922fb537e2dbfb3c839d047acbdd68) perf: Implement fast paths in critical areas (#21210) (Nicholas C. Zakas)\n* [`92086c8`](https://github.com/eslint/eslint/commit/92086c87e042413a3d0363d8fc3fbb11db98d06a) test: update `EMFILE` error generation for Node.js 26.9.0 compatibility (#21330) (Francesco Trotta)\n* [`9ac7eb6`](https://github.com/eslint/eslint/commit/9ac7eb60525ec768c2fdc6699e5a292aa913ce9e) chore: update github/codeql-action action to v4.38.0 (#21331) (renovate[bot])\n* [`24310e3`](https://github.com/eslint/eslint/commit/24310e3a0e22b3c086ca402f88448676f2e1cfcd) chore: update ecosystem plugins (#21324) (ESLint Bot)\n* [`45ad79e`](https://github.com/eslint/eslint/commit/45ad79e54a39b54b4ce8eb47e612bd2f72a7a651) ci: bump pnpm/action-setup from 6.0.10 to 6.1.0 (#21318) (dependabot[bot])\n* [`ac74e37`](https://github.com/eslint/eslint/commit/ac74e37322ebf122ada676f153dc55c81f3caab0) chore: Add AGENTS.md with AI disclosure requirements (#21221) (Nicholas C. Zakas)\n* [`c832660`](https://github.com/eslint/eslint/commit/c8326608e710e670beaf982501aed80ea104919a) chore: Upgrade Stylelint to the latest version in docs (#21245) (Jung Hyeon Jun)\n* [`f9f88fc`](https://github.com/eslint/eslint/commit/f9f88fcccd965fdc162b89c4615dd4018e3cabdf) chore: update ecosystem plugins (#21308) (ESLint Bot)\n* [`fc81076`](https://github.com/eslint/eslint/commit/fc81076a5b8145360654d81cbc130cf7d25dca77) ci: add more types integration tests (#20395) (Nitin Kumar)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#390960282",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -792,10 +809,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreおよび@tanstack/query-persist-client-coreをバージョン5.103.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "petyosi/react-virtuoso#389770746",
@@ -812,7 +839,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1501",
+        "category": "feature",
+        "title": "テーブルおよびカード表示の切り替え機能を追加",
+        "summary": "カスタムカードコンテンツや操作ヘッダーを備えた制御可能なテーブル/カード表示機能が追加されました。カードは自動計測された均一なCSSレイアウトを使用し、表示切り替え時もモデルや既存のスクロール・ローディングAPIが保持されます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389701271",
@@ -826,10 +863,108 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11356",
+        "category": "feature",
+        "title": "svelte-query: DefinedInitialDataInfiniteOptionsのオーバーロード追加",
+        "summary": "createInfiniteQueryおよびinfiniteQueryOptionsに対してDefinedInitialDataInfiniteOptionsの型オーバーロードを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11509",
+        "category": "bugfix",
+        "title": "query-persist-client-core: falsyなストレージ値の復元処理を修正",
+        "summary": "falsyなストレージ値が正しく復元されない不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11503",
+        "category": "bugfix",
+        "title": "TypeScriptテスト出力の隔離",
+        "summary": "TypeScriptテストの出力結果を隔離・分離しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11502",
+        "category": "bugfix",
+        "title": "query-core: 長い部分配列キーのマッチング修正",
+        "summary": "query-coreにおいて、長い部分配列キーを適切に拒否するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11501",
+        "category": "bugfix",
+        "title": "devtoolsの依存関係宣言とワークスペースチェックの強化",
+        "summary": "devtoolsパッケージの依存関係を適切に宣言し、ワークスペースの厳格なチェックを適用しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11439",
+        "category": "bugfix",
+        "title": "vue-query: queryOptionsの入力型をuseQueryに合わせて拡張",
+        "summary": "vue-queryのqueryOptionsの入力型をuseQueryと一致するように拡張しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11287",
+        "category": "bugfix",
+        "title": "vue-query: コアフィルター型の再エクスポート",
+        "summary": "vue-queryにおいてコアパッケージのフィルター型を再エクスポートするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11508",
+        "category": "other",
+        "title": "ESLint構文の更新",
+        "summary": "既存のno-restricted-syntax無効化コメントに対して説明文付きの構文を使用するよう更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11374",
+        "category": "other",
+        "title": "ドキュメント生成スクリプトにvue-queryを追加",
+        "summary": "ドキュメント自動生成スクリプトの対象にvue-queryを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11368",
+        "category": "other",
+        "title": "ドキュメント生成スクリプトにsolid-queryを追加",
+        "summary": "ドキュメント自動生成スクリプトの対象にsolid-queryを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11205",
+        "category": "other",
+        "title": "TypeDoc生成ターゲットにreact-queryを追加",
+        "summary": "TypeDoc生成ターゲットにreact-queryを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11344",
+        "category": "other",
+        "title": "fetchInfiniteQuery等の代わりとしてinfiniteQueryを利用",
+        "summary": "コードベース内でfetchInfiniteQuery等の代わりにinfiniteQueryを使用するよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389701068",
@@ -843,10 +978,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "patch-deps-react-query-5-103-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query のバージョンが 5.103.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389700966",
@@ -863,7 +1008,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11509",
+        "category": "bugfix",
+        "title": "カスタムパーシスターストレージからのfalsy値の復元処理を修正",
+        "summary": "カスタムクエリパーシスター利用時に、nullish以外のfalsy値（0やfalseなど）が正しく復元されない不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-query-core-5.103.0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreがバージョン5.103.0に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389700942",
@@ -877,10 +1040,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみのため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-deps-query-core-5-103-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.103.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389700921",
@@ -897,7 +1070,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.103.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389700833",
@@ -911,10 +1094,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11501",
+        "category": "bugfix",
+        "title": "依存関係の明示的宣言とReact型定義のpeerDependency追加",
+        "summary": "厳格なパッケージマネージャーで依存関係が正しく解決されるよう、devtoolsのソースおよび型宣言で使用される依存関係を宣言しました。また、React 18および19と互換性のあるReactの型定義をpeerDependencyとして追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#389700661",
@@ -931,7 +1124,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-103-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query を 5.103.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "remix-run/react-router#389257669",
