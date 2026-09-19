@@ -11,10 +11,84 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "d136fa4",
+        "category": "feature",
+        "title": "object-shorthand ルールで ignoreConstructors の引用符付きプロパティに対応",
+        "summary": "object-shorthand ルールの ignoreConstructors オプションで、引用符で囲まれたプロパティを正常に処理できるように拡張されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "397b3b8",
+        "category": "feature",
+        "title": "no-unsafe-finally ルールで安全でないラベル付き continue を報告",
+        "summary": "no-unsafe-finally ルールが finally ブロック内の不適切なラベル付き continue 文を検出して警告するようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "d3dd47f",
+        "category": "feature",
+        "title": "new-cap ルールでグローバルを参照する組み込みのみを除外",
+        "summary": "new-cap ルールにおいて、グローバルを参照している組み込みオブジェクトのみを例外処理の対象とするように改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "22b09f5",
+        "category": "bugfix",
+        "title": "prefer-object-spread ルールで __proto__ プロパティを無視",
+        "summary": "prefer-object-spread ルールの検証ロジックにおいて __proto__ プロパティが考慮から除外されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b684bb1",
+        "category": "bugfix",
+        "title": "型定義とドキュメントで TimePass.parse をオプショナルに変更",
+        "summary": "TimePass.parse が型定義およびドキュメントにおいてオプショナル項目として修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "26d11bc",
+        "category": "bugfix",
+        "title": "object-shorthand ルールで __proto__ プロパティを誤検出しないよう修正",
+        "summary": "object-shorthand ルールにおいて __proto__ プロパティが誤って警告報告される不具合が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "520dd77",
+        "category": "performance",
+        "title": "クリティカルパスにおけるパフォーマンスの高速化",
+        "summary": "実行パフォーマンス向上のため、処理のクリティカルパスにファストパスが実装されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9ecfdc5",
+        "category": "other",
+        "title": "ドキュメント: --cache と複数ファイル横断ルールの注意事項を追加",
+        "summary": "複数ファイルにまたがるルールにおいて --cache オプションを利用すると古い検証結果が返される可能性がある旨がドキュメントに追記されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "5997825",
+        "category": "other",
+        "title": "ドキュメント: preserve-caught-error の制限事項を明確化",
+        "summary": "preserve-caught-error に関する既知の制限についてのドキュメント説明がわかりやすく明確化されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#390960282",
@@ -2552,10 +2626,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "d6bc1e30",
+        "category": "feature",
+        "title": "z.currencyCode()の追加",
+        "summary": "ISO 4217に基づく通貨コードの検証を行う z.currencyCode() 機能が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ad32d751",
+        "category": "performance",
+        "title": "z.url()の検証パフォーマンスの向上",
+        "summary": "無効なURLの検証処理においてURL.canParse()を使用するように変更され、約50倍の高速化とアロケーションの削減が実現されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2bb08717",
+        "category": "other",
+        "title": "ワークスペースzodへのピア依存の更新",
+        "summary": "バージョン4.6.4への更新に伴い、インテグレーションのピア依存関係が再固定されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f6e1701a",
+        "category": "other",
+        "title": "依存関係の更新（Next.js, Vite）",
+        "summary": "Next.jsを15.5.25へ、Viteを7.3.6へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "colinhacks/zod#387721468",
@@ -4897,14 +5005,74 @@
     "publishedAt": "2026-09-06T21:26:40Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.33",
     "releaseNotes": "### Patch Changes\n\n-   [#8165](https://github.com/TanStack/router/pull/8165) [`2f20c00`](https://github.com/TanStack/router/commit/2f20c00224c5ba63467551914e0c37012588c4c2) - Exclude structural descendants below error and not-found boundaries from route lifecycle callbacks. Preserve lifecycle membership through invalidation, hydration, background reloads, and superseded navigation publication.\n\n-   [#8209](https://github.com/TanStack/router/pull/8209) [`28a5e45`](https://github.com/TanStack/router/commit/28a5e4504e4ea5cb1480667a4bea2588a53e110f) - Preserve falsy thrown values in React and Vue error boundaries. Type React and Vue boundary error components and `onCatch` callbacks as `unknown`. Solid boundary errors remain typed as `Error`; SSR now wraps non-`Error` loader errors to match Solid’s native boundary behavior, preserving the original value in `cause`. Router state and loader `onError` values are unchanged.\n\n    When upgrading React or Vue, narrow boundary errors (for example, with `error instanceof Error`) before reading `message` or `stack`. `ErrorComponentProps<TError>` remains available for values narrowed to a specific error type. Route `onError` types are unchanged.\n\n-   [#8161](https://github.com/TanStack/router/pull/8161) [`f0b5eda`](https://github.com/TanStack/router/commit/f0b5eda544606686a8a8d675a686ca1366428b96) - Retain successful not-found matches as terminal shared boundaries during client navigation, preserving route context while the destination loads.\n\n-   [#8251](https://github.com/TanStack/router/pull/8251) [`0497cae`](https://github.com/TanStack/router/commit/0497caeef3ff7e1c1c6080eca38bca24e7ec320b) - Use URL.canParse for absolute URL checks in links, navigation, redirects, and build configuration. Preserve a URL constructor fallback for older browsers.\n\n-   [#8169](https://github.com/TanStack/router/pull/8169) [`0caf6b9`](https://github.com/TanStack/router/commit/0caf6b9a2b7e14b0b146c74cc27cb05c19d700a5) - Fix route-scoped `useMatch`, `useSearch`, and `useParams` APIs to forward the `shouldThrow` option and preserve optional return types when `shouldThrow: false`.\n\n-   [#8257](https://github.com/TanStack/router/pull/8257) [`cf166d1`](https://github.com/TanStack/router/commit/cf166d160e6397007a979bfc7065b45ff69ea543) - Fix repeated `innerHTML` writes for unchanged styles and data scripts during React re-renders. This prevents unnecessary CSS parsing and Trusted Types errors during client navigation.\n\n-   Updated dependencies \\[[`edf0e16`](https://github.com/TanStack/router/commit/edf0e16ebfe82ec6e8f68f403a1fda8de9e28889), [`2f20c00`](https://github.com/TanStack/router/commit/2f20c00224c5ba63467551914e0c37012588c4c2), [`28a5e45`](https://github.com/TanStack/router/commit/28a5e4504e4ea5cb1480667a4bea2588a53e110f), [`08eff50`](https://github.com/TanStack/router/commit/08eff50c447a154a3373909009e9e4375cea17ce), [`216c0c4`](https://github.com/TanStack/router/commit/216c0c48036fd1a33163b70dcabfed2b893808b0), [`2f91503`](https://github.com/TanStack/router/commit/2f9150309bc472f4a75cbe98adcdb50c76b12c7a), [`f0b5eda`](https://github.com/TanStack/router/commit/f0b5eda544606686a8a8d675a686ca1366428b96), [`50eafca`](https://github.com/TanStack/router/commit/50eafcaebbbedb6fde3b2816de7a0ace8cde4832), [`0497cae`](https://github.com/TanStack/router/commit/0497caeef3ff7e1c1c6080eca38bca24e7ec320b), [`ee28348`](https://github.com/TanStack/router/commit/ee283480dfa51150a2e0b096a6eff94a89ff8b3f), [`9035abc`](https://github.com/TanStack/router/commit/9035abc41163d83409ef582f7743a3c7be57dd93), [`c18e690`](https://github.com/TanStack/router/commit/c18e69081475a7c98f9d40bd0fe6da78ccb84598)]:\n    -   @tanstack/router-core@1.171.28\n    -   @tanstack/history@1.162.2\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "ReactおよびVueのエラー境界においてエラー型がunknownに変更されたため、プロパティ参照前の型絞り込みが必要になります。",
+      "steps": [
+        "ReactおよびVueのエラーコンポーネントやonCatchコールバック内でerror.messageやerror.stackを参照している箇所において、error instanceof Error等を用いて型の絞り込みを行ってください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8165",
+        "category": "bugfix",
+        "title": "エラーおよびnot-found境界下のライフサイクルコールバックの修正",
+        "summary": "エラーおよびnot-found境界配下の構造的子孫をルートライフサイクルコールバックから除外し、ナビゲーションやハイドレーション時にもライフサイクルの所属関係を保持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8209",
+        "category": "breaking",
+        "title": "React/Vueエラー境界におけるエラー型のunknown変更",
+        "summary": "ReactおよびVueのエラー境界コンポーネントおよびonCatchコールバックのエラー型をunknownに変更し、偽値の例外値を保持できるように修正しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8161",
+        "category": "bugfix",
+        "title": "クライアントナビゲーション中のNot Found境界の保持",
+        "summary": "ナビゲーション中に遷移先がロードされている間、成功したNot Foundマッチを共有境界として保持し、ルートコンテキストを維持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8251",
+        "category": "feature",
+        "title": "絶対URL判定におけるURL.canParseの採用",
+        "summary": "リンクやリダイレクト等の絶対URL判定にURL.canParseを使用し、非対応ブラウザ向けのフォールバック処理を維持しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8169",
+        "category": "bugfix",
+        "title": "ルートスコープフックでのshouldThrowオプションの転送修正",
+        "summary": "ルートスコープのuseMatch、useSearch、useParamsにおいてshouldThrowオプションを転送し、shouldThrow: false時の戻り値型を正しく保持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8257",
+        "category": "performance",
+        "title": "React再レンダリング時の不要なinnerHTML書き込み防止",
+        "summary": "変化のないスタイルやデータスクリプトへの重複したinnerHTML書き込みを防止し、不要なCSSパース処理やTrusted Typesエラーを回避しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-core および @tanstack/history を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#383722453",
@@ -4918,10 +5086,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-router-generator",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-generator がバージョン 1.167.34 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "petyosi/react-virtuoso#383270129",
@@ -7185,7 +7363,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "patch-dep-update-table-core-923",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-coreが9.2.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#377372699",
@@ -7264,7 +7452,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core をバージョン 5.102.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340333",
@@ -7281,7 +7479,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-102-6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-devtools をバージョン 5.102.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340170",
@@ -7295,10 +7503,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11305",
+        "category": "bugfix",
+        "title": "useQueriesおよびuseSuspenseQueriesからError Boundaryへのfalsyエラーのスローを修正",
+        "summary": "useQueriesおよびuseSuspenseQueriesにおいて、falsyなエラー（nullやundefined等）が発生した際にも正しくError Boundaryへスローされるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377340127",
@@ -7332,7 +7550,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ac2b612-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query がバージョン 5.102.6 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377339841",
