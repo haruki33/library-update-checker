@@ -1,5 +1,187 @@
 [
   {
+    "id": "petyosi/react-virtuoso#392361434",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-query@2.0.0",
+    "publishedAt": "2026-09-20T08:19:30Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-query%402.0.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#392361420",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-core@0.2.0",
+    "publishedAt": "2026-09-20T08:19:28Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-core%400.2.0",
+    "releaseNotes": "### Minor Changes\n\n- [`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25) Thanks [@petyosi](https://github.com/petyosi)! - Add a `distinct` parameter to `debounceTime` and `throttleTime`, mirroring `map`. Both operators emit through a distinct stream by default, so a valueless `Trigger` piped through them fires once and is then suppressed forever. Pass `false` to re-emit equal values, or a comparator to define equality.",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "`debounceTime`および`throttleTime`で同値や`Trigger`を繰り返し発火させる場合の対応が必要です。",
+      "steps": [
+        "`debounceTime`または`throttleTime`で同一のトリガーや同値を複数回再発行させたい場合は、`distinct`パラメータに`false`を指定してください。",
+        "独自の等価性判定を行いたい場合は、比較関数を渡すように更新してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "22ac6c5",
+        "category": "feature",
+        "title": "`debounceTime`と`throttleTime`への`distinct`パラメータの追加",
+        "summary": "`debounceTime`と`throttleTime`に`distinct`パラメータを追加しました。デフォルトで重複抑制ストリームとなるため、値のない`Trigger`は一度しか発火しなくなります。同値を再発行するには`false`または比較関数を指定します。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#392361404",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.5.1",
+    "publishedAt": "2026-09-20T08:19:25Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.0\n  - @virtuoso.dev/reactive-engine-react@1.0.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "22ac6c5",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@virtuoso.dev/reactive-engine-core (0.2.0) および @virtuoso.dev/reactive-engine-react (1.0.0) に依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#392361393",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-react@1.0.0",
+    "publishedAt": "2026-09-20T08:19:22Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-react%401.0.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-020",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@virtuoso.dev/reactive-engine-core を 0.2.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#392361380",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-storage@4.0.0",
+    "publishedAt": "2026-09-20T08:19:18Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-storage%404.0.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.0\n  - @virtuoso.dev/reactive-engine-react@1.0.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-22ac6c5",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@virtuoso.dev/reactive-engine-core (0.2.0) および @virtuoso.dev/reactive-engine-react (1.0.0) に依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#392361369",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-router@2.0.0",
+    "publishedAt": "2026-09-20T08:19:16Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-router%402.0.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`22ac6c5`](https://github.com/petyosi/react-virtuoso/commit/22ac6c5e69314e4113046a7da4bcadde2a082b25)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.0\n  - @virtuoso.dev/reactive-engine-react@1.0.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-2.0.0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@virtuoso.dev/reactive-engine-core (0.2.0) および @virtuoso.dev/reactive-engine-react (1.0.0) への依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#392342983",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.14",
+    "publishedAt": "2026-09-20T07:03:06Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.14",
+    "releaseNotes": "### Patch Changes\n\n- [#1497](https://github.com/petyosi/react-virtuoso/pull/1497) [`ac8a5f4`](https://github.com/petyosi/react-virtuoso/commit/ac8a5f404bac665d70c07cb8b68566af55efb853) Thanks [@cpruijsen](https://github.com/cpruijsen)! - Allow a custom `List` wrapper to render a `ul` instead of a `div`, keeping its forwarded `ref` typed to the chosen element. `Item` is unchanged.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1497",
+        "category": "feature",
+        "title": "カスタムListラッパーにおけるul要素と型付きrefのサポート",
+        "summary": "カスタムListラッパーでdivの代わりにul要素をレンダリングできるようになり、渡されるrefが選択した要素の型を保持するように改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "eslint/eslint#391758580",
     "library": "ESLint",
     "repository": "eslint/eslint",
@@ -7533,7 +7715,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.102.6",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "@tanstack/query-core依存関係がバージョン5.102.6に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#377339896",
@@ -7577,7 +7769,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-102-6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.102.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#377269336",
@@ -7591,10 +7793,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8170",
+        "category": "bugfix",
+        "title": "solid-startにおけるsingle-flightの修正",
+        "summary": "solid-startパッケージにおけるsingle-flightリクエスト処理の不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376999471",
