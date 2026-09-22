@@ -1,5 +1,66 @@
 [
   {
+    "id": "petyosi/react-virtuoso#394010716",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.15",
+    "publishedAt": "2026-09-22T18:23:58Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.15",
+    "releaseNotes": "### Patch Changes\n\n- [#1461](https://github.com/petyosi/react-virtuoso/pull/1461) [`364c071`](https://github.com/petyosi/react-virtuoso/commit/364c071dc1e044b52d1cfbce65851440d39be77e) Thanks [@aehmt](https://github.com/aehmt)! - Fixed \"Zero-sized element, this should not happen\" error when `initialItemCount` exceeds the available `data`. The initial list state builder now clamps the item count to the data remaining after `initialTopMostItemIndex`, and renders no items when `data` is explicitly empty, preventing phantom items with `undefined` data from being rendered. `initialItemCount` also became a reactive input of the list state computation, so changing it after mount recomputes the list instead of leaving stale state until an unrelated update.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1461",
+        "category": "bugfix",
+        "title": "initialItemCountがデータ数を超える際のエラー修正とリアクティブ化",
+        "summary": "initialItemCountが利用可能なdataの数を超える場合に発生するZero-sized elementエラーや、データが空の際にundefinedの要素が描画される問題を修正しました。また、マウント後にinitialItemCountが変更された場合にもリスト状態が再計算されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#393808870",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-22-1420",
+    "publishedAt": "2026-09-22T14:20:44Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1420",
+    "releaseNotes": "Release 2026-09-22 14:20\n\n## Changes\n\n- No changelog entries\n\n\n## Packages\n\n- @tanstack/angular-query@5.0.0-rc.0\n- @tanstack/angular-query-devtools@5.0.0-rc.0\n- @tanstack/angular-query-persist-client@5.0.0-rc.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#393772336",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-22-1338",
+    "publishedAt": "2026-09-22T13:38:05Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-22-1338",
+    "releaseNotes": "Release 2026-09-22 13:38\n\n## Changes\n\n### Fix\n\n- svelte-query-devtools: update the devtools instance when options change after mount (#11009) (535cd6122) by @sukvvon\n\n\n## Packages\n\n- @tanstack/svelte-query@6.2.4\n- @tanstack/svelte-query-devtools@6.2.4\n- @tanstack/svelte-query-persist-client@6.2.4\n- @tanstack/vue-query-devtools@6.2.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#393274472",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -178,10 +239,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11392",
+        "category": "bugfix",
+        "title": "broadcast-clientで既存クエリデータの上書きを防止",
+        "summary": "broadcast-clientにおいて、受信した'added'メッセージで既存クエリのデータが上書きされないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11524",
+        "category": "bugfix",
+        "title": "query-coreで古いクエリ削除の無視",
+        "summary": "query-coreにおいて、古い（stale）クエリ削除リクエストを無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833933",
@@ -306,7 +385,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools をバージョン 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833586",
@@ -323,7 +412,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8a28904aaccb6bc26398b751400a181c0f6d7f0e",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreがバージョン5.103.2に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833526",
@@ -337,10 +436,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-51032",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833461",
@@ -357,7 +466,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833426",
@@ -371,10 +490,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-103-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core を 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833390",
@@ -391,7 +520,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11392",
+        "category": "bugfix",
+        "title": "他のタブからのaddedイベント受信時に既存クエリデータを上書きしないよう修正",
+        "summary": "別タブからaddedイベントがブロードキャストされた際に、既存のクエリの解決済みデータが上書きされる不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-query-core",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core を 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833358",
