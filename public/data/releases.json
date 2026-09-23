@@ -1,5 +1,157 @@
 [
   {
+    "id": "TanStack/router#394693499",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-23-1332",
+    "publishedAt": "2026-09-23T13:32:27Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-23-1332",
+    "releaseNotes": "Release 2026-09-23 13:32\n\n## Changes\n\n### Performance\n\n- react-router: avoid redundant link hydration updates (#8435) (73bfc153ee) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-router@1.170.39\n- @tanstack/react-start@1.168.58\n- @tanstack/react-start-client@1.168.37\n- @tanstack/react-start-rsc@0.1.57\n- @tanstack/react-start-server@1.167.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8435",
+        "category": "performance",
+        "title": "リンクハイドレーション時の不要な更新を回避",
+        "summary": "react-routerにおいて、リンクハイドレーション時の冗長な更新処理を回避するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#394693447",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.57",
+    "publishedAt": "2026-09-23T13:32:23Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.57",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`73bfc15`](https://github.com/TanStack/router/commit/73bfc153eef460e9b670556215a5adb2b5cbf542)]:\n    -   @tanstack/react-router@1.170.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "73bfc15",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/react-router)",
+        "summary": "@tanstack/react-routerがバージョン1.170.39に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#394693392",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.58",
+    "publishedAt": "2026-09-23T13:32:20Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.58",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`73bfc15`](https://github.com/TanStack/router/commit/73bfc153eef460e9b670556215a5adb2b5cbf542)]:\n    -   @tanstack/react-router@1.170.39\n    -   @tanstack/react-start-client@1.168.37\n    -   @tanstack/react-start-rsc@0.1.57\n    -   @tanstack/react-start-server@1.167.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#394693335",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.44",
+    "publishedAt": "2026-09-23T13:32:17Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`73bfc15`](https://github.com/TanStack/router/commit/73bfc153eef460e9b670556215a5adb2b5cbf542)]:\n    -   @tanstack/react-router@1.170.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更はなく、特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-1.167.44-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router が 1.170.39 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#394693285",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.37",
+    "publishedAt": "2026-09-23T13:32:14Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`73bfc15`](https://github.com/TanStack/router/commit/73bfc153eef460e9b670556215a5adb2b5cbf542)]:\n    -   @tanstack/react-router@1.170.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-router-1-170-39",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router が 1.170.39 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#394693233",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.39",
+    "publishedAt": "2026-09-23T13:32:11Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.39",
+    "releaseNotes": "### Patch Changes\n\n-   [#8435](https://github.com/TanStack/router/pull/8435) [`73bfc15`](https://github.com/TanStack/router/commit/73bfc153eef460e9b670556215a5adb2b5cbf542) - Avoid hydration-triggered rerenders for links that do not compare URL hashes while preserving hash-sensitive active state and ClientOnly behavior.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8435",
+        "category": "bugfix",
+        "title": "ハッシュ非比較リンクにおけるハイドレーション時の不要な再レンダリングを回避",
+        "summary": "URLのハッシュを比較しないリンクにおいて、ハッシュに依存するアクティブ状態やClientOnlyの挙動を維持しつつ、ハイドレーションに起因する再レンダリングを回避するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "petyosi/react-virtuoso#394010716",
     "library": "React Virtuoso",
     "repository": "petyosi/react-virtuoso",
@@ -38,10 +190,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "angular-query-5-0-0-rc-0",
+        "category": "other",
+        "title": "Angular Query v5.0.0-rc.0のリリース",
+        "summary": "@tanstack/angular-query および関連パッケージの v5.0.0-rc.0 がリリースされました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#393772336",
@@ -58,7 +220,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "svelte-query-devtools-options-update",
+        "category": "bugfix",
+        "title": "svelte-query-devtools: マウント後のオプション変更更新の修正",
+        "summary": "マウント後にDevToolsのオプションが変更された場合、DevToolsインスタンスが正常に更新されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#393274472",
@@ -555,7 +727,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.103.2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.103.2に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833328",
@@ -572,7 +754,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.103.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#392833295",
