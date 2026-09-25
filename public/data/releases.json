@@ -1,5 +1,22 @@
 [
   {
+    "id": "vitest-dev/vitest#396457059",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.2",
+    "publishedAt": "2026-09-25T08:58:17Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.2",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Bind `process` in case global is overwritten &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11343 [<samp>(0b792)</samp>](https://github.com/vitest-dev/vitest/commit/0b79231ad)\n- **detect-async-leaks**:\n  - Ignore `process.stdio` handles &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11333 [<samp>(0fd6b)</samp>](https://github.com/vitest-dev/vitest/commit/0fd6b9790)\n- **expect**:\n  - Fix `toMatchObject` with asymmetric matchers &nbsp;-&nbsp; by @ShreeBohara, **Claude Opus 5**, @hi-ogawa, **Hiroshi Ogawa** and **Codex (GPT-5)** in https://github.com/vitest-dev/vitest/issues/11100 [<samp>(42523)</samp>](https://github.com/vitest-dev/vitest/commit/42523289e)\n- **jsdom**:\n  - Fix `Request` with `Blob` body on jsdom 28+ &nbsp;-&nbsp; by @harshit-d3v in https://github.com/vitest-dev/vitest/issues/11295 [<samp>(d1c3e)</samp>](https://github.com/vitest-dev/vitest/commit/d1c3ecc93)\n- **reporter**:\n  - `agent` to respect `--silent` &nbsp;-&nbsp; by @Raj4478 and @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11271 [<samp>(5b95e)</samp>](https://github.com/vitest-dev/vitest/commit/5b95efb6d)\n- **reporters**:\n  - Handle concurrent `createReport` calls &nbsp;-&nbsp; by @7rulnik in https://github.com/vitest-dev/vitest/issues/11278 [<samp>(e8e55)</samp>](https://github.com/vitest-dev/vitest/commit/e8e556ff7)\n  - `hanging-process` to use ESM entrypoint &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11316 [<samp>(4e91e)</samp>](https://github.com/vitest-dev/vitest/commit/4e91e5668)\n- **spy**:\n  - Fix stack overflow when spying `Set.prototype.add` &nbsp;-&nbsp; by @fengmk2 in https://github.com/vitest-dev/vitest/issues/11299 [<samp>(a0a93)</samp>](https://github.com/vitest-dev/vitest/commit/a0a939653)\n- **ui**:\n  - Persist authentication cookie beyond current browser session &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **OpenCode (gpt-5.6-sol)** in https://github.com/vitest-dev/vitest/issues/11066 [<samp>(f8819)</samp>](https://github.com/vitest-dev/vitest/commit/f88195e16)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.1...v5.0.2)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "vitejs/vite#395655602",
     "library": "Vite",
     "repository": "vitejs/vite",
@@ -11,10 +28,132 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "23482",
+        "category": "bugfix",
+        "title": "依存関係の更新",
+        "summary": "メジャーバージョン以外の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23537",
+        "category": "bugfix",
+        "title": "依存関係の更新",
+        "summary": "メジャーバージョン以外の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23483",
+        "category": "bugfix",
+        "title": "Rolldown関連の依存関係の更新",
+        "summary": "Rolldownに関連する依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23511",
+        "category": "bugfix",
+        "title": "mergeConfigでのserver.ws: falseの処理修正",
+        "summary": "mergeConfigにおいてserver.wsがfalseに設定されている場合のハンドリングを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23514",
+        "category": "bugfix",
+        "title": "build.rolldownOptions.output.commentsのマージ処理修正",
+        "summary": "build.rolldownOptions.output.commentsが正しくマージされるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23540",
+        "category": "bugfix",
+        "title": "オプティマイザでtypeから始まるバインディングのスキップ防止",
+        "summary": "オプティマイザがtypeで始まる名前のインポートバインディングをスキップしないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23567",
+        "category": "bugfix",
+        "title": "初期化前のクローズ時における依存関係処理の解決",
+        "summary": "初期化前にサーバーが閉じられた際、未処理の依存関係プロセスを適切に解決するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23572",
+        "category": "bugfix",
+        "title": "サーバー停止後のウォッチャー再初期化の防止",
+        "summary": "サーバー停止後にファイルを追加した際、ファイルウォッチャーが再初期化される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23519",
+        "category": "bugfix",
+        "title": "ソースマップ挿入時のURLソースルートのスキップ",
+        "summary": "ソースコンテンツ挿入時にURL形式のソースルートをスキップするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23466",
+        "category": "other",
+        "title": "チェンジログのプレリリース統合",
+        "summary": "チェンジログ内でプレリリースの記載をマージしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23566",
+        "category": "other",
+        "title": "オプティマイザへのデバッグログ追加",
+        "summary": "初期化前に依存関係を待機する際のデバッグログを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23489",
+        "category": "other",
+        "title": "optimizeDeps.includeのコメント更新",
+        "summary": "optimizeDeps.includeに関するコメントを更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23491",
+        "category": "other",
+        "title": "アセット用正規表現の最適化",
+        "summary": "アセットの正規表現でキャプチャなしグループを使用するようにリファクタリングしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23532",
+        "category": "other",
+        "title": "重複設定の削除",
+        "summary": "コードベースから重複している設定を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23554",
+        "category": "other",
+        "title": "配列検索処理のリファクタリング",
+        "summary": "findメソッドの使用箇所をsomeメソッドに置き換えました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#394693499",
@@ -8804,10 +8943,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ef1eff1-deps-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtoolsおよび@tanstack/react-queryをバージョン5.102.5に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376998954",
@@ -8821,10 +8970,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "578e5c2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.102.5に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376998817",
@@ -8838,10 +8997,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5.102.5",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.102.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730511",
@@ -9036,7 +9205,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730204",
@@ -9050,10 +9229,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730151",
@@ -9087,7 +9267,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-102-4",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreがバージョン5.102.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730081",
@@ -9104,7 +9294,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.102.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730061",
