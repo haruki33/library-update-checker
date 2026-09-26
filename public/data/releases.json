@@ -1,5 +1,689 @@
 [
   {
+    "id": "TanStack/query#397091252",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-26-0357",
+    "publishedAt": "2026-09-26T04:54:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-26-0357",
+    "releaseNotes": "Release 2026-09-26 03:57\n\n## Changes\n\n### Chore\n\n- deps: update Vite from v6 to v8 (#11650) (5279b0521) by @lachlancollins\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.104.0\n- @tanstack/eslint-plugin-query@5.104.0\n- @tanstack/lit-query@0.2.25\n- @tanstack/preact-query@5.104.0\n- @tanstack/preact-query-devtools@5.104.0\n- @tanstack/preact-query-persist-client@5.104.0\n- @tanstack/query-async-storage-persister@5.104.0\n- @tanstack/query-broadcast-client-experimental@5.104.0\n- @tanstack/query-core@5.104.0\n- @tanstack/query-devtools@5.104.0\n- @tanstack/query-persist-client-core@5.104.0\n- @tanstack/query-sync-storage-persister@5.104.0\n- @tanstack/react-query@5.104.0\n- @tanstack/react-query-devtools@5.104.0\n- @tanstack/react-query-next-experimental@5.104.0\n- @tanstack/react-query-persist-client@5.104.0\n- @tanstack/solid-query@5.104.0\n- @tanstack/solid-query-devtools@5.104.0\n- @tanstack/solid-query-persist-client@5.104.0\n- @tanstack/svelte-query@6.3.0\n- @tanstack/svelte-query-devtools@6.3.0\n- @tanstack/svelte-query-persist-client@6.3.0\n- @tanstack/vue-query@5.104.0\n- @tanstack/vue-query-devtools@6.3.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11650",
+        "category": "other",
+        "title": "Viteの依存関係更新",
+        "summary": "Viteのバージョンをv6からv8に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397091245",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-09-26-0017",
+    "publishedAt": "2026-09-26T04:54:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-09-26-0017",
+    "releaseNotes": "Release 2026-09-26 00:17\n\n## Changes\n\n### Fix\n\n- codemods: update codemods build script (#11647) (1c9693eac) by @lachlancollins\n- solid-query: useBaseQuery SSR cleanup (#11628) (6ebffacbe) by @lachlancollins\n- svelte-query/{createQuery,queryOptions}: correct the overload selected for 'initialData' (#11592) (d03806572) by @sukvvon\n\n### Chore\n\n- angular-query: migrate to tsdown (#11649) (a0ee654cd) by @lachlancollins\n- query-devtools: update dependencies (#11648) (d86ac3666) by @lachlancollins\n- deps: update dev dependencies (#11640) (f00aad602) by @lachlancollins\n- add human voice ai policy from ai-policy.dev (#11641) (45657919a) by @DogPawHat\n- deps: update non-major dependencies (#11625) (57f40eb05) by @lachlancollins\n- examples: update Expo from v52 to v57 (#11596) (32ca5b50d) by @lachlancollins\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.103.3\n- @tanstack/eslint-plugin-query@5.103.3\n- @tanstack/lit-query@0.2.24\n- @tanstack/preact-query@5.103.3\n- @tanstack/preact-query-devtools@5.103.3\n- @tanstack/preact-query-persist-client@5.103.3\n- @tanstack/query-async-storage-persister@5.103.3\n- @tanstack/query-broadcast-client-experimental@5.103.3\n- @tanstack/query-core@5.103.3\n- @tanstack/query-devtools@5.103.3\n- @tanstack/query-persist-client-core@5.103.3\n- @tanstack/query-sync-storage-persister@5.103.3\n- @tanstack/react-query@5.103.3\n- @tanstack/react-query-devtools@5.103.3\n- @tanstack/react-query-next-experimental@5.103.3\n- @tanstack/react-query-persist-client@5.103.3\n- @tanstack/solid-query@5.103.3\n- @tanstack/solid-query-devtools@5.103.3\n- @tanstack/solid-query-persist-client@5.103.3\n- @tanstack/svelte-query@6.2.5\n- @tanstack/svelte-query-devtools@6.2.5\n- @tanstack/svelte-query-persist-client@6.2.5\n- @tanstack/vue-query@5.103.3\n- @tanstack/vue-query-devtools@6.2.5\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更が含まれていないため、必要な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11647",
+        "category": "bugfix",
+        "title": "codemods ビルドスクリプトの更新",
+        "summary": "codemods パッケージのビルドスクリプトを更新・修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11628",
+        "category": "bugfix",
+        "title": "solid-query の SSR クリーンアップ修正",
+        "summary": "solid-query の useBaseQuery における SSR 処理時のクリーンアップ動作を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11592",
+        "category": "bugfix",
+        "title": "svelte-query の initialData オーバーロード選択の修正",
+        "summary": "svelte-query の createQuery および queryOptions において、initialData 設定時に正しくない型オーバーロードが選択される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11649",
+        "category": "other",
+        "title": "angular-query の tsdown への移行",
+        "summary": "angular-query のビルドツールを tsdown に移行しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11648",
+        "category": "other",
+        "title": "query-devtools の依存関係更新",
+        "summary": "query-devtools パッケージの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11640",
+        "category": "other",
+        "title": "開発用依存関係の更新",
+        "summary": "開発で利用している依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11641",
+        "category": "other",
+        "title": "AI ポリシーの追加",
+        "summary": "ai-policy.dev から Human Voice AI ポリシーをリポジトリに追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11625",
+        "category": "other",
+        "title": "非メジャー依存関係の更新",
+        "summary": "メジャーバージョン以外の依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11596",
+        "category": "other",
+        "title": "サンプルにおける Expo のバージョン更新",
+        "summary": "サンプルコードの Expo バージョンを v52 から v57 にアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070784",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.104.0",
+    "publishedAt": "2026-09-26T03:56:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.104.0",
+    "releaseNotes": "### Minor Changes\n\n- [#11650](https://github.com/TanStack/query/pull/11650) [`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e) - Build projects with Vite 8\n\n### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/react-query@5.104.0\n  - @tanstack/query-persist-client-core@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11650",
+        "category": "other",
+        "title": "Vite 8 によるビルドへの変更",
+        "summary": "プロジェクトのビルド環境が Vite 8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-dependencies",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core がバージョン 5.104.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070763",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.104.0",
+    "publishedAt": "2026-09-26T03:56:56Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.104.0",
+    "releaseNotes": "### Minor Changes\n\n- [#11650](https://github.com/TanStack/query/pull/11650) [`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e) - Build projects with Vite 8\n\n### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/react-query@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11650",
+        "category": "other",
+        "title": "Vite 8 によるプロジェクトのビルド",
+        "summary": "プロジェクトのビルドツールが Vite 8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-react-query-5-104-0",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/react-query",
+        "summary": "依存パッケージ @tanstack/react-query がバージョン 5.104.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070739",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.104.0",
+    "publishedAt": "2026-09-26T03:56:53Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.104.0",
+    "releaseNotes": "### Minor Changes\n\n- [#11650](https://github.com/TanStack/query/pull/11650) [`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e) - Build projects with Vite 8\n\n### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/query-devtools@5.104.0\n  - @tanstack/react-query@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11650",
+        "category": "other",
+        "title": "Vite 8によるビルド設定の更新",
+        "summary": "プロジェクトのビルドにVite 8が使用されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-dependencies-5.104.0",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-devtoolsおよび@tanstack/react-queryがバージョン5.104.0に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070725",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.104.0",
+    "publishedAt": "2026-09-26T03:56:50Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.104.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/query-core@5.104.0\n  - @tanstack/query-persist-client-core@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "5279b05-deps",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.104.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070574",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.104.0",
+    "publishedAt": "2026-09-26T03:56:26Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.104.0",
+    "releaseNotes": "### Minor Changes\n\n- [#11650](https://github.com/TanStack/query/pull/11650) [`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e) - Build projects with Vite 8\n\n### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/query-core@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11650",
+        "category": "other",
+        "title": "Vite 8によるビルド設定の更新",
+        "summary": "プロジェクトのビルド環境がVite 8に更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-query-core",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.104.0に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#397070549",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.104.0",
+    "publishedAt": "2026-09-26T03:56:23Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.104.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`5279b05`](https://github.com/TanStack/query/commit/5279b05211223dd719803ca22a9d1fa46c98638e)]:\n  - @tanstack/query-core@5.104.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "5279b05",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.104.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "react-hook-form/react-hook-form#397005692",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v8.0.0-beta.4",
+    "publishedAt": "2026-09-26T00:50:28Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v8.0.0-beta.4",
+    "releaseNotes": "🦾 Syncs v8 beta with the latest master branch, bringing over recent v7 bug fixes, performance improvements, refactors, and DX updates.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "この更新による移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "sync-v8-beta-master",
+        "category": "other",
+        "title": "最新の master ブランチとの同期",
+        "summary": "最新の master ブランチから v7 のバグ修正、パフォーマンス改善、リファクタリング、および DX の更新を取り込みました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "react-hook-form/react-hook-form#397004160",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.89.0",
+    "publishedAt": "2026-09-26T00:46:16Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.89.0",
+    "releaseNotes": "## 🐞 Fixes\r\n\r\n- Fix form state select option (#13784)\r\n- Remove duplicate default value field (#13783)\r\n- Fix `validateField` skipping refs without `setCustomValidity` under native validation (#13782)\r\n- Fix form-level validation using a stale `validate` function (#13777)\r\n- Fix `useFieldArray` touched fields handling (#13776)\r\n- Fix pending `delayError` timers for nested paths (#13775)\r\n- Fix `getValues` extracting unmarked field array entries (#13773)\r\n- Fix field array touched state not being re-indexed when unsubscribed (#13772)\r\n- Fix nested `delayError` timers remaining when a parent validates clean (#13771)\r\n- Fix nested `delayError` timers remaining after `resetField()` resets a parent (#13769)\r\n- Fix stale field array root errors after an operation satisfies the validation rule (#13767)\r\n- Fix `setValue()` not revalidating dependencies when `shouldValidate` is enabled (#13765)\r\n- Fix stale built-in validation results after `reset()` during `handleSubmit()` (#13761)\r\n- Fix stale form-level validation results after `reset()` (#13762)\r\n- Fix validation rules removed from `register` options at runtime remaining active (#13758)\r\n- Fix `useController` required validation not using the controlled value (#13756)\r\n- Fix stale form-level errors remaining after successful re-validation (#13755)\r\n- Fix `useFieldArray` marking the form dirty when the array default value is `null` (#13750)\r\n- Fix `isValid` not being recomputed when the `errors` prop is emptied (#13748)\r\n- Fix form-level validation running more than once per traversal (#13747)\r\n- Fix stale built-in validation results after `reset()` during `onChange` (#13745)\r\n- Fix stale resolver results after `reset()` during `onChange` (#13744)\r\n- Fix `setValue()` not triggering field array root validation when `shouldValidate` is enabled (#13743)\r\n- Fix `getFieldState(name, formState)` updates after `reset()` (#13741)\r\n- Fix dirty state remaining for rows removed from a field array (#13739)\r\n\r\n## 🧹 Refactors\r\n\r\n- Replace `rimraf` cleanup with `fs.rmSync` (#13770)\r\n- Reduce bundle size (#13759)\r\n\r\n## 📦 Dependencies\r\n\r\n- Add optional `@types/react` peer dependency (#13781)\r\n\r\n## ❤️ Thank You\r\n\r\n- Thanks to @niketchandivade, @unrevised6419, @Lucasfarg, @dfedoryshchev, @locphamnice, @Abdalluh28, @giaBaoJS, @Mohamedshawky4, @roli-lpci, @soroush5, @zigzagdev and @bluebill1049 for their contributions! 🎉",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "13784",
+        "category": "bugfix",
+        "title": "フォーム状態のselectオプションの修正",
+        "summary": "フォーム状態のselectオプションに関する不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13783",
+        "category": "bugfix",
+        "title": "重複するデフォルト値フィールドの削除",
+        "summary": "重複していたデフォルト値フィールドを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13782",
+        "category": "bugfix",
+        "title": "ネイティブ検証時のsetCustomValidityを持たないrefの修正",
+        "summary": "ネイティブ検証においてsetCustomValidityを持たないrefをvalidateFieldがスキップする問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13777",
+        "category": "bugfix",
+        "title": "フォームレベル検証での古くなったvalidate関数の修正",
+        "summary": "フォームレベルの検証で古くなったvalidate関数が使用される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13776",
+        "category": "bugfix",
+        "title": "useFieldArrayのtouchedフィールド処理の修正",
+        "summary": "useFieldArrayにおけるtouchedフィールドのハンドリングを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13775",
+        "category": "bugfix",
+        "title": "ネストされたパスの遅延エラータイマーの修正",
+        "summary": "ネストされたパスで保留中のdelayErrorタイマーに関する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13773",
+        "category": "bugfix",
+        "title": "getValuesにおける非マーク要素の抽出の修正",
+        "summary": "getValuesがマークされていないフィールド配列のエントリを抽出してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13772",
+        "category": "bugfix",
+        "title": "サブスクライブ解除時のフィールド配列touched状態の再インデックス修正",
+        "summary": "サブスクライブ解除時にフィールド配列のtouched状態が再インデックスされない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13771",
+        "category": "bugfix",
+        "title": "親検証成功時のネストされたdelayErrorタイマーの修正",
+        "summary": "親フィールドの検証が成功した際にネストされたdelayErrorタイマーが残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13769",
+        "category": "bugfix",
+        "title": "resetField実行後のネストされたdelayErrorタイマーの修正",
+        "summary": "resetField()で親フィールドがリセットされた後にネストされたdelayErrorタイマーが残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13767",
+        "category": "bugfix",
+        "title": "フィールド配列ルートエラーの古くなった状態の修正",
+        "summary": "検証ルールを満たした操作後もフィールド配列のルートエラーが残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13765",
+        "category": "bugfix",
+        "title": "setValueにおけるshouldValidate有効時の依存関係の再検証修正",
+        "summary": "shouldValidateが有効な場合にsetValue()が依存関係を再検証しない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13761",
+        "category": "bugfix",
+        "title": "handleSubmit中のreset実行時のビルトイン検証結果の修正",
+        "summary": "handleSubmit()中にreset()が実行された際の古くなったビルトイン検証結果を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13762",
+        "category": "bugfix",
+        "title": "reset実行後の古くなったフォームレベル検証結果の修正",
+        "summary": "reset()実行後に古くなったフォームレベルの検証結果が残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13758",
+        "category": "bugfix",
+        "title": "動的に削除されたregisterオプションの検証ルールの修正",
+        "summary": "実行時にregisterオプションから削除された検証ルールが有効なまま残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13756",
+        "category": "bugfix",
+        "title": "useControllerのrequired検証での制御された値の使用修正",
+        "summary": "useControllerのrequired検証で制御された値が使用されない不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13755",
+        "category": "bugfix",
+        "title": "再検証成功後の古くなったフォームレベルエラーの修正",
+        "summary": "再検証が成功した後に古くなったフォームレベルのエラーが残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13750",
+        "category": "bugfix",
+        "title": "デフォルト値null時のuseFieldArrayのdirtyフラグ修正",
+        "summary": "配列のデフォルト値がnullの場合にuseFieldArrayがフォームをdirtyに設定してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13748",
+        "category": "bugfix",
+        "title": "errorsプロパティ空時のisValid再計算の修正",
+        "summary": "errorsプロパティが空になった際にisValidが再計算されない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13747",
+        "category": "bugfix",
+        "title": "フォームレベル検証の重複実行の修正",
+        "summary": "1回のトラバーサルでフォームレベルの検証が複数回実行される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13745",
+        "category": "bugfix",
+        "title": "onChange中のreset実行時のビルトイン検証結果の修正",
+        "summary": "onChange中にreset()を実行した際に古くなったビルトイン検証結果が残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13744",
+        "category": "bugfix",
+        "title": "onChange中のreset実行時のリゾルバー結果の修正",
+        "summary": "onChange中にreset()を実行した際に古くなったリゾルバー結果が残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13743",
+        "category": "bugfix",
+        "title": "setValueによるフィールド配列ルート検証トリガーの修正",
+        "summary": "shouldValidateが有効な場合にsetValue()がフィールド配列のルート検証をトリガーしない問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13741",
+        "category": "bugfix",
+        "title": "reset後のgetFieldState更新の修正",
+        "summary": "reset()実行後のgetFieldState(name, formState)の更新処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13739",
+        "category": "bugfix",
+        "title": "フィールド配列から削除された行のdirty状態の修正",
+        "summary": "フィールド配列から削除された行にdirty状態が残る問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13770",
+        "category": "other",
+        "title": "クリーンアップ処理のfs.rmSyncへの置換",
+        "summary": "クリーンアップ処理においてrimrafをfs.rmSyncへ置き換えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13759",
+        "category": "performance",
+        "title": "バンドルサイズの削減",
+        "summary": "パッケージのバンドルサイズを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "13781",
+        "category": "other",
+        "title": "オプショナルな@types/react peerDependencyの追加",
+        "summary": "オプショナルなpeerDependencyとして@types/reactを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#396995955",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.103.3",
+    "publishedAt": "2026-09-26T00:16:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1c9693e`](https://github.com/TanStack/query/commit/1c9693eac75495a04ae4328a35818b1fdf264978)]:\n  - @tanstack/react-query@5.103.3\n  - @tanstack/query-persist-client-core@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#396995935",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.103.3",
+    "publishedAt": "2026-09-26T00:16:56Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1c9693e`](https://github.com/TanStack/query/commit/1c9693eac75495a04ae4328a35818b1fdf264978)]:\n  - @tanstack/react-query@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#396995917",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.103.3",
+    "publishedAt": "2026-09-26T00:16:53Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1c9693e`](https://github.com/TanStack/query/commit/1c9693eac75495a04ae4328a35818b1fdf264978), [`d86ac36`](https://github.com/TanStack/query/commit/d86ac36663e3757a0ad35b5ead5f1d25dfb1b15d)]:\n  - @tanstack/react-query@5.103.3\n  - @tanstack/query-devtools@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#396995900",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.103.3",
+    "publishedAt": "2026-09-26T00:16:50Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.103.3\n  - @tanstack/query-persist-client-core@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#396995771",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.103.3",
+    "publishedAt": "2026-09-26T00:16:26Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- [#11647](https://github.com/TanStack/query/pull/11647) [`1c9693e`](https://github.com/TanStack/query/commit/1c9693eac75495a04ae4328a35818b1fdf264978) - fix(codemods): avoid copying unnecessary files from codemods project\n- Updated dependencies []:\n  - @tanstack/query-core@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#396995758",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.103.3",
+    "publishedAt": "2026-09-26T00:16:23Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.103.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.103.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "vitest-dev/vitest#396457059",
     "library": "Vitest",
     "repository": "vitest-dev/vitest",
