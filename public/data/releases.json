@@ -1,5 +1,490 @@
 [
   {
+    "id": "petyosi/react-virtuoso#397788956",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-query@2.0.1",
+    "publishedAt": "2026-09-27T19:53:42Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-query%402.0.1",
+    "releaseNotes": "### Patch Changes\n\n- [#1509](https://github.com/petyosi/react-virtuoso/pull/1509) [`3dbb0c4`](https://github.com/petyosi/react-virtuoso/commit/3dbb0c4857965f1e3db62fd72e7d16630323cb71) Thanks [@petyosi](https://github.com/petyosi)! - Fix a `Query` that stopped reacting to `enabled$` after its first toggle. Setting `enabled$` back to `true` now fetches with the current params every time, and setting it to `false` again aborts the in-flight request and stops `refetchInterval` polling. Both reactions previously ran through filtered streams, which are distinct, so only the first enable and the first disable took effect.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1509",
+        "category": "bugfix",
+        "title": "Queryがenabled$の切り替えに反応しなくなる不具合の修正",
+        "summary": "enabled$を再度trueに設定した際に現在のパラメータでデータを再取得し、falseに設定した際には実行中のリクエストを中断してrefetchIntervalポーリングを停止するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397674062",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-09-27-1408",
+    "publishedAt": "2026-09-27T14:08:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-09-27-1408",
+    "releaseNotes": "Release 2026-09-27 14:08\n\n## Changes\n\n### Fix\n\n- router-core: restore native scroll restoration on reload (#8519) (3cdd1af04b) by @schiller-manuel\n- start: parse path params before server route handlers (#8434) (e81845ff1e) by @Sheraff\n- router-core: retire invalidated loader reservations (#8460) (0c1b5e38de) by @Sheraff\n\n### Performance\n\n- router,start: update Seroval to 1.6.7 (#8297) (488d046a90) by @LadyBluenotes\n- router: skip unused link preload cleanup across adapters (#8436) (f5ffd3884b) by @Sheraff\n- start-client-core: avoid unused middleware array (#8353) (76a7c0bfad) by @LadyBluenotes\n\n### Chore\n\n- update CodSpeed action and Vitest plugin (#8508) (7471fb8591) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-router@1.170.40\n- @tanstack/react-start@1.168.59\n- @tanstack/react-start-client@1.168.38\n- @tanstack/react-start-rsc@0.1.58\n- @tanstack/react-start-server@1.167.45\n- @tanstack/router-cli@1.167.39\n- @tanstack/router-core@1.171.33\n- @tanstack/router-generator@1.167.39\n- @tanstack/router-plugin@1.168.41\n- @tanstack/router-vite-plugin@1.167.41\n- @tanstack/solid-router@1.170.37\n- @tanstack/solid-start@1.168.56\n- @tanstack/solid-start-client@1.168.36\n- @tanstack/solid-start-server@1.167.43\n- @tanstack/start-client-core@1.170.33\n- @tanstack/start-plugin-core@1.171.48\n- @tanstack/start-server-core@1.169.38\n- @tanstack/start-static-server-functions@1.167.38\n- @tanstack/start-storage-context@1.167.35\n- @tanstack/vue-router@1.170.36\n- @tanstack/vue-start@1.168.55\n- @tanstack/vue-start-client@1.167.39\n- @tanstack/vue-start-server@1.167.43\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-scroll-restoration",
+        "category": "bugfix",
+        "title": "リロード時のネイティブスクロール復元の修復",
+        "summary": "router-coreにおいて、ページリロード時のネイティブスクロール復元機能を復元しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-parse-path-params",
+        "category": "bugfix",
+        "title": "サーバールート前のパスパラメータ解析",
+        "summary": "startにおいて、サーバールートハンドラーが実行される前にパスパラメータを解析するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-loader-reservations",
+        "category": "bugfix",
+        "title": "無効化されたローダー予約の廃棄",
+        "summary": "router-coreにおいて、無効化されたローダー予約を適切に廃棄処理するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-seroval-update",
+        "category": "performance",
+        "title": "Serovalの1.6.7への更新",
+        "summary": "routerおよびstartにおいてSerovalを1.6.7にアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-skip-preload-cleanup",
+        "category": "performance",
+        "title": "リンクプレロードクリーンアップの最適化",
+        "summary": "全アダプターにわたり、未使用のリンクプレロードクリーンアップ処理をスキップするように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-avoid-middleware-array",
+        "category": "performance",
+        "title": "不要なミドルウェア配列生成の回避",
+        "summary": "start-client-coreにおいて、未使用のミドルウェア配列の作成を回避するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chore-codspeed-vitest",
+        "category": "other",
+        "title": "CodSpeedアクションとVitestプラグインの更新",
+        "summary": "CodSpeedアクションおよびVitestプラグインを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397674015",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.168.41",
+    "publishedAt": "2026-09-27T14:07:56Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676), [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/react-router@1.170.40\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/router-generator@1.167.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-1.168.41",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core、@tanstack/router-generatorの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673999",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.33",
+    "publishedAt": "2026-09-27T14:07:53Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.33",
+    "releaseNotes": "### Patch Changes\n\n-   [#8297](https://github.com/TanStack/router/pull/8297) [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f) - Update `seroval` and `seroval-plugins` from 1.6.2 to 1.6.7. This picks up the typed array length guard, the `maxBase64Length` and `compactArrayBufferViews` options, and the `isStream` export.\n\n-   [#8353](https://github.com/TanStack/router/pull/8353) [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91) - Avoid an unused array when registering server-function middleware.\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-storage-context@1.167.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8297",
+        "category": "other",
+        "title": "serovalおよびseroval-pluginsのアップデート",
+        "summary": "serovalおよびseroval-pluginsを1.6.2から1.6.7に更新し、 typed array length guard や maxBase64Length などの新機能と修正を取り込みました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8353",
+        "category": "performance",
+        "title": "サーバー機能ミドルウェア登録時の不要な配列の削除",
+        "summary": "サーバー機能のミドルウェア登録処理において、使用されていない配列の生成を回避し最適化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673960",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.38",
+    "publishedAt": "2026-09-27T14:07:47Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.38",
+    "releaseNotes": "### Patch Changes\n\n-   [#8297](https://github.com/TanStack/router/pull/8297) [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f) - Update `seroval` and `seroval-plugins` from 1.6.2 to 1.6.7. This picks up the typed array length guard, the `maxBase64Length` and `compactArrayBufferViews` options, and the `isStream` export.\n\n-   [#8434](https://github.com/TanStack/router/pull/8434) [`e81845f`](https://github.com/TanStack/router/commit/e81845ff1e4fc66d4e4a87f086be65906f7adb94) - Apply route path parameter parsers, including parent-route parsers, before invoking server route handlers so runtime parameters agree with their inferred types.\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2), [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91)]:\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-client-core@1.170.33\n    -   @tanstack/start-storage-context@1.167.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの移行に伴う特別な手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8297",
+        "category": "other",
+        "title": "seroval および seroval-plugins の更新",
+        "summary": "seroval および seroval-plugins を 1.6.2 から 1.6.7 にアップデートしました。TypedArray の長さガードや maxBase64Length、compactArrayBufferViews などのオプション、isStream エクスポートが追加されます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8434",
+        "category": "bugfix",
+        "title": "サーバールートハンドラー実行前のパスパラメータパーサー適用",
+        "summary": "親ルートのものを含むルートパスパラメータパーサーをサーバールートハンドラーの呼び出し前に適用し、実行時パラメータが推論された型と一致するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "内部依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/start-client-core、@tanstack/start-storage-context などの依存ライブラリを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673945",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.45",
+    "publishedAt": "2026-09-27T14:07:44Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.45",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676), [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`e81845f`](https://github.com/TanStack/router/commit/e81845ff1e4fc66d4e4a87f086be65906f7adb94), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/react-router@1.170.40\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-server-core@1.169.38\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-updates",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ（@tanstack/react-router、@tanstack/router-core、@tanstack/start-server-core）が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673929",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.41",
+    "publishedAt": "2026-09-27T14:07:41Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-plugin@1.168.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-router-plugin-1-168-41",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-pluginがバージョン1.168.41に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673886",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.40",
+    "publishedAt": "2026-09-27T14:07:35Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.40",
+    "releaseNotes": "### Patch Changes\n\n-   [#8436](https://github.com/TanStack/router/pull/8436) [`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676) - Skip unused Link preload cleanup when preloading is disabled and ignore queued viewport notifications after their effect has been cleaned up.\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/router-core@1.171.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8436",
+        "category": "bugfix",
+        "title": "Link プリロードとビューポート通知のクリーンアップ処理の改善",
+        "summary": "プリロードが無効な場合の不要な Link プリロードのクリーンアップをスキップし、エフェクトクリーンアップ後にキューに入ったビューポート通知を無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-router-core",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core が 1.171.33 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673845",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.38",
+    "publishedAt": "2026-09-27T14:07:29Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.38",
+    "releaseNotes": "### Patch Changes\n\n-   [#8297](https://github.com/TanStack/router/pull/8297) [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f) - Update `seroval` and `seroval-plugins` from 1.6.2 to 1.6.7. This picks up the typed array length guard, the `maxBase64Length` and `compactArrayBufferViews` options, and the `isStream` export.\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91)]:\n    -   @tanstack/start-client-core@1.170.33\n    -   @tanstack/react-start@1.168.59\n    -   @tanstack/solid-start@1.168.56\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8297",
+        "category": "other",
+        "title": "seroval および seroval-plugins の更新",
+        "summary": "seroval と seroval-plugins を 1.6.2 から 1.6.7 にアップデートし、TypedArray の長さガード、maxBase64Length、compactArrayBufferViews オプション、isStream エクスポートを取り込みました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-dependencies",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-client-core、@tanstack/react-start、@tanstack/solid-start の依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673828",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.48",
+    "publishedAt": "2026-09-27T14:07:26Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.48",
+    "releaseNotes": "### Patch Changes\n\n-   [#8297](https://github.com/TanStack/router/pull/8297) [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f) - Update `seroval` and `seroval-plugins` from 1.6.2 to 1.6.7. This picks up the typed array length guard, the `maxBase64Length` and `compactArrayBufferViews` options, and the `isStream` export.\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`e81845f`](https://github.com/TanStack/router/commit/e81845ff1e4fc66d4e4a87f086be65906f7adb94), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-server-core@1.169.38\n    -   @tanstack/router-generator@1.167.39\n    -   @tanstack/router-plugin@1.168.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8297",
+        "category": "other",
+        "title": "seroval および seroval-plugins のバージョン更新",
+        "summary": "seroval と seroval-plugins を 1.6.2 から 1.6.7 へアップデートしました。これにより TypedArray の長さガードや maxBase64Length、compactArrayBufferViews オプション、isStream エクスポートなどが取り込まれました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-1.171.48",
+        "category": "other",
+        "title": "関連依存パッケージの更新",
+        "summary": "@tanstack/router-core や @tanstack/start-server-core などの内部依存パッケージを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#397673793",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.35",
+    "publishedAt": "2026-09-27T14:07:20Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.35",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/router-core@1.171.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673753",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.167.39",
+    "publishedAt": "2026-09-27T14:07:14Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.167.39",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2)]:\n    -   @tanstack/router-core@1.171.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673719",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.58",
+    "publishedAt": "2026-09-27T14:07:11Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.58",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676), [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2), [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91)]:\n    -   @tanstack/react-router@1.170.40\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-client-core@1.170.33\n    -   @tanstack/start-plugin-core@1.171.48\n    -   @tanstack/start-storage-context@1.167.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673689",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.167.39",
+    "publishedAt": "2026-09-27T14:07:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.167.39",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-generator@1.167.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673651",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-core@1.171.33",
+    "publishedAt": "2026-09-27T14:06:59Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-core%401.171.33",
+    "releaseNotes": "### Patch Changes\n\n-   [#8297](https://github.com/TanStack/router/pull/8297) [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f) - Update `seroval` and `seroval-plugins` from 1.6.2 to 1.6.7. This picks up the typed array length guard, the `maxBase64Length` and `compactArrayBufferViews` options, and the `isStream` export.\n\n-   [#8460](https://github.com/TanStack/router/pull/8460) [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47) - Abort reserved loader generations with no remaining owners when invalidation removes them from discovery, ensuring their public abort signals are retired.\n\n-   [#8519](https://github.com/TanStack/router/pull/8519) [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2) - Hand native scroll restoration back to the browser on pagehide, including entries entering BFCache, and reclaim manual restoration when a cached document resumes.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673629",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.59",
+    "publishedAt": "2026-09-27T14:06:56Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.59",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676), [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`e81845f`](https://github.com/TanStack/router/commit/e81845ff1e4fc66d4e4a87f086be65906f7adb94), [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91)]:\n    -   @tanstack/react-router@1.170.40\n    -   @tanstack/start-client-core@1.170.33\n    -   @tanstack/start-server-core@1.169.38\n    -   @tanstack/start-plugin-core@1.171.48\n    -   @tanstack/react-start-client@1.168.38\n    -   @tanstack/react-start-rsc@0.1.58\n    -   @tanstack/react-start-server@1.167.45\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#397673615",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.38",
+    "publishedAt": "2026-09-27T14:06:53Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.38",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`f5ffd38`](https://github.com/TanStack/router/commit/f5ffd3884ba26778a2a8ce53b379a5bded231676), [`488d046`](https://github.com/TanStack/router/commit/488d046a907d330429e2c807ef95326dad87480f), [`0c1b5e3`](https://github.com/TanStack/router/commit/0c1b5e38de71b7e81bbf1fd81c73ee0cd68ffe47), [`3cdd1af`](https://github.com/TanStack/router/commit/3cdd1af04b3e2d6f777797ee7bddf285318dd9d2), [`76a7c0b`](https://github.com/TanStack/router/commit/76a7c0bfadb42d5f7fe7b9e1748acc7333178c91)]:\n    -   @tanstack/react-router@1.170.40\n    -   @tanstack/router-core@1.171.33\n    -   @tanstack/start-client-core@1.170.33\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#397091252",
     "library": "TanStack Query",
     "repository": "TanStack/query",
