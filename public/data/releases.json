@@ -1,5 +1,300 @@
 [
   {
+    "id": "mswjs/msw#398391774",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.0",
+    "publishedAt": "2026-09-28T15:40:54Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.0",
+    "releaseNotes": "## v3.0.0 (2026-09-28)\r\n\r\n- v3.0.0 (#2692) (2bb43428b79ac06f94bb8ea8aeacd6102fe31f56) @kettanaito @Andarist\r\n\r\n### ⚠️ BREAKING CHANGES\r\n\r\n- **MSW is now ESM-only** (#2765).\r\n- Deprecate support for Node.js v18 and v20 (#2729). The minimal supported Node.js version is v22.\r\n- `msw/native` is removed in favor of [`@msw/react-native`](https://github.com/mswjs/react-native).\r\n- Require TypeScript 5.9 as the minimal version.\r\n- Deprecate support for TypeScript 5.1 and 5.2 (#2730)\r\n- `worker.stop()` returns a Promise (#2724). Awaiting it is relevant only for in-flight critical scenarios.\r\n- `graphql` is now exported as `msw/graphql` (#2691). GraphQL is now handled as a proper optional peer dependency.\r\n- Removes the `handleRequest()` utility. Please use the `defineNetwork()` API instead.\r\n- `GraphQLLinkHandlers` type has been renamed to `GraphQLLink`.\r\n- The `file://` requests now throw in Node.js as they normally do (not supported by `fetch`).\r\n- The `Content-Length` request header is now removed by `bypass()`.\r\n- HTTP-to-WebSocket upgrade requests performed via `fetch()` now throw in Node.js as they normally do (not supported by `fetch`).\r\n- Cookies are no longer managed in Node.js for better compatibilty. Instead, whatever is the default behavior of your environment that's the cookie behavior you get. This has no effect on the browser.\r\n- WebSocket `connection` life cycle event has been renamed to `websocket:connection` (#2783).\r\n- `onUnhandledRequest` option has been renamed to `onUnhandledFrame`.\r\n- The library no longer patches `setTimeout` to circumvent fake timers in test runners. You should advance the fake timers normally for delayed mocked responses to resolve.\r\n- The library no longer returns a mocked cookie string on `request.headers.get('cookie')` in the handlers. It returns `null` in all environments. Please use the `cookies` resolver argument to have cookie-based logic.\r\n\r\n### Features\r\n\r\n- Supports Node.js v24 and v26.\r\n- Supports TypeScript v6.0 and v7.0.\r\n- You can import individual utilities, like `delay` or `passthrough`, from the new `msw/utils` entrypoint for smaller footprint on your bundle.\r\n- Support GraphQL v17.0.\r\n- Support intercepting page navigations and form submissions (#2721).\r\n- Support GraphQL subscriptions (#285, #2763).\r\n- Migrate from `path-to-regexp` to `@msw/url` (#2678).\r\n- Remove the following dependencies:\r\n  - `graphql`\r\n  - `path-to-regexp`\r\n  - `picocolors`\r\n  - `statuses`\r\n  - `strict-event-emitter`\r\n- Adds a Vite plugin for MSW (#2781).\r\n- Adds a `websocket:error` life cycle event to listen to WebSocket connection errors (#2784).\r\n- Support modifying the intercepted request headers in passthrough scenarios (#2786).\r\n- Support a new WebSocket Extension API that allows for better custom experiences (#2791).\r\n\r\n### Bug fixes\r\n\r\n- Fix an issue where preventing a page closure via the `beforeunload` listener would unregister the MSW worker (#1105).\r\n- Fix an issue that caused intermittent test failures in Vitest Browser Mode and Firefox if using `maxWorkers: 1` (#2726). \r\n- Fix an issue where in-flight requests were incorrectly passthrough when performed before calling `worker.stop()` (#2724, #2597).\r\n- Fix an issue where persisting cookies in `localStorage` would cause a maximum quota exceeded errors.\r\n- Fix various issues related to the network interception in Node.js.",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "MSW v3.0.0へのアップデートに伴い、ESM専用化、Node.js v22以上およびTypeScript 5.9以上への要求、非推奨APIの置換などの移行作業が必要です。",
+      "steps": [
+        "ESM環境に移行する。",
+        "Node.jsをv22以上にアップグレードする。",
+        "TypeScriptを5.9以上にアップグレードする。",
+        "`msw/native` のインポートを `@msw/react-native` に置き換える。",
+        "`graphql` のインポートを `msw/graphql` に変更する。",
+        "`handleRequest()` を `defineNetwork()` APIに置き換える。",
+        "`GraphQLLinkHandlers` 型を `GraphQLLink` に変更する。",
+        "WebSocketの `connection` イベントを `websocket:connection` に変更する。",
+        "`onUnhandledRequest` オプションを `onUnhandledFrame` に変更する。",
+        "`worker.stop()` の呼び出しを必要に応じて `await` するよう変更する。",
+        "リクエストのクッキー取得に `request.headers.get('cookie')` ではなく `cookies` リゾルバー引数を使用する。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "esm-only",
+        "category": "breaking",
+        "title": "ESM専用化",
+        "summary": "MSWがESM専用パッケージになりました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "drop-node-18-20",
+        "category": "breaking",
+        "title": "Node.js v18およびv20のサポート終了",
+        "summary": "最小サポートNode.jsバージョンがv22に変更されました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "remove-msw-native",
+        "category": "breaking",
+        "title": "msw/nativeの削除",
+        "summary": "`msw/native` が削除され、代わりに `@msw/react-native` を使用するようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "require-typescript-5-9",
+        "category": "breaking",
+        "title": "TypeScript 5.9以上の要求",
+        "summary": "最小サポートTypeScriptバージョンが5.9に変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "worker-stop-returns-promise",
+        "category": "breaking",
+        "title": "worker.stop()がPromiseを返すよう変更",
+        "summary": "`worker.stop()` がPromiseを返すようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "graphql-entrypoint",
+        "category": "breaking",
+        "title": "GraphQLのエクスポートパス変更",
+        "summary": "`graphql` が `msw/graphql` からエクスポートされるようになり、オプショナルなpeerDependencyとして扱われます。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "remove-handle-request",
+        "category": "breaking",
+        "title": "handleRequest()の削除",
+        "summary": "`handleRequest()` ユーティリティが削除されました。今後は `defineNetwork()` APIを使用します。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "graphql-link-handlers-type-rename",
+        "category": "breaking",
+        "title": "GraphQLLinkHandlers型の名称変更",
+        "summary": "`GraphQLLinkHandlers` 型が `GraphQLLink` にリネームされました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "file-protocol-throws-in-node",
+        "category": "breaking",
+        "title": "Node.jsにおけるfile://リクエストの挙動変更",
+        "summary": "Node.jsにおいて `file://` リクエストが例外をスローするようになりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "bypass-removes-content-length",
+        "category": "breaking",
+        "title": "bypass()によるContent-Lengthヘッダーの削除",
+        "summary": "`bypass()` 使用時に `Content-Length` リクエストヘッダーが削除されるようになりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "fetch-ws-upgrade-throws-in-node",
+        "category": "breaking",
+        "title": "Node.jsにおけるfetchからのWebSocketアップグレード挙動変更",
+        "summary": "Node.jsで `fetch()` 経由のHTTP-to-WebSocketアップグレードリクエストを実行すると例外をスローするようになりました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "node-cookie-management-changes",
+        "category": "breaking",
+        "title": "Node.jsにおけるクッキー管理の変更",
+        "summary": "Node.jsで独自のクッキー管理を行わなくなり、実行環境のデフォルト動作に従うようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "rename-websocket-connection-event",
+        "category": "breaking",
+        "title": "WebSocket connectionイベント名の変更",
+        "summary": "WebSocketの `connection` ライフサイクルイベントが `websocket:connection` に変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "rename-on-unhandled-request",
+        "category": "breaking",
+        "title": "onUnhandledRequestオプション名の変更",
+        "summary": "`onUnhandledRequest` オプションが `onUnhandledFrame` に変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "remove-settimeout-patch",
+        "category": "breaking",
+        "title": "setTimeoutパッチの廃止",
+        "summary": "テストランナーの偽タイマー回避のための `setTimeout` パッチが削除されました。タイマーを進める操作が必要になります。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "handler-cookie-header-returns-null",
+        "category": "breaking",
+        "title": "ハンドラー内でのクッキーヘッダー取得挙動の変更",
+        "summary": "ハンドラー内で `request.headers.get('cookie')` を呼び出した際にモッククッキー文字列を返さず `null` を返すようになりました。`cookies` リゾルバー引数を使用してください。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "support-node-24-26",
+        "category": "feature",
+        "title": "Node.js v24およびv26のサポート",
+        "summary": "Node.js v24およびv26を新たにサポートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "support-ts-6-7",
+        "category": "feature",
+        "title": "TypeScript v6.0およびv7.0のサポート",
+        "summary": "TypeScript v6.0およびv7.0を新たにサポートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "msw-utils-entrypoint",
+        "category": "feature",
+        "title": "msw/utilsエントリーポイントの追加",
+        "summary": "`delay` や `passthrough` などの個別ユーティリティを `msw/utils` からインポート可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "graphql-17-support",
+        "category": "feature",
+        "title": "GraphQL v17.0のサポート",
+        "summary": "GraphQL v17.0を新たにサポートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "intercept-navigations-and-forms",
+        "category": "feature",
+        "title": "ページナビゲーションとフォーム送信のインターセプト機能",
+        "summary": "ページ遷移およびフォーム送信の割り込み処理に対応しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "graphql-subscriptions",
+        "category": "feature",
+        "title": "GraphQL サブスクリプションのサポート",
+        "summary": "GraphQLサブスクリプションのモック処理に対応しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "url-parser-migration",
+        "category": "feature",
+        "title": "URLパス解析ライブラリの移行",
+        "summary": "`path-to-regexp` から `@msw/url` へ移行しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "remove-unused-deps",
+        "category": "feature",
+        "title": "不要な依存関係の削除",
+        "summary": "`graphql`、`path-to-regexp`、`picocolors`、`statuses`、`strict-event-emitter` などの依存関係を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-plugin",
+        "category": "feature",
+        "title": "MSW用Viteプラグインの追加",
+        "summary": "MSW用の公式Viteプラグインが追加されました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "websocket-error-event",
+        "category": "feature",
+        "title": "websocket:errorイベントの追加",
+        "summary": "WebSocket接続エラーを監視するための `websocket:error` ライフサイクルイベントが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "passthrough-request-headers-modification",
+        "category": "feature",
+        "title": "passthrough時のリクエストヘッダー変更機能",
+        "summary": "パススルーシナリオにおいて割り込んだリクエストのヘッダーを変更できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "websocket-extension-api",
+        "category": "feature",
+        "title": "新しいWebSocket Extension APIの提供",
+        "summary": "カスタム体験を向上させる新しいWebSocket Extension APIを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-beforeunload-worker-unregister",
+        "category": "bugfix",
+        "title": "beforeunloadでのワーカー登録解除の修正",
+        "summary": "`beforeunload` リスナーでページ終了を防止した際にMSWワーカーの登録が解除されてしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-vitest-browser-firefox-failures",
+        "category": "bugfix",
+        "title": "Vitest Browser ModeおよびFirefoxでのテスト失敗の修正",
+        "summary": "`maxWorkers: 1` 設定時のVitest Browser ModeやFirefoxで断続的に発生していたテスト失敗を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-in-flight-requests-on-worker-stop",
+        "category": "bugfix",
+        "title": "worker.stop()前の実行中リクエストの修正",
+        "summary": "`worker.stop()` 呼び出し前に実行された処理中のリクエストが誤ってパススルーされる問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-localstorage-cookie-quota-error",
+        "category": "bugfix",
+        "title": "localStorageクッキー保存時の容量超過エラー修正",
+        "summary": "`localStorage` へのクッキー永続化時に最大容量超過エラーが発生する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-node-network-interception-issues",
+        "category": "bugfix",
+        "title": "Node.jsにおけるネットワーク割り込み処理の不具合修正",
+        "summary": "Node.jsでのネットワーク割り込みに関連する複数の問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "petyosi/react-virtuoso#397788956",
     "library": "React Virtuoso",
     "repository": "petyosi/react-virtuoso",
@@ -377,10 +672,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-167-35-deps-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core が 1.171.33 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673753",
@@ -394,10 +699,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-116739-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.33に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673719",
@@ -411,10 +726,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0.1.58",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "関連するTanStackパッケージ（@tanstack/react-router、@tanstack/router-core等）の依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673689",
@@ -428,10 +753,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみのため、特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "cli-1.167.39-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージである @tanstack/router-generator が 1.167.39 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673651",
@@ -445,10 +780,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8297",
+        "category": "other",
+        "title": "seroval 関連パッケージのアップデート",
+        "summary": "seroval および seroval-plugins を 1.6.2 から 1.6.7 に更新し、TypedArray のガード機能や各種オプション、isStream エクスポートを取り込みました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8460",
+        "category": "bugfix",
+        "title": "所有者のなくなったローダー生成の中止処理の改善",
+        "summary": "インバリデーションにより削除され所有者が存在しなくなった予約済みローダーを中止し、パブリック abort signal が確実にリタイア（終了）するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8519",
+        "category": "bugfix",
+        "title": "BFCache 併用時におけるスクロール復元動作の改善",
+        "summary": "pagehide 発生時（BFCache への保存時を含む）にネイティブのスクロール復元をブラウザ側にハンドリングを戻し、キャッシュされたドキュメントの再開時に手動復元を再請求するようにしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673629",
@@ -462,10 +823,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.168.59",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-routerや@tanstack/start-client-coreなどの関連パッケージの依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#397673615",
@@ -482,7 +853,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-168-38",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core、@tanstack/start-client-core の依存ライブラリバージョンが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#397091252",
@@ -1078,10 +1459,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別に応じた移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-1c9693e",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core をバージョン 5.103.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#396995935",
@@ -1095,10 +1486,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-react-query-5-103-3",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-query が 5.103.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#396995917",
