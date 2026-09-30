@@ -1,5 +1,59 @@
 [
   {
+    "id": "petyosi/react-virtuoso#399309985",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.16",
+    "publishedAt": "2026-09-29T16:01:14Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.16",
+    "releaseNotes": "### Patch Changes\n\n- [#1512](https://github.com/petyosi/react-virtuoso/pull/1512) [`b7238f3`](https://github.com/petyosi/react-virtuoso/commit/b7238f3856ae51afcbf8045a7c61b8f1c42e9a0c) Thanks [@cpruijsen](https://github.com/cpruijsen)! - Map `skipAnimationFrameInResizeObserver` through TableVirtuoso's urx optional props so the table resize observer consumes it instead of leaving the leftover prop on the scroller DOM.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1512",
+        "category": "bugfix",
+        "title": "TableVirtuosoにおけるskipAnimationFrameInResizeObserverプロパティの修正",
+        "summary": "skipAnimationFrameInResizeObserverをTableVirtuosoのurxオプションプロパティ経由でマッピングし、スクローラーDOMに残留せずにテーブルのResizeObserverで適切に消費されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#399309944",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.0",
+    "publishedAt": "2026-09-29T16:01:11Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.0",
+    "releaseNotes": "### Minor Changes\n\n- [#1513](https://github.com/petyosi/react-virtuoso/pull/1513) [`e1735dc`](https://github.com/petyosi/react-virtuoso/commit/e1735dcfe028790d58f7dc64d3ba9b88ae7e8b68) Thanks [@petyosi](https://github.com/petyosi)! - Keep the measured column header at its natural width when a consumer style stretches it with flex-grow or a percentage width. The header's measured width is the column's base width, so a stretched header used to record its grown width as the base, and grow columns never gave the extra width back when the table narrowed. Consumers can set fixed and minimum base widths on the intrinsic header surface.\n\n  Add `containerProps` to `ColumnHeader` for styles, event handlers, and accessibility attributes that must cover the full rendered column width without changing its intrinsic measurement.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1513",
+        "category": "bugfix",
+        "title": "カラムヘッダーの計測幅修正とcontainerPropsの追加",
+        "summary": "flex-growやパーセント幅によって拡張されたカラムヘッダーが自然長を保持するように修正し、テーブル縮小時に幅が戻らない問題を解決しました。また、計測幅に影響を与えずにスタイルやイベントハンドラー等を渡せるcontainerPropsをColumnHeaderに追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "mswjs/msw#398391774",
     "library": "MSW",
     "repository": "mswjs/msw",
@@ -1530,10 +1584,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5.103.3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreおよび@tanstack/query-persist-client-coreをバージョン5.103.3に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#396995771",
@@ -1550,7 +1614,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11647",
+        "category": "bugfix",
+        "title": "codemodsからの不要ファイルのコピーを修正",
+        "summary": "codemodsプロジェクトから不要なファイルがコピーされないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#396995758",
@@ -1564,10 +1638,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-103-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core をバージョン 5.103.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitest-dev/vitest#396457059",
@@ -1581,10 +1665,84 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "0b792",
+        "category": "bugfix",
+        "title": "グローバル上書き時のprocessバインド修正",
+        "summary": "グローバルオブジェクトが上書きされた場合でもprocessが正しくバインドされるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0fd6b",
+        "category": "bugfix",
+        "title": "非同期リーク検出でのprocess.stdio無視",
+        "summary": "detect-async-leaks機能においてprocess.stdioのハンドルを無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "42523",
+        "category": "bugfix",
+        "title": "toMatchObjectと非対称マッチャーの連携修正",
+        "summary": "expectのtoMatchObjectで非対称マッチャーを併用した際の動作不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "d1c3e",
+        "category": "bugfix",
+        "title": "jsdom 28以降でのBlobボディRequest修正",
+        "summary": "jsdom 28以上でBlobボディを持つRequestオブジェクトが正常に動作するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "5b95e",
+        "category": "bugfix",
+        "title": "agentリポーターの--silent対応",
+        "summary": "agentリポーターが--silentフラグを正しく尊重するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "e8e55",
+        "category": "bugfix",
+        "title": "並行createReport呼び出しの処理修正",
+        "summary": "リポーターで並行して呼び出されるcreateReport処理を適切に扱うように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "4e91e",
+        "category": "bugfix",
+        "title": "hanging-processリポーターのESM化",
+        "summary": "hanging-processリポーターがESMエントリーポイントを使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a0a93",
+        "category": "bugfix",
+        "title": "Set.prototype.addスパイ時のスタックオーバーフロー修正",
+        "summary": "Set.prototype.addをスパイした際に発生していたスタックオーバーフローを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f8819",
+        "category": "bugfix",
+        "title": "UI認証クッキーのセッション間保持",
+        "summary": "Vitest UIの認証クッキーが現在のブラウザセッション終了後も保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#395655602",
@@ -10817,10 +10975,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-queryおよび@tanstack/query-devtoolsをバージョン5.102.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730096",
@@ -10891,7 +11059,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-51024",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.102.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376730037",
@@ -10908,7 +11086,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.102.4",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係の更新",
+        "summary": "依存ライブラリである @tanstack/query-core が 5.102.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376729991",
