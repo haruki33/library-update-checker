@@ -1,5 +1,255 @@
 [
   {
+    "id": "TanStack/query#401178371",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-01-1704",
+    "publishedAt": "2026-10-01T17:04:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-01-1704",
+    "releaseNotes": "Release 2026-10-01 17:04\n\n## Changes\n\n### Fix\n\n- solid-query: follow Solid 2.0.0-rc.9 (#11543) (cb63f0707) by @ryansolid\n\n### Refactor\n\n- solid-query: move off sharedConfig onto Solid's public hydration API (#11751) (8a13b15c3) by @ryansolid\n\n\n## Packages\n\n- @tanstack/solid-query@6.0.0-rc.5\n- @tanstack/solid-query-devtools@6.0.0-rc.5\n- @tanstack/solid-query-persist-client@6.0.0-rc.5\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11543",
+        "category": "bugfix",
+        "title": "Solid 2.0.0-rc.9 への追従",
+        "summary": "solid-query を Solid 2.0.0-rc.9 に対応するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11751",
+        "category": "other",
+        "title": "Solid の公開ハイドレーション API への移行",
+        "summary": "solid-query 内で sharedConfig の使用をやめ、Solid の公開ハイドレーション API を利用するようにリファクタリングしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#400943607",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.1",
+    "publishedAt": "2026-10-01T12:25:12Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`fcb22cb`](https://github.com/petyosi/react-virtuoso/commit/fcb22cb8d07b0000c2b887e9cac9354c931c9256)]:\n  - @virtuoso.dev/reactive-engine-core@0.2.1\n  - @virtuoso.dev/reactive-engine-react@1.0.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#400943569",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-core@0.2.1",
+    "publishedAt": "2026-10-01T12:25:09Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-core%400.2.1",
+    "releaseNotes": "### Patch Changes\n\n- [#1517](https://github.com/petyosi/react-virtuoso/pull/1517) [`fcb22cb`](https://github.com/petyosi/react-virtuoso/commit/fcb22cb8d07b0000c2b887e9cac9354c931c9256) Thanks [@petyosi](https://github.com/petyosi)! - Fix derived nodes that kept a stale value after a subscriber published during a cycle. When the outer cycle later recomputed a `combineCells`, `ComputedCell`, or `withLatestFrom` node, it read the value from before the nested publication and overwrote the correct result. `useCellValues` then kept rendering the old value while `useCellValue` showed the new one. A nested cycle now writes its accepted values into every running cycle on the engine, including the values forwarded to child engines.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1517",
+        "category": "bugfix",
+        "title": "サイクル中のサブスクライバー公開による派生ノードの古い値保持問題の修正",
+        "summary": "サイクル中にサブスクライバーが値を公開した際、combineCellsやComputedCellなどの派生ノードが古い値を読み込んで正しい結果を上書きし、useCellValuesが古い値を表示し続ける不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#400850047",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.2",
+    "publishedAt": "2026-10-01T10:14:36Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.2",
+    "releaseNotes": "### Bug Fixes\n\n* **build:** preload CSS correctly when `renderBuiltUrl` returns URLs with queries ([#23611](https://github.com/vitejs/vite/issues/23611)) ([64e0a21](https://github.com/vitejs/vite/commit/64e0a215c24f0522b27b91f93cfd93e317b94481))\n* **bundled-dev:** serve lazy chunk sourcemaps ([#23026](https://github.com/vitejs/vite/issues/23026)) ([eb7aa9a](https://github.com/vitejs/vite/commit/eb7aa9a8816a1e926d5d9b4cbe7e796b61314ce2))\n* **bundled-dev:** serve the rolldown runtime from the installed rolldown ([#23568](https://github.com/vitejs/vite/issues/23568)) ([bc598a6](https://github.com/vitejs/vite/commit/bc598a6a8a6b7d6e157e9f19c16911cff8d2360c))\n* **deps:** update all non-major dependencies ([#23601](https://github.com/vitejs/vite/issues/23601)) ([9944fa6](https://github.com/vitejs/vite/commit/9944fa6033873f13ae88f59e023ab642c50fee2b))\n* **deps:** update rolldown-related dependencies ([#23602](https://github.com/vitejs/vite/issues/23602)) ([88c1741](https://github.com/vitejs/vite/commit/88c17415af221b3a13e778f4f2c0e907c8287baf))\n* **html:** resolve percent-encoded srcset urls ([#23609](https://github.com/vitejs/vite/issues/23609)) ([53f1ce7](https://github.com/vitejs/vite/commit/53f1ce7bfe38426861f6da572ef0e3359f6a80cd))\n* limit size of object and array printing via `forwardConsole` ([#23565](https://github.com/vitejs/vite/issues/23565)) ([e64a587](https://github.com/vitejs/vite/commit/e64a5877dd3e552843a545749ccc257568917d28))\n* merge `build.rolldownOptions.output.minify` correctly ([#23536](https://github.com/vitejs/vite/issues/23536)) ([bba3bb8](https://github.com/vitejs/vite/commit/bba3bb8beedd185948956e02667d450672632d79))\n* **optimize-deps:** avoid \"unsupported\" warnings for browser:false mappings ([#23590](https://github.com/vitejs/vite/issues/23590)) ([5e4b9ca](https://github.com/vitejs/vite/commit/5e4b9ca3dcb24b51f58a765fd2d852614bbf3574))\n* **optimizer:** preserve excluded optional peer require fallbacks ([#23600](https://github.com/vitejs/vite/issues/23600)) ([a2bd6fa](https://github.com/vitejs/vite/commit/a2bd6fa897c35c8a691671a7d70061c1cdd5c688))\n* pass queries to `renderBuiltUrl` ([#23586](https://github.com/vitejs/vite/issues/23586)) ([744269e](https://github.com/vitejs/vite/commit/744269e5b2a155074910ddd275aecf2b83938496))\n* **server:** handle file watcher errors without crashing ([#23503](https://github.com/vitejs/vite/issues/23503)) ([6894f5c](https://github.com/vitejs/vite/commit/6894f5cbceac589536a0efb476d881a47f5ab1c5))\n* **server:** release previous environments after initialization ([#23499](https://github.com/vitejs/vite/issues/23499)) ([5a3a010](https://github.com/vitejs/vite/commit/5a3a010eea4c9ebbdcc080819f93068d4e035bd4))\n* **ssr:** encode whitespace in module runner sourceURL ([#23513](https://github.com/vitejs/vite/issues/23513)) ([bbc8812](https://github.com/vitejs/vite/commit/bbc88129c967a8b8eedebd93acc82bee63b86b2a))\n* **worker:** align worker urls in client and server when using terser ([#23614](https://github.com/vitejs/vite/issues/23614)) ([24bd331](https://github.com/vitejs/vite/commit/24bd3316f3b2503d04a49361e365532bdb335e19))\n\n### Performance Improvements\n\n* avoid encoding intermediate source maps ([#23461](https://github.com/vitejs/vite/issues/23461)) ([89574f6](https://github.com/vitejs/vite/commit/89574f6d940a7273a53c5122a4477285801a696a))\n* **build:** avoid quadratic link scan in the preload helper ([#23510](https://github.com/vitejs/vite/issues/23510)) ([cf5c028](https://github.com/vitejs/vite/commit/cf5c0288d526824aead1b24e977400f13c527927))\n* only register time middleware when debug logging is enabled ([#23621](https://github.com/vitejs/vite/issues/23621)) ([94d0080](https://github.com/vitejs/vite/commit/94d0080345e23d63d4cd02df2f7fa2afae775c26))\n\n### Documentation\n\n* fix dead og-image PNG links in vite6/vite7 changelog entries ([#23594](https://github.com/vitejs/vite/issues/23594)) ([1929b4c](https://github.com/vitejs/vite/commit/1929b4cc5f38ad53781e3b07b8bdaa32cf18da07))\n\n### Miscellaneous Chores\n\n* **deps:** update vitest monorepo to v5 ([#23604](https://github.com/vitejs/vite/issues/23604)) ([24339f4](https://github.com/vitejs/vite/commit/24339f4339d64fd8b5bc37654ac14ccff5aee584))\n\n### Code Refactoring\n\n* use `tinyexec` instead of `cross-spawn` ([#23583](https://github.com/vitejs/vite/issues/23583)) ([db915e5](https://github.com/vitejs/vite/commit/db915e5c0edbe1359dcf0cea340c9571dc7f4ad9))\n\n### Tests\n\n* **bundled-dev:** accept a rolldown dev runtime with no helper imports ([#23606](https://github.com/vitejs/vite/issues/23606)) ([634745d](https://github.com/vitejs/vite/commit/634745dcc5648912bc32cb4de72ed8dd2230efa0))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "vite-8-3-2-bugfix-1",
+        "category": "bugfix",
+        "title": "renderBuiltUrlがクエリ付きURLを返す際のCSSプリロード修正",
+        "summary": "renderBuiltUrlがクエリを含むURLを返す場合でも、CSSが正しくプリロードされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-2",
+        "category": "bugfix",
+        "title": "bundled-devでの遅延ロードチャンクソースマップの提供",
+        "summary": "bundled-devモードにおいて、遅延ロードされるチャンクのソースマップが正しく提供されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-3",
+        "category": "bugfix",
+        "title": "インストールされたRolldownからのランタイム配信",
+        "summary": "bundled-devにおいて、インストールされているRolldownパッケージから直接Rolldownランタイムを提供するように変更されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-4",
+        "category": "bugfix",
+        "title": "非メジャー依存関係の更新",
+        "summary": "すべての非メジャー依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-5",
+        "category": "bugfix",
+        "title": "Rolldown関連の依存関係の更新",
+        "summary": "Rolldownに関連する依存関係を最新版に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-6",
+        "category": "bugfix",
+        "title": "パーセントエンコードされたsrcset URLの解決",
+        "summary": "HTML内のパーセントエンコードされたsrcset URLが正しく解決されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-7",
+        "category": "bugfix",
+        "title": "forwardConsole経由のオブジェクト・配列出力サイズの制限",
+        "summary": "forwardConsole経由でログ出力されるオブジェクトおよび配列の出力サイズを制限するようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-8",
+        "category": "bugfix",
+        "title": "build.rolldownOptions.output.minifyのマージ処理の修正",
+        "summary": "build.rolldownOptions.output.minifyの設定が正しくマージされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-9",
+        "category": "bugfix",
+        "title": "browser:falseマッピングに対する警告の回避",
+        "summary": "optimize-deps処理において、browser:falseマッピングに対して非推奨警告が発生しないよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-10",
+        "category": "bugfix",
+        "title": "除外されたオプショナルピアrequireフォールバックの保持",
+        "summary": "オプショナルなピア依存関係の除外設定時にフォールバック処理が保持されるよう最適化処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-11",
+        "category": "bugfix",
+        "title": "renderBuiltUrlへのクエリ文字列の引き渡し",
+        "summary": "renderBuiltUrlフックに対してクエリ文字列が正しく渡されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-12",
+        "category": "bugfix",
+        "title": "ファイルウォッチャーエラー発生時のクラッシュ防止",
+        "summary": "サーバーのファイル監視処理でエラーが発生しても、開発サーバーがクラッシュしないようエラーハンドリングを強化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-13",
+        "category": "bugfix",
+        "title": "初期化後の以前の環境の解放",
+        "summary": "環境の初期化完了後に、以前の不要な環境インスタンスを正しく解放してメモリリソースを解放するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-14",
+        "category": "bugfix",
+        "title": "SSRモジュールランナーのsourceURLの空白エンコード",
+        "summary": "SSRのモジュールランナーで使用されるsourceURL内の空白文字が正しくエンコードされるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-bugfix-15",
+        "category": "bugfix",
+        "title": "Terser使用時のクライアント/サーバー間Worker URL整合性の確保",
+        "summary": "Terserを使用したビルドにおいて、クライアント側とサーバー側のWorker URLが一致するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-perf-1",
+        "category": "performance",
+        "title": "中間ソースマップエンコードの回避",
+        "summary": "ビルド処理における中間ソースマップのエンコード処理を省略し、パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-perf-2",
+        "category": "performance",
+        "title": "プリロードヘルパーでのリンク走査計算量の削減",
+        "summary": "プリロードヘルパーにおけるリンクの二次走査（O(n^2)）を回避し、処理速度を改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-perf-3",
+        "category": "performance",
+        "title": "デバッグログ有効時のみタイムミドルウェアを登録",
+        "summary": "デバッグログが無効な場合はタイム計測ミドルウェアの登録をスキップすることでパフォーマンスを最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-8-3-2-other-1",
+        "category": "other",
+        "title": "ドキュメントおよびその他の変更",
+        "summary": "チェンジログ内のリンク修正、Vitest monorepo v5への更新、tinyexecへのリファクタリング、テストの追加が含まれています。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "microsoft/TypeScript#400357206",
     "library": "TypeScript",
     "repository": "microsoft/TypeScript",
@@ -151,7 +401,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-1-168-60",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-router や @tanstack/start-plugin-core などの関連依存パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293896",
@@ -338,7 +598,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1.167.36-dep-update-router-core",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.34に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293574",
@@ -352,10 +622,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8573",
+        "category": "bugfix",
+        "title": "サーバー関数のリクエスト・レスポンス処理の統一",
+        "summary": "サーバー関数におけるリクエストおよびレスポンスのハンドリング処理が一致するよう統一されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293538",
@@ -369,10 +649,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.167.39",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-start、@tanstack/solid-start、@tanstack/start-client-core への依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293504",
@@ -386,10 +676,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "d521abd",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-core)",
+        "summary": "@tanstack/router-core がバージョン 1.171.34 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293391",
@@ -403,10 +703,52 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8529",
+        "category": "performance",
+        "title": "無効なラッパーコンポーネントのレンダリング回避",
+        "summary": "非アクティブなラッパーコンポーネントをレンダリングする代わりに、有効なルートバウンダリのみを合成するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8568",
+        "category": "bugfix",
+        "title": "TanStack Storeの更新による不要な通知の防止",
+        "summary": "TanStack Storeを0.11.2に更新し、サブスクリプションオブザーバー内の無関係なatom読み取りによって不要な再通知が発生する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8530",
+        "category": "other",
+        "title": "ルートマッチコンテキストプロバイダーの統合",
+        "summary": "ルートシェル内のマッチコンテキストを維持しながら、ルートマッチコンテキストプロバイダーを統合・整理しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8522",
+        "category": "performance",
+        "title": "Linkの判定結果の再利用による処理最適化",
+        "summary": "ヒストリのhrefフォーマットを維持しつつ、ロケーション更新をまたいでLinkのhref分類やアクティブ/非アクティブ状態の計算結果を再利用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-8521abd",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-coreを1.171.34に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#400293351",
