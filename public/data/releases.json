@@ -1,5 +1,49 @@
 [
   {
+    "id": "TanStack/query#402676418",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-03-2018",
+    "publishedAt": "2026-10-03T20:18:42Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-03-2018",
+    "releaseNotes": "Release 2026-10-03 20:18\n\n## Changes\n\n### Fix\n\n- angular: add theme option in devtools (#11786) (afdf6173e) by @benjavicente\n\n\n## Packages\n\n- @tanstack/angular-query@5.0.0-rc.1\n- @tanstack/angular-query-devtools@5.0.0-rc.1\n- @tanstack/angular-query-persist-client@5.0.0-rc.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "mswjs/msw#402262745",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.2",
+    "publishedAt": "2026-10-03T01:30:56Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.2",
+    "releaseNotes": "## v3.0.2 (2026-10-03)\n\n### Bug Fixes\n\n- **vite:** support `virtual:msw` imports in vitest (#2802) (e73c381e3adc0848fcf9a7ef291b614b06a0d92b) @kettanaito",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "vite-virtual-msw-vitest-support",
+        "category": "bugfix",
+        "title": "Vitestにおけるvirtual:mswインポートのサポート",
+        "summary": "Vitest環境下でvirtual:mswのインポートが機能するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "eslint/eslint#402121074",
     "library": "ESLint",
     "repository": "eslint/eslint",
@@ -152,10 +196,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-104-1",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core を 5.104.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401710122",
@@ -277,10 +331,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-104-1",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係の更新",
+        "summary": "依存ライブラリである @tanstack/query-core を 5.104.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709797",
@@ -294,10 +358,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11799",
+        "category": "bugfix",
+        "title": "DevToolsコンテキストにおけるシグナルとサブスクリプションの分離",
+        "summary": "DevToolsコンテキスト全体で使用されるシグナルとサブスクリプションを分離・独立させました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709767",
@@ -311,10 +385,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-104-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreが5.104.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709728",
