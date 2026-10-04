@@ -1,5 +1,483 @@
 [
   {
+    "id": "TanStack/table#403138980",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:45Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": true,
+    "impact": "low",
+    "migration": {
+      "required": true,
+      "summary": "個別のスキル権限や明示的なエージェントマッピングを行っている場合、廃止されたIDの更新が必要です。",
+      "steps": [
+        "廃止された機能およびコンポジションIDを対応する所有エントリーポイントに置き換える",
+        "Agent Skillsガイドに従ってIntentマッピングをリフレッシュする"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "other",
+        "title": "Intentスキルのエントリーポイント分割とリファクタリング",
+        "summary": "バンドルされたIntentスキルを小さなエントリーポイントにリファクタリングしました。個別のスキル権限や明示的なエージェントマッピングを使用している場合は、廃止されたIDの置換とマッピングの更新が必要です。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "update-dep-table-core-9.2.6",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/table-core が v9.2.6 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138965",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:42Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "個別のスキル権限や明示的なエージェントマッピングを使用している場合は、廃止された機能・構成IDを所有するエントリーポイントに置き換える必要があります。",
+      "steps": [
+        "廃止された機能および構成IDを対象のエントリーポイントに置き換えます。",
+        "Intentマッピングを再読み込み・更新します。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "breaking",
+        "title": "Intentスキルのエントリーポイントの分割とリファクタリング",
+        "summary": "同梱されているIntentスキルをより小さなエントリーポイントに再構成しました。これに伴い廃止された機能や構成IDを使用している場合はIDの差し替えとマッピングの更新が必要です。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "update-dep-table-core-9.2.6",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core を 9.2.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138954",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/octane-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:39Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/octane-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "Intentスキルの権限設定や明示的なエージェントマッピングを使用している場合、IDの置き換えとマッピングの更新が必要です。",
+      "steps": [
+        "廃止された機能および構成IDを、対応する新しいエントリポイントに置き換えます。",
+        "Intentマッピングをリフレッシュします。詳細はAgent Skillsガイドを参照してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "breaking",
+        "title": "Intentスキルのリファクタリングとエントリポイントの分離",
+        "summary": "バンドルされたIntentスキルをより小さなエントリポイントに分割・整理しました。個別スキルの権限や明示的なエージェントマッピングを設定している場合は、廃止された機能/構成IDの変更とIntentマッピングの更新が必要です。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "dep-update-9.2.6",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/table-coreをバージョン9.2.6に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138937",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/lit-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:36Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/lit-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "個別のスキル権限や明示的なエージェントマッピングを使用している場合、エントリーポイントの置換とマッピングの更新が必要です。",
+      "steps": [
+        "廃止された機能/構成IDを、それらを所有するエントリーポイントに置き換えます。",
+        "Intentマッピングを更新します。詳細はAgent Skillsガイドを参照してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "other",
+        "title": "Intentスキルのリファクタリングとエントリーポイントの分割",
+        "summary": "バンドルされたIntentスキルを小さなエントリーポイントにリファクタリングしました。個別のスキル権限やエージェントマッピングを使用している場合は、廃止されたIDを新しいエントリーポイントに置き換えてIntentマッピングを更新する必要があります。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "deps-table-core-9.2.6",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-coreがバージョン9.2.6に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138918",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/ember-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:33Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/ember-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "Intentスキルのエントリポイント再構成に伴い、設定されている機能・構成IDの更新が必要になります。",
+      "steps": [
+        "個別のスキル権限や明示的なエージェントマッピングを使用している場合、廃止された機能/構成IDをそのエントリポイントに置き換えます。",
+        "Intentマッピングをリフレッシュします。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "other",
+        "title": "Intentスキルのリファクタリングと細分化",
+        "summary": "バンドルされたIntentスキルをより小さなエントリポイントにリファクタリングしました。個別のスキル権限やエージェントマッピングを使用している構成では、旧IDから親エントリポイントへの置き換えが必要です。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "deps-9.2.6",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-coreを9.2.6に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138863",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/alpine-table@9.2.6",
+    "publishedAt": "2026-10-04T17:56:24Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/alpine-table%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.\n\n- Updated dependencies [[`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4)]:\n  - @tanstack/table-core@9.2.6",
+    "breaking": false,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "個別スキル権限や明示的なエージェントマッピングを使用している場合、設定の移行が必要です。",
+      "steps": [
+        "廃止された機能および構成IDを、それらを所有する新しいエントリーポイントに置き換えます。",
+        "Agent Skills ガイドに従って Intent マッピングを更新・再読み込みします。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "other",
+        "title": "Intent skill のエントリーポイント再構成",
+        "summary": "バンドルされた Intent skill をより小さなエントリーポイントに分割し、現在のタスクに必要な参照を読み込むように再構成しました。個別スキル権限やエージェントマッピングを利用している消費者は設定の更新が必要です。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "deps-table-core-926",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core を 9.2.6 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138836",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-core@9.2.6",
+    "publishedAt": "2026-10-04T17:56:21Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-core%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.",
+    "breaking": true,
+    "impact": "low",
+    "migration": {
+      "required": true,
+      "summary": "個別スキル権限や明示的なエージェントマッピングを利用している場合は、廃止されたIDの変更とIntentマッピングの更新が必要です。",
+      "steps": [
+        "廃止された機能・構成IDを、所有するエントリーポイントに置き換えます。",
+        "Intentマッピングを更新・リフレッシュします。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "other",
+        "title": "バンドルされたIntentスキルのエントリーポイント分割とリファクタリング",
+        "summary": "バンドルされたIntentスキルをより小さなエントリーポイントに分割しました。これに伴い廃止されたIDを使用している場合は、置き換えとマッピングの更新が必要です。",
+        "impact": "low",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#403138825",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/match-sorter-utils@9.2.6",
+    "publishedAt": "2026-10-04T17:56:18Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/match-sorter-utils%409.2.6",
+    "releaseNotes": "### Patch Changes\n\n- [#6611](https://github.com/TanStack/table/pull/6611) [`b9b007f`](https://github.com/TanStack/table/commit/b9b007fa038328a795d1f3b5e8f80cea8a55a3b4) - Refactor bundled Intent skills into smaller entry points with references loaded for the current task. Keep core feature architecture and shared state directly discoverable, and move individual features, adapter compositions, and detailed migration guidance into references.\n\n  Consumers with individual skill permissions or explicit agent mappings must replace retired feature/composition IDs with their owning entry points and refresh Intent mappings. See the Agent Skills guide for the replacement paths.",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "非推奨になった機能および構成IDを所有エントリーポイントへ置き換え、Intentマッピングを更新する必要があります。",
+      "steps": [
+        "廃止された機能/構成IDを該当するエントリーポイントに置き換えます。",
+        "Intentマッピングを最新の状態に更新します。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "6611",
+        "category": "breaking",
+        "title": "Intentスキルのエントリーポイント分割とID構成の刷新",
+        "summary": "Intentスキルを小さなエントリーポイントにリファクタリングしました。個別スキル権限や明示的なエージェントマッピングを利用している場合、廃止されたIDの置き換えとマッピングの更新が必要です。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#402838366",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table-devtools@9.2.5",
+    "publishedAt": "2026-10-04T04:21:18Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table-devtools%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-devtools@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-e9158e7",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtools をバージョン 9.2.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#402838343",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table-devtools@9.2.5",
+    "publishedAt": "2026-10-04T04:21:15Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table-devtools%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-devtools@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-925",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtools がバージョン 9.2.5 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#402838308",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-devtools@9.2.5",
+    "publishedAt": "2026-10-04T04:21:06Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-devtools%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838267",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:57Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838260",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:54Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838249",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/octane-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:51Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/octane-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838233",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/lit-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:48Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/lit-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838223",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/ember-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:45Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/ember-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838196",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/alpine-table@9.2.5",
+    "publishedAt": "2026-10-04T04:20:39Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/alpine-table%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.\n- Updated dependencies [[`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2)]:\n  - @tanstack/table-core@9.2.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#402838184",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-core@9.2.5",
+    "publishedAt": "2026-10-04T04:20:36Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-core%409.2.5",
+    "releaseNotes": "### Patch Changes\n\n- [#6609](https://github.com/TanStack/table/pull/6609) [`e9158e7`](https://github.com/TanStack/table/commit/e9158e7be837525ab99abd78550266d7cdcc58b2) - Update TanStack Store dependencies to the latest compatible patch releases.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#402676418",
     "library": "TanStack Query",
     "repository": "TanStack/query",
