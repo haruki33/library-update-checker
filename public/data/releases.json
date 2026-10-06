@@ -373,7 +373,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store依存関係の更新",
+        "summary": "TanStack Storeの依存関係を最新の互換性のあるパッチリリースに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838260",
@@ -387,10 +397,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store依存関係の更新",
+        "summary": "TanStack Storeの依存関係を互換性のある最新のパッチリリースに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838249",
@@ -404,10 +424,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store 依存関係の更新",
+        "summary": "TanStack Store の依存関係を最新の互換性のあるパッチリリースに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838233",
@@ -424,7 +454,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store依存関係の更新",
+        "summary": "TanStack Storeの依存関係を最新の互換性のあるパッチリリースに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838223",
@@ -441,7 +481,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store 依存関係の更新",
+        "summary": "TanStack Store 依存関係および @tanstack/table-core を最新の互換パッチバージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838196",
@@ -458,7 +508,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store依存関係の更新",
+        "summary": "TanStack Storeの依存関係を最新の互換性のあるパッチリリースへ更新しました。また、内部依存の@tanstack/table-coreも9.2.5に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#402838184",
@@ -472,10 +532,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6609",
+        "category": "other",
+        "title": "TanStack Store依存関係の更新",
+        "summary": "TanStack Store依存関係を最新の互換性のあるパッチリリースに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#402676418",
@@ -489,10 +559,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "angular-devtools-theme-option-11786",
+        "category": "bugfix",
+        "title": "Angular Query DevToolsにテーマオプションを追加",
+        "summary": "Angular Query DevToolsにテーマ設定オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "mswjs/msw#402262745",
