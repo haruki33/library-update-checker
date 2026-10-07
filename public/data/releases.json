@@ -1,5 +1,127 @@
 [
   {
+    "id": "vitejs/vite#404359241",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v6.4.4",
+    "publishedAt": "2026-10-06T05:45:15Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v6.4.4",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v6.4.4/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースに関する詳細情報が記載されていないため、移行手順はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#404335989",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v7.3.7",
+    "publishedAt": "2026-10-06T05:07:26Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v7.3.7",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v7.3.7/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitejs/vite#404324800",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.1.6",
+    "publishedAt": "2026-10-06T04:48:45Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.1.6",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.1.6/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "詳細なリリースノートが記載されていないため、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#404320540",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.2.4",
+    "publishedAt": "2026-10-06T04:42:58Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.2.4",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.2.4/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#404302000",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.3",
+    "publishedAt": "2026-10-06T04:07:42Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.3",
+    "releaseNotes": "### Bug Fixes\r\n\r\n* **deps:** update launch-editor to v2.14.2 ([#23654](https://github.com/vitejs/vite/issues/23654)) ([22fd1d5](https://github.com/vitejs/vite/commit/22fd1d5238cce2ee9db0eb4122f9e8feb6b06097))\r\n* **html:** filename passed to transformIndexHtml should not include queries ([#23653](https://github.com/vitejs/vite/issues/23653)) ([7dafd8e](https://github.com/vitejs/vite/commit/7dafd8e56f152403a3230608fa4005273c2e9e17))\r\n* **server:** check `fs.serve` for `?vite-wasm-instance` ([#23655](https://github.com/vitejs/vite/issues/23655)) ([ba8b7ab](https://github.com/vitejs/vite/commit/ba8b7ab43b4afa5d0292ab4b6e3a7b5033cc9c73))\r\n* **server:** store ids to `safeModulePaths` rather than URLs ([#23656](https://github.com/vitejs/vite/issues/23656)) ([c3e06f9](https://github.com/vitejs/vite/commit/c3e06f92e969952466b4e2f5801e85e1e00cd905))\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う特別な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-launch-editor-2142",
+        "category": "bugfix",
+        "title": "launch-editor の依存パッケージ更新",
+        "summary": "launch-editor を v2.14.2 にアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "html-transform-index-filename-query",
+        "category": "bugfix",
+        "title": "transformIndexHtml のファイル名からクエリ文字列を除去",
+        "summary": "transformIndexHtml フックに渡される filename パラメータにクエリが含まれないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "server-fs-serve-wasm-instance",
+        "category": "bugfix",
+        "title": "?vite-wasm-instance リクエストの fs.serve チェック修正",
+        "summary": "?vite-wasm-instance クエリを持つリクエストに対して fs.serve の制限チェックが行われるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "server-safe-module-paths-id",
+        "category": "bugfix",
+        "title": "safeModulePaths へのパス保存方法の修正",
+        "summary": "safeModulePaths に URL ではなく ID を保存するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/table#403138980",
     "library": "TanStack Table",
     "repository": "TanStack/table",
@@ -613,10 +735,100 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新に伴う移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "4618052",
+        "category": "feature",
+        "title": "new-cap ルールでのアストラル文字のサポート",
+        "summary": "new-cap ルールでアストラル文字を適切に扱えるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "4ec5168",
+        "category": "feature",
+        "title": "SourceCode#getText() でトークンやコメントの受け入れを許可",
+        "summary": "SourceCode#getText() メソッドにトークンやコメントノードを渡せるよう拡張しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bc51eee",
+        "category": "bugfix",
+        "title": "prefer-arrow-callback ルールの条件式テストでの偽陽性の修正",
+        "summary": "条件式テスト内における prefer-arrow-callback ルールの誤検知を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bbff86c",
+        "category": "bugfix",
+        "title": "max-lines-per-function ルールでの複数コメント行の処理修正",
+        "summary": "max-lines-per-function ルールにおいて、1行に複数のコメントが存在する場合の処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "efc4d6b",
+        "category": "bugfix",
+        "title": "consistent-return、no-eval、no-invalid-this でのアストラル文字の処理修正",
+        "summary": "consistent-return、no-eval、no-invalid-this 各ルールにおけるアストラル文字の扱いを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "93de066",
+        "category": "bugfix",
+        "title": "prefer-exponentiation-operator ルールで async 関数を基数とする自動修正の修正",
+        "summary": "prefer-exponentiation-operator ルールの自動修正において、async 関数が基数になる場合の自動修正結果を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "02e34ff",
+        "category": "bugfix",
+        "title": "curly ルールの自動修正における else 後のスペース補正",
+        "summary": "curly ルールの自動修正時に else の直後に必要なスペースを追加するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b14b8bc",
+        "category": "bugfix",
+        "title": "id-length ルールにおける長いプライベート名の警告メッセージ修正",
+        "summary": "長いプライベート識別子名に対する id-length ルールのメッセージ表記を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "69aac01",
+        "category": "bugfix",
+        "title": "getFunctionHeadLoc での TSFunctionType のサポート",
+        "summary": "getFunctionHeadLoc ユーティリティで TSFunctionType を適切に処理できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "686630e",
+        "category": "bugfix",
+        "title": "no-loss-of-precision ルールにおける 0.e5 の誤検知修正",
+        "summary": "no-loss-of-precision ルールで 0.e5 に対する誤検知を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bfaea12",
+        "category": "performance",
+        "title": "languageOptions ごとの正規化設定グローバルのキャッシュ化",
+        "summary": "languageOptions に応じて正規化された設定グローバルをキャッシュすることで処理速度を向上させました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401710536",
@@ -973,7 +1185,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-51041",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core のバージョンが 5.104.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709682",
@@ -990,7 +1212,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-104-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreが5.104.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709638",
@@ -1004,10 +1236,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更がないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#401709600",
