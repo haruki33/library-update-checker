@@ -1,5 +1,332 @@
 [
   {
+    "id": "TanStack/table#407286291",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table-devtools@9.2.8",
+    "publishedAt": "2026-10-08T21:41:05Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table-devtools%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-devtools@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-table-devtools-9.2.8",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-devtools がバージョン 9.2.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407286250",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table-devtools@9.2.8",
+    "publishedAt": "2026-10-08T21:41:02Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table-devtools%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-devtools@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "f1c3409-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtoolsがバージョン9.2.8に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407286161",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-devtools@9.2.8",
+    "publishedAt": "2026-10-08T21:40:53Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-devtools%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- [#6623](https://github.com/TanStack/table/pull/6623) [`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e) - Improve tree-shaking. Importing one built-in `filterFn_*`, `sortFn_*`, or `aggregationFn_*` now bundles only that function instead of its whole module. The core row model, header building, and the filtered, sorted, and grouped row models no longer import code from features a table doesn't register, so a minimal table is about 0.6 kB (brotli) smaller and grouping without `rowAggregationFeature` no longer bundles the aggregation executor. Add `table.autoResetSorting()`, and fix the `Table_RowPagination` type to declare the `autoResetPageIndex` method the table actually has (it was typed as `_autoResetPageIndex`).\n\n  The devtools Features panel now shows measured minified + brotli sizes for every feature, row model, and built-in function, and its total accounts for code that features share.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-6623-tree-shaking",
+        "category": "performance",
+        "title": "ツリーシェイキングの改善によるバンドルサイズの削減",
+        "summary": "使用していない機能や個別の組み込み関数（filterFn, sortFn, aggregationFnなど）が不要にバンドルされないよう改善され、最小構成のテーブルサイズが約0.6kB削減されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-6623-api-type-fix",
+        "category": "bugfix",
+        "title": "table.autoResetSorting の追加と Table_RowPagination 型の修正",
+        "summary": "table.autoResetSorting() メソッドが追加され、Table_RowPagination 型における autoResetPageIndex メソッドの型定義不整合が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-6623-devtools",
+        "category": "feature",
+        "title": "Devtools Featuresパネルのサイズ計測表示機能の強化",
+        "summary": "DevtoolsのFeaturesパネルにて、機能や行モデル、ビルトイン関数ごとの詳細なサイズ（minified + brotli）が表示されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407286079",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:44Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-table-core-928",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core がバージョン 9.2.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407286046",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:41Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "f1c3409bb4aae6c07ebb1cb0a0723372ed64223e",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-core がバージョン 9.2.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407286012",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/octane-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:38Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/octane-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-table-core-9.2.8",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-coreがバージョン9.2.8に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407285985",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/lit-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:35Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/lit-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-table-core-928",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core が 9.2.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407285949",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/ember-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:32Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/ember-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-table-core-928",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/table-core)",
+        "summary": "@tanstack/table-core がバージョン 9.2.8 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407285886",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/alpine-table@9.2.8",
+    "publishedAt": "2026-10-08T21:40:26Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/alpine-table%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e)]:\n  - @tanstack/table-core@9.2.8",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-table-core-9.2.8",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-core をバージョン 9.2.8 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#407285853",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-core@9.2.8",
+    "publishedAt": "2026-10-08T21:40:23Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-core%409.2.8",
+    "releaseNotes": "### Patch Changes\n\n- [#6623](https://github.com/TanStack/table/pull/6623) [`f1c3409`](https://github.com/TanStack/table/commit/f1c3409bb4aae6c07ebb1cb0a0723372ed64223e) - Improve tree-shaking. Importing one built-in `filterFn_*`, `sortFn_*`, or `aggregationFn_*` now bundles only that function instead of its whole module. The core row model, header building, and the filtered, sorted, and grouped row models no longer import code from features a table doesn't register, so a minimal table is about 0.6 kB (brotli) smaller and grouping without `rowAggregationFeature` no longer bundles the aggregation executor. Add `table.autoResetSorting()`, and fix the `Table_RowPagination` type to declare the `autoResetPageIndex` method the table actually has (it was typed as `_autoResetPageIndex`).\n\n  The devtools Features panel now shows measured minified + brotli sizes for every feature, row model, and built-in function, and its total accounts for code that features share.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "6623-tree-shaking",
+        "category": "performance",
+        "title": "ツリーシェイキングの改善とバンドルサイズの削減",
+        "summary": "組み込み関数や未登録機能のコードが不要にバンドルされないようツリーシェイキングを改善し、最小構成でのバンドルサイズを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6623-auto-reset-sorting",
+        "category": "feature",
+        "title": "table.autoResetSorting() メソッドの追加",
+        "summary": "テーブルに autoResetSorting() メソッドを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6623-row-pagination-type-fix",
+        "category": "bugfix",
+        "title": "Table_RowPagination 型定義の修正",
+        "summary": "Table_RowPagination 型にて autoResetPageIndex メソッドが _autoResetPageIndex と誤って定義されていた不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6623-devtools-features-panel",
+        "category": "feature",
+        "title": "devtools Features パネルにおけるサイズ表示機能の機能拡張",
+        "summary": "devtools の Features パネルで各機能・行モデル・組み込み関数の計測サイズおよび全体合計サイズを表示するようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#406783064",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.4",
+    "publishedAt": "2026-10-08T12:03:54Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.4",
+    "releaseNotes": "### Features\n\n* **bundled-dev:** support `import.meta.hot.acceptExports` ([#23463](https://github.com/vitejs/vite/issues/23463)) ([bc0f21c](https://github.com/vitejs/vite/commit/bc0f21c56a2e003a4d2dd23ccb9da3ec8c706c4e))\n\n### Bug Fixes\n\n* avoid mutating hmr defaults (fix [#23575](https://github.com/vitejs/vite/issues/23575)) ([#23576](https://github.com/vitejs/vite/issues/23576)) ([574d5e3](https://github.com/vitejs/vite/commit/574d5e351905fe99891364d03c2440531378f7fd))\n* **build:** correct preloads when chunkImportMap is enabled with non-root base ([#23698](https://github.com/vitejs/vite/issues/23698)) ([2a8c0f0](https://github.com/vitejs/vite/commit/2a8c0f05c76e35c43ab3560984a5103c8db8dbcd))\n* **build:** wait for in-flight stylesheets in preload helper (fix [#23652](https://github.com/vitejs/vite/issues/23652)) ([#23662](https://github.com/vitejs/vite/issues/23662)) ([036b745](https://github.com/vitejs/vite/commit/036b74599b2fe1d8c61475371b856ceb88d26963))\n* **bundled-dev:** serve `/@vite/client` and stub `@vite/env` ([#23664](https://github.com/vitejs/vite/issues/23664)) ([5afc5a8](https://github.com/vitejs/vite/commit/5afc5a8876624888fc1e8f43fed1c85c4b0e830b))\n* **client:** skip rewriting unchanged adopted styles ([#23697](https://github.com/vitejs/vite/issues/23697)) ([fa71469](https://github.com/vitejs/vite/commit/fa7146938b0ca703653c90c20907191a01c032ba))\n* **css:** resolve imported preprocessors from their file path with lightningcss ([#23688](https://github.com/vitejs/vite/issues/23688)) ([cf52011](https://github.com/vitejs/vite/commit/cf52011c46409a4a45f3d74bba631b8f005c4bc9))\n* **deps:** update all non-major dependencies ([#23648](https://github.com/vitejs/vite/issues/23648)) ([8a4c19c](https://github.com/vitejs/vite/commit/8a4c19cfc035f2dd203f2fa6d00ab9256a5e77c9))\n* **deps:** update rolldown-related dependencies ([#23649](https://github.com/vitejs/vite/issues/23649)) ([794516d](https://github.com/vitejs/vite/commit/794516d50cff80e405bc9b3e5faac1c82987566c))\n* **dev:** a restart requested during a restart used to be dropped (fix [#23392](https://github.com/vitejs/vite/issues/23392)) ([#23484](https://github.com/vitejs/vite/issues/23484)) ([70d56ea](https://github.com/vitejs/vite/commit/70d56ea1848909edab416934f3f68ce14343eb73))\n* don't treat modules ending with js-like query as js ([#23687](https://github.com/vitejs/vite/issues/23687)) ([fcb6f12](https://github.com/vitejs/vite/commit/fcb6f1252a95857823d935f98554b938888d41a0))\n* **html:** avoid adding filesystem root to watcher ([#23689](https://github.com/vitejs/vite/issues/23689)) ([3a7f2ae](https://github.com/vitejs/vite/commit/3a7f2aea757d59bae66ad6edf6b321d26a7e6778))\n* **html:** skip caching CSS of chunks in a cycle (fix [#23628](https://github.com/vitejs/vite/issues/23628)) ([#23636](https://github.com/vitejs/vite/issues/23636)) ([15d82f7](https://github.com/vitejs/vite/commit/15d82f7dc679ab9c18d5ce2c3711157c2365ddd1))\n* **optimizer:** scan deep imports with custom extensions ([#23678](https://github.com/vitejs/vite/issues/23678)) ([8579189](https://github.com/vitejs/vite/commit/8579189bae8626b6ddab55a09325e209d62e027e))\n* remove input option unescaping for now ([#23694](https://github.com/vitejs/vite/issues/23694)) ([facc2fb](https://github.com/vitejs/vite/commit/facc2fb1fffce03d9e2dd7011d0bd0eeddc7d0f6))\n* **server:** match static aliases on path boundaries ([#23643](https://github.com/vitejs/vite/issues/23643)) ([b28db28](https://github.com/vitejs/vite/commit/b28db28e9e62d9866a9a0f1b22e74589cc180577))\n* **watcher:** normalize file before root check in `ensureWatchedFile` ([#23673](https://github.com/vitejs/vite/issues/23673)) ([12bb28c](https://github.com/vitejs/vite/commit/12bb28c22379c8d2fe90088fa0eefbfa2ab3fb80))\n\n### Performance Improvements\n\n* **module-runner:** skip cloning call sites that have no source map ([#23646](https://github.com/vitejs/vite/issues/23646)) ([3d67486](https://github.com/vitejs/vite/commit/3d674869a50a0bca84a8cc8dc55bd35d57100e37))\n\n### Code Refactoring\n\n* **bundled-dev:** import CSS HMR helpers from `/@vite/client` ([#23674](https://github.com/vitejs/vite/issues/23674)) ([182f5b2](https://github.com/vitejs/vite/commit/182f5b2a65391da5bee05f9c3df1aeb3794e98d9))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "vitejs/vite#404359241",
     "library": "Vite",
     "repository": "vitejs/vite",
