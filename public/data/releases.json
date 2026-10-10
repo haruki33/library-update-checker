@@ -1,5 +1,64 @@
 [
   {
+    "id": "mui/material-ui#407743701",
+    "library": "Material UI",
+    "repository": "mui/material-ui",
+    "version": "v9.5.0",
+    "publishedAt": "2026-10-09T09:47:44Z",
+    "url": "https://github.com/mui/material-ui/releases/tag/v9.5.0",
+    "releaseNotes": "A big thanks to the 28 contributors who made this release possible. Here are some highlights ✨:\r\n\r\n- ⚙️ Support [values other than raw options](https://mui.com/material-ui/react-autocomplete/#object-options-with-primitive-values) for Autocomplete via the `getOptionValue` prop.\r\n\r\n### `@mui/material@9.5.0`\r\n\r\n- Add missing override interfaces for `slotProps` (#49345) @sai6855\r\n- Export private focus-visible utilities (#49139) @siriwatknp\r\n- Fix `onClose` types for Menu, Snackbar, and SwipeableDrawer (#49351) @Janpot\r\n- Fix slot handling in Autocomplete chips, TextField `inputLabel`, and NativeSelect `input` (#49354) @Janpot\r\n- Fix theme `defaultProps` and missing exports (#49342) @Janpot\r\n- Remove unnecessary `Omit` types (#49338) @sai6855\r\n- [autocomplete] Lazily derive the initial input value (#49192) @OskarEichler\r\n- [autocomplete] Prevent crash when changing `groupBy` (#49150) @silviuaavram\r\n- [autocomplete] Stop filtering once the result limit is reached (#49312) @valkiara\r\n- [autocomplete] Support values other than raw options (#49313) @silviuaavram\r\n- [avatargroup] Improve TypeScript performance when using `slotProps` (#49213) (#49215) @sai6855\r\n- [bottomnavigationaction] Document the `selected` prop (#49190) (#49196) @sai6855\r\n- [breadcrumbs] Build separators in one pass (#49058) @OskarEichler\r\n- [button] Fix loading-position style leaking to non-loading buttons (#49182) @siriwatknp\r\n- [button] Simplify `ExtendButton` type (#49366) @sai6855\r\n- [buttonbase] Fix LazyRipple retaining event objects when ripples are disabled (#49000) @dizhurnikita\r\n- [checkbox] Set the native indeterminate state on the input (#49053) @lazerg\r\n- [dialogcontent] Render the `theme.focusVisible` ring on the scrollable content (#49319) @siriwatknp\r\n- [inputbase] Fix `slotProps.input` event handlers and ref being ignored (#49341) @Janpot\r\n- [link] Remove unwanted `Omit` type (#49339) @sai6855\r\n- [link] Revert to `color-mix` when underline color is not accepted (#49077) @silviuaavram\r\n- [modal] Prevent `aria-hidden` from being applied to non-portal modals (#49195) @ZeeshanTamboli\r\n- [select] Fix flaky opening mouseup timing (#49024) @michelengelen\r\n- [skeleton] Fix the background fallback with CSS theme variables (#49367) @aarongarciah\r\n- [slider] Fix `disableSwap` when a neighboring thumb is at 0 (#49246) @kwy404\r\n- [snackbar][speeddial] Remove unnecessary `Omit` in props definitions (#49272) @sai6855\r\n- [speeddial] Fix horizontal persistent tooltip placement (#49238) @Cunninger\r\n- [speeddial] Support action slot object refs (#49056) @OskarEichler\r\n- [table] Improve accessibility for the pagination buttons (#49112) @silviuaavram\r\n- [tablepaginationactions] Align common types with other components (#49348) @sai6855\r\n- [tabs] Derive mounted state from the indicator style instead of setting it in an effect (#49326) @ZeeshanTamboli\r\n- [tabs] Fix selected tab not scrolling into view when scroll buttons appear in auto mode (#48489) @starboyvarun\r\n- [tabs] Respect `scroll-padding` when scrolling the selected tab into view (#49039) @crispinc-omnea\r\n- [textfield] Add theme CSS variable for autofill `box-shadow` (#47472) @ludij\r\n- [theme] Fix `theme.alpha()` for raw colors with CSS variables (#49320) @siriwatknp\r\n- [theme] Fix theming outliers in Paper, BreadcrumbCollapsed, TablePagination, and Tooltip (#49356) @Janpot\r\n- [theme] Keep CSS variable fallbacks in `theme.alpha()` (#49368) @aarongarciah\r\n\r\n### `@mui/icons-material@9.5.0`\r\n\r\n- Center the WarningRounded icon within its `viewBox` (#49203) @itd-mb\r\n\r\n### `@mui/system@9.5.0`\r\n\r\n- Remove duplicated `filterProps` mapping in `getThemeValue` (#48640) @sai6855\r\n- Resolve InitColorSchemeScript `%s` placeholder at build time (#49113) @Janpot\r\n- Serialize InitColorSchemeScript configuration values (#49091) @Janpot\r\n\r\n### `@mui/utils@9.5.0`\r\n\r\n- Document the deprecated `slotState` parameter and add `resolveComponentProps` tests (#49240) @usamabhatti1998\r\n- Improve `mergeSlotProps` performance (#48002) @mj12albert\r\n\r\n### `@mui/types@9.5.0`\r\n\r\n- Remove invalid `number` type from supported `OverridableStringUnion` type arguments (#49307) @sai6855\r\n\r\n### `@mui/lab@9.0.0-beta.10`\r\n\r\n- [masonry] Fix styles with CSS theme variables (#49330) @aarongarciah\r\n- [timelineitem] Keep the spacer selector at one class of specificity (#49028) @Janpot\r\n\r\n### `@mui/codemod@9.5.0`\r\n\r\n- Upgrade required Node.js version in the `engines` field (#49070) @ZeeshanTamboli\r\n- [formcontrollabel] Stop migrating `ActionsComponent` and remove `inputRef` (#49358) @Janpot\r\n\r\n### Docs\r\n\r\n- Add the accessibility conformance report page (#49267) @michelengelen\r\n- Add v10 as the next version (#49293) @silviuaavram\r\n- Allow reopening cookie preferences from a URL hash (#49124) @brijeshb42\r\n- Clarify how to restore icon `data-testid` attributes in the v7 migration guide (#49109) @alexfauquette\r\n- Fix @mui/lab version in v7.3.6 changelog (#49145) @mateuseap\r\n- Fix Next.js font optimization docs to preserve typography letter-spacing (#48488) @starboyvarun\r\n- Fix the dead Popper.js documentation links (#49081) @lazerg\r\n- Fix the LLM generated docs paths (#49076) @silviuaavram\r\n- Improve accessibility for checkbox lists (#49111) @silviuaavram\r\n- Warn about untrusted values in the `sx` prop (#49212) @Janpot\r\n- [autocomplete] Add removal and navigation ARIA descriptions to Chip examples (#49086) @silviuaavram\r\n- [drawer] Add accessible names to close buttons (#49161) @sai6855\r\n- [material-icons] Add `frame` synonym for the Portrait icon (#49211) @Janpot\r\n- [material-icons] Improve icon search performance (#49206) @oliviertassinari\r\n- [numberfield] Document the `format` prop for units and currency (#49160) @Denimworld12\r\n- [snackbar] Demonstrate Escape handling inside a dialog (#49352) @minwookshin\r\n- [system] Avoid `any` when spreading the `sx` prop (#49083) @LeusMaximus\r\n\r\n### Core\r\n\r\n- [ci] Add Claude PR review via mui-public reusable workflow (#49037) @Janpot\r\n- [code-infra] Compare the nightly React runs with the stable Argos build (#49123) @LukasTy\r\n- [code-infra] Consume shared commands from code-infra orb (#49082) @brijeshb42\r\n- [code-infra] Convert @mui/lab to TypeScript (#49140) @Janpot\r\n- [code-infra] Convert @mui/material internal svg-icons to TypeScript (#49143) @Janpot\r\n- [code-infra] Convert remaining @mui/system .js+.d.ts pairs to TypeScript (part 2) (#48699) @Janpot\r\n- [code-infra] Fix `package.json` metadata (#49325) @Janpot\r\n- [code-infra] Include cherry-picks in the changelog (#49377) @brijeshb42\r\n- [code-infra] Migrate to Babel 8 (#49216) @brijeshb42\r\n- [code-infra] Pin the Argos baseline to v9.x (#49316) @Janpot\r\n- [code-infra] Pin the only-allow version in the preinstall hook (#49114) @Janpot\r\n- [code-infra] Run TypeScript 7 alongside the TS6 JS API (#49075) @brijeshb42\r\n- [code-infra] Ship documentation Markdown inside the @mui/material package (#49314) @Janpot\r\n- [code-infra] Show progress and rate limit retry time in `release:changelog` (#49379) @Janpot\r\n- [code-infra] Update #target-branch-reference for v9.x branch (#49191) @silviuaavram\r\n- [code-infra] Widen @babel/runtime range and stop emitting empty class fields (#49276) @brijeshb42\r\n- [core] Remove the leftover canary release script (#49163) @Janpot\r\n- [core] Replace @mui/internal-waterfall with es-toolkit (#49155) @Janpot\r\n- [core] Update release publish tags from `next` to `latest` (#49381) @mnajdova\r\n- [docs-infra] Generate the accessibility Known gaps table (#49355) @michelengelen\r\n- [docs-infra] Harden the OG image edge function (#49116) @Janpot\r\n- [docs-infra] Make core-docs agnostic of styled-components (#49138) @Janpot\r\n- [docs-infra] Migrate deploy-succeeded to event-triggered function (#49158) @brijeshb42\r\n- [docs-infra] Pin StackBlitz demo vite to v7 and plugin-react to v5 (#49151) @Janpot\r\n- [docs-infra] Rate-limit the documentation feedback endpoint (#49115) @Janpot\r\n- [docs-infra] Retire the docs service worker (#49202) @Janpot\r\n- [docs-infra] Update the deploy script to fetch from the v9.x branch (#49371) @mnajdova\r\n- [docs-infra] Validate docs feedback content before posting to Slack (#49088) @Janpot\r\n- [material] Convert colors to TypeScript (#49180) @Janpot\r\n- [material] Convert utils and six barrels to TypeScript (#49185) @Janpot\r\n- [test] Add a palette contrast contract for the accessibility reports (#49049) @michelengelen\r\n- [test] Add a visual regression fixture for the DocSearch modal (#49002) @LukasTy\r\n- [test] Automate WCAG 2.4.7 Focus Visible checks (#49268) @michelengelen\r\n- [test] Fix flaky DocSearch modal screenshots (#49122) @LukasTy\r\n- [test] Fix Vitest imports (#49184) @silviuaavram\r\n- [test] Load the regression fonts from npm instead of Google Fonts (#49357) @Janpot\r\n- [test] Run module augmentation tests against built declarations (#49142) @LukasTy\r\n- [test][accordion] Add axe tests and WCAG conformance reports (#48924) @michelengelen\r\n- [test][avatar] Add axe tests and WCAG conformance report (#48917) @michelengelen\r\n- [test][avatar] Move the accessibility fixture to the fixture tree (#49087) @michelengelen\r\n- [test][button] Add axe test coverage and WCAG conformance report (#48916) @michelengelen\r\n- [test][checkbox] Add axe tests and WCAG conformance report (#48918) @michelengelen\r\n- [test][docs-infra] Reduce timing dependencies in the cookie consent test (#49154) @LukasTy\r\n- [test][linearprogress] Add axe tests and WCAG conformance report (#48922) @michelengelen\r\n- [test][pagination] Add tests for zero boundary and sibling counts (#49118) @Janpot\r\n- [test][radio] Add axe tests and WCAG conformance reports (#48920) @michelengelen\r\n- [test][switch] Add axe tests and WCAG conformance report (#48919) @michelengelen\r\n- [test][textfield] Add axe tests and WCAG conformance report (#48923) @michelengelen\r\n- [test][togglebutton] Add axe tests and WCAG conformance reports (#48921) @michelengelen\r\n\r\nAll contributors of this release in alphabetical order: @aarongarciah, @alexfauquette, @brijeshb42, @crispinc-omnea, @Cunninger, @Denimworld12, @dizhurnikita, @itd-mb, @Janpot, @kwy404, @lazerg, @LeusMaximus, @ludij, @LukasTy, @mateuseap, @michelengelen, @minwookshin, @mj12albert, @mnajdova, @oliviertassinari, @OskarEichler, @sai6855, @silviuaavram, @siriwatknp, @starboyvarun, @usamabhatti1998, @valkiara, @ZeeshanTamboli",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "autocomplete-get-option-value",
+        "category": "feature",
+        "title": "Autocomplete: getOptionValue プロパティのサポート",
+        "summary": "Autocomplete コンポーネントにおいて、オブジェクトオプションから値を取得するための getOptionValue プロパティが追加されました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "inputbase-slotprops-input-fix",
+        "category": "bugfix",
+        "title": "InputBase: slotProps.input のハンドラーと ref の修正",
+        "summary": "slotProps.input に渡したイベントハンドラーおよび ref が無視される問題を修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "autocomplete-groupby-crash-fix",
+        "category": "bugfix",
+        "title": "Autocomplete: groupBy 変更時のクラッシュ修正",
+        "summary": "groupBy プロパティが変更された際に発生していたクラッシュを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-mergeslotprops-typescript",
+        "category": "performance",
+        "title": "TypeScript および mergeSlotProps のパフォーマンス改善",
+        "summary": "mergeSlotProps の処理速度向上および AvatarGroup で slotProps を使用した際の TypeScript 型チェックのパフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "codemod-node-version",
+        "category": "other",
+        "title": "Codemod: Node.js 要求バージョンの引き上げ",
+        "summary": "@mui/codemod の engines フィールドにおいて必要な Node.js バージョンを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/table#407286291",
     "library": "TanStack Table",
     "repository": "TanStack/table",
@@ -1648,7 +1707,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0.6.1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@virtuoso.dev/reactive-engine-core (0.2.1) および @virtuoso.dev/reactive-engine-react (1.0.0) への依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "petyosi/react-virtuoso#400943569",
@@ -4164,7 +4233,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-103-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-queryおよび@tanstack/query-devtoolsをバージョン5.103.3に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#396995900",
@@ -13722,10 +13801,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-102-4",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.102.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#376729936",
@@ -13742,7 +13831,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependency-query-core",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreがバージョン5.102.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#376610193",
@@ -13756,10 +13855,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8166",
+        "category": "other",
+        "title": "Solid.js関連依存関係の更新",
+        "summary": "solid-js を 2.0.0-rc.2、@solidjs/vite-plugin を 3.0.0-next.32 へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#375937136",
@@ -13969,10 +14078,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "102-3-deps",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreをバージョン5.102.3に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#375936800",
@@ -13989,7 +14108,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-102-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.102.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#375936692",
@@ -14003,10 +14132,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-0.2.15-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.102.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#375936654",
