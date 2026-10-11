@@ -1,5 +1,623 @@
 [
   {
+    "id": "TanStack/router#408770640",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-10-0730",
+    "publishedAt": "2026-10-10T07:30:08Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-10-0730",
+    "releaseNotes": "Release 2026-10-10 07:30\n\n## Changes\n\n### Fix\n\n- start: preserve dev SSR CSS order (#7830) (41916400b9) by @schiller-manuel\n- keep server-rendered pending UI of no-SSR routes through hydration (#8643) (ff9f753c09) by @Sheraff\n- router-core: avoid null bytes in dehydrated SSR match ids (#7654) (663282b0eb) by @VihaanAgarwal\n- router: cancel pending link preload before navigation (#8579) (d35aab425b) by @Sheraff\n\n### Performance\n\n- solid-router: let mergeProps memoize the Link's own props (#8619) (e7ab1570ec) by @Sheraff\n- router: skip Link work for routes a navigation leaves (#8602) (efc2042c2d) by @Sheraff\n- router-core, history: small parsing and bundle-size cleanups (#8605) (dfe3dea88a) by @Sheraff\n- react-router: reduce component nesting per route match (#8594) (2413cc0098) by @Sheraff\n\n### Chore\n\n- add AI contribution guidance to GitHub templates (#8641) (17a3121ff4) by @Sheraff\n- react-start-rsc: upgrade Rspack to 2.2.7 (#8542) (1f0f20a320) by @LadyBluenotes\n\n\n## Packages\n\n- @tanstack/history@1.162.5\n- @tanstack/react-router@1.170.42\n- @tanstack/react-start@1.168.61\n- @tanstack/react-start-client@1.168.40\n- @tanstack/react-start-rsc@0.1.60\n- @tanstack/react-start-server@1.167.47\n- @tanstack/router-cli@1.167.41\n- @tanstack/router-core@1.171.35\n- @tanstack/router-generator@1.167.41\n- @tanstack/router-plugin@1.168.43\n- @tanstack/router-vite-plugin@1.167.43\n- @tanstack/solid-router@1.170.39\n- @tanstack/solid-start@1.168.58\n- @tanstack/solid-start-client@1.168.38\n- @tanstack/solid-start-server@1.167.45\n- @tanstack/start-client-core@1.170.35\n- @tanstack/start-plugin-core@1.171.50\n- @tanstack/start-server-core@1.169.40\n- @tanstack/start-static-server-functions@1.167.40\n- @tanstack/start-storage-context@1.167.37\n- @tanstack/vue-router@1.170.38\n- @tanstack/vue-start@1.168.57\n- @tanstack/vue-start-client@1.167.41\n- @tanstack/vue-start-server@1.167.45\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "7830",
+        "category": "bugfix",
+        "title": "開発時におけるSSRのCSS適用順序の保持",
+        "summary": "開発環境においてSSR時のCSSの順序が正しく保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8643",
+        "category": "bugfix",
+        "title": "no-SSRルートでのハイドレーション完了までのサーバー描画待機UIの保持",
+        "summary": "SSRが無効化されたルートにおいて、ハイドレーション処理中にサーバー描画されたペンディングUIを保持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7654",
+        "category": "bugfix",
+        "title": "Dehydrated SSR Match IDでのヌルバイト除去",
+        "summary": "Dehydrated（脱水化）されたSSRのMatch IDにおいて、ヌルバイトが含まれる問題を回避するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8579",
+        "category": "bugfix",
+        "title": "ナビゲーション前の保留中リンクプリロードのキャンセル",
+        "summary": "画面遷移が行われる前に、保留中となっているリンクのプリロード処理をキャンセルするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8619",
+        "category": "performance",
+        "title": "solid-routerにおけるLinkのpropsメモ化の改善",
+        "summary": "solid-routerでmergePropsを使用してLinkコンポーネント自身のpropsをメモ化するように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8602",
+        "category": "performance",
+        "title": "離脱するルートに対するLink処理のスキップ",
+        "summary": "ナビゲーションによって離脱するルートにおけるLinkコンポーネントの不要な処理をスキップするように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8605",
+        "category": "performance",
+        "title": "パース処理のクリーンアップとバンドルサイズの削減",
+        "summary": "router-coreおよびhistoryモジュールにおけるパース処理の整理とバンドルサイズの縮小を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8594",
+        "category": "performance",
+        "title": "ルートマッチごとのコンポーネントネストの削減",
+        "summary": "react-routerにおいて、ルートマッチあたりのコンポーネントネスト階層を削減し描画性能を向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8641",
+        "category": "other",
+        "title": "GitHubテンプレートへのAI貢献ガイドの追加",
+        "summary": "GitHubテンプレートにAIを使用したコード貢献に関するガイドラインを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8542",
+        "category": "other",
+        "title": "react-start-rscのRspack依存関係を2.2.7に更新",
+        "summary": "react-start-rscパッケージで使用しているRspackを2.2.7にアップグレードしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770531",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-core@1.171.35",
+    "publishedAt": "2026-10-10T07:29:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-core%401.171.35",
+    "releaseNotes": "### Patch Changes\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Drop a duplicated current-location flag and a redundant `createHref` wrapper.\n\n-   [#8602](https://github.com/TanStack/router/pull/8602) [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb) - Links of a route that the pending navigation leaves skip deriving the destination location, and clicks and preloads follow the href a Link displays. `buildLocation` now builds `mask` and `routeMasks` locations from the same `_fromLocation` as the destination.\n\n-   [#8602](https://github.com/TanStack/router/pull/8602) [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb) - Fixed Link destinations that resolve to a route mask are now reused across navigations instead of being rebuilt every time. A mounted Link now follows changes to its `href` and `reloadDocument` props, and React Links no longer each subscribe to a hydration flag.\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Use `slice` instead of `substring` where the bounds are always ordered and non-negative.\n\n-   [#7654](https://github.com/TanStack/router/pull/7654) [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e) - Encode slashes in dehydrated SSR match IDs with `#` instead of a null byte, so the inlined hydration payload no longer contains U+0000 (which is invalid in HTML and rejected by markup validators)\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2)]:\n    -   @tanstack/history@1.162.5\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれていないため、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8605-cleanup",
+        "category": "performance",
+        "title": "重複フラグおよび不要なラッパー関数の削除",
+        "summary": "重複していた current-location フラグと冗長な createHref ラッパーを削除して処理を最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8602-link-navigation",
+        "category": "bugfix",
+        "title": "保留中ナビゲーション離脱時のLink位置計算と buildLocation の修正",
+        "summary": "離脱するルートのLinkで目的地の導出をスキップし、クリックおよびプリロードが表示中のhrefに従うよう改善しました。また buildLocation が mask および routeMasks の位置を目的地と同じ _fromLocation から構築するよう変更されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8602-link-optimizations",
+        "category": "performance",
+        "title": "Route Maskに解決されるLink目的地の再利用とLinkコンポーネントの最適化",
+        "summary": "ルートマスクに解決されるLink目的地がナビゲーション間で再利用されるよう修正しました。また mounted Link が href や reloadDocument プロパティの変更に追従するよう改善され、React Link でのハイドレーションフラグへの不要な個別購読を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8605-string-slice",
+        "category": "performance",
+        "title": "文字列切り出し処理の最適化",
+        "summary": "境界値が常に順序通りかつ非負である箇所で substring の代わりに slice を使用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7654-ssr-null-byte-fix",
+        "category": "bugfix",
+        "title": "SSRハイドレーションペイロードにおける無効なヌル文字の修正",
+        "summary": "デハイドレートされたSSRマッチID内のスラッシュのエンコードをヌルバイトから '#' に変更し、HTMLバリデータで拒否される無効な U+0000 文字が含まれないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-history",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/history を 1.162.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770504",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.40",
+    "publishedAt": "2026-10-10T07:29:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.40",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/start-client-core@1.170.35\n    -   @tanstack/react-start@1.168.61\n    -   @tanstack/solid-start@1.168.58\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-1.167.40",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-client-core、@tanstack/react-start、@tanstack/solid-startの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770457",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.167.41",
+    "publishedAt": "2026-10-10T07:29:49Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.167.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "依存関係の更新のみのため、手動での移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-1.167.41-dependency-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core が 1.171.35 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770373",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/history@1.162.5",
+    "publishedAt": "2026-10-10T07:29:40Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/history%401.162.5",
+    "releaseNotes": "### Patch Changes\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Drop a duplicated current-location flag and a redundant `createHref` wrapper.\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Avoid temporary arrays when reading hash-history locations.\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Keep a leading query or fragment out of the parsed pathname, so hash-history URLs like `/#?x=1` no longer repeat the query in the router location.\n\n-   [#8602](https://github.com/TanStack/router/pull/8602) [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb) - Fixed Link destinations that resolve to a route mask are now reused across navigations instead of being rebuilt every time. A mounted Link now follows changes to its `href` and `reloadDocument` props, and React Links no longer each subscribe to a hydration flag.\n\n-   [#8605](https://github.com/TanStack/router/pull/8605) [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2) - Use `slice` instead of `substring` where the bounds are always ordered and non-negative.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8605-cleanup-location-flag-and-wrapper",
+        "category": "other",
+        "title": "重複したフラグと冗長なラッパーの削除",
+        "summary": "重複していた current-location フラグと冗長な createHref ラッパーを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8605-hash-history-temp-array-opt",
+        "category": "performance",
+        "title": "ハッシュヒストリー読み込み時のメモリ最適化",
+        "summary": "ハッシュヒストリーの位置情報を読み込む際に、一時配列の生成を回避するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8605-hash-history-pathname-query-fix",
+        "category": "bugfix",
+        "title": "ハッシュヒストリーURLにおけるクエリ重複の修正",
+        "summary": "解析された pathname から先頭のクエリやフラグメントを除外することで、/#?x=1 のようなハッシュヒストリーURLでクエリがルーターのロケーション内で重複して保持されないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8602-link-route-mask-and-props-optimization",
+        "category": "performance",
+        "title": "Linkコンポーネントの再利用性とプロップス追跡の改善",
+        "summary": "ルートマスクに解決される固定のLink宛先が毎回のビルドではなくナビゲーション間で再利用されるようになりました。また、マウントされたLinkがhrefやreloadDocumentプロップの変更を追跡するようになり、ハイドレーションフラグへの個別サブスクライブを廃止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8605-string-slice-optimization",
+        "category": "performance",
+        "title": "文字列切り出し処理の最適化",
+        "summary": "範囲が常に非負かつ整列している箇所で、substring の代わりに slice を使用するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770323",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.43",
+    "publishedAt": "2026-10-10T07:29:34Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.43",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-plugin@1.168.43\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-1.167.43-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-plugin が 1.168.43 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770300",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.168.61",
+    "publishedAt": "2026-10-10T07:29:31Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.168.61",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb), [`4191640`](https://github.com/TanStack/router/commit/41916400b93fdb62189722266ed1d77ba9c26be9), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b)]:\n    -   @tanstack/react-router@1.170.42\n    -   @tanstack/start-plugin-core@1.171.50\n    -   @tanstack/start-server-core@1.169.40\n    -   @tanstack/react-start-client@1.168.40\n    -   @tanstack/react-start-rsc@0.1.60\n    -   @tanstack/react-start-server@1.167.47\n    -   @tanstack/start-client-core@1.170.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-168-61",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-router や @tanstack/start-plugin-core などの関連パッケージの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770273",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.60",
+    "publishedAt": "2026-10-10T07:29:28Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.60",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb), [`4191640`](https://github.com/TanStack/router/commit/41916400b93fdb62189722266ed1d77ba9c26be9), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/react-router@1.170.42\n    -   @tanstack/start-plugin-core@1.171.50\n    -   @tanstack/start-client-core@1.170.35\n    -   @tanstack/start-storage-context@1.167.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-0.1.60",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ（@tanstack/router-core、@tanstack/react-routerなど）を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770239",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.37",
+    "publishedAt": "2026-10-10T07:29:25Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-router-core-1-171-35",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core がバージョン 1.171.35 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770210",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.40",
+    "publishedAt": "2026-10-10T07:29:22Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.40",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/react-router@1.170.42\n    -   @tanstack/start-client-core@1.170.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.168.40",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-client-core などの内部依存パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#408770155",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.42",
+    "publishedAt": "2026-10-10T07:29:16Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.42",
+    "releaseNotes": "### Patch Changes\n\n-   [#8594](https://github.com/TanStack/router/pull/8594) [`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb) - reduce component nesting per route match\n\n-   [#8602](https://github.com/TanStack/router/pull/8602) [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb) - Links of a route that the pending navigation leaves skip deriving the destination location, and clicks and preloads follow the href a Link displays. `buildLocation` now builds `mask` and `routeMasks` locations from the same `_fromLocation` as the destination.\n\n-   [#8602](https://github.com/TanStack/router/pull/8602) [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb) - Fixed Link destinations that resolve to a route mask are now reused across navigations instead of being rebuilt every time. A mounted Link now follows changes to its `href` and `reloadDocument` props, and React Links no longer each subscribe to a hydration flag.\n\n-   [#8579](https://github.com/TanStack/router/pull/8579) [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b) - Cancel pending link preload timers when starting navigation to avoid redundant preloading while the destination is loading.\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/history@1.162.5\n    -   @tanstack/router-core@1.171.35\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408770130",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.168.43",
+    "publishedAt": "2026-10-10T07:29:13Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.43",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/react-router@1.170.42\n    -   @tanstack/router-generator@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408770108",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.35",
+    "publishedAt": "2026-10-10T07:29:10Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.35",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/start-storage-context@1.167.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408770086",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.40",
+    "publishedAt": "2026-10-10T07:29:07Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.40",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/history@1.162.5\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/start-client-core@1.170.35\n    -   @tanstack/start-storage-context@1.167.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408770066",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.47",
+    "publishedAt": "2026-10-10T07:29:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.47",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`2413cc0`](https://github.com/TanStack/router/commit/2413cc009826fba4f97b166a35a8a50a4a8fe4bb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`d35aab4`](https://github.com/TanStack/router/commit/d35aab425b07b46e222a507c0f0239644669757b), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/react-router@1.170.42\n    -   @tanstack/start-server-core@1.169.40\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408770007",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.50",
+    "publishedAt": "2026-10-10T07:28:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.50",
+    "releaseNotes": "### Patch Changes\n\n-   [#7830](https://github.com/TanStack/router/pull/7830) [`4191640`](https://github.com/TanStack/router/commit/41916400b93fdb62189722266ed1d77ba9c26be9) - Fix dev SSR style collection to preserve CSS order without duplicating imported styles, while retaining styles from code-split routes. Keep layered imports from inline styles out of the global dev stylesheet. In bundled development, collect styles from a complete client bundle and load compiler dependencies through the bundler to avoid restarting client plugins. Preserve client hydration and reload SSR modules on file changes instead of clearing them on every request.\n\n    Support newer Vite bundled dev versions by loading their separate client runtime before hydration and awaiting the client build through the updated environment API.\n\n-   Updated dependencies \\[[`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`efc2042`](https://github.com/TanStack/router/commit/efc2042c2d02a9780c3e7efe81f123d066a869eb), [`dfe3dea`](https://github.com/TanStack/router/commit/dfe3dea88a28400db1677111e2b15ae7914782c2), [`663282b`](https://github.com/TanStack/router/commit/663282b0ebbc494aee3595ed95867ee29d01938e)]:\n    -   @tanstack/router-core@1.171.35\n    -   @tanstack/start-server-core@1.169.40\n    -   @tanstack/router-generator@1.167.41\n    -   @tanstack/router-plugin@1.168.43\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#408769969",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.167.41",
+    "publishedAt": "2026-10-10T07:28:52Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.167.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-generator@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#408638678",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table-devtools@9.3.0",
+    "publishedAt": "2026-10-10T04:24:46Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table-devtools%409.3.0",
+    "releaseNotes": "### Patch Changes\n\n- [#6629](https://github.com/TanStack/table/pull/6629) [`1446ddd`](https://github.com/TanStack/table/commit/1446ddd5ee3926f85e17281e7a53f617865349f9) - Type-check against Preact 11, which requires an initial value for `useRef`.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#408638647",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table@9.3.0",
+    "publishedAt": "2026-10-10T04:24:43Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table%409.3.0",
+    "releaseNotes": "### Patch Changes\n\n- [#6629](https://github.com/TanStack/table/pull/6629) [`1446ddd`](https://github.com/TanStack/table/commit/1446ddd5ee3926f85e17281e7a53f617865349f9) - Require `@tanstack/preact-store` `^0.13.5`, the first version whose `preact` peer range allows Preact 11.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#408638587",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/octane-table@9.3.0",
+    "publishedAt": "2026-10-10T04:24:40Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/octane-table%409.3.0",
+    "releaseNotes": "### Minor Changes\n\n- [#6627](https://github.com/TanStack/table/pull/6627) [`47733cb`](https://github.com/TanStack/table/commit/47733cb2ca56398486d43d8d4724f8ac795666fb) - Require octane `>=0.12.0` and depend on `@tanstack/octane-store` `^0.13.0`. `AppTable`, `AppCell` and `AppHeader` now render their contexts directly as providers, since octane removed `Context.Provider`.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "react-hook-form/react-hook-form#408559918",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.90.0",
+    "publishedAt": "2026-10-10T02:45:13Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.90.0",
+    "releaseNotes": "## 🐞 Fixes\r\n\r\n- Fix `useForm` marking fields named after `Object.prototype` members as touched on blur and `setValue` (#13833)\r\n- Fix `cloneObject` preserving the length of sparse arrays (#13834)\r\n- Fix dirty values extraction for fields named `hasOwnProperty` (#13832)\r\n- Fix `useForm` retaining options removed from props on re-render (#13831)\r\n- Fix `useFieldArray` handling duplicate indexes in `remove()` without mutating the provided indexes (#13830)\r\n- Fix `useFieldArray` unregistering fields while a parent array reindexes (#13828)\r\n- Fix input values edited before the form is ready being lost (#13827)\r\n- Fix `useWatch` not updating watched objects after an Activity subtree reconnects (#13819)\r\n- Fix `reset()` incorrectly setting `isDirty` when using `keepDefaultValues` without values (#13820)\r\n- Fix `Controller` blur validation not working after `reset()` (#13817)\r\n- Fix `watch` using stale `shouldUnregister` options when registering fields (#13814)\r\n- Fix form value comparison for fields named `ref` (#13812)\r\n- Fix native validation using stale `shouldUseNativeValidation` options (#13806)\r\n- Fix `cloneObject` not cloning objects with a null prototype (#13808)\r\n- Fix `useWatch` array names not prioritizing form `defaultValues` (#13805)\r\n- Fix error updates not producing a new `errors` reference (#13800)\r\n- Fix `setError` and `clearErrors` not producing a new `errors` reference (#13791)\r\n\r\n## ⚡ Performance Improvements\r\n\r\n- Improve dirty fields checking (#13788)\r\n- Improve subscription value handling (#13787)\r\n- Improve `watch` API performance (#13792)\r\n- Improve named scoped subscriptions (#13793)\r\n- Preserve form-state tracking across unsubscribe (#13794)\r\n- Improve subject subscription handling (#13795)\r\n- Skip redundant form-state merges during subscriber notifications (#13796)\r\n- Avoid allocations when matching subscription names (#13823)\r\n\r\n## 🧹 Refactors\r\n\r\n- Reduce bundle size (#13797, #13798)\r\n- Clean up tests and fix warnings (#13835)\r\n\r\n## 🧪 Tests\r\n\r\n- Add coverage for `useFieldArray` index boundary and no-op behavior (#13815, #13822, #13824, #13829)\r\n- Add coverage for JSON stringify and parse edge cases (#13821)\r\n\r\n## 📦 Dependencies\r\n\r\n- Bump `fast-uri` from 3.1.2 to 3.1.8 (#13811)\r\n- Bump `joi` from 18.2.5 to 18.2.6 (#13810)\r\n\r\n## ❤️ Thank You\r\n\r\nThanks to @charan-rathore, @zigzagdev, @AdzerKI, @huytdps13400, @dfedoryshchev, @kory-kaai, @Mohamed-Elshesheny, @breken-ai, @sarmah-rup, @00200200, @giaBaoJS and @bluebill1049 for their contributions! 🎉",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "mswjs/msw#408497378",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.3",
+    "publishedAt": "2026-10-10T01:37:25Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.3",
+    "releaseNotes": "## v3.0.3 (2026-10-10)\n\n### Bug Fixes\n\n- **HandlersController:** dispose of reset handlers (#2810) (3818a81c455a638eda1558558d8ae3cd17a34e55) @kettanaito\n- expose network context on `enable` in network sources (#2809) (d1fe8e6e6e7eefce43746ee44802bc553731e951) @kettanaito",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "mui/material-ui#407743701",
     "library": "Material UI",
     "repository": "mui/material-ui",
