@@ -1,5 +1,426 @@
 [
   {
+    "id": "TanStack/query#409878238",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-11-1936",
+    "publishedAt": "2026-10-11T19:36:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-11-1936",
+    "releaseNotes": "Release 2026-10-11 19:36\n\n## Changes\n\n### Features\n\n- preact-query*: support Preact v11 (#11711) (a94c7caee) by @JoviDeCroock\n\n### Fix\n\n- mutation-observer: snapshot mutateOptions before dispatching callbacks (#11945) (a16e71c7a) by @okxint\n- examples/solid/offline: type the movie query and mutation with 'queryOptions' and 'mutationOptions' (#11975) (1dc168007) by @sukvvon\n- examples/{react,solid}/offline: regenerate the msw worker and render after it starts (#11974) (fd820ed30) by @sukvvon\n- examples/react/offline: type the movie query and mutation with 'queryOptions' and 'mutationOptions' (#11973) (d81b4e41d) by @sukvvon\n- examples/react/react-native: type the movie list items as 'Movie' (#11971) (a6a46a2ea) by @sukvvon\n- examples/react/algolia: compute the next page from 'lastPageParam' and the optional 'nbPages' (#11967) (3ae9fb0c3) by @sukvvon\n- examples/react/prefetching: subscribe to prefetched characters instead of forcing a rerender (#11966) (008b75003) by @sukvvon\n- examples/react/infinite-query-with-max-pages: extract a typed 'fetchProjects' for 'queryFn' (#11965) (11ad4e012) by @sukvvon\n- examples/react: narrow 'req.query' values in the Next API routes (#11963) (4e21da774) by @sukvvon\n- examples/react: remove the 'exact' prop that react-router v6 no longer supports (#11961) (3a66faac1) by @sukvvon\n- examples/solid/default-query-function: match the cached post key in 'getQueryData' (#11958) (647e3fe66) by @sukvvon\n- examples/solid/solid-start-streaming: include 'sleep' and 'simulateError' in the query keys (#11956) (0401256bc) by @sukvvon\n- examples/solid/{basic,offline}: pass accessors instead of values to query hooks (#11955) (51e68b6b6) by @sukvvon\n- vue-query: export `MutationResult` type (#11796) (69e114aec) by @KirbyBT\n- query-core: start queued scoped mutations while the window is not focused 🤖🤖🤖 (#11679) (03e8c3955) by @tiagovilasboas\n\n### Refactor\n\n- examples/solid/solid-start-streaming: wrap 'userInfoQueryOpts' with 'queryOptions' (#11957) (0f6a80510) by @sukvvon\n- lit-query: add the 'override' modifier to the implementations of the abstract controller hooks and document the hooks (#11913) (271a4ed77) by @sukvvon\n- lit-query: add the 'override' modifier to members that override a base class member (#11906) (ec8c6de88) by @sukvvon\n- vue-query: add the 'override' modifier to members that override a base class member (#11905) (866d5429f) by @sukvvon\n- query-core: add the 'override' modifier to members that override a base class member (#11904) (65f762e29) by @sukvvon\n\n### Chore\n\n- examples/react: add '@types/node' to the Next.js examples that relied on the root copy (#11977) (98fd5936f) by @sukvvon\n- examples/react: add '.stackblitzrc' so StackBlitz runs the 'dev' script in the Next.js examples (#11976) (3a0e92744) by @sukvvon\n- examples/react: raise 'target' from 'ES5' to 'ES2017' in the Next app examples (#11969) (d2d3e064a) by @sukvvon\n- examples/react: add 'vite-env.d.ts' so CSS imports type-check under TS 6 (#11968) (70194b8a7) by @sukvvon\n- examples/react: remove unused 'React' imports (#11962) (dee1679bf) by @sukvvon\n- examples/react: add '@types/react' to the examples that relied on the root one (#11960) (fb6525838) by @sukvvon\n- examples/solid: replace the legacy '.eslintrc.cjs' with a flat config and run 'test:eslint' (#11959) (30a3b7376) by @sukvvon\n- examples/lit: add a flat ESLint config and run 'test:eslint' (#11954) (d3fcbe5d6) by @sukvvon\n- examples/preact/simple: use 'eslint-config-preact' through a flat config and run 'test:eslint' (#11953) (effc35872) by @sukvvon\n- examples/angular: replace the legacy '.eslintrc.cjs' with a flat config and run 'test:eslint' (#11952) (bbc8e95ed) by @sukvvon\n- examples/react: enable 'allowJs' so typed linting covers 'eslint.config.js' (#11950) (22621e773) by @sukvvon\n- examples/solid/simple: replace the legacy '.eslintrc.cjs' with a flat config and run 'test:eslint' (#11949) (69d9f7c21) by @sukvvon\n- nx.json: build the dependencies before 'test:eslint' (#11951) (42745443c) by @sukvvon\n- test TypeScript 7.1 preview and drop 5.6 (#11947) (e22e7c4a2) by @TkDodo\n- examples/react: run 'test:eslint' in 'algolia', 'basic-graphql-request' and 'shadow-dom' (#11948) (bef879eb5) by @sukvvon\n- oxlint.config: load the jsdoc and vitest JS plugins only in the overrides that use them (#11946) (e3ef13870) by @sukvvon\n- oxfmt.config: replace '.oxfmtrc.json' with 'oxfmt.config.ts' (#11944) (a2e0eb2e5) by @sukvvon\n- oxlint.config: remove the unused '$schema' (#11943) (a8163e00b) by @sukvvon\n- oxlint.config: spread the vitest recommended rules instead of listing them (#11942) (f4600cdf7) by @sukvvon\n- *: pass the root 'settings' to the package oxlint configs, which 'extends' does not inherit (#11941) (df78a9d13) by @sukvvon\n- replace prettier with oxfmt (#11939) (833062c2f) by @DogPawHat\n- replace eslint with oxlint (#11938) (d0cfa6a4a) by @DogPawHat\n- solid-query*: add 'eslint-plugin-solid' (#11929) (aab352876) by @sukvvon\n- preact-query*: clarify why the base rules from 'eslint-config-preact' are turned off (#11928) (01a7ebdd0) by @sukvvon\n- preact-query*: enable '@typescript-eslint/no-unnecessary-condition' outside tests (#11927) (79e2e4244) by @sukvvon\n- preact-query*: remove '@typescript-eslint/no-redeclare' (#11926) (24569675b) by @sukvvon\n- preact-query*: enable '@typescript-eslint/array-type' and '@typescript-eslint/no-unnecessary-type-assertion' (#11925) (c7a22584e) by @sukvvon\n- preact-query*: enable 'import/order' and 'sort-imports' (#11924) (93cb9cf6e) by @sukvvon\n- *: update '@tanstack/typedoc-config' to v0.3.4 (#11817) (1d2cf9130) by @sukvvon\n- tsconfig: enable 'noImplicitOverride' (#11912) (eaa75f4f8) by @sukvvon\n- eslint.config: require JSDoc on the methods of exported classes (#11907) (8a0a9b10c) by @sukvvon\n- eslint.config: require JSDoc on the properties of exported interfaces and type aliases (#11901) (a6e8763a7) by @sukvvon\n- eslint.config: require JSDoc on exported classes and arrow functions (#11890) (cacd9cb8c) by @sukvvon\n- eslint.config: require JSDoc on exported interfaces and type aliases (#11876) (c1c27a7ba) by @sukvvon\n- preact-query-devtools: replace the stale 'root.tsdown.config.js' copy with a symlink to the shared config (#11864) (a83ce667d) by @sukvvon\n- eslint.config: add 'refetched' to the 'cspell' words (#11863) (4acb1765f) by @sukvvon\n- eslint.config: enable the 'jsdoc' rules outside the recommended config that have no violations (#11855) (6c755231d) by @sukvvon\n- eslint.config: extend the error variant of the 'eslint-plugin-jsdoc' recommended config (#11854) (327b6b9ab) by @sukvvon\n- angular-query-persist-client/eslint.config: remove the package-specific 'jsdoc' rules in favor of the root config (#11853) (53899d916) by @sukvvon\n- eslint.config: use 'extends' for the 'eslint-plugin-jsdoc' recommended config (#11852) (387466deb) by @sukvvon\n- eslint.config: enforce the 'jsdoc' rules that have no remaining violations (#11851) (c074a13dd) by @sukvvon\n- eslint.config: exclude '__testfixtures__' from the 'jsdoc' rules (#11850) (8f5a2405e) by @sukvvon\n- eslint.config: name the repository config objects under 'tanstack/query' (#11826) (98d63264e) by @sukvvon\n- eslint.config: apply 'eslint-plugin-jsdoc' recommended rules to non-test source files (#11825) (da60e24c8) by @sukvvon\n- package.json: update '@cspell/eslint-plugin' to v10.3.6 (#11824) (6b42538b1) by @sukvvon\n- angular-query-persist-client: update 'eslint-plugin-jsdoc' to v65.0.1 (#11823) (040881da8) by @sukvvon\n- eslint-plugin-query: move '@typescript-eslint/rule-tester' to the pnpm catalog (#11822) (79d1f2200) by @sukvvon\n- *: update 'typescript-eslint' packages to v8.71.0 and '@eslint-react/eslint-plugin' to v5.23.3 (#11821) (772697488) by @sukvvon\n- package.json: update '@tanstack/eslint-config' to v0.4.0 (#11820) (808501b15) by @sukvvon\n- eslint.config: use 'defineConfig' from 'eslint/config' (#11819) (5ab1aaedd) by @sukvvon\n- preact-query-devtools: replace stale 'root.eslint.config.js' copy with a symlink to the root config (#11818) (73e6575c8) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.104.2\n- @tanstack/eslint-plugin-query@5.104.2\n- @tanstack/lit-query@0.2.27\n- @tanstack/preact-query@5.104.2\n- @tanstack/preact-query-devtools@5.104.2\n- @tanstack/preact-query-persist-client@5.104.2\n- @tanstack/query-async-storage-persister@5.104.2\n- @tanstack/query-broadcast-client-experimental@5.104.2\n- @tanstack/query-core@5.104.2\n- @tanstack/query-devtools@5.104.2\n- @tanstack/query-persist-client-core@5.104.2\n- @tanstack/query-sync-storage-persister@5.104.2\n- @tanstack/react-query@5.104.2\n- @tanstack/react-query-devtools@5.104.2\n- @tanstack/react-query-next-experimental@5.104.2\n- @tanstack/react-query-persist-client@5.104.2\n- @tanstack/solid-query@5.104.2\n- @tanstack/solid-query-devtools@5.104.2\n- @tanstack/solid-query-persist-client@5.104.2\n- @tanstack/svelte-query@6.3.2\n- @tanstack/svelte-query-devtools@6.3.2\n- @tanstack/svelte-query-persist-client@6.3.2\n- @tanstack/vue-query@5.104.2\n- @tanstack/vue-query-devtools@6.3.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "preact-query-v11-support",
+        "category": "feature",
+        "title": "preact-query: Preact v11のサポート",
+        "summary": "preact-query パッケージにおいて Preact v11 がサポートされました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "mutation-observer-snapshot-options",
+        "category": "bugfix",
+        "title": "mutation-observer: コールバック呼び出し前の mutateOptions のスナップショット化",
+        "summary": "コールバックをディスパッチする前に mutateOptions のスナップショットを取得することで状態の不整合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vue-query-export-mutation-result",
+        "category": "bugfix",
+        "title": "vue-query: MutationResult 型のエクスポート",
+        "summary": "vue-query パッケージから MutationResult 型が正常にエクスポートされるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "query-core-start-queued-mutations-unfocused",
+        "category": "bugfix",
+        "title": "query-core: 非フォーカス状態におけるキュー済みスコープ付きミューテーションの開始",
+        "summary": "ウィンドウがフォーカスされていない状態でも、キューに入っているスコープ付きミューテーションが実行されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877915",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.104.2",
+    "publishedAt": "2026-10-11T19:35:51Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.104.2\n  - @tanstack/react-query@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-5-104-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query がバージョン 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877889",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.104.2",
+    "publishedAt": "2026-10-11T19:35:48Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-104-2",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/react-query",
+        "summary": "依存ライブラリ @tanstack/react-query がバージョン 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877869",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.104.2",
+    "publishedAt": "2026-10-11T19:35:45Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.104.2\n  - @tanstack/react-query@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-5-104-2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.104.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877849",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.104.2",
+    "publishedAt": "2026-10-11T19:35:41Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2\n  - @tanstack/query-persist-client-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-03e8c39",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core が 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877827",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.104.2",
+    "publishedAt": "2026-10-11T19:35:39Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2\n  - @tanstack/query-persist-client-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5.104.2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core がバージョン 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877806",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.104.2",
+    "publishedAt": "2026-10-11T19:35:36Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- [#11711](https://github.com/TanStack/query/pull/11711) [`a94c7ca`](https://github.com/TanStack/query/commit/a94c7caeec624d0714ee00be3a703943ec2ddbeb) - Add Preact v11 to peerDependencies\n- Updated dependencies [[`a94c7ca`](https://github.com/TanStack/query/commit/a94c7caeec624d0714ee00be3a703943ec2ddbeb)]:\n  - @tanstack/preact-query@5.104.2\n  - @tanstack/query-persist-client-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11711",
+        "category": "other",
+        "title": "peerDependenciesにPreact v11を追加",
+        "summary": "peerDependenciesにPreact v11が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "update-dependencies",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core がバージョン 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877772",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.104.2",
+    "publishedAt": "2026-10-11T19:35:33Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- [#11711](https://github.com/TanStack/query/pull/11711) [`a94c7ca`](https://github.com/TanStack/query/commit/a94c7caeec624d0714ee00be3a703943ec2ddbeb) - Add Preact v11 to peerDependencies\n- Updated dependencies [[`a94c7ca`](https://github.com/TanStack/query/commit/a94c7caeec624d0714ee00be3a703943ec2ddbeb)]:\n  - @tanstack/preact-query@5.104.2\n  - @tanstack/query-devtools@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11711",
+        "category": "other",
+        "title": "peerDependenciesにPreact v11を追加",
+        "summary": "peerDependenciesの範囲にPreact v11が追加されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877667",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.104.2",
+    "publishedAt": "2026-10-11T19:35:17Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "03e8c3955ddbf20f0a07b79982b52dfad8df5323",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "依存関係である@tanstack/query-coreをバージョン5.104.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877647",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.104.2",
+    "publishedAt": "2026-10-11T19:35:15Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "03e8c3955ddbf20f0a07b79982b52dfad8df5323",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.104.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#409877611",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.104.2",
+    "publishedAt": "2026-10-11T19:35:12Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#409877579",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.104.2",
+    "publishedAt": "2026-10-11T19:35:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#409877554",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.104.2",
+    "publishedAt": "2026-10-11T19:35:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- [#11711](https://github.com/TanStack/query/pull/11711) [`a94c7ca`](https://github.com/TanStack/query/commit/a94c7caeec624d0714ee00be3a703943ec2ddbeb) - Add Preact v11 to peerDependencies\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#409877527",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.27",
+    "publishedAt": "2026-10-11T19:35:02Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.27",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323)]:\n  - @tanstack/query-core@5.104.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#409877506",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.104.2",
+    "publishedAt": "2026-10-11T19:35:00Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.104.2",
+    "releaseNotes": "### Patch Changes\n\n- [#11679](https://github.com/TanStack/query/pull/11679) [`03e8c39`](https://github.com/TanStack/query/commit/03e8c3955ddbf20f0a07b79982b52dfad8df5323) - fix(query-core): start queued scoped mutations when the window is not focused",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#409877485",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.104.2",
+    "publishedAt": "2026-10-11T19:34:56Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.104.2",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "colinhacks/zod#409778798",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.6",
+    "publishedAt": "2026-10-11T16:19:03Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.6",
+    "releaseNotes": "## Commits:\n\n- 0cd3af5e9f50ad11bbcd4407a46a21b8848ba574 docs: load the en locale directly in Zod Mini\n- d821685ea6732436fcdf786a81d076958471e467 Fix bugs and improve performance\n- ce1e11b7b5483cc81400f8173042e63bda3a3db2 Fix bugs and improve performance\n- 84f79a7d4ce827dd85980d8551e1acc0c67357f6 ci: drop the npm environment approval gate from publish\n- c7eb014eaef52b4258e4f7aaa792bdc8ffe16570 4.6.7\n- b1970f64930e29036895d719318c0a3135467fd1 4.6.8\n- 94886319faac483a0f5aaf262b5d025728120da1 ci: publish to npm with NPM_TOKEN\n- 10dda3a3a4bc76ed0bf83e994de194587e489ef8 Cleanup bad commits (#6620)\n- e7b3ebe1e3235c455232f16b4906b679311d04fb docs: import locales from zod/locales, not z.locales\n- 9dc926c398cf63909e6b88aca870fc36110b4fd9 docs: tighten the z.locales tree-shaking note\n- 2bf7b0630d5378033e90bcee82cb32b0fe04628e release: stage npm versions instead of publishing them (#6622)\n- be5dfa7244e4f0c4e2c320818e290a55a7bf5f08 docs: add Code for Japan to bronze sponsors\n- f448c44dbf54c2e9b354a1d7ecd0cf76fe07dc5d docs: crop the Code for Japan logo and list it first in bronze\n- 1d1b35a1ba47e08c3ac8645341deed4a9ca13fb7 docs: square the Code for Japan logo to match the other bronze tiles\n- 004d800c9e3cd4c79930f55aa4ad080225b22efd release: hold the run on the release-approval environment until the staged versions are approved (#6638)\n- 0b216ef674e297ebe41d8bf902262e56f8755822 fix(types): declare record output and input as members, not base type arguments (#6645)\n- e06a510b6fc1e6e28e3201fd116ca2a76212f6be fix(v4): check array, set and map size bounds before parsing elements (#6652)\n- 3b9700847691b6d48002f3ce8de278842af92ca9 4.6.6\n- 284243fb0d6532665afdc9239188773bb624f73c ci: stage at verbose so a failed OIDC token exchange says why\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#408770640",
     "library": "TanStack Router",
     "repository": "TanStack/router",
