@@ -1,5 +1,522 @@
 [
   {
+    "id": "TanStack/router#411088867",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-12-2358",
+    "publishedAt": "2026-10-12T23:58:47Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-12-2358",
+    "releaseNotes": "Release 2026-10-12 23:58\n\n## Changes\n\n### Performance\n\n- skip unused Start request setup (#8451) (740b0ce177) by @schiller-manuel\n- reuse prepared SSR request locations (#8441) (d6ba115d57) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/react-router@1.170.44\n- @tanstack/react-start@1.169.1\n- @tanstack/react-start-client@1.168.42\n- @tanstack/react-start-rsc@0.1.62\n- @tanstack/react-start-server@1.167.49\n- @tanstack/router-cli@1.167.43\n- @tanstack/router-core@1.171.37\n- @tanstack/router-generator@1.167.43\n- @tanstack/router-plugin@1.168.45\n- @tanstack/router-vite-plugin@1.167.45\n- @tanstack/solid-router@1.170.41\n- @tanstack/solid-start@1.169.1\n- @tanstack/solid-start-client@1.168.40\n- @tanstack/solid-start-server@1.167.47\n- @tanstack/start-client-core@1.170.37\n- @tanstack/start-plugin-core@1.171.52\n- @tanstack/start-server-core@1.169.42\n- @tanstack/start-static-server-functions@1.167.42\n- @tanstack/start-storage-context@1.167.39\n- @tanstack/vue-router@1.170.40\n- @tanstack/vue-start@1.169.1\n- @tanstack/vue-start-client@1.167.43\n- @tanstack/vue-start-server@1.167.47\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411088808",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.42",
+    "publishedAt": "2026-10-12T23:58:41Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.42",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-start@1.169.1\n    -   @tanstack/solid-start@1.169.1\n    -   @tanstack/start-client-core@1.170.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-167-42",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存パッケージ（@tanstack/react-start、@tanstack/solid-start、@tanstack/start-client-core）が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#411088566",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.37",
+    "publishedAt": "2026-10-12T23:58:14Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.37",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`740b0ce`](https://github.com/TanStack/router/commit/740b0ce17737d1f7398740136acdbeabe80df7d8), [`d6ba115`](https://github.com/TanStack/router/commit/d6ba115d5751c75e20943f0062577cf17b446d82)]:\n    -   @tanstack/start-storage-context@1.167.39\n    -   @tanstack/router-core@1.171.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411088512",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.42",
+    "publishedAt": "2026-10-12T23:58:08Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.42",
+    "releaseNotes": "### Patch Changes\n\n-   [#8451](https://github.com/TanStack/router/pull/8451) [`740b0ce`](https://github.com/TanStack/router/commit/740b0ce17737d1f7398740136acdbeabe80df7d8) - Skip request middleware bookkeeping when no request middleware is configured, and stop copying serialization adapters when the router adds none.\n\n    Server route handlers and route middleware now receive the router's decoded pathname, the same one used for route matching. Characters that would change how the path is read, such as `%2F`, `%3F`, and `%23`, stay encoded.\n\n-   [#8441](https://github.com/TanStack/router/pull/8441) [`d6ba115`](https://github.com/TanStack/router/commit/d6ba115d5751c75e20943f0062577cf17b446d82) - Reuse the parsed request location during SSR instead of repeating input rewrites. Match server routes against the app router's parsed pathname while preserving encoded pathnames for server handlers and middleware.\n\n-   Updated dependencies \\[[`740b0ce`](https://github.com/TanStack/router/commit/740b0ce17737d1f7398740136acdbeabe80df7d8), [`d6ba115`](https://github.com/TanStack/router/commit/d6ba115d5751c75e20943f0062577cf17b446d82)]:\n    -   @tanstack/start-storage-context@1.167.39\n    -   @tanstack/router-core@1.171.37\n    -   @tanstack/start-client-core@1.170.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411088494",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.52",
+    "publishedAt": "2026-10-12T23:58:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.52",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`740b0ce`](https://github.com/TanStack/router/commit/740b0ce17737d1f7398740136acdbeabe80df7d8), [`d6ba115`](https://github.com/TanStack/router/commit/d6ba115d5751c75e20943f0062577cf17b446d82)]:\n    -   @tanstack/start-server-core@1.169.42\n    -   @tanstack/router-core@1.171.37\n    -   @tanstack/router-generator@1.167.43\n    -   @tanstack/router-plugin@1.168.45\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1-171-52",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "内部の依存関係（@tanstack/start-server-core、@tanstack/router-core、@tanstack/router-generator、@tanstack/router-plugin）が最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#411088470",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.45",
+    "publishedAt": "2026-10-12T23:58:02Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.45",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-plugin@1.168.45\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411088368",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.39",
+    "publishedAt": "2026-10-12T23:57:50Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.39",
+    "releaseNotes": "### Patch Changes\n\n-   [#8451](https://github.com/TanStack/router/pull/8451) [`740b0ce`](https://github.com/TanStack/router/commit/740b0ce17737d1f7398740136acdbeabe80df7d8) - Skip request middleware bookkeeping when no request middleware is configured, and stop copying serialization adapters when the router adds none.\n\n    Server route handlers and route middleware now receive the router's decoded pathname, the same one used for route matching. Characters that would change how the path is read, such as `%2F`, `%3F`, and `%23`, stay encoded.\n\n-   Updated dependencies \\[[`d6ba115`](https://github.com/TanStack/router/commit/d6ba115d5751c75e20943f0062577cf17b446d82)]:\n    -   @tanstack/router-core@1.171.37\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070497",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-12-2321",
+    "publishedAt": "2026-10-12T23:21:09Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-12-2321",
+    "releaseNotes": "Release 2026-10-12 23:21\n\n## Changes\n\n### ⚠️ Breaking Changes\n\n- start: remove the deprecated inputValidator (#8694) (550f478810) by @schiller-manuel\n\n### Fix\n\n- start-plugin-core: preload transitive static imports and fix Rsbuild shared-chunk CSS (#8695) (4104b8ef11) by @LadyBluenotes\n- start-plugin-core: declare image and news namespaces in sitemap.xml (#8692) (f3d7ee3374) by @Sheraff\n- start-plugin-core: keep prerender-specific properties out of public pages.json (#8691) (19524ccdd7) by @Sheraff\n- router-generator: don't scaffold over a route file mid in-place save (#8664) (57bd1a92f9) by @Sheraff\n- router-plugin: remove redundant string excludes from the reference filter (#8655) (e66da18266) by @guru-irl\n\n### Chore\n\n- remove experimental Nitro v2 Vite plugin (#8537) (021e05da71) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/react-router@1.170.43\n- @tanstack/react-start@1.169.0\n- @tanstack/react-start-client@1.168.41\n- @tanstack/react-start-rsc@0.1.61\n- @tanstack/react-start-server@1.167.48\n- @tanstack/router-cli@1.167.42\n- @tanstack/router-core@1.171.36\n- @tanstack/router-generator@1.167.42\n- @tanstack/router-plugin@1.168.44\n- @tanstack/router-vite-plugin@1.167.44\n- @tanstack/solid-router@1.170.40\n- @tanstack/solid-start@1.169.0\n- @tanstack/solid-start-client@1.168.39\n- @tanstack/solid-start-server@1.167.46\n- @tanstack/start-client-core@1.170.36\n- @tanstack/start-plugin-core@1.171.51\n- @tanstack/start-server-core@1.169.41\n- @tanstack/start-static-server-functions@1.167.41\n- @tanstack/start-storage-context@1.167.38\n- @tanstack/vue-router@1.170.39\n- @tanstack/vue-start@1.169.0\n- @tanstack/vue-start-client@1.167.42\n- @tanstack/vue-start-server@1.167.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070428",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.36",
+    "publishedAt": "2026-10-12T23:21:00Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.36",
+    "releaseNotes": "### Patch Changes\n\n-   [#8694](https://github.com/TanStack/router/pull/8694) [`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549) - Remove the deprecated `.inputValidator()` from `createServerFn` and `createMiddleware`. Use `.validator()`, which takes the same validator.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Reduce request middleware overhead, reuse loaded entries and transport header requirements, and avoid unnecessary URL normalization for server functions. Preserve response helper writes made during body cancellation and SSR cleanup.\n\n    Avoid allocating absent middleware headers and reply context, and construct RPC redirects with their final response state. Preserve middleware accessor evaluation and the documented undefined value for absent `sendContext`.\n\n    Reduce synchronous server-function response overhead while preserving cancellation cleanup and middleware response mutations.\n\n-   Updated dependencies \\[[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-core@1.171.36\n    -   @tanstack/start-storage-context@1.167.38\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "非推奨となっていた .inputValidator() が削除されたため、.validator() への移行が必要です。",
+      "steps": [
+        "createServerFn または createMiddleware で .inputValidator() を使用している箇所を検索します。",
+        ".inputValidator() を同じバリデータ引数を取る .validator() に置き換えます。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "8694",
+        "category": "breaking",
+        "title": "createServerFn および createMiddleware から inputValidator を削除",
+        "summary": "非推奨となっていた .inputValidator() メソッドが削除されました。代わりに同じ機能を持つ .validator() を使用してください。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "7588",
+        "category": "performance",
+        "title": "リクエストミドルウェアのオーバーヘッド削減とレスポンス書き込み保持の改善",
+        "summary": "リクエストミドルウェアのオーバーヘッド削減や不要なURL正規化の回避を行うとともに、ボディキャンセルやSSRクリーンアップ中のレスポンスヘルパー書き込みが保持されるように動作を改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#411070304",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.38",
+    "publishedAt": "2026-10-12T23:20:41Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.38",
+    "releaseNotes": "### Patch Changes\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Reduce per-request work in Start: `getNormalizedURL` reads a `URL` input without cloning it, and `runWithStartContext` returns the callback's own result instead of wrapping it in a promise, so a synchronous throw from the callback now propagates synchronously.\n\n-   Updated dependencies \\[[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-core@1.171.36\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070238",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.41",
+    "publishedAt": "2026-10-12T23:20:33Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`f243c61`](https://github.com/TanStack/router/commit/f243c61e95dae64fe04da4499c0c4ec44f26abae), [`f243c61`](https://github.com/TanStack/router/commit/f243c61e95dae64fe04da4499c0c4ec44f26abae)]:\n    -   @tanstack/start-client-core@1.170.36\n    -   @tanstack/react-start@1.169.0\n    -   @tanstack/solid-start@1.169.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070217",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.41",
+    "publishedAt": "2026-10-12T23:20:29Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.41",
+    "releaseNotes": "### Patch Changes\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Return 400 Bad Request for malformed percent-encoded request pathnames before running server entry callbacks. Preserve valid encoded paths and query handling.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Reduce request middleware overhead, reuse loaded entries and transport header requirements, and avoid unnecessary URL normalization for server functions. Preserve response helper writes made during body cancellation and SSR cleanup.\n\n    Avoid allocating absent middleware headers and reply context, and construct RPC redirects with their final response state. Preserve middleware accessor evaluation and the documented undefined value for absent `sendContext`.\n\n    Reduce synchronous server-function response overhead while preserving cancellation cleanup and middleware response mutations.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Keep streaming a page when request middleware returns a response that reads the page body, such as a copy made through a wrapped global `Response`, a copy in Bun, or a body piped through a transform. Start now disposes a replaced page stream only when nothing reads it. `transferResponseBodyOwnership` is removed: return the derived response directly.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Let request middleware read the body of a `HEAD` response, and strip it when the response leaves the pipeline. Start no longer applies `Content-Encoding`, `Content-Length`, or other framing headers set through response helpers to error bodies and serialized server-function replies that it builds itself. A response that middleware assigns to `result.response` is now disposed when the middleware returns another response.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Remove the built-in `useSession` API. Applications choose a session library, such as iron-session, and save or destroy sessions explicitly before returning or redirecting. Connect a cookie adapter through `getCookie` and `setCookie`, or append serialized cookies with `appendResponseHeader('set-cookie', cookie)`. Existing session cookies require a deliberate migration or signing in again with a new cookie name.\n\n    `createServerEntry` keeps the complete callback, including custom error handling, inside the request context and converts errors that escape it. The built-in entry still converts errors automatically. Raw `createStartHandler` handlers now rethrow the original error. For custom reporting, catch inside `createServerEntry`, then rethrow for default conversion or return `handleStartError(error)` to preserve response-helper status, headers, and cookies. Return an explicit `Response` when choosing a custom error payload.\n\n    Response helpers now apply consistently across server routes, SSR, server functions, redirects, errors, and middleware response replacements. Helper setters override returned values; cookie helpers preserve independent cookies and replace matching cookie identities. Use `appendResponseHeader('set-cookie', cookie)` when adding a serialized cookie without replacing other cookies. Changed responses receive copied headers and reuse the body stream, so applications should inspect the response returned by Start rather than relying on mutation of the original response.\n\n-   Updated dependencies \\[[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-core@1.171.36\n    -   @tanstack/start-storage-context@1.167.38\n    -   @tanstack/start-client-core@1.170.36\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070113",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.44",
+    "publishedAt": "2026-10-12T23:20:18Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`e66da18`](https://github.com/TanStack/router/commit/e66da18266859ab49e20a7b8c858232449ee5290)]:\n    -   @tanstack/router-plugin@1.168.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#411070026",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.51",
+    "publishedAt": "2026-10-12T23:20:06Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.51",
+    "releaseNotes": "### Patch Changes\n\n-   [#8694](https://github.com/TanStack/router/pull/8694) [`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549) - Remove the deprecated `.inputValidator()` from `createServerFn` and `createMiddleware`. Use `.validator()`, which takes the same validator.\n\n-   [#8692](https://github.com/TanStack/router/pull/8692) [`f3d7ee3`](https://github.com/TanStack/router/commit/f3d7ee3374c660e0fe82a03ac580a90ed2e2fa98) - Image and news sitemap entries are now emitted in their declared XML namespaces, so sitemaps with images or news are valid XML.\n\n-   [#8695](https://github.com/TanStack/router/pull/8695) [`4104b8e`](https://github.com/TanStack/router/commit/4104b8ef11498706b5059c5a915f2ae47ffbc5ba) - Walk the static import graph when building route preloads so Rolldown and Rsbuild builds preload every dependency chunk, and derive Rsbuild chunk imports from the module graph so shared chunks no longer attach unrelated route CSS to the SSR response.\n\n-   [#8696](https://github.com/TanStack/router/pull/8696) [`f243c61`](https://github.com/TanStack/router/commit/f243c61e95dae64fe04da4499c0c4ec44f26abae) - Require Vite 8 for Vite builds. Vite 7 is no longer supported.\n\n-   [#8691](https://github.com/TanStack/router/pull/8691) [`19524cc`](https://github.com/TanStack/router/commit/19524ccdd75870ce1db2f324518eeb3f23cc0f97) - Publish only validated public page fields in pages.json and sitemap.xml so prerender headers and other private page data, including extra data returned by `prerender.onSuccess`, stay private. Invalid sitemap metadata returned by `prerender.onSuccess` now fails the build instead of being written to sitemap.xml without validation.\n\n-   Updated dependencies \\[[`57bd1a9`](https://github.com/TanStack/router/commit/57bd1a92f9839af5bf773c3b36d039569fb1a41e), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`e66da18`](https://github.com/TanStack/router/commit/e66da18266859ab49e20a7b8c858232449ee5290), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-generator@1.167.42\n    -   @tanstack/router-core@1.171.36\n    -   @tanstack/start-server-core@1.169.41\n    -   @tanstack/router-plugin@1.168.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#411005014",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-12-2120",
+    "publishedAt": "2026-10-12T21:20:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-12-2120",
+    "releaseNotes": "Release 2026-10-12 21:20\n\n## Changes\n\n- No changelog entries\n\n\n## Packages\n\n- @tanstack/angular-query@5.0.0-rc.2\n- @tanstack/angular-query-devtools@5.0.0-rc.2\n- @tanstack/angular-query-persist-client@5.0.0-rc.2\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410837019",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/alpine-table@9.3.1",
+    "publishedAt": "2026-10-12T17:09:11Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/alpine-table%409.3.1",
+    "releaseNotes": "\n### Patch Changes\n\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1\n\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410837003",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-core@9.3.1",
+    "publishedAt": "2026-10-12T17:09:10Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-core%409.3.1",
+    "releaseNotes": "\n### Patch Changes\n\n- [#6620](https://github.com/TanStack/table/pull/6620) [`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e) - Keep private declarations out of the emitted `.d.ts` files, so consumers emitting declarations no longer fail with TS2883 (e.g. on `RangeValue`)\n\n- [#6626](https://github.com/TanStack/table/pull/6626) [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7) - Improve tree-shaking further. The core no longer bundles the column ordering, column pinning, or row expanding code it used for leaf column order, pinned header order, and row display order, so a minimal table is about 0.27 kB (brotli) smaller. Features no longer bundle code from other features a table doesn't register: column sizing, column ordering, and cell selection without column pinning or column visibility, column pinning without column visibility, row pinning without row expanding, the paginated row model without row expanding, and the faceted unique and min/max values without global filtering. Without `globalFilteringFeature`, global facets now include no columns, the same as the filtered row model. Memoized row, column, header, and cell APIs also allocate less: each memo no longer creates an `onAfterUpdate` wrapper it doesn't need. `table.getOrderColumnsFn()`, which column ordering already assigned, is now declared on its table type.\n\n  The devtools Features panel sizes are regenerated for these changes.\n\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822884",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table-devtools@9.3.1",
+    "publishedAt": "2026-10-12T16:50:40Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table-devtools%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-devtools@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822779",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table-devtools@9.3.1",
+    "publishedAt": "2026-10-12T16:50:31Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table-devtools%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-devtools@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822745",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-devtools@9.3.1",
+    "publishedAt": "2026-10-12T16:50:28Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-devtools%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- [#6626](https://github.com/TanStack/table/pull/6626) [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7) - Improve tree-shaking further. The core no longer bundles the column ordering, column pinning, or row expanding code it used for leaf column order, pinned header order, and row display order, so a minimal table is about 0.27 kB (brotli) smaller. Features no longer bundle code from other features a table doesn't register: column sizing, column ordering, and cell selection without column pinning or column visibility, column pinning without column visibility, row pinning without row expanding, the paginated row model without row expanding, and the faceted unique and min/max values without global filtering. Without `globalFilteringFeature`, global facets now include no columns, the same as the filtered row model. Memoized row, column, header, and cell APIs also allocate less: each memo no longer creates an `onAfterUpdate` wrapper it doesn't need. `table.getOrderColumnsFn()`, which column ordering already assigned, is now declared on its table type.\n\n  The devtools Features panel sizes are regenerated for these changes.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822614",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table@9.3.1",
+    "publishedAt": "2026-10-12T16:50:19Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- [#6631](https://github.com/TanStack/table/pull/6631) [`3d3648f`](https://github.com/TanStack/table/commit/3d3648f788310465e135c09fd3f803ef25a92c18) - Refresh the `AppTable` context when the `useAppTable` owner renders with new options or state, so `useTableContext()` consumers no longer show stale rows after `data` is replaced under a cached (React Compiler, `useMemo`, `memo`) `AppTable` element.\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822572",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table@9.3.1",
+    "publishedAt": "2026-10-12T16:50:16Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- [#6631](https://github.com/TanStack/table/pull/6631) [`3d3648f`](https://github.com/TanStack/table/commit/3d3648f788310465e135c09fd3f803ef25a92c18) - Refresh the `AppTable` context when the `useAppTable` owner renders with new options or state, so `useTableContext()` consumers no longer show stale rows after `data` is replaced under a cached (React Compiler, `useMemo`, `memo`) `AppTable` element.\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822539",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/octane-table@9.3.1",
+    "publishedAt": "2026-10-12T16:50:13Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/octane-table%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822513",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/lit-table@9.3.1",
+    "publishedAt": "2026-10-12T16:50:10Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/lit-table%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/table#410822482",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/ember-table@9.3.1",
+    "publishedAt": "2026-10-12T16:50:08Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/ember-table%409.3.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`2d5f5b6`](https://github.com/TanStack/table/commit/2d5f5b65a98350949ac9ce7397a29ee9bbe2fd5e), [`87c6bcc`](https://github.com/TanStack/table/commit/87c6bcc52a5cd614d83d698c76048b4c1c2bb8f7)]:\n  - @tanstack/table-core@9.3.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "colinhacks/zod#410808022",
+    "library": "Zod",
+    "repository": "colinhacks/zod",
+    "version": "v4.6.7",
+    "publishedAt": "2026-10-12T16:30:32Z",
+    "url": "https://github.com/colinhacks/zod/releases/tag/v4.6.7",
+    "releaseNotes": "## Commits:\n\n- b500a2ee95134f81d74da7911d7378dd2853d042 4.6.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "mui/material-ui#410480639",
+    "library": "Material UI",
+    "repository": "mui/material-ui",
+    "version": "v10.0.0-alpha.0",
+    "publishedAt": "2026-10-12T10:53:58Z",
+    "url": "https://github.com/mui/material-ui/releases/tag/v10.0.0-alpha.0",
+    "releaseNotes": "A big thanks to the 30 contributors who made this release possible. Here are some highlights ✨:\r\n\r\n- ⚙️ Support [values other than raw options](https://next.mui.com/material-ui/react-autocomplete/#object-options-with-primitive-values) for Autocomplete via the `getOptionValue` prop.\r\n- ♿️ Extend the theme's [focus indicator](https://next.mui.com/material-ui/customization/focus-visible/) to `InputBase` and text fields with `disableUnderline` via `theme.focusVisible`.\r\n\r\n### `@mui/material@10.0.0-alpha.0`\r\n\r\n#### Breaking Changes\r\n\r\n- [autocomplete] Change the default popup Paper elevation from 1 to 8 (#49110) @namansancheti\r\n\r\n#### Changes\r\n\r\n- Add missing override interfaces for `slotProps` (#49343) @sai6855\r\n- Export private focus-visible utilities (#49139) @siriwatknp\r\n- Fix `onClose` types for Menu, Snackbar, and SwipeableDrawer (#49340) @Janpot\r\n- Fix slot handling in Autocomplete chips, TextField `inputLabel`, and NativeSelect `input` (#49336) @Janpot\r\n- Fix theme `defaultProps` and missing exports (#49332) @Janpot\r\n- Remove unnecessary `Omit` types (#49328) @sai6855\r\n- [autocomplete] Lazily derive the initial input value (#49057) @OskarEichler\r\n- [autocomplete] Prevent crash when changing `groupBy` (#49150) @silviuaavram\r\n- [autocomplete] Stop filtering once the result limit is reached (#49295) @valkiara\r\n- [autocomplete] Support values other than raw options (#49078) @silviuaavram\r\n- [avatargroup] Improve TypeScript performance when using `slotProps` (#49213) @sai6855\r\n- [bottomnavigationaction] Document the `selected` prop (#49190) @siriwatknp\r\n- [breadcrumbs] Build separators in one pass (#49058) @OskarEichler\r\n- [button] Fix loading-position style leaking to non-loading buttons (#49182) @siriwatknp\r\n- [button] Simplify `ExtendButton` type (#49364) @sai6855\r\n- [buttonbase] Fix LazyRipple retaining event objects when ripples are disabled (#49000) @dizhurnikita\r\n- [checkbox] Set the native indeterminate state on the input (#49053) @lazerg\r\n- [dialogcontent] Render the `theme.focusVisible` ring on the scrollable content (#49311) @siriwatknp\r\n- [inputbase] Fix `slotProps.input` event handlers and ref being ignored (#49333) @Janpot\r\n- [link] Remove unwanted `Omit` type (#49331) @sai6855\r\n- [link] Revert to `color-mix` when underline color is not accepted (#49077) @silviuaavram\r\n- [modal] Prevent `aria-hidden` from being applied to non-portal modals (#49026) @ZeeshanTamboli\r\n- [select] Fix flaky opening mouseup timing (#49024) @michelengelen\r\n- [skeleton] Fix the background fallback with CSS theme variables (#49322) @aarongarciah\r\n- [slider] Fix `disableSwap` when a neighboring thumb is at 0 (#49234) @kwy404\r\n- [snackbar][speeddial] Remove unnecessary `Omit` in props definitions (#49214) @sai6855\r\n- [speeddial] Fix horizontal persistent tooltip placement (#49073) @Cunninger\r\n- [speeddial] Support action slot object refs (#49056) @OskarEichler\r\n- [table] Improve accessibility for the pagination buttons (#49112) @silviuaavram\r\n- [tablepaginationactions] Align common types with other components (#49347) @sai6855\r\n- [tabs] Derive mounted state from the indicator style instead of setting it in an effect (#49324) @ZeeshanTamboli\r\n- [tabs] Fix selected tab not scrolling into view when scroll buttons appear in auto mode (#48489) @starboyvarun\r\n- [tabs] Respect `scroll-padding` when scrolling the selected tab into view (#49039) @crispinc-omnea\r\n- [textfield] Add theme CSS variable for autofill `box-shadow` (#47472) @ludij\r\n- [theme] Fix `theme.alpha()` for raw colors with CSS variables (#49273) @siriwatknp\r\n- [theme] Fix theming outliers in Paper, BreadcrumbCollapsed, TablePagination, and Tooltip (#49335) @Janpot\r\n- [theme] Keep CSS variable fallbacks in `theme.alpha()` (#49297) @aarongarciah\r\n- [theme] Render the `theme.focusVisible` ring on inputs (#49152) @siriwatknp\r\n\r\n### `@mui/icons-material@10.0.0-alpha.0`\r\n\r\n- Center the WarningRounded icon within its `viewBox` (#49043) @itd-mb\r\n\r\n### `@mui/system@10.0.0-alpha.0`\r\n\r\n- Remove duplicated `filterProps` mapping in `getThemeValue` (#48640) @sai6855\r\n- Resolve InitColorSchemeScript `%s` placeholder at build time (#49113) @Janpot\r\n- Serialize InitColorSchemeScript configuration values (#49091) @Janpot\r\n\r\n### `@mui/utils@10.0.0-alpha.0`\r\n\r\n- Document the deprecated `slotState` parameter and add `resolveComponentProps` tests (#49137) @usamabhatti1998\r\n- Improve `mergeSlotProps` performance (#48002) @mj12albert\r\n\r\n### `@mui/types@10.0.0-alpha.0`\r\n\r\n- Remove invalid `number` type from supported `OverridableStringUnion` type arguments (#49278) @sai6855\r\n\r\n### `@mui/lab@10.0.0-alpha.0`\r\n\r\n- [masonry] Fix styles with CSS theme variables (#49294) @aarongarciah\r\n- [timelineitem] Keep the spacer selector at one class of specificity (#49028) @Janpot\r\n\r\n### `@mui/codemod@10.0.0-alpha.0`\r\n\r\n- Upgrade required Node.js version in the `engines` field (#49070) @ZeeshanTamboli\r\n- [formcontrollabel] Stop migrating `ActionsComponent` and remove `inputRef` (#49334) @Janpot\r\n\r\n### `@mui/material-nextjs@10.0.0-alpha.0`\r\n\r\n- Escape the `</style>` tag in server-rendered style output (#49183) @Janpot\r\n\r\n### Docs\r\n\r\n- Add the accessibility conformance report page (#48926) @michelengelen\r\n- Add the v10 migration guide (#49349) @silviuaavram\r\n- Allow reopening cookie preferences from a URL hash (#49124) @brijeshb42\r\n- Clarify how to restore icon `data-testid` attributes in the v7 migration guide (#49109) @alexfauquette\r\n- Fix @mui/lab version in v7.3.6 changelog (#49145) @mateuseap\r\n- Fix Next.js font optimization docs to preserve typography letter-spacing (#48488) @starboyvarun\r\n- Fix the dead Popper.js documentation links (#49081) @lazerg\r\n- Fix the LLM generated docs paths (#49076) @silviuaavram\r\n- Improve accessibility for checkbox lists (#49111) @silviuaavram\r\n- Warn about untrusted values in the `sx` prop (#49199) @Janpot\r\n- [autocomplete] Add removal and navigation ARIA descriptions to Chip examples (#49086) @silviuaavram\r\n- [backdrop] Move Backdrop to Utils and clarify it is a low-level utility (#49072) @webernir\r\n- [drawer] Add accessible names to close buttons (#49161) @sai6855\r\n- [material-icons] Add `frame` synonym for the Portrait icon (#49201) @Janpot\r\n- [material-icons] Improve icon search performance (#44450) @oliviertassinari\r\n- [numberfield] Document the `format` prop for units and currency (#49160) @Denimworld12\r\n- [snackbar] Demonstrate Escape handling inside a dialog (#49306) @minwookshin\r\n- [system] Avoid `any` when spreading the `sx` prop (#49083) @LeusMaximus\r\n\r\n### Core\r\n\r\n- [ci] Add Claude PR review via mui-public reusable workflow (#49037) @Janpot\r\n- [ci] Add the Claude CI flake-fix caller (#49197) @Janpot\r\n- [code-infra] Add the release skill (#48938) @brijeshb42\r\n- [code-infra] Backport #target-branch-reference to docs `package.json` (#49372) @silviuaavram\r\n- [code-infra] Backport #target-branch-references to master (#49194) @silviuaavram\r\n- [code-infra] Bump @types/node to 22 and group it with Node.js in Renovate (#49189) @Janpot\r\n- [code-infra] Compare the nightly React runs with the stable Argos build (#49123) @LukasTy\r\n- [code-infra] Consume shared commands from code-infra orb (#49082) @brijeshb42\r\n- [code-infra] Convert @mui/lab to TypeScript (#49140) @Janpot\r\n- [code-infra] Convert @mui/material internal svg-icons to TypeScript (#49143) @Janpot\r\n- [code-infra] Convert remaining @mui/system .js+.d.ts pairs to TypeScript (part 2) (#48699) @Janpot\r\n- [code-infra] Enable pnpm `autoDedupe` (#49242) @Janpot\r\n- [code-infra] Fix Autocomplete JSDoc links after a stale merge (#49315) @silviuaavram\r\n- [code-infra] Fix `package.json` metadata (#49243) @Janpot\r\n- [code-infra] Include cherry-picks in the changelog (#49375) @brijeshb42\r\n- [code-infra] Mark the Argos reference branch for release branch cuts (#49317) @Janpot\r\n- [code-infra] Migrate to Babel 8 (#49162) @brijeshb42\r\n- [code-infra] Pin the only-allow version in the preinstall hook (#49114) @Janpot\r\n- [code-infra] Prune stale `minimumReleaseAgeExclude` entries (#49178) @Janpot\r\n- [code-infra] Remove the legacy mark-duplicate workflow (#49363) @brijeshb42\r\n- [code-infra] Run TypeScript 7 alongside the TS6 JS API (#49075) @brijeshb42\r\n- [code-infra] Ship documentation Markdown inside the @mui/material package (#48722) @Janpot\r\n- [code-infra] Show progress and rate limit retry time in `release:changelog` (#49376) @Janpot\r\n- [code-infra] Update deprecated options in the Vitest test configuration (#49193) @ZeeshanTamboli\r\n- [code-infra] Widen @babel/runtime range and stop emitting empty class fields (#49241) @brijeshb42\r\n- [core] Remove the leftover canary release script (#49163) @Janpot\r\n- [core] Replace @mui/internal-waterfall with es-toolkit (#49155) @Janpot\r\n- [docs-infra] Derive accessibility report data from defaults and tests (#49271) @JCQuintas\r\n- [docs-infra] Generate the accessibility Known gaps table (#49265) @michelengelen\r\n- [docs-infra] Harden the OG image edge function (#49116) @Janpot\r\n- [docs-infra] Keep generated LLM docs on filtered runs (#49290) @Janpot\r\n- [docs-infra] Make core-docs agnostic of styled-components (#49138) @Janpot\r\n- [docs-infra] Migrate deploy-succeeded to event-triggered function (#49158) @brijeshb42\r\n- [docs-infra] Pin StackBlitz demo vite to v7 and plugin-react to v5 (#49151) @Janpot\r\n- [docs-infra] Rate-limit the documentation feedback endpoint (#49115) @Janpot\r\n- [docs-infra] Retire the docs service worker (#49188) @Janpot\r\n- [docs-infra] Use JSON as the source of truth for the accessibility reports (#49270) @michelengelen\r\n- [docs-infra] Validate docs feedback content before posting to Slack (#49088) @Janpot\r\n- [internal] Prepare master for the alpha release (#49284) @silviuaavram\r\n- [material] Convert colors to TypeScript (#49180) @Janpot\r\n- [material] Convert utils and six barrels to TypeScript (#49185) @Janpot\r\n- [test] Add a palette contrast contract for the accessibility reports (#49049) @michelengelen\r\n- [test] Add a visual regression fixture for the DocSearch modal (#49002) @LukasTy\r\n- [test] Automate WCAG 2.4.7 Focus Visible checks (#48945) @michelengelen\r\n- [test] Fix flaky DocSearch modal screenshots (#49122) @LukasTy\r\n- [test] Fix Vitest imports (#49184) @silviuaavram\r\n- [test] Load the regression fonts from npm instead of Google Fonts (#49310) @Janpot\r\n- [test] Make regression screenshot rasterization deterministic (#49208) @Janpot\r\n- [test] Roll the component reports up into a library scorecard (#48925) @michelengelen\r\n- [test] Run module augmentation tests against built declarations (#49142) @LukasTy\r\n- [test][accordion] Add axe tests and WCAG conformance reports (#48924) @michelengelen\r\n- [test][avatar] Add axe tests and WCAG conformance report (#48917) @michelengelen\r\n- [test][avatar] Move the accessibility fixture to the fixture tree (#49087) @michelengelen\r\n- [test][button] Add axe test coverage and WCAG conformance report (#48916) @michelengelen\r\n- [test][checkbox] Add axe tests and WCAG conformance report (#48918) @michelengelen\r\n- [test][docs-infra] Reduce timing dependencies in the cookie consent test (#49154) @LukasTy\r\n- [test][linearprogress] Add axe tests and WCAG conformance report (#48922) @michelengelen\r\n- [test][pagination] Add tests for zero boundary and sibling counts (#49118) @Janpot\r\n- [test][radio] Add axe tests and WCAG conformance reports (#48920) @michelengelen\r\n- [test][switch] Add axe tests and WCAG conformance report (#48919) @michelengelen\r\n- [test][textfield] Add axe tests and WCAG conformance report (#48923) @michelengelen\r\n- [test][togglebutton] Add axe tests and WCAG conformance reports (#48921) @michelengelen\r\n\r\nAll contributors of this release in alphabetical order: @aarongarciah, @alexfauquette, @brijeshb42, @crispinc-omnea, @Cunninger, @Denimworld12, @dizhurnikita, @itd-mb, @Janpot, @JCQuintas, @kwy404, @lazerg, @LeusMaximus, @ludij, @LukasTy, @mateuseap, @michelengelen, @minwookshin, @mj12albert, @namansancheti, @oliviertassinari, @OskarEichler, @sai6855, @silviuaavram, @siriwatknp, @starboyvarun, @usamabhatti1998, @valkiara, @webernir, @ZeeshanTamboli",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitest-dev/vitest#410438395",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.4",
+    "publishedAt": "2026-10-12T09:37:37Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.4",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚀 Features\r\n\r\n- **experimental**:\r\n  - Tag cache directories with CACHEDIR.TAG &nbsp;-&nbsp; by @lifeiscontent in https://github.com/vitest-dev/vitest/issues/11461 [<samp>(a8ea3)</samp>](https://github.com/vitest-dev/vitest/commit/a8ea3c8fd)\r\n  - Support `test.ui.theme` option &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11499 [<samp>(1da66)</samp>](https://github.com/vitest-dev/vitest/commit/1da66405d)\r\n  - Highlight selector multiple matches in trace view &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11489 [<samp>(5abba)</samp>](https://github.com/vitest-dev/vitest/commit/5abba1e1b)\r\n  - Print how many tests were affected and a total when running `--changed` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11424 [<samp>(a2336)</samp>](https://github.com/vitest-dev/vitest/commit/a23368585)\r\n  - Add an option to cache dependencies instead of statically parsing them &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11515 [<samp>(c0601)</samp>](https://github.com/vitest-dev/vitest/commit/c06012ac8)\r\n  - Add fit and zoom controls to trace viewer &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11490 [<samp>(f5dd9)</samp>](https://github.com/vitest-dev/vitest/commit/f5dd99ed0)\r\n\r\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\r\n\r\n- Fail the run on git and location filter errors &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11430 [<samp>(30d03)</samp>](https://github.com/vitest-dev/vitest/commit/30d0304d2)\r\n- Enable fsModuleCache by default &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11435 [<samp>(ad208)</samp>](https://github.com/vitest-dev/vitest/commit/ad208cc29)\r\n- Track project files and mocks with --changed &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11432 [<samp>(b0f2b)</samp>](https://github.com/vitest-dev/vitest/commit/b0f2b3bb9)\r\n- Refactor caching, fix `:` in project and change the shape of `results` cache &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11453 [<samp>(9673c)</samp>](https://github.com/vitest-dev/vitest/commit/9673c49a4)\r\n- Keep full `$` string values when `taskTitleValueFormatTruncate` is 0 &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11485 [<samp>(4f7e1)</samp>](https://github.com/vitest-dev/vitest/commit/4f7e1799b)\r\n- Resolve node builtins in client environments &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11417 [<samp>(56b31)</samp>](https://github.com/vitest-dev/vitest/commit/56b319ac6)\r\n- Fix module graph builtin externals after #11421 &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11491 and https://github.com/vitest-dev/vitest/issues/11421 [<samp>(008e1)</samp>](https://github.com/vitest-dev/vitest/commit/008e184cb)\r\n- Wrap module mocks during in-source testing &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11505 [<samp>(36d19)</samp>](https://github.com/vitest-dev/vitest/commit/36d19cb00)\r\n- Handle line endings in snapshot &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11522 [<samp>(4c468)</samp>](https://github.com/vitest-dev/vitest/commit/4c468aa40)\r\n- Respect root in projects &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11521 [<samp>(26642)</samp>](https://github.com/vitest-dev/vitest/commit/26642f793)\r\n- Resolve mocks in directories with spaces &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11539 [<samp>(caaef)</samp>](https://github.com/vitest-dev/vitest/commit/caaef9416)\r\n- **api**:\r\n  - Publish the api token atomically &nbsp;-&nbsp; by @umairnawaz333 in https://github.com/vitest-dev/vitest/issues/11323 [<samp>(6f990)</samp>](https://github.com/vitest-dev/vitest/commit/6f990fef1)\r\n- **browser**:\r\n  - Close the mock route interception race &nbsp;-&nbsp; by @cplieger and @sheremet-va in https://github.com/vitest-dev/vitest/issues/8339 and https://github.com/vitest-dev/vitest/issues/11083 [<samp>(d6620)</samp>](https://github.com/vitest-dev/vitest/commit/d6620fae6)\r\n  - Allow toHaveTextContent without arguments &nbsp;-&nbsp; by @nomadical in https://github.com/vitest-dev/vitest/issues/11425 [<samp>(8ebcf)</samp>](https://github.com/vitest-dev/vitest/commit/8ebcf5f8a)\r\n  - Apply API options without browser config &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/10852 [<samp>(ad055)</samp>](https://github.com/vitest-dev/vitest/commit/ad055837b)\r\n  - Preserve undefined command arguments &nbsp;-&nbsp; by @sheremet-va and @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11497 [<samp>(1576d)</samp>](https://github.com/vitest-dev/vitest/commit/1576d3d89)\r\n  - Wait for setup mocks before importing a test file &nbsp;-&nbsp; by @kasperpeulen in https://github.com/vitest-dev/vitest/issues/11520 [<samp>(b61d1)</samp>](https://github.com/vitest-dev/vitest/commit/b61d1ced3)\r\n  - Avoid extra scroll outside the iframe &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11523 [<samp>(662e8)</samp>](https://github.com/vitest-dev/vitest/commit/662e8a363)\r\n  - Run browser instances as workers &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11525 [<samp>(bf04b)</samp>](https://github.com/vitest-dev/vitest/commit/bf04b9ccc)\r\n  - Open one cdp session per tester &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11542 [<samp>(69e63)</samp>](https://github.com/vitest-dev/vitest/commit/69e6369f6)\r\n  - Clean up unmocked and pending mocks &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11537 [<samp>(5c955)</samp>](https://github.com/vitest-dev/vitest/commit/5c9552173)\r\n- **coverage**:\r\n  - V8 browser memory leak between test files &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11466 [<samp>(2297d)</samp>](https://github.com/vitest-dev/vitest/commit/2297d93a8)\r\n  - `allowExternal` fails to include uncovered files &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11513 [<samp>(4ef00)</samp>](https://github.com/vitest-dev/vitest/commit/4ef000a93)\r\n  - Filenames containing brackets incorrectly showing as uncovered &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11531 [<samp>(0fa80)</samp>](https://github.com/vitest-dev/vitest/commit/0fa80f53c)\r\n  - Istanbul coverage wrong when module transform warmups &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11529 [<samp>(9f61d)</samp>](https://github.com/vitest-dev/vitest/commit/9f61dcca2)\r\n- **deps**:\r\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11167 [<samp>(c74e0)</samp>](https://github.com/vitest-dev/vitest/commit/c74e099a9)\r\n- **expect**:\r\n  - Fix `Map` and `Set` deep equality in some assertions &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11402 [<samp>(b4e79)</samp>](https://github.com/vitest-dev/vitest/commit/b4e79fd7a)\r\n  - Check value in chai-style returned &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11500 [<samp>(1aca0)</samp>](https://github.com/vitest-dev/vitest/commit/1aca02a21)\r\n- **mocker**:\r\n  - Fix native loader mocking edge cases &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11540 [<samp>(cd423)</samp>](https://github.com/vitest-dev/vitest/commit/cd423ba04)\r\n- **pretty-format**:\r\n  - Support boxed symbols &nbsp;-&nbsp; by @lehni in https://github.com/vitest-dev/vitest/issues/11445 and https://github.com/vitest-dev/vitest/issues/11446 [<samp>(eba44)</samp>](https://github.com/vitest-dev/vitest/commit/eba44926e)\r\n- **reporters**:\r\n  - Junit to strip ANSI sequences from all XML attributes &nbsp;-&nbsp; by @meganemura and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11407 [<samp>(e1a73)</samp>](https://github.com/vitest-dev/vitest/commit/e1a731470)\r\n- **runner**:\r\n  - Don&#39;t cache failed fixture setups &nbsp;-&nbsp; by @hamed-bavar in https://github.com/vitest-dev/vitest/issues/11237 and https://github.com/vitest-dev/vitest/issues/11238 [<samp>(4ee66)</samp>](https://github.com/vitest-dev/vitest/commit/4ee66c021)\r\n- **typecheck**:\r\n  - Use typescript pool in toTestSpecification &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11451 [<samp>(5f273)</samp>](https://github.com/vitest-dev/vitest/commit/5f2739e74)\r\n- **ui**:\r\n  - Remove duplicate browser-open call opening two tabs &nbsp;-&nbsp; by @feastyr69 in https://github.com/vitest-dev/vitest/issues/11356 and https://github.com/vitest-dev/vitest/issues/11358 [<samp>(d7e13)</samp>](https://github.com/vitest-dev/vitest/commit/d7e1315c1)\r\n  - Simplify explorer filtering + fix nested tests when search matches a suite &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **Codex** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11262 [<samp>(a627b)</samp>](https://github.com/vitest-dev/vitest/commit/a627be498)\r\n  - Store module graph once per environment &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11421 [<samp>(af903)</samp>](https://github.com/vitest-dev/vitest/commit/af903c65e)\r\n  - Mount index.html handler on the ui base path &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11517 [<samp>(1bc24)</samp>](https://github.com/vitest-dev/vitest/commit/1bc2495c7)\r\n  - Center split pane resize handle &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11506 [<samp>(e658b)</samp>](https://github.com/vitest-dev/vitest/commit/e658b9b6a)\r\n- **vm**:\r\n  - Bind `this` to `module.exports` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11504 [<samp>(b618a)</samp>](https://github.com/vitest-dev/vitest/commit/b618afd5c)\r\n\r\n### &nbsp;&nbsp;&nbsp;🏎 Performance\r\n\r\n- Reuse fsModuleCache when filtering by source &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11428 [<samp>(7ebd9)</samp>](https://github.com/vitest-dev/vitest/commit/7ebd95fdd)\r\n- **spy**: Reset only mocks that were called or reconfigured &nbsp;-&nbsp; by @johan-gorter and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11197 [<samp>(28ef9)</samp>](https://github.com/vitest-dev/vitest/commit/28ef93df2)\r\n\r\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.3...v5.0.4)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#409878238",
     "library": "TanStack Query",
     "repository": "TanStack/query",
