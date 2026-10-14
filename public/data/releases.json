@@ -1,5 +1,277 @@
 [
   {
+    "id": "facebook/react#399919218",
+    "library": "React",
+    "repository": "facebook/react",
+    "version": "v19.3.1",
+    "publishedAt": "2026-10-14T17:06:15Z",
+    "url": "https://github.com/react/react/releases/tag/v19.3.1",
+    "releaseNotes": "## React Server Components\r\n\r\n- Improve transport protocol ([#37845](https://github.com/facebook/react/pull/37845) by @unstubbable and @eps1lon)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "facebook/react#399919441",
+    "library": "React",
+    "repository": "facebook/react",
+    "version": "v19.2.9",
+    "publishedAt": "2026-10-14T17:06:10Z",
+    "url": "https://github.com/react/react/releases/tag/v19.2.9",
+    "releaseNotes": "## React Server Components\r\n\r\n- Improve transport protocol ([#37844](https://github.com/facebook/react/pull/37844) by @unstubbable and @eps1lon)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "facebook/react#399919525",
+    "library": "React",
+    "repository": "facebook/react",
+    "version": "v19.1.10",
+    "publishedAt": "2026-10-14T17:06:06Z",
+    "url": "https://github.com/react/react/releases/tag/v19.1.10",
+    "releaseNotes": "## React Server Components\r\n\r\n- Improve transport protocol ([#37843](https://github.com/facebook/react/pull/37843) by @unstubbable and @eps1lon)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "facebook/react#399919901",
+    "library": "React",
+    "repository": "facebook/react",
+    "version": "v19.0.9",
+    "publishedAt": "2026-10-14T17:05:59Z",
+    "url": "https://github.com/react/react/releases/tag/v19.0.9",
+    "releaseNotes": "## React Server Components\r\n\r\n- Improve transport protocol ([#37842](https://github.com/facebook/react/pull/37842) by @unstubbable and @eps1lon)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839547",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-14-1451",
+    "publishedAt": "2026-10-14T14:51:37Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-14-1451",
+    "releaseNotes": "Release 2026-10-14 14:51\n\n## Changes\n\n### Chore\n\n- deps: bump srvx to ^1.0.0 and @vitejs/plugin-rsc to ^0.5.37 (#8708) (fdc10fa13f) by @Sheraff\n- deps: bump fetchdts to ^0.2.0 (#8710) (71d9694da6) by @Sheraff\n- router-cli: replace yargs with cac (#8711) (a80cd74105) by @Sheraff\n- deps: bump diff to ^9.0.0 (#8709) (923d98b18b) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-start@1.169.2\n- @tanstack/react-start-rsc@0.1.63\n- @tanstack/react-start-server@1.167.50\n- @tanstack/router-cli@1.167.44\n- @tanstack/router-generator@1.167.44\n- @tanstack/router-plugin@1.168.46\n- @tanstack/router-utils@1.162.4\n- @tanstack/router-vite-plugin@1.167.46\n- @tanstack/solid-start@1.169.2\n- @tanstack/solid-start-server@1.167.48\n- @tanstack/start-plugin-core@1.171.53\n- @tanstack/start-server-core@1.169.43\n- @tanstack/vue-start@1.169.2\n- @tanstack/vue-start-server@1.167.48\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839423",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-utils@1.162.4",
+    "publishedAt": "2026-10-14T14:51:29Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-utils%401.162.4",
+    "releaseNotes": "### Patch Changes\n\n-   [#8709](https://github.com/TanStack/router/pull/8709) [`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e) - Bump `diff` dependency to `^9.0.0`.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839380",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.63",
+    "publishedAt": "2026-10-14T14:51:26Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.63",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`fdc10fa`](https://github.com/TanStack/router/commit/fdc10fa13fbac758615f9a3d37075088d1cc1e1f), [`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e)]:\n    -   @tanstack/start-plugin-core@1.171.53\n    -   @tanstack/router-utils@1.162.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839335",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.53",
+    "publishedAt": "2026-10-14T14:51:23Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.53",
+    "releaseNotes": "### Patch Changes\n\n-   [#8708](https://github.com/TanStack/router/pull/8708) [`fdc10fa`](https://github.com/TanStack/router/commit/fdc10fa13fbac758615f9a3d37075088d1cc1e1f) - Update `srvx` to `^1.0.0`.\n\n-   Updated dependencies \\[[`71d9694`](https://github.com/TanStack/router/commit/71d9694da6346fbece2cda4ecde92b0b12a7ee08), [`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e)]:\n    -   @tanstack/start-server-core@1.169.43\n    -   @tanstack/router-utils@1.162.4\n    -   @tanstack/router-generator@1.167.44\n    -   @tanstack/router-plugin@1.168.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839183",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.168.46",
+    "publishedAt": "2026-10-14T14:51:14Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.46",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e)]:\n    -   @tanstack/router-utils@1.162.4\n    -   @tanstack/router-generator@1.167.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839094",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.169.2",
+    "publishedAt": "2026-10-14T14:51:08Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.169.2",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`71d9694`](https://github.com/TanStack/router/commit/71d9694da6346fbece2cda4ecde92b0b12a7ee08), [`fdc10fa`](https://github.com/TanStack/router/commit/fdc10fa13fbac758615f9a3d37075088d1cc1e1f), [`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e)]:\n    -   @tanstack/start-server-core@1.169.43\n    -   @tanstack/start-plugin-core@1.171.53\n    -   @tanstack/router-utils@1.162.4\n    -   @tanstack/react-start-server@1.167.50\n    -   @tanstack/react-start-rsc@0.1.63\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412839034",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.50",
+    "publishedAt": "2026-10-14T14:51:05Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.50",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`71d9694`](https://github.com/TanStack/router/commit/71d9694da6346fbece2cda4ecde92b0b12a7ee08)]:\n    -   @tanstack/start-server-core@1.169.43\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412838978",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.167.44",
+    "publishedAt": "2026-10-14T14:51:02Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.167.44",
+    "releaseNotes": "### Patch Changes\n\n-   [#8711](https://github.com/TanStack/router/pull/8711) [`a80cd74`](https://github.com/TanStack/router/commit/a80cd7410591396aa203f754c34caff2628f21fd) - Replace `yargs` with the dependency-free `cac` for parsing `tsr` arguments. `tsr generate` and `tsr watch` work as before. Running `tsr` with no command now prints help, and unknown commands, unknown options, or extra arguments now print an error and exit with code 1 instead of being ignored.\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-generator@1.167.44\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412838935",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.167.44",
+    "publishedAt": "2026-10-14T14:50:59Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.167.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`923d98b`](https://github.com/TanStack/router/commit/923d98b18b6cd90b6219591e20e86115dc61048e)]:\n    -   @tanstack/router-utils@1.162.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412838895",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.46",
+    "publishedAt": "2026-10-14T14:50:56Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.46",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-plugin@1.168.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#412838817",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.43",
+    "publishedAt": "2026-10-14T14:50:51Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.43",
+    "releaseNotes": "### Patch Changes\n\n-   [#8710](https://github.com/TanStack/router/pull/8710) [`71d9694`](https://github.com/TanStack/router/commit/71d9694da6346fbece2cda4ecde92b0b12a7ee08) - Update `fetchdts` to `^0.2.0`. The typed request and response header helpers keep the same header names and value types.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#412675817",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-query@2.0.2",
+    "publishedAt": "2026-10-14T12:11:00Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-query%402.0.2",
+    "releaseNotes": "### Patch Changes\n\n- [#1534](https://github.com/petyosi/react-virtuoso/pull/1534) [`4cb81bd`](https://github.com/petyosi/react-virtuoso/commit/4cb81bd6ac5d4b5e8adc9072dcb6316429aa649a) Thanks [@petyosi](https://github.com/petyosi)! - Stop a polling query from re-arming its `refetchInterval` after a `data$` subscriber disables it, changes its params, or starts another fetch while handling a successful result.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#412183472",
     "library": "TanStack Query",
     "repository": "TanStack/query",
