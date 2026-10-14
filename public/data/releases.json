@@ -1,5 +1,73 @@
 [
   {
+    "id": "TanStack/query#412183472",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-13-2308",
+    "publishedAt": "2026-10-13T23:08:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-13-2308",
+    "releaseNotes": "Release 2026-10-13 23:08\n\n## Changes\n\n### Features\n\n- angular: migration schematic (#11787) (d83eef68a) by @benjavicente\n\n\n## Packages\n\n- @tanstack/angular-query@5.0.0-rc.3\n- @tanstack/angular-query-devtools@5.0.0-rc.3\n- @tanstack/angular-query-persist-client@5.0.0-rc.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#411418834",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.19",
+    "publishedAt": "2026-10-13T07:43:52Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.19",
+    "releaseNotes": "### Patch Changes\n\n- [#1462](https://github.com/petyosi/react-virtuoso/pull/1462) [`12a40e9`](https://github.com/petyosi/react-virtuoso/commit/12a40e90930b778ada05b08a63d36045fd09f508) Thanks [@Luccas-carvalho](https://github.com/Luccas-carvalho)! - Clamp out-of-range `VirtuosoGrid` `scrollToIndex` targets to the last available item.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#411408404",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.18",
+    "publishedAt": "2026-10-13T07:31:55Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.18",
+    "releaseNotes": "### Patch Changes\n\n- [#1521](https://github.com/petyosi/react-virtuoso/pull/1521) [`c923e6d`](https://github.com/petyosi/react-virtuoso/commit/c923e6d7e51b2807f6c71fddee3e2e5a944a302f) Thanks [@cpruijsen](https://github.com/cpruijsen)! - Fixed `GroupedVirtuoso` calling `computeItemKey` and `itemContent` with a non-existent item index when all groups are empty (e.g. `groupCounts={[0]}`) or when `initialTopMostItemIndex` is `LAST`. The initial size probe now stays within the existing items, and probes only the group headers when there are no items. When the empty groups later receive items, the size state is reset, so the list measures a group header and an item again instead of sizing every item as a header.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#411345420",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.17",
+    "publishedAt": "2026-10-13T06:15:19Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.17",
+    "releaseNotes": "### Patch Changes\n\n- [#1520](https://github.com/petyosi/react-virtuoso/pull/1520) [`e519b85`](https://github.com/petyosi/react-virtuoso/commit/e519b85996200758dc92119dc818456357dfdb62) Thanks [@cpruijsen](https://github.com/cpruijsen)! - Fixed `endReached` receiving an index that includes the group headers in `GroupedVirtuoso` and `GroupedTableVirtuoso`. The callback now receives the index of the last real item - e.g. 499 instead of 522 for a list of 500 items with 23 groups. If your `endReached` handler subtracts the group count from the index as a workaround, remove that adjustment. `endReached` no longer fires when every group is empty.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#411088867",
     "library": "TanStack Router",
     "repository": "TanStack/router",
