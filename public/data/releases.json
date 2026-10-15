@@ -1,5 +1,621 @@
 [
   {
+    "id": "vitest-dev/vitest#413918357",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v4.1.12",
+    "publishedAt": "2026-10-15T14:36:29Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v4.1.12",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- **mocker**: Harden manual and redirect mocks [backport to v4] &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11580 [<samp>(b8253)</samp>](https://github.com/vitest-dev/vitest/commit/b82531324)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v4.1.11...v4.1.12)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "mocker-harden-manual-redirect-mocks",
+        "category": "bugfix",
+        "title": "手動およびリダイレクトモックの堅牢化",
+        "summary": "mocker機能において、手動モックおよびリダイレクトモックの処理を安定化・堅牢化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#413903843",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.0.5",
+    "publishedAt": "2026-10-15T14:22:50Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.0.5",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\r\n\r\n- Keep vite default `fs.deny` with api token file &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11578 [<samp>(28dc1)</samp>](https://github.com/vitest-dev/vitest/commit/28dc1edfb)\r\n- Handle quoted file names in `--changed` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11583 [<samp>(14921)</samp>](https://github.com/vitest-dev/vitest/commit/14921e962)\r\n- Add `data` to the `import.meta.hot` stub &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11590 [<samp>(3a828)</samp>](https://github.com/vitest-dev/vitest/commit/3a8289ac3)\r\n- Set `skip` in `skipIf`, ignore `undefined` options &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11591 [<samp>(d523a)</samp>](https://github.com/vitest-dev/vitest/commit/d523a15f2)\r\n- Skip builtin loading in async leak detector &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11598 [<samp>(fe86a)</samp>](https://github.com/vitest-dev/vitest/commit/fe86a64c6)\r\n- Keep the import frame in native loader errors &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11599 [<samp>(9697b)</samp>](https://github.com/vitest-dev/vitest/commit/9697b3894)\r\n- Run hook cleanups when a later hook fails &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11605 [<samp>(6c5a4)</samp>](https://github.com/vitest-dev/vitest/commit/6c5a44720)\r\n- Release mocks of finished test files &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11607 [<samp>(e9c3d)</samp>](https://github.com/vitest-dev/vitest/commit/e9c3d72f0)\r\n- Abort all running tests on cancel &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11606 [<samp>(6621a)</samp>](https://github.com/vitest-dev/vitest/commit/6621a72d6)\r\n- **browser**:\r\n  - Ignore synthetic pagehide events &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11582 [<samp>(ca081)</samp>](https://github.com/vitest-dev/vitest/commit/ca0813584)\r\n  - Run plugin buildStart on server creation &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11593 [<samp>(ea611)</samp>](https://github.com/vitest-dev/vitest/commit/ea611e44c)\r\n  - Drop late connections of closed sessions &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11600 [<samp>(f161e)</samp>](https://github.com/vitest-dev/vitest/commit/f161e6df2)\r\n  - Wait 30s for the browser to close &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11601 [<samp>(6498b)</samp>](https://github.com/vitest-dev/vitest/commit/6498b666a)\r\n  - Run global setup once with instances &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11596 [<samp>(8dd67)</samp>](https://github.com/vitest-dev/vitest/commit/8dd67c262)\r\n- **reporter**:\r\n  - End reason `&#39;failed&#39;` on worker crash &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11568 [<samp>(6ae8e)</samp>](https://github.com/vitest-dev/vitest/commit/6ae8e89ff)\r\n\r\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.4...v5.0.5)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "28dc1edfb",
+        "category": "bugfix",
+        "title": "Viteのデフォルトfs.deny設定の維持",
+        "summary": "APIトークンファイル使用時にViteのデフォルトfs.deny設定が保持されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "14921e962",
+        "category": "bugfix",
+        "title": "--changedにおける引用符付きファイル名の処理",
+        "summary": "--changedフラグ使用時に引用符で囲まれたファイル名を適切にハンドリングできるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "3a8289ac3",
+        "category": "bugfix",
+        "title": "import.meta.hotスタブへのdataプロパティ追加",
+        "summary": "import.meta.hotのスタブ実装にdataプロパティが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "d523a15f2",
+        "category": "bugfix",
+        "title": "skipIfにおけるskipの設定とundefinedオプションの無視",
+        "summary": "skipIfでskipが適切にセットされ、undefinedオプションが無視されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fe86a64c6",
+        "category": "bugfix",
+        "title": "非同期リーク検出器でのビルトインモジュール読み込みのスキップ",
+        "summary": "async leak detectorにおいてビルトインモジュールの読み込みをスキップするように変更されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9697b3894",
+        "category": "bugfix",
+        "title": "ネイティブローダーエラー時のインポートフレーム保持",
+        "summary": "ネイティブローダーでのエラー発生時にインポートフレームの情報が保持されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6c5a44720",
+        "category": "bugfix",
+        "title": "後続フック失敗時のクリーンアップ処理の実行",
+        "summary": "後続のフックが失敗した場合でも、フックのクリーンアップ処理が正常に実行されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "e9c3d72f0",
+        "category": "bugfix",
+        "title": "終了したテストファイルのモック解放",
+        "summary": "テストファイルの実行完了時にそのファイルのモックを解放するよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6621a72d6",
+        "category": "bugfix",
+        "title": "キャンセル時の全実行中テストの中断",
+        "summary": "テストのキャンセル要求時に実行中のすべてのテストを中断するよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ca0813584",
+        "category": "bugfix",
+        "title": "ブラウザモード: 合成pagehideイベントの無視",
+        "summary": "ブラウザモードにおいて合成されたpagehideイベントを無視するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ea611e44c",
+        "category": "bugfix",
+        "title": "ブラウザモード: サーバー作成時のプラグインbuildStart実行",
+        "summary": "ブラウザモードでサーバーが作成された際にプラグインのbuildStartフックが実行されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f161e6df2",
+        "category": "bugfix",
+        "title": "ブラウザモード: 終了セッションへの遅延接続の破棄",
+        "summary": "すでに終了したセッションへの遅れて届いた接続を破棄するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6498b666a",
+        "category": "bugfix",
+        "title": "ブラウザモード: ブラウザ終了待機時間の拡張",
+        "summary": "ブラウザ終了時に最大30秒間待機するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8dd67c262",
+        "category": "bugfix",
+        "title": "ブラウザモード: インスタンス使用時のglobal setup一度実行",
+        "summary": "インスタンス利用時にglobal setupが1度だけ実行されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6ae8e89ff",
+        "category": "bugfix",
+        "title": "リポーター: ワーカークラッシュ時の終了理由設定",
+        "summary": "ワーカーがクラッシュした際の終了理由に'failed'が設定されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413767014",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/collision@0.5.1",
+    "publishedAt": "2026-10-15T12:09:40Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/collision%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7)]:\n    -   @dnd-kit/abstract@0.5.1\n    -   @dnd-kit/geometry@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-0.5.1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@dnd-kit/abstractおよび@dnd-kit/geometryのバージョンを0.5.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766880",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/geometry@0.5.1",
+    "publishedAt": "2026-10-15T12:09:34Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/geometry%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @dnd-kit/state@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-051",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@dnd-kit/state をバージョン 0.5.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766831",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/helpers@0.5.1",
+    "publishedAt": "2026-10-15T12:09:31Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/helpers%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7)]:\n    -   @dnd-kit/abstract@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-abstract-0-5-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@dnd-kit/abstract が 0.5.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766784",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/abstract@0.5.1",
+    "publishedAt": "2026-10-15T12:09:28Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/abstract%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#2149](https://github.com/clauderic/dnd-kit/pull/2149) [`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7) Thanks [@ManiShah7](https://github.com/ManiShah7)! - Fix stale `initialIndex` and `initialGroup` on `Sortable` in `onBeforeDragStart` after the item has moved. Add an `initializationPending` getter to the drag operation status.\n\n-   Updated dependencies \\[]:\n    -   @dnd-kit/geometry@0.5.1\n    -   @dnd-kit/state@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "2149",
+        "category": "bugfix",
+        "title": "Sortableにおける初期インデックス等の修正とinitializationPendingゲッターの追加",
+        "summary": "アイテム移動後にonBeforeDragStart内でinitialIndexおよびinitialGroupが古い状態のままになる不具合を修正しました。また、ドラッグ操作ステータスにinitializationPendingゲッターを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766737",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/react@0.5.1",
+    "publishedAt": "2026-10-15T12:09:25Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/react%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#2135](https://github.com/clauderic/dnd-kit/pull/2135) [`5185c8f`](https://github.com/clauderic/dnd-kit/commit/5185c8f75c087a9df5a240413fcd639e27f3a078) Thanks [@kimjunha1231](https://github.com/kimjunha1231)! - Fix missing state updates when draggable, droppable, or sortable properties are first read on a later render in React, Vue, Solid, and Svelte. Retain signal subscriptions across view updates and prevent update loops for getters that return new objects.\n\n-   [#2131](https://github.com/clauderic/dnd-kit/pull/2131) [`037663b`](https://github.com/clauderic/dnd-kit/commit/037663b51f7e0f1b1b89f8eef16397d3c5ace5e1) Thanks [@NektarTheo](https://github.com/NektarTheo)! - Respect `transition: null` in the React, Vue, Solid and Svelte sortable bindings. The bindings previously merged `defaultSortableTransition` before constructing or updating the core `Sortable`, which replaced an explicit `null` with the default transition, so sortable items kept animating. They now use the new `resolveSortableTransition` helper exported from `@dnd-kit/dom/sortable`, which preserves `null` while still merging partial transitions with the defaults.\n\n-   Updated dependencies \\[[`22a39ef`](https://github.com/clauderic/dnd-kit/commit/22a39ef766e671d395b4dc80a094fc81dac143f9), [`d3f965f`](https://github.com/clauderic/dnd-kit/commit/d3f965fbc4c73592830e581b828768dd7c1243af), [`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7), [`e00be08`](https://github.com/clauderic/dnd-kit/commit/e00be08c9b0c4dc521328917ec1dc42661e4ac00), [`cf4fb8a`](https://github.com/clauderic/dnd-kit/commit/cf4fb8a24940821da096c910def84a4a9dddf780), [`d5071ec`](https://github.com/clauderic/dnd-kit/commit/d5071ec13dbceb08258b50b099987d362231e8e6), [`8a1c807`](https://github.com/clauderic/dnd-kit/commit/8a1c807b172c95efa83670682843735b4a79682b), [`bce5778`](https://github.com/clauderic/dnd-kit/commit/bce5778b8873b164fa287e8e59b64c56eddca2ae), [`037663b`](https://github.com/clauderic/dnd-kit/commit/037663b51f7e0f1b1b89f8eef16397d3c5ace5e1), [`3ff8588`](https://github.com/clauderic/dnd-kit/commit/3ff858831b398cc7012375c4eef132df1f30dbd6)]:\n    -   @dnd-kit/dom@0.5.1\n    -   @dnd-kit/abstract@0.5.1\n    -   @dnd-kit/state@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "2135",
+        "category": "bugfix",
+        "title": "遅延参照時の状態更新不具合とシグナル購読の修正",
+        "summary": "draggable、droppable、またはsortableのプロパティが後続のレンダリングで初めて参照された際の状態更新が行われない問題を修正しました。ビュー更新間でのシグナル購読保持と、新しいオブジェクトを返すゲッターによる更新ループの発生を防止します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2131",
+        "category": "bugfix",
+        "title": "Sortableバインディングにおけるtransition: nullのサポート",
+        "summary": "Sortableバインディングでtransition: nullの設定が尊重されるように修正されました。以前は明示的なnull設定がデフォルトのトランジションに上書きされていましたが、nullが保持されるようになります。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766490",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/state@0.5.1",
+    "publishedAt": "2026-10-15T12:09:16Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/state%400.5.1",
+    "releaseNotes": "\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "clauderic/dnd-kit#413766451",
+    "library": "dnd-kit",
+    "repository": "clauderic/dnd-kit",
+    "version": "@dnd-kit/dom@0.5.1",
+    "publishedAt": "2026-10-15T12:09:13Z",
+    "url": "https://github.com/clauderic/dnd-kit/releases/tag/%40dnd-kit/dom%400.5.1",
+    "releaseNotes": "### Patch Changes\n\n-   [#2153](https://github.com/clauderic/dnd-kit/pull/2153) [`22a39ef`](https://github.com/clauderic/dnd-kit/commit/22a39ef766e671d395b4dc80a094fc81dac143f9) Thanks [@pedroapfilho](https://github.com/pedroapfilho)! - The `Accessibility` plugin no longer sets `aria-pressed` on draggable activators whose role isn't `button`, such as `role=\"tab\"`, where the attribute isn't allowed.\n\n-   [#2094](https://github.com/clauderic/dnd-kit/pull/2094) [`d3f965f`](https://github.com/clauderic/dnd-kit/commit/d3f965fbc4c73592830e581b828768dd7c1243af) Thanks [@timagixe](https://github.com/timagixe)! - Match KeyboardSensor shortcuts against KeyboardEvent.key so keyboard controls respect keyboard layouts and operating system key remaps. Common legacy Key_ and Digit_ configs still normalize.\n\n-   [#2149](https://github.com/clauderic/dnd-kit/pull/2149) [`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7) Thanks [@ManiShah7](https://github.com/ManiShah7)! - Fix stale `initialIndex` and `initialGroup` on `Sortable` in `onBeforeDragStart` after the item has moved. Add an `initializationPending` getter to the drag operation status.\n\n-   [#2076](https://github.com/clauderic/dnd-kit/pull/2076) [`e00be08`](https://github.com/clauderic/dnd-kit/commit/e00be08c9b0c4dc521328917ec1dc42661e4ac00) Thanks [@timagixe](https://github.com/timagixe)! - Avoid requiring ResizeObserver at import time when importing @dnd-kit/dom/modifiers in DOM-like test environments.\n\n-   [#2151](https://github.com/clauderic/dnd-kit/pull/2151) [`cf4fb8a`](https://github.com/clauderic/dnd-kit/commit/cf4fb8a24940821da096c910def84a4a9dddf780) Thanks [@cpruijsen](https://github.com/cpruijsen)! - Record pointer moves received while a drag operation is initializing so the drag position catches up when the operation starts, instead of staying at the pointerdown position until the next pointer move.\n\n-   [#2152](https://github.com/clauderic/dnd-kit/pull/2152) [`d5071ec`](https://github.com/clauderic/dnd-kit/commit/d5071ec13dbceb08258b50b099987d362231e8e6) Thanks [@Bhavani2016](https://github.com/Bhavani2016)! - Prevent body-targeted clicks following pointer drops from unexpectedly dismissing popups, while preserving iframe dragging.\n\n-   [#2126](https://github.com/clauderic/dnd-kit/pull/2126) [`8a1c807`](https://github.com/clauderic/dnd-kit/commit/8a1c807b172c95efa83670682843735b4a79682b) Thanks [@waterWang](https://github.com/waterWang)! - Reuse each scroll container's position measurement during auto-scrolling to avoid duplicate layout reads while preserving the existing scroll utility argument order.\n\n-   [#2142](https://github.com/clauderic/dnd-kit/pull/2142) [`bce5778`](https://github.com/clauderic/dnd-kit/commit/bce5778b8873b164fa287e8e59b64c56eddca2ae) Thanks [@chasegiunta](https://github.com/chasegiunta)! - Keep the Feedback plugin's styles injected between drag operations instead of adding and removing its `<style>` element on every drag. Each stylesheet change forces the browser to recalculate styles for the whole document, which caused jank at the start and end of drags on large pages. `StyleInjector.register()` accepts a new `retain` option for rules that are inert outside of a drag, and only adds or removes the stylesheets whose target roots actually changed.\n\n-   [#2131](https://github.com/clauderic/dnd-kit/pull/2131) [`037663b`](https://github.com/clauderic/dnd-kit/commit/037663b51f7e0f1b1b89f8eef16397d3c5ace5e1) Thanks [@NektarTheo](https://github.com/NektarTheo)! - Respect `transition: null` in the React, Vue, Solid and Svelte sortable bindings. The bindings previously merged `defaultSortableTransition` before constructing or updating the core `Sortable`, which replaced an explicit `null` with the default transition, so sortable items kept animating. They now use the new `resolveSortableTransition` helper exported from `@dnd-kit/dom/sortable`, which preserves `null` while still merging partial transitions with the defaults.\n\n-   [#2134](https://github.com/clauderic/dnd-kit/pull/2134) [`3ff8588`](https://github.com/clauderic/dnd-kit/commit/3ff858831b398cc7012375c4eef132df1f30dbd6) Thanks [@timagixe](https://github.com/timagixe)! - Preserve custom data types when narrowing with `isSortable` and `isSortableOperation` instead of widening them to `any`. Source and target data types are inferred independently for sortable operations.\n\n-   Updated dependencies \\[[`69987d5`](https://github.com/clauderic/dnd-kit/commit/69987d50452b18eeb47881c626c2ebdc5871c5a7)]:\n    -   @dnd-kit/abstract@0.5.1\n    -   @dnd-kit/collision@0.5.1\n    -   @dnd-kit/geometry@0.5.1\n    -   @dnd-kit/state@0.5.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547803",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-15-0754",
+    "publishedAt": "2026-10-15T07:54:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-15-0754",
+    "releaseNotes": "Release 2026-10-15 07:54\n\n## Changes\n\n### Fix\n\n- query-core: preserve union narrowing in setQueryData updaters (#11935) (0f15bc925) by @sviat-barbutsa\n- examples/svelte/playground: keep unsaved edits out of the query cache and apply the 'staleTime' and 'gcTime' inputs (#11986) (9cce26005) by @sukvvon\n- examples/react/eslint-plugin-demo: pass the dependencies as arguments so the 'allowlist' demo is checked by 'exhaustive-deps' (#12012) (5959fdb80) by @sukvvon\n- examples/react/playground: keep only the edited fields as local state and apply the initial query defaults on creation (#11985) (6a4bfe519) by @sukvvon\n- examples/vue/dependent-queries: replace 'enabled' with 'skipToken' to type the author query (#12010) (fa49ddde3) by @sukvvon\n- examples/svelte/star-wars: type route params with 'PageProps' instead of 'page.params' (#12009) (8818228c5) by @sukvvon\n- vue-query-devtools: update client when prop changes (#11413) (67705fd6a) by @grzdev\n- query-persist-client-core/createPersister: await 'storage.setItem' when persisting a query (#11410) (ed4d84973) by @MaxFreedomPollard\n\n### Refactor\n\n- examples/lit/ssr: replace the deprecated 'prefetchQuery' with 'query' in the server render (#11992) (a8af0e243) by @sukvvon\n- examples/react/batching: rename the parsed 'ids' in 'onChange' to 'parsedIds' to avoid shadowing the state (#12013) (e3e6b466a) by @sukvvon\n- examples/react/suspense: share the project queries between prefetching and 'useSuspenseQuery' with 'queryOptions' (#11990) (fd814043d) by @sukvvon\n- examples/react/nextjs: share the posts query between 'getStaticProps' and 'usePosts' with 'queryOptions' (#11989) (1aeece38a) by @sukvvon\n- examples/svelte/ssr: share the post queries between 'load' and components with 'queryOptions' (#11988) (542a6f03e) by @sukvvon\n- examples/lit/ssr: replace the 'satisfies CreateQueryOptions' annotation with 'queryOptions' (#11987) (06dbbd8ae) by @sukvvon\n- examples/react: move 'QueryClient' into '_app' with 'React.useState' (#11993) (0a3dfa0f0) by @sukvvon\n\n### Chore\n\n- examples/svelte/playground: add a flat config and run 'test:eslint' (#12029) (a21e17b5e) by @sukvvon\n- examples/react: add the missing 'react' prefix to package names (#12028) (eea734d16) by @sukvvon\n- examples/vue: add 'test:types' to type-check the examples in CI (#12022) (8b48d0253) by @sukvvon\n- examples/react: add 'test:types' to type-check the examples in CI (#12020) (98451e1b3) by @sukvvon\n- examples/svelte: add 'test:types' to type-check the examples in CI (#12019) (682e00144) by @sukvvon\n- examples/solid: add 'test:types' to type-check the examples in CI and move 'astro check' out of 'build' (#12018) (e26971ebf) by @sukvvon\n- examples/lit: move the type check from 'build' to 'test:types' (#12017) (6768f4e0b) by @sukvvon\n- examples/preact: add 'test:types' to type-check the example in CI (#12016) (dc90144cd) by @sukvvon\n- examples/angular: add 'test:types' to type-check the examples in CI (#12015) (c87cdcb96) by @sukvvon\n- nx.json: build the dependencies before 'test:types' (#12021) (8d88a1725) by @sukvvon\n- examples/react/playground: replace the legacy '.eslintrc' with a flat config and run 'test:eslint' (#12011) (d5b265a54) by @sukvvon\n- examples: use 'defineConfig' from 'eslint/config' and enable '@ts-check' in 'eslint.config.js' (#12008) (ddcde7d5a) by @sukvvon\n- examples/vue: add a flat config and run 'test:eslint' (#12003) (41c178b28) by @sukvvon\n- examples/svelte: add a flat config and run 'test:eslint' (#12002) (0fbbc6213) by @sukvvon\n- examples/react: replace the legacy '.eslintrc' with a flat config and run 'test:eslint' (#11995) (1836f7924) by @sukvvon\n- deps: update '@typescript-eslint/parser' and '@typescript-eslint/rule-tester' catalog to '^8.71.1' (#11996) (668847f1a) by @sukvvon\n- examples/react/eslint-legacy: add 'plugin:@typescript-eslint/recommended' and declare the packages used by '.eslintrc' (#11994) (70c652b8e) by @sukvvon\n- examples/react: remove the 'eslint' option that Next.js 16 no longer supports from 'next.config.js' (#11991) (1ea892863) by @sukvvon\n- deps: update '@types/node' to '^24.19.2' to match Node 24 in '.nvmrc' (#11978) (d2f053638) by @sukvvon\n- .nvmrc: update Node to 'v24.21.0' (Krypton LTS) (#11979) (4968f16e7) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.104.3\n- @tanstack/eslint-plugin-query@5.104.3\n- @tanstack/lit-query@0.2.28\n- @tanstack/preact-query@5.104.3\n- @tanstack/preact-query-devtools@5.104.3\n- @tanstack/preact-query-persist-client@5.104.3\n- @tanstack/query-async-storage-persister@5.104.3\n- @tanstack/query-broadcast-client-experimental@5.104.3\n- @tanstack/query-core@5.104.3\n- @tanstack/query-devtools@5.104.3\n- @tanstack/query-persist-client-core@5.104.3\n- @tanstack/query-sync-storage-persister@5.104.3\n- @tanstack/react-query@5.104.3\n- @tanstack/react-query-devtools@5.104.3\n- @tanstack/react-query-next-experimental@5.104.3\n- @tanstack/react-query-persist-client@5.104.3\n- @tanstack/solid-query@5.104.3\n- @tanstack/solid-query-devtools@5.104.3\n- @tanstack/solid-query-persist-client@5.104.3\n- @tanstack/svelte-query@6.3.3\n- @tanstack/svelte-query-devtools@6.3.3\n- @tanstack/svelte-query-persist-client@6.3.3\n- @tanstack/vue-query@5.104.3\n- @tanstack/vue-query-devtools@6.3.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547410",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.104.3",
+    "publishedAt": "2026-10-15T07:53:57Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`ed4d849`](https://github.com/TanStack/query/commit/ed4d849731bfe6404be9d40aec84eda54f958d7f)]:\n  - @tanstack/query-persist-client-core@5.104.3\n  - @tanstack/react-query@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547372",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.104.3",
+    "publishedAt": "2026-10-15T07:53:54Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547340",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.104.3",
+    "publishedAt": "2026-10-15T07:53:51Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.104.3\n  - @tanstack/query-devtools@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547290",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.104.3",
+    "publishedAt": "2026-10-15T07:53:48Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`ed4d849`](https://github.com/TanStack/query/commit/ed4d849731bfe6404be9d40aec84eda54f958d7f), [`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-persist-client-core@5.104.3\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547235",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.104.3",
+    "publishedAt": "2026-10-15T07:53:45Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`ed4d849`](https://github.com/TanStack/query/commit/ed4d849731bfe6404be9d40aec84eda54f958d7f), [`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-persist-client-core@5.104.3\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547193",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.104.3",
+    "publishedAt": "2026-10-15T07:53:42Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`ed4d849`](https://github.com/TanStack/query/commit/ed4d849731bfe6404be9d40aec84eda54f958d7f)]:\n  - @tanstack/query-persist-client-core@5.104.3\n  - @tanstack/preact-query@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413547152",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.104.3",
+    "publishedAt": "2026-10-15T07:53:39Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.104.3\n  - @tanstack/query-devtools@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546953",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.104.3",
+    "publishedAt": "2026-10-15T07:53:24Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546927",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.104.3",
+    "publishedAt": "2026-10-15T07:53:21Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- [#11410](https://github.com/TanStack/query/pull/11410) [`ed4d849`](https://github.com/TanStack/query/commit/ed4d849731bfe6404be9d40aec84eda54f958d7f) - fix(query-persist-client-core/createPersister): await the storage write in `persistQuery`, so `persistQueryByKey` resolves only once the entry has actually been written and rejects when the write fails instead of leaving an unhandled rejection\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546874",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.104.3",
+    "publishedAt": "2026-10-15T07:53:18Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546829",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.104.3",
+    "publishedAt": "2026-10-15T07:53:15Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546780",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.104.3",
+    "publishedAt": "2026-10-15T07:53:12Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546739",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.28",
+    "publishedAt": "2026-10-15T07:53:09Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.28",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0)]:\n  - @tanstack/query-core@5.104.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546701",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.104.3",
+    "publishedAt": "2026-10-15T07:53:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.104.3",
+    "releaseNotes": "### Patch Changes\n\n- [#11935](https://github.com/TanStack/query/pull/11935) [`0f15bc9`](https://github.com/TanStack/query/commit/0f15bc925db5813be6a17527988ec7d7b3c8cfc0) - fix(query-core): preserve discriminated union narrowing in setQueryData updaters",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#413546659",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.104.3",
+    "publishedAt": "2026-10-15T07:53:03Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.104.3",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "facebook/react#399919218",
     "library": "React",
     "repository": "facebook/react",
