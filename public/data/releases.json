@@ -1,5 +1,128 @@
 [
   {
+    "id": "TanStack/query#416205969",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-17-1753",
+    "publishedAt": "2026-10-18T03:13:18Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-17-1753",
+    "releaseNotes": "Release 2026-10-17 17:53\n\n## Changes\n\n### Fix\n\n- query-core: clear mutations before notifying subscribers (#11470) (1fee0443d) by @chungyo\n- react-query: retry queries with falsy errors on mount (#11328) (c20886163) by @jeonghoon11\n- preact-query: retry on mount for falsy errors when throwOnError returns false (#11375) (0addcd2a9) by @S-jooyoung\n- solid-query: subscribe to the new observer when the queryClient changes (#11920) (7ea027855) by @taekop\n- query-core: preserve null infinite page params (#11527) (fce89ddf7) by @gwagjiug\n- query-devtools/Devtools: apply the 'hideDisabledQueries' prop to the query list (#11638) (b61abc203) by @sukvvon\n- {preact,solid,svelte,angular-query-experimental}: switch to 'export type *' for type-only re-exports (#11251) (fc3a3848f) by @sukvvon\n- query-devtools: expose pressed state on the boolean value toggle button (#11983) (c8f5eac9d) by @dmarcey\n- eslint-plugin-query: detect aliased React hook dependencies (#11889) (1cf6eb4e9) by @fallintoplace\n- react-query*: declare '@types/react' as an optional peer dependency (#11728) (a10839824) by @sukvvon\n- examples/react: throw on non-ok 'fetch' responses in the query and mutation functions (#12058) (5817e6f69) by @sukvvon\n- react-query-devtools: create the devtools instance lazily with 'useState' initializer instead of on every render (#11722) (0992a9291) by @sukvvon\n- svelte-query/HydrationBoundary: make 'options' and 'queryClient' props optional (#12030) (2bb82dfd2) by @sukvvon\n- preact-query: do not go into optimistic fetching state when not subscribed (#11259) (2ce51902d) by @giaBaoJS\n- examples/react/nextjs-app-optimistic-updates: return the invalidation promise from 'onSettled' so the pending todo stays until the refetch finishes (#12055) (9fbf29380) by @sukvvon\n- examples: rename the auto-refetching title from 'stale-time' to 'refetchInterval', which is the option it sets (#12051) (83b0831c2) by @sukvvon\n- examples/react/offline: throw on non-ok responses so failures surface the server's message instead of a JSON parse error (#12050) (b71ff3169) by @sukvvon\n- examples/react/chat: submit through a 'form' so 'Enter' cannot send an empty question (#12049) (6f1fa2b84) by @sukvvon\n- examples/react/batching: show the character's 'status' instead of the query 'status' (#12045) (958308812) by @sukvvon\n- examples/react/rick-morty: read the episode's 'air_date' instead of the nonexistent 'airDate' (#12046) (116818a61) by @sukvvon\n- examples/react/chat: give each question an 'id' so repeated questions get their own React key and query (#12047) (817f823b9) by @sukvvon\n- examples/react/chat: use camelCase 'strokeWidth', 'strokeLinecap' and 'strokeLinejoin' on the send icon (#12048) (8ca99d1e5) by @sukvvon\n\n### Refactor\n\n- eslint-plugin-query/exhaustive-deps: remove the unused 'fixable' from the rule metadata (#12044) (a5f1b092b) by @sukvvon\n- examples/react/suspense: prefetch the projects in the click handler instead of inside the 'setShowProjects' updater (#12056) (a636462b8) by @sukvvon\n- examples/react/react-router: replace the deprecated 'ensureQueryData' with 'query' and 'staleTime: 'static'' in the loaders (#12052) (584fd6414) by @sukvvon\n- examples/react/react-native: pass the movie title in route params and show the cached list item as 'placeholderData' (#12037) (e75ecbedf) by @sukvvon\n\n### Chore\n\n- *: update '@tanstack/typedoc-config' to v0.3.5 (#12035) (f38e6271b) by @sukvvon\n- integrations: remove the unused legacy '.eslintrc.cjs' configs (#12040) (e90c0bdb8) by @sukvvon\n- examples/react/react-native: add a flat config and run 'test:eslint' (#12039) (eb94a5b44) by @sukvvon\n- oxlint.config: ignore 'examples' and 'integrations', which are not linted by Oxlint (#12038) (0e19ad7c3) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.104.4\n- @tanstack/eslint-plugin-query@5.104.4\n- @tanstack/lit-query@0.2.29\n- @tanstack/preact-query@5.104.4\n- @tanstack/preact-query-devtools@5.104.4\n- @tanstack/preact-query-persist-client@5.104.4\n- @tanstack/query-async-storage-persister@5.104.4\n- @tanstack/query-broadcast-client-experimental@5.104.4\n- @tanstack/query-core@5.104.4\n- @tanstack/query-devtools@5.104.4\n- @tanstack/query-persist-client-core@5.104.4\n- @tanstack/query-sync-storage-persister@5.104.4\n- @tanstack/react-query@5.104.4\n- @tanstack/react-query-devtools@5.104.4\n- @tanstack/react-query-next-experimental@5.104.4\n- @tanstack/react-query-persist-client@5.104.4\n- @tanstack/solid-query@5.104.4\n- @tanstack/solid-query-devtools@5.104.4\n- @tanstack/solid-query-persist-client@5.104.4\n- @tanstack/svelte-query@6.3.4\n- @tanstack/svelte-query-devtools@6.3.4\n- @tanstack/svelte-query-persist-client@6.3.4\n- @tanstack/vue-query@5.104.4\n- @tanstack/vue-query-devtools@6.3.4\n\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11470",
+        "category": "bugfix",
+        "title": "購読者への通知前にミューテーションをクリーンアップ",
+        "summary": "query-coreにて、サブスクライバーへ通知を送る前にミューテーションをクリアするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11328",
+        "category": "bugfix",
+        "title": "マウント時にfalsyなエラーを持つクエリを再試行するよう修正",
+        "summary": "react-queryにて、マウント時にエラー値がfalsyであっても再試行を実行するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11375",
+        "category": "bugfix",
+        "title": "throwOnErrorがfalseを返す場合のfalsyエラー再試行修正",
+        "summary": "preact-queryにて、throwOnErrorがfalseを返す際、falsyなエラー発生時でもマウント時に再試行されるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11920",
+        "category": "bugfix",
+        "title": "queryClient変更時に新しいオブザーバーに購読するよう修正",
+        "summary": "solid-queryにて、queryClientが変更された際、古いものではなく新しいオブザーバーに購読を切り替えるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11527",
+        "category": "bugfix",
+        "title": "無限クエリでのnullページパラメータの保持",
+        "summary": "query-coreにて、無限クエリのページパラメータに指定されたnull値が保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11638",
+        "category": "bugfix",
+        "title": "DevtoolsクエリリストへのhideDisabledQueriesプロパティ適用",
+        "summary": "query-devtoolsにて、hideDisabledQueriesプロパティがクエリリストに正しく適用されるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11251",
+        "category": "bugfix",
+        "title": "型のみの再エクスポートをexport type *に変更",
+        "summary": "preact, solid, svelte, angular-query-experimentalパッケージで、型のみの再エクスポートにexport type *を使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11983",
+        "category": "feature",
+        "title": "トグルボタンのpressed状態の露出",
+        "summary": "query-devtoolsにて、ブール値のトグルボタンにpressed状態の属性を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11889",
+        "category": "bugfix",
+        "title": "エイリアスされたReactフック依存関係の検出",
+        "summary": "eslint-plugin-queryにて、エイリアスされたReactフックの依存関係を正しく検出できるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11728",
+        "category": "other",
+        "title": "@types/reactをオプショナルなpeerDependencyとして宣言",
+        "summary": "react-query関連パッケージで、@types/reactをオプショナルなpeerDependencyとして宣言しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11722",
+        "category": "performance",
+        "title": "Devtoolsインスタンスの遅延生成",
+        "summary": "react-query-devtoolsにて、毎レンダリング時ではなくuseStateの初期化関数を使用してDevtoolsインスタンスを遅延作成するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12030",
+        "category": "feature",
+        "title": "HydrationBoundaryのpropsをオプショナル化",
+        "summary": "svelte-queryのHydrationBoundaryにおいて、optionsおよびqueryClientプロパティをオプショナルに変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11259",
+        "category": "bugfix",
+        "title": "未購読時の楽観的フェッチ状態遷移の防止",
+        "summary": "preact-queryにて、サブスクライブされていない状態のときに楽観的フェッチ状態へ遷移しないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/query#415972232",
     "library": "TanStack Query",
     "repository": "TanStack/query",
@@ -337,10 +460,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-104-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.104.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#415971833",
@@ -357,7 +490,41 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11251",
+        "category": "bugfix",
+        "title": "型専用の再エクスポートの修正",
+        "summary": "型のみの再エクスポート構文を 'export type *' に変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11375",
+        "category": "bugfix",
+        "title": "throwOnErrorがfalseの際のリトライ動作の修正",
+        "summary": "throwOnErrorがfalseを返す場合に、falsyなエラーを持つクエリがマウント時にリトライされるよう変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11259",
+        "category": "bugfix",
+        "title": "未購読時の楽観的取得状態の防止",
+        "summary": "preact-queryにおいて、購読していない状態の時に楽観的取得状態へ移行しないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-query-core",
+        "category": "other",
+        "title": "@tanstack/query-coreの更新",
+        "summary": "@tanstack/query-coreを5.104.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#415971800",
@@ -374,7 +541,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1fee044-fce89dd",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.104.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#415971761",
@@ -391,7 +568,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11470",
+        "category": "bugfix",
+        "title": "queryClient.clear() 実行時のミューテーション状態更新の不具合修正",
+        "summary": "queryClient.clear() の呼び出し後に useMutationState や useIsMutating が正しく更新されるよう、サブスクライバーへ通知する前にミューテーションキャッシュをクリアするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11527",
+        "category": "bugfix",
+        "title": "インフィニットクエリ再取得時における null ページパラメータの保持",
+        "summary": "インフィニットクエリを再取得する際に、保存されていた null の最初のページパラメータが維持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#415971736",
@@ -405,10 +600,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新に伴う特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12044",
+        "category": "other",
+        "title": "exhaustive-deps ルールメタデータの不要な fixable プロパティを削除",
+        "summary": "ルールがサジェスト機能のみを提供しているため、ルールメタデータから未使用の fixable 設定を削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11889",
+        "category": "bugfix",
+        "title": "エイリアスされた React フックにおける不安定なクエリ依存関係の検出",
+        "summary": "react からインポートされたエイリアス付きの React フックにおいても、不安定なクエリ依存関係を正常に検出するように改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#415885405",
@@ -422,10 +635,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースによる影響や破壊的変更はなく、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12054",
+        "category": "other",
+        "title": "Angularプレリリースブランチの同期",
+        "summary": "Angularのプレリリースブランチをmainブランチの内容と同期しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#415383258",
@@ -663,10 +886,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-18154b1",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-core などの関連内部依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#415382650",
@@ -707,10 +940,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "18154b1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-coreがバージョン1.171.38に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#415382597",
@@ -724,10 +967,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-router-plugin-1.168.47",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-plugin が 1.168.47 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#415382563",
