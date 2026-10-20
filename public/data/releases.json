@@ -1,5 +1,416 @@
 [
   {
+    "id": "TanStack/query#417530595",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-19-1659",
+    "publishedAt": "2026-10-19T16:59:10Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-19-1659",
+    "releaseNotes": "Release 2026-10-19 16:59\n\n## Changes\n\n### Features\n\n- examples/react/react-native: render 'ReactQueryDevtools' on web through a platform-specific 'Devtools' component (#12093) (3c648e4dd) by @sukvvon\n\n### Fix\n\n- query-core: use supplied options for optimistic fetches (#12131) (f608f933a) by @TkDodo\n- react, preact: recompute mutation state snapshots (#12117) (1f8d134ea) by @TkDodo\n- examples/svelte/load-more-infinite-scroll: show 'Loading more...' only while fetching the next page instead of on any background refetch (#12121) (ff47e1873) by @sukvvon\n- examples/svelte/{basic,ssr}: remove the '!postId' check that kept 'Loading...' next to the error for non-numeric post ids (#12119) (942314910) by @sukvvon\n- examples/svelte/playground: show 'Saved!' only after a successful mutation instead of while idle (#12114) (ae6266d57) by @sukvvon\n- examples/svelte/star-wars: throw on non-ok 'fetch' responses in the API functions (#12113) (a8fe350b8) by @sukvvon\n- examples/svelte/optimistic-updates: render 'Background Updating...' instead of a leftover JSX ternary (#12107) (69457a9e5) by @sukvvon\n- examples/svelte/optimistic-updates: throw on non-ok responses so a failed create rolls back the optimistic update (#12106) (306fcda84) by @sukvvon\n- examples/svelte: throw on non-ok 'fetch' responses in the query and mutation functions (#12109) (d0a1dff1b) by @sukvvon\n- examples/solid/offline: throw the response text on non-ok 'fetch' responses and show query errors in 'List' and 'Detail' (#12099) (7592b2f18) by @sukvvon\n- examples/solid/astro: throw on non-ok 'fetch' responses and show a pokemon load error through an 'ErrorBoundary' (#12103) (aa77cd7f6) by @sukvvon\n- examples/solid/basic-graphql-request: type post ids as strings and pass the id as a GraphQL variable (#12100) (4ae64479f) by @sukvvon\n- examples/solid: throw on non-ok 'fetch' responses in the query functions (#12098) (c10c1f770) by @sukvvon\n- examples/preact/simple: throw on non-ok 'fetch' responses in the query function (#12097) (c1296c174) by @sukvvon\n- examples/react/react-native: register 'NetInfo' through 'onlineManager.setEventListener' so connected devices are not treated as offline while reachability is unknown (#12091) (ddff3a70b) by @sukvvon\n- examples/react/basic-graphql-request: type post ids as strings and pass the id as a GraphQL variable (#12087) (e39f330fa) by @sukvvon\n- examples/react/algolia: show the search error and use a 'button' that is disabled while fetching for loading more (#12086) (988e69ebf) by @sukvvon\n- examples/react/load-more-infinite-scroll: move the projects query into 'infiniteQueryOptions' in 'src/lib' and type 'nextId' and 'previousId' as nullable (#12085) (0fba30fbe) by @sukvvon\n- examples/react/pagination: share the projects query with 'queryOptions' in 'src/lib' so the next page prefetch respects 'staleTime' (#12084) (7328d02a3) by @sukvvon\n- examples/react/playground: show 'Saved!' only after a successful mutation instead of while idle (#12083) (d338489e0) by @sukvvon\n- examples/react/offline: show query errors in 'List' and 'Detail' and remove the 'MovieError' element that 'react-location' never renders (#12082) (f0dcdca51) by @sukvvon\n- examples/react/nextjs-app-optimistic-updates: stream the prefetched todos with 'useSuspenseQuery' and a 'React.Suspense' boundary (#12081) (3ff2ec167) by @sukvvon\n- examples/react/nextjs: set a default 'staleTime' so the statically generated posts are not refetched right after hydration (#12077) (cd9e573ea) by @sukvvon\n- examples/react/prefetching: show the error instead of an empty list or blank details when fetching characters fails (#12075) (daf7444f9) by @sukvvon\n- examples/react/nextjs: show the error in 'PostList' instead of an empty list when fetching posts fails (#12074) (19ad6d7fd) by @sukvvon\n\n### Refactor\n\n- examples/svelte/optimistic-updates: move the fetchers into 'src/lib/api.ts' and share the todos query with 'queryOptions' (#12124) (959f65e2d) by @sukvvon\n- examples/svelte/load-more-infinite-scroll: type the planets response and move the query into 'src/lib/api.ts' with 'infiniteQueryOptions' (#12123) (2653d67fd) by @sukvvon\n- examples/svelte/optimistic-updates: infer the 'onError' parameter types instead of 'any' and rename 'context' to 'onMutateResult' (#12120) (9e6e51c73) by @sukvvon\n- examples/svelte/star-wars: type the API responses and share the queries with 'queryOptions' (#12116) (adb932ea1) by @sukvvon\n- examples/svelte/ssr: read the cached post with 'postQueryOptions(id).queryKey' instead of a hard-coded key (#12112) (3119e0c6a) by @sukvvon\n- examples/svelte/auto-refetching: move the fetchers into 'src/lib/api.ts' and share the todos query with 'queryOptions' (#12111) (86c01185a) by @sukvvon\n- examples/svelte/basic: share the post queries with 'queryOptions' in 'src/lib/queries.ts' (#12110) (d8ab86342) by @sukvvon\n- examples/solid/default-query-function: type the posts with a 'Post' type instead of 'any' (#12105) (2e86afff5) by @sukvvon\n- examples/solid/basic: remove the always-true 'enabled' and the always-false '!props.postId' check in 'Post' (#12101) (f9d7ec099) by @sukvvon\n- examples/solid/astro: type the pokemon responses and move the queries into 'src/lib/api.ts' with 'queryOptions' (#12102) (0e7d125f0) by @sukvvon\n- examples/react/react-native: refetch only active stale queries in 'useRefreshOnFocus' as in the React Native guide (#12092) (85feb0941) by @sukvvon\n- examples/react/react-native: replace the deprecated 'Paragraph' and 'Title' with 'Text' variants from 'react-native-paper' (#12094) (a8eeff39f) by @sukvvon\n- examples/react/eslint-plugin-demo: rename the 'useApiClient' stub to 'getApiClient' since it is called outside of hooks (#12089) (af1e58044) by @sukvvon\n- examples/react/basic: remove the always-true 'enabled' and the always-false '!postId' check in 'Post' (#12088) (c57cf557c) by @sukvvon\n- examples/react/nextjs-app-prefetching: add 'shouldRedactErrors' to the query client as in the advanced SSR guide (#12076) (9d93dc57d) by @sukvvon\n- examples/react/shadow-dom: type the dogs response and move the query into 'api.ts' with 'queryOptions' (#12072) (2e7c288ed) by @sukvvon\n- examples/react/nextjs-app-optimistic-updates: share the todos query and fetchers with 'queryOptions' (#12071) (0a37fa6f2) by @sukvvon\n- examples/react/prefetching: type the character query and share it with 'queryOptions' (#12070) (5b7f49013) by @sukvvon\n- examples/react/star-wars: type the API responses and share the queries with 'queryOptions' (#12069) (090fb4a41) by @sukvvon\n- examples/react/rick-morty: type the API responses and share the queries with 'queryOptions' (#12068) (256abf45f) by @sukvvon\n\n### Chore\n\n- examples/react/react-native: replace the removed 'expo eject' script with 'expo prebuild' and drop the deprecated global 'expo-cli' install step (#12096) (de10bb0f9) by @sukvvon\n- examples/react: update '@types/react' and '@types/react-dom' to '^19' in the examples still on '^18' (#12067) (ffb1fbb62) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.104.5\n- @tanstack/eslint-plugin-query@5.104.5\n- @tanstack/lit-query@0.2.30\n- @tanstack/preact-query@5.104.5\n- @tanstack/preact-query-devtools@5.104.5\n- @tanstack/preact-query-persist-client@5.104.5\n- @tanstack/query-async-storage-persister@5.104.5\n- @tanstack/query-broadcast-client-experimental@5.104.5\n- @tanstack/query-core@5.104.5\n- @tanstack/query-devtools@5.104.5\n- @tanstack/query-persist-client-core@5.104.5\n- @tanstack/query-sync-storage-persister@5.104.5\n- @tanstack/react-query@5.104.5\n- @tanstack/react-query-devtools@5.104.5\n- @tanstack/react-query-next-experimental@5.104.5\n- @tanstack/react-query-persist-client@5.104.5\n- @tanstack/solid-query@5.104.5\n- @tanstack/solid-query-devtools@5.104.5\n- @tanstack/solid-query-persist-client@5.104.5\n- @tanstack/svelte-query@6.3.5\n- @tanstack/svelte-query-devtools@6.3.5\n- @tanstack/svelte-query-persist-client@6.3.5\n- @tanstack/vue-query@5.104.5\n- @tanstack/vue-query-devtools@6.3.5\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417530021",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.104.5",
+    "publishedAt": "2026-10-19T16:58:34Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd)]:\n  - @tanstack/react-query@5.104.5\n  - @tanstack/query-persist-client-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-104-5",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529963",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.104.5",
+    "publishedAt": "2026-10-19T16:58:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd)]:\n  - @tanstack/react-query@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1f8d134ea3fa356072b40c69d5cd0227886b89bd",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529911",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.104.5",
+    "publishedAt": "2026-10-19T16:58:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd)]:\n  - @tanstack/react-query@5.104.5\n  - @tanstack/query-devtools@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-104-5",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-devtools をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529860",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.104.5",
+    "publishedAt": "2026-10-19T16:58:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5\n  - @tanstack/query-persist-client-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "f608f93",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529816",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.104.5",
+    "publishedAt": "2026-10-19T16:58:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5\n  - @tanstack/query-persist-client-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5.104.5",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529753",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.104.5",
+    "publishedAt": "2026-10-19T16:58:19Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd)]:\n  - @tanstack/preact-query@5.104.5\n  - @tanstack/query-persist-client-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-104-5",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core がバージョン 5.104.5 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529703",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.104.5",
+    "publishedAt": "2026-10-19T16:58:16Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd)]:\n  - @tanstack/preact-query@5.104.5\n  - @tanstack/query-devtools@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1f8d134ea3fa356072b40c69d5cd0227886b89bd",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529480",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.104.5",
+    "publishedAt": "2026-10-19T16:58:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- [#12117](https://github.com/TanStack/query/pull/12117) [`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd) - Recompute `useMutationState` and `useIsMutating` results when their filters, selector, or query client change, without waiting for a mutation cache update.\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12117",
+        "category": "bugfix",
+        "title": "useMutationState と useIsMutating の再計算処理の修正",
+        "summary": "filters、selector、または QueryClient の変更時に、ミューテーションキャッシュの更新を待たずに useMutationState および useIsMutating の結果を即座に再計算するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-query-core-5.104.5",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core がバージョン 5.104.5 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#417529422",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.104.5",
+    "publishedAt": "2026-10-19T16:57:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529381",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.104.5",
+    "publishedAt": "2026-10-19T16:57:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529329",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.104.5",
+    "publishedAt": "2026-10-19T16:57:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529282",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.104.5",
+    "publishedAt": "2026-10-19T16:57:49Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- [#12117](https://github.com/TanStack/query/pull/12117) [`1f8d134`](https://github.com/TanStack/query/commit/1f8d134ea3fa356072b40c69d5cd0227886b89bd) - Recompute `useMutationState` and `useIsMutating` results when their filters, selector, or query client change, without waiting for a mutation cache update.\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529228",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.30",
+    "publishedAt": "2026-10-19T16:57:46Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.30",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563)]:\n  - @tanstack/query-core@5.104.5",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529171",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.104.5",
+    "publishedAt": "2026-10-19T16:57:43Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.104.5",
+    "releaseNotes": "### Patch Changes\n\n- [#12131](https://github.com/TanStack/query/pull/12131) [`f608f93`](https://github.com/TanStack/query/commit/f608f933a36da30670082e90d0a56b2569290563) - Use the supplied query options when fetching optimistically so Suspense queries can fetch after their cache entry is recreated without a query function.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#417529122",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.104.5",
+    "publishedAt": "2026-10-19T16:57:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.104.5",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitest-dev/vitest#417514517",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.1.0-beta.1",
+    "publishedAt": "2026-10-19T16:42:33Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.1.0-beta.1",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- Add `--last-failed` to run only failed tests &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11558 [<samp>(82f63)</samp>](https://github.com/vitest-dev/vitest/commit/82f634220)\n- Support `Temporal.Instant` and `Temporal.ZonedDateTime` in `vi.setSystemTime()` &nbsp;-&nbsp; by @Prajwal2246, **Prajwal2246**, **Claude Opus 5.5**, **Hiroshi Ogawa** and **Codex (GPT-6)** in https://github.com/vitest-dev/vitest/issues/11321 [<samp>(f150f)</samp>](https://github.com/vitest-dev/vitest/commit/f150f5108)\n- Introduce `--since-last-run` flag &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11516 [<samp>(08bd9)</samp>](https://github.com/vitest-dev/vitest/commit/08bd93b7e)\n- Expose per-retry/repeat attempt result &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **Codex (GPT-6)** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11232 [<samp>(21be4)</samp>](https://github.com/vitest-dev/vitest/commit/21be412ed)\n- Support fake timers for `node:timers` and `node:timers/promise` &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa**, **OpenCode** and **Codex (GPT-6)** in https://github.com/vitest-dev/vitest/issues/10899 [<samp>(fbe97)</samp>](https://github.com/vitest-dev/vitest/commit/fbe973cae)\n- **browser**:\n  - Mock modules through an import map &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11534 [<samp>(707f8)</samp>](https://github.com/vitest-dev/vitest/commit/707f8adf4)\n  - Drop experimental label from trace view &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11518 [<samp>(44c3c)</samp>](https://github.com/vitest-dev/vitest/commit/44c3c2fcf)\n  - Introduce experimental `pointer` API &nbsp;-&nbsp; by @macarie in https://github.com/vitest-dev/vitest/issues/10780 [<samp>(5dc09)</samp>](https://github.com/vitest-dev/vitest/commit/5dc09f0ea)\n  - Capture aria snapshot in trace view &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11492 [<samp>(0cc39)</samp>](https://github.com/vitest-dev/vitest/commit/0cc39fb90)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Rerun setup files after `--changed` filtering &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11621 [<samp>(3a39c)</samp>](https://github.com/vitest-dev/vitest/commit/3a39cfc54)\n- Return the mock to concurrent imports &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11623 [<samp>(1453b)</samp>](https://github.com/vitest-dev/vitest/commit/1453ba690)\n- Don&#39;t fail on console log pending at teardown &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11619 [<samp>(a60b8)</samp>](https://github.com/vitest-dev/vitest/commit/a60b8e132)\n- Reference chai types in every d.ts chunk &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11618 [<samp>(fb150)</samp>](https://github.com/vitest-dev/vitest/commit/fb150158b)\n- **browser**:\n  - Change default port to 23315 &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11640 [<samp>(a2ec4)</samp>](https://github.com/vitest-dev/vitest/commit/a2ec4166d)\n  - Advance fake timers in actions and expect.element &nbsp;-&nbsp; by @julienw, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11242 [<samp>(68190)</samp>](https://github.com/vitest-dev/vitest/commit/6819008ce)\n- **coverage**:\n  - V8 `autoAttachSubprocess` to use `.tmp` directory &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11632 [<samp>(de5af)</samp>](https://github.com/vitest-dev/vitest/commit/de5af2939)\n- **deps**:\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11637 [<samp>(2b18e)</samp>](https://github.com/vitest-dev/vitest/commit/2b18e3724)\n\n### &nbsp;&nbsp;&nbsp;🏎 Performance\n\n- Reuse fsModuleCache in static collection &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11622 [<samp>(1766c)</samp>](https://github.com/vitest-dev/vitest/commit/1766c257d)\n- **browser**: Map only first frame for trace locations &nbsp;-&nbsp; by @hi-ogawa, **Hiroshi Ogawa** and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11613 [<samp>(a967d)</samp>](https://github.com/vitest-dev/vitest/commit/a967d8f39)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.5...v5.1.0-beta.1)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "remix-run/react-router#417346800",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@8.5.0",
+    "publishedAt": "2026-10-19T13:48:57Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.0",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v850",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitejs/vite#417042762",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.3.0",
+    "publishedAt": "2026-10-19T08:05:45Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0",
+    "releaseNotes": "### Features\n\n* **create-vite:** print version before scaffolding ([#23806](https://github.com/vitejs/vite/issues/23806)) ([a3001c5](https://github.com/vitejs/vite/commit/a3001c5e3f4febb3099b097f4828ea567e1b253f))\n* **create-vite:** use typescript v7 where possible ([#23794](https://github.com/vitejs/vite/issues/23794)) ([9df8bbc](https://github.com/vitejs/vite/commit/9df8bbcbc5307158a3562039fb82ad29e2b232f7))\n\n### Bug Fixes\n\n* **create-vite:** add router only options for tanstack router/start ([#23543](https://github.com/vitejs/vite/issues/23543)) ([f155b62](https://github.com/vitejs/vite/commit/f155b62ceabbaaf71abbf59933968787e3961c56))\n* **deps:** update all non-major dependencies ([#23482](https://github.com/vitejs/vite/issues/23482)) ([3c752c8](https://github.com/vitejs/vite/commit/3c752c8932bc0599465ba4a6d8f44aaf1e934c3d))\n* **deps:** update all non-major dependencies ([#23537](https://github.com/vitejs/vite/issues/23537)) ([e8990c4](https://github.com/vitejs/vite/commit/e8990c4d6101dfaca2654ed8ab4d0574ee920248))\n* **deps:** update all non-major dependencies ([#23601](https://github.com/vitejs/vite/issues/23601)) ([9944fa6](https://github.com/vitejs/vite/commit/9944fa6033873f13ae88f59e023ab642c50fee2b))\n* **deps:** update all non-major dependencies ([#23648](https://github.com/vitejs/vite/issues/23648)) ([8a4c19c](https://github.com/vitejs/vite/commit/8a4c19cfc035f2dd203f2fa6d00ab9256a5e77c9))\n* **deps:** update all non-major dependencies ([#23731](https://github.com/vitejs/vite/issues/23731)) ([cf80aa5](https://github.com/vitejs/vite/commit/cf80aa552cac02eac0293330ccd5fde3c7ae8d29))\n* **deps:** update all non-major dependencies ([#23826](https://github.com/vitejs/vite/issues/23826)) ([77d8373](https://github.com/vitejs/vite/commit/77d8373510da1b26ce057eb2248e570b7f63fde9))\n* **deps:** update rolldown-related dependencies ([#23483](https://github.com/vitejs/vite/issues/23483)) ([9aecbbf](https://github.com/vitejs/vite/commit/9aecbbfa5fb5da4b9981c099cb9746a9fd210806))\n* **deps:** update rolldown-related dependencies ([#23733](https://github.com/vitejs/vite/issues/23733)) ([43f0d05](https://github.com/vitejs/vite/commit/43f0d052e514c3ad2dea2f7dc44b0720e1f62f48))\n\n### Code Refactoring\n\n* **create-vite:** use `tinyexec` instead of `cross-spawn` ([#23541](https://github.com/vitejs/vite/issues/23541)) ([e5d9af2](https://github.com/vitejs/vite/commit/e5d9af29a3571f388c4bc2a8d4c3387e46ff1da0))\n* **deps:** replace `@vercel/detect-agent` with `std-env` ([#23744](https://github.com/vitejs/vite/issues/23744)) ([ce4293f](https://github.com/vitejs/vite/commit/ce4293f15cc5cd221c5ed60f5cd64e82ca5cbaf5))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#416205969",
     "library": "TanStack Query",
     "repository": "TanStack/query",
