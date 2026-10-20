@@ -1,5 +1,49 @@
 [
   {
+    "id": "microsoft/TypeScript#418684750",
+    "library": "TypeScript",
+    "repository": "microsoft/TypeScript",
+    "version": "v7.1-beta",
+    "publishedAt": "2026-10-20T17:38:20Z",
+    "url": "https://github.com/microsoft/TypeScript/releases/tag/v7.1-beta",
+    "releaseNotes": "https://devblogs.microsoft.com/typescript/announcing-typescript-7-1-beta/\r\n\r\nDownloads are available on [npm](https://www.npmjs.com/package/typescript/v/7.1.0-beta).",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "ts-7-1-beta-release",
+        "category": "other",
+        "title": "TypeScript 7.1 Beta のリリース",
+        "summary": "TypeScript 7.1 Beta が npm にて利用可能になりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#417956251",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.3.1",
+    "publishedAt": "2026-10-20T03:01:54Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.1",
+    "releaseNotes": "### Bug Fixes\n\n* **create-vite:** use typescript v6 for now ([#23841](https://github.com/vitejs/vite/issues/23841)) ([15c85dd](https://github.com/vitejs/vite/commit/15c85ddae2bbbc3808d96a223a5a18a800883252))\n* **create-vite:** use Vite for TanStack projects ([#23838](https://github.com/vitejs/vite/issues/23838)) ([467f7ac](https://github.com/vitejs/vite/commit/467f7ac3b8c7cca0b33290e7fd86f3fc79ce92cb))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#417530595",
     "library": "TanStack Query",
     "repository": "TanStack/query",
@@ -252,10 +296,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別に応答やコード変更が必要な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "f608f933a36da30670082e90d0a56b2569290563",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core がバージョン 5.104.5 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#417529381",
@@ -269,10 +323,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "f608f933a36da30670082e90d0a56b2569290563",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "依存ライブラリである@tanstack/query-coreをバージョン5.104.5に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#417529329",
@@ -289,7 +353,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "f608f933a36da30670082e90d0a56b2569290563",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "@tanstack/query-core のバージョンを 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#417529282",
@@ -323,7 +397,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-104-5",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "依存ライブラリの @tanstack/query-core をバージョン 5.104.5 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#417529171",
@@ -337,10 +421,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12131",
+        "category": "bugfix",
+        "title": "Suspenseクエリにおける楽観的データ取得の修正",
+        "summary": "クエリ関数なしでキャッシュエントリが再作成された後でもSuspenseクエリがデータを取得できるように、楽観的取得時に渡されたクエリオプションを使用するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#417529122",
@@ -354,10 +448,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更点がないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "vitest-dev/vitest#417514517",
