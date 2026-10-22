@@ -1,5 +1,483 @@
 [
   {
+    "id": "TanStack/router#421154265",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-22-2011",
+    "publishedAt": "2026-10-22T20:11:20Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-22-2011",
+    "releaseNotes": "Release 2026-10-22 20:11\n\n## Changes\n\n### Fix\n\n- start-plugin-core: skip the Rsbuild import-protection loader when disabled (#8748) (ed5577593a) by @guru-irl\n- start-plugin-core: skip unchanged server function resolver rebuilds in Rsbuild dev (#8750) (63a886da90) by @guru-irl\n- react-router: publish agent skills (#8671) (689a7c5419) by @Sheraff\n\n### Performance\n\n- start-plugin-core: skip resolving member calls on non-namespace receivers (#8758) (d9b07e8d3b) by @shkumbinhasani\n\n### Refactor\n\n- router-plugin: remove enableRouteGeneration option (#8737) (647cb737a5) by @Sheraff\n\n### Chore\n\n- update Node.js to 26.12.1 (#8779) (08a419c109) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-router@1.170.46\n- @tanstack/react-start@1.169.4\n- @tanstack/react-start-client@1.168.44\n- @tanstack/react-start-rsc@0.1.65\n- @tanstack/react-start-server@1.167.52\n- @tanstack/router-cli@1.167.46\n- @tanstack/router-core@1.171.39\n- @tanstack/router-generator@1.167.46\n- @tanstack/router-plugin@1.168.48\n- @tanstack/router-vite-plugin@1.167.48\n- @tanstack/solid-router@1.170.43\n- @tanstack/solid-start@1.169.4\n- @tanstack/solid-start-client@1.168.42\n- @tanstack/solid-start-server@1.167.50\n- @tanstack/start-client-core@1.170.39\n- @tanstack/start-plugin-core@1.171.55\n- @tanstack/start-server-core@1.169.45\n- @tanstack/start-static-server-functions@1.167.44\n- @tanstack/start-storage-context@1.167.41\n- @tanstack/vue-router@1.170.42\n- @tanstack/vue-start@1.169.4\n- @tanstack/vue-start-client@1.167.45\n- @tanstack/vue-start-server@1.167.50\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8748",
+        "category": "bugfix",
+        "title": "Rsbuildで無効化時にimport-protectionローダーをスキップ",
+        "summary": "Rsbuild環境において、import-protectionローダーが無効化されている場合に不要な読み込みをスキップするよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8750",
+        "category": "bugfix",
+        "title": "Rsbuild開発時のサーバー関数リゾルバー再構築スキップ",
+        "summary": "Rsbuildの開発環境において、変更のないサーバー関数リゾルバーの再構築をスキップするように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8671",
+        "category": "feature",
+        "title": "react-routerでのagent skillsの公開",
+        "summary": "react-routerパッケージにagent skillsが公開されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8758",
+        "category": "performance",
+        "title": "非ネームスペースレシーバーにおけるメンバー呼び出し解決のスキップ",
+        "summary": "非ネームスペースレシーバーでのメンバー呼び出しの解決をスキップすることでパフォーマンスが向上しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8737",
+        "category": "other",
+        "title": "router-pluginからenableRouteGenerationオプションを削除",
+        "summary": "router-pluginからenableRouteGeneration設定オプションが削除されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8779",
+        "category": "other",
+        "title": "Node.jsをバージョン26.12.1へ更新",
+        "summary": "Node.jsのバージョンが26.12.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421154149",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.169.4",
+    "publishedAt": "2026-10-22T20:11:12Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.169.4",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398), [`ed55775`](https://github.com/TanStack/router/commit/ed5577593a749b8c7193cc7b5d945fd084bfac2f), [`63a886d`](https://github.com/TanStack/router/commit/63a886da9040c4b039ea3bf5b3a841771375cddb), [`d9b07e8`](https://github.com/TanStack/router/commit/d9b07e8d3b724cdbfac0aa2fba4c1f7a3a241100)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/start-client-core@1.170.39\n    -   @tanstack/start-server-core@1.169.45\n    -   @tanstack/start-plugin-core@1.171.55\n    -   @tanstack/react-start-client@1.168.44\n    -   @tanstack/react-start-rsc@0.1.65\n    -   @tanstack/react-start-server@1.167.52\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "他パッケージのエージェントスキル参照方法の修正",
+        "summary": "パッケージインストール時にリンクが破損する問題を解決するため、他のパッケージ内のエージェントスキルを相対ファイルリンクではなくintent load識別子（@tanstack/<package>#<skill>）で参照するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-routerや@tanstack/start-client-coreなどの関連依存パッケージを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421154111",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router@1.170.46",
+    "publishedAt": "2026-10-22T20:11:09Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router%401.170.46",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   [#8671](https://github.com/TanStack/router/pull/8671) [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398) - Publish the `@tanstack/react-router` agent skills (`react-router`, `compositions/router-query`, `lifecycle/migrate-from-react-router`), which were missing from the package's `files` list.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/router-core@1.171.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "エージェントスキルの参照形式の修正",
+        "summary": "他パッケージのエージェントスキル参照を、パッケージインストール後に破損する相対パスからintent load識別子（@tanstack/<package>#<skill>）に変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8671",
+        "category": "bugfix",
+        "title": "欠落していたエージェントスキルのパブリッシュ",
+        "summary": "filesリストから漏れていた@tanstack/react-routerのエージェントスキル（react-router、compositions/router-query、lifecycle/migrate-from-react-router）をパッケージに含めるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-router-core-1.171.39",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-core)",
+        "summary": "@tanstack/router-core を 1.171.39 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421154068",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.167.46",
+    "publishedAt": "2026-10-22T20:11:06Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.167.46",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/router-generator@1.167.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1.167.46-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-generator をバージョン 1.167.46 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153969",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.44",
+    "publishedAt": "2026-10-22T20:11:00Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/start-client-core@1.170.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "32a3360-689a7c5",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core、および@tanstack/start-client-coreが最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153877",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-client-core@1.170.39",
+    "publishedAt": "2026-10-22T20:10:54Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-client-core%401.170.39",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/start-storage-context@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "エージェントスキルの参照方式の修正",
+        "summary": "パッケージインストール後にリンクが破損する問題を解消するため、他のパッケージにおけるエージェントスキルの参照を相対ファイルリンクから識別子形式（@tanstack/<package>#<skill>）へ変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core および @tanstack/start-storage-context を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153829",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-core@1.171.39",
+    "publishedAt": "2026-10-22T20:10:51Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-core%401.171.39",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "エージェントスキルの参照方法の修正",
+        "summary": "パッケージインストール後に破損していた相対ファイルリンクの代わりに、インテントロード識別子（@tanstack/<package>#<skill>）を使用して他パッケージのエージェントスキルを参照するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153788",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.48",
+    "publishedAt": "2026-10-22T20:10:48Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.48",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`647cb73`](https://github.com/TanStack/router/commit/647cb737a5622813d276d6042766692ca5ae67ed)]:\n    -   @tanstack/router-plugin@1.168.48\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "32a3360-647cb73-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-plugin が 1.168.48 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153693",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-storage-context@1.167.41",
+    "publishedAt": "2026-10-22T20:10:42Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-storage-context%401.167.41",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/router-core@1.171.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-32a3360",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core がバージョン 1.171.39 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153571",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.65",
+    "publishedAt": "2026-10-22T20:10:33Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.65",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398), [`ed55775`](https://github.com/TanStack/router/commit/ed5577593a749b8c7193cc7b5d945fd084bfac2f), [`63a886d`](https://github.com/TanStack/router/commit/63a886da9040c4b039ea3bf5b3a841771375cddb), [`d9b07e8`](https://github.com/TanStack/router/commit/d9b07e8d3b724cdbfac0aa2fba4c1f7a3a241100)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/start-client-core@1.170.39\n    -   @tanstack/start-plugin-core@1.171.55\n    -   @tanstack/start-storage-context@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-0.1.65",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core などの内部依存パッケージが最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#421153524",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.55",
+    "publishedAt": "2026-10-22T20:10:30Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.55",
+    "releaseNotes": "### Patch Changes\n\n-   [#8748](https://github.com/TanStack/router/pull/8748) [`ed55775`](https://github.com/TanStack/router/commit/ed5577593a749b8c7193cc7b5d945fd084bfac2f) - Skip the Rsbuild import-protection loader and its plugins when import protection is disabled, so modules no longer pass through the loader.\n\n-   [#8750](https://github.com/TanStack/router/pull/8750) [`63a886d`](https://github.com/TanStack/router/commit/63a886da9040c4b039ea3bf5b3a841771375cddb) - Skip the server function resolver rebuild in Rsbuild dev when the resolver has not changed, so most edits no longer rebuild the whole server chunk graph.\n\n-   [#8758](https://github.com/TanStack/router/pull/8758) [`d9b07e8`](https://github.com/TanStack/router/commit/d9b07e8d3b724cdbfac0aa2fba4c1f7a3a241100) - Stop resolving top-level calls such as `z.object()` whose receiver is not a namespace import. They can never be a `createServerOnlyFn` or `createClientOnlyFn` call, and resolving them made the dev compiler load and parse the receiver's module (all of zod, for example).\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`647cb73`](https://github.com/TanStack/router/commit/647cb737a5622813d276d6042766692ca5ae67ed)]:\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/router-plugin@1.168.48\n    -   @tanstack/start-server-core@1.169.45\n    -   @tanstack/router-generator@1.167.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#421153346",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-server-core@1.169.45",
+    "publishedAt": "2026-10-22T20:10:18Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.45",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/start-client-core@1.170.39\n    -   @tanstack/start-storage-context@1.167.41\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#421153290",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.168.48",
+    "publishedAt": "2026-10-22T20:10:15Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.48",
+    "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   [#8737](https://github.com/TanStack/router/pull/8737) [`647cb73`](https://github.com/TanStack/router/commit/647cb737a5622813d276d6042766692ca5ae67ed) - Remove the `enableRouteGeneration` option. Route generation now always runs, so `autoCodeSplitting` always has the route metadata it needs.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/router-generator@1.167.46\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#421153248",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-static-server-functions@1.167.44",
+    "publishedAt": "2026-10-22T20:10:12Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-static-server-functions%401.167.44",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/react-start@1.169.4\n    -   @tanstack/solid-start@1.169.4\n    -   @tanstack/start-client-core@1.170.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#421153215",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-server@1.167.52",
+    "publishedAt": "2026-10-22T20:10:09Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-server%401.167.52",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/start-server-core@1.169.45\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#421153169",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.167.46",
+    "publishedAt": "2026-10-22T20:10:06Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.167.46",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c)]:\n    -   @tanstack/router-core@1.171.39\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "pmndrs/zustand#420307847",
+    "library": "Zustand",
+    "repository": "pmndrs/zustand",
+    "version": "v5.0.16",
+    "publishedAt": "2026-10-22T04:27:55Z",
+    "url": "https://github.com/pmndrs/zustand/releases/tag/v5.0.16",
+    "releaseNotes": "This version has some improvements thanks to contributors: @MarshallOfSound @koreahghg @chungyo @Godsdar\r\n\r\n\r\n## What's Changed\r\n* perf(react): don't memoize getServerSnapshot in useStore by @dai-shi in https://github.com/pmndrs/zustand/pull/3563\r\n* fix(devtools): apply serialize.reviver when parsing devtools messages by @dai-shi in https://github.com/pmndrs/zustand/pull/3568\r\n* fix(devtools): preserve shared connections during store cleanup by @dai-shi in https://github.com/pmndrs/zustand/pull/3580\r\n* fix(persist): preserve external devtools action arguments by @dai-shi in https://github.com/pmndrs/zustand/pull/3592\r\n\r\n\r\n**Full Changelog**: https://github.com/pmndrs/zustand/compare/v5.0.15...v5.0.16",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#420233965",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-10-22-0203",
+    "publishedAt": "2026-10-22T02:03:41Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-22-0203",
+    "releaseNotes": "Release 2026-10-22 02:03\n\n## Changes\n\n### Features\n\n- solid-router: observe-tier attribution parity with @solidjs/router (solid-js rc.13) (#8574) (10152238ab) by @ryansolid\n\n### Fix\n\n- solid-router: keep route-scoped accessors readable after navigation teardown (#7607) (81ee38eee5) by @brenelz\n\n### Refactor\n\n- solid-router: move off sharedConfig onto Solid 2.0 public hydration APIs (solid-js rc.13) (#8569) (665e9d86a4) by @ryansolid\n\n### Chore\n\n- solid: bump to solid-js 2.0.0-rc.16 and @solidjs/vite-plugin 3.0.0-next.51 (#8751) (acd08ef685) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.9 and @solidjs/vite-plugin 3.0.0-next.44 (#8467) (0dc3a9e3a5) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.9\n- @tanstack/solid-router-devtools@2.0.0-rc.7\n- @tanstack/solid-router-ssr-query@2.0.0-rc.7\n- @tanstack/solid-start@2.0.0-rc.9\n- @tanstack/solid-start-client@2.0.0-rc.9\n- @tanstack/solid-start-server@2.0.0-rc.9\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "vitejs/vite#419230813",
     "library": "Vite",
     "repository": "vitejs/vite",
