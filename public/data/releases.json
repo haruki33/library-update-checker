@@ -1,5 +1,185 @@
 [
   {
+    "id": "react-hook-form/react-hook-form#422334845",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v8.0.0-beta.5",
+    "publishedAt": "2026-10-23T21:42:50Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v8.0.0-beta.5",
+    "releaseNotes": "## ✨ Improvements\r\n\r\n- Sync v8 with the latest `master` branch, including all fixes and improvements from v7.90.0 and v7.91.0\r\n- Improve React Compiler compatibility and add full test coverage with React Compiler (#13864)\r\n- Improve `useFieldArray` support for flat and primitive arrays (#13890, #13927, #13936)\r\n- Preserve `null`, `undefined` and falsy values in primitive field arrays (#13890, #13936)\r\n- Expose primitive field array rows with generated `key` and `value` properties (#13927)\r\n- Improve v8 TypeScript definitions and API consistency (#13887)\r\n\r\n## 🐞 Fixes\r\n\r\n- Fix `useFieldArray` not updating rows when using `setValue` or `setValues` (#13842, #13939)\r\n- Fix `useFieldArray` unregistering values incorrectly on unmount (#13843)\r\n- Fix field registration without a value incorrectly adding array rows (#13846, #13849)\r\n- Fix `useFieldArray` reindexing fields incorrectly when array rules are registered (#13873)\r\n- Fix `useFieldArray` losing validation rules after `reset()` (#13940)\r\n- Fix stale field array validation results after array changes (#13888)\r\n- Fix `useFieldArray` validation after submission in `onBlur` mode (#13867)\r\n- Fix stale asynchronous validation results after `reset()` and `unregister()` (#13908, #13912, #13934)\r\n- Fix `Controller` validation using stale DOM values (#13880)\r\n- Fix `isValid` not updating correctly after `reset()` and subsequent changes (#13847, #13930)\r\n- Fix `handleSubmit` leaving `isSubmitting` active when validation throws (#13905)\r\n- Fix empty validation message arrays being treated as errors (#13937)\r\n- Fix delayed validation errors not being flushed on blur (#13861)\r\n- Fix dirty state tracking and `resetField()` with falsy values (#13868, #13900)\r\n- Fix `unregister` retaining validation rules when using `keepValue` (#13891)\r\n- Fix `<Form />` handling of JSON, URL-encoded, multipart and plain-text submissions (#13848, #13854, #13874, #13893, #13907, #13915, #13926)\r\n- Fix `useWatch` not updating default values when the watched name changes (#13859)\r\n- Fix select options being lost before the form is ready (#13872)\r\n- Fix `useForm` retaining removed options and disabled state (#13882, #13883, #13889, #13898)\r\n- Fix object comparison for null-prototype objects and sparse arrays (#13853, #13855, #13857)\r\n- Fix `setValue` handling null-prototype objects (#13916)\r\n- Fix `useForm` mutating externally provided errors (#13896)\r\n\r\n## ⚡ Performance Improvements\r\n\r\n- Improve `getValues()` performance by avoiding unnecessary copies (#13894)\r\n- Reduce unnecessary `<Form />` re-renders (#13899)\r\n- Improve form state subscriptions and dirty field tracking\r\n\r\n## ⚠️ Breaking Changes\r\n\r\n- Replace `any` with `unknown` in public types, requiring explicit typing or narrowing where appropriate\r\n- Rename the generated `useFieldArray` field identifier from `id` to `key`\r\n- Remove the `keyName` prop from `useFieldArray`\r\n- Rename the `<Watch />` prop from `names` to `name` (#13879)\r\n- Remove the `watch(callback)` API; use `subscribe()` instead\r\n- Use input refs instead of partial refs (#12773)\r\n- Return `null` instead of `Invalid Date` for empty values with `valueAsDate: true` (#13901)\r\n- Update reference stability for selected `useForm` methods to support React Compiler\r\n\r\nMigration guide: https://react-hook-form.com/migrate-v7-to-v8\r\n\r\n## 🧹 Refactors\r\n\r\n- Improve internal TypeScript definitions and API consistency (#13871, #13886, #13887)\r\n- Simplify multipart Content-Type handling (#13926)\r\n- Remove unsupported `<Watch />` properties (#13879)\r\n\r\n## 🧪 Tests\r\n\r\n- Add React Compiler test coverage (#13864)\r\n- Add regression coverage for primitive field arrays, including nullish and falsy values (#13890, #13927, #13936)\r\n- Expand regression coverage for `useFieldArray`, validation, reset and form state\r\n\r\n## ❤️ Thank You\r\n\r\nThanks to @vicuts, @maxymlyskov, @ahamsel, @dasjideepak, @feritcemkahraman, @DahanItamar, @arba-octo, @dfedoryshchev, @jeremiah-white, @TiagoGranelli, @zigzagdev, @nandyx, @hardikkaurani, @Marve10s, @candymask0712, @saaahilhussain, @itisrmk, @Enesuygurs, @kotarella1110 and @bluebill1049 for their contributions! 🎉\r\n\r\nSpecial thanks to the **Pennylane team** for their incredible support! ❤️\r\n\r\n## 📦 Installation\r\n\r\n```bash\r\nnpm install react-hook-form@8.0.0-beta.5\r\n```",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "v7からv8への移行に伴い、型定義の変更、useFieldArrayの識別子変更、Watchプロパティの変更、watch(callback) APIの廃止への対応が必要です。",
+      "steps": [
+        "パブリック型定義で any が unknown に置き換えられたため、必要に応じて型の絞り込みや明示的な型指定を行ってください。",
+        "useFieldArray で生成される識別子が id から key に変更されたためコードを更新し、keyName プロパティを削除してください。",
+        "<Watch /> コンポーネントの names プロパティを name に変更してください。",
+        "watch(callback) API の呼び出しを subscribe() に置き換えてください。",
+        "valueAsDate: true 設定時に空の値で Invalid Date ではなく null が返されるため、処理ロジックを確認・修正してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "change-v8-sync",
+        "category": "feature",
+        "title": "v7の最新変更との同期",
+        "summary": "v7.90.0およびv7.91.0からの修正と改善を含む最新のmasterブランチと同期しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-react-compiler",
+        "category": "feature",
+        "title": "React Compilerとの互換性向上",
+        "summary": "React Compilerとの互換性を向上させ、フルテストカバーレッジを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-use-field-array-primitives",
+        "category": "feature",
+        "title": "フラット・プリミティブ配列に対するuseFieldArrayのサポート改善",
+        "summary": "プリミティブなフィールド配列においてnull、undefined、偽値を保持し、生成されたkeyおよびvalueプロパティを公開するように改善しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "change-breaking-unknown-types",
+        "category": "breaking",
+        "title": "パブリック型定義におけるanyからunknownへの変更",
+        "summary": "パブリック型定義のanyがunknownに置き換えられたため、必要に応じて明示的な型指定や型の絞り込みが必要になります。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "change-breaking-use-field-array-key",
+        "category": "breaking",
+        "title": "useFieldArrayの識別子変更およびkeyNameプロパティの削除",
+        "summary": "生成されるフィールド識別子がidからkeyに変更され、keyNameプロパティが削除されました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "change-breaking-watch-prop",
+        "category": "breaking",
+        "title": "Watchコンポーネントのプロパティ名変更",
+        "summary": "Watchコンポーネントのnamesプロパティがnameに変更されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-breaking-watch-callback",
+        "category": "breaking",
+        "title": "watch(callback) APIの削除",
+        "summary": "watch(callback) APIが削除されました。今後はsubscribe()を使用してください。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "change-breaking-value-as-date",
+        "category": "breaking",
+        "title": "valueAsDateにおける空値の戻り値変更",
+        "summary": "valueAsDate: true設定時、空の値に対してInvalid Dateではなくnullを返すようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-bugfixes",
+        "category": "bugfix",
+        "title": "useFieldArray、Controller、Formなどの各種バグ修正",
+        "summary": "setValueでの行更新、reset後のバリデーションルール保持、Formコンポーネントの各種送信形式処理、Stale状態のバリデーション結果など多数の不具合を修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "change-performance",
+        "category": "performance",
+        "title": "パフォーマンスの向上",
+        "summary": "getValues()での不要なコピー回避、Formコンポーネントの再レンダリング削減、フォーム状態のサブスクリプションとdirtyフィールド追跡の改善を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "react-hook-form/react-hook-form#422319310",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.91.0",
+    "publishedAt": "2026-10-23T21:19:22Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.91.0",
+    "releaseNotes": "## 🐞 Fixes\r\n\r\n- Fix `useFieldArray` not updating rows when using `setValue` or `setValues` (#13842, #13939)\r\n- Fix `useFieldArray` not unregistering values correctly on unmount (#13843)\r\n- Fix field registration without a value incorrectly adding array rows (#13846, #13849)\r\n- Fix `useFieldArray` reindexing fields incorrectly when array rules are registered (#13873)\r\n- Fix `useFieldArray` losing validation rules after `reset()` (#13940)\r\n- Fix stale field array validation results after array changes (#13888)\r\n- Fix `useFieldArray` validation after submission in `onBlur` mode (#13867)\r\n- Fix dirty state updates when `setValues` changes field arrays (#13870)\r\n- Fix stale asynchronous validation results after `reset()` and `unregister()` (#13908, #13912, #13934)\r\n- Fix `Controller` validation using stale DOM values (#13880)\r\n- Fix `isValid` not updating correctly after `reset()` and subsequent changes (#13847, #13930)\r\n- Fix `handleSubmit` leaving `isSubmitting` active when validation throws (#13905)\r\n- Fix empty validation message arrays being treated as errors (#13937)\r\n- Fix delayed validation errors not being flushed on blur (#13861)\r\n- Fix form state subscriptions and validity updates (#13866, #13877, #13906)\r\n- Fix dirty state tracking and `resetField()` with falsy values (#13868, #13900)\r\n- Fix `unregister` retaining validation rules when using `keepValue` (#13891)\r\n- Fix `<Form />` handling of JSON, URL-encoded, multipart and plain-text submissions (#13848, #13854, #13874, #13893, #13907, #13915, #13926)\r\n- Fix `useWatch` not updating default values when the watched name changes (#13859)\r\n- Fix select options being lost before the form is ready (#13872)\r\n- Fix `useForm` retaining removed options and disabled state (#13882, #13883, #13889, #13898)\r\n- Fix progressive required attributes (#13924)\r\n- Fix numeric zero `maxLength` validation (#13851)\r\n- Fix object comparison for null-prototype objects and sparse arrays (#13853, #13855, #13857)\r\n- Fix `cloneObject` handling objects with a `constructor` key (#13875)\r\n- Fix `setValue` handling null-prototype objects (#13916)\r\n- Fix form-level validation error types (#13860)\r\n- Fix `useForm` mutating the externally provided `errors` object (#13896)\r\n- Fix stale `NaN` and invalid date validation results (#13910)\r\n\r\n## ⚡ Performance Improvements\r\n\r\n- Avoid unnecessary copies when calling `getValues()` (#13894)\r\n- Reduce unnecessary `<Form />` re-renders (#13899)\r\n\r\n## 🧹 Refactors\r\n\r\n- Simplify multipart Content-Type handling (#13926)\r\n- Improve internal types and remove unnecessary type assertions (#13871, #13886)\r\n- Clean up memoized component display names (#13897)\r\n- Fix JSDoc examples (#13895)\r\n\r\n## 🧪 Tests\r\n\r\n- Add coverage for disabled field array operations (#13841)\r\n- Expand regression coverage for `useFieldArray`, `reset`, validation and form state\r\n\r\n## 📦 Dependencies\r\n\r\n- Bump `joi` from 18.2.6 to 18.2.9 (#13836)\r\n- Update `browserslist` and `baseline-browser-mapping` (#13837, #13838, #13839)\r\n- Bump `follow-redirects` from 1.16.0 to 1.16.1 (#13913)\r\n- Bump `vite` from 6.4.3 to 6.4.4 (#13914)\r\n\r\n## ❤️ Thank You\r\n\r\nThanks to @vicuts, @maxymlyskov, @ahamsel, @dasjideepak, @feritcemkahraman, @DahanItamar, @arba-octo, @dfedoryshchev, @jeremiah-white, @TiagoGranelli, @zigzagdev, @nandyx, @hardikkaurani, @Marve10s, @candymask0712, @saaahilhussain, @itisrmk, @Enesuygurs and @bluebill1049 for their contributions! 🎉\r\n\r\nSpecial thanks to the **Pennylane team** for their incredible support! ❤️",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う特別な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-use-field-array-updates",
+        "category": "bugfix",
+        "title": "useFieldArray の各種不具合修正",
+        "summary": "setValueやreset実行時のフィールド配列の更新、アンマウント時の値削除、再インデックス化、バリデーションルールの保持に関する不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-async-and-controller-validation",
+        "category": "bugfix",
+        "title": "非同期バリデーションおよびControllerの検証不具合の修正",
+        "summary": "resetやunregister後の非同期検証結果の残留問題や、Controllerが古いDOM値を使用して検証を行う問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-form-state-and-handle-submit",
+        "category": "bugfix",
+        "title": "isValidおよびisSubmittingの状態更新修正",
+        "summary": "handleSubmit内の検証で例外が発生した際にisSubmittingが解除されない問題や、reset後のisValidの更新不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-form-component-submission",
+        "category": "bugfix",
+        "title": "<Form /> コンポーネントの送信処理の修正",
+        "summary": "JSON、URL-encoded、multipart、プレーンテキスト形式での送信処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-use-form-errors-mutation",
+        "category": "bugfix",
+        "title": "useForm による外部 errors オブジェクトのミューテーション修正",
+        "summary": "useForm が外部から渡された errors オブジェクトを直接変更してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-get-values-and-form",
+        "category": "performance",
+        "title": "getValues および <Form /> のパフォーマンス改善",
+        "summary": "getValues 呼び出し時の不要なオブジェクトコピーを回避し、<Form /> コンポーネントの不要な再レンダリングを削除しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "other-deps-refactor",
+        "category": "other",
+        "title": "リファクタリングおよび依存関係の更新",
+        "summary": "内部型の向上、JSDocの改善、並びに joi、vite、follow-redirects などの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#421154265",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -353,10 +533,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新に伴う必須の移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8748",
+        "category": "performance",
+        "title": "インポート保護が無効な場合のRsbuildローダーのスキップ",
+        "summary": "インポート保護が無効化されている場合、Rsbuildのインポート保護ローダーとそのプラグインの処理をスキップし、モジュールが不要にローダーを経由しないように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8750",
+        "category": "performance",
+        "title": "Rsbuild開発環境でのサーバー関数リゾルバー再ビルドの最適化",
+        "summary": "リゾルバーに変更がない場合、Rsbuild devでのサーバー関数リゾルバーの再ビルドをスキップするようにし、大部分の編集作業でサーバーチャンクグラフ全体が再ビルドされないよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8758",
+        "category": "performance",
+        "title": "開発コンパイラにおけるトップレベル呼び出し解析の最適化",
+        "summary": "ネームスペースインポート以外のトップレベル呼び出し（例: z.object()）の解決を停止しました。これにより開発コンパイラが不要なモジュール（Zod全体など）を読み込んで解析するオーバーヘッドを削除しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#421153346",
@@ -370,10 +576,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "エージェントスキルの参照識別子の修正",
+        "summary": "インストール後に切れてしまう相対ファイルリンクの代わりに、識別子（@tanstack/<package>#<skill>）を使用して他パッケージのエージェントスキルを参照するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core、@tanstack/start-client-core、@tanstack/start-storage-context などの関連依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#421153290",
@@ -383,14 +607,42 @@
     "publishedAt": "2026-10-22T20:10:15Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.168.48",
     "releaseNotes": "### Patch Changes\n\n-   [#8670](https://github.com/TanStack/router/pull/8670) [`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c) - Reference agent skills in other packages by their `intent load` identifier (`@tanstack/<package>#<skill>`) instead of relative file links that break once packages are installed.\n\n-   [#8737](https://github.com/TanStack/router/pull/8737) [`647cb73`](https://github.com/TanStack/router/commit/647cb737a5622813d276d6042766692ca5ae67ed) - Remove the `enableRouteGeneration` option. Route generation now always runs, so `autoCodeSplitting` always has the route metadata it needs.\n\n-   Updated dependencies \\[[`32a3360`](https://github.com/TanStack/router/commit/32a3360cba0e0f884b3215813a48c63467f5a53c), [`689a7c5`](https://github.com/TanStack/router/commit/689a7c5419de68bce0aaaef72b9a36f115ea1398)]:\n    -   @tanstack/react-router@1.170.46\n    -   @tanstack/router-core@1.171.39\n    -   @tanstack/router-generator@1.167.46\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "`enableRouteGeneration` オプションが削除されたため、プラグイン設定を見直す必要があります。",
+      "steps": [
+        "プラグイン設定に含まれる `enableRouteGeneration` オプションを削除してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8670",
+        "category": "bugfix",
+        "title": "パッケージ間のエージェントスキル参照の修正",
+        "summary": "パッケージインストール時に壊れる相対ファイルリンクではなく、`intent load` 識別子 (`@tanstack/<package>#<skill>`) を使用して他パッケージの agent skill を参照するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8737",
+        "category": "breaking",
+        "title": "`enableRouteGeneration` オプションの削除",
+        "summary": "`enableRouteGeneration` オプションが削除されました。ルート生成は常に実行されるようになり、`autoCodeSplitting` が必要なメタデータを常に取得できるようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core、@tanstack/router-generator の依存パッケージバージョンを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#421153248",
@@ -404,10 +656,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別なマイグレーション作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-32a3360",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-start、@tanstack/solid-start、@tanstack/start-client-coreのバージョンが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#421153215",
@@ -424,7 +686,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-1.167.52-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router、@tanstack/router-core、@tanstack/start-server-core の依存パッケージを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#421153169",
@@ -441,7 +713,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "32a3360",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core を 1.171.39 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "pmndrs/zustand#420307847",
@@ -455,10 +737,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "PR-3563",
+        "category": "performance",
+        "title": "useStoreにおけるgetServerSnapshotのメモ化解除",
+        "summary": "useStore内でgetServerSnapshotをメモ化しないように変更し、パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-3568",
+        "category": "bugfix",
+        "title": "devtoolsメッセージパース時のserialize.reviverの適用",
+        "summary": "devtoolsメッセージの解析時にserialize.reviverが正しく適用されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-3580",
+        "category": "bugfix",
+        "title": "ストアクリーンアップ時の共有接続の保持",
+        "summary": "ストアのクリーンアップ処理中に共有接続が破棄されないよう保持する修正を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR-3592",
+        "category": "bugfix",
+        "title": "persistミドルウェアでの外部devtoolsアクション引数の保持",
+        "summary": "persistミドルウェア使用時に外部devtoolsのアクション引数が失われないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#420233965",
@@ -472,10 +788,52 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースに伴う必須の移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8574",
+        "category": "feature",
+        "title": "solid-router: @solidjs/router との observe-tier アトリビューション機能の同等性向上",
+        "summary": "solid-js rc.13 に対応し、@solidjs/router と同等の observe-tier アトリビューション動作を適用しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "7607",
+        "category": "bugfix",
+        "title": "solid-router: 画面遷移破棄後のルートスコープアクセサーの読み取り保持",
+        "summary": "ナビゲーションのティアダウン後であってもルートスコープのアクセサーを問題なく読み取れるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8569",
+        "category": "other",
+        "title": "solid-router: Solid 2.0 の公開ハイドレーション API への移行",
+        "summary": "内部で sharedConfig の使用をやめ、Solid 2.0 (rc.13) のパブリックハイドレーション API に移行しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8751",
+        "category": "other",
+        "title": "solid: solid-js 2.0.0-rc.16 および Vite プラグインの更新",
+        "summary": "solid-js を 2.0.0-rc.16、@solidjs/vite-plugin を 3.0.0-next.51 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8467",
+        "category": "other",
+        "title": "solid: solid-js 2.0.0-rc.9 および Vite プラグインの更新",
+        "summary": "solid-js を 2.0.0-rc.9、@solidjs/vite-plugin を 3.0.0-next.44 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#419230813",
