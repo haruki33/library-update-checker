@@ -847,10 +847,148 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新において、必須の移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "build-handle-missing-chunk-import-maps",
+        "category": "bugfix",
+        "title": "ビルド時の欠損チャンクインポートマップの処理",
+        "summary": "チャンクのインポートマップが見つからない場合の処理を改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "build-preload-dependencies-hashing",
+        "category": "bugfix",
+        "title": "チャンクインポートマップハッシュへのプリロード依存関係の含まれ",
+        "summary": "チャンクインポートマップのハッシュ計算にプリロード依存関係を含めるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-server-origin-asset-urls",
+        "category": "bugfix",
+        "title": "アセットURLへのserver.originの適用",
+        "summary": "バンドル開発環境において、アセットURLに対してserver.originが適用されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-utf-8-charset",
+        "category": "bugfix",
+        "title": "フォールバックページでのUTF-8文字コード宣言",
+        "summary": "フォールバックページでUTF-8文字コードを明示的に宣言するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-ignore-chunk-import-map",
+        "category": "bugfix",
+        "title": "bundled-devにおけるbuild.chunkImportMapの無視",
+        "summary": "バンドル開発環境でのbuild.chunkImportMap設定の扱いを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-import-meta-env-defines",
+        "category": "bugfix",
+        "title": "import.meta.envオブジェクトへのユーザー環境変数の追加",
+        "summary": "ユーザー定義のimport.meta.env.*設定がimport.meta.envオブジェクト内に正しく含まれるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-error-stacks-sourcemaps",
+        "category": "bugfix",
+        "title": "ソースマップを通じたエラー追跡スタックのマッピング",
+        "summary": "転送されたエラースタックがバンドルのソースマップを正しく経由してマップされるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-normalize-served-output",
+        "category": "bugfix",
+        "title": "配信される出力ファイルの正規化",
+        "summary": "バンドル開発環境で配信される出力ファイルのパスや形式の正規化を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bundled-dev-stop-hmr-propagation",
+        "category": "bugfix",
+        "title": "参照されなくなったモジュールでのHMR伝播停止",
+        "summary": "使用されなくなったモジュールへのHMR伝播を停止するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "css-literal-percent-in-url",
+        "category": "bugfix",
+        "title": "CSSのurl()内でのリテラル%の処理修正",
+        "summary": "CSSのurl()関数内にリテラルの「%」が含まれている場合でもビルドが失敗しないように修整しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-non-major-and-rolldown",
+        "category": "bugfix",
+        "title": "依存ライブラリの更新",
+        "summary": "Rolldownを含むマイナー・パッチ依存関係を最新に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "optimizer-lockfile-hash-fixes",
+        "category": "bugfix",
+        "title": "最適化処理におけるロックファイルハッシュの計算修正",
+        "summary": "yarn.lockへのフォールバックやoxc.jsxInjectの対応、パッチディレクトリの計算省略など、依存関係最適化処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "resolve-subpath-imports-multiple-hash",
+        "category": "bugfix",
+        "title": "複数の#を含むサブパスインポートのサポート",
+        "summary": "複数の「#」文字を含むサブパスインポートの解決に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "resolve-exports-update",
+        "category": "bugfix",
+        "title": "resolve.exportsのバージョン更新",
+        "summary": "resolve.exportsを2.0.4へアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "server-socket-errors-and-base-stripping",
+        "category": "bugfix",
+        "title": "開発サーバーにおけるソケットエラーおよびベースパス処理の修正",
+        "summary": "HMR以外のソケットエラーハンドリングを向上し、完全なパスセグメントが一致する場合のみベースパスを除去するよう変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ssr-inline-sourcemaps-performance",
+        "category": "performance",
+        "title": "SSRにおけるインラインソースマップ抽出の高速化",
+        "summary": "正規表現を使用しない方法でインラインソースマップの抽出を行うように改善し、パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chores-and-refactoring",
+        "category": "other",
+        "title": "内部コードのリファクタリングおよびツールの変更",
+        "summary": "Oxlintへの移行、std-envへの置き換え、開発環境におけるURL変換ロジックの整理などコードのクリーンアップを行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#419191837",
@@ -864,10 +1002,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "リリースノートに詳細が記載されていないため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "microsoft/TypeScript#418684750",
@@ -1595,10 +1734,60 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "23806",
+        "category": "feature",
+        "title": "スキャフォールディング前のバージョン表示",
+        "summary": "プロジェクト作成開始時に create-vite のバージョン情報を出力するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23794",
+        "category": "feature",
+        "title": "TypeScript v7 の使用",
+        "summary": "可能な場合に TypeScript v7 を使用するように更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23543",
+        "category": "bugfix",
+        "title": "TanStack Router/Start 用オプションの修正",
+        "summary": "TanStack Router および Start のテンプレートにルーター専用オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-updates",
+        "category": "bugfix",
+        "title": "依存関係の更新",
+        "summary": "Rolldown 関連を含むマイナー・パッチ依存関係を最新に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23541",
+        "category": "other",
+        "title": "内部プロセスの実行ライブラリ変更",
+        "summary": "cross-spawn から tinyexec に置き換えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23744",
+        "category": "other",
+        "title": "環境検出ライブラリの変更",
+        "summary": "@vercel/detect-agent を std-env に置き換えました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#416205969",
@@ -2649,10 +2838,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "18154b1",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core、@tanstack/start-server-core、@tanstack/react-router の依存バージョンが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#415382448",
@@ -2669,7 +2868,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-18154b1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-core、@tanstack/react-router、@tanstack/start-client-core のバージョンを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "eslint/eslint#415048929",
@@ -2683,10 +2892,60 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "48d5cc4",
+        "category": "feature",
+        "title": "no-use-before-define ルールで IIFE 内の参照を検出",
+        "summary": "no-use-before-define ルールにおいて、IIFE（即時実行関数式）内での定義前参照を報告するように拡張されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a39d9fb",
+        "category": "feature",
+        "title": "no-obj-calls ルールに globalThis を追加",
+        "summary": "no-obj-calls ルールで globalThis の関数呼び出しを検出対象に追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "66ac583",
+        "category": "feature",
+        "title": "no-unsafe-optional-chaining ルールで yield* 式のチェックを追加",
+        "summary": "no-unsafe-optional-chaining ルールにて yield* 式におけるオプショナルチェーンを検査する機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "87bd2ce",
+        "category": "bugfix",
+        "title": "no-var と one-var の同時修正時の let 重複宣言の修正",
+        "summary": "no-var と one-var の自動修正が同時に適用される際、let が重複して宣言される不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b92decf",
+        "category": "performance",
+        "title": "no-redeclare ルールで単一宣言変数のスキャンをスキップ",
+        "summary": "変数が1つのみ宣言されている場合に no-redeclare ルールのスキャン処理をスキップしてパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "43f0ac9",
+        "category": "other",
+        "title": "getText パラメータ説明の修正",
+        "summary": "getText メソッドのパラメータに関するドキュメント記述を明確化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#414924510",
@@ -2700,10 +2959,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースによる手動のマイグレーション作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "fix-angular-migration-schematic-subpath-import",
+        "category": "bugfix",
+        "title": "Angular マイグレーション Schematic の修復",
+        "summary": "ファイルのサブパスインポートが含まれるプロジェクトで Angular マイグレーション Schematic が中断してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chore-angular-migration-improvements",
+        "category": "other",
+        "title": "Angular マイグレーション処理の改善",
+        "summary": "Angular 向けマイグレーションツールの内部処理を改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitest-dev/vitest#413918357",
@@ -3044,10 +3321,92 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "マイグレーション作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "2153",
+        "category": "bugfix",
+        "title": "button 以外の role を持つ要素での aria-pressed の設定を停止",
+        "summary": "Accessibility プラグインが、button 以外の role（tab など）を持つドラッグアクティベータに対して aria-pressed を設定しないように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2094",
+        "category": "bugfix",
+        "title": "KeyboardSensor のキーレイアウト対応とリマップサポート",
+        "summary": "KeyboardSensor のショートカット判定に KeyboardEvent.key を使用し、キーボードレイアウトや OS のキーリマップが正しく反映されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2149",
+        "category": "bugfix",
+        "title": "Sortable の初期位置不整合の修正とステータス拡張",
+        "summary": "アイテム移動後に onBeforeDragStart で Sortable の initialIndex および initialGroup が古い状態になる問題を修正し、initializationPending ゲッターを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2076",
+        "category": "bugfix",
+        "title": "テスト環境における ResizeObserver のインポート時依存を回避",
+        "summary": "DOM 類似テスト環境で @dnd-kit/dom/modifiers をインポートした際、インポート時に ResizeObserver を要求しないよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2151",
+        "category": "bugfix",
+        "title": "ドラッグ初期化中のポインター移動追従の改善",
+        "summary": "ドラッグ操作初期化中に受信したポインター移動を記録し、操作開始時にドラッグ位置が追従するよう改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2152",
+        "category": "bugfix",
+        "title": "ドロップ直後のクリックによるポップアップ誤閉鎖の防止",
+        "summary": "ポインタードロップ後に body に向けられたクリックでポップアップが予期せず閉じるのを防ぎつつ、iframe でのドラッグを維持するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2126",
+        "category": "performance",
+        "title": "自動スクロール時のレイアウト読み取り最適化",
+        "summary": "自動スクロール中に各スクロールコンテナの位置計測結果を再利用することで、重複したレイアウト読み取りを回避しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2142",
+        "category": "performance",
+        "title": "Feedback プラグインのスタイル再注入の抑制によるパフォーマンス向上",
+        "summary": "ドラッグごとに style タグを着脱せずスタイル注入を維持することで描画ジャンクを減らし、StyleInjector.register に retain オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2131",
+        "category": "bugfix",
+        "title": "Sortable バインディングでの transition: null のサポート",
+        "summary": "React、Vue、Solid、Svelte の各バインディングにおいて transition: null が正しく尊重され、アニメーションが無効化されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "2134",
+        "category": "bugfix",
+        "title": "isSortable / isSortableOperation における型推論の改善",
+        "summary": "isSortable および isSortableOperation で型絞り込みを行う際、カスタムデータ型が any に拡散されず正しく保持されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547803",
@@ -3061,10 +3420,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースに伴う破壊的変更や特別な移行作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11935",
+        "category": "bugfix",
+        "title": "query-core: setQueryDataアップデータでのUnion型の絞り込みを維持",
+        "summary": "setQueryDataのアップデータ関数において、Union型の絞り込みが保持されるように改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11413",
+        "category": "bugfix",
+        "title": "vue-query-devtools: prop変更時のクライアント更新",
+        "summary": "propが変更された際にDevtoolsクライアントが適切に更新されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11410",
+        "category": "bugfix",
+        "title": "query-persist-client-core: storage.setItemの非同期処理を待機",
+        "summary": "クエリの永続化処理において、storage.setItemの完了をawaitするように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "examples-and-chores",
+        "category": "other",
+        "title": "サンプルコード・CI・依存関係の各種アップデート",
+        "summary": "各フレームワークサンプルのリファクタリング、ESLint Flat Configへの移行、CIでの型チェック追加などを実施しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547410",
@@ -3081,7 +3474,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ed4d849731bfe6404be9d40aec84eda54f958d7f",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547372",
