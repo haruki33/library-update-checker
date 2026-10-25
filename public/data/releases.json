@@ -3498,10 +3498,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-react-query-5.104.3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-queryが5.104.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547340",
@@ -3518,7 +3528,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-104-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-devtools を 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547290",
@@ -3535,7 +3555,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5.104.3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/query-core をバージョン 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547235",
@@ -3549,10 +3579,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-5-104-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/query-core を 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547193",
@@ -3569,7 +3609,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dependency-update-5-104-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/preact-query をバージョン 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413547152",
@@ -3583,10 +3633,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-104-3",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools をバージョン 5.104.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546953",
@@ -3603,7 +3663,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "0f15bc925db5813be6a17527988ec7d7b3c8cfc0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreをバージョン5.104.3に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546927",
@@ -3620,7 +3690,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11410",
+        "category": "bugfix",
+        "title": "createPersisterにおけるストレージ書き込み待機処理の修正",
+        "summary": "persistQuery内でストレージへの書き込みをawaitするように修復し、persistQueryByKeyが書き込み完了後に解決されるようになりました。また、書き込み失敗時には未ハンドルの拒否を発生させず適切にrejectされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-query-core-5.104.3",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreがバージョン5.104.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546874",
@@ -3634,10 +3722,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-query-core-5-104-3",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "依存関係の@tanstack/query-coreがバージョン5.104.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546829",
@@ -3654,7 +3752,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.104.3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.104.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546780",
