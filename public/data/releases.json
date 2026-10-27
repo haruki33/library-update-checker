@@ -1,5 +1,418 @@
 [
   {
+    "id": "TanStack/query#424058050",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-10-26-0932",
+    "publishedAt": "2026-10-26T09:32:54Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-10-26-0932",
+    "releaseNotes": "Release 2026-10-26 09:32\n\n## Changes\n\n### Features\n\n- angular-query-experimental/injectDevtoolsPanel: add the 'theme' and 'hideDisabledQueries' options (#12316) (8f9dfcb30) by @sukvvon\n\n### Fix\n\n- angular-query-experimental/withDevtools: forward an unset 'theme' to the devtools so removing it falls back to the theme selected in the devtools Settings menu (#12315) (9e4253766) by @sukvvon\n- solid-query-devtools: stop defaulting the 'theme' prop to 'system' so the theme chosen in the devtools settings applies when the prop is omitted (#12310) (f232b75e3) by @sukvvon\n- vue-query-devtools: stop defaulting the 'theme' prop to 'system' so the theme chosen in the devtools settings applies when the prop is omitted (#12312) (a282bf807) by @sukvvon\n- svelte-query-devtools: stop defaulting the 'theme' prop to 'system' so the theme chosen in the devtools settings applies when the prop is omitted (#12313) (aff30e36b) by @sukvvon\n- vue-query/queryClient: infer the data and error types of 'getQueryState' from a tagged query key (#11921) (c5de051d6) by @sukvvon\n- examples/lit/pagination: show the error message instead of the stringified error (#12187) (81e6a935a) by @sukvvon\n- examples/lit/basic: show the error message instead of the stringified error (#12186) (1ed8158eb) by @sukvvon\n- examples/angular/optimistic-updates: throw an 'HttpErrorResponse' from the mock so the failing mutation rolls back in 'onError' (#12173) (35d21b2d1) by @sukvvon\n- examples/angular/infinite-query-with-max-pages: disable the previous page button while fetching the previous page instead of the next page (#12167) (c87c0eafb) by @sukvvon\n- examples/vue/basic: share the post queries with 'queryOptions' in 'src/api.ts' and mark visited posts from the query cache (#12161) (71fb7632d) by @sukvvon\n- examples/vue/dependent-queries: share the post and author queries with 'queryOptions' in 'src/api.ts' and mark visited posts from the query cache (#12162) (ca7af3373) by @sukvvon\n- examples/vue/2.7-basic: share the post queries with 'queryOptions' in 'src/api.ts' and mark visited posts from the query cache (#12165) (c83595d0b) by @sukvvon\n- examples/vue/2.6-basic: share the post queries with 'queryOptions' in 'src/api.ts' and mark visited posts from the query cache (#12164) (09cc250b5) by @sukvvon\n- examples/vue/persister: share the post queries and persisters with 'queryOptions' in 'src/api.ts' and mark visited posts from the query cache (#12163) (582419393) by @sukvvon\n- examples/vue: show 'Background Updating...' in the posts list and remove the unused 'refetch' (#12139) (5d67aa2ef) by @sukvvon\n- examples/vue/persister: rename the heading from 'Vue Query - Basic' to 'Vue Query - Persister' (#12138) (c00eaa37b) by @sukvvon\n- examples/vue/simple: remove the stray quote before the error message (#12134) (a4414a7f5) by @sukvvon\n- examples/vue: throw on non-ok 'fetch' responses in the query functions (#12133) (b904739b0) by @sukvvon\n\n### Refactor\n\n- examples/react/nextjs-suspense-streaming: move the data layer into 'services/wait' with a query factory (#12384) (772bd1144) by @sukvvon\n- examples/{react,solid}/offline: inline 'useMovie' into the 'Detail' component (#12379) (f69600ae6) by @sukvvon\n- examples/solid/{basic,basic-graphql-request}: inline 'createPosts' and 'createPost' that only wrap 'useQuery' (#12378) (c007aaf45) by @sukvvon\n- examples/react/{basic,basic-graphql-request,eslint-legacy,nextjs,nextjs-suspense-streaming}: inline custom hooks that only wrap 'useQuery' or 'useSuspenseQuery' (#12377) (a52f4e977) by @sukvvon\n- examples/angular/{rxjs,devtools-panel}: move the data layer into 'services/{domain}' with a query factory (#12374) (7f86e2389) by @sukvvon\n- examples/angular/{pagination,infinite-query-with-max-pages}: move the data layer into 'services/projects' with a query factory (#12373) (6b3d0914b) by @sukvvon\n- examples/angular/{auto-refetching,optimistic-updates}: move the data layer into 'services/tasks' with query and mutation factories (#12372) (801ec31b7) by @sukvvon\n- examples/angular/query-options-from-a-service: move the data layer into 'services/posts' with a query factory (#12371) (69ea57ba8) by @sukvvon\n- examples/angular/{basic,basic-persister,router}: move the data layer into 'services/posts' with a query factory (#12370) (7151c20f6) by @sukvvon\n- examples/lit/ssr: move the data layer into 'services/data' with a query factory (#12369) (7ef377534) by @sukvvon\n- examples/lit/pagination: move the data layer into 'services/projects' with query and mutation factories (#12368) (15cecf644) by @sukvvon\n- examples/lit/basic: move the data layer into 'services/todos' with query and mutation factories (#12367) (55ed71165) by @sukvvon\n- examples/svelte/playground: move the data layer into 'services/todos' with query and mutation factories (#12366) (a39a5dc2f) by @sukvvon\n- examples/svelte/{auto-refetching,optimistic-updates}: move the data layer into 'services/todos' with query and mutation factories (#12365) (80fdbd469) by @sukvvon\n- examples/svelte/ssr: move the data layer into 'services/posts' with a query factory (#12364) (fb2e4c55a) by @sukvvon\n- examples/svelte/{basic,load-more-infinite-scroll,star-wars}: move the data layer into 'services/{domain}' with a query factory (#12363) (7d9b15ae7) by @sukvvon\n- examples/vue/persister: move the data layer into 'services/posts' with a query factory (#12361) (ff7c51039) by @sukvvon\n- examples/vue/nuxt3: move the data layer into 'services/posts' with a query factory (#12362) (f4de8a679) by @sukvvon\n- examples/vue/{basic,2.6-basic,2.7-basic,dependent-queries,simple}: move the data layer into 'services/{domain}' with a query factory (#12360) (795ded81e) by @sukvvon\n- examples/solid/{astro,solid-start-streaming}: move the data layer into 'services/{domain}' with a query factory (#12359) (1d958595f) by @sukvvon\n- examples/solid/offline: move the data layer into 'services/movies' with a query factory (#12358) (cb3c3d5ba) by @sukvvon\n- examples/solid/{basic,basic-graphql-request}: move the data layer into 'services/posts' with a query factory (#12357) (239caf964) by @sukvvon\n- examples/react/{nextjs-app-optimistic-updates,nextjs-app-prefetching}: move the data layer into 'services/{domain}' with a query factory (#12356) (516b870c9) by @sukvvon\n- examples/react/{offline,react-router}: move the data layer into 'services/{domain}' with a query factory (#12355) (db886cee9) by @sukvvon\n- examples/react/{auto-refetching,playground}: move the data layer into 'services/todos' with query and mutation factories (#12354) (dce049887) by @sukvvon\n- examples/react/{batching,chat,react-native}: move the data layer into 'services/{domain}' with a query factory (#12353) (f99c6e3e4) by @sukvvon\n- examples/react/{rick-morty,star-wars}: move the data layer into one 'services/{domain}' folder per resource with a query factory (#12352) (88018e578) by @sukvvon\n- examples/react: move the data layer of the pagination and infinite query examples into 'services/{domain}' with a query factory (#12351) (1028a2977) by @sukvvon\n- examples/react: move the data layer of the single-domain examples into 'services/{domain}' with a query factory (#12350) (9aafaa9bf) by @sukvvon\n- examples/react/basic: move the data layer into 'services/posts' with 'api.ts', 'queries.ts', and 'types.ts' and a query factory (#12349) (a777b6b22) by @sukvvon\n- vue-query/utils: type 'isPlainObject' as 'Record<PropertyKey, unknown>' instead of the 'Object' wrapper type, like 'query-core' (#12343) (4f3dba578) by @sukvvon\n- angular-query-experimental/injectQueries: remove the unnecessary 'QueryObserverOptions' assertion and its 'oxlint-disable' comment (#12324) (faa41e9c4) by @sukvvon\n- lit-query/createQueriesController: rename the per-result 'observer' in 'trackResult' to 'resultObserver' to avoid shadowing (#12291) (1117bdd2d) by @sukvvon\n- query-persist-client-core/createPersister: rename the 'filters' option to 'persistFilters' internally to avoid shadowing (#12290) (51e627fb7) by @sukvvon\n- examples/lit/pagination: rename the 'onError' 'context' parameter to 'onMutateResult' (#12195) (64d3b15cc) by @sukvvon\n- examples/lit/pagination: infer the controller types instead of passing generics that repeat the field types (#12185) (8aea733e1) by @sukvvon\n- examples/lit/basic: infer the controller types from the query and mutation functions instead of passing generics (#12184) (45e8a5eef) by @sukvvon\n- examples/angular: type the mock interceptor events and bodies as 'unknown' instead of 'any' (#12177) (55fa9595e) by @sukvvon\n- examples/angular/{devtools-panel,rxjs,simple}: rename the 'Response' interfaces so they do not shadow the global 'Response' type (#12176) (5106c1b80) by @sukvvon\n- examples/angular/infinite-query-with-max-pages: type 'nextId' and 'previousId' as 'number | null' to match the mock response (#12175) (c41eb8d82) by @sukvvon\n- examples/angular/basic-persister: use 'output()' instead of '@Output()', remove the unused 'QueryClient', and align the components with the basic example (#12172) (683c86926) by @sukvvon\n- examples/angular/optimistic-updates: rename the 'onError' 'context' parameter to 'onMutateResult' and prefix the unused ones (#12174) (48b599fa6) by @sukvvon\n- examples/angular/query-options-from-a-service: read the cached post with the service's 'queryKey' instead of an inline key (#12169) (5490375a3) by @sukvvon\n- examples/angular/optimistic-updates: remove the unused 'clearMutation' that created a second add mutation (#12168) (4c9c4cf30) by @sukvvon\n- examples/angular/basic-persister: make the 'postId' input required and remove the always-true 'enabled' in 'PostComponent' (#12171) (542a134e0) by @sukvvon\n- examples/vue/{basic,dependent-queries,persister,simple}: migrate the components to '<script setup>' (#12144) (243148eec) by @sukvvon\n- examples/vue: type the 'isVisited' prop with 'PropType' and the visited posts set with 'Set<number>' (#12143) (c76c0ffe4) by @sukvvon\n- examples/vue: declare the example types with 'type' in 'types.ts' instead of 'types.d.ts' (#12141) (d9e7648b9) by @sukvvon\n- examples/vue/persister: remove the commented-out 'staleTime' from the query client config (#12142) (5aefeb72f) by @sukvvon\n- examples/svelte/playground: edit the 'initialFilter' prop directly in 'TodosList' to remove the 'state_referenced_locally' warning (#12125) (46744e5b0) by @sukvvon\n- examples,docs: use 'TanStack/query' consistently in the GitHub API URLs (#12137) (db22bfc51) by @sukvvon\n\n### Chore\n\n- deps: update '@typescript-eslint/*' to '^8.72.0' in the catalog and examples (#12388) (06d1705a5) by @sukvvon\n- examples/*/eslint.config: use 'flat/recommended-strict' from '@tanstack/eslint-plugin-query' (#12385) (2b5b6417f) by @sukvvon\n- react-query/{useQuery,useInfiniteQuery}: remove the unused '@eslint-react/no-nested-component-definitions' disable and explain the remaining false positive (#12344) (d7c0418f8) by @sukvvon\n- react-query/{HydrationBoundary,utils}: explain why 'react-hooks-js/refs' and 'react-hooks-js/set-state-in-effect' are disabled (#12342) (aa3e26b4f) by @sukvvon\n- *: explain why 'vitest-js/valid-expect' is disabled for the 'expectTypeOf<TQueryKey>(ctx.queryKey)' checks in the 'useQueries' type tests (#12332) (1eed9d9ef) by @sukvvon\n- query-core/query: explain why 'typescript/no-unnecessary-condition' is disabled for the 'state' check in 'setOptions' (#12326) (a155bb8c7) by @sukvvon\n- eslint-plugin-query/detect-react-query-imports: explain why 'typescript/no-unnecessary-condition' is disabled for the 'importKind' check (#12327) (0c5ec0695) by @sukvvon\n- lit-query/{QueryClientProvider,BaseController}: explain why 'typescript/no-unnecessary-condition' is disabled for the 'client' checks (#12328) (016b83ecc) by @sukvvon\n- angular-query-experimental/createBaseQuery: explain why 'typescript/no-unnecessary-type-assertion' is disabled for the 'refetch' wrapper (#12329) (42ae5caee) by @sukvvon\n- deps: upgrade vitest to v5 (#12317) (4a7386a47) by @DogPawHat\n- vue-query-devtools/package.json: restore the 'test:lib' script removed in the Vite 8 update (#12307) (7a10cda3e) by @sukvvon\n- oxlint.config: add 'netinfo' to the cspell words (#12299) (65801313d) by @sukvvon\n- preact-query/utils: disable 'react/exhaustive-deps' for the stable '_instance' to keep the upstream 'useSyncExternalStore' (#12289) (2de1d1e15) by @sukvvon\n- scripts/create-github-release: use the 'node:' protocol for 'fs' and sort the imported members (#12285) (4071cd526) by @sukvvon\n- oxlint.config: remove the 'vitest/no-standalone-expect' override left over from the removed 'itIf' helper (#12284) (75e64b5a1) by @sukvvon\n- {react-query,preact-query,query-broadcast-client-experimental}/vite.config: remove the CI-only 'retry' (#12279) (84332ded7) by @sukvvon\n- svelte-query-persist-client/vite.config: enable 'coverage' in CI like the other packages (#12275) (b2246c2bb) by @sukvvon\n- oxlint.config: enable 'no-debugging-utils', 'no-dom-import', 'no-manual-cleanup' and 'no-render-in-lifecycle' from 'eslint-plugin-testing-library' (#12273) (b923947be) by @sukvvon\n- oxlint.config: add 'eslint-plugin-testing-library' with its DOM rules and query present elements with 'getBy' (#12269) (bb41f83ca) by @sukvvon\n- oxlint.config: add 'eslint-plugin-jest-dom' with its recommended rules and assert DOM presence with 'toBeInTheDocument' (#12268) (670fc2817) by @sukvvon\n- oxlint.config: enable 'vitest/consistent-each-for' to keep parameterized tests on '.each' (#12267) (496c4ac54) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-lowercase-title' for test titles (#12266) (883d35eb2) by @sukvvon\n- oxlint.config: enable 'vitest/require-top-level-describe' and move top-level tests and hooks into a 'describe' (#12265) (f5fc7ac96) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-after-all-blocks' (#12263) (90b5acbe0) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-describe-blocks' and separate describe blocks with a blank line (#12262) (6aaa0cb12) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-after-each-blocks' and separate 'afterEach' with a blank line (#12261) (62592ae99) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-before-each-blocks' and separate 'beforeEach' with a blank line (#12260) (28a854017) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-before-all-blocks' and separate 'beforeAll' with a blank line (#12259) (4a6264e8a) by @sukvvon\n- oxlint.config: enable 'vitest-js/padding-around-test-blocks' and separate test blocks with a blank line (#12258) (7cafffdbb) by @sukvvon\n- oxlint.config: enable 'vitest-js/no-conditional-in-test' outside type tests (#12256) (914eef777) by @sukvvon\n- oxlint.config: enable 'vitest-js/prefer-vi-mocked' (#12255) (d8fbf7ee4) by @sukvvon\n- oxlint.config: enable 'vitest/consistent-test-filename' (#12253) (06d260788) by @sukvvon\n- oxlint.config: enable 'vitest/require-mock-type-parameters' and type the mock functions (#12251) (07bdb6bbe) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-strict-equal' and assert with 'toStrictEqual' (#12250) (5c7b9dbbc) by @sukvvon\n- oxlint.config: enable 'vitest/require-hook' and move setup code into hooks or tests (#12249) (1616702eb) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-mock-return-shorthand' and use 'mockReturnValue' or 'vi.fn(implementation)' (#12248) (ada9a5eff) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-to-be' and assert primitive values with 'toBe', 'toBeNull', 'toBeUndefined' and 'toBeDefined' (#12247) (5ba86a672) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-to-have-length' and assert lengths with 'toHaveLength' (#12246) (4dc1af982) by @sukvvon\n- oxlint.config: enable the vitest style rules that already pass without violations (#12245) (cdb344b07) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-import-in-mock' and type the module mocks against the real modules (#12243) (c1dc50c36) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-expect-resolves' and assert resolved values with 'resolves' (#12244) (03b3f9029) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-mock-promise-shorthand' and use 'mockResolvedValue' and 'mockRejectedValue' (#12242) (5393cdc26) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-spy-on' and spy on 'query.fetch' instead of overwriting it (#12241) (3afe75293) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-called-times' and replace 'toHaveBeenCalledOnce' with 'toHaveBeenCalledTimes(1)' (#12240) (9648f0e3d) by @sukvvon\n- oxlint.config: enable 'vitest/no-alias-methods' and replace 'toBeCalledWith' with 'toHaveBeenCalledWith' (#12239) (52ebbb3c7) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-called-with' and assert the call arguments with 'toHaveBeenCalledWith' (#12237) (22d9966fb) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-expect-type-of' and assert the 'staleTime' type with 'toBeTypeOf' (#12236) (25ed6ae41) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-to-contain' and assert array membership with 'toContain' (#12235) (c51b85195) by @sukvvon\n- oxlint.config: enable 'vitest/prefer-equality-matcher' and compare the value directly with 'toBe' (#12234) (af28a1b46) by @sukvvon\n- oxlint.config: enable 'vitest/require-to-throw-message' and assert the expected error messages in 'toThrow' (#12233) (7e7a1c915) by @sukvvon\n- oxlint.config: enable vitest rules that already pass without violations (#12232) (1667b2461) by @sukvvon\n- examples/vue/persister/package.json: remove the unused '@tanstack/query-core' and '@tanstack/query-sync-storage-persister' dependencies (#12146) (3c540d375) by @sukvvon\n- examples/vue/{2.6-basic,2.7-basic}: add a flat config and run 'test:eslint' (#12136) (f7c89b64b) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.105.0\n- @tanstack/eslint-plugin-query@5.105.0\n- @tanstack/lit-query@0.2.31\n- @tanstack/preact-query@5.105.0\n- @tanstack/preact-query-devtools@5.105.0\n- @tanstack/preact-query-persist-client@5.105.0\n- @tanstack/query-async-storage-persister@5.105.0\n- @tanstack/query-broadcast-client-experimental@5.105.0\n- @tanstack/query-core@5.105.0\n- @tanstack/query-devtools@5.105.0\n- @tanstack/query-persist-client-core@5.105.0\n- @tanstack/query-sync-storage-persister@5.105.0\n- @tanstack/react-query@5.105.0\n- @tanstack/react-query-devtools@5.105.0\n- @tanstack/react-query-next-experimental@5.105.0\n- @tanstack/react-query-persist-client@5.105.0\n- @tanstack/solid-query@5.105.0\n- @tanstack/solid-query-devtools@5.105.0\n- @tanstack/solid-query-persist-client@5.105.0\n- @tanstack/svelte-query@6.3.6\n- @tanstack/svelte-query-devtools@6.3.6\n- @tanstack/svelte-query-persist-client@6.3.6\n- @tanstack/vue-query@5.105.0\n- @tanstack/vue-query-devtools@6.3.6\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "change-12316",
+        "category": "feature",
+        "title": "injectDevtoolsPanel へのオプション追加",
+        "summary": "angular-query-experimental の injectDevtoolsPanel に theme および hideDisabledQueries オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-devtools-theme-fix",
+        "category": "bugfix",
+        "title": "Devtools の theme プロパティのフォールバック修正",
+        "summary": "Devtools の theme プロパティが未設定の場合に system へデフォルト設定する挙動を変更し、Devtools 設定メニューのテーマが適用されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-11921",
+        "category": "bugfix",
+        "title": "vue-query の getQueryState における型推論の向上",
+        "summary": "タグ付き query key から getQueryState の data および error 型が正しく推論されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-examples-and-chores",
+        "category": "other",
+        "title": "サンプルコードの整理と開発依存関係・テスト設定の更新",
+        "summary": "各フレームワーク向けサンプルのデータ層リファクタリングや、Vitest 5 へのアップグレード、Oxlint 設定の調整などを実施しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424057176",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.105.0",
+    "publishedAt": "2026-10-26T09:32:04Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.105.0\n  - @tanstack/react-query@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424057134",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.105.0",
+    "publishedAt": "2026-10-26T09:32:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-queryのバージョンが 5.105.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424057092",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.105.0",
+    "publishedAt": "2026-10-26T09:31:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.105.0\n  - @tanstack/react-query@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424057050",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.105.0",
+    "publishedAt": "2026-10-26T09:31:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0\n  - @tanstack/query-persist-client-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056995",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.105.0",
+    "publishedAt": "2026-10-26T09:31:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0\n  - @tanstack/query-persist-client-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5.105.0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056967",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.105.0",
+    "publishedAt": "2026-10-26T09:31:49Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.105.0\n  - @tanstack/query-persist-client-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056923",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.105.0",
+    "publishedAt": "2026-10-26T09:31:46Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.105.0\n  - @tanstack/query-devtools@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056674",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.105.0",
+    "publishedAt": "2026-10-26T09:31:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-105-0",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "内部で利用している@tanstack/query-coreをバージョン5.105.0に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056626",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.105.0",
+    "publishedAt": "2026-10-26T09:31:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core の依存関係がバージョン 5.105.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#424056585",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.105.0",
+    "publishedAt": "2026-10-26T09:31:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#424056533",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.105.0",
+    "publishedAt": "2026-10-26T09:31:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#424056492",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.105.0",
+    "publishedAt": "2026-10-26T09:31:19Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.105.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#424056441",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.31",
+    "publishedAt": "2026-10-26T09:31:16Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.31",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.105.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#424056389",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.105.0",
+    "publishedAt": "2026-10-26T09:31:13Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.105.0",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#424056346",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.105.0",
+    "publishedAt": "2026-10-26T09:31:10Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.105.0",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "axios/axios#419547461",
+    "library": "Axios",
+    "repository": "axios/axios",
+    "version": "v1.21.0",
+    "publishedAt": "2026-10-26T07:10:45Z",
+    "url": "https://github.com/axios/axios/releases/tag/v1.21.0",
+    "releaseNotes": "## v1.21.0 — October 21, 2026\r\n\r\nThis release adds response timing and opt-in UTF-8 Basic authentication, improves request handling across runtimes, and changes how header defaults are recognized.\r\n\r\n## ⚠️ Breaking Changes & Deprecations\r\n\r\n* **Header Defaults:** Only plain objects, null-prototype maps, and compatible `AxiosHeaders` instances are treated as common or method-specific defaults; literal headers such as `Link` are now preserved. Applications using custom class instances as defaults must convert them to plain maps, for example `{ post: { ...customDefaults } }`, or compatible `AxiosHeaders`. Otherwise, those instances become literal header values, including on requests using other methods. (__[#11156](https://github.com/axios/axios/pull/11156)__)\r\n\r\n## 🚀 New Features\r\n\r\n* **Response Timing:** Added `response.duration`, in milliseconds, including on `error.response` when present. Timing measures adapter execution and excludes interceptors and transforms; streamed responses stop timing when the stream becomes available. Axios replaces any existing `duration` value supplied by a custom adapter. (__[#11214](https://github.com/axios/axios/pull/11214)__)\r\n* **UTF-8 Basic Authentication:** Added `transitional.encodeBasicAuthUsername: true` to support Unicode usernames in XHR and Fetch requests. The option defaults to `false`, preserving existing authentication behavior; applications opting in should supply the original Unicode username and remove manual pre-encoding workarounds. (__[#11159](https://github.com/axios/axios/pull/11159)__)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n* **Fetch Compatibility:** Restored requests in runtimes such as Cloudflare Workers that reject the implicit `cache: 'default'`, while preserving explicit caller settings. Response-size failures now retain their original `ERR_BAD_RESPONSE` and request context when runtime wrappers replace the underlying stream error. (__[#11194](https://github.com/axios/axios/pull/11194)__, __[#11179](https://github.com/axios/axios/pull/11179)__)\r\n* **Runtime Consistency:** Aligned encoded-byte size accounting, multipart uploads, proxy routing, same-origin resolution, parameter merging, and form serialization across adapters. Circular parameters now reject with `ERR_BAD_OPTION_VALUE`, and sparse or non-index numeric form fields serialize as keyed objects. With `proxy: false`, native `proxyEnv` agents using unsupported pool-management or TLS-session lifecycle overrides now reject with `ERR_BAD_OPTION_VALUE`; construct those agents without `proxyEnv`. (__[#11242](https://github.com/axios/axios/pull/11242)__)\r\n* **Header Handling:** Preserved headers named `__proto__` using safe casing without changing the `AxiosHeaders` instance prototype. Function matchers in `has()`, `delete()`, and `clear()` now receive the headers instance as `this`, matching their declared contract. (__[#11134](https://github.com/axios/axios/pull/11134)__, __[#11216](https://github.com/axios/axios/pull/11216)__)\r\n* **URL and Data URL Parsing:** Accepted case-insensitive supported URL schemes and Base64 markers, and corrected decoding of percent-encoded Base64 data URLs. Node data URL allocation estimates remain aligned with decoding so configured size limits apply before allocation. (__[#11138](https://github.com/axios/axios/pull/11138)__, __[#11163](https://github.com/axios/axios/pull/11163)__, __[#11294](https://github.com/axios/axios/pull/11294)__)\r\n* **Error Diagnostics:** Preserved short reconstructed request stacks and appended wrapped error stacks under `Caused by:` so tooling that reads only `error.stack` retains the original failure context. (__[#11132](https://github.com/axios/axios/pull/11132)__, __[#11142](https://github.com/axios/axios/pull/11142)__)\r\n* **Interceptor Removal:** Restored removal through canonical numeric-string interceptor IDs, including after registry compaction. (__[#11139](https://github.com/axios/axios/pull/11139)__)\r\n* **Proxy TLS:** HTTPS CONNECT tunnels now apply current origin TLS options from an explicit `httpsAgent`, or from `https.globalAgent` when no explicit agent is supplied. This preserves process-wide custom CA settings through proxy tunnels. (__[#11178](https://github.com/axios/axios/pull/11178)__)\r\n* **XHR Lifecycle:** Used asynchronous Cookie Store reads for XSRF tokens where supported, preserving cookie fallback, timeout accounting, and cancellation. Upload and download progress listeners are now removed on completion, failure, timeout, and cancellation. (__[#11166](https://github.com/axios/axios/pull/11166)__, __[#11225](https://github.com/axios/axios/pull/11225)__)\r\n* **HTTP/2 Sessions:** Stopped reusing sessions immediately after GOAWAY and prevented draining sessions from scheduling idle timers that could delay process exit. (__[#11210](https://github.com/axios/axios/pull/11210)__)\r\n* **TypeScript Declarations:** Exposed the response-default marker as a public type to resolve `TS2527` when consumers emit declarations involving unresolved response generics, covering both ESM and CommonJS. (__[#11125](https://github.com/axios/axios/pull/11125)__)\r\n\r\n## 🔧 Maintenance & Chores\r\n\r\n* **Configuration Performance:** Reduced request configuration merge overhead, particularly for requests with many headers, while preserving merge semantics and prototype-pollution guards. (__[#11208](https://github.com/axios/axios/pull/11208)__)\r\n* **Same-Origin Checks:** Removed obsolete Internet Explorer detection without changing origin decisions in supported environments. (__[#11174](https://github.com/axios/axios/pull/11174)__)\r\n* **Dependencies:** Updated `follow-redirects` to 1.16.1 and refreshed development, documentation, test, and GitHub Actions dependencies. Removed unused `dayjs` from the docs package, root `chalk`, and `chai` from CJS module tests. (__[#11169](https://github.com/axios/axios/pull/11169)__, __[#11188](https://github.com/axios/axios/pull/11188)__, __[#11189](https://github.com/axios/axios/pull/11189)__, __[#11195](https://github.com/axios/axios/pull/11195)__, __[#11212](https://github.com/axios/axios/pull/11212)__, __[#11213](https://github.com/axios/axios/pull/11213)__, __[#11218](https://github.com/axios/axios/pull/11218)__, __[#11220](https://github.com/axios/axios/pull/11220)__, __[#11221](https://github.com/axios/axios/pull/11221)__, __[#11230](https://github.com/axios/axios/pull/11230)__, __[#11234](https://github.com/axios/axios/pull/11234)__, __[#11244](https://github.com/axios/axios/pull/11244)__, __[#11245](https://github.com/axios/axios/pull/11245)__, __[#11266](https://github.com/axios/axios/pull/11266)__, __[#11267](https://github.com/axios/axios/pull/11267)__, __[#11268](https://github.com/axios/axios/pull/11268)__, __[#11269](https://github.com/axios/axios/pull/11269)__, __[#11270](https://github.com/axios/axios/pull/11270)__, __[#11271](https://github.com/axios/axios/pull/11271)__, __[#11272](https://github.com/axios/axios/pull/11272)__, __[#11298](https://github.com/axios/axios/pull/11298)__, __[#11302](https://github.com/axios/axios/pull/11302)__, __[#11303](https://github.com/axios/axios/pull/11303)__, __[#11304](https://github.com/axios/axios/pull/11304)__, __[#11305](https://github.com/axios/axios/pull/11305)__, __[#11306](https://github.com/axios/axios/pull/11306)__, __[#11313](https://github.com/axios/axios/pull/11313)__, __[#11321](https://github.com/axios/axios/pull/11321)__, __[#11322](https://github.com/axios/axios/pull/11322)__, __[#11323](https://github.com/axios/axios/pull/11323)__, __[#11342](https://github.com/axios/axios/pull/11342)__)\r\n* **Documentation:** Fixed interceptor test links, updated README CDN examples to the published 1.20.0 bundle, and corrected guidance on interceptor options and request lifecycle ordering. (__[#11228](https://github.com/axios/axios/pull/11228)__, __[#11149](https://github.com/axios/axios/pull/11149)__, __[#11335](https://github.com/axios/axios/pull/11335)__)\r\n* **Contributor Workflow:** Consolidated agent instructions in `AGENTS.md`, standardized PR labels, required prerelease notes and validation evidence, and clarified that `npm test` requires installed Playwright browsers. (__[#11238](https://github.com/axios/axios/pull/11238)__, __[#11273](https://github.com/axios/axios/pull/11273)__, __[#11223](https://github.com/axios/axios/pull/11223)__, __[#11284](https://github.com/axios/axios/pull/11284)__)\r\n* **Sponsors and Support:** Added HeroDevs, Code for Japan, and Sweepico sponsor listings, refreshed sponsor data, and documented extended security support for Axios v0. (__[#11222](https://github.com/axios/axios/pull/11222)__, __[#11249](https://github.com/axios/axios/pull/11249)__, __[#11252](https://github.com/axios/axios/pull/11252)__, __[#11341](https://github.com/axios/axios/pull/11341)__)\r\n* **Proxy Regression Coverage:** Added a long dotted request-hostname test for `NO_PROXY` handling, extending coverage of an existing denial-of-service fix. (__[#11235](https://github.com/axios/axios/pull/11235)__)\r\n* **Release Preparation:** Updated package version metadata for 1.21.0. (__[#11346](https://github.com/axios/axios/pull/11346)__)\r\n\r\n## 🌟 New Contributors\r\n\r\nWelcome to our 24 new contributors. Thank you for helping improve Axios:\r\n\r\n* __@lazerg__ (__[#11194](https://github.com/axios/axios/pull/11194)__)\r\n* __@QIU-Guanzong__ (__[#11228](https://github.com/axios/axios/pull/11228)__)\r\n* __@Iams4kura__ (__[#11125](https://github.com/axios/axios/pull/11125)__)\r\n* __@vjymisal0__ (__[#11179](https://github.com/axios/axios/pull/11179)__)\r\n* __@jarrensj__ (__[#11238](https://github.com/axios/axios/pull/11238)__)\r\n* __@LineGu__ (__[#11132](https://github.com/axios/axios/pull/11132)__)\r\n* __@luantaraschi__ (__[#11134](https://github.com/axios/axios/pull/11134)__)\r\n* __@Cyberhet__ (__[#11284](https://github.com/axios/axios/pull/11284)__)\r\n* __@nyxst4ck__ (__[#11138](https://github.com/axios/axios/pull/11138)__)\r\n* __@windcrestai__ (__[#11163](https://github.com/axios/axios/pull/11163)__)\r\n* __@kazuki-netizen__ (__[#11294](https://github.com/axios/axios/pull/11294)__)\r\n* __@bilashcse__ (__[#11139](https://github.com/axios/axios/pull/11139)__)\r\n* __@JiuYue0820__ (__[#11149](https://github.com/axios/axios/pull/11149)__)\r\n* __@official-burak__ (__[#11156](https://github.com/axios/axios/pull/11156)__)\r\n* __@contactjawad__ (__[#11159](https://github.com/axios/axios/pull/11159)__)\r\n* __@wittachai-as__ (__[#11174](https://github.com/axios/axios/pull/11174)__)\r\n* __@yiheng-kkk__ (__[#11166](https://github.com/axios/axios/pull/11166)__)\r\n* __@ShikeChen01__ (__[#11208](https://github.com/axios/axios/pull/11208)__)\r\n* __@cuishuang__ (__[#11210](https://github.com/axios/axios/pull/11210)__)\r\n* __@Truenocancion__ (__[#11225](https://github.com/axios/axios/pull/11225)__)\r\n* __@jakezwang__ (__[#11216](https://github.com/axios/axios/pull/11216)__)\r\n* __@Adityagarg2712__ (__[#11214](https://github.com/axios/axios/pull/11214)__)\r\n* __@Zandereins__ (__[#11235](https://github.com/axios/axios/pull/11235)__)\r\n* __@Plastic-time__ (__[#11335](https://github.com/axios/axios/pull/11335)__)\r\n\r\n[Full Changelog](https://github.com/axios/axios/compare/v1.20.0...v1.21.0)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "react-hook-form/react-hook-form#422334845",
     "library": "React Hook Form",
     "repository": "react-hook-form/react-hook-form",
