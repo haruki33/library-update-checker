@@ -1,5 +1,119 @@
 [
   {
+    "id": "remix-run/react-router#426012986",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@8.5.1",
+    "publishedAt": "2026-10-27T21:38:43Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.1",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v851",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "提供されたリリースノートに詳細な変更記載がないため、移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "remix-run/react-router#425991368",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@7.18.5",
+    "publishedAt": "2026-10-27T21:13:32Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.5",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/v7/CHANGELOG.md#v7185",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#425247580",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.3.3",
+    "publishedAt": "2026-10-27T09:27:16Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.3",
+    "releaseNotes": "### Bug Fixes\n\n* **create-vite:** include template files in package ([#23915](https://github.com/vitejs/vite/issues/23915)) ([f4abfb5](https://github.com/vitejs/vite/commit/f4abfb51b03b04b16b6322eec1b401dedee56748))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "create-vite-23915",
+        "category": "bugfix",
+        "title": "create-viteパッケージにテンプレートファイルを含める修正",
+        "summary": "create-viteのnpmパッケージに必要なテンプレートファイルが含まれていなかった不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#425118361",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.3.2",
+    "publishedAt": "2026-10-27T06:55:31Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2",
+    "releaseNotes": "### Features\n\n* **create-vite:** use typescript v7 where possible ([#23910](https://github.com/vitejs/vite/issues/23910)) ([0cf91e8](https://github.com/vitejs/vite/commit/0cf91e8435df9e984121893963af09965088e6d4))\n\n### Bug Fixes\n\n* **deps:** update all non-major dependencies ([#23896](https://github.com/vitejs/vite/issues/23896)) ([46b91c5](https://github.com/vitejs/vite/commit/46b91c5bf9c2901b8511c893bc3fc38b8bba6e4f))\n* **deps:** update dependency preact to v11 ([#23867](https://github.com/vitejs/vite/issues/23867)) ([0672bf8](https://github.com/vitejs/vite/commit/0672bf86b5963de640c8ca7a05c11848577547c9))\n\n### Miscellaneous Chores\n\n* **deps:** update dependency tsdown to ^0.23.2 ([#23895](https://github.com/vitejs/vite/issues/23895)) ([ac9a56d](https://github.com/vitejs/vite/commit/ac9a56d8925bf05d0b18bca0b273362d697bb4f4))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "create-vite-typescript-v7",
+        "category": "feature",
+        "title": "可能な場合にTypeScript v7を使用",
+        "summary": "create-viteテンプレートにて、可能な場合にTypeScript v7を使用するよう更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-non-major",
+        "category": "bugfix",
+        "title": "メジャー以外の依存関係の更新",
+        "summary": "メジャーバージョン以外のすべての依存関係を最新に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-preact-v11",
+        "category": "bugfix",
+        "title": "Preact依存関係をv11へ更新",
+        "summary": "Preactの依存関係をv11に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-tsdown",
+        "category": "other",
+        "title": "tsdown依存関係の更新",
+        "summary": "tsdownの依存関係を^0.23.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/query#424058050",
     "library": "TanStack Query",
     "repository": "TanStack/query",
@@ -305,10 +419,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.105.0",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-core をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#424056533",
@@ -322,10 +446,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.105.0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreがバージョン5.105.0に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#424056492",
@@ -342,7 +476,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.105.0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core をバージョン 5.105.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#424056441",
@@ -356,10 +500,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-105-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreのバージョンが5.105.0に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#424056389",
@@ -373,10 +527,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#424056346",
@@ -390,10 +545,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更点がないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "axios/axios#419547461",
