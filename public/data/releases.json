@@ -559,14 +559,131 @@
     "publishedAt": "2026-10-26T07:10:45Z",
     "url": "https://github.com/axios/axios/releases/tag/v1.21.0",
     "releaseNotes": "## v1.21.0 — October 21, 2026\r\n\r\nThis release adds response timing and opt-in UTF-8 Basic authentication, improves request handling across runtimes, and changes how header defaults are recognized.\r\n\r\n## ⚠️ Breaking Changes & Deprecations\r\n\r\n* **Header Defaults:** Only plain objects, null-prototype maps, and compatible `AxiosHeaders` instances are treated as common or method-specific defaults; literal headers such as `Link` are now preserved. Applications using custom class instances as defaults must convert them to plain maps, for example `{ post: { ...customDefaults } }`, or compatible `AxiosHeaders`. Otherwise, those instances become literal header values, including on requests using other methods. (__[#11156](https://github.com/axios/axios/pull/11156)__)\r\n\r\n## 🚀 New Features\r\n\r\n* **Response Timing:** Added `response.duration`, in milliseconds, including on `error.response` when present. Timing measures adapter execution and excludes interceptors and transforms; streamed responses stop timing when the stream becomes available. Axios replaces any existing `duration` value supplied by a custom adapter. (__[#11214](https://github.com/axios/axios/pull/11214)__)\r\n* **UTF-8 Basic Authentication:** Added `transitional.encodeBasicAuthUsername: true` to support Unicode usernames in XHR and Fetch requests. The option defaults to `false`, preserving existing authentication behavior; applications opting in should supply the original Unicode username and remove manual pre-encoding workarounds. (__[#11159](https://github.com/axios/axios/pull/11159)__)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n* **Fetch Compatibility:** Restored requests in runtimes such as Cloudflare Workers that reject the implicit `cache: 'default'`, while preserving explicit caller settings. Response-size failures now retain their original `ERR_BAD_RESPONSE` and request context when runtime wrappers replace the underlying stream error. (__[#11194](https://github.com/axios/axios/pull/11194)__, __[#11179](https://github.com/axios/axios/pull/11179)__)\r\n* **Runtime Consistency:** Aligned encoded-byte size accounting, multipart uploads, proxy routing, same-origin resolution, parameter merging, and form serialization across adapters. Circular parameters now reject with `ERR_BAD_OPTION_VALUE`, and sparse or non-index numeric form fields serialize as keyed objects. With `proxy: false`, native `proxyEnv` agents using unsupported pool-management or TLS-session lifecycle overrides now reject with `ERR_BAD_OPTION_VALUE`; construct those agents without `proxyEnv`. (__[#11242](https://github.com/axios/axios/pull/11242)__)\r\n* **Header Handling:** Preserved headers named `__proto__` using safe casing without changing the `AxiosHeaders` instance prototype. Function matchers in `has()`, `delete()`, and `clear()` now receive the headers instance as `this`, matching their declared contract. (__[#11134](https://github.com/axios/axios/pull/11134)__, __[#11216](https://github.com/axios/axios/pull/11216)__)\r\n* **URL and Data URL Parsing:** Accepted case-insensitive supported URL schemes and Base64 markers, and corrected decoding of percent-encoded Base64 data URLs. Node data URL allocation estimates remain aligned with decoding so configured size limits apply before allocation. (__[#11138](https://github.com/axios/axios/pull/11138)__, __[#11163](https://github.com/axios/axios/pull/11163)__, __[#11294](https://github.com/axios/axios/pull/11294)__)\r\n* **Error Diagnostics:** Preserved short reconstructed request stacks and appended wrapped error stacks under `Caused by:` so tooling that reads only `error.stack` retains the original failure context. (__[#11132](https://github.com/axios/axios/pull/11132)__, __[#11142](https://github.com/axios/axios/pull/11142)__)\r\n* **Interceptor Removal:** Restored removal through canonical numeric-string interceptor IDs, including after registry compaction. (__[#11139](https://github.com/axios/axios/pull/11139)__)\r\n* **Proxy TLS:** HTTPS CONNECT tunnels now apply current origin TLS options from an explicit `httpsAgent`, or from `https.globalAgent` when no explicit agent is supplied. This preserves process-wide custom CA settings through proxy tunnels. (__[#11178](https://github.com/axios/axios/pull/11178)__)\r\n* **XHR Lifecycle:** Used asynchronous Cookie Store reads for XSRF tokens where supported, preserving cookie fallback, timeout accounting, and cancellation. Upload and download progress listeners are now removed on completion, failure, timeout, and cancellation. (__[#11166](https://github.com/axios/axios/pull/11166)__, __[#11225](https://github.com/axios/axios/pull/11225)__)\r\n* **HTTP/2 Sessions:** Stopped reusing sessions immediately after GOAWAY and prevented draining sessions from scheduling idle timers that could delay process exit. (__[#11210](https://github.com/axios/axios/pull/11210)__)\r\n* **TypeScript Declarations:** Exposed the response-default marker as a public type to resolve `TS2527` when consumers emit declarations involving unresolved response generics, covering both ESM and CommonJS. (__[#11125](https://github.com/axios/axios/pull/11125)__)\r\n\r\n## 🔧 Maintenance & Chores\r\n\r\n* **Configuration Performance:** Reduced request configuration merge overhead, particularly for requests with many headers, while preserving merge semantics and prototype-pollution guards. (__[#11208](https://github.com/axios/axios/pull/11208)__)\r\n* **Same-Origin Checks:** Removed obsolete Internet Explorer detection without changing origin decisions in supported environments. (__[#11174](https://github.com/axios/axios/pull/11174)__)\r\n* **Dependencies:** Updated `follow-redirects` to 1.16.1 and refreshed development, documentation, test, and GitHub Actions dependencies. Removed unused `dayjs` from the docs package, root `chalk`, and `chai` from CJS module tests. (__[#11169](https://github.com/axios/axios/pull/11169)__, __[#11188](https://github.com/axios/axios/pull/11188)__, __[#11189](https://github.com/axios/axios/pull/11189)__, __[#11195](https://github.com/axios/axios/pull/11195)__, __[#11212](https://github.com/axios/axios/pull/11212)__, __[#11213](https://github.com/axios/axios/pull/11213)__, __[#11218](https://github.com/axios/axios/pull/11218)__, __[#11220](https://github.com/axios/axios/pull/11220)__, __[#11221](https://github.com/axios/axios/pull/11221)__, __[#11230](https://github.com/axios/axios/pull/11230)__, __[#11234](https://github.com/axios/axios/pull/11234)__, __[#11244](https://github.com/axios/axios/pull/11244)__, __[#11245](https://github.com/axios/axios/pull/11245)__, __[#11266](https://github.com/axios/axios/pull/11266)__, __[#11267](https://github.com/axios/axios/pull/11267)__, __[#11268](https://github.com/axios/axios/pull/11268)__, __[#11269](https://github.com/axios/axios/pull/11269)__, __[#11270](https://github.com/axios/axios/pull/11270)__, __[#11271](https://github.com/axios/axios/pull/11271)__, __[#11272](https://github.com/axios/axios/pull/11272)__, __[#11298](https://github.com/axios/axios/pull/11298)__, __[#11302](https://github.com/axios/axios/pull/11302)__, __[#11303](https://github.com/axios/axios/pull/11303)__, __[#11304](https://github.com/axios/axios/pull/11304)__, __[#11305](https://github.com/axios/axios/pull/11305)__, __[#11306](https://github.com/axios/axios/pull/11306)__, __[#11313](https://github.com/axios/axios/pull/11313)__, __[#11321](https://github.com/axios/axios/pull/11321)__, __[#11322](https://github.com/axios/axios/pull/11322)__, __[#11323](https://github.com/axios/axios/pull/11323)__, __[#11342](https://github.com/axios/axios/pull/11342)__)\r\n* **Documentation:** Fixed interceptor test links, updated README CDN examples to the published 1.20.0 bundle, and corrected guidance on interceptor options and request lifecycle ordering. (__[#11228](https://github.com/axios/axios/pull/11228)__, __[#11149](https://github.com/axios/axios/pull/11149)__, __[#11335](https://github.com/axios/axios/pull/11335)__)\r\n* **Contributor Workflow:** Consolidated agent instructions in `AGENTS.md`, standardized PR labels, required prerelease notes and validation evidence, and clarified that `npm test` requires installed Playwright browsers. (__[#11238](https://github.com/axios/axios/pull/11238)__, __[#11273](https://github.com/axios/axios/pull/11273)__, __[#11223](https://github.com/axios/axios/pull/11223)__, __[#11284](https://github.com/axios/axios/pull/11284)__)\r\n* **Sponsors and Support:** Added HeroDevs, Code for Japan, and Sweepico sponsor listings, refreshed sponsor data, and documented extended security support for Axios v0. (__[#11222](https://github.com/axios/axios/pull/11222)__, __[#11249](https://github.com/axios/axios/pull/11249)__, __[#11252](https://github.com/axios/axios/pull/11252)__, __[#11341](https://github.com/axios/axios/pull/11341)__)\r\n* **Proxy Regression Coverage:** Added a long dotted request-hostname test for `NO_PROXY` handling, extending coverage of an existing denial-of-service fix. (__[#11235](https://github.com/axios/axios/pull/11235)__)\r\n* **Release Preparation:** Updated package version metadata for 1.21.0. (__[#11346](https://github.com/axios/axios/pull/11346)__)\r\n\r\n## 🌟 New Contributors\r\n\r\nWelcome to our 24 new contributors. Thank you for helping improve Axios:\r\n\r\n* __@lazerg__ (__[#11194](https://github.com/axios/axios/pull/11194)__)\r\n* __@QIU-Guanzong__ (__[#11228](https://github.com/axios/axios/pull/11228)__)\r\n* __@Iams4kura__ (__[#11125](https://github.com/axios/axios/pull/11125)__)\r\n* __@vjymisal0__ (__[#11179](https://github.com/axios/axios/pull/11179)__)\r\n* __@jarrensj__ (__[#11238](https://github.com/axios/axios/pull/11238)__)\r\n* __@LineGu__ (__[#11132](https://github.com/axios/axios/pull/11132)__)\r\n* __@luantaraschi__ (__[#11134](https://github.com/axios/axios/pull/11134)__)\r\n* __@Cyberhet__ (__[#11284](https://github.com/axios/axios/pull/11284)__)\r\n* __@nyxst4ck__ (__[#11138](https://github.com/axios/axios/pull/11138)__)\r\n* __@windcrestai__ (__[#11163](https://github.com/axios/axios/pull/11163)__)\r\n* __@kazuki-netizen__ (__[#11294](https://github.com/axios/axios/pull/11294)__)\r\n* __@bilashcse__ (__[#11139](https://github.com/axios/axios/pull/11139)__)\r\n* __@JiuYue0820__ (__[#11149](https://github.com/axios/axios/pull/11149)__)\r\n* __@official-burak__ (__[#11156](https://github.com/axios/axios/pull/11156)__)\r\n* __@contactjawad__ (__[#11159](https://github.com/axios/axios/pull/11159)__)\r\n* __@wittachai-as__ (__[#11174](https://github.com/axios/axios/pull/11174)__)\r\n* __@yiheng-kkk__ (__[#11166](https://github.com/axios/axios/pull/11166)__)\r\n* __@ShikeChen01__ (__[#11208](https://github.com/axios/axios/pull/11208)__)\r\n* __@cuishuang__ (__[#11210](https://github.com/axios/axios/pull/11210)__)\r\n* __@Truenocancion__ (__[#11225](https://github.com/axios/axios/pull/11225)__)\r\n* __@jakezwang__ (__[#11216](https://github.com/axios/axios/pull/11216)__)\r\n* __@Adityagarg2712__ (__[#11214](https://github.com/axios/axios/pull/11214)__)\r\n* __@Zandereins__ (__[#11235](https://github.com/axios/axios/pull/11235)__)\r\n* __@Plastic-time__ (__[#11335](https://github.com/axios/axios/pull/11335)__)\r\n\r\n[Full Changelog](https://github.com/axios/axios/compare/v1.20.0...v1.21.0)",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "カスタムクラスインスタンスをデフォルトヘッダーに使用している場合、プレーンオブジェクトまたはAxiosHeadersインスタンスへ変更する必要があります。",
+      "steps": [
+        "デフォルトヘッダー（axios.defaults.headers等）にカスタムクラスインスタンスを割り当てている箇所を確認します。",
+        "該当箇所をプレーンオブジェクト（例: { post: { ...customDefaults } }）または互換性のあるAxiosHeadersインスタンスに置き換えます。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "header-defaults-breaking",
+        "category": "breaking",
+        "title": "ヘッダーのデフォルト認識動作の変更",
+        "summary": "プレーンオブジェクト、nullプロトタイプマップ、AxiosHeadersインスタンスのみがデフォルトヘッダーとして認識されます。カスタムクラスインスタンスはリテラルヘッダー値として扱われるため、コードの更新が必要です。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "response-timing",
+        "category": "feature",
+        "title": "レスポンス処理時間の計測機能の追加",
+        "summary": "レスポンスオブジェクトおよびエラーレスポンスに処理時間（ミリ秒）を示す response.duration プロパティを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "utf8-basic-auth",
+        "category": "feature",
+        "title": "UTF-8 Basic認証オプションの追加",
+        "summary": "XHRおよびFetchリクエストでUnicodeユーザー名をサポートする transitional.encodeBasicAuthUsername オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fetch-compatibility",
+        "category": "bugfix",
+        "title": "Fetch互換性およびエラーコンテキストの修正",
+        "summary": "Cloudflare Workers等での cache: 'default' 拒否問題を修正し、レスポンスサイズ超過エラー時のリクエストコンテキスト保持を改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "runtime-consistency",
+        "category": "bugfix",
+        "title": "各アダプター間の挙動の統一",
+        "summary": "バイト数計算、フォームシリアル化、プロキシ設定などアダプター間での動作の不整合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "header-handling-bugfix",
+        "category": "bugfix",
+        "title": "ヘッダー処理およびマッチャー関数の修正",
+        "summary": "__proto__ ヘッダーの安全な保持と、マッチャー関数内での this 参照を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "url-parsing-bugfix",
+        "category": "bugfix",
+        "title": "URLおよびData URLパースの修正",
+        "summary": "大文字小文字を区別しないスキーム対応およびBase64 Data URLのデコード処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "error-diagnostics",
+        "category": "bugfix",
+        "title": "エラー診断スタックの保持",
+        "summary": "再構築されたリクエストスタックを保持し、原因エラーのスタックトレースを明示するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "interceptor-removal",
+        "category": "bugfix",
+        "title": "インターセプターの数値文字列IDによる削除の修正",
+        "summary": "レジストリの整理後も数値文字列IDでインターセプターを正常に削除できるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "proxy-tls",
+        "category": "bugfix",
+        "title": "プロキシTLS設定の適用",
+        "summary": "HTTPS CONNECTトンネルにおいてAgentからカスタムCA等のTLSオプションが適切に適用されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "xhr-lifecycle",
+        "category": "bugfix",
+        "title": "XHRライフサイクル処理の改善",
+        "summary": "Cookie Storeの非同期読み取り対応および処理完了・キャンセル時のイベントリスナー削除を実装しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "http2-sessions",
+        "category": "bugfix",
+        "title": "HTTP/2セッション管理の修正",
+        "summary": "GOAWAY受信直後のセッション再利用防止とプロセス終了を妨げるアイドルタイマーの修正を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "typescript-declarations",
+        "category": "bugfix",
+        "title": "TypeScript型定義の修正",
+        "summary": "レスポンスデフォルトマーカー型を公開し、TS2527エラーを解消しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "configuration-performance",
+        "category": "performance",
+        "title": "設定マージのパフォーマンス向上",
+        "summary": "ヘッダーが多数存在するリクエストの設定マージ処理のオーバーヘッドを削減しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "react-hook-form/react-hook-form#422334845",
@@ -4345,10 +4462,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-104-3",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "内部依存関係である @tanstack/query-core が 5.104.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546739",
@@ -4362,10 +4489,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0f15bc9",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core がバージョン 5.104.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546701",
@@ -4382,7 +4519,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11935",
+        "category": "bugfix",
+        "title": "setQueryDataのアップデータにおける識別可能なユニオンの型絞り込みの修正",
+        "summary": "setQueryDataのアップデータ関数内で識別可能なユニオン（discriminated union）の型絞り込みが保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#413546659",
@@ -4396,10 +4543,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "facebook/react#399919218",
@@ -4413,10 +4561,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "react-19-3-1-rsc-transport-protocol",
+        "category": "other",
+        "title": "React Server Componentsのトランスポートプロトコルの改善",
+        "summary": "React Server Componentsにおけるトランスポートプロトコルが改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "facebook/react#399919441",
@@ -4433,7 +4591,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-37844",
+        "category": "performance",
+        "title": "トランスポートプロトコルの改善",
+        "summary": "React Server Componentsのトランスポートプロトコルが改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "facebook/react#399919525",
@@ -4447,10 +4615,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "37843",
+        "category": "performance",
+        "title": "React Server Componentsのトランスポートプロトコルの改善",
+        "summary": "React Server Componentsにおけるトランスポートプロトコルが改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "facebook/react#399919901",
@@ -4481,10 +4659,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8708",
+        "category": "other",
+        "title": "srvxおよび@vitejs/plugin-rscの依存関係更新",
+        "summary": "srvxを^1.0.0に、@vitejs/plugin-rscを^0.5.37に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8710",
+        "category": "other",
+        "title": "fetchdtsの依存関係更新",
+        "summary": "fetchdtsを^0.2.0に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8711",
+        "category": "other",
+        "title": "router-cliのCLIパーサーをcacに置き換え",
+        "summary": "router-cli内部で依存していたyargsをcacへ置き換えました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8709",
+        "category": "other",
+        "title": "diffの依存関係更新",
+        "summary": "diffを^9.0.0に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839423",
