@@ -1,5 +1,32 @@
 [
   {
+    "id": "petyosi/react-virtuoso#427580566",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.20",
+    "publishedAt": "2026-10-29T07:44:28Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.20",
+    "releaseNotes": "### Patch Changes\n\n- [#1553](https://github.com/petyosi/react-virtuoso/pull/1553) [`cc5d11e`](https://github.com/petyosi/react-virtuoso/commit/cc5d11e14c853c28872b8fe9c6bb704d0cc2b1fa) Thanks [@petyosi](https://github.com/petyosi)! - Fixed `initialTopMostItemIndex` and `scrollToIndex` having no effect inside `VirtuosoMockContext`. The scroller now reports the requested scroll position directly, so the list renders the target items in tests instead of staying empty or starting from the first item.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1553",
+        "category": "bugfix",
+        "title": "VirtuosoMockContext 内での initialTopMostItemIndex と scrollToIndex の動作を修正",
+        "summary": "VirtuosoMockContext を使用するテスト環境において、initialTopMostItemIndex および scrollToIndex が効かない問題を修正しました。要求されたスクロール位置が直接報告されるようになり、テスト内で対象のアイテムが正常にレンダリングされます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "remix-run/react-router#426012986",
     "library": "React Router",
     "repository": "remix-run/react-router",
@@ -4642,10 +4669,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースによる移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "37842",
+        "category": "other",
+        "title": "React Server Componentsのトランスポートプロトコルの改善",
+        "summary": "React Server Componentsにおけるトランスポートプロトコルが改善されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839547",
@@ -4710,10 +4747,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8709",
+        "category": "other",
+        "title": "diff 依存関係のアップデート",
+        "summary": "diff 依存関係が ^9.0.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839380",
@@ -4730,7 +4777,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0-1-63",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core (1.171.53) および @tanstack/router-utils (1.162.4) の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839335",
@@ -4747,7 +4804,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8708",
+        "category": "other",
+        "title": "srvx 依存関係の更新",
+        "summary": "srvx の依存関係バージョンを ^1.0.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839183",
@@ -4764,7 +4831,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-923d98b",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-utils (1.162.4) および @tanstack/router-generator (1.167.44) の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839094",
@@ -4781,7 +4858,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.169.2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "関連する内部依存パッケージ（@tanstack/start-server-core、@tanstack/start-plugin-core、@tanstack/router-utils、@tanstack/react-start-server、@tanstack/react-start-rsc）が最新バージョンに更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412839034",
@@ -4795,10 +4882,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "71d9694",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-server-core が 1.169.43 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412838978",
@@ -4812,10 +4909,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8711",
+        "category": "other",
+        "title": "CLI引数パーサーをcacに変更",
+        "summary": "tsrコマンドの引数解析ライブラリをyargsからcacに変更しました。コマンド無しで実行した場合はヘルプが表示され、未知のコマンドやオプションが渡された場合はエラーを出力して終了コード1で終了するようになります。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-1.167.44",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-generatorをバージョン1.167.44に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412838935",
@@ -4829,10 +4944,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更はなく、特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "923d98b",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-utilsがバージョン1.162.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#412838895",
