@@ -1,5 +1,449 @@
 [
   {
+    "id": "TanStack/query#430497680",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-01-1008",
+    "publishedAt": "2026-11-01T10:08:38Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-01-1008",
+    "releaseNotes": "Release 2026-11-01 10:08\n\n## Changes\n\n### Fix\n\n- query-persist-client-core: discard malformed persisted queries (#11919) (8be136b02) by @VGontier-cmd\n- lit-query/package.json: remove '@tanstack/query-core' from 'peerDependencies' and move 'lit' to 'devDependencies' (#12189) (5c5c11c6e) by @sukvvon\n- examples/vue/algolia: replace recursive 'Hit' type to avoid excessively deep type instantiation in 'useInfiniteQuery' (#12461) (69fcbad72) by @sukvvon\n- {react,preact,angular,solid,vue}-query/infiniteQueryOptions: correct the overload selected for a possibly-undefined 'initialData' (#11373) (7ccba6e95) by @sukvvon\n- solid-query/{queryOptions,useQuery}: correct the overload selected for 'initialData' (#11595) (b9f369a23) by @sukvvon\n- examples/{react,preact}/auto-refetching: encode 'add' query parameter with 'encodeURIComponent' (#12457) (007127748) by @sukvvon\n- examples/chat: pass the query 'signal' to 'streamFn' so refetching cancels the previous stream (#12437) (ec7bcd4ed) by @sukvvon\n- examples: remove horizontal overflow in 'shadow-dom' and make character selection keyboard accessible in 'prefetching' (#12436) (9d61f1e43) by @sukvvon\n- examples: validate ids, handle HTTP and loader errors, and show watchers and unknown locations correctly (#12435) (3185bcf97) by @sukvvon\n- query-persist-client-core: catch errors when persisting in 'persistQueryClientSubscribe' to prevent unhandled promise rejections, and log them in development (#11678) (db79da70e) by @kazbekaskarov\n- eslint-plugin-query: detect unstable clients in arrow functions and JSX (#12409) (ec1910188) by @TkDodo\n- examples/preact/{ssr,ssr-streaming}: only send the error stack in development (#12413) (ff8bdaffc) by @sukvvon\n- query-core: exclude fetchStatus from fetching filters (#12390) (18e54bfac) by @TkDodo\n\n### Refactor\n\n- svelte: declare '$props()' with 'let' and type them with 'Props', 'LayoutProps' and 'PageProps' in examples and tests (#12434) (5f37e7cb6) by @sukvvon\n- {examples,integrations}: replace the deprecated 'prefetchQuery' with 'query' (#12425) (19d8572b5) by @sukvvon\n- examples/react/algolia: inline the 'useAlgolia' hook that only wraps 'useInfiniteQuery' (#12405) (bf1de7dc2) by @sukvvon\n\n### Chore\n\n- examples: unpin 'nuxt' and remove the 'seroval' overrides now that 'seroval' versions with provenance are available (#12467) (ff6c93b7d) by @sukvvon\n- oxlint.config: add 'vueConfig' with native 'vue' rules for 'vue-query' and 'vue-query-devtools' (#12450) (1fa2f1bba) by @sukvvon\n- examples/vue: add 'eslint-plugin-vue' and 'eslint-config-prettier' to all examples and '@nuxt/eslint' to Nuxt examples (#12449) (7b73668a6) by @sukvvon\n- deps: update 'vite' to '^8.3.5', deduplicate 'pnpm-lock.yaml' and remove 'vite@6.4.1' from 'trustPolicyExclude' (#12446) (259de1d81) by @sukvvon\n- deps: unify and update '@eslint-react/eslint-plugin', 'eslint', 'svelte-check', 'vue-tsc' and '@tanstack/vue-query' versions (#12421) (2941a23d5) by @sukvvon\n- examples/react/react-native: upgrade '@react-navigation' to v7, update 'react-native-paper' and remove unused '@babel/core' and '@expo/config' (#12420) (a02b77cb5) by @sukvvon\n- deps: update 'typescript' to '^6.0.3' across examples and integrations (#12418) (d7543db62) by @sukvvon\n- examples/react/react-native: upgrade to Expo SDK 58 and resolve 'expo-doctor' issues (#12417) (09fccfd09) by @sukvvon\n- examples/react/{react-router,rick-morty,star-wars}: upgrade 'react-router' to v8 (#12416) (7900495c6) by @sukvvon\n- deps: update 'react', 'react-dom' and their types across examples and integrations (#12414) (f2c914ef8) by @sukvvon\n- examples/react/{react-router,rick-morty,star-wars}: upgrade to React Router v7 and import from 'react-router' (#12411) (389769c2c) by @sukvvon\n- examples: remove the unused 'query-core' dependency from lit and render the devtools in algolia (#12410) (378e95082) by @sukvvon\n- examples/*/tsconfig: include '*.config.ts' and '*.config.js' like the packages (#12408) (d9029ef46) by @sukvvon\n- examples/preact/basic: update '@tanstack/*' to '^5.105.0' (#12398) (7dd898ce2) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.105.1\n- @tanstack/eslint-plugin-query@5.105.1\n- @tanstack/lit-query@0.2.32\n- @tanstack/preact-query@5.105.1\n- @tanstack/preact-query-devtools@5.105.1\n- @tanstack/preact-query-persist-client@5.105.1\n- @tanstack/query-async-storage-persister@5.105.1\n- @tanstack/query-broadcast-client-experimental@5.105.1\n- @tanstack/query-core@5.105.1\n- @tanstack/query-devtools@5.105.1\n- @tanstack/query-persist-client-core@5.105.1\n- @tanstack/query-sync-storage-persister@5.105.1\n- @tanstack/react-query@5.105.1\n- @tanstack/react-query-devtools@5.105.1\n- @tanstack/react-query-next-experimental@5.105.1\n- @tanstack/react-query-persist-client@5.105.1\n- @tanstack/solid-query@5.105.1\n- @tanstack/solid-query-devtools@5.105.1\n- @tanstack/solid-query-persist-client@5.105.1\n- @tanstack/svelte-query@6.3.7\n- @tanstack/svelte-query-devtools@6.3.7\n- @tanstack/svelte-query-persist-client@6.3.7\n- @tanstack/vue-query@5.105.1\n- @tanstack/vue-query-devtools@6.3.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "query-persist-client-core-malformed",
+        "category": "bugfix",
+        "title": "不正な形式の永続化クエリの破棄",
+        "summary": "query-persist-client-core において、不正な形式で永続化されたクエリを正常に破棄するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "infinite-query-options-initial-data-overload",
+        "category": "bugfix",
+        "title": "infiniteQueryOptions の initialData オーバーロード型の修正",
+        "summary": "React、Preact、Angular、Solid、Vue パッケージの infiniteQueryOptions において、undefined の可能性がある initialData に対するオーバーロード選択を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "solid-query-initial-data-overload",
+        "category": "bugfix",
+        "title": "solid-query の initialData オーバーロード型の修正",
+        "summary": "solid-query の queryOptions および useQuery において、initialData に適したオーバーロードが選択されるように型定義を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "query-persist-client-core-error-handling",
+        "category": "bugfix",
+        "title": "persistQueryClientSubscribe でのエラー捕捉とログ出力",
+        "summary": "永続化処理中の未ハンドルの Promise 拒否を防止するためエラーを捕捉し、開発環境でログを出力するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "eslint-plugin-query-unstable-client",
+        "category": "bugfix",
+        "title": "eslint-plugin-query による不安定なクライアントの検知強化",
+        "summary": "アロー関数や JSX 内で生成される不安定な QueryClient の検出に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "query-core-fetch-status-filter",
+        "category": "bugfix",
+        "title": "fetching フィルターからの fetchStatus の除外",
+        "summary": "query-core の fetching フィルター処理から fetchStatus を除外しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "lit-query-peer-deps-update",
+        "category": "bugfix",
+        "title": "lit-query の依存関係定義の調整",
+        "summary": "lit-query の peerDependencies から @tanstack/query-core を削除し、lit を devDependencies に移動しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497425",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.105.1",
+    "publishedAt": "2026-11-01T10:08:12Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6), [`db79da7`](https://github.com/TanStack/query/commit/db79da70ede675b8f41c7b2227d0123cfdd14839), [`8be136b`](https://github.com/TanStack/query/commit/8be136b02214fe7b073673fa1cb30110a8de8482), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/react-query@5.105.1\n  - @tanstack/query-persist-client-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core を 5.105.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497399",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.105.1",
+    "publishedAt": "2026-11-01T10:08:09Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/react-query@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/react-query)",
+        "summary": "@tanstack/react-query が 5.105.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497360",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.105.1",
+    "publishedAt": "2026-11-01T10:08:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/react-query@5.105.1\n  - @tanstack/query-devtools@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-devtools をバージョン 5.105.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497342",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.105.1",
+    "publishedAt": "2026-11-01T10:08:03Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`db79da7`](https://github.com/TanStack/query/commit/db79da70ede675b8f41c7b2227d0123cfdd14839), [`8be136b`](https://github.com/TanStack/query/commit/8be136b02214fe7b073673fa1cb30110a8de8482), [`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-persist-client-core@5.105.1\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/query-core がバージョン 5.105.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497321",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.105.1",
+    "publishedAt": "2026-11-01T10:08:00Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`db79da7`](https://github.com/TanStack/query/commit/db79da70ede675b8f41c7b2227d0123cfdd14839), [`8be136b`](https://github.com/TanStack/query/commit/8be136b02214fe7b073673fa1cb30110a8de8482), [`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-persist-client-core@5.105.1\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/query-core が 5.105.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497302",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.105.1",
+    "publishedAt": "2026-11-01T10:07:57Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6), [`db79da7`](https://github.com/TanStack/query/commit/db79da70ede675b8f41c7b2227d0123cfdd14839), [`8be136b`](https://github.com/TanStack/query/commit/8be136b02214fe7b073673fa1cb30110a8de8482), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/preact-query@5.105.1\n  - @tanstack/query-persist-client-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "内部依存関係である @tanstack/preact-query および @tanstack/query-persist-client-core を 5.105.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497265",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.105.1",
+    "publishedAt": "2026-11-01T10:07:54Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/preact-query@5.105.1\n  - @tanstack/query-devtools@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools を 5.105.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497153",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.105.1",
+    "publishedAt": "2026-11-01T10:07:39Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- [#11373](https://github.com/TanStack/query/pull/11373) [`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6) - fix({react,preact,angular,solid,vue}-query/infiniteQueryOptions): correct the overload selected for a possibly-undefined 'initialData'\n\n- [#12390](https://github.com/TanStack/query/pull/12390) [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf) - Exclude `fetchStatus` from the filters accepted by `QueryClient.isFetching`, `useIsFetching`, and `injectIsFetching`. These APIs always count queries with `fetchStatus: 'fetching'`.\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11373",
+        "category": "bugfix",
+        "title": "infiniteQueryOptionsにおけるinitialDataのオーバーロード選択を修正",
+        "summary": "initialDataがundefinedになる可能性がある場合に正しいオーバーロードが選択されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12390",
+        "category": "bugfix",
+        "title": "isFetching関連APIのフィルターからfetchStatusを除外",
+        "summary": "QueryClient.isFetching、useIsFetching、injectIsFetchingのフィルターからfetchStatusを除外しました。これらのAPIは常にfetchStatusがfetchingのクエリをカウントします。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-5.105.1",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreを5.105.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497122",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.105.1",
+    "publishedAt": "2026-11-01T10:07:36Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- [#11678](https://github.com/TanStack/query/pull/11678) [`db79da7`](https://github.com/TanStack/query/commit/db79da70ede675b8f41c7b2227d0123cfdd14839) - fix(query-persist-client-core): catch errors when persisting in 'persistQueryClientSubscribe' to prevent unhandled promise rejections, and log them in development\n\n- [#11919](https://github.com/TanStack/query/pull/11919) [`8be136b`](https://github.com/TanStack/query/commit/8be136b02214fe7b073673fa1cb30110a8de8482) - Validate persisted query keys, hashes, state objects, and data update timestamps before retrieval, restoration, garbage collection, or filtered removal. Remove malformed entries without interrupting subsequent queries, while preserving valid `null` data.\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "11678",
+        "category": "bugfix",
+        "title": "persistQueryClientSubscribeでの永続化エラーハンドリングの改善",
+        "summary": "persistQueryClientSubscribeでの永続化処理中に発生するエラーをキャッチし、未処理のPromise拒否を防止して開発環境でログ出力するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11919",
+        "category": "bugfix",
+        "title": "永続化されたデータ形式の検証と不正エントリの自動削除",
+        "summary": "データ取得や復元などの前にクエリキーや状態オブジェクト等の形式を検証し、不正なエントリを他の処理を妨げずに自動削除するようにしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#430497091",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.105.1",
+    "publishedAt": "2026-11-01T10:07:33Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#430497067",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.105.1",
+    "publishedAt": "2026-11-01T10:07:30Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#430497049",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.105.1",
+    "publishedAt": "2026-11-01T10:07:27Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- [#11373](https://github.com/TanStack/query/pull/11373) [`7ccba6e`](https://github.com/TanStack/query/commit/7ccba6e959fcb9c51e691db9e2b09ff41d21e0b6) - fix({react,preact,angular,solid,vue}-query/infiniteQueryOptions): correct the overload selected for a possibly-undefined 'initialData'\n\n- [#12390](https://github.com/TanStack/query/pull/12390) [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf) - Exclude `fetchStatus` from the filters accepted by `QueryClient.isFetching`, `useIsFetching`, and `injectIsFetching`. These APIs always count queries with `fetchStatus: 'fetching'`.\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#430497021",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.32",
+    "publishedAt": "2026-11-01T10:07:24Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.32",
+    "releaseNotes": "### Patch Changes\n\n- [#12189](https://github.com/TanStack/query/pull/12189) [`5c5c11c`](https://github.com/TanStack/query/commit/5c5c11c6e729160a856a327af64fe08467cf80f2) - fix(lit-query/package.json): remove '@tanstack/query-core' from 'peerDependencies' and move 'lit' to 'devDependencies'\n\n- [#12390](https://github.com/TanStack/query/pull/12390) [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf) - Exclude `fetchStatus` from the filters accepted by `QueryClient.isFetching`, `useIsFetching`, and `injectIsFetching`. These APIs always count queries with `fetchStatus: 'fetching'`.\n- Updated dependencies [[`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0), [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf)]:\n  - @tanstack/query-core@5.105.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#430497000",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.105.1",
+    "publishedAt": "2026-11-01T10:07:21Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- [#12406](https://github.com/TanStack/query/pull/12406) [`6f8a48d`](https://github.com/TanStack/query/commit/6f8a48d543b499b6d9b0e95050c28183c8c18ae0) - Reduce temporary allocations when checking tracked result properties for observer notifications.\n\n- [#12390](https://github.com/TanStack/query/pull/12390) [`18e54bf`](https://github.com/TanStack/query/commit/18e54bfac3dc3756afdb8840418d831c61bc15bf) - Exclude `fetchStatus` from the filters accepted by `QueryClient.isFetching`, `useIsFetching`, and `injectIsFetching`. These APIs always count queries with `fetchStatus: 'fetching'`.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#430496979",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.105.1",
+    "publishedAt": "2026-11-01T10:07:18Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.105.1",
+    "releaseNotes": "### Patch Changes\n\n- [#12409](https://github.com/TanStack/query/pull/12409) [`ec19101`](https://github.com/TanStack/query/commit/ec1910188588b182394a589313678714bc6a1798) - Fix stable-query-client detection for arrow functions, function expressions, and clients created directly in JSX. Keep state initializers and nested helper functions valid.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/router#430143474",
     "library": "TanStack Router",
     "repository": "TanStack/router",
