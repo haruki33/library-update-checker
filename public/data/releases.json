@@ -1,5 +1,458 @@
 [
   {
+    "id": "TanStack/query#431945960",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-02-2039",
+    "publishedAt": "2026-11-02T20:39:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-02-2039",
+    "releaseNotes": "Release 2026-11-02 20:39\n\n## Changes\n\n### Fix\n\n- query-core: exclude queries without data from isStatic (#12497) (969e58019) by @TkDodo\n- query-core: skip pausing cancelled retries (#11537) (3f4de1b40) by @brennanbutler01\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.105.3\n- @tanstack/eslint-plugin-query@5.105.3\n- @tanstack/lit-query@0.2.34\n- @tanstack/preact-query@5.105.3\n- @tanstack/preact-query-devtools@5.105.3\n- @tanstack/preact-query-persist-client@5.105.3\n- @tanstack/query-async-storage-persister@5.105.3\n- @tanstack/query-broadcast-client-experimental@5.105.3\n- @tanstack/query-core@5.105.3\n- @tanstack/query-devtools@5.105.3\n- @tanstack/query-persist-client-core@5.105.3\n- @tanstack/query-sync-storage-persister@5.105.3\n- @tanstack/react-query@5.105.3\n- @tanstack/react-query-devtools@5.105.3\n- @tanstack/react-query-next-experimental@5.105.3\n- @tanstack/react-query-persist-client@5.105.3\n- @tanstack/solid-query@5.105.3\n- @tanstack/solid-query-devtools@5.105.3\n- @tanstack/solid-query-persist-client@5.105.3\n- @tanstack/svelte-query@6.3.9\n- @tanstack/svelte-query-devtools@6.3.9\n- @tanstack/svelte-query-persist-client@6.3.9\n- @tanstack/vue-query@5.105.3\n- @tanstack/vue-query-devtools@6.3.9\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "query-core-isstatic-no-data",
+        "category": "bugfix",
+        "title": "query-core: データを持たないクエリをisStaticから除外",
+        "summary": "データが存在しないクエリがisStaticに判定されないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "query-core-skip-pausing-cancelled-retries",
+        "category": "bugfix",
+        "title": "query-core: キャンセルされたリトライの停止をスキップ",
+        "summary": "キャンセル済みのリトライ処理に対して停止（pause）処理を行わないようスキップする修正を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945665",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.105.3",
+    "publishedAt": "2026-11-02T20:39:00Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.105.3\n  - @tanstack/react-query@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5.105.3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.105.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945626",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.105.3",
+    "publishedAt": "2026-11-02T20:38:57Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-105-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query をバージョン 5.105.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945571",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.105.3",
+    "publishedAt": "2026-11-02T20:38:54Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.105.3\n  - @tanstack/react-query@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query を 5.105.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945517",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.105.3",
+    "publishedAt": "2026-11-02T20:38:51Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`3f4de1b`](https://github.com/TanStack/query/commit/3f4de1b40cce4314f7572b515ad8fd26dd85fe04), [`969e580`](https://github.com/TanStack/query/commit/969e58019bf650fb17c273fddd0e8d2adf56d4d9)]:\n  - @tanstack/query-core@5.105.3\n  - @tanstack/query-persist-client-core@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-105-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.105.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945182",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.105.3",
+    "publishedAt": "2026-11-02T20:38:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`3f4de1b`](https://github.com/TanStack/query/commit/3f4de1b40cce4314f7572b515ad8fd26dd85fe04), [`969e580`](https://github.com/TanStack/query/commit/969e58019bf650fb17c273fddd0e8d2adf56d4d9)]:\n  - @tanstack/query-core@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-105-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.105.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#431945132",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.105.3",
+    "publishedAt": "2026-11-02T20:38:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.105.3",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`3f4de1b`](https://github.com/TanStack/query/commit/3f4de1b40cce4314f7572b515ad8fd26dd85fe04), [`969e580`](https://github.com/TanStack/query/commit/969e58019bf650fb17c273fddd0e8d2adf56d4d9)]:\n  - @tanstack/query-core@5.105.3",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-query-core-5-105-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.105.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "polygonplanet/encoding.js#430620033",
+    "library": "encoding-japanese",
+    "repository": "polygonplanet/encoding.js",
+    "version": "2.5.0",
+    "publishedAt": "2026-11-02T19:08:25Z",
+    "url": "https://github.com/polygonplanet/encoding.js/releases/tag/2.5.0",
+    "releaseNotes": "## What's Changed\r\n\r\nThis release has no breaking API changes and focuses on making encoding.js faster and smaller: a roughly 60% reduction in minified bundle size, faster character encoding conversions, and lower memory usage.  \r\nAnd I've finally set up [GitHub Sponsors](https://github.com/sponsors/polygonplanet)!\r\n\r\n### Features\r\n\r\n* Improve TypeScript definitions: support case-insensitive encoding names and aliases through `EncodingName`, allow string input in `urlEncode()` and `base64Encode()`, and accept typed arrays in the Zenkaku/Hankaku conversion functions ([d769950](https://github.com/polygonplanet/encoding.js/commit/d769950))\r\n\r\n### Bug Fixes\r\n\r\n* Fix an extra NUL byte when decoding JIS X 0212 `0x2237` from `EUCJP` and `JIS` by [@youdie006](https://github.com/youdie006) in [#69](https://github.com/polygonplanet/encoding.js/pull/69)\r\n* Ignore stray continuation bytes when converting from `UTF8`, preventing the previous character from being repeated ([#71](https://github.com/polygonplanet/encoding.js/pull/71))\r\n* Use the fallback character for values above `U+10FFFF` when converting from `UNICODE` to `UTF8` ([#71](https://github.com/polygonplanet/encoding.js/pull/71))\r\n* Fix `codeToString()` and string output potentially throwing a `RangeError` on a deep call stack ([055ede8](https://github.com/polygonplanet/encoding.js/commit/055ede8))\r\n* Fix `base64Decode()` to ignore non-ASCII characters ([61e7dc2](https://github.com/polygonplanet/encoding.js/commit/61e7dc2))\r\n* Fix `convert()` to return a new array even when no conversion is needed ([86f2a7e](https://github.com/polygonplanet/encoding.js/commit/86f2a7e))\r\n\r\n### Performance\r\n\r\n#### Smaller bundle size\r\n\r\nReduced the bundle size by compressing the UTF-8 to JIS conversion tables into a compact text format. Conversion results and APIs are unchanged.\r\n\r\nThe tables are expanded lazily only when a conversion is actually needed, rather than at module load time, to avoid unnecessary initialization overhead. See [#70](https://github.com/polygonplanet/encoding.js/pull/70) for more details.\r\n\r\n| | v2.4.0 | v2.5.0 | Change |\r\n|---|---:|---:|---:|\r\n| `encoding.js` | 304 KB | 148 KB | -51% |\r\n| `encoding.min.js` | 229 KB | 88 KB | -62% |\r\n| `encoding.min.js` (gzip) | 76 KB | 39 KB | -49% |\r\n\r\n#### Faster conversions\r\n\r\nImproved conversion performance by prioritizing typed arrays.\r\nThis makes `convert()` about 1.5-3.5x faster for most encoding pairs (about 1.3x when converting from UTF-8) and reduces peak memory during conversion by about 25-60%.\r\n\r\nSelected benchmark results from [#71](https://github.com/polygonplanet/encoding.js/pull/71) (in ops/sec, higher is better):\r\n\r\n| Conversion | v2.4.0 | v2.5.0 | Speedup |\r\n| --- | ---: | ---: | ---: |\r\n| SJIS -> UNICODE | 64.51 | 160 | 2.5x |\r\n| EUCJP -> UNICODE | 65.96 | 182 | 2.8x |\r\n| UNICODE -> SJIS | 23.63 | 54.25 | 2.3x |\r\n| UNICODE -> UTF8 | 54.85 | 183 | 3.3x |\r\n| SJIS -> UTF8 | 84.82 | 154 | 1.8x |\r\n| UTF8 -> SJIS | 62.02 | 79.35 | 1.3x |\r\n\r\nBenchmark on Node.js v24 with the full text of *\"I Am a Cat\"* (about 350,000 characters), `type: 'array'`.\r\n\r\nOther performance improvements:\r\n\r\n* Improve `codeToString()` and string output performance by keeping the fast conversion path available after processing large arrays ([055ede8](https://github.com/polygonplanet/encoding.js/commit/055ede8))\r\n* Improve the performance of `stringToCode()`, `base64Encode()`, `urlDecode()` and the Zenkaku/Hankaku conversion functions by preallocating result arrays, up to about 3x faster for large input ([055ede8](https://github.com/polygonplanet/encoding.js/commit/055ede8), [cf887c6](https://github.com/polygonplanet/encoding.js/commit/cf887c6))\r\n\r\n### Maintenance\r\n\r\n* Update minify options to keep `encoding.min.js` ES5-compatible ([9a8d3b2](https://github.com/polygonplanet/encoding.js/commit/9a8d3b2))\r\n* Update devDependencies ([9357cc1](https://github.com/polygonplanet/encoding.js/commit/9357cc1), [f0c942e](https://github.com/polygonplanet/encoding.js/commit/f0c942e))\r\n\r\n## GitHub Sponsors\r\n\r\nI've started [GitHub Sponsors](https://github.com/sponsors/polygonplanet)!\r\nIf encoding.js is useful to you, please consider supporting my work.\r\nYour support would mean a lot. Thank you!\r\n\r\n## New Contributors\r\n* @youdie006 made their first contribution in https://github.com/polygonplanet/encoding.js/pull/69\r\n\r\n**Full Changelog**: [2.4.0...2.5.0](https://github.com/polygonplanet/encoding.js/compare/2.4.0...2.5.0)\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "axios/axios#431823162",
+    "library": "Axios",
+    "repository": "axios/axios",
+    "version": "v0.35.0",
+    "publishedAt": "2026-11-02T18:24:19Z",
+    "url": "https://github.com/axios/axios/releases/tag/v0.35.0",
+    "releaseNotes": "## v0.35.0 — November 2, 2026\r\n\r\nThis release aligns request option handling, parameter validation and form serialization across Node and browser runtimes on the v0.x line, with some stricter validation, and moves v0.x CI onto Namespace runners.\r\n\r\n## ⚠️ Breaking Changes & Deprecations\r\n\r\n- **Parameter Depth Limit:** `params` nested deeper than 100 levels now reject with `ERR_BAD_OPTION_VALUE`. (**#11243**)\r\n- **Form Index Serialization:** Sparse arrays and non-canonical numeric form indexes, such as `01`, now serialize as keyed objects instead of being collapsed into arrays. (**#11243**)\r\n- **Native Proxy Agents:** On runtimes with native environment proxy support, agents that override native pool-management or TLS-session lifecycle hooks now reject with `ERR_BAD_OPTION_VALUE`. Use an agent constructed without `proxyEnv` for these configurations. Plain subclasses are still supported, and public type signatures are unchanged. (**#11243**)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n- **Connection Pools & Agents:** When axios selects or reuses a direct connection pool, it now keeps live native agent options, pool controls, and custom connection and pool-name hooks. Only the selected protocol's agent is adapted, including on redirects, and the configured agent's `destroy()` also cleans up its direct pool. Cached direct pools stay selected after public proxy options are removed or replaced. (**#11243**)\r\n- **Parameter Validation:** Enumerable custom-object `params` roots are now validated consistently before merging. Array validation checks canonical numeric elements, including hidden and inherited slots, and ignores named metadata. Legacy runtimes use bounded scans and never mutate caller objects. (**#11243**)\r\n- **Form Serialization:** Hidden and inherited array-like numeric indexes are unwrapped, sparse arrays are preserved, and non-canonical numeric field names survive JSON serialization. Inherited read-only numeric slots no longer block conversion or multipart serialization. (**#11243**)\r\n- **FileList Handling:** `FileList` values are copied by index without relying on host-object reflection, and are converted before multipart iteration. Incomplete collections fall back to the unconverted-value path instead of emitting a partial list. (**#11243**)\r\n- **Upload & Data URL Limits:** Streamed uploads honor the configured byte limit across transports. Data URL size checks follow the decoder's encoding rules, including bare `data:base64,...` metadata. (**#11243**)\r\n- **Legacy Runtime Compatibility:** The affected browser helpers stay compatible with ES5 number and reflection APIs and no longer depend on property enumeration order. (**#11243**)\r\n\r\n## 🔧 Maintenance & Chores\r\n\r\n- **CI Infrastructure:** v0.x workflow jobs now run on the `namespace-profile-axios` Namespace runner profile. The npm publish job stays on GitHub-hosted runners so provenance and trusted publishing keep working. Firefox is installed through a SHA-pinned `browser-actions/setup-firefox` step in the CI and release-branch workflows for Karma browser tests. (**#11398**, **#11416**)\r\n- **Release:** Bumped the version to 0.35.0. (**#11417**)\r\n\r\n[[Full Changelog](https://github.com/axios/axios/compare/v0.34.0...v0.35.0)](https://github.com/axios/axios/compare/v0.34.0...v0.35.0)",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "v0.35.0ではパラメータ制限、フォームシリアライズ、およびネイティブプロキシ環境下でのAgent設定に関する破壊的変更が含まれており、該当する設定を使用している場合は修正が必要です。",
+      "steps": [
+        "100階層を超えるネストされた params を使用している場合は、データ構造を100階層未満にフラット化してください。",
+        "01 などの非標準な数値インデックスやスパース配列を含むフォームデータを使用している場合、キー付きオブジェクトとしてシリアライズされるため受信側の挙動を確認してください。",
+        "ネイティブプロキシ環境でプール管理やTLSセッションフックをオーバーライドするカスタムAgentを使用している場合は、proxyEnv オプションを使用しない構成に変更してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "change-1",
+        "category": "breaking",
+        "title": "paramsのネスト深度制限（100階層）の追加",
+        "summary": "100階層を超えてネストされた params は ERR_BAD_OPTION_VALUE エラーで拒否されるようになりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-2",
+        "category": "breaking",
+        "title": "フォームインデックスのシリアライズ動作変更",
+        "summary": "スパース配列や 01 などの非標準な数値形式のフォームインデックスは、配列に圧縮されずキー付きオブジェクトとしてシリアライズされます。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-3",
+        "category": "breaking",
+        "title": "ネイティブプロキシ環境でのAgentオーバーライド制限",
+        "summary": "ネイティブプロキシ環境において、プール管理やTLSセッションのフックをオーバーライドするAgentは ERR_BAD_OPTION_VALUE で拒否されます。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-4",
+        "category": "bugfix",
+        "title": "コネクションプールとAgentのライフサイクル管理の修正",
+        "summary": "直接接続プールの再利用時やリダイレクト時におけるAgentオプションの保持および destroy() 実行時のクリーンアップ処理が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-5",
+        "category": "bugfix",
+        "title": "paramsの検証およびマージ処理の整合性向上",
+        "summary": "カスタムオブジェクトの params 検証の一貫性が向上し、配列の検証において隠しスロットや継承スロットのチェックが適切に行われるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-6",
+        "category": "bugfix",
+        "title": "フォームおよびマルチパートシリアライズのバグ修正",
+        "summary": "隠しインデックスや継承数値インデックスの展開、スパース配列の保持、読み取り専用スロットによるシリアライズブロックの解消が行われました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-7",
+        "category": "bugfix",
+        "title": "FileListの処理改善",
+        "summary": "FileList がリフレクションに依存せず正しくインデックスコピーされ、不完全なコレクションでも適切にフォールバックされるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-8",
+        "category": "bugfix",
+        "title": "ストリームアップロードおよびData URLサイズ制限の適用修正",
+        "summary": "ストリームアップロードでのバイト制限遵守と、Data URLのデコーダ規則に沿ったサイズ検証が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-9",
+        "category": "bugfix",
+        "title": "レガシーランタイム互換性の向上",
+        "summary": "ES5環境向けヘルパーがプロパティの列挙順序に依存しないように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-10",
+        "category": "other",
+        "title": "CIインフラストラクチャの改修とバージョン更新",
+        "summary": "v0.xのCIワークフローをNamespaceランナーに移行し、Karmaテスト用のFirefoxセットアップ手順を追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#431668050",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.1.0",
+    "publishedAt": "2026-11-02T16:03:20Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.1.0",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🚀 Features\n\n- Add `--last-failed` to run only failed tests &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11558 [<samp>(82f63)</samp>](https://github.com/vitest-dev/vitest/commit/82f634220)\n- Support `Temporal.Instant` and `Temporal.ZonedDateTime` in `vi.setSystemTime()` &nbsp;-&nbsp; by @Prajwal2246, **Prajwal2246**, **Claude Opus 5.5 (1M context)**, @hi-ogawa and **Codex (GPT-6)** in https://github.com/vitest-dev/vitest/issues/11321 [<samp>(f150f)</samp>](https://github.com/vitest-dev/vitest/commit/f150f5108)\n- Introduce `--since-last-run` flag &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11516 [<samp>(08bd9)</samp>](https://github.com/vitest-dev/vitest/commit/08bd93b7e)\n- Expose per-retry/repeat attempt result &nbsp;-&nbsp; by @hi-ogawa, **Codex (GPT-6)** and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11232 [<samp>(21be4)</samp>](https://github.com/vitest-dev/vitest/commit/21be412ed)\n- Support fake timers for `node:timers` and `node:timers/promise` &nbsp;-&nbsp; by @hi-ogawa, **OpenCode** and **Codex (GPT-6)** in https://github.com/vitest-dev/vitest/issues/10899 [<samp>(fbe97)</samp>](https://github.com/vitest-dev/vitest/commit/fbe973cae)\n- Allow coverage providers to store data in fs module cache &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11747 [<samp>(54a2b)</samp>](https://github.com/vitest-dev/vitest/commit/54a2bdb81)\n- Interactively review failed snapshots &nbsp;-&nbsp; by @macarie and @hi-ogawa in https://github.com/vitest-dev/vitest/issues/11325 [<samp>(54e5b)</samp>](https://github.com/vitest-dev/vitest/commit/54e5b8a8a)\n- **browser**:\n  - Mock modules through an import map &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11534 [<samp>(707f8)</samp>](https://github.com/vitest-dev/vitest/commit/707f8adf4)\n  - Drop experimental label from trace view &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11518 [<samp>(44c3c)</samp>](https://github.com/vitest-dev/vitest/commit/44c3c2fcf)\n  - Introduce experimental `pointer` API &nbsp;-&nbsp; by @macarie in https://github.com/vitest-dev/vitest/issues/10780 [<samp>(5dc09)</samp>](https://github.com/vitest-dev/vitest/commit/5dc09f0ea)\n  - Capture aria snapshot in trace view &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11492 [<samp>(0cc39)</samp>](https://github.com/vitest-dev/vitest/commit/0cc39fb90)\n  - Show trace steps timeline on terminal on test failure &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11594 [<samp>(973dc)</samp>](https://github.com/vitest-dev/vitest/commit/973dc84be)\n  - Add failure-only trace view mode &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11612 [<samp>(d5d7d)</samp>](https://github.com/vitest-dev/vitest/commit/d5d7d2f06)\n  - Enable failure-only trace view by default &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11766 [<samp>(f37b6)</samp>](https://github.com/vitest-dev/vitest/commit/f37b6b707)\n- **coverage**:\n  - V8 to support `ignoreNode` option &nbsp;-&nbsp; by @erickserra and @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11688 [<samp>(e02db)</samp>](https://github.com/vitest-dev/vitest/commit/e02db0869)\n- **experimental**:\n  - Add trace timeline for node &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11753 [<samp>(4e985)</samp>](https://github.com/vitest-dev/vitest/commit/4e9855151)\n  - Add message option to vi.waitFor and vi.waitUntil &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11754 [<samp>(fd145)</samp>](https://github.com/vitest-dev/vitest/commit/fd145d8d6)\n\n### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Rerun setup files after `--changed` filtering &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11621 [<samp>(3a39c)</samp>](https://github.com/vitest-dev/vitest/commit/3a39cfc54)\n- Return the mock to concurrent imports &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11623 [<samp>(1453b)</samp>](https://github.com/vitest-dev/vitest/commit/1453ba690)\n- Don&#39;t fail on console log pending at teardown &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11619 [<samp>(a60b8)</samp>](https://github.com/vitest-dev/vitest/commit/a60b8e132)\n- Reference chai types in every d.ts chunk &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11618 [<samp>(fb150)</samp>](https://github.com/vitest-dev/vitest/commit/fb150158b)\n- Detect mock factory cycles that form later &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11642 [<samp>(e9554)</samp>](https://github.com/vitest-dev/vitest/commit/e95541584)\n- Skip fs module cache for typed import.meta.glob &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11666 [<samp>(79501)</samp>](https://github.com/vitest-dev/vitest/commit/79501f3a1)\n- Run tests that import a deleted file &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11669 [<samp>(80aa1)</samp>](https://github.com/vitest-dev/vitest/commit/80aa13dd6)\n- Keep syntax highlighting in code frames &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11705 [<samp>(d39f5)</samp>](https://github.com/vitest-dev/vitest/commit/d39f51548)\n- Respect CLI filters when prewarming browsers &nbsp;-&nbsp; by @sheremet-va and **Benjamin Tang** in https://github.com/vitest-dev/vitest/issues/11706 [<samp>(10947)</samp>](https://github.com/vitest-dev/vitest/commit/109474892)\n- Read cached source as utf-8 &nbsp;-&nbsp; by @juan-fernandez in https://github.com/vitest-dev/vitest/issues/11682 and https://github.com/vitest-dev/vitest/issues/11709 [<samp>(867a5)</samp>](https://github.com/vitest-dev/vitest/commit/867a5e41c)\n- Inherit `watch` from the root config in projects &nbsp;-&nbsp; by @nstepien and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11724 [<samp>(77c12)</samp>](https://github.com/vitest-dev/vitest/commit/77c122c6b)\n- Prefix expect.poll message to all errors &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11756 [<samp>(cab58)</samp>](https://github.com/vitest-dev/vitest/commit/cab5877db)\n- Support api.port 0 &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11641 [<samp>(3667c)</samp>](https://github.com/vitest-dev/vitest/commit/3667cf8a3)\n- Show attempts in test error logs of retried tests &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11696 [<samp>(77a94)</samp>](https://github.com/vitest-dev/vitest/commit/77a94328a)\n- Preserve rootDir in project paths &nbsp;-&nbsp; by @btea in https://github.com/vitest-dev/vitest/issues/11816 [<samp>(bf96d)</samp>](https://github.com/vitest-dev/vitest/commit/bf96dad6a)\n- **browser**:\n  - Change default port to 23315 &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11640 [<samp>(a2ec4)</samp>](https://github.com/vitest-dev/vitest/commit/a2ec4166d)\n  - Advance fake timers in actions and expect.element &nbsp;-&nbsp; by @julienw, @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11242 [<samp>(68190)</samp>](https://github.com/vitest-dev/vitest/commit/6819008ce)\n  - Drop trace view warning without html reporter &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11665 [<samp>(e6407)</samp>](https://github.com/vitest-dev/vitest/commit/e64075ef5)\n  - Detect shared chunks via the optimizer &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11661 [<samp>(e2e9c)</samp>](https://github.com/vitest-dev/vitest/commit/e2e9c64b0)\n  - Clear screenshot stability timeout &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11659 [<samp>(fbe37)</samp>](https://github.com/vitest-dev/vitest/commit/fbe37c083)\n  - Measure prepare duration with one clock &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11667 [<samp>(a3ed4)</samp>](https://github.com/vitest-dev/vitest/commit/a3ed42a14)\n  - Keep failure screenshot per attempt &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11694 [<samp>(a5022)</samp>](https://github.com/vitest-dev/vitest/commit/a5022655d)\n  - Print trace timeline of each attempt &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11695 [<samp>(27229)</samp>](https://github.com/vitest-dev/vitest/commit/272296e5d)\n  - Don&#39;t hang in `page.viewport()` &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11738 [<samp>(49ff4)</samp>](https://github.com/vitest-dev/vitest/commit/49ff4420c)\n  - Skip trace entries after their attempt ended &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11771 [<samp>(7a56f)</samp>](https://github.com/vitest-dev/vitest/commit/7a56fea53)\n  - Focus the iframe before clicking in playwright &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11798 [<samp>(eb20a)</samp>](https://github.com/vitest-dev/vitest/commit/eb20a3af1)\n  - Fail the run when a tester cannot connect &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11802 [<samp>(605bf)</samp>](https://github.com/vitest-dev/vitest/commit/605bf22b7)\n  - Treat edge as chromium in toHaveStyle &nbsp;-&nbsp; by @aliamanatali in https://github.com/vitest-dev/vitest/issues/11813 [<samp>(f4dd9)</samp>](https://github.com/vitest-dev/vitest/commit/f4dd97652)\n- **cache**:\n  - Handle concurrent cache clearing &nbsp;-&nbsp; by @7rulnik in https://github.com/vitest-dev/vitest/issues/11697 [<samp>(09076)</samp>](https://github.com/vitest-dev/vitest/commit/090766a42)\n  - Key module cache on the deps optimizer &nbsp;-&nbsp; by @MO2k4 and **Martin Oehlert** in https://github.com/vitest-dev/vitest/issues/11775 [<samp>(52485)</samp>](https://github.com/vitest-dev/vitest/commit/524856ed0)\n  - Do not fail when the cache dir is unwritable &nbsp;-&nbsp; by @ezefernandezyf in https://github.com/vitest-dev/vitest/issues/11781 [<samp>(274ab)</samp>](https://github.com/vitest-dev/vitest/commit/274ab70c4)\n- **cli**:\n  - Use camelCase for sinceLastRun help &nbsp;-&nbsp; by @fengmk2 in https://github.com/vitest-dev/vitest/issues/11707 [<samp>(5c674)</samp>](https://github.com/vitest-dev/vitest/commit/5c674859b)\n- **coverage**:\n  - V8 `autoAttachSubprocess` to use `.tmp` directory &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11632 [<samp>(de5af)</samp>](https://github.com/vitest-dev/vitest/commit/de5af2939)\n  - V8 to ignore Vite&#39;s generated CJS namespace import helper &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11676 [<samp>(5901f)</samp>](https://github.com/vitest-dev/vitest/commit/5901fb458)\n- **deps**:\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11637 [<samp>(2b18e)</samp>](https://github.com/vitest-dev/vitest/commit/2b18e3724)\n- **expect**:\n  - Keep soft .resolves/.rejects error location &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11792 [<samp>(42770)</samp>](https://github.com/vitest-dev/vitest/commit/42770759f)\n- **mocker**:\n  - Don&#39;t change the original prototype chain &nbsp;-&nbsp; by @sheremet-va and **Max Schwenk** in https://github.com/vitest-dev/vitest/issues/11737 [<samp>(cca42)</samp>](https://github.com/vitest-dev/vitest/commit/cca423de9)\n  - Use root __mocks__ for linked packages &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/7708 and https://github.com/vitest-dev/vitest/issues/11739 [<samp>(810ec)</samp>](https://github.com/vitest-dev/vitest/commit/810ec66e1)\n- **runner**:\n  - Don&#39;t drop throttled task updates &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11795 [<samp>(8e837)</samp>](https://github.com/vitest-dev/vitest/commit/8e837b87a)\n- **ui**:\n  - Escape search text in explorer highlight &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11672 [<samp>(3c6d6)</samp>](https://github.com/vitest-dev/vitest/commit/3c6d6dd24)\n  - Fix html reporter crash when --bail cancels files &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11693 [<samp>(36a5f)</samp>](https://github.com/vitest-dev/vitest/commit/36a5fa132)\n  - Fix quirks mode in trace view replay &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11744 [<samp>(b9b73)</samp>](https://github.com/vitest-dev/vitest/commit/b9b73596c)\n  - Let coverage report follow UI color scheme &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11765 [<samp>(59c2d)</samp>](https://github.com/vitest-dev/vitest/commit/59c2dd3a7)\n  - Open trace view only for tests with a trace &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11770 [<samp>(c022d)</samp>](https://github.com/vitest-dev/vitest/commit/c022d630f)\n- **vm**:\n  - Strip hashbang before compiling CommonJS dependencies &nbsp;-&nbsp; by @cwoebker in https://github.com/vitest-dev/vitest/issues/11731 [<samp>(1a77c)</samp>](https://github.com/vitest-dev/vitest/commit/1a77c6cbc)\n  - Keep node globals after teardown &nbsp;-&nbsp; by @francesco-agnoletto in https://github.com/vitest-dev/vitest/issues/11380 and https://github.com/vitest-dev/vitest/issues/11681 [<samp>(a57b4)</samp>](https://github.com/vitest-dev/vitest/commit/a57b4d8a3)\n  - Reset fake timers after each test file &nbsp;-&nbsp; by @francesco-agnoletto in https://github.com/vitest-dev/vitest/issues/11679 and https://github.com/vitest-dev/vitest/issues/11779 [<samp>(78c46)</samp>](https://github.com/vitest-dev/vitest/commit/78c46acdf)\n  - Keep assignable accessor globals writable in node environment &nbsp;-&nbsp; by @MO2k4 and **Martin Oehlert** in https://github.com/vitest-dev/vitest/issues/11834 [<samp>(a5ec3)</samp>](https://github.com/vitest-dev/vitest/commit/a5ec316f8)\n\n### &nbsp;&nbsp;&nbsp;🏎 Performance\n\n- Reuse fsModuleCache in static collection &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11622 [<samp>(1766c)</samp>](https://github.com/vitest-dev/vitest/commit/1766c257d)\n- Cache setup/mock resolves in reused workers &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11760 [<samp>(5de10)</samp>](https://github.com/vitest-dev/vitest/commit/5de103a9c)\n- Don&#39;t refetch warm modules in reused runners &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11761 [<samp>(4f135)</samp>](https://github.com/vitest-dev/vitest/commit/4f135cc1d)\n- **browser**:\n  - Map only first frame for trace locations &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5 (1M context)** in https://github.com/vitest-dev/vitest/issues/11613 [<samp>(a967d)</samp>](https://github.com/vitest-dev/vitest/commit/a967d8f39)\n  - Disable WebSocketServer&#39;s allowSynchronousEvents &nbsp;-&nbsp; by @nstepien in https://github.com/vitest-dev/vitest/issues/11794 [<samp>(d4572)</samp>](https://github.com/vitest-dev/vitest/commit/d4572032f)\n- **coverage**:\n  - Istanbul to use `magic-string`+`rolldown` for instrumentation &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11648 [<samp>(2470b)</samp>](https://github.com/vitest-dev/vitest/commit/2470befec)\n  - Istanbul to collect uncovered files in `Promise.all` &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11713 [<samp>(f1092)</samp>](https://github.com/vitest-dev/vitest/commit/f1092b34b)\n  - Istanbul to not store input source maps in coverage data &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/11686 [<samp>(2debb)</samp>](https://github.com/vitest-dev/vitest/commit/2debb4e51)\n- **expect**:\n  - Compare typed arrays in one loop &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11658 [<samp>(908eb)</samp>](https://github.com/vitest-dev/vitest/commit/908eb573f)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.0.5...v5.1.0)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431524561",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-02-1356",
+    "publishedAt": "2026-11-02T13:56:26Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-02-1356",
+    "releaseNotes": "Release 2026-11-02 13:56\n\n## Changes\n\n### Fix\n\n- query-core: share fetch results across silent cancellations (#12489) (b6576b388) by @TkDodo\n- query-core: stop cancelled streamed queries from updating the cache (#12481) (af0e0ef5f) by @TkDodo\n- query-core: exclude status from mutation count filters (#12480) (8d0dc278a) by @TkDodo\n- examples/{react,solid,vue}/contacts-*: wait for the seed before reading contacts and separate the unfiltered list key from a search for 'all' (#12482) (4223498dc) by @sukvvon\n- query-core: unpause a mutation that can start after its onMutate (#11788) (05d9b6a40) by @maxymlyskov\n- query-core: handle the rejection of paused refetches in 'refetchQueries' with 'throwOnError' (#12442) (e69cac69d) by @lazerg\n- query-core: addToEnd caps result to max when items already exceeds max (#10969) (2ee2fd935) by @JSap0914\n- query-core: use '() => void' instead of DOM-only 'VoidFunction' (#12447) (f2215d259) by @recallhyx\n- query-core: shallowEqualObjects ignores key-set differences when counts match (#10777) (86e79571f) by @francisjohnjohnston-web\n- {react,preact}-query: set the observer options before subscribing (#12230) (1e1caa5a3) by @lazerg\n\n### Refactor\n\n- examples: replace 'sort-by', 'localforage' and 'font-awesome' with built-in code (#12490) (59d11de87) by @sukvvon\n- examples/angular/basic: make 'postId' a required input and remove the always-true 'enabled' in 'PostComponent' (#12170) (604d0a5aa) by @sukvvon\n- examples/react/nextjs-app-optimistic-updates: type the form submit handlers with 'React.SubmitEvent' instead of the deprecated 'React.FormEvent' (#12095) (92c41c059) by @sukvvon\n\n### Chore\n\n- {examples,integrations}: fix configs that break with the installed tool versions (#12491) (d0ff9aef5) by @sukvvon\n- integrations: group by adapter and rename packages to '@tanstack/query-integration-<adapter>-<name>' to match examples (#12475) (9b52414c1) by @sukvvon\n- examples/vue/simple-nuxt3/.gitignore: align with the Nuxt starter template to ignore '.data', '.nitro' and '.cache' (#12474) (ada1f13f0) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.105.2\n- @tanstack/eslint-plugin-query@5.105.2\n- @tanstack/lit-query@0.2.33\n- @tanstack/preact-query@5.105.2\n- @tanstack/preact-query-devtools@5.105.2\n- @tanstack/preact-query-persist-client@5.105.2\n- @tanstack/query-async-storage-persister@5.105.2\n- @tanstack/query-broadcast-client-experimental@5.105.2\n- @tanstack/query-core@5.105.2\n- @tanstack/query-devtools@5.105.2\n- @tanstack/query-persist-client-core@5.105.2\n- @tanstack/query-sync-storage-persister@5.105.2\n- @tanstack/react-query@5.105.2\n- @tanstack/react-query-devtools@5.105.2\n- @tanstack/react-query-next-experimental@5.105.2\n- @tanstack/react-query-persist-client@5.105.2\n- @tanstack/solid-query@5.105.2\n- @tanstack/solid-query-devtools@5.105.2\n- @tanstack/solid-query-persist-client@5.105.2\n- @tanstack/svelte-query@6.3.8\n- @tanstack/svelte-query-devtools@6.3.8\n- @tanstack/svelte-query-persist-client@6.3.8\n- @tanstack/vue-query@5.105.2\n- @tanstack/vue-query-devtools@6.3.8\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431524107",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.105.2",
+    "publishedAt": "2026-11-02T13:56:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1e1caa5`](https://github.com/TanStack/query/commit/1e1caa5a32847969f7157627cd805bd8103cd873), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1)]:\n  - @tanstack/react-query@5.105.2\n  - @tanstack/query-persist-client-core@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431524049",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.105.2",
+    "publishedAt": "2026-11-02T13:55:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1e1caa5`](https://github.com/TanStack/query/commit/1e1caa5a32847969f7157627cd805bd8103cd873), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1)]:\n  - @tanstack/react-query@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431523998",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.105.2",
+    "publishedAt": "2026-11-02T13:55:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`1e1caa5`](https://github.com/TanStack/query/commit/1e1caa5a32847969f7157627cd805bd8103cd873), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1)]:\n  - @tanstack/react-query@5.105.2\n  - @tanstack/query-devtools@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431523944",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.105.2",
+    "publishedAt": "2026-11-02T13:55:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`2ee2fd9`](https://github.com/TanStack/query/commit/2ee2fd935acd88532255947c4b5e29baffd21ce8), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1), [`e69cac6`](https://github.com/TanStack/query/commit/e69cac69d99cc3c4f6f32b2ad8aad53da83b4a72), [`f2215d2`](https://github.com/TanStack/query/commit/f2215d25945e6461252b7c32bf822f31239e507e), [`86e7957`](https://github.com/TanStack/query/commit/86e79571fd45f29ab7d172102fdd718d3b8bde69), [`b6576b3`](https://github.com/TanStack/query/commit/b6576b388f2784839081358fa82744b0aacdeecd), [`af0e0ef`](https://github.com/TanStack/query/commit/af0e0ef5fc04e9d232fdc3aebd24ffe528b256d7), [`05d9b6a`](https://github.com/TanStack/query/commit/05d9b6a40b9d4ac49943e9d881789e098db5bdfa)]:\n  - @tanstack/query-core@5.105.2\n  - @tanstack/query-persist-client-core@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431523517",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.105.2",
+    "publishedAt": "2026-11-02T13:55:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- [#12230](https://github.com/TanStack/query/pull/12230) [`1e1caa5`](https://github.com/TanStack/query/commit/1e1caa5a32847969f7157627cd805bd8103cd873) - Update the observer options before subscribing so revealing an `<Activity>` tree whose query key changed while hidden no longer fetches the previous key.\n\n- [#12480](https://github.com/TanStack/query/pull/12480) [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1) - Exclude `status` from the filters accepted by `QueryClient.isMutating`, `useIsMutating`, and `injectIsMutating`. These APIs always count mutations with `status: 'pending'`.\n- Updated dependencies [[`2ee2fd9`](https://github.com/TanStack/query/commit/2ee2fd935acd88532255947c4b5e29baffd21ce8), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1), [`e69cac6`](https://github.com/TanStack/query/commit/e69cac69d99cc3c4f6f32b2ad8aad53da83b4a72), [`f2215d2`](https://github.com/TanStack/query/commit/f2215d25945e6461252b7c32bf822f31239e507e), [`86e7957`](https://github.com/TanStack/query/commit/86e79571fd45f29ab7d172102fdd718d3b8bde69), [`b6576b3`](https://github.com/TanStack/query/commit/b6576b388f2784839081358fa82744b0aacdeecd), [`af0e0ef`](https://github.com/TanStack/query/commit/af0e0ef5fc04e9d232fdc3aebd24ffe528b256d7), [`05d9b6a`](https://github.com/TanStack/query/commit/05d9b6a40b9d4ac49943e9d881789e098db5bdfa)]:\n  - @tanstack/query-core@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#431523457",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.105.2",
+    "publishedAt": "2026-11-02T13:55:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.105.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`2ee2fd9`](https://github.com/TanStack/query/commit/2ee2fd935acd88532255947c4b5e29baffd21ce8), [`8d0dc27`](https://github.com/TanStack/query/commit/8d0dc278a728a97eb677b6f2baf37d1677c2edc1), [`e69cac6`](https://github.com/TanStack/query/commit/e69cac69d99cc3c4f6f32b2ad8aad53da83b4a72), [`f2215d2`](https://github.com/TanStack/query/commit/f2215d25945e6461252b7c32bf822f31239e507e), [`86e7957`](https://github.com/TanStack/query/commit/86e79571fd45f29ab7d172102fdd718d3b8bde69), [`b6576b3`](https://github.com/TanStack/query/commit/b6576b388f2784839081358fa82744b0aacdeecd), [`af0e0ef`](https://github.com/TanStack/query/commit/af0e0ef5fc04e9d232fdc3aebd24ffe528b256d7), [`05d9b6a`](https://github.com/TanStack/query/commit/05d9b6a40b9d4ac49943e9d881789e098db5bdfa)]:\n  - @tanstack/query-core@5.105.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#430497680",
     "library": "TanStack Query",
     "repository": "TanStack/query",
