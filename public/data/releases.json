@@ -208,10 +208,92 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "破壊的変更はないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "ts-definitions-improvement",
+        "category": "feature",
+        "title": "TypeScript型定義の改善",
+        "summary": "EncodingNameによる大文字小文字を区別しないエンコーディング名やエイリアスのサポート、urlEncode/base64Encodeでの文字列入力対応、全角/半角変換関数での型付き配列の受け入れを実装しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-eucjp-jis-nul-byte",
+        "category": "bugfix",
+        "title": "EUCJPおよびJISからのデコードにおける余分なNULバイトの修正",
+        "summary": "EUCJPおよびJISからJIS X 0212 0x2237をデコードした際に余分なNULバイトが出力される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-utf8-stray-continuation-bytes",
+        "category": "bugfix",
+        "title": "UTF8変換時の孤立した継続バイトの無視",
+        "summary": "UTF8からの変換時に孤立した継続バイトを無視し、前の文字が重複して出力される不具合を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-unicode-to-utf8-overflow",
+        "category": "bugfix",
+        "title": "U+10FFFFを超える値のUTF8変換処理の修正",
+        "summary": "UNICODEからUTF8への変換において、U+10FFFFを超える範囲の値に対してフォールバック文字を使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-code-to-string-range-error",
+        "category": "bugfix",
+        "title": "codeToStringにおけるRangeErrorの修正",
+        "summary": "コールスタックが深い場合にcodeToStringおよび文字列出力がRangeErrorを発生させる可能性があった問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-base64-decode-non-ascii",
+        "category": "bugfix",
+        "title": "base64Decodeにおける非ASCII文字の無視",
+        "summary": "base64Decode処理において非ASCII文字を無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-convert-return-new-array",
+        "category": "bugfix",
+        "title": "convert関数が常に新しい配列を返すよう修正",
+        "summary": "文字コード変換が不要な場合でもconvert関数が常に新しい配列を返すように動作を統一しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-bundle-size-reduction",
+        "category": "performance",
+        "title": "バンドルサイズの削減とテーブルの遅延初期化",
+        "summary": "UTF-8からJISへの変換テーブルを圧縮し、初回変換時まで展開を遅延させることで、ミニファイ後のバンドルサイズを約60%削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-faster-conversions",
+        "category": "performance",
+        "title": "文字コード変換処理の高速化とメモリ使用量の削減",
+        "summary": "型付き配列の優先利用や配列の前もった領域確保により、変換速度を最大3.5倍高速化し、ピーク時のメモリ消費を25〜60%削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "maint-es5-compat-deps",
+        "category": "other",
+        "title": "ES5互換性の維持とビルド設定・依存関係の更新",
+        "summary": "encoding.min.jsのES5互換性を維持するためのミニファイ設定更新および開発依存関係の更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "axios/axios#431823162",
@@ -328,10 +410,116 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更が含まれていないため、移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "feat-last-failed",
+        "category": "feature",
+        "title": "--last-failed オプションの追加",
+        "summary": "直前で失敗したテストのみを実行する CLI フラグ `--last-failed` が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-temporal-set-system-time",
+        "category": "feature",
+        "title": "vi.setSystemTime() で Temporal オブジェクトをサポート",
+        "summary": "`vi.setSystemTime()` で `Temporal.Instant` および `Temporal.ZonedDateTime` が使用できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-since-last-run",
+        "category": "feature",
+        "title": "--since-last-run オプションの導入",
+        "summary": "前回の実行以降に修正または関連するテストを実行する CLI フラグ `--since-last-run` が導入されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-retry-repeat-attempt-result",
+        "category": "feature",
+        "title": "リトライ/リピートごとの試行結果の露出",
+        "summary": "リトライやリピート実行時の各試行結果が取得・表示できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-node-timers-fake-timers",
+        "category": "feature",
+        "title": "node:timers フェイクタイマーのサポート",
+        "summary": "`node:timers` および `node:timers/promise` に対するフェイクタイマーがサポートされました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-interactive-snapshot-review",
+        "category": "feature",
+        "title": "失敗したスナップショットのインタラクティブなレビュー",
+        "summary": "失敗したスナップショット対話的に確認・更新できる機能が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-browser-improvements",
+        "category": "feature",
+        "title": "ブラウザモードの機能拡張",
+        "summary": "インポートマップによるモジュールモック、ポインターAPI、トレースビュー機能拡張（ARIAスナップショットキャプチャや失敗時タイムライン表示など）が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feat-experimental-additions",
+        "category": "feature",
+        "title": "実験的機能の追加（Node用トレースタイムライン、vi.waitFor等）",
+        "summary": "Node環境向けのトレースタイムラインや `vi.waitFor` / `vi.waitUntil` へのカスタムメッセージ指定機能が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-setup-files-changed-filter",
+        "category": "feature",
+        "title": "--changed フィルタリング後のセットアップファイル再実行",
+        "summary": "`--changed` フィルタリング使用時にセットアップファイルが正常に再実行されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-browser-default-port",
+        "category": "bugfix",
+        "title": "ブラウザモードのデフォルトポート変更",
+        "summary": "ブラウザモードのデフォルトポートが 23315 に変更されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-vm-globals-fake-timers",
+        "category": "bugfix",
+        "title": "VM環境のグローバル変数およびフェイクタイマーのリセット処理改善",
+        "summary": "テストファイルごとのフェイクタイマーリセットや、Nodeグローバル変数の保持が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-worker-cache-reuse",
+        "category": "performance",
+        "title": "ワーカーやランナーにおけるキャッシュの再利用改善",
+        "summary": "再利用ワーカーでのモック解決キャッシュや静的コレクションでの fsModuleCache 再利用によりパフォーマンスが向上しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-istanbul-rolldown",
+        "category": "performance",
+        "title": "Istanbul カバレッジ収集の高速化",
+        "summary": "`magic-string` と `rolldown` を活用したインストルメンテーションや `Promise.all` による並列処理により、Istanbul カバレッジ収集が高速化されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431524561",
@@ -365,7 +553,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-105-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-persist-client-core をバージョン 5.105.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431524049",
@@ -379,10 +577,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-react-query",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query がバージョン 5.105.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431523998",
@@ -399,7 +607,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-105-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query および @tanstack/query-devtools を 5.105.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431523944",
@@ -413,10 +631,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-105-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core がバージョン 5.105.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431523517",
@@ -447,10 +675,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.105.2",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/query-core",
+        "summary": "@tanstack/query-core がバージョン 5.105.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430497680",
@@ -806,10 +1044,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-105-1",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/query-core",
+        "summary": "@tanstack/query-core がバージョン 5.105.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430497067",
