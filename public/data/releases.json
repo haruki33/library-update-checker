@@ -1,5 +1,433 @@
 [
   {
+    "id": "TanStack/query#434401539",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-04-2012",
+    "publishedAt": "2026-11-04T20:12:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-04-2012",
+    "releaseNotes": "Release 2026-11-04 20:12\n\n## Changes\n\n### Features\n\n- devtools: add nested data search (#12522) (f69b28a1d) by @TkDodo\n\n### Fix\n\n- vue-query: accept shared options in imperative queries (#12525) (e7124128c) by @TkDodo\n- vue-query/queryClient: preserve union narrowing in 'setQueryData' updaters for tagged query keys (#12226) (3ccb007cb) by @sukvvon\n- devtools: let inline panels fill their container height (#12499) (46d0477df) by @TkDodo\n\n### Performance\n\n- query-devtools: virtualize query and mutation lists (#12502) (254350f9c) by @TkDodo\n\n### Chore\n\n- examples/solid: render 'SolidQueryDevtools' in 'auto-refetching', 'optimistic-updates' and 'prefetching' SolidStart 2 examples (#12521) (ac86d5b59) by @sukvvon\n- *: move Svelte config from 'svelte.config.js' into 'vite.config.ts' (#12519) (bd4cc6515) by @sukvvon\n- *: add 'UserConfig' and 'SvelteConfig' types to untyped config objects so typos are caught by type checking (#12518) (8652d3e96) by @sukvvon\n- query-devtools/tsdown.config: add '@refresh skip' banner so the app's 'solid-refresh' does not wrap the bundled Solid runtime (#12517) (1176d373d) by @sukvvon\n- integrations: convert to TypeScript and add 'test:types' so each integration type checks against the published types (#12516) (d5781a495) by @sukvvon\n- deps: align 'catalog', 'vue' and 'next' dev ranges with examples after the security update (#12515) (e877443ca) by @sukvvon\n- integrations: add missing 'preact', 'sveltekit', 'nuxt', 'solid-start' and 'astro' integrations and align existing ones (#12507) (b38ddac2b) by @sukvvon\n- deps: update security dependencies in examples and integrations (#12509) (b1243facc) by @TkDodo\n- *: update Angular to v22 and TypeScript to v6 in Angular examples and integration (#12506) (df4738d4e) by @sukvvon\n- examples: update dependencies that pull older 'esbuild' versions (#12505) (84f5b0f5b) by @sukvvon\n- pnpm-workspace.yaml: remove 'esbuild' override so each package uses its declared version (#12504) (224228917) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.106.0\n- @tanstack/eslint-plugin-query@5.106.0\n- @tanstack/lit-query@0.2.35\n- @tanstack/preact-query@5.106.0\n- @tanstack/preact-query-devtools@5.106.0\n- @tanstack/preact-query-persist-client@5.106.0\n- @tanstack/query-async-storage-persister@5.106.0\n- @tanstack/query-broadcast-client-experimental@5.106.0\n- @tanstack/query-core@5.106.0\n- @tanstack/query-devtools@5.106.0\n- @tanstack/query-persist-client-core@5.106.0\n- @tanstack/query-sync-storage-persister@5.106.0\n- @tanstack/react-query@5.106.0\n- @tanstack/react-query-devtools@5.106.0\n- @tanstack/react-query-next-experimental@5.106.0\n- @tanstack/react-query-persist-client@5.106.0\n- @tanstack/solid-query@5.106.0\n- @tanstack/solid-query-devtools@5.106.0\n- @tanstack/solid-query-persist-client@5.106.0\n- @tanstack/svelte-query@6.3.10\n- @tanstack/svelte-query-devtools@6.3.10\n- @tanstack/svelte-query-persist-client@6.3.10\n- @tanstack/vue-query@5.106.0\n- @tanstack/vue-query-devtools@6.3.10\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "破壊的変更が含まれていないため、移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12522",
+        "category": "feature",
+        "title": "Devtools: ネストされたデータの検索機能の追加",
+        "summary": "Devtoolsにて、ネストされたオブジェクトや配列内のデータを検索する機能が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12525",
+        "category": "bugfix",
+        "title": "vue-query: 命令的クエリでの共有オプションの受け入れ",
+        "summary": "vue-queryの命令的クエリ（imperative queries）で共有オプションを受け入れられるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12226",
+        "category": "bugfix",
+        "title": "vue-query: setQueryDataアップデータでのUnion型絞り込みの保持",
+        "summary": "タグ付きクエリキーを使用する際、queryClient.setQueryDataのアップデータ関数内でUnion型の型の絞り込みが保持されるように型定義が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12499",
+        "category": "bugfix",
+        "title": "Devtools: インラインパネルの高さ表示の修正",
+        "summary": "Devtoolsのインラインパネルが親コンテナの高さをいっぱいに満たすようにレイアウトが調整されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12502",
+        "category": "performance",
+        "title": "Devtools: クエリおよびミューテーションリストの仮想化",
+        "summary": "Devtoolsのクエリリストとミューテーションリストに仮想化（Virtualization）を導入し、大規模データ時の表示パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12506",
+        "category": "other",
+        "title": "AngularおよびTypeScriptの依存関係更新",
+        "summary": "Angularの例およびインテグレーションにおいて、Angular v22とTypeScript v6へ更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434401018",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.106.0",
+    "publishedAt": "2026-11-04T20:12:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.106.0\n  - @tanstack/react-query@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query を 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400957",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.106.0",
+    "publishedAt": "2026-11-04T20:12:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-react-query-5.106.0",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/react-query が 5.106.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400901",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.106.0",
+    "publishedAt": "2026-11-04T20:12:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- [#12499](https://github.com/TanStack/query/pull/12499) [`46d0477`](https://github.com/TanStack/query/commit/46d0477df2311d496cca006eb5ec885c024875a1) - Let inline devtools panels fill their container height while keeping a 500px default height when the container has no set height.\n- Updated dependencies [[`46d0477`](https://github.com/TanStack/query/commit/46d0477df2311d496cca006eb5ec885c024875a1), [`f69b28a`](https://github.com/TanStack/query/commit/f69b28a1dd2a2b4ca9b8f9117e0f60cc70443775), [`1176d37`](https://github.com/TanStack/query/commit/1176d373d161e0acca98d00244203778ff99c4fb), [`254350f`](https://github.com/TanStack/query/commit/254350f9cba47fd87304e057fac1a314093423f0)]:\n  - @tanstack/query-devtools@5.106.0\n  - @tanstack/react-query@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12499",
+        "category": "bugfix",
+        "title": "インラインDevtoolsパネルの高さ調整の改善",
+        "summary": "インラインDevtoolsパネルが親コンテナの高さを満たすように変更され、高さが未設定の場合はデフォルトで500pxを維持するようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-5.106.0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query が 5.106.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400850",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.106.0",
+    "publishedAt": "2026-11-04T20:12:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0\n  - @tanstack/query-persist-client-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-106-0",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400796",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.106.0",
+    "publishedAt": "2026-11-04T20:12:19Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0\n  - @tanstack/query-persist-client-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースによる移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core を 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400763",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.106.0",
+    "publishedAt": "2026-11-04T20:12:17Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.106.0\n  - @tanstack/query-persist-client-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400719",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.106.0",
+    "publishedAt": "2026-11-04T20:12:14Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- [#12499](https://github.com/TanStack/query/pull/12499) [`46d0477`](https://github.com/TanStack/query/commit/46d0477df2311d496cca006eb5ec885c024875a1) - Let inline devtools panels fill their container height while keeping a 500px default height when the container has no set height.\n- Updated dependencies [[`46d0477`](https://github.com/TanStack/query/commit/46d0477df2311d496cca006eb5ec885c024875a1), [`f69b28a`](https://github.com/TanStack/query/commit/f69b28a1dd2a2b4ca9b8f9117e0f60cc70443775), [`1176d37`](https://github.com/TanStack/query/commit/1176d373d161e0acca98d00244203778ff99c4fb), [`254350f`](https://github.com/TanStack/query/commit/254350f9cba47fd87304e057fac1a314093423f0)]:\n  - @tanstack/query-devtools@5.106.0\n  - @tanstack/preact-query@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12499",
+        "category": "bugfix",
+        "title": "インラインDevToolsパネルの高さ指定の改善",
+        "summary": "インラインDevToolsパネルが親コンテナの高さに合わせて拡張されるようになりました。高さが明示されていないコンテナの場合は、デフォルトの500pxを維持します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-dependencies",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/preact-query をバージョン 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400420",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.106.0",
+    "publishedAt": "2026-11-04T20:11:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/query-core",
+        "summary": "内部依存関係である @tanstack/query-core が 5.106.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400361",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.106.0",
+    "publishedAt": "2026-11-04T20:11:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core のバージョンを 5.106.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#434400307",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.106.0",
+    "publishedAt": "2026-11-04T20:11:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.106.0",
+    "releaseNotes": "### Minor Changes\n\n- [#12522](https://github.com/TanStack/query/pull/12522) [`f69b28a`](https://github.com/TanStack/query/commit/f69b28a1dd2a2b4ca9b8f9117e0f60cc70443775) - Add search for nested property names and values in the query and mutation Data Explorer, with highlighted matches and automatic expansion.\n\n### Patch Changes\n\n- [#12499](https://github.com/TanStack/query/pull/12499) [`46d0477`](https://github.com/TanStack/query/commit/46d0477df2311d496cca006eb5ec885c024875a1) - Let inline devtools panels fill their container height while keeping a 500px default height when the container has no set height.\n\n- [#12517](https://github.com/TanStack/query/pull/12517) [`1176d37`](https://github.com/TanStack/query/commit/1176d373d161e0acca98d00244203778ff99c4fb) - chore(query-devtools/tsdown.config): add '@refresh skip' banner so the app's 'solid-refresh' does not wrap the bundled Solid runtime\n\n- [#12502](https://github.com/TanStack/query/pull/12502) [`254350f`](https://github.com/TanStack/query/commit/254350f9cba47fd87304e057fac1a314093423f0) - Virtualize query and mutation lists to keep large caches responsive, and reduce repeated cache scans.\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#434400257",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.106.0",
+    "publishedAt": "2026-11-04T20:11:49Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#434400210",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.106.0",
+    "publishedAt": "2026-11-04T20:11:46Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.106.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#434400172",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.35",
+    "publishedAt": "2026-11-04T20:11:43Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.35",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.106.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#434400129",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.106.0",
+    "publishedAt": "2026-11-04T20:11:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.106.0",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#434400072",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.106.0",
+    "publishedAt": "2026-11-04T20:11:37Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.106.0",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#431945960",
     "library": "TanStack Query",
     "repository": "TanStack/query",
