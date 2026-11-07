@@ -1,5 +1,417 @@
 [
   {
+    "id": "TanStack/query#437148947",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-06-2304",
+    "publishedAt": "2026-11-06T23:04:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-06-2304",
+    "releaseNotes": "Release 2026-11-06 23:04\n\n## Changes\n\n### Features\n\n- vue-query: return a reactive `state` from `useQuery` so `status=== 'success'` narrows `data` without unwrapping refs (#12541) (f4199ab51) by @DamianOsipiuk\n\n### Fix\n\n- vue-query: keep query-core's `enabled(query)` callback (#12542) (025773a83) by @DamianOsipiuk\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.107.1\n- @tanstack/eslint-plugin-query@5.107.1\n- @tanstack/lit-query@0.2.38\n- @tanstack/preact-query@5.107.1\n- @tanstack/preact-query-devtools@5.107.1\n- @tanstack/preact-query-persist-client@5.107.1\n- @tanstack/query-async-storage-persister@5.107.1\n- @tanstack/query-broadcast-client-experimental@5.107.1\n- @tanstack/query-core@5.107.1\n- @tanstack/query-devtools@5.107.1\n- @tanstack/query-persist-client-core@5.107.1\n- @tanstack/query-sync-storage-persister@5.107.1\n- @tanstack/react-query@5.107.1\n- @tanstack/react-query-devtools@5.107.1\n- @tanstack/react-query-next-experimental@5.107.1\n- @tanstack/react-query-persist-client@5.107.1\n- @tanstack/solid-query@5.107.1\n- @tanstack/solid-query-devtools@5.107.1\n- @tanstack/solid-query-persist-client@5.107.1\n- @tanstack/svelte-query@6.4.1\n- @tanstack/svelte-query-devtools@6.4.1\n- @tanstack/svelte-query-persist-client@6.4.1\n- @tanstack/vue-query@5.107.1\n- @tanstack/vue-query-devtools@6.4.1\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "vue-query-reactive-state-usequery",
+        "category": "feature",
+        "title": "vue-query: useQuery からリアクティブな state を返却",
+        "summary": "useQuery からリアクティブな state を返すことで、ref をアンラップせずに status === 'success' で data の型を絞り込めるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vue-query-keep-enabled-query-callback",
+        "category": "bugfix",
+        "title": "vue-query: enabled(query) コールバックの保持",
+        "summary": "query-core の enabled(query) コールバックが vue-query で保持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148738",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.107.1",
+    "publishedAt": "2026-11-06T23:04:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.107.1\n  - @tanstack/react-query@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-107-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.107.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148710",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.107.1",
+    "publishedAt": "2026-11-06T23:04:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースによる移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "patch-dep-update-51071",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query がバージョン 5.107.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148681",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.107.1",
+    "publishedAt": "2026-11-06T23:04:03Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.107.1\n  - @tanstack/react-query@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-107-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtoolsおよび@tanstack/react-queryをバージョン5.107.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148651",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.107.1",
+    "publishedAt": "2026-11-06T23:03:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.107.1\n  - @tanstack/query-persist-client-core@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-107-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.107.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148400",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.107.1",
+    "publishedAt": "2026-11-06T23:03:35Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-107-1",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreをバージョン5.107.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437148372",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.107.1",
+    "publishedAt": "2026-11-06T23:03:33Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.107.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.107.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-107-1",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core のバージョンを 5.107.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437056035",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-06-2120",
+    "publishedAt": "2026-11-06T21:20:04Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-06-2120",
+    "releaseNotes": "Release 2026-11-06 21:20\n\n## Changes\n\n### Features\n\n- query-devtools: add a filter scope toggle to filter queries by query key, query data, or both (#12538) (a4d72f75c) by @schiller-manuel\n- {solid,svelte}-query-devtools: add './production' entry to lazy load the devtools in production builds (#12530) (a8c2a1784) by @sukvvon\n\n### Fix\n\n- query-core: keep selector error timestamps stable (#12540) (b6add891c) by @TkDodo\n- vue-query: reset isRestoring when the client persister fails (#12494) (00dc8de8f) by @oyobbeb\n- vue-query/useInfiniteQuery: return 'UseInfiniteQueryDefinedReturnType' from the 'Defined' overload so 'data' is no longer typed as possibly 'undefined' when 'initialData' is defined (#12537) (2cdba6053) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query-experimental@5.107.0\n- @tanstack/eslint-plugin-query@5.107.0\n- @tanstack/lit-query@0.2.37\n- @tanstack/preact-query@5.107.0\n- @tanstack/preact-query-devtools@5.107.0\n- @tanstack/preact-query-persist-client@5.107.0\n- @tanstack/query-async-storage-persister@5.107.0\n- @tanstack/query-broadcast-client-experimental@5.107.0\n- @tanstack/query-core@5.107.0\n- @tanstack/query-devtools@5.107.0\n- @tanstack/query-persist-client-core@5.107.0\n- @tanstack/query-sync-storage-persister@5.107.0\n- @tanstack/react-query@5.107.0\n- @tanstack/react-query-devtools@5.107.0\n- @tanstack/react-query-next-experimental@5.107.0\n- @tanstack/react-query-persist-client@5.107.0\n- @tanstack/solid-query@5.107.0\n- @tanstack/solid-query-devtools@5.107.0\n- @tanstack/solid-query-persist-client@5.107.0\n- @tanstack/svelte-query@6.4.0\n- @tanstack/svelte-query-devtools@6.4.0\n- @tanstack/svelte-query-persist-client@6.4.0\n- @tanstack/vue-query@5.107.0\n- @tanstack/vue-query-devtools@6.4.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12538",
+        "category": "feature",
+        "title": "query-devtools: フィルタースコープトグルの追加",
+        "summary": "クエリキー、クエリデータ、またはその両方でクエリをフィルタリングするスコープトグルを開発者ツールに追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12530",
+        "category": "feature",
+        "title": "{solid,svelte}-query-devtools: 本番用エントリの追加",
+        "summary": "本番ビルドで Devtools を遅延読み込みするための `./production` エントリを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12540",
+        "category": "bugfix",
+        "title": "query-core: セレクターエラーのタイムスタンプを安定化",
+        "summary": "セレクターエラー発生時のタイムスタンプが安定して保持されるように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12494",
+        "category": "bugfix",
+        "title": "vue-query: パーシスター失敗時の isRestoring のリセット",
+        "summary": "クライアントパーシスターが失敗した際に isRestoring の状態を適切にリセットするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12537",
+        "category": "bugfix",
+        "title": "vue-query/useInfiniteQuery: initialData 定義時の型精度の向上",
+        "summary": "initialData が定義されている場合、data が undefined にならないように UseInfiniteQueryDefinedReturnType を返すオーバーロードを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437055605",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.107.0",
+    "publishedAt": "2026-11-06T21:19:42Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.107.0\n  - @tanstack/react-query@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-107-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query を 5.107.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437055466",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.107.0",
+    "publishedAt": "2026-11-06T21:19:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-51070",
+        "category": "other",
+        "title": "@tanstack/react-queryの依存関係更新",
+        "summary": "@tanstack/react-queryの依存関係をバージョン5.107.0に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#437055426",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.107.0",
+    "publishedAt": "2026-11-06T21:19:36Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`a4d72f7`](https://github.com/TanStack/query/commit/a4d72f75c1c7a59e39aaf4f776f540c3814e46f7)]:\n  - @tanstack/query-devtools@5.107.0\n  - @tanstack/react-query@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#437055391",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.107.0",
+    "publishedAt": "2026-11-06T21:19:33Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`b6add89`](https://github.com/TanStack/query/commit/b6add891c1b846c1f276a4c0110edb58b62defaa)]:\n  - @tanstack/query-core@5.107.0\n  - @tanstack/query-persist-client-core@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#437054865",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.107.0",
+    "publishedAt": "2026-11-06T21:19:09Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`b6add89`](https://github.com/TanStack/query/commit/b6add891c1b846c1f276a4c0110edb58b62defaa)]:\n  - @tanstack/query-core@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#437054825",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.107.0",
+    "publishedAt": "2026-11-06T21:19:06Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.107.0",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`b6add89`](https://github.com/TanStack/query/commit/b6add891c1b846c1f276a4c0110edb58b62defaa)]:\n  - @tanstack/query-core@5.107.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "microsoft/TypeScript#436748721",
+    "library": "TypeScript",
+    "repository": "microsoft/TypeScript",
+    "version": "vscode-typescript/v1.0.2",
+    "publishedAt": "2026-11-06T16:43:23Z",
+    "url": "https://github.com/microsoft/TypeScript/releases/tag/vscode-typescript/v1.0.2",
+    "releaseNotes": "Bundles TypeScript 7.0.2 from commit b37cbdc6886df3c2a34cbde8d20fbb4637a35503.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "pmndrs/zustand#436568561",
+    "library": "Zustand",
+    "repository": "pmndrs/zustand",
+    "version": "v5.1.0",
+    "publishedAt": "2026-11-06T14:01:00Z",
+    "url": "https://github.com/pmndrs/zustand/releases/tag/v5.1.0",
+    "releaseNotes": "The persist and devtools middleware are improved thanks to @Tnalxmsk and @dgesteves!\r\n\r\n## Release note\r\n\r\n- The `persist` middleware now supports `PromiseLike` results from storage reads, migrations, and migration writes. `persist.rehydrate()` now returns a native `Promise<void>`, which you can await to ensure hydration is complete.\r\n- The `devtools` middleware now supports dispatching store actions directly from Redux DevTools using the new `actionCreators` option. It also supports nested actions and arguments.\r\n\r\n## What's Changed\r\n* fix(middleware): persist migration supporting promise-like by @dai-shi in https://github.com/pmndrs/zustand/pull/3583\r\n* fix(middleware): devtools action dispatching by @dai-shi in https://github.com/pmndrs/zustand/pull/3595\r\n\r\n\r\n**Full Changelog**: https://github.com/pmndrs/zustand/compare/v5.0.16...v5.1.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "mswjs/msw#435959030",
     "library": "MSW",
     "repository": "mswjs/msw",
