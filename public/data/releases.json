@@ -321,10 +321,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-5-107-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query を 5.107.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#437055391",
@@ -338,10 +348,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-107-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.107.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#437054865",
@@ -355,10 +375,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-107-0",
+        "category": "other",
+        "title": "依存関係の更新: @tanstack/query-core@5.107.0",
+        "summary": "内部依存パッケージである @tanstack/query-core を 5.107.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#437054825",
@@ -375,7 +405,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-107-0",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core がバージョン 5.107.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "microsoft/TypeScript#436748721",
@@ -389,10 +429,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "bundle-typescript-7-0-2",
+        "category": "other",
+        "title": "TypeScript 7.0.2 のバンドル",
+        "summary": "コミット b37cbdc6886df3c2a34cbde8d20fbb4637a35503 の TypeScript 7.0.2 をバンドルしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "pmndrs/zustand#436568561",
@@ -406,10 +456,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新に伴う必須のマイグレーション作業はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "pr-3583",
+        "category": "feature",
+        "title": "persist ミドルウェアでの非同期処理（PromiseLike）サポートの改善",
+        "summary": "ストレージ読み込み、マイグレーション、マイグレーション書き込みで PromiseLike な結果をサポートし、persist.rehydrate() が Promise<void> を返すようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "pr-3595",
+        "category": "feature",
+        "title": "devtools ミドルウェアのアクションディスパッチ機能の強化",
+        "summary": "Redux DevTools から直接ストアアクションをディスパッチできるよう新しい actionCreators オプションを追加し、ネストされたアクションや引数にも対応しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "mswjs/msw#435959030",
@@ -628,10 +696,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-5-106-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.106.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434924294",
@@ -672,10 +750,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-106-1",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "@tanstack/query-core のバージョンが 5.106.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434924034",
@@ -692,7 +780,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-query-core-5-106-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreがバージョン5.106.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923987",
@@ -709,7 +807,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12528",
+        "category": "bugfix",
+        "title": "Devtoolsの表示方向を常にLTRに固定",
+        "summary": "ページのテキスト方向やブラウザ言語の設定に関わらず、Devtoolsが常に左から右（LTR）で描画されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923928",
