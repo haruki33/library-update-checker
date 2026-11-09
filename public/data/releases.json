@@ -1,5 +1,570 @@
 [
   {
+    "id": "TanStack/router#437952502",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-11-08-0104",
+    "publishedAt": "2026-11-08T01:04:43Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-11-08-0104",
+    "releaseNotes": "Release 2026-11-08 01:04\n\n## Changes\n\n### Fix\n\n- router-devtools-core: restore embedded panel styling (#8888) (bbf9b75808) by @schiller-manuel\n- start-plugin-core: define TSS_SHELL in Rsbuild dev for SPA mode (#8805) (c5320d7ca2) by @pujitha24\n- vue-start: pre-bundle @tanstack/vue-store so a cold dev start doesn't reload the page (#8869) (d05c6c66e7) by @Sheraff\n- router-utils: parse decorators after `export` (#8867) (ff157f0079) by @Sheraff\n- router-plugin: write `import.meta.hot.accept(` out in Vite route HMR (#8870) (f420d4a6da) by @Sheraff\n- start-plugin-core: require exsolve ^1.1.3, and see new entry files after a dev server restart (#8871) (545a8d3790) by @Sheraff\n- router-plugin: omit browser warnings from production bundles (#8269) (1ba19a0445) by @LadyBluenotes\n- start-plugin-core: keep the app's server.compress on Rsbuild (#8863) (01fab5a6c8) by @Sheraff\n- start-plugin-core: pass Start's router options through to the generator and code splitter (#8861) (da8c28c498) by @Sheraff\n- router-plugin: point split routes' source maps at the route file (#8860) (b5e2ac9c4c) by @Sheraff\n- react-start-client: call HydrationBoundary hooks before the visible() gate (#8653) (d66a84ba0a) by @ethan-huo\n- router-generator: type route-group layouts with full path `'/'` (#8857) (ad5b3b7a09) by @Sheraff\n- router-plugin: throw on autoCodeSplitting with esbuild (#8852) (94f36c4a9e) by @Sheraff\n\n### Refactor\n\n- router-plugin: remove `plugin.hmr.style` and `HmrOptions` (#8856) (533ca27044) by @Sheraff\n- router-plugin: remove `compilerPlugins` and splitter internals from the root entry (#8853) (13b6256830) by @Sheraff\n\n### Chore\n\n- require Node ^20.19.0 || >=22.12.0 in engines (#8855) (446ce1b306) by @Sheraff\n- router-plugin: require Vite 6 or later in the peer range (#8851) (d25081952d) by @Sheraff\n\n\n## Packages\n\n- @tanstack/react-router-devtools@1.167.3\n- @tanstack/react-start@1.169.5\n- @tanstack/react-start-client@1.168.45\n- @tanstack/react-start-rsc@0.1.66\n- @tanstack/router-cli@1.168.0\n- @tanstack/router-devtools@1.167.3\n- @tanstack/router-devtools-core@1.168.3\n- @tanstack/router-generator@1.168.0\n- @tanstack/router-plugin@1.169.0\n- @tanstack/router-utils@1.163.0\n- @tanstack/router-vite-plugin@1.167.49\n- @tanstack/solid-router-devtools@1.167.3\n- @tanstack/solid-start@1.169.5\n- @tanstack/start-plugin-core@1.171.56\n- @tanstack/vue-router-devtools@1.167.3\n- @tanstack/vue-start@1.169.5\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "Node.js および Vite の動作要件が変更されたため、開発・ビルド環境の依存関係の更新が必要です。",
+      "steps": [
+        "Node.js のバージョンを ^20.19.0 または >=22.12.0 にアップデートしてください。",
+        "Vite を利用している場合は Vite 6 以降に更新してください。",
+        "router-plugin の `plugin.hmr.style` 設定や `HmrOptions` 型を参照しているコードがあれば削除してください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "fix-8888",
+        "category": "bugfix",
+        "title": "router-devtools-core: 埋め込みパネルのスタイル復元",
+        "summary": "埋め込み開発ツールパネルのスタイルが正しく適用されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8805",
+        "category": "bugfix",
+        "title": "start-plugin-core: Rsbuild dev SPA モードでの TSS_SHELL の定義",
+        "summary": "Rsbuild の開発サーバー（SPAモード）において TSS_SHELL を適切に定義するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8869",
+        "category": "bugfix",
+        "title": "vue-start: @tanstack/vue-store の事前バンドル化",
+        "summary": "コールドスタート時の開発サーバーの不要なページリロードを防ぐため、@tanstack/vue-store を事前バンドルするようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8867",
+        "category": "bugfix",
+        "title": "router-utils: export 後のデコレータパース処理の修正",
+        "summary": "export キーワードの後に配置されたデコレータを正しく解析できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8870",
+        "category": "bugfix",
+        "title": "router-plugin: Vite ルート HMR での accept 処理修正",
+        "summary": "Vite のルート HMR にて import.meta.hot.accept( が正しく出力されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8871",
+        "category": "bugfix",
+        "title": "start-plugin-core: exsolve 要件更新とエントリファイル検知の修正",
+        "summary": "exsolve ^1.1.3 を要求し、開発サーバー再起動後に新規エントリファイルを認識するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8269",
+        "category": "bugfix",
+        "title": "router-plugin: プロダクションバンドルからの警告除去",
+        "summary": "本番ビルドのバンドルから不要なブラウザ向け警告コードを除外しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8863",
+        "category": "bugfix",
+        "title": "start-plugin-core: Rsbuild での server.compress 設定の維持",
+        "summary": "Rsbuild 使用時にアプリケーションの server.compress オプションが正しく保持されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8861",
+        "category": "bugfix",
+        "title": "start-plugin-core: Start のルーターオプションの引き継ぎ",
+        "summary": "Start のルーターオプションをジェネレータおよびコードスプリッターに伝播させるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8860",
+        "category": "bugfix",
+        "title": "router-plugin: 分割ルートのソースマップ参照先の修正",
+        "summary": "コード分割されたルートのソースマップが元のルートファイルを指すように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8653",
+        "category": "bugfix",
+        "title": "react-start-client: HydrationBoundary フックの実行順序の修正",
+        "summary": "visible() ゲートより前に HydrationBoundary フックが呼び出されるように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8857",
+        "category": "bugfix",
+        "title": "router-generator: ルートグループレイアウトのパス型修正",
+        "summary": "ルートグループレイアウトの型定義において完全なパス '/' として型付けされるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-8852",
+        "category": "bugfix",
+        "title": "router-plugin: esbuild での autoCodeSplitting 使用時の例外スロー",
+        "summary": "esbuild 環境下で autoCodeSplitting を使用した場合に明示的にエラーをスローするようにしました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "refactor-8856",
+        "category": "breaking",
+        "title": "router-plugin: plugin.hmr.style および HmrOptions の削除",
+        "summary": "非推奨となっていた plugin.hmr.style オプションと HmrOptions の型定義を削除しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "refactor-8853",
+        "category": "other",
+        "title": "router-plugin: ルートエントリからのコンパイラプラグイン内部機能の削除",
+        "summary": "ルートエントリから compilerPlugins やスプリッターの内部実装を削ぎ落としました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chore-8855",
+        "category": "breaking",
+        "title": "Node.js バージョン要件の引き上げ",
+        "summary": "対応 Node.js バージョンを ^20.19.0 || >=22.12.0 に引き上げました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "chore-8851",
+        "category": "breaking",
+        "title": "router-plugin: Vite 6 以降の要求",
+        "summary": "peerDependencies の Vite バージョン範囲を Vite 6 以降に更新しました。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952436",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.169.5",
+    "publishedAt": "2026-11-08T01:04:34Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.169.5",
+    "releaseNotes": "### Patch Changes\n\n-   [#8863](https://github.com/TanStack/router/pull/8863) [`01fab5a`](https://github.com/TanStack/router/commit/01fab5a6c8aed70d61d82c64bc344cbac66c240c) - The Rsbuild plugin keeps the app's `server.compress` setting instead of always setting it to `false`. Compression stays off by default: a compressed streamed page reaches the browser only once the stream ends. The optional `@rsbuild/core` peer is now `^2.0.5`, the first version whose compression keeps SSR response headers intact.\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69), [`01fab5a`](https://github.com/TanStack/router/commit/01fab5a6c8aed70d61d82c64bc344cbac66c240c), [`c5320d7`](https://github.com/TanStack/router/commit/c5320d7ca23eca82d720ac5629d2bad5cf7d9b02), [`545a8d3`](https://github.com/TanStack/router/commit/545a8d3790989ca502153c3292c6b1e8063257f4), [`da8c28c`](https://github.com/TanStack/router/commit/da8c28c498230a5730ce75b2693baeeb3ef68ac1), [`d66a84b`](https://github.com/TanStack/router/commit/d66a84ba0a74ffd03e22b57ccd90796274c96244)]:\n    -   @tanstack/router-utils@1.163.0\n    -   @tanstack/start-plugin-core@1.171.56\n    -   @tanstack/react-start-client@1.168.45\n    -   @tanstack/react-start-rsc@0.1.66\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8863",
+        "category": "bugfix",
+        "title": "Rsbuildプラグインにおけるserver.compress設定の保持",
+        "summary": "Rsbuildプラグインがアプリのserver.compress設定を強制的にfalseに指定せず保持するように修正されました。あわせて@rsbuild/core peerDependencyが^2.0.5へ更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-utils、@tanstack/start-plugin-core、@tanstack/react-start-client、@tanstack/react-start-rsc などの内部依存ライブラリが最新版に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952416",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-utils@1.163.0",
+    "publishedAt": "2026-11-08T01:04:31Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-utils%401.163.0",
+    "releaseNotes": "### Minor Changes\n\n-   [#8855](https://github.com/TanStack/router/pull/8855) [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6) - Require Node `^20.19.0 || >=22.12.0` (was `>=20.19`), so the CommonJS builds can load ESM-only dependencies through `require(esm)`. Node 21 and Node 22.0–22.11 do not enable it by default, so they are no longer supported.\n\n### Patch Changes\n\n-   [#8867](https://github.com/TanStack/router/pull/8867) [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69) - Parse decorators placed after `export` (`export @dec class Store {}`). A route file with one is now read by the route generator and split, instead of logging a parse error, leaving the route tree unwritten and the route unsplit. Start's compilers, which share the parser, accept it too.\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "サポート対象外のNode.jsバージョンを使用している場合は、サポート対象バージョンへの更新が必要です。",
+      "steps": [
+        "使用しているNode.jsのバージョンが ^20.19.0 または >=22.12.0 であるか確認します。",
+        "Node 21 または Node 22.0〜22.11 を使用している場合は、Node 20.19.0+ または Node 22.12.0+（あるいはNode 23+）へアップデートします。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "change-8855",
+        "category": "breaking",
+        "title": "Node.js対応バージョンの変更 (^20.19.0 || >=22.12.0)",
+        "summary": "CommonJSビルドでESM依存関係をロードできるようにするため、Node.jsの最小要求バージョンが変更されました。Node 21およびNode 22.0〜22.11のサポートが非推奨・終了となりました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-8867",
+        "category": "bugfix",
+        "title": "export直後に配置されたデコレータ構文のパース修正",
+        "summary": "export @dec class Store {} のような構文があるルートファイルがパースエラーにならず、ルート生成およびコード分割が正常に行われるようになりました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952399",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-plugin@1.169.0",
+    "publishedAt": "2026-11-08T01:04:28Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-plugin%401.169.0",
+    "releaseNotes": "### Minor Changes\n\n-   [#8855](https://github.com/TanStack/router/pull/8855) [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6) - Require Node `^20.19.0 || >=22.12.0` (was `>=20.19`), so the CommonJS builds can load ESM-only dependencies through `require(esm)`. Node 21 and Node 22.0–22.11 do not enable it by default, so they are no longer supported.\n\n-   [#8851](https://github.com/TanStack/router/pull/8851) [`d250819`](https://github.com/TanStack/router/commit/d25081952dd04a5f5a44db7c8df5cbbf50fad054) - Require Vite 6 or later: the `vite` peer range is now `>=6.0.0`. Vite 5 is no longer supported.\n\n### Patch Changes\n\n-   [`1ba19a0`](https://github.com/TanStack/router/commit/1ba19a04456983ee0f8adffd038b6b1194441e15) - fix: webpack and Rspack production builds no longer put the code splitter's \"will not be code-split\" warning, with the route file's absolute path, into the client bundle when the build process's `NODE_ENV` isn't `production`. The bundler's mode decides, and a config without `mode` counts as production, as it does for webpack and Rspack. The warning still prints in the build output.\n\n-   [#8852](https://github.com/TanStack/router/pull/8852) [`94f36c4`](https://github.com/TanStack/router/commit/94f36c4a9ecf3062b326a8eb772e73b00c0644d9) - The esbuild plugin now throws when `autoCodeSplitting` is enabled, and `TanStackRouterCodeSplitterEsbuild` throws, instead of silently bundling every route without splitting. Route generation with esbuild is unchanged.\n\n-   [#8856](https://github.com/TanStack/router/pull/8856) [`533ca27`](https://github.com/TanStack/router/commit/533ca2704452f36c5fef5c5fe084554d9b5db1ab) - Remove the undocumented `plugin.hmr.style` option and the `HmrOptions` type. Each bundler entry now picks its own HMR runtime: the webpack and Rspack entries already forced `'webpack'`, and on Vite, `'webpack'` broke route HMR.\n\n-   [#8853](https://github.com/TanStack/router/pull/8853) [`13b6256`](https://github.com/TanStack/router/commit/13b625683030ea4ab359495ecda570e05e472587) - Remove internal code-splitter APIs: the `codeSplittingOptions.compilerPlugins` option, and the root-entry exports `unpluginRouterCodeSplitterFactory`, `getObjectPropertyKeyName`, `CodeSplitCompilerPlugin`, `ReferenceRouteCompilerPlugin`, `ReferenceRouteCompilerPluginContext` and `VirtualRouteSplitNodeCompilerPluginContext`.\n\n-   [#8860](https://github.com/TanStack/router/pull/8860) [`b5e2ac9`](https://github.com/TanStack/router/commit/b5e2ac9c4cee4c5c6f464adc6cfddcddf6c84171) - Source maps of split routes now point at the route file. On webpack and Rspack (including Rsbuild), a split component or shared code mapped to the wrong line, because unplugin's loader dropped the router plugin's map; `unplugin` now requires `^3.5.0`, which keeps it. The maps of split and shared modules also name the route file itself instead of its `?tsr-split` / `?tsr-shared` module id, so debuggers bind breakpoints set in the route file.\n\n-   [#8870](https://github.com/TanStack/router/pull/8870) [`f420d4a`](https://github.com/TanStack/router/commit/f420d4a6dacfaa81d306b7bbc9af8f1010d1a1bc) - Vite route HMR now writes `import.meta.hot.accept(` out instead of calling it through a `hot` alias. Vite only treats a module as a hot boundary when the call is spelled out, so an edit of a route file no framework plugin accepts (a `.ts` route file, or an app without `@vitejs/plugin-react`) reloaded the page instead of updating the route in place. With React HMR, a route file that declares its own top-level `hot` binding no longer fails to compile with `Duplicate declaration \"hot\"`.\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ad5b3b7`](https://github.com/TanStack/router/commit/ad5b3b7a0990eed7351d672ea6695d341108e0d6), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69)]:\n    -   @tanstack/router-generator@1.168.0\n    -   @tanstack/router-utils@1.163.0\n",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "Node.jsおよびViteの最小要件バージョンが引き上げられたため、環境および依存関係の更新が必要です。",
+      "steps": [
+        "Node.jsのバージョンを ^20.19.0 または >=22.12.0 に更新してください（Node 21および22.0〜22.11は非対応となりました）。",
+        "Viteを使用している場合は Vite 6以降 (>=6.0.0) にアップグレードしてください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "PR8855",
+        "category": "breaking",
+        "title": "Node.jsのサポートバージョンの更新",
+        "summary": "CommonJSビルドからESM依存関係をロードできるようにするため、Node.js ^20.19.0 || >=22.12.0 が必須となりました。Node 21および Node 22.0〜22.11 はサポート対象外となります。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "PR8851",
+        "category": "breaking",
+        "title": "Vite 6の必須化",
+        "summary": "ViteのpeerDependencyが >=6.0.0 に変更され、Vite 5のサポートが終了しました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "commit-1ba19a0",
+        "category": "bugfix",
+        "title": "webpack/Rspackにおけるコード分割警告出力の修正",
+        "summary": "モード判定ロジックを改善し、NODE_ENVがproductionでない場合でもクライアントバンドルに絶対パス付き警告コードが埋め込まれないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8852",
+        "category": "bugfix",
+        "title": "esbuildでのautoCodeSplittingエラー通知の追加",
+        "summary": "esbuildプラグインでautoCodeSplittingを有効にした場合、サイレントにコード分割をスキップするのではなくエラーをスローするように変更しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "PR8856",
+        "category": "breaking",
+        "title": "未ドキュメントのHMRオプションおよび型の削除",
+        "summary": "plugin.hmr.style オプションおよび HmrOptions 型を削除しました。各バンドラーが適切なHMRランタイムを選択します。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "PR8853",
+        "category": "breaking",
+        "title": "内部コードスプリッターAPIの削除",
+        "summary": "codeSplittingOptions.compilerPlugins やルートエントリからエクスポートされていた複数の内部コンパイラプラグインAPIを削除しました。",
+        "impact": "low",
+        "breaking": true
+      },
+      {
+        "id": "PR8860",
+        "category": "bugfix",
+        "title": "分割ルートのソースマップ精度の改善",
+        "summary": "webpackおよびRspackで分割コンポーネントが正しい行にマップされるよう unplugin の最小バージョンを ^3.5.0 に更新し、ブレークポイント設定を容易にしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8870",
+        "category": "bugfix",
+        "title": "ViteにおけるルートHMR動作の改善",
+        "summary": "import.meta.hot.accept を直接記述するように変更し、特定構成のルートファイルでのページ全体リロードや「Duplicate declaration \"hot\"」エラーを解消しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952370",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-cli@1.168.0",
+    "publishedAt": "2026-11-08T01:04:25Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-cli%401.168.0",
+    "releaseNotes": "### Minor Changes\n\n-   [#8855](https://github.com/TanStack/router/pull/8855) [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6) - Require Node `^20.19.0 || >=22.12.0` (was `>=20.19`), so the CommonJS builds can load ESM-only dependencies through `require(esm)`. Node 21 and Node 22.0–22.11 do not enable it by default, so they are no longer supported.\n\n### Patch Changes\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ad5b3b7`](https://github.com/TanStack/router/commit/ad5b3b7a0990eed7351d672ea6695d341108e0d6)]:\n    -   @tanstack/router-generator@1.168.0\n",
+    "breaking": true,
+    "impact": "medium",
+    "migration": {
+      "required": true,
+      "summary": "サポート対象外となったNode.jsバージョンを使用している場合は、対応するNode.jsバージョンへのアップデートが必要です。",
+      "steps": [
+        "Node.jsのバージョンを ^20.19.0 または >=22.12.0 に更新してください（Node 21 および Node 22.0〜22.11 のサポートは終了しました）。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "8855",
+        "category": "breaking",
+        "title": "Node.jsの要求バージョンの変更",
+        "summary": "CommonJSビルドでrequire(esm)によりESM専用依存関係をロードできるようにするため、サポートするNode.jsのバージョンが ^20.19.0 || >=22.12.0 に変更されました。Node 21 および Node 22.0〜22.11 はサポート対象外となります。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "dep-update-1.168.0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-generator@1.168.0 に依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952326",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.56",
+    "publishedAt": "2026-11-08T01:04:19Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.56",
+    "releaseNotes": "### Patch Changes\n\n-   [#8863](https://github.com/TanStack/router/pull/8863) [`01fab5a`](https://github.com/TanStack/router/commit/01fab5a6c8aed70d61d82c64bc344cbac66c240c) - The Rsbuild plugin keeps the app's `server.compress` setting instead of always setting it to `false`. Compression stays off by default: a compressed streamed page reaches the browser only once the stream ends. The optional `@rsbuild/core` peer is now `^2.0.5`, the first version whose compression keeps SSR response headers intact.\n\n-   [#8805](https://github.com/TanStack/router/pull/8805) [`c5320d7`](https://github.com/TanStack/router/commit/c5320d7ca23eca82d720ac5629d2bad5cf7d9b02) - With `spa.enabled`, the Rsbuild dev server answers the SPA shell, as Vite's dev server does, instead of rendering the route and running its loaders on the server.\n\n-   [#8871](https://github.com/TanStack/router/pull/8871) [`545a8d3`](https://github.com/TanStack/router/commit/545a8d3790989ca502153c3292c6b1e8063257f4) - Require `exsolve` `^1.1.3`: a failed lookup that exsolve caches no longer keeps its callers alive, so Start's cached failed lookups no longer hold on to each build's objects. Entry lookups bypass exsolve's process-wide cache, so a dev server restart finds an entry file (such as `src/start.ts`) created since.\n\n-   [#8861](https://github.com/TanStack/router/pull/8861) [`da8c28c`](https://github.com/TanStack/router/commit/da8c28c498230a5730ce75b2693baeeb3ef68ac1) - Start's router options now reach the route generator and the code splitter as they do in a router app:\n    -   Generator plugins given as `router.plugins` run ([#7768](https://github.com/TanStack/router/issues/7768)). Start's own generator plugins used to replace them.\n    -   A function-form `router.routeTreeFileFooter` is called at every print of the route tree. Start's Vite plugin used to print its first result for the whole dev server.\n    -   Start's Rsbuild plugin keeps `router.codeSplittingOptions.deleteNodes` for the server build. It used to drop the option there.\n    -   Start's Vite plugin finds the client route tree by its exact module id ([#8839](https://github.com/TanStack/router/issues/8839)). With a regular-expression character in the project path, such as `+`, the client used to get the full route tree, server-only routes included; a file whose name differed from the route tree's by one character (`routeTree-gen.ts`) was replaced by the client route tree.\n\n-   Updated dependencies \\[[`1ba19a0`](https://github.com/TanStack/router/commit/1ba19a04456983ee0f8adffd038b6b1194441e15), [`94f36c4`](https://github.com/TanStack/router/commit/94f36c4a9ecf3062b326a8eb772e73b00c0644d9), [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ad5b3b7`](https://github.com/TanStack/router/commit/ad5b3b7a0990eed7351d672ea6695d341108e0d6), [`533ca27`](https://github.com/TanStack/router/commit/533ca2704452f36c5fef5c5fe084554d9b5db1ab), [`13b6256`](https://github.com/TanStack/router/commit/13b625683030ea4ab359495ecda570e05e472587), [`b5e2ac9`](https://github.com/TanStack/router/commit/b5e2ac9c4cee4c5c6f464adc6cfddcddf6c84171), [`d250819`](https://github.com/TanStack/router/commit/d25081952dd04a5f5a44db7c8df5cbbf50fad054), [`f420d4a`](https://github.com/TanStack/router/commit/f420d4a6dacfaa81d306b7bbc9af8f1010d1a1bc), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69)]:\n    -   @tanstack/router-plugin@1.169.0\n    -   @tanstack/router-generator@1.168.0\n    -   @tanstack/router-utils@1.163.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8863",
+        "category": "bugfix",
+        "title": "Rsbuildプラグインにおける圧縮設定の保持と@rsbuild/core依存関係の更新",
+        "summary": "Rsbuildプラグインがアプリのserver.compress設定を常にfalseに上書きせず保持するよう修正し、@rsbuild/coreのピア依存関係を^2.0.5に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8805",
+        "category": "bugfix",
+        "title": "Rsbuild開発サーバーにおけるSPAシェル応答のサポート",
+        "summary": "spa.enabledが有効な場合に、Rsbuild開発サーバーがサーバー側でルートのレンダリングやローダーの実行を行うのではなく、Vite開発サーバーと同様にSPAシェルを返すように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8871",
+        "category": "performance",
+        "title": "exsolveのキャッシュ動作修正によるメモリリークおよびエントリファイル検索の改善",
+        "summary": "exsolve ^1.1.3への依存更新により、キャッシュされた失敗した検索がビルドオブジェクトを保持するメモリリークを修正しました。またエントリ検索時のプロセスキャッシュ回避により、開発サーバー再起動時に作成されたエントリファイルを認識できるよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8861",
+        "category": "bugfix",
+        "title": "Startのルーターオプションがルートジェネレーターとコードスプリッターに正常に伝達されるよう修正",
+        "summary": "router.pluginsの実行、関数形式のrouteTreeFileFooterの各印刷時呼び出し、RsbuildプラグインでのdeleteNodes保持、ViteプラグインにおけるモジュールIDによる正確なクライアントルートツリー識別を改善しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952304",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-devtools@1.167.3",
+    "publishedAt": "2026-11-08T01:04:16Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-devtools%401.167.3",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[]:\n    -   @tanstack/react-router-devtools@1.167.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-1.167.3-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router-devtoolsをバージョン1.167.3に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952287",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-client@1.168.45",
+    "publishedAt": "2026-11-08T01:04:13Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-client%401.168.45",
+    "releaseNotes": "### Patch Changes\n\n-   [#8653](https://github.com/TanStack/router/pull/8653) [`d66a84b`](https://github.com/TanStack/router/commit/d66a84ba0a74ffd03e22b57ccd90796274c96244) - fix: a `visible()` boundary keeps its server HTML when the intersection arrives while React waits to replay the boundary's render\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8653",
+        "category": "bugfix",
+        "title": "visible() バウンダリのサーバーHTML保持に関する修正",
+        "summary": "Reactがバウンダリのレンダー再実行を待機している間にIntersectionが発生した場合、visible()バウンダリがサーバー生成HTMLを維持するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952222",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-vite-plugin@1.167.49",
+    "publishedAt": "2026-11-08T01:04:04Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-vite-plugin%401.167.49",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`1ba19a0`](https://github.com/TanStack/router/commit/1ba19a04456983ee0f8adffd038b6b1194441e15), [`94f36c4`](https://github.com/TanStack/router/commit/94f36c4a9ecf3062b326a8eb772e73b00c0644d9), [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`533ca27`](https://github.com/TanStack/router/commit/533ca2704452f36c5fef5c5fe084554d9b5db1ab), [`13b6256`](https://github.com/TanStack/router/commit/13b625683030ea4ab359495ecda570e05e472587), [`b5e2ac9`](https://github.com/TanStack/router/commit/b5e2ac9c4cee4c5c6f464adc6cfddcddf6c84171), [`d250819`](https://github.com/TanStack/router/commit/d25081952dd04a5f5a44db7c8df5cbbf50fad054), [`f420d4a`](https://github.com/TanStack/router/commit/f420d4a6dacfaa81d306b7bbc9af8f1010d1a1bc)]:\n    -   @tanstack/router-plugin@1.169.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "この更新には移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-router-plugin-1.169.0",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-plugin)",
+        "summary": "@tanstack/router-plugin がバージョン 1.169.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952181",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router-devtools@1.167.3",
+    "publishedAt": "2026-11-08T01:03:58Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router-devtools%401.167.3",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`bbf9b75`](https://github.com/TanStack/router/commit/bbf9b75808d8eee497a6dd1663f0cf08426512e0)]:\n    -   @tanstack/router-devtools-core@1.168.3\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-router-devtools-core",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/router-devtools-core)",
+        "summary": "@tanstack/router-devtools-core をバージョン 1.168.3 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/router#437952159",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-generator@1.168.0",
+    "publishedAt": "2026-11-08T01:03:55Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.168.0",
+    "releaseNotes": "### Minor Changes\n\n-   [#8855](https://github.com/TanStack/router/pull/8855) [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6) - Require Node `^20.19.0 || >=22.12.0` (was `>=20.19`), so the CommonJS builds can load ESM-only dependencies through `require(esm)`. Node 21 and Node 22.0–22.11 do not enable it by default, so they are no longer supported.\n\n### Patch Changes\n\n-   [#8857](https://github.com/TanStack/router/pull/8857) [`ad5b3b7`](https://github.com/TanStack/router/commit/ad5b3b7a0990eed7351d672ea6695d341108e0d6) - A pathless layout inside a route group (`routes/(group)/_layout.tsx`) or a route group's own layout (`routes/(group)/route.tsx`) is typed with the full path `'/'` in `FileRoutesByPath`, like the router gives it at runtime, instead of `''`. When no index route claims `/`, the layout also appears under `'/'` in `FileRoutesByFullPath` and `FileRoutesByTo`, as a pathless layout outside a group already does.\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69)]:\n    -   @tanstack/router-utils@1.163.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#437952141",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.66",
+    "publishedAt": "2026-11-08T01:03:52Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.66",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69), [`01fab5a`](https://github.com/TanStack/router/commit/01fab5a6c8aed70d61d82c64bc344cbac66c240c), [`c5320d7`](https://github.com/TanStack/router/commit/c5320d7ca23eca82d720ac5629d2bad5cf7d9b02), [`545a8d3`](https://github.com/TanStack/router/commit/545a8d3790989ca502153c3292c6b1e8063257f4), [`da8c28c`](https://github.com/TanStack/router/commit/da8c28c498230a5730ce75b2693baeeb3ef68ac1)]:\n    -   @tanstack/router-utils@1.163.0\n    -   @tanstack/start-plugin-core@1.171.56\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#437952125",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-devtools-core@1.168.3",
+    "publishedAt": "2026-11-08T01:03:49Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-devtools-core%401.168.3",
+    "releaseNotes": "### Patch Changes\n\n-   [#8888](https://github.com/TanStack/router/pull/8888) [`bbf9b75`](https://github.com/TanStack/router/commit/bbf9b75808d8eee497a6dd1663f0cf08426512e0) - Fix broken styling of the embedded `TanStackRouterDevtoolsPanel` (including inside shadow DOM) by giving the devtools size tokens a `1rem` fallback when `--tsrd-font-size` is not set.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#437148947",
     "library": "TanStack Query",
     "repository": "TanStack/query",
