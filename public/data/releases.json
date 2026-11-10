@@ -1,5 +1,190 @@
 [
   {
+    "id": "axios/axios#439027727",
+    "library": "Axios",
+    "repository": "axios/axios",
+    "version": "v1.21.1",
+    "publishedAt": "2026-11-09T11:08:55Z",
+    "url": "https://github.com/axios/axios/releases/tag/v1.21.1",
+    "releaseNotes": "## v1.21.1 — November 9, 2026\r\n\r\nThis release raises the minimum `follow-redirects` version to fix a published CVE, fixes a Next.js prerendering failure caused by the response duration timer, corrects the `getAdapter` typings, and includes documentation corrections, new test coverage, CI runner changes and dependency updates.\r\n\r\n## 🔒 Security Fixes\r\n\r\n* **follow-redirects:** Raised the `follow-redirects` range from `^1.16.0` to `^1.16.2` to fix CVE-2026-116689 (GHSA-mrwp-f3q8-3g9p). In the vulnerable versions, `sensitiveHeaders` arrays from another realm were ignored and custom credentials could follow redirects. Only the Node.js HTTP adapter is affected, and there are no API changes. (__#11410__)\r\n\r\n## 🐛 Bug Fixes\r\n\r\n* **Response Duration:** `dispatchRequest` now measures `response.duration` with `performance.now()` and uses `Date.now()` only when `performance.now()` isn't available. In v1.21.0, any axios request from a Server Component failed Next.js production builds with Cache Components (`cacheComponents: true`), because Next.js rejects `Date.now()` while prerendering. The duration is still a whole number of milliseconds, and system clock changes no longer affect it. (__#11411__)\r\n* **TypeScript:** `getAdapter` now accepts an optional `config?: AxiosRequestConfig` in `index.d.ts` and `index.d.cts`, matching what it does at runtime. You can now call `getAdapter('fetch', { env: { fetch: myFetch } })` without a cast. (__#11404__)\r\n\r\n## 🔧 Maintenance & Chores\r\n\r\n* **Documentation Corrections:** Brought the README and docs site in line with how axios actually behaves:\r\n  * `transformRequest` runs for every method, and transformers receive `(data, headers, status)`.\r\n  * `responseType` and `Content-Type` have no default value.\r\n  * `AxiosHeaders#get` and `#normalize` are described correctly.\r\n  * Errors should be identified with `axios.isAxiosError()`, not by `name`.\r\n  * The error tables now list `ECONNREFUSED` and `ERR_FORM_DATA_DEPTH_EXCEEDED`, and note that FormData parsing has a fixed depth limit that `maxDepth` doesn't change.\r\n  * New notes cover what `redact` doesn't scan, which adapters enforce `maxContentLength` / `maxBodyLength`, and how `formToJSON()` handles field name collisions.\r\n\r\n  (__#11374__, __#11373__, __#11389__, __#11419__, __#11429__, __#11430__)\r\n* **Docs Site:** Added a Partners page, a shared card design for sponsors and partners, a Namespace sponsor badge, and a blog whose first post announces HeroDevs Never-Ending Support for Axios v0. Also applied the v1.20.0/v1.21.0 release notes to the docs, and fixed internal links in the es, fr and zh translations so they keep their locale prefix. (__#11390__, __#11399__, __#11400__, __#11412__, __#11401__)\r\n* **Test Coverage:** Added cancellation tests across the HTTP, fetch and XHR adapters. They cover `AbortSignal`, `CancelToken`, cancelling while a request interceptor is pending, and timeout precedence. Also added tests for `no_proxy` edge cases in `shouldBypassProxy`, such as internationalized domain names, malformed CIDR and IPv4 entries, and port-qualified entries. Neither changes runtime behavior. (__#11376__, __#11431__)\r\n* **CI:** GitHub Actions jobs now run on Namespace runners. The npm publish job stays on GitHub-hosted runners, because npm provenance and trusted publishing (OIDC) only work there. (__#11396__)\r\n* **Dependencies:** Updated development and tooling dependencies, including `vitest` and `@vitest/*` (to 5.x at the root), `typescript` (7.x at the root), `vite`, `rollup`, `eslint`, `playwright`, `@commitlint/*`, `@rollup/plugin-alias`, `@rollup/plugin-terser`, `body-parser`, `multer`, `serialize-javascript`, `fast-uri`, `qs`, `zizmorcore/zizmor-action`, and `follow-redirects` in `/docs`. (__#11383__, __#11375__, __#11372__, __#11345__, __#11392__, __#11387__, __#11386__, __#11385__, __#11391__, __#11388__, __#11395__, __#11421__, __#11422__, __#11426__)\r\n* **Release:** Prepared the 1.21.1 release. (__#11435__)\r\n\r\n## 🌟 New Contributors\r\n\r\nWe are thrilled to welcome our new contributors. Thank you for helping improve axios:\r\n\r\n* __@Ghoscro__ (__#11374__)\r\n* __@pei711__ (__#11373__)\r\n* __@ivanhapaz__ (__#11399__)\r\n* __@aelmanaa__ (__#11404__)\r\n* __@Aryapatel-007__ (__#11429__, __#11430__)\r\n* __@umair-ghafoor-ai__ (__#11376__)\r\n* __@yxshee__ (__#11389__)\r\n* __@malinele__ (__#11401__)\r\n* __@AnantDuhan__ (__#11431__)\r\n\r\n[Full Changelog](https://github.com/axios/axios/compare/v1.21.0...v1.21.1)\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "vitejs/vite#439026238",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v6.4.6",
+    "publishedAt": "2026-11-09T11:03:41Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v6.4.6",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v6.4.6/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "リリースノートに詳細な変更点が記載されていないため、特別な移行手順はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#439023680",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v7.3.8",
+    "publishedAt": "2026-11-09T11:00:57Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v7.3.8",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v7.3.8/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#439021537",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.1.7",
+    "publishedAt": "2026-11-09T10:58:49Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.1.7",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.1.7/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#439020635",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.2.6",
+    "publishedAt": "2026-11-09T10:57:55Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.2.6",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.2.6/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "詳細な変更点はCHANGELOG.mdを参照してください。本リリースノートに記載されている移行作業はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#439020465",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.2.5",
+    "publishedAt": "2026-11-09T10:57:45Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.2.5",
+    "releaseNotes": "Please refer to [CHANGELOG.md](https://github.com/vitejs/vite/blob/v8.2.5/packages/vite/CHANGELOG.md) for details.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースノートには具体的な変更点が記載されていないため、移行作業は必要ありません。詳細についてはCHANGELOG.mdを参照してください。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#438988758",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.7",
+    "publishedAt": "2026-11-09T10:23:22Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.7",
+    "releaseNotes": "### Bug Fixes\r\n\r\n* **deps:** update Rolldown to v1.2.18 ([#24038](https://github.com/vitejs/vite/issues/24038)) ([517affb](https://github.com/vitejs/vite/commit/517affb174632db347a6a2426f12eab020277946))\r\n\r\n### Miscellaneous Chores\r\n\r\n* enable more lint rules ([#24035](https://github.com/vitejs/vite/issues/24035)) ([72f86e5](https://github.com/vitejs/vite/commit/72f86e57dab05e87641599bff041d68821c837f3))\r\n\r\n### Tests\r\n\r\n* use `onTestFinished` for tear downs ([#24003](https://github.com/vitejs/vite/issues/24003)) ([a579e35](https://github.com/vitejs/vite/commit/a579e352a66fbdce6a51d4e1f67006ccf4f91343))\r\n\r\n### Build System\r\n\r\n* generate sourcemaps in shim-deps plugin ([#24023](https://github.com/vitejs/vite/issues/24023)) ([c02138c](https://github.com/vitejs/vite/commit/c02138c51193fd892025f0c28524dcb9e128446f))\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手続きは不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-deps-update-rolldown",
+        "category": "bugfix",
+        "title": "Rolldownのバージョン更新",
+        "summary": "依存関係であるRolldownをv1.2.18に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chore-enable-lint-rules",
+        "category": "other",
+        "title": "リントルールの追加有効化",
+        "summary": "内部コードの品質を向上させるため、より多くのリントルールを有効にしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "test-ontestfinished-teardown",
+        "category": "other",
+        "title": "テストのティアダウン処理の更新",
+        "summary": "テストのクリーンアップ処理にonTestFinishedを使用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "build-shim-deps-sourcemaps",
+        "category": "other",
+        "title": "shim-depsプラグインでのソースマップ生成",
+        "summary": "ビルドシステム内のshim-depsプラグインでソースマップを生成するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#438774823",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.21",
+    "publishedAt": "2026-11-09T05:33:19Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.21",
+    "releaseNotes": "### Patch Changes\n\n- [#1559](https://github.com/petyosi/react-virtuoso/pull/1559) [`b3a6f50`](https://github.com/petyosi/react-virtuoso/commit/b3a6f50b528028730f248f763133ce406a08daf7) Thanks [@Sam-Razavi](https://github.com/Sam-Razavi)! - Fixed lists using `customScrollParent` or `useWindowScroll` inside an element with CSS `zoom`. The rendered items drifted away from the scroll position, leaving blank space that grew as you scrolled, and `endReached` stopped firing. Sizes read with `getBoundingClientRect()` are now converted to the same pixels as `scrollTop`, for `Virtuoso`, `TableVirtuoso` and `VirtuosoGrid`.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースによる移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1559",
+        "category": "bugfix",
+        "title": "CSS zoomが適用された要素内でのスクロール位置ズレの修正",
+        "summary": "customScrollParentまたはuseWindowScrollをCSS zoomが適用された要素内で使用した際、描画アイテムがスクロール位置からズレて空白が生じる問題やendReachedが発火しなくなる不具合を修正しました。Virtuoso、TableVirtuoso、VirtuosoGridに適用されます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#437952502",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -521,14 +706,34 @@
     "publishedAt": "2026-11-08T01:03:55Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-generator%401.168.0",
     "releaseNotes": "### Minor Changes\n\n-   [#8855](https://github.com/TanStack/router/pull/8855) [`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6) - Require Node `^20.19.0 || >=22.12.0` (was `>=20.19`), so the CommonJS builds can load ESM-only dependencies through `require(esm)`. Node 21 and Node 22.0–22.11 do not enable it by default, so they are no longer supported.\n\n### Patch Changes\n\n-   [#8857](https://github.com/TanStack/router/pull/8857) [`ad5b3b7`](https://github.com/TanStack/router/commit/ad5b3b7a0990eed7351d672ea6695d341108e0d6) - A pathless layout inside a route group (`routes/(group)/_layout.tsx`) or a route group's own layout (`routes/(group)/route.tsx`) is typed with the full path `'/'` in `FileRoutesByPath`, like the router gives it at runtime, instead of `''`. When no index route claims `/`, the layout also appears under `'/'` in `FileRoutesByFullPath` and `FileRoutesByTo`, as a pathless layout outside a group already does.\n\n-   Updated dependencies \\[[`446ce1b`](https://github.com/TanStack/router/commit/446ce1b30650d85f1fc78f2d1ee42712e40b75c6), [`ff157f0`](https://github.com/TanStack/router/commit/ff157f0079982e90d62be7fdeecfb77e4fdcec69)]:\n    -   @tanstack/router-utils@1.163.0\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "Node.js のバージョンをサポート対象のバージョンへ更新する必要があります。",
+      "steps": [
+        "Node.js のバージョンを ^20.19.0 または >=22.12.0 に更新してください（Node 21 および Node 22.0〜22.11 はサポート対象外となります）。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "PR-8855",
+        "category": "breaking",
+        "title": "Node.js のサポート対象バージョンの変更",
+        "summary": "CommonJS ビルドで ESM 依存関係を読み込めるようにするため、Node.js の要求バージョンが `^20.19.0 || >=22.12.0` に変更されました。Node 21 および Node 22.0〜22.11 のサポートが終了しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "PR-8857",
+        "category": "bugfix",
+        "title": "ルートグループ内パスレスレイアウトの型定義修正",
+        "summary": "ルートグループ内のパスレスレイアウトおよびルートグループ独自のレイアウトが、FileRoutesByPath において '' ではなく '/' として型付けされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#437952141",
@@ -542,10 +747,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0-1-66",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-utilsおよび@tanstack/start-plugin-coreへの依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#437952125",
