@@ -1,5 +1,32 @@
 [
   {
+    "id": "petyosi/react-virtuoso#440265569",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-router@2.0.1",
+    "publishedAt": "2026-11-10T11:17:27Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-router%402.0.1",
+    "releaseNotes": "### Patch Changes\n\n- [#1562](https://github.com/petyosi/react-virtuoso/pull/1562) [`820766c`](https://github.com/petyosi/react-virtuoso/commit/820766c9f5e91fbf38ccc609665bb2221f499962) Thanks [@petyosi](https://github.com/petyosi)! - Keep the router working when an async guard keeps the reader where they are. A guard that resolved to `navigate()` or `redirect()` left the router suspended on its pending placeholder and left the refused route set, so later navigation, including asking for the same route again, never reached the guards. The router now restores what it showed before the guard ran and clears the refused route. The active route also renders inside the router's own Suspense boundary, so a pending guard no longer suspends content outside the router or disposes the router engine, which made an async guard on the first load run again without end.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1562",
+        "category": "bugfix",
+        "title": "非同期ガード処理におけるルーターの不具合修正",
+        "summary": "非同期ガードが navigate() または redirect() を呼び出した際に、ルーターが保留状態のまま停止したり拒否されたルートが残る不具合を修正しました。アクティブなルートをルーター独自の Suspense バウンダリ内でレンダリングするように変更し、外部コンテンツの停止や初回読み込み時の無限ガード実行を防ぎます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "axios/axios#439027727",
     "library": "Axios",
     "repository": "axios/axios",
@@ -14,7 +41,41 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "follow-redirects-cve-fix",
+        "category": "bugfix",
+        "title": "follow-redirects のセキュリティ脆弱性 (CVE-2026-116689) の修正",
+        "summary": "依存ライブラリ follow-redirects のバージョン範囲を ^1.16.2 に引き上げ、CVE-2026-116689 を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "response-duration-performance-now",
+        "category": "bugfix",
+        "title": "Next.js プリレンダリング時のエラー修正",
+        "summary": "レスポンス時間計測に performance.now() を優先使用することで、Next.js Server Components でのプリレンダリング失敗を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "get-adapter-type-definition",
+        "category": "bugfix",
+        "title": "getAdapter の TypeScript 型定義改善",
+        "summary": "getAdapter にオプショナルの config 引数を追加し、実行時の挙動と型定義を一致させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "docs-and-chores",
+        "category": "other",
+        "title": "ドキュメント・テスト・依存関係の更新",
+        "summary": "ドキュメントの記述修正、テストの追加、CIおよび開発依存パッケージの更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#439026238",
@@ -777,7 +838,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8888",
+        "category": "bugfix",
+        "title": "埋め込み型TanStackRouterDevtoolsPanelのスタイル修正",
+        "summary": "--tsrd-font-sizeが設定されていない場合に1remのフォールバックを追加し、Shadow DOM内を含むTanStackRouterDevtoolsPanelのスタイルの不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#437148947",
@@ -1614,7 +1685,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-106-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreをバージョン5.106.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923885",
@@ -1628,10 +1709,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースの移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "5.106.1-dep-query-core",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core が 5.106.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923840",
@@ -1648,7 +1739,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "lit-query-0-2-36-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.106.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923804",
@@ -1662,10 +1763,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434923773",
@@ -1679,10 +1781,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#434836036",
@@ -1699,7 +1802,33 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "create-vite-ts6-eslint",
+        "category": "bugfix",
+        "title": "ESLint使用時のTypeScript 6依存関係の維持",
+        "summary": "ESLintテンプレート選択時にTypeScript 6が正しく維持されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-non-major",
+        "category": "bugfix",
+        "title": "メジャー以外の依存関係の更新",
+        "summary": "メジャーバージョン以外の依存パッケージを最新版に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-rolldown",
+        "category": "bugfix",
+        "title": "Rolldown関連の依存関係の更新",
+        "summary": "Rolldownに関連する依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#434823867",
@@ -1713,10 +1842,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれておらず、特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "fix-build-sourcemap-env",
+        "category": "bugfix",
+        "title": "環境設定からの build.sourcemap の尊重",
+        "summary": "環境設定で指定された build.sourcemap を正しく尊重するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "update-deps",
+        "category": "bugfix",
+        "title": "依存関係の更新",
+        "summary": "非メジャー依存関係および Rolldown 関連の依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "refactor-core-js-version-import",
+        "category": "other",
+        "title": "core-js バージョン取得の JSON インポート化",
+        "summary": "plugin-legacy 内で core-js のバージョンを参照する処理に JSON インポートを使用するようリファクタリングしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "chores-tooling-update",
+        "category": "other",
+        "title": "開発環境・ツールのメンテナンス",
+        "summary": "TypeScript v7 や tsdown などの依存関係の更新や、コードフォーマットの修正を実施しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "vitejs/vite#434822258",
