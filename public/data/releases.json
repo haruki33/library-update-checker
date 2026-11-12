@@ -1,5 +1,206 @@
 [
   {
+    "id": "react-hook-form/react-hook-form#441537273",
+    "library": "React Hook Form",
+    "repository": "react-hook-form/react-hook-form",
+    "version": "v7.92.0",
+    "publishedAt": "2026-11-11T10:24:58Z",
+    "url": "https://github.com/react-hook-form/react-hook-form/releases/tag/v7.92.0",
+    "releaseNotes": "## 🐞 Fixes\r\n\r\n- Fix `useFormState` and `Controller` unnecessarily cloning form state during mount and unmount (#13945)\r\n- Fix `setValues` not updating dirty state for unregistered fields (#13946)\r\n- Fix form state values becoming inconsistent (#13948)\r\n- Fix `setValue` not selecting checkbox options with empty string values (#13950)\r\n- Fix stale asynchronous form-level validation results (#13951, #13954)\r\n- Fix `useFieldArray` applying `reValidateMode: 'onSubmit'` before submission (#13952)\r\n- Fix default values not being applied correctly to selects with disabled optgroups (#13953)\r\n- Fix `useController` reading stale `shouldUnregister` options (#13956, #13996)\r\n- Fix focusing disabled radio and checkbox inputs (#13960, #13968, #13977)\r\n- Fix TypeScript type regression (#13963)\r\n- Fix field array notifications using stale values (#13965)\r\n- Fix rejected submission callbacks with falsy rejection reasons (#13967)\r\n- Fix `useWatch` missing `reset()` updates on mount in React Native (#13974)\r\n- Fix `trigger` losing nested field array root errors (#13975)\r\n- Fix `unregister` retaining descendant registrations when removing a parent (#13976)\r\n- Fix `trigger` not marking nested fields as touched when `shouldTouch` targets a parent (#13978)\r\n- Fix `useWatch` compute cache not synchronizing when `compute` is removed (#13987)\r\n- Fix `setValues` ignoring options when values remain unchanged (#13989)\r\n- Fix `handleSubmit` incorrectly updating form state after `reset()` during asynchronous callbacks (#13991)\r\n- Fix `useFieldArray` retaining validation rules after the rules prop is removed (#13992)\r\n- Fix `reset` not updating `isValid` after cancelling pending validation (#13994)\r\n- Fix TypeScript nested array paths not preserving `undefined` (#13995)\r\n- Fix `<Form />` not respecting `encType` when constructing request bodies (#13997)\r\n- Fix `handleSubmit` not supporting nullish and primitive transformed values with disabled fields (#13999, #14011)\r\n- Fix `useController` dirty tracking with controller-level `defaultValue` (#14001)\r\n- Fix multi-select changes including disabled options (#14002)\r\n- Fix `register` overwriting untouched range and color input defaults (#14007)\r\n- Fix stale schema resolver errors after field array operations (#14008)\r\n- Fix `unset` failing on primitive values (#14014)\r\n- Fix form-level validation errors appearing before submission during `isValid` checks (#14015)\r\n- Fix stale field errors when form-level validation returns a message (#14016)\r\n- Fix repeated `reset()` calls and error focusing with `keepFieldsRef` and memoized inputs (#14023)\r\n\r\n## ⚡ Performance Improvements\r\n\r\n- Avoid unnecessary form state cloning in `useFormState` and `Controller` (#13945)\r\n\r\n## 🧹 Refactors\r\n\r\n- Skip non-dirty array holes when collecting dirty field names (#13979)\r\n- Avoid mutating field metadata when building resolver options (#13984)\r\n\r\n## 🧪 Tests\r\n\r\n- Expand regression coverage for `reset`, `useController`, `useFieldArray`, validation, dirty state and form submissions\r\n- Add regression coverage for disabled radio and checkbox inputs, React Native reset handling, and primitive transformed values\r\n\r\n## 📦 Dependencies\r\n\r\n- Bump `fast-uri` from 3.1.8 to 3.1.9 (#13949)\r\n- Bump `follow-redirects` from 1.16.1 to 1.16.2 (#13985)\r\n- Bump `vite` from 6.4.4 to 6.4.5 (#13983)\r\n- Bump `joi` from 18.2.9 to 18.3.1 (#13986)\r\n\r\n## ❤️ Thank You\r\n\r\nThanks to @charan-rathore, @clean99, @KooYS, @dfedoryshchev, @maxymlyskov, @aumilkyeong, @hamarshehmhmd, @zigzagdev, @wozhenbang2004, @Aminark, @zendesk-robryan, @MomenSherif, @Shellghostt, @SatyamGangani, @yxshee, @timsnadden and @bluebill1049 for their contributions! 🎉\r\n\r\nSpecial thanks to the **Pennylane team** for their incredible support! ❤️",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの移行に伴う特別な破壊的変更や移行作業はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-form-state-cloning",
+        "category": "performance",
+        "title": "useFormStateおよびControllerでの状態アクセスの最適化",
+        "summary": "マウントおよびアンマウント時にフォーム状態が不要に複製される問題を回避し、パフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-set-values-and-dirty-state",
+        "category": "bugfix",
+        "title": "setValuesとdirty状態管理の修正",
+        "summary": "未登録フィールドでdirty状態が更新されない不具合や、値に変更がない場合にオプションが無視される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-validation-and-errors",
+        "category": "bugfix",
+        "title": "非同期バリデーションおよびエラー表示の不整合修正",
+        "summary": "古い非同期バリデーション結果の反映、送信前のエラー表示、フィールド配列操作後のスキームエラー残存などの不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-use-field-array",
+        "category": "bugfix",
+        "title": "useFieldArrayの動作修正",
+        "summary": "送信前のreValidateMode設定適用、プロップ削除後のルール残存、古い値による通知の問題などを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-typescript-definitions",
+        "category": "bugfix",
+        "title": "TypeScript型の回帰およびネスト配列パスの修正",
+        "summary": "TypeScriptの型の回帰問題を修正し、ネストされた配列パスにおいてundefinedが正しく保持されるように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-form-elements-handling",
+        "category": "bugfix",
+        "title": "フォーム要素および<Form />コンポーネントの挙動修正",
+        "summary": "無効化された入力要素へのフォーカス処理、マルチセレクトでの無効化オプションの扱い、<Form />でのencType処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-hooks-and-lifecycle",
+        "category": "bugfix",
+        "title": "handleSubmit, reset, useWatch, useControllerの各種修正",
+        "summary": "reset()後の非同期コールバック時の状態更新や、React NativeでのuseWatchのマウント時更新、useControllerのdirty追跡などの不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "update-dependencies",
+        "category": "other",
+        "title": "依存ライブラリのアップデート",
+        "summary": "fast-uri, follow-redirects, vite, joi などの依存ライブラリを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#441178253",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.3.8",
+    "publishedAt": "2026-11-11T02:46:37Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.3.8",
+    "releaseNotes": "### Bug Fixes\n\n* **build:** keep `magicString` and `ast` in transform hook meta ([#24012](https://github.com/vitejs/vite/issues/24012)) ([a3b28e8](https://github.com/vitejs/vite/commit/a3b28e8744ffae9abd018696ad4fc01b27ac71ce))\n* **bundled-dev:** emit assets referenced by inline workers during load ([#23103](https://github.com/vitejs/vite/issues/23103)) ([5e50bae](https://github.com/vitejs/vite/commit/5e50bae4bdfa123c25c4f5afcbb27efd96fcf681))\n* **config:** skip native loader compat checks for type-only imports ([#24021](https://github.com/vitejs/vite/issues/24021)) ([e554294](https://github.com/vitejs/vite/commit/e5542942715b281ca5803554c43d48448d72d7f2))\n* **css:** reject CSS entrypoints when `build.cssCodeSplit: false` ([#23112](https://github.com/vitejs/vite/issues/23112)) ([e4ad62b](https://github.com/vitejs/vite/commit/e4ad62ba6523e889f988b6e882d9d81be7f26711))\n* **deps:** update all non-major dependencies ([#24027](https://github.com/vitejs/vite/issues/24027)) ([a13aa04](https://github.com/vitejs/vite/commit/a13aa045d1cf2a28e9a5dd2bcb008236f4eaf19a))\n* hide console window when running `yarn config get` on Windows ([#24013](https://github.com/vitejs/vite/issues/24013)) ([3f6c4cd](https://github.com/vitejs/vite/commit/3f6c4cdae3b7984840cc32ff6752a45736025406))\n\n### Performance Improvements\n\n* **css:** import sass once instead of per file ([#24041](https://github.com/vitejs/vite/issues/24041)) ([db8b119](https://github.com/vitejs/vite/commit/db8b1190abbb7e30aad0055f97dde02d7ed504c7))\n* defer `net use` until a UNC path is resolved on Windows ([#24014](https://github.com/vitejs/vite/issues/24014)) ([b643046](https://github.com/vitejs/vite/commit/b6430466c57f4783b707fd14a43c237082094081))\n\n### Miscellaneous Chores\n\n* **deps:** update dependency @types/node to v26 ([#24029](https://github.com/vitejs/vite/issues/24029)) ([dd780cd](https://github.com/vitejs/vite/commit/dd780cd761221a0c5fa4810335f0190ecb9c7294))\n* enable vitest plugin in Oxlint ([#24052](https://github.com/vitejs/vite/issues/24052)) ([ce979e4](https://github.com/vitejs/vite/commit/ce979e4c4be5f48c5862445ef124d863853e39b1))\n* enable vitest style rules in Oxlint ([#24053](https://github.com/vitejs/vite/issues/24053)) ([b8c8270](https://github.com/vitejs/vite/commit/b8c8270f3f01a9dbf02c336e7468bf6f1df0f5ad))\n* revert \"fix(build): keep `magicString` and `ast` in transform hook meta ([#24012](https://github.com/vitejs/vite/issues/24012))\" ([#24065](https://github.com/vitejs/vite/issues/24065)) ([afc44f0](https://github.com/vitejs/vite/commit/afc44f0957f7ef52d27d5026200a289de374c215))\n\n### Code Refactoring\n\n* **optimizer:** use non-capturing group for external types regex ([#24048](https://github.com/vitejs/vite/issues/24048)) ([ef23433](https://github.com/vitejs/vite/commit/ef2343355b29a3f389e4af51147b767331bd7a5b))\n\n### Tests\n\n* avoid joining logs for assertion ([#24057](https://github.com/vitejs/vite/issues/24057)) ([fbb0a4e](https://github.com/vitejs/vite/commit/fbb0a4e719fda240459aa54f872a89dc52473fe2))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "23103",
+        "category": "bugfix",
+        "title": "インラインワーカー参照アセットの出力修正",
+        "summary": "ロード時にインラインワーカーから参照されるアセットが正しく出力されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24021",
+        "category": "bugfix",
+        "title": "型のみのインポートでのローダーチェックのスキップ",
+        "summary": "型のみのインポートに対してネイティブローダーの互換性チェックを行わないようスキップ処理を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23112",
+        "category": "bugfix",
+        "title": "build.cssCodeSplit: false 時のCSSエントリポイントエラーハンドリング",
+        "summary": "build.cssCodeSplitがfalseに設定されている場合、CSSエントリポイントを拒否するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24013",
+        "category": "bugfix",
+        "title": "Windows環境におけるyarnコマンド実行時のウィンドウ非表示",
+        "summary": "Windows環境で yarn config get を実行する際にコンソールウィンドウが表示されないよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24041",
+        "category": "performance",
+        "title": "Sassインポートの最適化",
+        "summary": "Sassのインポートをファイルごとではなく一度だけ行うように改善し、ビルドパフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24014",
+        "category": "performance",
+        "title": "WindowsでのUNCパス解決の最適化",
+        "summary": "Windows環境でUNCパスが解決されるまで net use の呼び出しを遅延させることでパフォーマンスを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24065",
+        "category": "other",
+        "title": "transformフックのメタデータ保持機能の取り消し",
+        "summary": "#24012で行われたtransformフックのメタデータにmagicStringおよびastを保持する変更をリバートしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24027",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "すべての非メジャー依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "mswjs/msw#441120356",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.5",
+    "publishedAt": "2026-11-11T01:11:45Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.5",
+    "releaseNotes": "## v3.0.5 (2026-11-11)\n\n### Bug Fixes\n\n- update `@mswjs/interceptors` to 0.45.11 (589c5cfcd743356d6ec2366cf0e984d8504eb1b8)\n- add `handler` to the \"request:match\" event (#2834) (8719ce23df5acf6c84108329bcad136205cb05d4) @kettanaito",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-interceptors-0-45-11",
+        "category": "bugfix",
+        "title": "@mswjs/interceptorsの更新",
+        "summary": "依存ライブラリの@mswjs/interceptorsを0.45.11に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "add-handler-to-request-match-event",
+        "category": "bugfix",
+        "title": "request:matchイベントへのhandler追加",
+        "summary": "request:matchイベントのペイロードにhandlerプロパティを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "petyosi/react-virtuoso#440265569",
     "library": "React Virtuoso",
     "repository": "petyosi/react-virtuoso",
@@ -1893,10 +2094,228 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "破壊的変更はないため、特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "fix-23935",
+        "category": "bugfix",
+        "title": "重複するプラグインコンテナのclose呼び出しをawaitするように修正",
+        "summary": "プラグインコンテナのclose呼び出しが重複した際に正しくawait処理を行うように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23909",
+        "category": "bugfix",
+        "title": "CSS依存関係収集時のクエリ付き動的インポートの解決",
+        "summary": "CSS依存関係を収集する際に、クエリが付与された動的インポートを正しく解決するように修復しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23975",
+        "category": "bugfix",
+        "title": "チャンクのインポートマップハッシュ署名で安定したモジュールIDを使用",
+        "summary": "チャンクのインポートマップハッシュ署名生成時に安定したモジュールIDを使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23858",
+        "category": "bugfix",
+        "title": "Node組み込みモジュールからの名前付きインポートを許可",
+        "summary": "bundled-dev環境においてNode.jsの組み込みモジュールからの名前付きインポートを許可しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23849",
+        "category": "bugfix",
+        "title": "HMRでエントリを再実行できない場合にリロードを実行",
+        "summary": "HMR時にエントリを再度実行できない場合、ページを自動リロードするように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23862",
+        "category": "bugfix",
+        "title": "@rollup/plugin-aliasの更新",
+        "summary": "@rollup/plugin-aliasをv6.0.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23896",
+        "category": "bugfix",
+        "title": "非メジャー依存関係の更新",
+        "summary": "プロジェクトのマイナー/パッチ依存関係を最新版へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23966",
+        "category": "bugfix",
+        "title": "非メジャー依存関係の更新(追加)",
+        "summary": "その他のマイナー/パッチ依存関係を最新版へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23868",
+        "category": "bugfix",
+        "title": "rolldown関連依存関係の更新",
+        "summary": "rolldown関連の依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23967",
+        "category": "bugfix",
+        "title": "rolldown関連依存関係の更新(追加)",
+        "summary": "rolldown関連依存パッケージを最新版へ更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23933",
+        "category": "bugfix",
+        "title": "server.forwardConsoleにおけるANSIエスケープシーケンスのエスケープ",
+        "summary": "server.forwardConsole出力のANSIエスケープシーケンスを適切にエスケープ処理するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23823",
+        "category": "bugfix",
+        "title": "最初の行にある隣接モジュールタグの削除",
+        "summary": "HTML処理において最初の一行目にある隣接モジュールタグを正しく削除するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23634",
+        "category": "bugfix",
+        "title": "pnpmの.modules.yamlをVite Task入力から無視",
+        "summary": "Vite Taskの入力判定からpnpmの.modules.yamlを除外するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23912",
+        "category": "bugfix",
+        "title": "キャッシュディレクトリの正確な検出",
+        "summary": "Optimizerにおいてキャッシュディレクトリをより正確に検出できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23959",
+        "category": "bugfix",
+        "title": "Viteリゾルバによるサブパスインポート(#)の解決",
+        "summary": "Optimizerでサブパスインポート(#)をViteのリゾルバを用いて解決するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23879",
+        "category": "bugfix",
+        "title": "環境からのbuild.sourcemap設定の尊重",
+        "summary": "環境設定から渡されるbuild.sourcemapの値を正しく反映するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23995",
+        "category": "bugfix",
+        "title": "サーバー処理時のHTML属性のエスケープ",
+        "summary": "サーバー側で生成・処理されるHTML属性のエスケープ処理を適切に行うように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23703",
+        "category": "bugfix",
+        "title": "静的エイリアス置換における$パターンの保持",
+        "summary": "静的なエイリアス置換時に$マークのパターンが消失しないよう保持するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23759",
+        "category": "bugfix",
+        "title": "ssr.target=webworker時の組み込みモジュールのrequire変換",
+        "summary": "ssr.targetがwebworkerの場合、組み込みモジュールに対する外部requireをimportに変換するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23898",
+        "category": "bugfix",
+        "title": "build.ssr: true時にトップレベルのinputを使用",
+        "summary": "build.ssr: trueが設定されている場合、SSRビルドでトップレベルのinput設定を使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23914",
+        "category": "bugfix",
+        "title": "server.fs外部の.wasmファイルを拒否",
+        "summary": "server.fsの許可範囲外にある.wasmファイルの読み込みを拒否するようにセキュリティを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23780",
+        "category": "bugfix",
+        "title": "クエリやハッシュが付与されたnew URL(...)参照ファイルの監視",
+        "summary": "new URL(..., import.meta.url)形式で参照されたファイルにクエリやハッシュが含まれる場合の監視処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "fix-23956",
+        "category": "bugfix",
+        "title": "未使用ワーカーと衝突するチャンクの保持",
+        "summary": "アクティブなワーカーから利用されているチャンクが、未使用ワーカーと競合した場合に削除されないよう保持します。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-23922",
+        "category": "performance",
+        "title": "Settled時のプリロードリンクのリスナー削除",
+        "summary": "プリロード処理完了時に不要になったプリロードリンクのイベントリスナーを削除するパフォーマンス改善を行いました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "perf-23889",
+        "category": "performance",
+        "title": "cssScopeTo用レンダリング済みモジュールのインデックス化",
+        "summary": "cssScopeTo処理において、出力ごとにレンダリング済みモジュールのインデックス化を一度だけ行うよう最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "other-23863",
+        "category": "other",
+        "title": "文字コード(charset)のケース統一",
+        "summary": "内部処理でのcharset文字列の大小文字表記を統一しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "other-23904",
+        "category": "other",
+        "title": "import-meta-current-dirnameプラグインでのソースマップ生成",
+        "summary": "内部プラグインであるimport-meta-current-dirnameでソースマップを生成するようにしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434401539",
@@ -2236,10 +2655,44 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12522",
+        "category": "feature",
+        "title": "Data Explorerでの検索・ハイライト・自動展開機能の追加",
+        "summary": "クエリおよびミューテーションのData Explorerにおいて、ネストされたプロパティ名や値を検索し、一致箇所のハイライトや自動展開に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12499",
+        "category": "bugfix",
+        "title": "インラインDevToolsパネルの高さ表示の改善",
+        "summary": "インラインDevToolsパネルが親コンテナの高さに合わせて広がるようになりました。コンテナに高さを指定していない場合はデフォルトの500pxが維持されます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12517",
+        "category": "other",
+        "title": "Solidランタイムの重複ラップを防ぐ構成設定の追加",
+        "summary": "tsdown.configに'@refresh skip'バナーを追加し、アプリケーション側のsolid-refreshがバンドルされたSolidランタイムを二重にラップするのを防ぎました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12502",
+        "category": "performance",
+        "title": "クエリおよびミューテーションリストの仮想化によるパフォーマンス向上",
+        "summary": "大規模なキャッシュ配下でもDevToolsが高速に動作するよう、クエリとミューテーションの表示リストを仮想化し、繰り返し行われるキャッシュスキャンを削減しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434400257",
@@ -2253,10 +2706,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "5-106-0-dep-update",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.106.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434400210",
@@ -2270,10 +2733,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更が含まれていないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-106-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core のバージョンが 5.106.0 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434400172",
@@ -2287,10 +2760,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-106-0",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreのバージョンを5.106.0に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434400129",
@@ -2304,10 +2787,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#434400072",
@@ -2321,10 +2805,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431945960",
