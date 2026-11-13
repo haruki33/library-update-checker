@@ -1,5 +1,86 @@
 [
   {
+    "id": "petyosi/react-virtuoso#443018005",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.3",
+    "publishedAt": "2026-11-12T13:55:01Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.3",
+    "releaseNotes": "### Patch Changes\n\n- [#1569](https://github.com/petyosi/react-virtuoso/pull/1569) [`c057a21`](https://github.com/petyosi/react-virtuoso/commit/c057a21a326ac07c5b73056025ff7924a99e8b51) Thanks [@petyosi](https://github.com/petyosi)! - Render rows again in environments without layout, such as jsdom tests. The 0.6.2 hidden-ancestor guard skipped every resize entry when an element had no client rects, which jsdom reports for every element, so tables in jsdom tests rendered no rows. The guard now also requires the entry to report a zero size.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1569",
+        "category": "bugfix",
+        "title": "jsdom環境などでの行描画の不具合修正",
+        "summary": "jsdomテストなどのレイアウトが存在しない環境において、テーブルの行が描画されない不具合を修正しました。0.6.2で追加されたガード処理の判定条件を修正し、サイズが0と報告された場合のみスキップするように変更しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#442825956",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.22",
+    "publishedAt": "2026-11-12T11:02:35Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.22",
+    "releaseNotes": "### Patch Changes\n\n- [#1564](https://github.com/petyosi/react-virtuoso/pull/1564) [`0b7cd09`](https://github.com/petyosi/react-virtuoso/commit/0b7cd090fcbfd4c9a55e810831d91f54557a102e) Thanks [@KooYS](https://github.com/KooYS)! - Fix first-item offsets in lists with a gap so restoring state does not drift and index-zero scrolling respects explicit offsets and headers.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1564",
+        "category": "bugfix",
+        "title": "gapを設定したリストにおける最初のアイテムのオフセット修正",
+        "summary": "gapが指定されたリストにおいて、状態復元時のずれを防ぎ、インデックス0へのスクロール時に明示的なオフセットやヘッダーが適切に考慮されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#442825891",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.2",
+    "publishedAt": "2026-11-12T11:02:32Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.2",
+    "releaseNotes": "### Patch Changes\n\n- [#1565](https://github.com/petyosi/react-virtuoso/pull/1565) [`0a691e0`](https://github.com/petyosi/react-virtuoso/commit/0a691e02d33d000b7d43c280ce18652611d1d858) Thanks [@petyosi](https://github.com/petyosi)! - Keep the rows of a data table whose ancestor is hidden with `display: none`. The table no longer records zero sizes while hidden, so it renders its rows again when the ancestor shows, and development builds no longer throw a zero-size error.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースに伴うマイグレーション作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "1565",
+        "category": "bugfix",
+        "title": "祖先要素が display: none の場合のデータテーブル描画問題を修正",
+        "summary": "祖先要素が display: none で非表示の際、データテーブルがサイズ0として記録されないよう改善されました。これにより要素が再表示された際に行が正しくレンダリングされ、開発ビルドでのゼロサイズエラーの発生を防止します。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "react-hook-form/react-hook-form#441537273",
     "library": "React Hook Form",
     "repository": "react-hook-form/react-hook-form",
@@ -3345,10 +3426,92 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "互換性を損なう変更はないため、特別な移行手続きは不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12489",
+        "category": "bugfix",
+        "title": "サイレントキャンセル時の取得結果共有",
+        "summary": "query-coreにおいてサイレントキャンセルを跨いで取得結果を共有するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12481",
+        "category": "bugfix",
+        "title": "キャンセルされたストリームクエリのキャッシュ更新停止",
+        "summary": "query-coreにおいてキャンセルされたストリームクエリがキャッシュを更新しないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12480",
+        "category": "bugfix",
+        "title": "ミューテーション件数フィルタからのstatus除外",
+        "summary": "query-coreにおいてミューテーションカウントのフィルタからstatusを除外しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "11788",
+        "category": "bugfix",
+        "title": "onMutate後のミューテーション再開処理の修正",
+        "summary": "query-coreにおいてonMutate実行後に開始可能な一時停止中ミューテーションが正常に再開されるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12442",
+        "category": "bugfix",
+        "title": "throwOnError指定時のリフェッチ拒否ハンドリングの修正",
+        "summary": "query-coreのrefetchQueriesでthrowOnError使用時の一時停止中リフェッチの拒否を正常にハンドリングするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "10969",
+        "category": "bugfix",
+        "title": "addToEndにおける最大件数制限の修正",
+        "summary": "アイテム数が既に最大値を超えている場合、addToEndが結果を上限値に制限するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12447",
+        "category": "bugfix",
+        "title": "DOM専用VoidFunction型の置き換え",
+        "summary": "DOM環境依存のVoidFunction型の代わりに () => void を使用するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "10777",
+        "category": "bugfix",
+        "title": "shallowEqualObjectsの比較ロジック修正",
+        "summary": "キーの個数が一致していてもキーセットに差分がある場合に正しく判定されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12230",
+        "category": "bugfix",
+        "title": "購読開始前のObserverオプション設定",
+        "summary": "react-queryおよびpreact-queryにおいて、購読を開始する前にObserverオプションをセットするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12475",
+        "category": "other",
+        "title": "integrationsパッケージの構成見直しと名称変更",
+        "summary": "integrationsパッケージをアダプター単位でグループ化し、名前体系を統一しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431524107",
@@ -3470,10 +3633,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "マイグレーションは不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12230",
+        "category": "bugfix",
+        "title": "Activityツリー再表示時の非推奨クエリキーでのフェッチを修正",
+        "summary": "非表示中にクエリキーが変更された<Activity>ツリーを再表示する際、購読開始前にオブザーバーオプションを更新することで、変更前の古いキーで誤ってフェッチが実行される問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12480",
+        "category": "bugfix",
+        "title": "isMutating関連APIのフィルターからstatusを除外",
+        "summary": "QueryClient.isMutating、useIsMutating、およびinjectIsMutatingのフィルターからstatusパラメーターを除外しました。これらのAPIは常にstatusが'pending'のミューテーションのみをカウントします。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-query-core-5-105-2",
+        "category": "other",
+        "title": "@tanstack/query-coreのアップデート",
+        "summary": "@tanstack/query-coreを5.105.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#431523457",
@@ -3886,7 +4075,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-105-1",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係の更新",
+        "summary": "依存ライブラリ@tanstack/query-coreをバージョン5.105.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430497049",
@@ -3900,10 +4099,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "11373",
+        "category": "bugfix",
+        "title": "infiniteQueryOptions における initialData のオーバーロード判定の修正",
+        "summary": "initialData が undefined の可能性がある場合に適切なオーバーロードが選択されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12390",
+        "category": "bugfix",
+        "title": "isFetching 関連 API のフィルタから fetchStatus を除外",
+        "summary": "QueryClient.isFetching、useIsFetching、および injectIsFetching が受け取るフィルタから fetchStatus を除外しました。これらの API は常に fetchStatus が 'fetching' のクエリをカウントします。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-query-core-5-105-1",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "内部依存ライブラリである @tanstack/query-core がバージョン 5.105.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430497021",
@@ -3917,10 +4142,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12189",
+        "category": "bugfix",
+        "title": "lit-query の package.json 依存関係の修正",
+        "summary": "peerDependencies から '@tanstack/query-core' を削除し、'lit' を devDependencies に移動しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12390",
+        "category": "bugfix",
+        "title": "isFetching 関連 API のフィルターから fetchStatus を除外",
+        "summary": "QueryClient.isFetching、useIsFetching、injectIsFetching が受け取るフィルターから fetchStatus を除外しました。これらの API は常に fetchStatus が 'fetching' のクエリをカウントします。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-query-core",
+        "category": "other",
+        "title": "依存関係 @tanstack/query-core の更新",
+        "summary": "@tanstack/query-core を 5.105.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430497000",
@@ -3937,7 +4188,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12406",
+        "category": "performance",
+        "title": "オブザーバー通知時のトラッキングプロパティチェック最適化",
+        "summary": "オブザーバー通知処理でトラッキング対象のプロパティをチェックする際の一時的なメモリ割り当てを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12390",
+        "category": "bugfix",
+        "title": "isFetching 関連 API のフィルターから fetchStatus を除外",
+        "summary": "QueryClient.isFetching、useIsFetching、injectIsFetching で受け取るフィルターから fetchStatus を除外しました。これらの API は常に fetchStatus: 'fetching' のクエリをカウントします。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#430496979",
@@ -3954,7 +4223,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12409",
+        "category": "bugfix",
+        "title": "stable-query-clientルールの検出修正",
+        "summary": "アロー関数、関数式、JSX内で直接作成されたクライアントに対するstable-query-clientの検出を修正しました。state初期化子やネストされたヘルパー関数も正しく評価されます。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#430143474",
