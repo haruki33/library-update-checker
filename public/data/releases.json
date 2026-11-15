@@ -1,5 +1,196 @@
 [
   {
+    "id": "wojtekmaj/react-pdf#445660818",
+    "library": "react-pdf",
+    "repository": "wojtekmaj/react-pdf",
+    "version": "v11.1.0",
+    "publishedAt": "2026-11-14T23:11:14Z",
+    "url": "https://github.com/wojtekmaj/react-pdf/releases/tag/v11.1.0",
+    "releaseNotes": "## What's new?\n\n- Added loading, error, and no-data modifier class names to `Document`, `Page`, and `Thumbnail` for state-specific styling (#2120). Thanks, @luisangelrod!\n- Updated PDF.js to 6.5.438 (#2174).\n  - Accessibility improvements\n  - Annotation and form rendering improvements\n  - Font conversion improvements\n  - Image decoding improvements\n  - Pattern rendering improvements\n  - Performance improvements\n  - Text selection improvements\n\n## What's changed?\n\n- Improved documentation for legacy PDF.js builds and matching worker versions (#2161, #2174).\n- Updated Next.js examples (#2039). Thanks, @BetterAndBetterII!\n\n## Bug fixes\n\n- Fixed positioning of non-rotating annotations on rotated pages.\n- Fixed Vite asset copying examples and sample configuration for cMaps, WebAssembly modules, and standard fonts (#2164). Thanks, @Apu-Emdad!\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "feature-modifier-classnames",
+        "category": "feature",
+        "title": "状態指定クラス名の追加",
+        "summary": "Document、Page、Thumbnail コンポーネントに loading、error、no-data のモディファイアクラス名が追加され、状態に応じたスタイリングが可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "feature-pdfjs-update",
+        "category": "feature",
+        "title": "PDF.js 6.5.438 へのアップデート",
+        "summary": "PDF.js を v6.5.438 に更新し、アクセシビリティ、注釈・フォーム描画、フォント変換、画像デコード、パターン描画、パフォーマンス、テキスト選択などの各種改善が行われました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "doc-pdfjs-worker-matching",
+        "category": "other",
+        "title": "レガシー PDF.js ビルドと Worker バージョン設定ドキュメントの改善",
+        "summary": "レガシー PDF.js ビルドと対応する Worker バージョンの適合に関するドキュメントを改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "other-nextjs-examples",
+        "category": "other",
+        "title": "Next.js サンプルの更新",
+        "summary": "Next.js のサンプルコードを更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-annotation-positioning",
+        "category": "bugfix",
+        "title": "回転ページにおける注釈の位置修正",
+        "summary": "回転されたページ上に配置された非回転注釈の位置決めに関する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "bugfix-vite-asset-copying",
+        "category": "bugfix",
+        "title": "Vite 用のアセットコピー設定サンプルの修正",
+        "summary": "cMaps、WebAssembly モジュール、標準フォントの Vite アセットコピー例とサンプル設定を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#445472946",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/react-table-devtools@9.3.2",
+    "publishedAt": "2026-11-14T17:38:25Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/react-table-devtools%409.3.2",
+    "releaseNotes": "### Patch Changes\n\n- [#6662](https://github.com/TanStack/table/pull/6662) [`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9) - Raise minimum versions of runtime dependencies: `@tanstack/devtools-utils` ^0.7.2, `@tanstack/devtools-ui` ^0.7.2, `@tanstack/svelte-store` ^0.12.3, `@embroider/addon-shim` ^1.11.0, `solid-js` ^1.9.19, and `tslib` ^2.9.1\n- Updated dependencies [[`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9)]:\n  - @tanstack/table-devtools@9.3.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "6662",
+        "category": "other",
+        "title": "ランタイム依存関係の最小バージョン引き上げ",
+        "summary": "@tanstack/devtools-utils、@tanstack/devtools-ui、solid-js、tslib などのランタイム依存関係の最小バージョンが引き上げられました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "updated-dependencies-9-3-2",
+        "category": "other",
+        "title": "内部依存パッケージの更新",
+        "summary": "依存パッケージである @tanstack/table-devtools が 9.3.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#445472908",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/preact-table-devtools@9.3.2",
+    "publishedAt": "2026-11-14T17:38:22Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/preact-table-devtools%409.3.2",
+    "releaseNotes": "### Patch Changes\n\n- [#6662](https://github.com/TanStack/table/pull/6662) [`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9) - Raise minimum versions of runtime dependencies: `@tanstack/devtools-utils` ^0.7.2, `@tanstack/devtools-ui` ^0.7.2, `@tanstack/svelte-store` ^0.12.3, `@embroider/addon-shim` ^1.11.0, `solid-js` ^1.9.19, and `tslib` ^2.9.1\n- Updated dependencies [[`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9)]:\n  - @tanstack/table-devtools@9.3.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "6662",
+        "category": "other",
+        "title": "ランタイム依存関係の最小バージョンの引き上げ",
+        "summary": "@tanstack/devtools-utilsや@tanstack/devtools-ui、tslibなどのランタイム依存関係の最小バージョンが引き上げられました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-table-devtools",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/table-devtoolsがバージョン9.3.2に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#445472851",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/table-devtools@9.3.2",
+    "publishedAt": "2026-11-14T17:38:16Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/table-devtools%409.3.2",
+    "releaseNotes": "### Patch Changes\n\n- [#6662](https://github.com/TanStack/table/pull/6662) [`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9) - Raise minimum versions of runtime dependencies: `@tanstack/devtools-utils` ^0.7.2, `@tanstack/devtools-ui` ^0.7.2, `@tanstack/svelte-store` ^0.12.3, `@embroider/addon-shim` ^1.11.0, `solid-js` ^1.9.19, and `tslib` ^2.9.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行手順はありません。必要に応じて依存パッケージを最新に更新してください。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "6662",
+        "category": "other",
+        "title": "実行時依存関係の最小バージョンの引き上げ",
+        "summary": "@tanstack/devtools-utils, @tanstack/devtools-ui, @tanstack/svelte-store, @embroider/addon-shim, solid-js, tslib の最小バージョンを引き上げました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/table#445472791",
+    "library": "TanStack Table",
+    "repository": "TanStack/table",
+    "version": "@tanstack/ember-table@9.3.2",
+    "publishedAt": "2026-11-14T17:38:11Z",
+    "url": "https://github.com/TanStack/table/releases/tag/%40tanstack/ember-table%409.3.2",
+    "releaseNotes": "### Patch Changes\n\n- [#6662](https://github.com/TanStack/table/pull/6662) [`38ade3a`](https://github.com/TanStack/table/commit/38ade3a375c782ff3bd264b77b718a31ea9859e9) - Raise minimum versions of runtime dependencies: `@tanstack/devtools-utils` ^0.7.2, `@tanstack/devtools-ui` ^0.7.2, `@tanstack/svelte-store` ^0.12.3, `@embroider/addon-shim` ^1.11.0, `solid-js` ^1.9.19, and `tslib` ^2.9.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "6662",
+        "category": "other",
+        "title": "ランタイム依存関係の最小バージョンの引き上げ",
+        "summary": "@tanstack/devtools-utils、@tanstack/devtools-ui、@tanstack/svelte-store、@embroider/addon-shim、solid-js、およびtslibの最小要件バージョンが更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "eslint/eslint#444757995",
     "library": "ESLint",
     "repository": "eslint/eslint",
@@ -10217,14 +10408,74 @@
     "publishedAt": "2026-10-12T23:21:09Z",
     "url": "https://github.com/TanStack/router/releases/tag/release-2026-10-12-2321",
     "releaseNotes": "Release 2026-10-12 23:21\n\n## Changes\n\n### ⚠️ Breaking Changes\n\n- start: remove the deprecated inputValidator (#8694) (550f478810) by @schiller-manuel\n\n### Fix\n\n- start-plugin-core: preload transitive static imports and fix Rsbuild shared-chunk CSS (#8695) (4104b8ef11) by @LadyBluenotes\n- start-plugin-core: declare image and news namespaces in sitemap.xml (#8692) (f3d7ee3374) by @Sheraff\n- start-plugin-core: keep prerender-specific properties out of public pages.json (#8691) (19524ccdd7) by @Sheraff\n- router-generator: don't scaffold over a route file mid in-place save (#8664) (57bd1a92f9) by @Sheraff\n- router-plugin: remove redundant string excludes from the reference filter (#8655) (e66da18266) by @guru-irl\n\n### Chore\n\n- remove experimental Nitro v2 Vite plugin (#8537) (021e05da71) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/react-router@1.170.43\n- @tanstack/react-start@1.169.0\n- @tanstack/react-start-client@1.168.41\n- @tanstack/react-start-rsc@0.1.61\n- @tanstack/react-start-server@1.167.48\n- @tanstack/router-cli@1.167.42\n- @tanstack/router-core@1.171.36\n- @tanstack/router-generator@1.167.42\n- @tanstack/router-plugin@1.168.44\n- @tanstack/router-vite-plugin@1.167.44\n- @tanstack/solid-router@1.170.40\n- @tanstack/solid-start@1.169.0\n- @tanstack/solid-start-client@1.168.39\n- @tanstack/solid-start-server@1.167.46\n- @tanstack/start-client-core@1.170.36\n- @tanstack/start-plugin-core@1.171.51\n- @tanstack/start-server-core@1.169.41\n- @tanstack/start-static-server-functions@1.167.41\n- @tanstack/start-storage-context@1.167.38\n- @tanstack/vue-router@1.170.39\n- @tanstack/vue-start@1.169.0\n- @tanstack/vue-start-client@1.167.42\n- @tanstack/vue-start-server@1.167.46\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "非推奨となっていた inputValidator の削除に対応する必要があります。",
+      "steps": [
+        "`inputValidator` を使用しているコード箇所を確認し、推奨される最新のバリデーション実装に移行してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8694",
+        "category": "breaking",
+        "title": "非推奨の inputValidator の削除",
+        "summary": "start パッケージから非推奨だった inputValidator を削除しました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8695",
+        "category": "bugfix",
+        "title": "静的インポートのプリロードと Rsbuild 共有チャンク CSS の修正",
+        "summary": "start-plugin-core で透過的な静的インポートをプリロードし、Rsbuild の共有チャンク CSS を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8692",
+        "category": "bugfix",
+        "title": "sitemap.xml への image および news 名前空間の追加",
+        "summary": "start-plugin-core において sitemap.xml に image と news 名前空間を宣言するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8691",
+        "category": "bugfix",
+        "title": "公開用 pages.json からプリレンダー固有プロパティを除外",
+        "summary": "start-plugin-core において、プリレンダー専用のプロパティが公開用の pages.json に含まれないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8664",
+        "category": "bugfix",
+        "title": "保存中のルートファイル上書き防止",
+        "summary": "router-generator で、インプレース保存の途中にルートファイルを過剰に自動生成しないよう改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8655",
+        "category": "bugfix",
+        "title": "リファレンスフィルターの冗長な除外設定の削除",
+        "summary": "router-plugin のリファレンスフィルターから重複している文字列除外ルールを取り除きました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8537",
+        "category": "other",
+        "title": "実験的な Nitro v2 Vite プラグインの削除",
+        "summary": "実験的に提供されていた Nitro v2 用 Vite プラグインを削除しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#411070428",
@@ -10276,10 +10527,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "7588",
+        "category": "performance",
+        "title": "Startにおけるリクエストごとの処理の最適化",
+        "summary": "getNormalizedURLでURL入力のクローンを作成せずに参照するよう変更し、runWithStartContextがコールバックの結果をPromiseでラップせずそのまま返すように改善されました。これによりコールバック内での同期的な例外発生時には同期的に伝播するようになります。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#411070238",
@@ -10293,10 +10554,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1-167-41",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/start-client-core, @tanstack/react-start, @tanstack/solid-start の依存関係が更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#411070217",
@@ -10306,14 +10577,68 @@
     "publishedAt": "2026-10-12T23:20:29Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-server-core%401.169.41",
     "releaseNotes": "### Patch Changes\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Return 400 Bad Request for malformed percent-encoded request pathnames before running server entry callbacks. Preserve valid encoded paths and query handling.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Reduce request middleware overhead, reuse loaded entries and transport header requirements, and avoid unnecessary URL normalization for server functions. Preserve response helper writes made during body cancellation and SSR cleanup.\n\n    Avoid allocating absent middleware headers and reply context, and construct RPC redirects with their final response state. Preserve middleware accessor evaluation and the documented undefined value for absent `sendContext`.\n\n    Reduce synchronous server-function response overhead while preserving cancellation cleanup and middleware response mutations.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Keep streaming a page when request middleware returns a response that reads the page body, such as a copy made through a wrapped global `Response`, a copy in Bun, or a body piped through a transform. Start now disposes a replaced page stream only when nothing reads it. `transferResponseBodyOwnership` is removed: return the derived response directly.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Let request middleware read the body of a `HEAD` response, and strip it when the response leaves the pipeline. Start no longer applies `Content-Encoding`, `Content-Length`, or other framing headers set through response helpers to error bodies and serialized server-function replies that it builds itself. A response that middleware assigns to `result.response` is now disposed when the middleware returns another response.\n\n-   [#7588](https://github.com/TanStack/router/pull/7588) [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5) - Remove the built-in `useSession` API. Applications choose a session library, such as iron-session, and save or destroy sessions explicitly before returning or redirecting. Connect a cookie adapter through `getCookie` and `setCookie`, or append serialized cookies with `appendResponseHeader('set-cookie', cookie)`. Existing session cookies require a deliberate migration or signing in again with a new cookie name.\n\n    `createServerEntry` keeps the complete callback, including custom error handling, inside the request context and converts errors that escape it. The built-in entry still converts errors automatically. Raw `createStartHandler` handlers now rethrow the original error. For custom reporting, catch inside `createServerEntry`, then rethrow for default conversion or return `handleStartError(error)` to preserve response-helper status, headers, and cookies. Return an explicit `Response` when choosing a custom error payload.\n\n    Response helpers now apply consistently across server routes, SSR, server functions, redirects, errors, and middleware response replacements. Helper setters override returned values; cookie helpers preserve independent cookies and replace matching cookie identities. Use `appendResponseHeader('set-cookie', cookie)` when adding a serialized cookie without replacing other cookies. Changed responses receive copied headers and reuse the body stream, so applications should inspect the response returned by Start rather than relying on mutation of the original response.\n\n-   Updated dependencies \\[[`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-core@1.171.36\n    -   @tanstack/start-storage-context@1.167.38\n    -   @tanstack/start-client-core@1.170.36\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "high",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "組み込みのuseSession APIおよびtransferResponseBodyOwnership関数が削除されたため、外部セッションライブラリへの移行とコード修正が必要です。",
+      "steps": [
+        "iron-sessionなどのセッションライブラリを導入し、getCookie / setCookie や appendResponseHeader を用いて明示的にセッションの保持・破棄を行ってください。",
+        "transferResponseBodyOwnership の呼び出しを削除し、派生させた Response オブジェクトを直接返却するように変更してください。",
+        "カスタムエラー処理を行っている createStartHandler や createServerEntry の実装を確認し、必要に応じて handleStartError を使用またはリスタート用エラーを再スローしてください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "change-1",
+        "category": "bugfix",
+        "title": "不正なエンコードパスに対する400レスポンス返却",
+        "summary": "サーバーエントリコールバックの実行前に、不正にパーセントエンコードされたリクエストパスに対して400 Bad Requestを返すように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-2",
+        "category": "performance",
+        "title": "リクエストミドルウェアとサーバー関数のオーバーヘッド削減",
+        "summary": "不要なURL正規化やヘッダー割り当てを回避し、サーバー関数の同期レスポンスオーバーヘッドを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-3",
+        "category": "breaking",
+        "title": "transferResponseBodyOwnership の削除とストリーミング改善",
+        "summary": "ページストリーミング処理を改善し、不要になった transferResponseBodyOwnership 関数を削除しました。派生レスポンスは直接返却する必要があります。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "change-4",
+        "category": "bugfix",
+        "title": "HEADレスポンス処理およびフレーミングヘッダー適用の調整",
+        "summary": "ミドルウェアでのHEADレスポンスボディ読み取りに対応し、自作エラーやシリアライズ済みレスポンスに対する不要なフレーミングヘッダーの付与を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "change-5",
+        "category": "breaking",
+        "title": "組み込み useSession API の削除とレスポンスヘルパーの再設計",
+        "summary": "組み込みの useSession API を削除しました。また、createServerEntry / createStartHandler におけるエラーハンドリングおよびレスポンスヘルパーの統一的な適用処理を改修しました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "change-6",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/router-core, @tanstack/start-storage-context, @tanstack/start-client-core などの内部依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#411070113",
@@ -10327,10 +10652,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-router-plugin-1.168.44",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/router-pluginがバージョン1.168.44に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#411070026",
