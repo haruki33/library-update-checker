@@ -1,5 +1,59 @@
 [
   {
+    "id": "petyosi/react-virtuoso#445949850",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.23",
+    "publishedAt": "2026-11-15T09:43:11Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.23",
+    "releaseNotes": "### Patch Changes\n\n- [#1572](https://github.com/petyosi/react-virtuoso/pull/1572) [`8a7ff06`](https://github.com/petyosi/react-virtuoso/commit/8a7ff06e9ad5646b10c243182b06013b745edf9a) Thanks [@yuxino](https://github.com/yuxino)! - Prevent a list from jumping back to the bottom when scrolling up after an item shrinks.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "PR-1572",
+        "category": "bugfix",
+        "title": "アイテム縮小後のスクロール跳ね戻りバグ修正",
+        "summary": "アイテムサイズが縮小した後に上方向へスクロールした際、リストが最下部へ跳ね戻ってしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "mswjs/msw#445725469",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.6",
+    "publishedAt": "2026-11-15T01:11:48Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.6",
+    "releaseNotes": "## v3.0.6 (2026-11-15)\n\n### Bug Fixes\n\n- preserve optional path parameters and pipes in handler paths (#2838) (022df00e958a7e2f2c04d26da10438b844d727b3) @kettanaito",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このバージョンへの更新に伴う移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "msw-3-0-6-2838",
+        "category": "bugfix",
+        "title": "ハンドラーパスにおけるオプショナルパスパラメータとパイプの保持",
+        "summary": "ハンドラーパスに含まれるオプショナルなパスパラメータおよびパイプ記号が正しく保持されるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "wojtekmaj/react-pdf#445660818",
     "library": "react-pdf",
     "repository": "wojtekmaj/react-pdf",
@@ -10675,14 +10729,60 @@
     "publishedAt": "2026-10-12T23:20:06Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.51",
     "releaseNotes": "### Patch Changes\n\n-   [#8694](https://github.com/TanStack/router/pull/8694) [`550f478`](https://github.com/TanStack/router/commit/550f47881070c0558a87e1acce7f38fbc85b9549) - Remove the deprecated `.inputValidator()` from `createServerFn` and `createMiddleware`. Use `.validator()`, which takes the same validator.\n\n-   [#8692](https://github.com/TanStack/router/pull/8692) [`f3d7ee3`](https://github.com/TanStack/router/commit/f3d7ee3374c660e0fe82a03ac580a90ed2e2fa98) - Image and news sitemap entries are now emitted in their declared XML namespaces, so sitemaps with images or news are valid XML.\n\n-   [#8695](https://github.com/TanStack/router/pull/8695) [`4104b8e`](https://github.com/TanStack/router/commit/4104b8ef11498706b5059c5a915f2ae47ffbc5ba) - Walk the static import graph when building route preloads so Rolldown and Rsbuild builds preload every dependency chunk, and derive Rsbuild chunk imports from the module graph so shared chunks no longer attach unrelated route CSS to the SSR response.\n\n-   [#8696](https://github.com/TanStack/router/pull/8696) [`f243c61`](https://github.com/TanStack/router/commit/f243c61e95dae64fe04da4499c0c4ec44f26abae) - Require Vite 8 for Vite builds. Vite 7 is no longer supported.\n\n-   [#8691](https://github.com/TanStack/router/pull/8691) [`19524cc`](https://github.com/TanStack/router/commit/19524ccdd75870ce1db2f324518eeb3f23cc0f97) - Publish only validated public page fields in pages.json and sitemap.xml so prerender headers and other private page data, including extra data returned by `prerender.onSuccess`, stay private. Invalid sitemap metadata returned by `prerender.onSuccess` now fails the build instead of being written to sitemap.xml without validation.\n\n-   Updated dependencies \\[[`57bd1a9`](https://github.com/TanStack/router/commit/57bd1a92f9839af5bf773c3b36d039569fb1a41e), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`e66da18`](https://github.com/TanStack/router/commit/e66da18266859ab49e20a7b8c858232449ee5290), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5), [`94d6d8e`](https://github.com/TanStack/router/commit/94d6d8e49694e225cb07e2a6777633d08aeeb3c5)]:\n    -   @tanstack/router-generator@1.167.42\n    -   @tanstack/router-core@1.171.36\n    -   @tanstack/start-server-core@1.169.41\n    -   @tanstack/router-plugin@1.168.44\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "high",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "Vite 8へのアップグレードおよび非推奨APIの置き換えが必要です。",
+      "steps": [
+        "Viteビルドを利用している場合は、Vite 8へ更新してください（Vite 7はサポート対象外となりました）。",
+        "createServerFn および createMiddleware で使用されている非推奨の .inputValidator() を .validator() に置き換えてください。",
+        "prerender.onSuccess で返されるサイトマップメタデータが正しいか確認してください（不正なメタデータはビルドエラーになります）。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8694",
+        "category": "breaking",
+        "title": ".inputValidator() の削除",
+        "summary": "createServerFn および createMiddleware から非推奨の .inputValidator() が削除されました。.validator() へ変更してください。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "8692",
+        "category": "bugfix",
+        "title": "サイトマップXML名前空間の修正",
+        "summary": "画像およびニュースのサイトマップエントリが宣言されたXML名前空間で出力され、有効なXML形式で生成されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8695",
+        "category": "bugfix",
+        "title": "ルートプリロードとRsbuild共有チャンクの最適化",
+        "summary": "ルートプリロード生成時に静的インポートグラフを走査して依存チャンクを正しくプリロードするようにし、Rsbuild共有チャンクによる無関係なCSSのSSRレスポンス追加を防止しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8696",
+        "category": "breaking",
+        "title": "Vite 8の必須化",
+        "summary": "ViteビルドにおいてVite 8が必須になりました。Vite 7のサポートは終了しました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "8691",
+        "category": "bugfix",
+        "title": "pages.jsonおよびsitemap.xmlへの非公開データ露出防止",
+        "summary": "pages.jsonおよびsitemap.xmlには検証済みの公開フィールドのみが含まれるよう修正されました。不正なサイトマップメタデータはビルド時にエラーとなります。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#411005014",
@@ -10696,10 +10796,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順はありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "release-angular-query-5-0-0-rc-2",
+        "category": "other",
+        "title": "Angular Query パッケージの更新",
+        "summary": "@tanstack/angular-query および関連パッケージのバージョン 5.0.0-rc.2 がリリースされました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410837019",
@@ -10713,10 +10823,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "patch-deps-table-core-931",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/table-core)",
+        "summary": "@tanstack/table-core が 9.3.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410837003",
@@ -10730,10 +10850,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このバージョンへの更新において特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6620",
+        "category": "bugfix",
+        "title": "TypeScript宣言ファイルからの非公開宣言の除外",
+        "summary": "出力される.d.tsファイルからプライベートな型宣言を除外し、消費者が型宣言を出力する際にTS2883エラー（RangeValueなど）が発生する問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6626",
+        "category": "performance",
+        "title": "ツリーシェイキングの改善とメモ化処理の最適化",
+        "summary": "未使用の機能（列の並べ替え、ピン留め、行展開など）のコードがバンドルに含まれないよう改善し、最小構成でのバンドルサイズを削滅しました。また、不要なオンアップデートラッパーの削除によるメモリ割り当ての低減や、table.getOrderColumnsFn()の型定義追加を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410822884",
@@ -10747,10 +10885,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-9-3-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtools をバージョン 9.3.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410822779",
@@ -10767,7 +10915,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-table-devtools-9-3-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-devtoolsがバージョン9.3.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410822745",
@@ -10784,7 +10942,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6626-tree-shaking",
+        "category": "performance",
+        "title": "ツリーシェイキングの強化によるバンドルサイズの削減と最適化",
+        "summary": "未使用機能のコード同梱を回避するツリーシェイキングの強化によりバンドルサイズを縮小しました。また、メモ化APIでの不要なオブジェクト生成を排除しメモリ割り当てを最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "6626-types",
+        "category": "other",
+        "title": "table.getOrderColumnsFn() の型定義追加",
+        "summary": "列の並べ替え機能で使われている table.getOrderColumnsFn() メソッドをテーブルの型定義に明示的に追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410822614",
@@ -10798,10 +10974,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "6631",
+        "category": "bugfix",
+        "title": "AppTableコンテキストの更新処理の修正",
+        "summary": "useAppTableの所有者が新しいオプションや状態でレンダリングされた際にAppTableコンテキストを更新するように変更し、メモ化（React Compiler、useMemo、memo）されたAppTable要素の下でdataが置換された後に古い行が表示される不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-table-core-931",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/table-coreを9.3.1に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/table#410822572",
