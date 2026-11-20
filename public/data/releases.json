@@ -1,5 +1,596 @@
 [
   {
+    "id": "TanStack/query#451425594",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-19-1402",
+    "publishedAt": "2026-11-19T14:02:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-19-1402",
+    "releaseNotes": "Release 2026-11-19 14:02\n\n## Changes\n\n### Fix\n\n- query-core: require getNextPageParam for infinite query client methods (#12636) (0cf8f49e8) by @TkDodo\n\n### Chore\n\n- bump vite for examples to cover security release (#12625) (816a0aab2) by @DogPawHat\n- deps: oxlint 1.94.0, oxfmt 0.79.0, oxlint-tsgolint 7.0.2007 (#12615) (be6dce24d) by @DogPawHat\n- examples: declare 'eslint' and '@tanstack/eslint-config' in each example's 'devDependencies' (#12621) (7ed5ea920) by @sukvvon\n- {examples,integrations}: convert 'next.config.js' and 'astro.config.mjs' to TypeScript (#12620) (d3a00cba5) by @sukvvon\n\n\n## Packages\n\n- @tanstack/angular-query@5.108.1\n- @tanstack/angular-query-devtools@5.108.1\n- @tanstack/angular-query-persist-client@5.108.1\n- @tanstack/eslint-plugin-query@5.108.1\n- @tanstack/lit-query@0.2.41\n- @tanstack/preact-query@5.108.1\n- @tanstack/preact-query-devtools@5.108.1\n- @tanstack/preact-query-persist-client@5.108.1\n- @tanstack/query-async-storage-persister@5.108.1\n- @tanstack/query-broadcast-client-experimental@5.108.1\n- @tanstack/query-core@5.108.1\n- @tanstack/query-devtools@5.108.1\n- @tanstack/query-persist-client-core@5.108.1\n- @tanstack/query-sync-storage-persister@5.108.1\n- @tanstack/react-query@5.108.1\n- @tanstack/react-query-devtools@5.108.1\n- @tanstack/react-query-next-experimental@5.108.1\n- @tanstack/react-query-persist-client@5.108.1\n- @tanstack/solid-query@5.108.1\n- @tanstack/solid-query-devtools@5.108.1\n- @tanstack/solid-query-persist-client@5.108.1\n- @tanstack/svelte-query@6.4.4\n- @tanstack/svelte-query-devtools@6.4.4\n- @tanstack/svelte-query-persist-client@6.4.4\n- @tanstack/vue-query@5.108.1\n- @tanstack/vue-query-devtools@6.4.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更が含まれていないため、特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12636",
+        "category": "bugfix",
+        "title": "インフィニットクエリのクライアントメソッドで getNextPageParam を必須化",
+        "summary": "query-core において、インフィニットクエリのクライアントメソッド呼び出し時に getNextPageParam の定義が必要となるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12625",
+        "category": "other",
+        "title": "サンプルプロジェクトの Vite バージョン更新",
+        "summary": "セキュリティ修正に対応するため、サンプルで使用されている Vite を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12615",
+        "category": "other",
+        "title": "内部依存関係（linter/formatter）の更新",
+        "summary": "oxlint、oxfmt、oxlint-tsgolint などの内部開発依存パッケージを更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12621",
+        "category": "other",
+        "title": "サンプルプロジェクトの ESLint 依存関係の宣言追加",
+        "summary": "各サンプルプロジェクトの devDependencies に 'eslint' と '@tanstack/eslint-config' を明示的に追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12620",
+        "category": "other",
+        "title": "設定ファイルの TypeScript 移行",
+        "summary": "サンプルおよびインテグレーション内の next.config.js および astro.config.mjs を TypeScript に変換しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451425034",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.108.1",
+    "publishedAt": "2026-11-19T14:02:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.108.1\n  - @tanstack/react-query@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-5.108.1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424974",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.108.1",
+    "publishedAt": "2026-11-19T14:02:05Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-108-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-queryがバージョン5.108.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424910",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.108.1",
+    "publishedAt": "2026-11-19T14:02:02Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.108.1\n  - @tanstack/react-query@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-1",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424852",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.108.1",
+    "publishedAt": "2026-11-19T14:01:59Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1\n  - @tanstack/query-persist-client-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "0cf8f49-dep-update",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core がバージョン 5.108.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424796",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.108.1",
+    "publishedAt": "2026-11-19T14:01:56Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1\n  - @tanstack/query-persist-client-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-5-108-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424730",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.108.1",
+    "publishedAt": "2026-11-19T14:01:53Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.108.1\n  - @tanstack/query-persist-client-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "deps-update-5.108.1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core を 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424666",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.108.1",
+    "publishedAt": "2026-11-19T14:01:50Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.108.1\n  - @tanstack/query-devtools@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-1",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-devtools をバージョン 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424298",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.108.1",
+    "publishedAt": "2026-11-19T14:01:32Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-108-1",
+        "category": "other",
+        "title": "@tanstack/query-coreの更新",
+        "summary": "依存ライブラリの@tanstack/query-coreが5.108.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424246",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.108.1",
+    "publishedAt": "2026-11-19T14:01:29Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5.108.1",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "依存パッケージ @tanstack/query-core をバージョン 5.108.1 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#451424191",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.108.1",
+    "publishedAt": "2026-11-19T14:01:26Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#451424131",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.108.1",
+    "publishedAt": "2026-11-19T14:01:23Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#451424077",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.108.1",
+    "publishedAt": "2026-11-19T14:01:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#451424023",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.41",
+    "publishedAt": "2026-11-19T14:01:17Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.41",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01)]:\n  - @tanstack/query-core@5.108.1",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#451423898",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.108.1",
+    "publishedAt": "2026-11-19T14:01:11Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.108.1",
+    "releaseNotes": "### Patch Changes\n\n- [#12636](https://github.com/TanStack/query/pull/12636) [`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01) - Require `getNextPageParam` in the types for `queryClient.infiniteQuery`, the deprecated infinite query methods, and `usePrefetchInfiniteQuery`. If you omit `pages`, a stale query can still refetch multiple cached pages and needs the callback to compute their page parameters. Reuse the same `infiniteQueryOptions` you pass to `useInfiniteQuery` to supply the callback.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#451423845",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.108.1",
+    "publishedAt": "2026-11-19T14:01:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.108.1",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182801",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-11-19-1024",
+    "publishedAt": "2026-11-19T10:24:59Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-11-19-1024",
+    "releaseNotes": "Release 2026-11-19 10:24\n\n## Changes\n\n### Features\n\n- router-devtools: add a trustedTypesPolicy option (#8959) (bb11d90332) by @schiller-manuel\n\n### Fix\n\n- router-devtools-core: replace goober with a static stylesheet (#8954) (e75f0ffb2d) by @schiller-manuel\n- react-start-rsc: bump RSC bundler deps for RSC (#8919) (e7358c36d8) by @DogPawHat\n- start-plugin-core: restore the build of the Rsbuild virtual modules (#8907) (70bbd11025) by @Sheraff\n- start-plugin-core: Rsbuild manifests list only a route's own chunks (#8876) (c156097786) by @Sheraff\n- start-plugin-core: write Rsbuild virtual modules under the app's root, not the working directory (#8868) (df6ac30406) by @Sheraff\n- start-plugin-core: refuse custom server-fn ids that never worked over HTTP, deprecate the rest outside the unreserved set (#8858) (2ebc0f3586) by @Sheraff\n- start-plugin-core: find Start libraries from Vite's root, not the working directory (#8866) (3cc054c374) by @Sheraff\n\n### Performance\n\n- start-plugin-core: count imported modules once in the Rsbuild manifest pass (#8926) (0b6d4f3f6b) by @Sheraff\n\n### Refactor\n\n- router-devtools-core: migrate to Solid 2 (#8957) (30aaa94e7c) by @schiller-manuel\n\n### Chore\n\n- deps: update vite to 8.3.8 for GHSA-p4f5-76q4-ffq7 (#8955) (11b3bcb36d) by @DogPawHat\n- pnpm: upgrade to pnpm 12 (#8912) (113b1a1f08) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/react-router-devtools@1.167.4\n- @tanstack/react-start@1.169.7\n- @tanstack/react-start-rsc@0.1.68\n- @tanstack/router-devtools@1.167.4\n- @tanstack/router-devtools-core@1.168.4\n- @tanstack/solid-router-devtools@1.167.4\n- @tanstack/solid-start@1.169.7\n- @tanstack/start-plugin-core@1.172.0\n- @tanstack/vue-router-devtools@1.167.4\n- @tanstack/vue-start@1.169.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182645",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-devtools-core@1.168.4",
+    "publishedAt": "2026-11-19T10:24:51Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-devtools-core%401.168.4",
+    "releaseNotes": "### Patch Changes\n\n-   [#8957](https://github.com/TanStack/router/pull/8957) [`30aaa94`](https://github.com/TanStack/router/commit/30aaa94e7c8912d4e510ccb40af8cebaf4d01c39) - The devtools now use Solid 2 internally. They bundle their own copy of Solid, so apps are not affected by the Solid version.\n\n-   [#8954](https://github.com/TanStack/router/pull/8954) [`e75f0ff`](https://github.com/TanStack/router/commit/e75f0ffb2de05e6480a1214ee718fde477cd2052) - The devtools no longer use goober. Their styles are now a static stylesheet adopted into the document or shadow root the devtools render in, instead of a `<style>` element in `<head>`. This means:\n    -   The devtools are styled on pages with a Content Security Policy that blocks inline `<style>` elements, without a nonce.\n    -   Devtools rendered inside a shadow root are styled without passing `shadowDOMTarget`.\n    -   The devtools no longer write to the shared `#_goober` style element.\n    -   Browsers without adoptable stylesheets (before Safari 16.4 and Firefox 101) show the devtools unstyled.\n\n-   [#8959](https://github.com/TanStack/router/pull/8959) [`bb11d90`](https://github.com/TanStack/router/commit/bb11d90332edca7d897174546769622826431ee3) - Add a `trustedTypesPolicy` option, so the devtools render on pages that enforce `require-trusted-types-for 'script'`.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182592",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.169.7",
+    "publishedAt": "2026-11-19T10:24:48Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.169.7",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`0b6d4f3`](https://github.com/TanStack/router/commit/0b6d4f3f6b42e704555d9ff0014ddbf8b44f8e09), [`c156097`](https://github.com/TanStack/router/commit/c156097786b685db61f535d2779cb2a52a6af8aa), [`f870933`](https://github.com/TanStack/router/commit/f8709334ac3056d007e65bc146d94702e052434b), [`70bbd11`](https://github.com/TanStack/router/commit/70bbd11025143665ab5a391ddb44cb3917e4d2e3), [`df6ac30`](https://github.com/TanStack/router/commit/df6ac3040695ddf2ec2d5e8b4be8f63273a658a6), [`e7358c3`](https://github.com/TanStack/router/commit/e7358c36d8cde5275fc3c32cd5fd5bbf7ecc30f9), [`2ebc0f3`](https://github.com/TanStack/router/commit/2ebc0f35866fed7345e567cf7d0925ba3c0bcc65), [`3cc054c`](https://github.com/TanStack/router/commit/3cc054c3741d15e8cb6591b0954b315e0a2327a3)]:\n    -   @tanstack/start-plugin-core@1.172.0\n    -   @tanstack/react-start-rsc@0.1.68\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182431",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.172.0",
+    "publishedAt": "2026-11-19T10:24:39Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.172.0",
+    "releaseNotes": "### Minor Changes\n\n-   [#8858](https://github.com/TanStack/router/pull/8858) [`2ebc0f3`](https://github.com/TanStack/router/commit/2ebc0f35866fed7345e567cf7d0925ba3c0bcc65) - A server function id that a custom `serverFns.generateFunctionId` returns and that never worked over HTTP now fails the build, with an error naming the file, the function and the id: whitespace, a control or non-ASCII character, any of `\"`, `#`, `/`, `<`, `>`, `?`, `\\`, `^`, `` ` ``, `{`, `}`, the ids `.` and `..`, and a percent-encoding the server reads as another id (`%41`, lowercase hex, `%2E`) or rejects. The client puts the id in the URL unencoded, so a `#` or `?` ended the path and a `/` cut the id short (the call silently ran another server function of the file or none), and the other characters reached the server percent-encoded and matched no function. An id embedding a non-ASCII `functionName` is one of these. One case did work and now fails the build: such an id on a server function only SSR code called.\n\n    Ids with `%` or the other characters URLs allow (such as `:`, `@`, `+`, `=`, `,`, `;`, `!`, `*`, `(`, `)`, `&`, `'`, `|`, `[`, `]`) still build and reach their handler, with a deprecation warning (from the Vite plugin; the Rsbuild plugin does not print compiler warnings yet): the next major version rejects them, since proxies and servers may decode or rewrite them (hash the inputs instead, as the documented example does). An id with `'` no longer breaks the server bundle.\n\n### Patch Changes\n\n-   [#8926](https://github.com/TanStack/router/pull/8926) [`0b6d4f3`](https://github.com/TanStack/router/commit/0b6d4f3f6b42e704555d9ff0014ddbf8b44f8e09) - Rsbuild: the Start manifest pass that runs after every client compilation (builds and each dev update) reads an imported module's chunks once per compilation and counts the module once per importing chunk, instead of once per import connection. The manifest is unchanged; the pass takes about 40 % less time (on a 333-route app, tens of milliseconds less per HMR update).\n\n-   [#8876](https://github.com/TanStack/router/pull/8876) [`c156097`](https://github.com/TanStack/router/commit/c156097786b685db61f535d2779cb2a52a6af8aa) - Rsbuild: a route's client manifest entry lists only its own chunks and CSS. When two routes shared a module in a chunk of its own, each route's entry also listed the other route's chunk as a preload and its stylesheet.\n\n-   [#8890](https://github.com/TanStack/router/pull/8890) [`f870933`](https://github.com/TanStack/router/commit/f8709334ac3056d007e65bc146d94702e052434b) - fix: the Rsbuild RSC integration skips falsy entries in a rule's `use` array (Rspack's conditionally disabled loaders) instead of treating them as loaders.\n\n-   [#8907](https://github.com/TanStack/router/pull/8907) [`70bbd11`](https://github.com/TanStack/router/commit/70bbd11025143665ab5a391ddb44cb3917e4d2e3) - Rsbuild: fix the Rsbuild plugin build after two changes to its virtual modules crossed. Without this fix the package does not build, so no release could ship it. The Rsbuild dev manifest is written to its virtual module under the app's root.\n\n-   [#8868](https://github.com/TanStack/router/pull/8868) [`df6ac30`](https://github.com/TanStack/router/commit/df6ac3040695ddf2ec2d5e8b4be8f63273a658a6) - Rsbuild: Start writes its virtual modules under the app's root, not the working directory. An app built or served from another directory (`rsbuild build --root <app>` from a monorepo root) no longer fails with \"Module not found\" on the packages they import, such as RSC's serialization adapters.\n\n-   [#8866](https://github.com/TanStack/router/pull/8866) [`3cc054c`](https://github.com/TanStack/router/commit/3cc054c3741d15e8cb6591b0954b315e0a2327a3) - Vite: Start finds the Start libraries it bundles in the SSR build from Vite's root, not the working directory. A `vite build <app>` run from another directory (a monorepo root, a script) no longer leaves them external and uncompiled, where their server fns returned `undefined`.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182384",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.68",
+    "publishedAt": "2026-11-19T10:24:36Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.68",
+    "releaseNotes": "### Patch Changes\n\n-   [#8919](https://github.com/TanStack/router/pull/8919) [`e7358c3`](https://github.com/TanStack/router/commit/e7358c36d8cde5275fc3c32cd5fd5bbf7ecc30f9) - Raise the minimum RSC bundler peer dependencies to versions with the React Server Components fixes for GHSA-xqc2-xf4c-x3h3 (CVE-2026-126187, unauthenticated RCE) and GHSA-h3gv-c5rc-p453 (server function DoS):\n    -   `@vitejs/plugin-rsc` to `>=0.5.38` (GHSA-59pf-q495-3c99), which vendors a fixed `react-server-dom-webpack`.\n    -   `react-server-dom-rspack` to `>=0.1.1`, the first release built from React sources that include the fix.\n\n-   Updated dependencies \\[[`0b6d4f3`](https://github.com/TanStack/router/commit/0b6d4f3f6b42e704555d9ff0014ddbf8b44f8e09), [`c156097`](https://github.com/TanStack/router/commit/c156097786b685db61f535d2779cb2a52a6af8aa), [`f870933`](https://github.com/TanStack/router/commit/f8709334ac3056d007e65bc146d94702e052434b), [`70bbd11`](https://github.com/TanStack/router/commit/70bbd11025143665ab5a391ddb44cb3917e4d2e3), [`df6ac30`](https://github.com/TanStack/router/commit/df6ac3040695ddf2ec2d5e8b4be8f63273a658a6), [`2ebc0f3`](https://github.com/TanStack/router/commit/2ebc0f35866fed7345e567cf7d0925ba3c0bcc65), [`3cc054c`](https://github.com/TanStack/router/commit/3cc054c3741d15e8cb6591b0954b315e0a2327a3)]:\n    -   @tanstack/start-plugin-core@1.172.0\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182318",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/router-devtools@1.167.4",
+    "publishedAt": "2026-11-19T10:24:33Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/router-devtools%401.167.4",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`bb11d90`](https://github.com/TanStack/router/commit/bb11d90332edca7d897174546769622826431ee3)]:\n    -   @tanstack/react-router-devtools@1.167.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#451182138",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-router-devtools@1.167.4",
+    "publishedAt": "2026-11-19T10:24:24Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-router-devtools%401.167.4",
+    "releaseNotes": "### Patch Changes\n\n-   [#8959](https://github.com/TanStack/router/pull/8959) [`bb11d90`](https://github.com/TanStack/router/commit/bb11d90332edca7d897174546769622826431ee3) - Add a `trustedTypesPolicy` option, so the devtools render on pages that enforce `require-trusted-types-for 'script'`.\n\n-   Updated dependencies \\[[`30aaa94`](https://github.com/TanStack/router/commit/30aaa94e7c8912d4e510ccb40af8cebaf4d01c39), [`e75f0ff`](https://github.com/TanStack/router/commit/e75f0ffb2de05e6480a1214ee718fde477cd2052), [`bb11d90`](https://github.com/TanStack/router/commit/bb11d90332edca7d897174546769622826431ee3)]:\n    -   @tanstack/router-devtools-core@1.168.4\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#450840540",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-11-19-0325",
+    "publishedAt": "2026-11-19T03:25:38Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-11-19-0325",
+    "releaseNotes": "Release 2026-11-19 03:25\n\n## Changes\n\n### Features\n\n- solid-router: observe-tier attribution parity with @solidjs/router (solid-js rc.13) (#8574) (10152238ab) by @ryansolid\n- solid-router: consume server-function response metadata (#8461) (bf7f924b60) by @ryansolid\n- solid-router: declare navigations to Solid's observe tier (#8399) (9de3573f7f) by @ryansolid\n- solid-router: native SSR match transfer, hydration-claiming boot, provider-owned dispatch (#8213) (b445b89281) by @ryansolid\n- solid: named single-flight source + loadFlightTarget, the cache-agnostic trigger (#8192) (96f50d94a6) by @ryansolid\n- solid-router: delegate lazyRouteComponent to Solid 2's lazy() (#8081) (252caa8534) by @brenelz\n- solid-router: adopt Solid 2's useHead registry for head management (#8080) (b60b741a88) by @brenelz\n- integrate solid v2 query (#6938) (69da50126a) by @brenelz\n- upgrade outer-devtools-core to Solid 2.0 (868d2bfbc3) by @brenelz\n\n### Fix\n\n- solid-router-devtools: follow router state and prop changes in the Solid 2 wrappers (#8960) (f7b54c48fa) by @brenelz\n- e2e: type-check and run the new Solid streaming-ssr and dev-ssr-styles apps (8ce1f8be5a) by @brenelz\n- solid: repair e2e and ssr benchmarks after the main merge (7852ef5dfc) by @brenelz\n- react-start-rsc: bump RSC bundler deps for RSC (#8919) (e7358c36d8) by @DogPawHat\n- start-plugin-core: restore the build of the Rsbuild virtual modules (#8907) (70bbd11025) by @Sheraff\n- start-plugin-core: Rsbuild manifests list only a route's own chunks (#8876) (c156097786) by @Sheraff\n- start-plugin-core: write Rsbuild virtual modules under the app's root, not the working directory (#8868) (df6ac30406) by @Sheraff\n- start-plugin-core: refuse custom server-fn ids that never worked over HTTP, deprecate the rest outside the unreserved set (#8858) (2ebc0f3586) by @Sheraff\n- start-plugin-core: find Start libraries from Vite's root, not the working directory (#8866) (3cc054c374) by @Sheraff\n- solid-router: keep route-scoped accessors readable after navigation teardown (#7607) (81ee38eee5) by @brenelz\n- solid-router: preserve caller roles on enabled links (#8109) (d46b8ee00b) by @Fnine59\n- solid-router: don't install intent-preload listeners when preloading is off (#8179) (465d15a15d) by @russelgal\n- solid-router: respect server flag during development SSR (#8254) (a09b50cac1) by @brenelz\n- solid-router: remove router-owned Loading boundaries, ack startTransition at settlement (#8236) (cc25e82278) by @ryansolid\n- examples: migrate remaining legacy createEffect calls to Solid 2.0 two-phase signature (#8223) (c753d0a222) by @ryansolid\n- solid-start: single-flight (#8170) (a09f492463) by @birkskyum\n- solid-router: make the global loading boundary opt-in and server/client-symmetric (#8027) (41cffa00f3) by @ryansolid\n- solid-start: resolve SSR'd lazy() client assets via vite-plugin-solid's manifest (99756c0710) by @brenelz\n- solid-router: keep Transitioner hydration ids in sync between server and client (e021c7a352) by @brenelz\n- benchmarks: Solid v2 type fixes for new benchmark scenarios (2bb318bdcf) by @brenelz\n- benchmarks: adapt new solid benchmarks from main to Solid v2 (26d94d93fc) by @brenelz\n- lockfile: restore @rspack/binding@2.0.8 platform binaries (01dbb52d06) by @brenelz\n- solid-router: resolve defaultNotFoundComponent at render time to avoid hydration desync (#7734) (f9b0e57ce0) by @brenelz\n- update solid ssr benchmark types (3fe770ad17) by @brenelz\n- solid-router-v2: use TSR_DEFERRED_PROMISE (#7532) (ff136aaea6) by @birkskyum\n- solid-router: prevent HeadContent hydration warnings (#7510) (129d043f2d) by @brenelz\n- move HydrationScript to HeadContent (#7296) (67b46d7546) by @birkskyum\n- pin solid v2 beta.6 (#7171) (85eb16c6ad) by @birkskyum\n- adjust pre-release ranges to use caret (#7130) (72ebb55236) by @birkskyum\n- better rollupOptions/rolldownOptions handling (#6990) (56e28e47ce) by @birkskyum\n- use solid v2 query pre-release (#6977) (da2b8d9e96) by @birkskyum\n- vite 8 compat (dfd64e4a08)\n- Upgrade to solid v2 beta.3 (#6943) (c3e19322e3) by @brenelz\n- more tweaks (82e6d42fec) by @brenelz\n- test (0dc0cd0b9a) by @brenelz\n- down to one failure (faa3280b98) by @brenelz\n- solid-start basic e2e (187cc84d51) by @brenelz\n- e2e tests (d026877263) by @brenelz\n- work on solid v2  upgrade (59017534d8) by @brenelz\n- build (1021e6c7d8) by @brenelz\n\n### Performance\n\n- start-plugin-core: count imported modules once in the Rsbuild manifest pass (#8926) (0b6d4f3f6b) by @Sheraff\n- solid-router: proxy-free link props in the spread hot path (#7609) (51b4bd4f37) by @brenelz\n\n### Refactor\n\n- solid-router: move off sharedConfig onto Solid 2.0 public hydration APIs (solid-js rc.13) (#8569) (665e9d86a4) by @ryansolid\n- solid: retire solid-router-ssr-query — native channels carry the Router + Query pairing (#8193) (5a6935f2d5) by @ryansolid\n\n### Chore\n\n- solid: bump to solid-js 2.0.1 and @solidjs/vite-plugin 3.0.1 (#8946) (b81b95577d) by @brenelz\n- deps: update vite to 8.3.8 for GHSA-p4f5-76q4-ffq7 (#8955) (11b3bcb36d) by @DogPawHat\n- bump next to 16.4.6 for critical CVEs (2a5293f75b) by @brenelz\n- drop changesets merged in from main (7826dfa406) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.21 and @solidjs/vite-plugin 3.0.0-next.57 (#8885) (04e5e4d9e2) by @brenelz\n- pnpm: upgrade to pnpm 12 (#8912) (113b1a1f08) by @schiller-manuel\n- solid: bump to solid-js 2.0.0-rc.20 and @solidjs/vite-plugin 3.0.0-next.54 (#8837) (887caaf00c) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.16 and @solidjs/vite-plugin 3.0.0-next.51 (#8751) (acd08ef685) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.9 and @solidjs/vite-plugin 3.0.0-next.44 (#8467) (0dc3a9e3a5) by @brenelz\n- solid: bump @tanstack/solid-query to 6.0.0-rc.4 (#8465) (2946ffff52) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.8 and @solidjs/vite-plugin 3.0.0-next.43 (#8348) (8981eb7877) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.4 and @solidjs/vite-plugin 3.0.0-next.35 (#8189) (22fd367d81) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.2 and @solidjs/vite-plugin 3.0.0-next.32 (#8166) (eaa2e8d5ce) by @brenelz\n- e2e: migrate selective-ssr pending-min route to Solid 2 onSettled (5c400bc32e) by @brenelz\n- bump @tanstack/solid-query to 6.0.0-beta.5 (#7702) (e56bb22fc3) by @brenelz\n- upgrade solid-js to 2.0.0-beta.15 (#7688) (259efbe530) by @brenelz\n- remove unneeded changesets (144ddc748e) by @brenelz\n- fix tests (545866dd47) by @brenelz\n- sync main (440a0c9270)\n- solid router v2 pre main sync (#7517) (0a7e958c80) by @brenelz\n- bump to solid v2 beta 10 (#7284) (401272e306) by @brenelz\n- solid v2 beta 8 (#7241) (b3fedfcd4e) by @brenelz\n- upgrade Solid to v2 beta.7 (#7210) (2332fb26f9) by @brenelz\n- sync main to pre-release branch (#7106) (bb6285d888) by @birkskyum\n- merge main to solid v2 (#7105) (14d39cea3e) by @birkskyum\n- bump solid-query and vite-plugin-solid (#7103) (15652a590d) by @birkskyum\n- upgrade solid to 2.0.0-beta.5 (#7102) (bf15f69973) by @brenelz\n- bump to solidjs/signals 0.13.8 (#7076) (5cdb8115df) by @brenelz\n- bump solid-query to 6.0.0-alpha.2 (#7020) (e9e805b744) by @2wheeh\n- bump solid-query to 6.0.0-alpha.1 (#7016) (0fb8dfa67b) by @birkskyum\n- sync main branch with store refactor (#7001) (72323492af) by @brenelz\n- use solid-query v6.0.0-alpha.0 (#6989) (f5023cac3d) by @birkskyum\n- bump solid-refresh, fix deepEqual (#6910) (9ce7f97ef2) by @brenelz\n- more fixes (32b9dfb25a) by @brenelz\n\n### Build\n\n- bundle packages with rolldown (#6931) (b95b1061d3) by @birkskyum\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.11\n- @tanstack/solid-router-devtools@2.0.0-rc.9\n- @tanstack/solid-router-ssr-query@2.0.0-rc.9\n- @tanstack/solid-start@2.0.0-rc.11\n- @tanstack/solid-start-client@2.0.0-rc.11\n- @tanstack/solid-start-server@2.0.0-rc.11\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#450840186",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start@1.169.6",
+    "publishedAt": "2026-11-19T03:25:04Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start%401.169.6",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`3f22686`](https://github.com/TanStack/router/commit/3f226869e0af211ff7f1de5d7343e43462dbb101), [`559c7de`](https://github.com/TanStack/router/commit/559c7ded6e2a6eeda3f91c80d8c03f4cfeb9a206)]:\n    -   @tanstack/start-plugin-core@1.171.57\n    -   @tanstack/react-start-rsc@0.1.67\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#450840009",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/start-plugin-core@1.171.57",
+    "publishedAt": "2026-11-19T03:24:49Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.171.57",
+    "releaseNotes": "### Patch Changes\n\n-   [#8889](https://github.com/TanStack/router/pull/8889) [`3f22686`](https://github.com/TanStack/router/commit/3f226869e0af211ff7f1de5d7343e43462dbb101) - fix: Rsbuild dev SSR now includes stylesheet links when the server environment runs outside the build process, such as in workerd with `rsbuild-plugin-cloudflare`. The dev manifest is written into the server's manifest module instead of being stored on the build process's `globalThis`.\n\n-   [#8892](https://github.com/TanStack/router/pull/8892) [`559c7de`](https://github.com/TanStack/router/commit/559c7ded6e2a6eeda3f91c80d8c03f4cfeb9a206) - fix: Rsbuild dev with React Server Components includes stylesheet links in SSR again. The client and server compile concurrently, so the server's manifest module is now rebuilt once the client build is available, as in production builds.\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/router#450839951",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "@tanstack/react-start-rsc@0.1.67",
+    "publishedAt": "2026-11-19T03:24:43Z",
+    "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.67",
+    "releaseNotes": "### Patch Changes\n\n-   Updated dependencies \\[[`3f22686`](https://github.com/TanStack/router/commit/3f226869e0af211ff7f1de5d7343e43462dbb101), [`559c7de`](https://github.com/TanStack/router/commit/559c7ded6e2a6eeda3f91c80d8c03f4cfeb9a206)]:\n    -   @tanstack/start-plugin-core@1.171.57\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "remix-run/react-router#450329400",
     "library": "React Router",
     "repository": "remix-run/react-router",
