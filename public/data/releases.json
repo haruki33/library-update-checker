@@ -1,5 +1,459 @@
 [
   {
+    "id": "TanStack/query#452736680",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-20-1337",
+    "publishedAt": "2026-11-20T13:37:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-20-1337",
+    "releaseNotes": "Release 2026-11-20 13:37\n\n## Changes\n\n### Features\n\n- query-devtools: add a trustedTypesPolicy option (#12643) (fd62c9583) by @schiller-manuel\n\n### Fix\n\n- query-devtools: clear the PiP document without innerHTML (#12629) (f7abc938a) by @schiller-manuel\n- query-devtools: replace goober with a static stylesheet (#12628) (80d6c41fb) by @schiller-manuel\n\n\n## Packages\n\n- @tanstack/angular-query@5.108.2\n- @tanstack/angular-query-devtools@5.108.2\n- @tanstack/angular-query-persist-client@5.108.2\n- @tanstack/eslint-plugin-query@5.108.2\n- @tanstack/lit-query@0.2.42\n- @tanstack/preact-query@5.108.2\n- @tanstack/preact-query-devtools@5.108.2\n- @tanstack/preact-query-persist-client@5.108.2\n- @tanstack/query-async-storage-persister@5.108.2\n- @tanstack/query-broadcast-client-experimental@5.108.2\n- @tanstack/query-core@5.108.2\n- @tanstack/query-devtools@5.108.2\n- @tanstack/query-persist-client-core@5.108.2\n- @tanstack/query-sync-storage-persister@5.108.2\n- @tanstack/react-query@5.108.2\n- @tanstack/react-query-devtools@5.108.2\n- @tanstack/react-query-next-experimental@5.108.2\n- @tanstack/react-query-persist-client@5.108.2\n- @tanstack/solid-query@5.108.2\n- @tanstack/solid-query-devtools@5.108.2\n- @tanstack/solid-query-persist-client@5.108.2\n- @tanstack/svelte-query@6.4.5\n- @tanstack/svelte-query-devtools@6.4.5\n- @tanstack/svelte-query-persist-client@6.4.5\n- @tanstack/vue-query@5.108.2\n- @tanstack/vue-query-devtools@6.4.5\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "このリリースには破壊的変更は含まれておらず、移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12643",
+        "category": "feature",
+        "title": "query-devtools: trustedTypesPolicy オプションの追加",
+        "summary": "query-devtools に trustedTypesPolicy オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12629",
+        "category": "bugfix",
+        "title": "query-devtools: innerHTML を使用しない PiP ドキュメントのクリア",
+        "summary": "Picture-in-Picture (PiP) ドキュメントを innerHTML を使わずにクリアするように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12628",
+        "category": "bugfix",
+        "title": "query-devtools: goober を静的スタイルシートへ置換",
+        "summary": "query-devtools における goober 依存を静的スタイルシートに置き換えました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736378",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.108.2",
+    "publishedAt": "2026-11-20T13:37:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.108.2\n  - @tanstack/react-query@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-5-108-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.108.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736331",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.108.2",
+    "publishedAt": "2026-11-20T13:37:17Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query が 5.108.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736283",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.108.2",
+    "publishedAt": "2026-11-20T13:37:14Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- [#12628](https://github.com/TanStack/query/pull/12628) [`80d6c41`](https://github.com/TanStack/query/commit/80d6c41fb8ee27db069874d1be75646bf48a64b0) - The devtools no longer use goober. Their styles are a static stylesheet adopted into the document or shadow root the devtools render in, instead of a `<style>` element in `<head>`. This means:\n\n  - The devtools are styled on pages with a Content Security Policy that blocks inline `<style>` elements. `styleNonce` is no longer needed and is deprecated.\n  - Devtools rendered inside a shadow root are styled without passing `shadowDOMTarget`.\n  - With `shadowDOMTarget`, the settings menu is styled.\n  - The picture-in-picture window gets all styles, including ones the devtools use only after it opened.\n  - The devtools no longer write to the shared `#_goober` style element or set `window.__nonce__`.\n  - Browsers without adoptable stylesheets (before Safari 16.4 and Firefox 101) show the devtools unstyled.\n\n- [#12643](https://github.com/TanStack/query/pull/12643) [`fd62c95`](https://github.com/TanStack/query/commit/fd62c9583ec0e1fe65ae56542876f47184534930) - Add a `trustedTypesPolicy` option, so the devtools render on pages that enforce `require-trusted-types-for 'script'`.\n- Updated dependencies [[`f7abc93`](https://github.com/TanStack/query/commit/f7abc938a8a7fe801d78f4cfdb98d65422f276b2), [`80d6c41`](https://github.com/TanStack/query/commit/80d6c41fb8ee27db069874d1be75646bf48a64b0), [`fd62c95`](https://github.com/TanStack/query/commit/fd62c9583ec0e1fe65ae56542876f47184534930)]:\n  - @tanstack/query-devtools@5.108.2\n  - @tanstack/react-query@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "必須の移行作業はありません。styleNonceオプションは非推奨になりましたが、既存の設定をただちに削除する必要はありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12628",
+        "category": "feature",
+        "title": "スタイルライブラリgooberの廃止とadoptedStyleSheetsの採用",
+        "summary": "Devtoolsのスタイル管理がgooberからdocumentまたはShadow Rootに適用される静的スタイルシートに変更されました。インラインスタイルを制限するCSP環境やShadow DOMでのスタイリングが改善され、styleNonceオプションは非推奨となりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12643",
+        "category": "feature",
+        "title": "trustedTypesPolicy オプションの追加",
+        "summary": "require-trusted-types-for 'script' CSPディレクティブが有効な環境に対応するため、trustedTypesPolicyオプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-5-108-2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query をバージョン 5.108.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736241",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.108.2",
+    "publishedAt": "2026-11-20T13:37:11Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2\n  - @tanstack/query-persist-client-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "update-dependencies-5-108-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core を 5.108.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736192",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.108.2",
+    "publishedAt": "2026-11-20T13:37:08Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2\n  - @tanstack/query-persist-client-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreおよび@tanstack/query-persist-client-coreをバージョン5.108.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736130",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.108.2",
+    "publishedAt": "2026-11-20T13:37:05Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.108.2\n  - @tanstack/query-persist-client-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/preact-queryおよび@tanstack/query-persist-client-coreをバージョン5.108.2に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452736076",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.108.2",
+    "publishedAt": "2026-11-20T13:37:02Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- [#12628](https://github.com/TanStack/query/pull/12628) [`80d6c41`](https://github.com/TanStack/query/commit/80d6c41fb8ee27db069874d1be75646bf48a64b0) - The devtools no longer use goober. Their styles are a static stylesheet adopted into the document or shadow root the devtools render in, instead of a `<style>` element in `<head>`. This means:\n\n  - The devtools are styled on pages with a Content Security Policy that blocks inline `<style>` elements. `styleNonce` is no longer needed and is deprecated.\n  - Devtools rendered inside a shadow root are styled without passing `shadowDOMTarget`.\n  - With `shadowDOMTarget`, the settings menu is styled.\n  - The picture-in-picture window gets all styles, including ones the devtools use only after it opened.\n  - The devtools no longer write to the shared `#_goober` style element or set `window.__nonce__`.\n  - Browsers without adoptable stylesheets (before Safari 16.4 and Firefox 101) show the devtools unstyled.\n\n- [#12643](https://github.com/TanStack/query/pull/12643) [`fd62c95`](https://github.com/TanStack/query/commit/fd62c9583ec0e1fe65ae56542876f47184534930) - Add a `trustedTypesPolicy` option, so the devtools render on pages that enforce `require-trusted-types-for 'script'`.\n- Updated dependencies [[`f7abc93`](https://github.com/TanStack/query/commit/f7abc938a8a7fe801d78f4cfdb98d65422f276b2), [`80d6c41`](https://github.com/TanStack/query/commit/80d6c41fb8ee27db069874d1be75646bf48a64b0), [`fd62c95`](https://github.com/TanStack/query/commit/fd62c9583ec0e1fe65ae56542876f47184534930)]:\n  - @tanstack/query-devtools@5.108.2\n  - @tanstack/preact-query@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。ただし、styleNonceオプションを使用していた場合は不要となったため削除できます。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12628",
+        "category": "feature",
+        "title": "Devtoolsのスタイリング方式の変更とgooberの廃止",
+        "summary": "Devtoolsのスタイル管理がgooberからインポート可能な静的スタイルシートへ変更されました。インラインスタイルをブロックするCSP環境やShadow DOM内での表示が改善され、styleNonceは非推奨となりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12643",
+        "category": "feature",
+        "title": "trustedTypesPolicy オプションの追加",
+        "summary": "require-trusted-types-for 'script' をポリシーとして設定している環境向けに trustedTypesPolicy オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-5.108.2",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-devtools および @tanstack/preact-query が 5.108.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452735772",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.108.2",
+    "publishedAt": "2026-11-20T13:36:44Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-51082",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core を 5.108.2 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452735714",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.108.2",
+    "publishedAt": "2026-11-20T13:36:41Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-2",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "@tanstack/query-core のバージョンが 5.108.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#452735655",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.108.2",
+    "publishedAt": "2026-11-20T13:36:38Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- [#12629](https://github.com/TanStack/query/pull/12629) [`f7abc93`](https://github.com/TanStack/query/commit/f7abc938a8a7fe801d78f4cfdb98d65422f276b2) - The picture-in-picture window no longer clears its document with `innerHTML`, which pages that enforce Trusted Types block.\n\n- [#12628](https://github.com/TanStack/query/pull/12628) [`80d6c41`](https://github.com/TanStack/query/commit/80d6c41fb8ee27db069874d1be75646bf48a64b0) - The devtools no longer use goober. Their styles are a static stylesheet adopted into the document or shadow root the devtools render in, instead of a `<style>` element in `<head>`. This means:\n\n  - The devtools are styled on pages with a Content Security Policy that blocks inline `<style>` elements. `styleNonce` is no longer needed and is deprecated.\n  - Devtools rendered inside a shadow root are styled without passing `shadowDOMTarget`.\n  - With `shadowDOMTarget`, the settings menu is styled.\n  - The picture-in-picture window gets all styles, including ones the devtools use only after it opened.\n  - The devtools no longer write to the shared `#_goober` style element or set `window.__nonce__`.\n  - Browsers without adoptable stylesheets (before Safari 16.4 and Firefox 101) show the devtools unstyled.\n\n- [#12643](https://github.com/TanStack/query/pull/12643) [`fd62c95`](https://github.com/TanStack/query/commit/fd62c9583ec0e1fe65ae56542876f47184534930) - Add a `trustedTypesPolicy` option, so the devtools render on pages that enforce `require-trusted-types-for 'script'`.\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#452735588",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.108.2",
+    "publishedAt": "2026-11-20T13:36:35Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#452735546",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.108.2",
+    "publishedAt": "2026-11-20T13:36:32Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.108.2",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#452735482",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.42",
+    "publishedAt": "2026-11-20T13:36:29Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.42",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-core@5.108.2",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#452735391",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.108.2",
+    "publishedAt": "2026-11-20T13:36:23Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.108.2",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#452735341",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.108.2",
+    "publishedAt": "2026-11-20T13:36:20Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.108.2",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#452567518",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "react-virtuoso@4.18.24",
+    "publishedAt": "2026-11-20T10:43:55Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/react-virtuoso%404.18.24",
+    "releaseNotes": "### Patch Changes\n\n- [#1579](https://github.com/petyosi/react-virtuoso/pull/1579) [`7570571`](https://github.com/petyosi/react-virtuoso/commit/75705710bf78dd92d8f068355881c66d7a898513) Thanks [@charan-rathore](https://github.com/charan-rathore)! - Measure the current custom scroll parent in viewport updates queued before the parent changed, so an old resize cannot overwrite the current parent's offset and misalign a later scrollToIndex call.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "petyosi/react-virtuoso#452567482",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.4",
+    "publishedAt": "2026-11-20T10:43:52Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.4",
+    "releaseNotes": "### Patch Changes\n\n- [#1580](https://github.com/petyosi/react-virtuoso/pull/1580) [`273c87a`](https://github.com/petyosi/react-virtuoso/commit/273c87af3e87a7831a09dc200c97cd2b302376b1) Thanks [@petyosi](https://github.com/petyosi)! - Render the right columns when a table with `useWindowScroll` or `customScrollParent` scrolls sideways inside its own root.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#451425594",
     "library": "TanStack Query",
     "repository": "TanStack/query",
