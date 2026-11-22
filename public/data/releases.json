@@ -329,10 +329,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12629",
+        "category": "bugfix",
+        "title": "Picture-in-PictureウィンドウでのTrusted Types対応修正",
+        "summary": "Picture-in-PictureウィンドウでinnerHTMLを用いたドキュメントクリアを行わないように修正し、Trusted Typesが有効なページでの動作を改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12628",
+        "category": "bugfix",
+        "title": "スタイリング方式をgooberから採用型スタイルシートに変更",
+        "summary": "gooberへの依存を削除し、静的スタイルシートを採用型スタイルシート（Adopted Stylesheets）として適用するように変更しました。これによりCSPによるインラインスタイルの制限環境やShadow DOM内でのスタイル不具合が解決されました。なお、styleNonceオプションは非推奨となります。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12643",
+        "category": "feature",
+        "title": "trustedTypesPolicy オプションの追加",
+        "summary": "require-trusted-types-for 'script' セキュリティポリシーが有効な環境でDevtoolsを描画可能にするため、trustedTypesPolicy オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452735588",
@@ -346,10 +372,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "patch-deps-5.108.2-0",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.108.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452735546",
@@ -363,10 +399,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-query-core-5-108-2",
+        "category": "other",
+        "title": "@tanstack/query-coreの更新",
+        "summary": "依存関係である@tanstack/query-coreがバージョン5.108.2に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452735482",
@@ -380,10 +426,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dep-query-core-5-108-2",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.108.2 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452735391",
@@ -397,10 +453,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452735341",
@@ -414,10 +471,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "petyosi/react-virtuoso#452567518",
@@ -434,7 +492,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1579",
+        "category": "bugfix",
+        "title": "カスタムスクロール親要素変更時のスクロール位置計算の不具合修正",
+        "summary": "親要素が変更される前にキューされた表示領域の更新処理において、現在のカスタムスクロール親要素のオフセットを正しく測定するように修正し、過去のリサイズイベントによる位置の上書きや scrollTo のズレを防止しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "petyosi/react-virtuoso#452567482",
@@ -451,7 +519,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "1580",
+        "category": "bugfix",
+        "title": "useWindowScrollまたはcustomScrollParent使用時の横スクロール描画修正",
+        "summary": "useWindowScrollまたはcustomScrollParentを指定したテーブルが独自のルート内で横方向にスクロールした際、正しい列がレンダリングされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451425594",
@@ -767,10 +845,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "query-devtools-5-108-1-deps",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreが5.108.1に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451424131",
@@ -784,10 +872,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-51081",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-core が 5.108.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451424077",
