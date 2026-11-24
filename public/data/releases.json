@@ -1,5 +1,419 @@
 [
   {
+    "id": "TanStack/router#455943956",
+    "library": "TanStack Router",
+    "repository": "TanStack/router",
+    "version": "release-2026-11-23-2015",
+    "publishedAt": "2026-11-23T20:16:01Z",
+    "url": "https://github.com/TanStack/router/releases/tag/release-2026-11-23-2015",
+    "releaseNotes": "Release 2026-11-23 20:15\n\n## Changes\n\n### Fix\n\n- solid-router: stop Link strict-read warnings on spread reactive options (#8972) (850c460e4b) by @brenelz\n- solid-start: import only published start-server-core exports (#8973) (db632514f5) by @brenelz\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.12\n- @tanstack/solid-start@2.0.0-rc.12\n- @tanstack/solid-start-client@2.0.0-rc.12\n- @tanstack/solid-start-server@2.0.0-rc.12\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "8972",
+        "category": "bugfix",
+        "title": "solid-router: Link のリアクティブオプション展開時の strict-read 警告を抑制",
+        "summary": "Link コンポーネントにリアクティブなオプションを展開して渡した際に発生していた strict-read 警告を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8973",
+        "category": "bugfix",
+        "title": "solid-start: 公開されている start-server-core のエクスポートのみをインポートするように修正",
+        "summary": "solid-start において、start-server-core から公開パッケージに含まれているエクスポートのみをインポートするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455454495",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "release-2026-11-23-1318",
+    "publishedAt": "2026-11-23T13:19:00Z",
+    "url": "https://github.com/TanStack/query/releases/tag/release-2026-11-23-1318",
+    "releaseNotes": "Release 2026-11-23 13:18\n\n## Changes\n\n### Fix\n\n- query-core: clear GC timers for removed cache entries (#12683) (89bb0820d) by @TkDodo\n\n\n## Packages\n\n- @tanstack/angular-query@5.108.4\n- @tanstack/angular-query-devtools@5.108.4\n- @tanstack/angular-query-persist-client@5.108.4\n- @tanstack/eslint-plugin-query@5.108.4\n- @tanstack/lit-query@0.2.44\n- @tanstack/preact-query@5.108.4\n- @tanstack/preact-query-devtools@5.108.4\n- @tanstack/preact-query-persist-client@5.108.4\n- @tanstack/query-async-storage-persister@5.108.4\n- @tanstack/query-broadcast-client-experimental@5.108.4\n- @tanstack/query-core@5.108.4\n- @tanstack/query-devtools@5.108.4\n- @tanstack/query-persist-client-core@5.108.4\n- @tanstack/query-sync-storage-persister@5.108.4\n- @tanstack/react-query@5.108.4\n- @tanstack/react-query-devtools@5.108.4\n- @tanstack/react-query-next-experimental@5.108.4\n- @tanstack/react-query-persist-client@5.108.4\n- @tanstack/solid-query@5.108.4\n- @tanstack/solid-query-devtools@5.108.4\n- @tanstack/solid-query-persist-client@5.108.4\n- @tanstack/svelte-query@6.4.7\n- @tanstack/svelte-query-devtools@6.4.7\n- @tanstack/svelte-query-persist-client@6.4.7\n- @tanstack/vue-query@5.108.4\n- @tanstack/vue-query-devtools@6.4.7\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "12683",
+        "category": "bugfix",
+        "title": "削除されたキャッシュエントリのGCタイマーのクリア",
+        "summary": "query-coreにおいて、キャッシュから削除されたエントリのガベージコレクション（GC）タイマーを正しくクリアするように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455454110",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-persist-client@5.108.4",
+    "publishedAt": "2026-11-23T13:18:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-persist-client%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-persist-client-core@5.108.4\n  - @tanstack/react-query@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-persist-client-core および @tanstack/react-query をバージョン 5.108.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455454051",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-next-experimental@5.108.4",
+    "publishedAt": "2026-11-23T13:18:37Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-next-experimental%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/react-query@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-react-query-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-query のバージョンが 5.108.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453993",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query-devtools@5.108.4",
+    "publishedAt": "2026-11-23T13:18:34Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query-devtools%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/query-devtools@5.108.4\n  - @tanstack/react-query@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "patch-deps-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-devtools および @tanstack/react-query を 5.108.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453939",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-sync-storage-persister@5.108.4",
+    "publishedAt": "2026-11-23T13:18:31Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-sync-storage-persister%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4\n  - @tanstack/query-persist-client-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core を 5.108.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453889",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-async-storage-persister@5.108.4",
+    "publishedAt": "2026-11-23T13:18:28Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-async-storage-persister%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4\n  - @tanstack/query-persist-client-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core および @tanstack/query-persist-client-core をバージョン 5.108.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453801",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-persist-client@5.108.4",
+    "publishedAt": "2026-11-23T13:18:25Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-persist-client%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.108.4\n  - @tanstack/query-persist-client-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-query および @tanstack/query-persist-client-core をバージョン 5.108.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453682",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query-devtools@5.108.4",
+    "publishedAt": "2026-11-23T13:18:22Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query-devtools%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies []:\n  - @tanstack/preact-query@5.108.4\n  - @tanstack/query-devtools@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-5-108-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/preact-queryおよび@tanstack/query-devtoolsをバージョン5.108.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453123",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/react-query@5.108.4",
+    "publishedAt": "2026-11-23T13:18:04Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/react-query%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "89bb0820d8cf4b0ffd4819af6534c8c4057607db",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-coreをバージョン5.108.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "TanStack/query#455453061",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-persist-client-core@5.108.4",
+    "publishedAt": "2026-11-23T13:18:01Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-persist-client-core%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452957",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-devtools@5.108.4",
+    "publishedAt": "2026-11-23T13:17:58Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-devtools%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452901",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-broadcast-client-experimental@5.108.4",
+    "publishedAt": "2026-11-23T13:17:55Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-broadcast-client-experimental%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452850",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/preact-query@5.108.4",
+    "publishedAt": "2026-11-23T13:17:52Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/preact-query%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452768",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/lit-query@0.2.44",
+    "publishedAt": "2026-11-23T13:17:49Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/lit-query%400.2.44",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db)]:\n  - @tanstack/query-core@5.108.4",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452653",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/query-core@5.108.4",
+    "publishedAt": "2026-11-23T13:17:43Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.108.4",
+    "releaseNotes": "### Patch Changes\n\n- [#12683](https://github.com/TanStack/query/pull/12683) [`89bb082`](https://github.com/TanStack/query/commit/89bb0820d8cf4b0ffd4819af6534c8c4057607db) - Clear garbage collection timers when cache entries are removed and prevent later fetch or observer cleanup from starting new timers for those entries.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "TanStack/query#455452588",
+    "library": "TanStack Query",
+    "repository": "TanStack/query",
+    "version": "@tanstack/eslint-plugin-query@5.108.4",
+    "publishedAt": "2026-11-23T13:17:40Z",
+    "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/eslint-plugin-query%405.108.4",
+    "releaseNotes": "No changes in this release.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
+    "id": "mui/material-ui#455172873",
+    "library": "Material UI",
+    "repository": "mui/material-ui",
+    "version": "v9.6.0",
+    "publishedAt": "2026-11-23T09:34:56Z",
+    "url": "https://github.com/mui/material-ui/releases/tag/v9.6.0",
+    "releaseNotes": "A big thanks to the 37 contributors who made this release possible. Here are some highlights ✨:\r\n\r\n- 📐 Apply consistent, adjustable sizing across components with the experimental [`unstable_enhanceDensity`](https://mui.com/material-ui/experimental-api/enhance-density/) theme enhancer.\r\n- 🎯 Customize [focus visible](https://mui.com/material-ui/customization/focus-visible/) further with `focusVisible.insetOverrides` and `theme.applyFocusVisible`.\r\n- 🌐 Add the Uzbek (uz-UZ) locale.\r\n\r\n### `@mui/material@9.6.0`\r\n\r\n- Add `focusVisible.insetOverrides` and `theme.applyFocusVisible` (#49849) @siriwatknp\r\n- Fix `theme.vars` types for zIndex, opacity and action opacities (#49498) @drakeo338\r\n- Fix palette colors added in a second `createTheme()` call with CSS theme variables (#49829) @aarongarciah\r\n- Render the `theme.focusVisible` ring on inputs (#49495) @siriwatknp\r\n- [accordion] Inherit font in AccordionSummary (#49608) @siriwatknp\r\n- [autocomplete] Complete automatically highlighted options inline (#49457) @dvd233\r\n- [autocomplete] Fix `onInputChange` event and reason types (#49681) @sadatsajid\r\n- [autocomplete] Fix `React.ComponentProps<typeof Autocomplete>` spread type error (#49501) @LukasTy\r\n- [autocomplete] Fix TypeScript performance when using `slotProps` (#49720) @devbite-enzo\r\n- [autocomplete] Respect `readOnly` when clearing on Escape (#49857) @Marve10s\r\n- [autocomplete] Scroll highlighted option into view when options use CSS transform (#49781) @pavstev\r\n- [buttonbase] Let handlers set `defaultMuiPrevented` to skip built-in keyboard handling for the event (#49859) @silviuaavram\r\n- [buttongroup] Fix children remounting when siblings are added, removed or reordered (#49655) @sai6855\r\n- [chip] Improve default avatar text contrast (#49678) @iBreaker\r\n- [chip] Prevent keyboard deletion when disabled (#49606) @Marve10s\r\n- [focustrap] Keep focus on the last focused element when effects re-run (#49820) @LukasTy\r\n- [focustrap] Keep trap active after descendant focus (#49621) @Aditya-myst\r\n- [grid] Accept readonly arrays for responsive props (#49619) @Marve10s\r\n- [inputbase] Fix \"Maximum update depth exceeded\" error with a start adornment (#49811) @leshaduduk\r\n- [inputbase] Inject the autofill keyframes with the input styles (#49776) @Janpot\r\n- [l10n] Add Uzbek (uz-UZ) locale (#49869) @XakimovNosirbek\r\n- [menu] Fix MenuItem `autoFocus` and React 17 bugs (#49767) @LukasTy\r\n- [menulist] Fix infinite loop on ArrowUp when no item is focusable (#49478) @Dev-next-gen\r\n- [nativeselect] Remove the unused `iconOpen` class (#49587) @dualfroz\r\n- [popover] Respect `marginThreshold={null}` at the right edge (#49822) @Marve10s\r\n- [popper] Fix \"Maximum update depth exceeded\" error with React 19 (#49810) @leshaduduk\r\n- [select] Fix matching option values of a different type on click and autofill (#49588) @kkatalz\r\n- [select] Match theme variants on size for the icon and select slots (#49855) @Marve10s\r\n- [slider] Fix keyboard steps producing floating-point values (#49528) @kkatalz\r\n- [slider] Fix `onChangeCommitted` reporting a stale value (#49661) @kkatalz\r\n- [slider] Fix thumb lagging behind the pointer while dragging (#49545) @shivenaggarwal\r\n- [slider] Keep the decimals of a non-integer `min` when snapping to the step (#49726) @b84330808\r\n- [swipeabledrawer] Fix swipe gestures inside shadow DOM (#49787) @Ganeshguru5\r\n- [tablecell] Fix translucent border with `nativeColor` (#49748) @lazerg\r\n- [tablepagination] Fix the focus ring on the rows-per-page select and page buttons (#49596) @siriwatknp\r\n- [tabs] Fix indicator position and size when an ancestor is scaled (#49461) @maricastroc\r\n- [textfield] Fix outline gap without a label in Firefox (#49579) @dualfroz\r\n- [theme] Add `unstable_enhanceDensity` (#49870) @siriwatknp\r\n- [tooltip] Keep popper lifecycle handlers when `slotProps.transition` sets `onEnter` or `onExited` (#49790) @Marve10s\r\n\r\n### `@mui/system@9.6.0`\r\n\r\n- Fix named container queries (#49657) @b84330808\r\n- Fix `resolveBreakpointValues` return type for scalar values (#49682) @lazerg\r\n- Keep the alpha of `color()` colors in the color manipulators (#49744) @b84330808\r\n- Keep the unit of container query sizes (#49772) @b84330808\r\n- Set the CSP nonce on style tags created at runtime (#49602) @aarongarciah\r\n\r\n### `@mui/utils@9.6.0`\r\n\r\n- Fix roving tab index leaving no tab stop when the requested last item is disabled (#49769) @kkatalz\r\n\r\n### `@mui/styled-engine@9.6.0`\r\n\r\n- Preserve prop filtering for styled wrappers in `@mui/styled-engine` and `@mui/styled-engine-sc` (#49656) @Marve10s\r\n\r\n### `@mui/styled-engine-sc@9.6.0`\r\n\r\n- Preserve independent `sx` with styled-components (#49819) @henricop\r\n\r\n### `@mui/private-theming@9.6.0`\r\n\r\n- Remove the nested theme marker (#49613) @Marve10s\r\n\r\n### `@mui/codemod@9.6.0`\r\n\r\n- Fix CLI crash with yargs 18 (#49643) @jeltehomminga\r\n- Fix `v5.0.0/top-level-imports` and `v5.0.0/path-imports` outside the package (#49760) @LukasTy\r\n- [grid] Keep JSX spreads when removing Grid `item` and `zeroMinWidth` (#49789) @Marve10s\r\n\r\n### Docs\r\n\r\n- Clarify Transfer List is a composition example (#49686) @canakyuz\r\n- Fix implicit `any` in crud-dashboard `useDialogs` under typescript@next (#49824) @LukasTy\r\n- Replace deprecated APIs in documentation (#49463) @brijeshb42\r\n- [autocomplete] Document how to keep option types with `styled()` (#49532) @mitulkheni\r\n- [autocomplete][lists] Fix a11y and keyboard scrolling in react-window virtualization demos (#49667) @github-actions[bot]\r\n- [drawer] Document `allowSwipeInChildren` for interactive swipeable edges (#49404) @LanguidSquid\r\n- [examples] Add Next.js App Router + Tailwind CSS v4 example (#49662) @joelng25\r\n- [examples] Use stable MUI releases in v9 Next.js Tailwind example (#49664) @sai6855\r\n- [material-icons] Make outline-only icons searchable (#49699) @iBreaker\r\n- [material-ui] Fix the Pages Router setup in the CSS layers guide (#49605) @aarongarciah\r\n- [radio] Use fieldset and legend for radio group labels (#49791) @maksimgm\r\n- [stepper] Don't focus the vertical stepper's Continue button on mount (#49851) @aarongarciah\r\n- [textfield] Apply visible theme overrides in dark mode (#49782) @silviuaavram\r\n- [textfield] Document the autofill `box-shadow` theme token (#49700) @Seybel\r\n\r\n### Core\r\n\r\n- [code-infra] Bump Next.js to 16.4.3 (#49618) @Janpot\r\n- [code-infra] Enable consistent type imports (#49609) @Janpot\r\n- [code-infra] Fail API docs generation on undocumented props, slots, and classes (#49770) @Janpot\r\n- [code-infra] Run React 17 tests nightly (#49823) @LukasTy\r\n- [core] Document and test the TypeScript 5 support policy (#49465) @LukasTy\r\n- [docs-infra] Make inline code follow its context (#49616) @Janpot\r\n- [docs-infra] Space only a link's own trailing icon (#49817) @aarongarciah\r\n- [infra] Remove `engines.node` from UI packages (#49466) @Janpot\r\n- [test] Add render benchmarks (#49541) @Janpot\r\n- [test] Re-enable Firefox scroll tests fixed in Vitest 5 (#49677) @ZeeshanTamboli\r\n- [test] Retry e2e-website tests on CI (#49645) @LukasTy\r\n- [test] Run the visual regression browser in headless mode (#49768) @LukasTy\r\n- [test][circularprogress] Add axe tests and WCAG conformance report (#49520) @rohits2501\r\n- [test][l10n] Test locales through the theme (#49808) @maksimgm\r\n- [test][pagination] Test ellipses with zero boundary and sibling counts (#49595) @lprnmns\r\n\r\nAll contributors of this release in alphabetical order: @aarongarciah, @Aditya-myst, @b84330808, @brijeshb42, @canakyuz, @Dev-next-gen, @devbite-enzo, @drakeo338, @dualfroz, @dvd233, @Ganeshguru5, @github-actions[bot], @henricop, @iBreaker, @Janpot, @jeltehomminga, @joelng25, @kkatalz, @LanguidSquid, @lazerg, @leshaduduk, @lprnmns, @LukasTy, @maksimgm, @maricastroc, @Marve10s, @mitulkheni, @pavstev, @rohits2501, @sadatsajid, @sai6855, @Seybel, @shivenaggarwal, @silviuaavram, @siriwatknp, @XakimovNosirbek, @ZeeshanTamboli",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "TanStack/query#454717476",
     "library": "TanStack Query",
     "repository": "TanStack/query",
