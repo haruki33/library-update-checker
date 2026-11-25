@@ -1,5 +1,41 @@
 [
   {
+    "id": "remix-run/react-router#457182338",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@8.5.3",
+    "publishedAt": "2026-11-24T18:38:25Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%408.5.3",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/main/CHANGELOG.md#v853",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行手順に関する記載はありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "remix-run/react-router#457140795",
+    "library": "React Router",
+    "repository": "remix-run/react-router",
+    "version": "react-router@7.18.7",
+    "publishedAt": "2026-11-24T18:01:03Z",
+    "url": "https://github.com/remix-run/react-router/releases/tag/react-router%407.18.7",
+    "releaseNotes": "See the changelog for release notes: https://github.com/remix-run/react-router/blob/v7/CHANGELOG.md#v7187",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "リリースノートに詳細な変更内容が含まれていないため、特別な移行作業は必要ありません。",
+      "steps": []
+    },
+    "changes": [],
+    "aiAnalyzed": true
+  },
+  {
     "id": "TanStack/router#455943956",
     "library": "TanStack Router",
     "repository": "TanStack/router",
@@ -289,10 +325,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-4",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "依存ライブラリ@tanstack/query-coreが5.108.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452957",
@@ -306,10 +352,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "query-devtools-5-108-4-dep-update",
+        "category": "other",
+        "title": "依存関係の更新 (@tanstack/query-core)",
+        "summary": "@tanstack/query-core への依存関係が 5.108.4 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452901",
@@ -326,7 +382,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-query-core-5.108.4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-coreが5.108.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452850",
@@ -343,7 +409,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-4",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "@tanstack/query-coreの依存関係が5.108.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452768",
@@ -357,10 +433,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "lit-query-0-2-44-dep-update",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/query-coreがバージョン5.108.4に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452653",
@@ -374,10 +460,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12683",
+        "category": "bugfix",
+        "title": "キャッシュ削除時のガベージコレクションタイマーの削除",
+        "summary": "キャッシュエントリが削除された際にガベージコレクションタイマーをクリアし、その後のフェッチやオブザーバーのクリーンアップ処理によって新しいタイマーが開始されるのを防ぐように修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#455452588",
@@ -391,10 +487,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "mui/material-ui#455172873",
@@ -408,10 +505,68 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "enhance-density",
+        "category": "feature",
+        "title": "unstable_enhanceDensity テーマエンハンサーの追加",
+        "summary": "コンポーネント全体で一貫したサイズ調整を行える実験的なテーマエンハンサー API が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "focus-visible-customization",
+        "category": "feature",
+        "title": "focusVisible のカスタマイズ機能強化",
+        "summary": "focusVisible.insetOverrides および theme.applyFocusVisible が追加され、フォーカス表示のカスタマイズ性が向上しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "uzbek-locale",
+        "category": "feature",
+        "title": "ウズベク語 (uz-UZ) ロケールの追加",
+        "summary": "@mui/material のローカライゼーションにウズベク語 (uz-UZ) が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "material-component-bugfixes",
+        "category": "bugfix",
+        "title": "@mui/material 各コンポーネントの不具合修正と型改善",
+        "summary": "Autocomplete, Slider, InputBase, Select, FocusTrap, TablePagination などの各種コンポーネントにおけるイベントハンドリング、アクセシビリティ、TypeScript 型定義、スタイリングのバグが修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "system-fixes",
+        "category": "bugfix",
+        "title": "@mui/system のコンテナクエリやカラー・CSP修正",
+        "summary": "名前付きコンテナクエリ、ブレイクポイント戻り値型、カラーマニピュレーターのアルファ値保持、実行時スタイルタグへの CSP nonce 設定が修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "styled-engine-fixes",
+        "category": "bugfix",
+        "title": "@mui/styled-engine のプロパティフィルタリングと sx の修正",
+        "summary": "styled ラッパーにおけるプロパティフィルタリングの維持および styled-components 利用時の独立した sx プロパティの保持が改善されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "codemod-fixes",
+        "category": "bugfix",
+        "title": "@mui/codemod の不具合修正",
+        "summary": "yargs 18 での CLI クラッシュ修正、パッケージ外インポートの変換修正、Grid の item/zeroMinWidth 削除時の JSX スプレッド保持の修正が行われました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454717476",
