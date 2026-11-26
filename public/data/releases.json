@@ -1,5 +1,188 @@
 [
   {
+    "id": "mswjs/msw#458827859",
+    "library": "MSW",
+    "repository": "mswjs/msw",
+    "version": "v3.0.8",
+    "publishedAt": "2026-11-26T01:12:43Z",
+    "url": "https://github.com/mswjs/msw/releases/tag/v3.0.8",
+    "releaseNotes": "## v3.0.8 (2026-11-26)\n\n### Bug Fixes\n\n- reset generators on `.resetHandlers()` (#2841) (a800c3bf707ede81ce05782e972856faf796ab38) @kettanaito",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "fix-reset-generators-on-reset-handlers",
+        "category": "bugfix",
+        "title": ".resetHandlers() 実行時のジェネレータリセット機能の修正",
+        "summary": ".resetHandlers() を呼び出した際にジェネレータの状態が正しくリセットされるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitest-dev/vitest#458034403",
+    "library": "Vitest",
+    "repository": "vitest-dev/vitest",
+    "version": "v5.1.2",
+    "publishedAt": "2026-11-25T11:42:58Z",
+    "url": "https://github.com/vitest-dev/vitest/releases/tag/v5.1.2",
+    "releaseNotes": "### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes\n\n- Report global setup errors instead of &quot;no test files&quot; &nbsp;-&nbsp; by @jszumski and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/12031 [<samp>(b7572)</samp>](https://github.com/vitest-dev/vitest/commit/b7572c1e6)\n- Warn when projects attach the same file &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12043 [<samp>(5f884)</samp>](https://github.com/vitest-dev/vitest/commit/5f8847345)\n- **browser**:\n  - Don&#39;t fail trace when locator has no match for non-playwright providers &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/11975 [<samp>(f0500)</samp>](https://github.com/vitest-dev/vitest/commit/f05003327)\n  - Save failure screenshots per instance &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12042 [<samp>(e0e8e)</samp>](https://github.com/vitest-dev/vitest/commit/e0e8e0000)\n  - Mock assets and computed dynamic imports &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/11954 [<samp>(c6ad9)</samp>](https://github.com/vitest-dev/vitest/commit/c6ad97dec)\n- **cli**:\n  - Disallow --changed in vitest related &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12038 [<samp>(b3a80)</samp>](https://github.com/vitest-dev/vitest/commit/b3a803b1f)\n- **coverage**:\n  - Prevent duplicate metrics caused by source map end column differences &nbsp;-&nbsp; by @AriPerkkio in https://github.com/vitest-dev/vitest/issues/12040 [<samp>(45d19)</samp>](https://github.com/vitest-dev/vitest/commit/45d199c58)\n- **deps**:\n  - Update all non-major dependencies &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12050 [<samp>(ff6b4)</samp>](https://github.com/vitest-dev/vitest/commit/ff6b4275f)\n- **mocker**:\n  - Transform a factory-mocked module once &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12027 [<samp>(8b0ca)</samp>](https://github.com/vitest-dev/vitest/commit/8b0ca603a)\n- **pool**:\n  - Handle failed forks worker start on bun &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12039 [<samp>(4aec8)</samp>](https://github.com/vitest-dev/vitest/commit/4aec89426)\n- **snapshot**:\n  - Remove new snapshots of a failed retry &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12052 [<samp>(21238)</samp>](https://github.com/vitest-dev/vitest/commit/2123874a4)\n- **ui**:\n  - Ensure `detailsPosition: bottom` for auto-opened trace view &nbsp;-&nbsp; by @hi-ogawa and **Claude Opus 5.5** in https://github.com/vitest-dev/vitest/issues/12016 [<samp>(366ac)</samp>](https://github.com/vitest-dev/vitest/commit/366ac633b)\n\n### &nbsp;&nbsp;&nbsp;🏎 Performance\n\n- Read external source maps once per run &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12106 [<samp>(b5a55)</samp>](https://github.com/vitest-dev/vitest/commit/b5a553395)\n- **expect**: Reuse the key array in deep equality &nbsp;-&nbsp; by @camc314 in https://github.com/vitest-dev/vitest/issues/12104 [<samp>(f88ab)</samp>](https://github.com/vitest-dev/vitest/commit/f88ab6cc3)\n- **mocker**: Find dynamic imports with es-module-lexer &nbsp;-&nbsp; by @sheremet-va in https://github.com/vitest-dev/vitest/issues/12028 [<samp>(5812e)</samp>](https://github.com/vitest-dev/vitest/commit/5812ec58f)\n\n##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/vitest-dev/vitest/compare/v5.1.1...v5.1.2)",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "破壊的変更はないため、特別な移行手順は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "b7572",
+        "category": "bugfix",
+        "title": "グローバルセットアップエラーの適切な報告",
+        "summary": "グローバルセットアップで発生したエラーが「no test files」と報告される不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "5f884",
+        "category": "bugfix",
+        "title": "同一ファイルアタッチ時の警告追加",
+        "summary": "複数のプロジェクトが同じファイルをアタッチした際に警告を出力するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f0500",
+        "category": "bugfix",
+        "title": "ブラウザ: 非Playwright環境でのトレース処理エラー防止",
+        "summary": "Playwright以外のプロバイダー利用時に、ロケーターに一致する要素がない場合でもトレースが失敗しないよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "e0e8e",
+        "category": "bugfix",
+        "title": "ブラウザ: インスタンスごとの失敗スクリーンショット保存",
+        "summary": "テスト失敗時のスクリーンショットをインスタンスごとに保存するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "c6ad9",
+        "category": "bugfix",
+        "title": "ブラウザ: アセットおよび動的インポートのモック改善",
+        "summary": "アセットファイルや動的に計算されたインポートのモック処理に対応しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b3a80",
+        "category": "bugfix",
+        "title": "CLI: vitest related での --changed オプションの不許可",
+        "summary": "vitest related コマンドにおいて --changed オプションの使用を禁止するようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "45d19",
+        "category": "bugfix",
+        "title": "カバレッジ: ソースマップ終了列差異による重複カウント防止",
+        "summary": "ソースマップの終了列の違いによってカバレッジメトリクスが重複して集計される不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "ff6b4",
+        "category": "bugfix",
+        "title": "依存関係の更新",
+        "summary": "マイナー・パッチレベルの依存パッケージをすべて最新に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8b0ca",
+        "category": "bugfix",
+        "title": "モッカー: ファクトリでモックしたモジュールの変換回数制限",
+        "summary": "ファクトリ関数でモックされたモジュールが複数回変換されないよう1回に制限しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "4aec8",
+        "category": "bugfix",
+        "title": "プール: Bun環境でのフォークワーカー起動失敗のハンドリング",
+        "summary": "Bun実行環境においてフォークワーカーの起動失敗を適切に処理できるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "21238",
+        "category": "bugfix",
+        "title": "スナップショット: 再試行失敗時の新規スナップショット削除",
+        "summary": "リトライ時に生成された新しいスナップショットが失敗した際、それを削除するように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "366ac",
+        "category": "bugfix",
+        "title": "UI: 自動オープン時のトレースビューの表示位置維持",
+        "summary": "自動的に開かれたトレースビューの表示位置が detailsPosition: bottom になるよう確実に設定しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b5a55",
+        "category": "performance",
+        "title": "外部ソースマップの読み込み最適化",
+        "summary": "実行ごとに外部ソースマップを1度だけ読み込むように変更し、パフォーマンスを向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f88ab",
+        "category": "performance",
+        "title": "expect: 深い同値性比較でのキー配列再利用",
+        "summary": "深層比較（deep equality）処理時にキーの配列を再利用することで処理速度を向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "5812e",
+        "category": "performance",
+        "title": "モッカー: es-module-lexerを用いた動的インポート探索の高速化",
+        "summary": "es-module-lexer を使用して動的インポートを高速に検索・検出するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#457680861",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.4.0-beta.2",
+    "publishedAt": "2026-11-25T05:13:48Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0-beta.2",
+    "releaseNotes": "### Features\n\n* add plugin name to hook errors ([#24107](https://github.com/vitejs/vite/issues/24107)) ([40475e5](https://github.com/vitejs/vite/commit/40475e51e785e470b09a67b23d66487649b32226))\n* add plugin name to module hook errors ([#24151](https://github.com/vitejs/vite/issues/24151)) ([e1e1ac8](https://github.com/vitejs/vite/commit/e1e1ac831a5f8e5259287796858a854eb2326312))\n\n### Bug Fixes\n\n* close server on failed start (fix [#23965](https://github.com/vitejs/vite/issues/23965)) ([#24020](https://github.com/vitejs/vite/issues/24020)) ([c732677](https://github.com/vitejs/vite/commit/c7326770e1121733435e0527af972f387d64d344))\n* **css:** dedupe CSS of inlined common chunks when `cssCodeSplit: false` ([#24168](https://github.com/vitejs/vite/issues/24168)) ([1b34d86](https://github.com/vitejs/vite/commit/1b34d86d957e80532cb7d43897a1692df2bfc42c))\n* **deps:** update all non-major dependencies ([#24190](https://github.com/vitejs/vite/issues/24190)) ([87d8a5a](https://github.com/vitejs/vite/commit/87d8a5a96f048ae3bbcd2d19e0449d176e636107))\n* **dev:** register references to safe modules only for `server.fs.strict: 'extended'` ([#24206](https://github.com/vitejs/vite/issues/24206)) ([a78fb8a](https://github.com/vitejs/vite/commit/a78fb8a28db01e83611120012bd5d1189bab68aa))\n* **html:** keep entry script side effects when another importer loads it first ([#24135](https://github.com/vitejs/vite/issues/24135)) ([ef295d5](https://github.com/vitejs/vite/commit/ef295d54d56478437112acd7deeb9821d755b90f))\n* keep plugin error messages as thrown ([#24148](https://github.com/vitejs/vite/issues/24148)) ([24eb35a](https://github.com/vitejs/vite/commit/24eb35ad15694f1145b405c20a36a265f37a34f7))\n* **optimizer:** detect in-place patch file edits in lockfile hash ([#24126](https://github.com/vitejs/vite/issues/24126)) ([d7dfe9b](https://github.com/vitejs/vite/commit/d7dfe9b7beedb756f56e509ed425e18af2aa065c))\n* **optimizer:** respect top-level tsconfig option when scanning and bundling deps ([#24119](https://github.com/vitejs/vite/issues/24119)) ([760a953](https://github.com/vitejs/vite/commit/760a953fd4b4d1dd58b2652d5962af50a7510d5c))\n* preserve drive letter case in `safeRealpathSync` on Windows ([#24146](https://github.com/vitejs/vite/issues/24146)) ([3567471](https://github.com/vitejs/vite/commit/3567471998e3da315675086f44368e266c9c0e33))\n* **server:** allow closing uninitialized `DevEnvironment` ([#24184](https://github.com/vitejs/vite/issues/24184)) ([826dcb8](https://github.com/vitejs/vite/commit/826dcb822394b7e8151f745e61f6748865f96c29))\n* **server:** keep `this.addWatchFile` in `load` hook on a module's first request ([#23861](https://github.com/vitejs/vite/issues/23861)) ([b516bc2](https://github.com/vitejs/vite/commit/b516bc2f0a0b040a4c4a2fb636bf5bb61d9ad5a2))\n\n### Performance Improvements\n\n* **build:** shift source maps for preload rewrites instead of re-tracing them ([#24049](https://github.com/vitejs/vite/issues/24049)) ([dbce0c6](https://github.com/vitejs/vite/commit/dbce0c6715f26ae602ebf983f87f153a3a8a6e60))\n* **build:** skip build import analysis hooks for unaffected chunks ([#24150](https://github.com/vitejs/vite/issues/24150)) ([1a06564](https://github.com/vitejs/vite/commit/1a065640083cafe5ae8b981b9bbfb4b0ddf93632))\n* **build:** skip terser plugin when terser is not used ([#24149](https://github.com/vitejs/vite/issues/24149)) ([3bde8ed](https://github.com/vitejs/vite/commit/3bde8eda6d2d1b2c120a705d3d050b84de2c3e43))\n\n### Documentation\n\n* replace stale esbuild references in option JSDoc ([#24196](https://github.com/vitejs/vite/issues/24196)) ([0a19968](https://github.com/vitejs/vite/commit/0a1996890a4f84da995e3d37113a8df5c8e9900b))\n\n### Miscellaneous Chores\n\n* **css:** fix typo in `preliminaryNameToChunkMap` ([#24195](https://github.com/vitejs/vite/issues/24195)) ([3eabee5](https://github.com/vitejs/vite/commit/3eabee5c97e0ea802ebbaed71276d23f73e5b158))\n\n### Code Refactoring\n\n* **build:** skip license plugin via applyToEnvironment when disabled ([#24134](https://github.com/vitejs/vite/issues/24134)) ([3c22583](https://github.com/vitejs/vite/commit/3c22583f50fc9cef1ec837138b1fe628d86692b0))\n* simplify some conditions ([#24125](https://github.com/vitejs/vite/issues/24125)) ([a379269](https://github.com/vitejs/vite/commit/a3792697fe6dd6a75ed1f9bf769864f831e93a25))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": []
+  },
+  {
     "id": "remix-run/react-router#457182338",
     "library": "React Router",
     "repository": "remix-run/react-router",
@@ -890,10 +1073,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "マイグレーション手順は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-3",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/query-coreがバージョン5.108.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454716807",
@@ -907,10 +1100,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "deps-update-query-core-5-108-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core が 5.108.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454716779",
@@ -924,10 +1127,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-3",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/query-core がバージョン 5.108.3 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454716746",
@@ -941,10 +1154,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみであるため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-3",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "内部依存ライブラリである@tanstack/query-coreが5.108.3に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454716687",
@@ -961,7 +1184,57 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12633",
+        "category": "bugfix",
+        "title": "QueriesObserver における古くなった combine 結果のバグ修正",
+        "summary": "新しいクエリで setQueries が呼び出される前にクエリの1つが更新された際、QueriesObserver が以前のクエリから生成された古い combine 結果を返してしまう問題を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12575",
+        "category": "bugfix",
+        "title": "select が undefined を返す場合のプレースホルダー結果のメモ化と無限ループの修正",
+        "summary": "select がプレースホルダー結果を undefined にマッピングする際に結果をメモ化し、keepPreviousData が有効な非アクティブまたは読み込み中のクエリが pending と success の間をループしないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12651",
+        "category": "bugfix",
+        "title": "partialMatchKey における配列要素とプレーンオブジェクトの一致判定の修正",
+        "summary": "partialMatchKey が配列要素とプレーンオブジェクトを誤って一致させないように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12658",
+        "category": "bugfix",
+        "title": "QueriesObserver.setQueries によるメモリリークの修正",
+        "summary": "QueriesObserver.setQueries（useQueries で使用）において、キャッシュから削除された後も置換されたクエリとそのデータがメモリ上に残ってしまう不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12677",
+        "category": "performance",
+        "title": "ページ追加・削除処理の共通化によるバンドルサイズ削減",
+        "summary": "両方向のページ追加および削除処理の配列ヘルパー関数を共有化し、バンドルサイズを削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "12649",
+        "category": "bugfix",
+        "title": "プレースホルダーデータやセレクターによるレンダリングループの修正",
+        "summary": "プレースホルダーデータまたはセレクターがレンダリングごとに新しい結果を生成する場合に発生していたレンダリングループを修正しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#454716660",
@@ -975,10 +1248,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#452736680",
@@ -1883,7 +2157,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-0cf8f49",
+        "category": "other",
+        "title": "@tanstack/query-core の依存関係更新",
+        "summary": "@tanstack/query-core が 5.108.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451424023",
