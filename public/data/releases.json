@@ -1,5 +1,198 @@
 [
   {
+    "id": "vitejs/vite#459290910",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "create-vite@9.4.0",
+    "publishedAt": "2026-11-26T10:59:41Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0",
+    "releaseNotes": "### Features\n\n* **create-vite:** add devtools option ([#23833](https://github.com/vitejs/vite/issues/23833)) ([f0a0b5a](https://github.com/vitejs/vite/commit/f0a0b5a42b62289b172632a0103ce2dda78c0829))\n* **create-vite:** support Vite+ (vp) package manager ([#22788](https://github.com/vitejs/vite/issues/22788)) ([4d21dc4](https://github.com/vitejs/vite/commit/4d21dc4ebcabecc13a35d73ef7dcac704cdbc817))\n* **create-vite:** use Solid 2 in solid templates ([#24130](https://github.com/vitejs/vite/issues/24130)) ([3dfda24](https://github.com/vitejs/vite/commit/3dfda249604d6b6e13911debe2cc0cf5e4c334f4))\n\n### Bug Fixes\n\n* **deps:** update all non-major dependencies ([#24027](https://github.com/vitejs/vite/issues/24027)) ([a13aa04](https://github.com/vitejs/vite/commit/a13aa045d1cf2a28e9a5dd2bcb008236f4eaf19a))\n* **deps:** update all non-major dependencies ([#24103](https://github.com/vitejs/vite/issues/24103)) ([c11a671](https://github.com/vitejs/vite/commit/c11a671c2af3a0fa8db8345e684798a91fa105d7))\n* **deps:** update all non-major dependencies ([#24190](https://github.com/vitejs/vite/issues/24190)) ([87d8a5a](https://github.com/vitejs/vite/commit/87d8a5a96f048ae3bbcd2d19e0449d176e636107))\n* **deps:** update rolldown-related dependencies ([#24028](https://github.com/vitejs/vite/issues/24028)) ([a1b813b](https://github.com/vitejs/vite/commit/a1b813be91d48b0a978aaacab875b274770d7bf4))\n\n### Documentation\n\n* **create-vite:** recommend `tsrs` instead of `oxlint-tsgolint` ([#24201](https://github.com/vitejs/vite/issues/24201)) ([39452c4](https://github.com/vitejs/vite/commit/39452c4f7fc8924f7b8e3c4716f602189bdf80ca))\n\n### Miscellaneous Chores\n\n* **deps:** update dependency @types/node to v26 ([#24029](https://github.com/vitejs/vite/issues/24029)) ([dd780cd](https://github.com/vitejs/vite/commit/dd780cd761221a0c5fa4810335f0190ecb9c7294))\n* enable more lint rules ([#24035](https://github.com/vitejs/vite/issues/24035)) ([72f86e5](https://github.com/vitejs/vite/commit/72f86e57dab05e87641599bff041d68821c837f3))\n* enable vitest style rules in Oxlint ([#24053](https://github.com/vitejs/vite/issues/24053)) ([b8c8270](https://github.com/vitejs/vite/commit/b8c8270f3f01a9dbf02c336e7468bf6f1df0f5ad))\n\n### Code Refactoring\n\n* use `tinyexec` instead of `execa` ([#24079](https://github.com/vitejs/vite/issues/24079)) ([39c3cb8](https://github.com/vitejs/vite/commit/39c3cb864c5a2c9c2cff5b94455245152cf17228))\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "create-vite-devtools-option",
+        "category": "feature",
+        "title": "devtools オプションの追加",
+        "summary": "create-vite に devtools オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "create-vite-support-vp",
+        "category": "feature",
+        "title": "Vite+ (vp) パッケージマネージャーのサポート",
+        "summary": "パッケージマネージャーとして Vite+ (vp) のサポートが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "create-vite-solid-2-templates",
+        "category": "feature",
+        "title": "Solid テンプレートでの Solid 2 の採用",
+        "summary": "Solid テンプレートで Solid 2 が使用されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-non-major",
+        "category": "bugfix",
+        "title": "非メジャー依存関係の更新",
+        "summary": "マイナーおよびパッチ依存関係の更新が行われました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "deps-update-rolldown",
+        "category": "bugfix",
+        "title": "Rolldown 関連依存関係の更新",
+        "summary": "Rolldown 関連の依存パッケージが更新されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "docs-recommend-tsrs",
+        "category": "other",
+        "title": "ドキュメント更新：tsrs の推奨",
+        "summary": "oxlint-tsgolint に代わり tsrs の利用が推奨されるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "refactoring-tinyexec",
+        "category": "other",
+        "title": "内部処理で tinyexec を採用",
+        "summary": "execa の代わりに tinyexec を使用するリファクタリングが行われました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "vitejs/vite#459288656",
+    "library": "Vite",
+    "repository": "vitejs/vite",
+    "version": "v8.4.0",
+    "publishedAt": "2026-11-26T10:57:29Z",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0",
+    "releaseNotes": "### Features\r\n\r\n* add plugin name to hook errors ([#24107](https://github.com/vitejs/vite/issues/24107)) ([40475e5](https://github.com/vitejs/vite/commit/40475e51e785e470b09a67b23d66487649b32226))\r\n* add plugin name to module hook errors ([#24151](https://github.com/vitejs/vite/issues/24151)) ([e1e1ac8](https://github.com/vitejs/vite/commit/e1e1ac831a5f8e5259287796858a854eb2326312))\r\n* add `environment.addSafeModule` ([#23974](https://github.com/vitejs/vite/issues/23974)) ([e0fe98a](https://github.com/vitejs/vite/commit/e0fe98a050db0fcfa04c24a09b7d8f72dbbf68e1))\r\n* add `server.fs.strict: 'extended'` ([#23972](https://github.com/vitejs/vite/issues/23972)) ([e4babd7](https://github.com/vitejs/vite/commit/e4babd7262256a3c5c383109eb7f7d489760faf5))\r\n* **build:** include worker chunks in manifest ([#23699](https://github.com/vitejs/vite/issues/23699)) ([bc6e03c](https://github.com/vitejs/vite/commit/bc6e03c1d7eb5c2a7e202cd25d9ca1512cd06f6f))\r\n* **build:** support retrying failed CSS preloads ([#23710](https://github.com/vitejs/vite/issues/23710)) ([2155e12](https://github.com/vitejs/vite/commit/2155e125cac5792785a485759ecc0e8af18f0438))\r\n* **cli:** omit `-0` suffix from the first profile file name ([#23490](https://github.com/vitejs/vite/issues/23490)) ([c64ba40](https://github.com/vitejs/vite/commit/c64ba40bc5951eebc266aea4609277e566db3c3c))\r\n* **css:** skip emitting empty CSS files ([#24059](https://github.com/vitejs/vite/issues/24059)) ([c5be55f](https://github.com/vitejs/vite/commit/c5be55f571e418992fd39f34267ec4929e79d014))\r\n* **css:** support subpath imports in CSS `url()` ([#23869](https://github.com/vitejs/vite/issues/23869)) ([c110663](https://github.com/vitejs/vite/commit/c110663facf21a8cee199d1c668908e919d6218e))\r\n* **environment:** expose build manifest on build environment ([#23292](https://github.com/vitejs/vite/issues/23292)) ([4db9844](https://github.com/vitejs/vite/commit/4db98449a802abd67a6975fb4fdf260fa8f82979))\r\n* migrate to `dev.sourcemap.css` from `css.devSourcemap` ([#23765](https://github.com/vitejs/vite/issues/23765)) ([76cb51b](https://github.com/vitejs/vite/commit/76cb51bba1a8988b00a5becae5829c3e7a49d9ab))\r\n* **module-runner:** align stacktrace with v8 ([#23690](https://github.com/vitejs/vite/issues/23690)) ([bd32fea](https://github.com/vitejs/vite/commit/bd32fea2cb171cf993c70b4dd12097d5166b3b28))\r\n* **preview:** serve wasm compressed ([#24051](https://github.com/vitejs/vite/issues/24051)) ([39d63b8](https://github.com/vitejs/vite/commit/39d63b8479c6314caab9b78a05d3aaaf36a86b2c))\r\n* register more references to safe modules ([#23168](https://github.com/vitejs/vite/issues/23168)) ([e258ce1](https://github.com/vitejs/vite/commit/e258ce140eef64cf89ff38c410125abd8726f274))\r\n* register references in HTML to safe modules ([#23169](https://github.com/vitejs/vite/issues/23169)) ([ef30399](https://github.com/vitejs/vite/commit/ef30399e751740b8ad28f0a7523b3fb42c7cc539))\r\n* separate `safeModulePaths` per environment ([#23973](https://github.com/vitejs/vite/issues/23973)) ([7480c54](https://github.com/vitejs/vite/commit/7480c547947d0b1dc519815d8f6f670964b15026))\r\n* show running process for the same project ([#23624](https://github.com/vitejs/vite/issues/23624)) ([3e1a86e](https://github.com/vitejs/vite/commit/3e1a86e6c87a3c18356252c5d69bf9604cb85950))\r\n* stabilize `--configLoader` and deprecate `--configLoader=runner` ([#23714](https://github.com/vitejs/vite/issues/23714)) ([e719122](https://github.com/vitejs/vite/commit/e719122cf6758086c1c228c14ad016358337cf09))\r\n* support bundled dev mode in ssr ([#21626](https://github.com/vitejs/vite/issues/21626)) ([5ff255e](https://github.com/vitejs/vite/commit/5ff255e5b9f1460dd844ccf7a82d6f59f8899033))\r\n* **wasm:** support source phase imports ([#22675](https://github.com/vitejs/vite/issues/22675)) ([97bb00f](https://github.com/vitejs/vite/commit/97bb00f8f55e18caa5621c1a23dd057f1ca836e8))\r\n\r\n### Bug Fixes\r\n\r\n* close server on failed start (fix [#23965](https://github.com/vitejs/vite/issues/23965)) ([#24020](https://github.com/vitejs/vite/issues/24020)) ([c732677](https://github.com/vitejs/vite/commit/c7326770e1121733435e0527af972f387d64d344))\r\n* **css:** dedupe CSS of inlined common chunks when `cssCodeSplit: false` ([#24168](https://github.com/vitejs/vite/issues/24168)) ([1b34d86](https://github.com/vitejs/vite/commit/1b34d86d957e80532cb7d43897a1692df2bfc42c))\r\n* **deps:** update all non-major dependencies ([#24190](https://github.com/vitejs/vite/issues/24190)) ([87d8a5a](https://github.com/vitejs/vite/commit/87d8a5a96f048ae3bbcd2d19e0449d176e636107))\r\n* **dev:** register references to safe modules only for `server.fs.strict: 'extended'` ([#24206](https://github.com/vitejs/vite/issues/24206)) ([a78fb8a](https://github.com/vitejs/vite/commit/a78fb8a28db01e83611120012bd5d1189bab68aa))\r\n* **html:** keep entry script side effects when another importer loads it first ([#24135](https://github.com/vitejs/vite/issues/24135)) ([ef295d5](https://github.com/vitejs/vite/commit/ef295d54d56478437112acd7deeb9821d755b90f))\r\n* keep plugin error messages as thrown ([#24148](https://github.com/vitejs/vite/issues/24148)) ([24eb35a](https://github.com/vitejs/vite/commit/24eb35ad15694f1145b405c20a36a265f37a34f7))\r\n* **optimizer:** detect in-place patch file edits in lockfile hash ([#24126](https://github.com/vitejs/vite/issues/24126)) ([d7dfe9b](https://github.com/vitejs/vite/commit/d7dfe9b7beedb756f56e509ed425e18af2aa065c))\r\n* **optimizer:** respect top-level tsconfig option when scanning and bundling deps ([#24119](https://github.com/vitejs/vite/issues/24119)) ([760a953](https://github.com/vitejs/vite/commit/760a953fd4b4d1dd58b2652d5962af50a7510d5c))\r\n* preserve drive letter case in `safeRealpathSync` on Windows ([#24146](https://github.com/vitejs/vite/issues/24146)) ([3567471](https://github.com/vitejs/vite/commit/3567471998e3da315675086f44368e266c9c0e33))\r\n* **server:** allow closing uninitialized `DevEnvironment` ([#24184](https://github.com/vitejs/vite/issues/24184)) ([826dcb8](https://github.com/vitejs/vite/commit/826dcb822394b7e8151f745e61f6748865f96c29))\r\n* **server:** keep `this.addWatchFile` in `load` hook on a module's first request ([#23861](https://github.com/vitejs/vite/issues/23861)) ([b516bc2](https://github.com/vitejs/vite/commit/b516bc2f0a0b040a4c4a2fb636bf5bb61d9ad5a2))\r\n* **build:** keep `magicString` and `ast` in transform hook meta ([#24067](https://github.com/vitejs/vite/issues/24067)) ([c0d590d](https://github.com/vitejs/vite/commit/c0d590d697bb21530f687ea094a36c943620232c))\r\n* **bundled-dev:** load lazy chunks under `base` ([#23798](https://github.com/vitejs/vite/issues/23798)) ([d5c79c7](https://github.com/vitejs/vite/commit/d5c79c7a7c7a3794491f67fbb344d08d7ff814ab))\r\n* **client:** fallback to waiting on main thread for server start when trusted types are enforced ([#21483](https://github.com/vitejs/vite/issues/21483)) ([2dcd391](https://github.com/vitejs/vite/commit/2dcd391edfa858d8acf99d5585ec98c024e41ba8))\r\n* **css:** match pure css chunk imports by relative path ([#24105](https://github.com/vitejs/vite/issues/24105)) ([76f9618](https://github.com/vitejs/vite/commit/76f9618ef0d8df285229c96f0968b5689be11571))\r\n* **css:** no-externalize by default even for SSR ([#24075](https://github.com/vitejs/vite/issues/24075)) ([f898888](https://github.com/vitejs/vite/commit/f898888222297aa56d6fc281c585d4d4e4d51f58))\r\n* **deps:** update all non-major dependencies ([#24103](https://github.com/vitejs/vite/issues/24103)) ([c11a671](https://github.com/vitejs/vite/commit/c11a671c2af3a0fa8db8345e684798a91fa105d7))\r\n* **deps:** update rolldown-related dependencies ([#24028](https://github.com/vitejs/vite/issues/24028)) ([a1b813b](https://github.com/vitejs/vite/commit/a1b813be91d48b0a978aaacab875b274770d7bf4))\r\n* **deps:** update rolldown-related dependencies ([#24104](https://github.com/vitejs/vite/issues/24104)) ([1404166](https://github.com/vitejs/vite/commit/140416668690c1f21cdf85394376f4764b51b2de))\r\n* escape import specifiers ([#24074](https://github.com/vitejs/vite/issues/24074)) ([9bf5965](https://github.com/vitejs/vite/commit/9bf5965864a31f9a324ad676caae19e0dc3cbbb7))\r\n* escape imported name in `transformCjsImport` ([#24080](https://github.com/vitejs/vite/issues/24080)) ([0512d78](https://github.com/vitejs/vite/commit/0512d780a3d1046419666e814dd6d28b63bf3bff))\r\n\r\n### Performance Improvements\r\n\r\n* **build:** shift source maps for preload rewrites instead of re-tracing them ([#24049](https://github.com/vitejs/vite/issues/24049)) ([dbce0c6](https://github.com/vitejs/vite/commit/dbce0c6715f26ae602ebf983f87f153a3a8a6e60))\r\n* **build:** skip build import analysis hooks for unaffected chunks ([#24150](https://github.com/vitejs/vite/issues/24150)) ([1a06564](https://github.com/vitejs/vite/commit/1a065640083cafe5ae8b981b9bbfb4b0ddf93632))\r\n* **build:** skip terser plugin when terser is not used ([#24149](https://github.com/vitejs/vite/issues/24149)) ([3bde8ed](https://github.com/vitejs/vite/commit/3bde8eda6d2d1b2c120a705d3d050b84de2c3e43))\r\n* use native binary for getting process start time on windows ([#24087](https://github.com/vitejs/vite/issues/24087)) ([4bf4f32](https://github.com/vitejs/vite/commit/4bf4f32f7ff02d2b08a83688bed0f8d0479c5235))\r\n\r\n### Documentation\r\n\r\n* replace stale esbuild references in option JSDoc ([#24196](https://github.com/vitejs/vite/issues/24196)) ([0a19968](https://github.com/vitejs/vite/commit/0a1996890a4f84da995e3d37113a8df5c8e9900b))\r\n\r\n### Miscellaneous Chores\r\n\r\n* **css:** fix typo in `preliminaryNameToChunkMap` ([#24195](https://github.com/vitejs/vite/issues/24195)) ([3eabee5](https://github.com/vitejs/vite/commit/3eabee5c97e0ea802ebbaed71276d23f73e5b158))\r\n* add debug log when falling back to powershell for process start time ([#24090](https://github.com/vitejs/vite/issues/24090)) ([880f1cf](https://github.com/vitejs/vite/commit/880f1cf12147e5e14f92492c0771206413adedae))\r\n* **deps:** update dependency es-module-lexer to v3 ([#23603](https://github.com/vitejs/vite/issues/23603)) ([785b0ad](https://github.com/vitejs/vite/commit/785b0add368b212881617ab093cff4c4fde133ea))\r\n\r\n### Code Refactoring\r\n\r\n* **build:** skip license plugin via applyToEnvironment when disabled ([#24134](https://github.com/vitejs/vite/issues/24134)) ([3c22583](https://github.com/vitejs/vite/commit/3c22583f50fc9cef1ec837138b1fe628d86692b0))\r\n* simplify some conditions ([#24125](https://github.com/vitejs/vite/issues/24125)) ([a379269](https://github.com/vitejs/vite/commit/a3792697fe6dd6a75ed1f9bf769864f831e93a25))\r\n* **bundled-dev:** serve the rolldown dev runtime as a single file ([#23587](https://github.com/vitejs/vite/issues/23587)) ([69df8ad](https://github.com/vitejs/vite/commit/69df8ad865b06aa49ea6d7eac530d6f1f072fb43))\r\n* drop unused capture groups in test-only regexes ([#24097](https://github.com/vitejs/vite/issues/24097)) ([2decae3](https://github.com/vitejs/vite/commit/2decae3422bfbb6357e3cc95ec8ee9c97f29e7f0))\r\n* remove `optimizeDeps.rollupOptions` ([#23760](https://github.com/vitejs/vite/issues/23760)) ([0651e2c](https://github.com/vitejs/vite/commit/0651e2cc0f747a8e6ca1f9235dbc9d1fdc464598))\r\n\r\n### Build System\r\n\r\n* look up dts identifier replacements by imported name ([#24068](https://github.com/vitejs/vite/issues/24068)) ([f60fac3](https://github.com/vitejs/vite/commit/f60fac396c03d1e36f750378f615a1d570ecda90))\r\n\r\n### Beta Changelogs\r\n\r\n#### [8.4.0-beta.2](https://github.com/vitejs/vite/compare/v8.4.0-beta.1...v8.4.0-beta.2) (2026-11-25)\r\n\r\nSee [8.4.0-beta.2 changelog](https://github.com/vitejs/vite/blob/v8.4.0-beta.2/packages/vite/CHANGELOG.md)\r\n\r\n#### [8.4.0-beta.1](https://github.com/vitejs/vite/compare/v8.3.8...v8.4.0-beta.1) (2026-11-16)\r\n\r\nSee [8.4.0-beta.1 changelog](https://github.com/vitejs/vite/blob/v8.4.0-beta.1/packages/vite/CHANGELOG.md)\r\n",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "非推奨となった一部の設定オプションのアップデートが推奨されます。",
+      "steps": [
+        "css.devSourcemap を dev.sourcemap.css へ移行してください。",
+        "--configLoader=runner の指定を取り止めてください。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "vite-24107-24151",
+        "category": "feature",
+        "title": "プラグインフックエラーへのプラグイン名追加",
+        "summary": "フックおよびモジュールフックのエラーメッセージに発生元プラグイン名が含まれるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23974-23972-23973",
+        "category": "feature",
+        "title": "安全なモジュール管理の強化と server.fs.strict: 'extended' 追加",
+        "summary": "environment.addSafeModule の追加、環境ごとの safeModulePaths 分離、および server.fs.strict: 'extended' オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23699",
+        "category": "feature",
+        "title": "ビルドマニフェストへの Worker チャンク出力",
+        "summary": "ビルドマニフェストに Web Worker のチャンクが含まれるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23710",
+        "category": "feature",
+        "title": "失敗した CSS プリロードの自動再試行サポート",
+        "summary": "CSS プリロードが失敗した際に自動でリトライを行う機能が追加されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-24059",
+        "category": "feature",
+        "title": "空の CSS ファイル出力のスキップ",
+        "summary": "内容が空の CSS ファイルの出力を自動的にスキップするようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23869",
+        "category": "feature",
+        "title": "CSS url() でのサブパスインポート対応",
+        "summary": "CSS の url() 構文内で Subpath Imports (Package entry imports) が利用可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23765",
+        "category": "feature",
+        "title": "css.devSourcemap から dev.sourcemap.css への移行",
+        "summary": "開発時の CSS ソースマップ設定が dev.sourcemap.css へ再配置されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23714",
+        "category": "feature",
+        "title": "--configLoader の安定化と runner の非推奨化",
+        "summary": "--configLoader オプションが安定化し、--configLoader=runner は非推奨となりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-21626",
+        "category": "feature",
+        "title": "SSR 開発での bundled dev モード対応",
+        "summary": "SSR 開発時に bundled dev モードが使用可能になりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-22675",
+        "category": "feature",
+        "title": "WASM source phase imports のサポート",
+        "summary": "WASM モジュールにおいて Source Phase Imports がサポートされました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-24049-24150-24149",
+        "category": "performance",
+        "title": "ビルドパフォーマンスの最適化",
+        "summary": "プリロード書き換え時のソースマップ調整、不要なインポート解析フックや Terser プラグイン処理のスキップによりビルド性能が向上しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "vite-23760",
+        "category": "other",
+        "title": "optimizeDeps.rollupOptions の削除",
+        "summary": "使われていなかった optimizeDeps.rollupOptions 設定が削除されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "mswjs/msw#458827859",
     "library": "MSW",
     "repository": "mswjs/msw",
@@ -177,10 +370,172 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには破壊的変更は含まれていないため、特別な移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "24107",
+        "category": "feature",
+        "title": "フックエラーへのプラグイン名の追加",
+        "summary": "フック実行時に発生したエラーメッセージに、発生元のプラグイン名が含まれるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24151",
+        "category": "feature",
+        "title": "モジュールフックエラーへのプラグイン名の追加",
+        "summary": "モジュールフック内で発生したエラーメッセージにプラグイン名が含まれるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24020",
+        "category": "bugfix",
+        "title": "起動失敗時のサーバークローズ処理の追加",
+        "summary": "サーバーの起動処理が失敗した場合に、サーバーを安全にクローズするように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24168",
+        "category": "bugfix",
+        "title": "cssCodeSplit: false 時のインライン CSS の重複排除",
+        "summary": "cssCodeSplit が false に設定されている場合に、インライン化された共通チャンクの CSS 重複を排除するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24190",
+        "category": "bugfix",
+        "title": "非メジャー依存関係の更新",
+        "summary": "すべての非メジャー依存ライブラリを最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24206",
+        "category": "bugfix",
+        "title": "server.fs.strict: 'extended' 設定時の安全なモジュール参照の登録制限",
+        "summary": "server.fs.strict が 'extended' に設定されている場合にのみ安全なモジュールへの参照を登録するように調整されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24135",
+        "category": "bugfix",
+        "title": "他のインポーターが先に読み込んだ場合のエントリスクリプト副作用の保持",
+        "summary": "別のインポーターによって先にロードされた場合でもエントリスクリプトの副作用が損なわれないよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24148",
+        "category": "bugfix",
+        "title": "スローされたプラグインエラーメッセージの保持",
+        "summary": "プラグインからスローされたエラーメッセージがオリジナルの内容のまま維持されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24126",
+        "category": "bugfix",
+        "title": "ロックファイルハッシュによるパッチファイルの編集検知",
+        "summary": "インプレースで編集されたパッチファイルの変更をロックファイルのハッシュ計算で検出できるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24119",
+        "category": "bugfix",
+        "title": "依存関係スキャン・バンドル時のトップレベル tsconfig の尊重",
+        "summary": "依存関係のスキャンおよびバンドル時にトップレベルの tsconfig 設定を尊重するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24146",
+        "category": "bugfix",
+        "title": "Windowsにおける safeRealpathSync のドライブレター大文字小文字の保持",
+        "summary": "Windows環境の safeRealpathSync 処理において、ドライブレターの大文字・小文字表記を正しく保持するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24184",
+        "category": "bugfix",
+        "title": "未初期化 DevEnvironment のクローズ許可",
+        "summary": "初期化されていない DevEnvironment インスタンスのクローズ処理を許可するように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "23861",
+        "category": "bugfix",
+        "title": "初回モジュールリクエスト時の load フックでの this.addWatchFile の保持",
+        "summary": "モジュールの初回リクエスト時に load フック内で呼び出された this.addWatchFile が正常に保持されるよう修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24049",
+        "category": "performance",
+        "title": "プリロード書き換え時のソースマップシフトによるパフォーマンス向上",
+        "summary": "プリロード書き換え時にソースマップを再トレースする代わりにシフト処理を実施することで、ビルド性能を向上させました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24150",
+        "category": "performance",
+        "title": "未影響チャンクにおけるビルドインポート解析フックのスキップ",
+        "summary": "影響を受けないチャンクに対してビルドインポート解析フックの実行をスキップし、ビルドを高速化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24149",
+        "category": "performance",
+        "title": "Terser 未使用時の Terser プラグインのスキップ",
+        "summary": "Terser が使用されていない設定の場合に、Terser プラグインの処理をスキップするように最適化しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24196",
+        "category": "other",
+        "title": "JSDoc 内の古い esbuild 参照の更新",
+        "summary": "オプションの JSDoc コメントに含まれる古くなった esbuild の参照記述を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24195",
+        "category": "other",
+        "title": "CSS チャンク処理内のタイポ修正",
+        "summary": "内部コード preliminaryNameToChunkMap におけるタイポを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24134",
+        "category": "other",
+        "title": "無効化時の applyToEnvironment によるライセンスプラグインのスキップ",
+        "summary": "ライセンスプラグインが無効な場合に applyToEnvironment を利用して処理をスキップするようリファクタリングしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "24125",
+        "category": "other",
+        "title": "内部条件分岐の簡略化",
+        "summary": "内部コードの条件判定ロジックを整理・簡略化しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "remix-run/react-router#457182338",
@@ -2184,7 +2539,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-query-core-5-108-1",
+        "category": "other",
+        "title": "@tanstack/query-coreの依存関係更新",
+        "summary": "依存ライブラリである @tanstack/query-core が 5.108.1 に更新されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451423898",
@@ -2194,14 +2559,26 @@
     "publishedAt": "2026-11-19T14:01:11Z",
     "url": "https://github.com/TanStack/query/releases/tag/%40tanstack/query-core%405.108.1",
     "releaseNotes": "### Patch Changes\n\n- [#12636](https://github.com/TanStack/query/pull/12636) [`0cf8f49`](https://github.com/TanStack/query/commit/0cf8f49e8f9cf24a8c6a7f17efb7cf4d91ea8f01) - Require `getNextPageParam` in the types for `queryClient.infiniteQuery`, the deprecated infinite query methods, and `usePrefetchInfiniteQuery`. If you omit `pages`, a stale query can still refetch multiple cached pages and needs the callback to compute their page parameters. Reuse the same `infiniteQueryOptions` you pass to `useInfiniteQuery` to supply the callback.",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "queryClient.infiniteQuery や usePrefetchInfiniteQuery などの型定義で getNextPageParam が必須になりました。",
+      "steps": [
+        "useInfiniteQuery に渡す infiniteQueryOptions を再利用するか、getNextPageParam コールバックを明示的に指定してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "12636",
+        "category": "bugfix",
+        "title": "infiniteQuery 関連メソッドの型定義で getNextPageParam を必須化",
+        "summary": "queryClient.infiniteQuery、非推奨のインフィニットクエリメソッド、および usePrefetchInfiniteQuery の型定義で getNextPageParam が必須となりました。キャッシュされた複数ページの再取得時にページパラメータを計算するために必要です。",
+        "impact": "medium",
+        "breaking": true
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/query#451423845",
@@ -2215,10 +2592,11 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "このリリースには変更が含まれていないため、移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182801",
@@ -2232,10 +2610,108 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8959",
+        "category": "feature",
+        "title": "router-devtools に trustedTypesPolicy オプションを追加",
+        "summary": "router-devtools において trustedTypesPolicy オプションを設定できるようになりました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8954",
+        "category": "bugfix",
+        "title": "router-devtools-core で goober を静的スタイルシートに置換",
+        "summary": "goober への依存を削除し、静的スタイルシートを使用するように変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8919",
+        "category": "bugfix",
+        "title": "react-start-rsc の RSC バンドラー依存関係のアップデート",
+        "summary": "RSC 向けの RSC バンドラー依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8907",
+        "category": "bugfix",
+        "title": "start-plugin-core における Rsbuild 仮想モジュールのビルド復元",
+        "summary": "Rsbuild の仮想モジュールが正しくビルドされるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8876",
+        "category": "bugfix",
+        "title": "start-plugin-core の Rsbuild マニフェストにおけるルート固有チャンクのみの列挙",
+        "summary": "Rsbuild マニフェストに各ルート自身のチャンクのみが含まれるように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8868",
+        "category": "bugfix",
+        "title": "Rsbuild 仮想モジュールの書き出し先をアプリルートに変更",
+        "summary": "作業ディレクトリではなくアプリのルートディレクトリ配下に Rsbuild 仮想モジュールを書き出すよう変更しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8858",
+        "category": "bugfix",
+        "title": "無効なカスタム server-fn ID の拒否と非推奨化",
+        "summary": "HTTP 経由で機能しないカスタム server-fn ID を拒否し、予約されていない文字セット以外の使用を非推奨化しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "8866",
+        "category": "bugfix",
+        "title": "Vite ルートからの Start ライブラリ検出",
+        "summary": "作業ディレクトリではなく Vite のルートディレクトリから Start ライブラリを検索するよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8926",
+        "category": "performance",
+        "title": "Rsbuild マニフェスト処理におけるインポートモジュールカウントの最適化",
+        "summary": "Rsbuild マニフェストパスにおいてインポートされたモジュールを1度だけカウントするように改善しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8957",
+        "category": "other",
+        "title": "router-devtools-core の Solid 2 への移行",
+        "summary": "router-devtools-core の内部依存である Solid をバージョン2へ移行しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8955",
+        "category": "other",
+        "title": "Vite 依存関係のセキュリティアップデート",
+        "summary": "脆弱性対策（GHSA-p4f5-76q4-ffq7）のために Vite を 8.3.8 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8912",
+        "category": "other",
+        "title": "pnpm 12 へのアップグレード",
+        "summary": "開発で使用する pnpm をバージョン 12 にアップデートしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182645",
@@ -2249,10 +2725,36 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "特別な移行手順は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8957",
+        "category": "other",
+        "title": "Devtools内部でのSolid 2の採用とバンドル化",
+        "summary": "Devtools内部でSolid 2を使用するように更新されました。独自にバンドルされているため、アプリケーション側のSolidバージョンには影響しません。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8954",
+        "category": "feature",
+        "title": "gooberの廃止と静的スタイルシートへの変更",
+        "summary": "スタイルライブラリgooberの使用をやめ、 Document または Shadow Root に静的スタイルシートを適用する方式に変更されました。これによりインラインスタイルを制限するCSP環境やShadow Root内での表示が改善されます。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8959",
+        "category": "feature",
+        "title": "trustedTypesPolicy オプションの追加",
+        "summary": "require-trusted-types-for 'script' セキュリティポリシーが有効なページでDevtoolsをレンダリングするための trustedTypesPolicy オプションが追加されました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182592",
@@ -2266,10 +2768,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "依存関係の更新のみであるため、特別な移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "update-dependencies-1-169-7",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core (1.172.0) および @tanstack/react-start-rsc (0.1.68) に依存関係を更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182431",
@@ -2279,14 +2791,75 @@
     "publishedAt": "2026-11-19T10:24:39Z",
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/start-plugin-core%401.172.0",
     "releaseNotes": "### Minor Changes\n\n-   [#8858](https://github.com/TanStack/router/pull/8858) [`2ebc0f3`](https://github.com/TanStack/router/commit/2ebc0f35866fed7345e567cf7d0925ba3c0bcc65) - A server function id that a custom `serverFns.generateFunctionId` returns and that never worked over HTTP now fails the build, with an error naming the file, the function and the id: whitespace, a control or non-ASCII character, any of `\"`, `#`, `/`, `<`, `>`, `?`, `\\`, `^`, `` ` ``, `{`, `}`, the ids `.` and `..`, and a percent-encoding the server reads as another id (`%41`, lowercase hex, `%2E`) or rejects. The client puts the id in the URL unencoded, so a `#` or `?` ended the path and a `/` cut the id short (the call silently ran another server function of the file or none), and the other characters reached the server percent-encoded and matched no function. An id embedding a non-ASCII `functionName` is one of these. One case did work and now fails the build: such an id on a server function only SSR code called.\n\n    Ids with `%` or the other characters URLs allow (such as `:`, `@`, `+`, `=`, `,`, `;`, `!`, `*`, `(`, `)`, `&`, `'`, `|`, `[`, `]`) still build and reach their handler, with a deprecation warning (from the Vite plugin; the Rsbuild plugin does not print compiler warnings yet): the next major version rejects them, since proxies and servers may decode or rewrite them (hash the inputs instead, as the documented example does). An id with `'` no longer breaks the server bundle.\n\n### Patch Changes\n\n-   [#8926](https://github.com/TanStack/router/pull/8926) [`0b6d4f3`](https://github.com/TanStack/router/commit/0b6d4f3f6b42e704555d9ff0014ddbf8b44f8e09) - Rsbuild: the Start manifest pass that runs after every client compilation (builds and each dev update) reads an imported module's chunks once per compilation and counts the module once per importing chunk, instead of once per import connection. The manifest is unchanged; the pass takes about 40 % less time (on a 333-route app, tens of milliseconds less per HMR update).\n\n-   [#8876](https://github.com/TanStack/router/pull/8876) [`c156097`](https://github.com/TanStack/router/commit/c156097786b685db61f535d2779cb2a52a6af8aa) - Rsbuild: a route's client manifest entry lists only its own chunks and CSS. When two routes shared a module in a chunk of its own, each route's entry also listed the other route's chunk as a preload and its stylesheet.\n\n-   [#8890](https://github.com/TanStack/router/pull/8890) [`f870933`](https://github.com/TanStack/router/commit/f8709334ac3056d007e65bc146d94702e052434b) - fix: the Rsbuild RSC integration skips falsy entries in a rule's `use` array (Rspack's conditionally disabled loaders) instead of treating them as loaders.\n\n-   [#8907](https://github.com/TanStack/router/pull/8907) [`70bbd11`](https://github.com/TanStack/router/commit/70bbd11025143665ab5a391ddb44cb3917e4d2e3) - Rsbuild: fix the Rsbuild plugin build after two changes to its virtual modules crossed. Without this fix the package does not build, so no release could ship it. The Rsbuild dev manifest is written to its virtual module under the app's root.\n\n-   [#8868](https://github.com/TanStack/router/pull/8868) [`df6ac30`](https://github.com/TanStack/router/commit/df6ac3040695ddf2ec2d5e8b4be8f63273a658a6) - Rsbuild: Start writes its virtual modules under the app's root, not the working directory. An app built or served from another directory (`rsbuild build --root <app>` from a monorepo root) no longer fails with \"Module not found\" on the packages they import, such as RSC's serialization adapters.\n\n-   [#8866](https://github.com/TanStack/router/pull/8866) [`3cc054c`](https://github.com/TanStack/router/commit/3cc054c3741d15e8cb6591b0954b315e0a2327a3) - Vite: Start finds the Start libraries it bundles in the SSR build from Vite's root, not the working directory. A `vite build <app>` run from another directory (a monorepo root, a script) no longer leaves them external and uncompiled, where their server fns returned `undefined`.\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "カスタムの serverFns.generateFunctionId を使用している場合、生成されるIDが無効な文字を含んでいないか確認および修正が必要です。",
+      "steps": [
+        "カスタムの `serverFns.generateFunctionId` を使用している場合、IDに制御文字、非ASCII文字、空白、または禁止された特殊文字（`\"`, `#`, `/`, `<`, `>`, `?`, `\\`, `^`, `` ` ``, `{`, `}`, `.`, `..` など）が含まれていないか確認してください。",
+        "無効な文字が含まれている場合は、ドキュメントの例に従い、入力値をハッシュ化するなどの方法で有効なIDを生成するように変更してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "PR8858",
+        "category": "breaking",
+        "title": "サーバー関数の無効なIDに対するビルド時エラーの追加",
+        "summary": "カスタム `serverFns.generateFunctionId` で生成される無効な文字（非ASCII文字や特定記号など）を含むIDが、ビルド時にエラーを発生させるようになりました。また、特定の記号を含むIDに対する非推奨警告が追加されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "PR8926",
+        "category": "performance",
+        "title": "Rsbuild: スタートマニフェスト処理の高速化",
+        "summary": "Rsbuildでのクライアントコンパイル後のマニフェスト処理を最適化し、モジュールのチャンク読み込み回数を減らすことで、HMR更新時の処理時間を約40%削減しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8876",
+        "category": "bugfix",
+        "title": "Rsbuild: ルートクライアントマニフェストのプレロード対象修正",
+        "summary": "共有モジュールが存在する場合に、他のルートのチャンクやスタイルシートがプレロード対象として誤ってマニフェストに含まれてしまう不具合を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8890",
+        "category": "bugfix",
+        "title": "Rsbuild: RSC統合における条件付きローダーの修正",
+        "summary": "Rsbuild RSC統合において、ルール内の `use` 配列に含まれる falsy なエントリー（無効化されたローダー）を無視するように修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8907",
+        "category": "bugfix",
+        "title": "Rsbuild: 仮想モジュール生成パスの修正",
+        "summary": "Rsbuild プラグインのビルド不具合を修正し、デバッグマニフェスト等の仮想モジュールがアプリのルートディレクトリ配下に正しく出力されるようにしました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "PR8868",
+        "category": "bugfix",
+        "title": "Rsbuild: モノレポの別ディレクトリ実行時のモジュール参照エラー修正",
+        "summary": "モノレポルートなどの別ディレクトリからビルドや起動を行った際に、仮想モジュールの参照パスがずれ「Module not found」エラーが発生する問題を修正しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "PR8866",
+        "category": "bugfix",
+        "title": "Vite: モノレポ等の別ディレクトリからのビルドにおけるバンドル解決の修正",
+        "summary": "`vite build` を別ディレクトリから実行した際に、Startライブラリが外部依存として扱われサーバー関数が `undefined` を返す問題を修正しました。",
+        "impact": "medium",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182384",
