@@ -1,5 +1,215 @@
 [
   {
+    "id": "eslint/eslint#460829710",
+    "library": "ESLint",
+    "repository": "eslint/eslint",
+    "version": "v10.16.0",
+    "publishedAt": "2026-11-27T16:20:20Z",
+    "url": "https://github.com/eslint/eslint/releases/tag/v10.16.0",
+    "releaseNotes": "## Features\n* [`7fff57a`](https://github.com/eslint/eslint/commit/7fff57a48b472ca12981997cd57bbb381feb970c) feat: add suggestions to `no-new-native-nonconstructor` (#21576) (Pixel)\n* [`14e3533`](https://github.com/eslint/eslint/commit/14e35339d568f8ec86ca10f726fc1d8c1b9e5658) feat: suggest comparing with both `null` and `undefined` in `eqeqeq` (#21577) (Pixel)\n* [`0e2a431`](https://github.com/eslint/eslint/commit/0e2a43144ede45e690732110462ee196b25c46e6) feat: handle `TSImportEqualsDeclaration` type imports in `no-shadow` (#21564) (Lê Văn Xuân Hoàn)\n* [`a6b2c6d`](https://github.com/eslint/eslint/commit/a6b2c6d5c16fe30075f40838e0ef0f9cb34d9f38) feat: add suggestions to `no-eq-null` (#21512) (Pixel)\n\n## Bug Fixes\n* [`0b43c2d`](https://github.com/eslint/eslint/commit/0b43c2dcf9081cd43c3924255c5b461c34dfc5c7) fix: update dependency @eslint/config-array to ^0.23.7 (#21598) (renovate[bot])\n* [`f692882`](https://github.com/eslint/eslint/commit/f6928820463d65d48ee09ada432e367f2acd700b) fix: handle trailing commas in no-unused-vars suggestions (#21570) (Lê Văn Xuân Hoàn)\n* [`622db83`](https://github.com/eslint/eslint/commit/622db83a9f9405141a42b7e4e734648cf6e62ec1) fix: add `ESLint.CalculatedConfig` type for `calculateConfigForFile()` (#21483) (Pixel)\n* [`0d401e5`](https://github.com/eslint/eslint/commit/0d401e51592f321cbab315a1ed1e9cfeddf17a1f) fix: handle heritage and qualified types in `no-use-before-define` (#21536) (Lê Văn Xuân Hoàn)\n* [`b377b08`](https://github.com/eslint/eslint/commit/b377b08f95646ac450551a5b73486ab95b9b09cf) fix: handle circular references when formatting config errors (#21569) (Lê Văn Xuân Hoàn)\n* [`4820790`](https://github.com/eslint/eslint/commit/48207902fccd37450823b8fd07736d84449ec8e7) fix: handle TS assertions on callees in `no-invalid-this` (#21540) (Nitin Kumar)\n* [`9fe69d8`](https://github.com/eslint/eslint/commit/9fe69d886fbecd2dc41d2a77f5553154660cb231) fix: skip type parameters in `getOpeningParenOfParams` (#21531) (Lê Văn Xuân Hoàn)\n\n## Documentation\n* [`1429546`](https://github.com/eslint/eslint/commit/1429546afcaae2321cc47df90ba7024958c2d46b) docs: fix typo in Node.js API documentation (#21594) (Pixel)\n* [`85d4d49`](https://github.com/eslint/eslint/commit/85d4d49dad059435f4d497cfbf2360897902e67a) docs: Update README (GitHub Actions Bot)\n* [`6942d2f`](https://github.com/eslint/eslint/commit/6942d2f326ec0271bf42ebf2d728e5a203b79397) docs: Add Project Leads description (#21559) (Nicholas C. Zakas)\n* [`4c76138`](https://github.com/eslint/eslint/commit/4c76138b507998dff639db8b4db65eac31296c0c) docs: Update README (GitHub Actions Bot)\n\n## Chores\n* [`42c9929`](https://github.com/eslint/eslint/commit/42c99292ce3dc1e94c60a2eaa237fe1029351bc3) chore: update github/codeql-action action to v4.39.4 (#21597) (renovate[bot])\n* [`079529c`](https://github.com/eslint/eslint/commit/079529c39f82b920ba0c39d875ffb067d573fc0e) test: cover `SourceCode#getLoc()` and `getRange()` (#21595) (electrohyun)\n* [`65e8b2f`](https://github.com/eslint/eslint/commit/65e8b2fbb0bbf0d46c699d4c427aafda3de2ee0a) chore: remove obsolete markdownlint directives (#21588) (lumir)\n* [`9292b2f`](https://github.com/eslint/eslint/commit/9292b2f2fc42fb3955b4b56a9850837b7241bff6) chore: use spaces for YAML indentation in .editorconfig (#21591) (electrohyun)\n* [`5716b3f`](https://github.com/eslint/eslint/commit/5716b3fdc07a60f83b4812c4faa745dd05948367) chore: update ecosystem plugins (#21579) (ESLint Bot)\n* [`1501e8a`](https://github.com/eslint/eslint/commit/1501e8aca6aa36c913677ad2aec7bbc942da541c) ci: add `@eslint/shell` in ecosystem tests and types integration (#21516) (lumir)\n* [`e0148e3`](https://github.com/eslint/eslint/commit/e0148e30da6662318c5643f2230830af8407b2aa) chore: update dependency prettier to v3.10.1 (#21571) (renovate[bot])\n* [`2102699`](https://github.com/eslint/eslint/commit/21026992e3520869b31ca4500905665942bb2cf0) chore: update dependency prettier to v3.10.0 (#21567) (renovate[bot])\n* [`494f4e8`](https://github.com/eslint/eslint/commit/494f4e8f4b5f3579db2d4c01a3e61607888d7084) chore: update ecosystem plugins (#21566) (ESLint Bot)\n* [`97efadd`](https://github.com/eslint/eslint/commit/97efadd5eff8e3eb673f8746f7bb3ba2f3941251) ci: bump peter-evans/create-pull-request from 8.1.1 to 8.1.3 (#21551) (dependabot[bot])",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別な移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "7fff57a",
+        "category": "feature",
+        "title": "no-new-native-nonconstructor へのサジェスチョン追加",
+        "summary": "no-new-native-nonconstructor ルールに修正提案（suggestion）機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "14e3533",
+        "category": "feature",
+        "title": "eqeqeq ルールでの null および undefined 比較提案の追加",
+        "summary": "eqeqeq ルールにおいて null と undefined の両方との比較を提案する機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0e2a431",
+        "category": "feature",
+        "title": "no-shadow での TSImportEqualsDeclaration のサポート",
+        "summary": "no-shadow ルールにおいて TSImportEqualsDeclaration による型インポートを適切にハンドリングできるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "a6b2c6d",
+        "category": "feature",
+        "title": "no-eq-null へのサジェスチョン追加",
+        "summary": "no-eq-null ルールに修正提案（suggestion）機能を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "f692882",
+        "category": "bugfix",
+        "title": "no-unused-vars のサジェスチョンにおける末尾カンマの修正",
+        "summary": "no-unused-vars ルールの修正提案で末尾カンマが正しく処理されるよう修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "622db83",
+        "category": "bugfix",
+        "title": "calculateConfigForFile 用 ESLint.CalculatedConfig 型の追加",
+        "summary": "calculateConfigForFile() メソッドのために ESLint.CalculatedConfig 型を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0d401e5",
+        "category": "bugfix",
+        "title": "no-use-before-define での継承型・修飾型の処理修正",
+        "summary": "no-use-before-define ルールにおいて heritage 型および qualified 型のハンドリングを修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "b377b08",
+        "category": "bugfix",
+        "title": "設定エラー表示時の循環参照のハンドリング修正",
+        "summary": "設定エラー出力時に発生する循環参照の処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "4820790",
+        "category": "bugfix",
+        "title": "no-invalid-this での TS 型アサーション処理の修正",
+        "summary": "no-invalid-this ルールにおいて呼び出し元への TypeScript 型アサーションの処理を修正しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "9fe69d8",
+        "category": "bugfix",
+        "title": "getOpeningParenOfParams での型パラメータースキップの追加",
+        "summary": "getOpeningParenOfParams メソッドで型パラメーターをスキップする処理を追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "0b43c2d",
+        "category": "bugfix",
+        "title": "@eslint/config-array 依存関係の更新",
+        "summary": "@eslint/config-array への依存を ^0.23.7 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#460312217",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-query@3.0.0",
+    "publishedAt": "2026-11-27T08:07:06Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-query%403.0.0",
+    "releaseNotes": "### Major Changes\n\n- [#1587](https://github.com/petyosi/react-virtuoso/pull/1587) [`9e0bdf8`](https://github.com/petyosi/react-virtuoso/commit/9e0bdf8efbc0b47c5842afc2feb344ddaae3160b) Thanks [@atrium-ladyx](https://github.com/apps/atrium-ladyx)! - `Mutation` now runs one call at a time per record, and the new `ConcurrentMutation` handles writes that overlap.\n\n  **Migration, step 1: `key` is now required, so every existing `Mutation` fails to compile until you choose.**\n  - `key: false` if the mutation serves one record at a time, such as a single form. A second call while the first runs is ignored, not run.\n  - A key function for per-row actions shared across rows, with the key type as the third type argument: `Mutation<Params, Data, number>({ key: ({ id }) => id, … })`. With two type arguments, a key function fails with \"No overload matches this call\".\n  - `ConcurrentMutation` when every call carries a new value that must reach the server, such as a toggle that saves per click: `concurrency: 'coalesce'` (latest value wins, optional `merge`), `'serial'` (every call, in order), or `'parallel'` (independent calls). The closest equivalent of 2.0.2 behavior is `ConcurrentMutation({ concurrency: 'parallel', key: false, … })`, but its `data$` has the `ConcurrentMutationState` shape.\n\n  **Also changed:**\n  - A keyed `Mutation` exposes `status$`, a `ReadonlyMap` of per-record results, instead of `data$`. Read records with `status.get(key)`.\n  - `reset$` is replaced by `dismiss$` (and `dismissAll$` when keyed). Dismiss never returns a pending call to idle; its result still appears when it settles.\n  - A call for a busy record is ignored: it is reported on the new `settled$` stream as `ignored`, calls `onIgnored` if given, and warns in development otherwise. Disable the control while the record is pending.\n  - `settled$` emits one outcome per input (`success`, `error`, `ignored`; `dropped` for `ConcurrentMutation`). Results and outcomes carry `params`, keyed ones carry `key`, and settled results carry `settledAt`.\n  - Repeated equal params each make a call; 2.0.2 suppressed equal consecutive params.\n  - `mutationFn` receives an `AbortSignal`, aborted only when the engine is disposed; a call that started is never aborted otherwise. `onSuccess` and `onError` receive the params and the engine, and run directly after the outcome is delivered. Retry delays stop when a call or query is aborted.\n  - With child engines, register shared mutations in the root engine at startup, for example `root.register(mutation.mutate$)`. Using one from a child engine before its parent is unsupported and warns in development.\n  - Requires `@virtuoso.dev/reactive-engine-core` `^0.3.0`.\n\n### Patch Changes\n\n- Updated dependencies [[`9e0bdf8`](https://github.com/petyosi/react-virtuoso/commit/9e0bdf8efbc0b47c5842afc2feb344ddaae3160b)]:\n  - @virtuoso.dev/reactive-engine-core@0.3.0",
+    "breaking": true,
+    "impact": "high",
+    "migration": {
+      "required": true,
+      "summary": "Mutationの仕様変更に伴い、keyプロパティの指定やConcurrentMutationへの移行、および関連APIの更新が必要です。",
+      "steps": [
+        "単一レコードを操作するMutationにはkey: falseを設定します。",
+        "複数行で共有されるアクションのMutationにはkey関数を指定し、型引数の3番目にkeyの型を指定します。",
+        "同時書き込みが発生する操作はConcurrentMutationに移行し、適切にconcurrencyオプション（coalesce, serial, parallel）を設定します。",
+        "reset$ を dismiss$ （キー付きの場合は dismissAll$）に変更します。",
+        "キー付きMutationでのデータ取得を data$ から status$ に変更します。"
+      ]
+    },
+    "changes": [
+      {
+        "id": "mutation-key-required-and-concurrent-mutation",
+        "category": "breaking",
+        "title": "Mutationのkey必須化とConcurrentMutationの追加",
+        "summary": "Mutationがレコードごとに同時に1つの呼び出しのみ実行するようになり、keyプロパティが必須化されました。重複する書き込みにはConcurrentMutationが導入されました。",
+        "impact": "high",
+        "breaking": true
+      },
+      {
+        "id": "mutation-api-and-stream-changes",
+        "category": "breaking",
+        "title": "Mutation関連APIおよびストリームの更新",
+        "summary": "キー付きMutationでのstatus$への変更、reset$からdismiss$/dismissAll$への置換、settled$ストリームの追加、同一パラメータ連続呼び出しの抑制廃止などのAPI変更が行われました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "dep-reactive-engine-core-030",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@virtuoso.dev/reactive-engine-core を ^0.3.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#460312180",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/data-table@0.6.5",
+    "publishedAt": "2026-11-27T08:07:03Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/data-table%400.6.5",
+    "releaseNotes": "### Patch Changes\n\n- Updated dependencies [[`9e0bdf8`](https://github.com/petyosi/react-virtuoso/commit/9e0bdf8efbc0b47c5842afc2feb344ddaae3160b)]:\n  - @virtuoso.dev/reactive-engine-core@0.3.0\n  - @virtuoso.dev/reactive-engine-react@1.0.0",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "特別移行作業は不要です。",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "dep-update-9e0bdf8",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@virtuoso.dev/reactive-engine-core を 0.3.0、@virtuoso.dev/reactive-engine-react を 1.0.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
+    "id": "petyosi/react-virtuoso#460312140",
+    "library": "React Virtuoso",
+    "repository": "petyosi/react-virtuoso",
+    "version": "@virtuoso.dev/reactive-engine-core@0.3.0",
+    "publishedAt": "2026-11-27T08:07:00Z",
+    "url": "https://github.com/petyosi/react-virtuoso/releases/tag/%40virtuoso.dev/reactive-engine-core%400.3.0",
+    "releaseNotes": "### Minor Changes\n\n- [#1587](https://github.com/petyosi/react-virtuoso/pull/1587) [`9e0bdf8`](https://github.com/petyosi/react-virtuoso/commit/9e0bdf8efbc0b47c5842afc2feb344ddaae3160b) Thanks [@atrium-ladyx](https://github.com/apps/atrium-ladyx)! - Add Promise operators for writes: `coalescePromise` keeps one request in flight and sends only the newest waiting input, with an optional `merge` for partial updates; `concatMapPromise` runs every input in order; `exhaustMapPromise` ignores inputs while work runs, for actions where a second request would be a duplicate. All three accept a `key` so they apply per record, and `switchMapPromise` accepts `key` as well.",
+    "breaking": false,
+    "impact": "low",
+    "migration": {
+      "required": false,
+      "summary": "",
+      "steps": []
+    },
+    "changes": [
+      {
+        "id": "PR1587",
+        "category": "feature",
+        "title": "書き込み用Promiseオペレータの追加",
+        "summary": "書き込み処理向けにcoalescePromise、concatMapPromise、exhaustMapPromiseの3つのPromiseオペレータを追加しました。また、これらのオペレータおよびswitchMapPromiseにおいて、レコードごとに適用できるkeyパラメータをサポートしました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
+  },
+  {
     "id": "vitejs/vite#459290910",
     "library": "Vite",
     "repository": "vitejs/vite",
@@ -2870,13 +3080,34 @@
     "url": "https://github.com/TanStack/router/releases/tag/%40tanstack/react-start-rsc%400.1.68",
     "releaseNotes": "### Patch Changes\n\n-   [#8919](https://github.com/TanStack/router/pull/8919) [`e7358c3`](https://github.com/TanStack/router/commit/e7358c36d8cde5275fc3c32cd5fd5bbf7ecc30f9) - Raise the minimum RSC bundler peer dependencies to versions with the React Server Components fixes for GHSA-xqc2-xf4c-x3h3 (CVE-2026-126187, unauthenticated RCE) and GHSA-h3gv-c5rc-p453 (server function DoS):\n    -   `@vitejs/plugin-rsc` to `>=0.5.38` (GHSA-59pf-q495-3c99), which vendors a fixed `react-server-dom-webpack`.\n    -   `react-server-dom-rspack` to `>=0.1.1`, the first release built from React sources that include the fix.\n\n-   Updated dependencies \\[[`0b6d4f3`](https://github.com/TanStack/router/commit/0b6d4f3f6b42e704555d9ff0014ddbf8b44f8e09), [`c156097`](https://github.com/TanStack/router/commit/c156097786b685db61f535d2779cb2a52a6af8aa), [`f870933`](https://github.com/TanStack/router/commit/f8709334ac3056d007e65bc146d94702e052434b), [`70bbd11`](https://github.com/TanStack/router/commit/70bbd11025143665ab5a391ddb44cb3917e4d2e3), [`df6ac30`](https://github.com/TanStack/router/commit/df6ac3040695ddf2ec2d5e8b4be8f63273a658a6), [`2ebc0f3`](https://github.com/TanStack/router/commit/2ebc0f35866fed7345e567cf7d0925ba3c0bcc65), [`3cc054c`](https://github.com/TanStack/router/commit/3cc054c3741d15e8cb6591b0954b315e0a2327a3)]:\n    -   @tanstack/start-plugin-core@1.172.0\n",
     "breaking": false,
-    "impact": "low",
+    "impact": "high",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "セキュリティ脆弱性に対応するため、RSCバンドラーのピア依存関係を更新する必要があります。",
+      "steps": [
+        "@vitejs/plugin-rsc を 0.5.38 以降に更新してください。",
+        "react-server-dom-rspack を使用している場合は 0.1.1 以降に更新してください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8919",
+        "category": "bugfix",
+        "title": "RSCバンドラーの最小ピア依存関係の引き上げ（セキュリティ修正）",
+        "summary": "React Server Componentsの脆弱性（未認証RCEおよびサーバー関数DoS）に対処した修正バージョンを含むように、@vitejs/plugin-rsc (>=0.5.38) および react-server-dom-rspack (>=0.1.1) への最小ピア依存関係を引き上げました。",
+        "impact": "high",
+        "breaking": false
+      },
+      {
+        "id": "deps-core-1.172.0",
+        "category": "other",
+        "title": "依存パッケージの更新",
+        "summary": "@tanstack/start-plugin-core を 1.172.0 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182318",
@@ -2890,10 +3121,20 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は不要です。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-react-router-devtools-1-167-4",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/react-router-devtoolsをバージョン1.167.4に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#451182138",
@@ -2910,7 +3151,25 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8959",
+        "category": "feature",
+        "title": "trustedTypesPolicy オプションの追加",
+        "summary": "`require-trusted-types-for 'script'` を強制するページでも DevTools を描画できるように、`trustedTypesPolicy` オプションを追加しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dep-update-1.168.4",
+        "category": "other",
+        "title": "依存ライブラリの更新",
+        "summary": "@tanstack/router-devtools-core をバージョン 1.168.4 に更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#450840540",
@@ -2920,14 +3179,60 @@
     "publishedAt": "2026-11-19T03:25:38Z",
     "url": "https://github.com/TanStack/router/releases/tag/release-2026-11-19-0325",
     "releaseNotes": "Release 2026-11-19 03:25\n\n## Changes\n\n### Features\n\n- solid-router: observe-tier attribution parity with @solidjs/router (solid-js rc.13) (#8574) (10152238ab) by @ryansolid\n- solid-router: consume server-function response metadata (#8461) (bf7f924b60) by @ryansolid\n- solid-router: declare navigations to Solid's observe tier (#8399) (9de3573f7f) by @ryansolid\n- solid-router: native SSR match transfer, hydration-claiming boot, provider-owned dispatch (#8213) (b445b89281) by @ryansolid\n- solid: named single-flight source + loadFlightTarget, the cache-agnostic trigger (#8192) (96f50d94a6) by @ryansolid\n- solid-router: delegate lazyRouteComponent to Solid 2's lazy() (#8081) (252caa8534) by @brenelz\n- solid-router: adopt Solid 2's useHead registry for head management (#8080) (b60b741a88) by @brenelz\n- integrate solid v2 query (#6938) (69da50126a) by @brenelz\n- upgrade outer-devtools-core to Solid 2.0 (868d2bfbc3) by @brenelz\n\n### Fix\n\n- solid-router-devtools: follow router state and prop changes in the Solid 2 wrappers (#8960) (f7b54c48fa) by @brenelz\n- e2e: type-check and run the new Solid streaming-ssr and dev-ssr-styles apps (8ce1f8be5a) by @brenelz\n- solid: repair e2e and ssr benchmarks after the main merge (7852ef5dfc) by @brenelz\n- react-start-rsc: bump RSC bundler deps for RSC (#8919) (e7358c36d8) by @DogPawHat\n- start-plugin-core: restore the build of the Rsbuild virtual modules (#8907) (70bbd11025) by @Sheraff\n- start-plugin-core: Rsbuild manifests list only a route's own chunks (#8876) (c156097786) by @Sheraff\n- start-plugin-core: write Rsbuild virtual modules under the app's root, not the working directory (#8868) (df6ac30406) by @Sheraff\n- start-plugin-core: refuse custom server-fn ids that never worked over HTTP, deprecate the rest outside the unreserved set (#8858) (2ebc0f3586) by @Sheraff\n- start-plugin-core: find Start libraries from Vite's root, not the working directory (#8866) (3cc054c374) by @Sheraff\n- solid-router: keep route-scoped accessors readable after navigation teardown (#7607) (81ee38eee5) by @brenelz\n- solid-router: preserve caller roles on enabled links (#8109) (d46b8ee00b) by @Fnine59\n- solid-router: don't install intent-preload listeners when preloading is off (#8179) (465d15a15d) by @russelgal\n- solid-router: respect server flag during development SSR (#8254) (a09b50cac1) by @brenelz\n- solid-router: remove router-owned Loading boundaries, ack startTransition at settlement (#8236) (cc25e82278) by @ryansolid\n- examples: migrate remaining legacy createEffect calls to Solid 2.0 two-phase signature (#8223) (c753d0a222) by @ryansolid\n- solid-start: single-flight (#8170) (a09f492463) by @birkskyum\n- solid-router: make the global loading boundary opt-in and server/client-symmetric (#8027) (41cffa00f3) by @ryansolid\n- solid-start: resolve SSR'd lazy() client assets via vite-plugin-solid's manifest (99756c0710) by @brenelz\n- solid-router: keep Transitioner hydration ids in sync between server and client (e021c7a352) by @brenelz\n- benchmarks: Solid v2 type fixes for new benchmark scenarios (2bb318bdcf) by @brenelz\n- benchmarks: adapt new solid benchmarks from main to Solid v2 (26d94d93fc) by @brenelz\n- lockfile: restore @rspack/binding@2.0.8 platform binaries (01dbb52d06) by @brenelz\n- solid-router: resolve defaultNotFoundComponent at render time to avoid hydration desync (#7734) (f9b0e57ce0) by @brenelz\n- update solid ssr benchmark types (3fe770ad17) by @brenelz\n- solid-router-v2: use TSR_DEFERRED_PROMISE (#7532) (ff136aaea6) by @birkskyum\n- solid-router: prevent HeadContent hydration warnings (#7510) (129d043f2d) by @brenelz\n- move HydrationScript to HeadContent (#7296) (67b46d7546) by @birkskyum\n- pin solid v2 beta.6 (#7171) (85eb16c6ad) by @birkskyum\n- adjust pre-release ranges to use caret (#7130) (72ebb55236) by @birkskyum\n- better rollupOptions/rolldownOptions handling (#6990) (56e28e47ce) by @birkskyum\n- use solid v2 query pre-release (#6977) (da2b8d9e96) by @birkskyum\n- vite 8 compat (dfd64e4a08)\n- Upgrade to solid v2 beta.3 (#6943) (c3e19322e3) by @brenelz\n- more tweaks (82e6d42fec) by @brenelz\n- test (0dc0cd0b9a) by @brenelz\n- down to one failure (faa3280b98) by @brenelz\n- solid-start basic e2e (187cc84d51) by @brenelz\n- e2e tests (d026877263) by @brenelz\n- work on solid v2  upgrade (59017534d8) by @brenelz\n- build (1021e6c7d8) by @brenelz\n\n### Performance\n\n- start-plugin-core: count imported modules once in the Rsbuild manifest pass (#8926) (0b6d4f3f6b) by @Sheraff\n- solid-router: proxy-free link props in the spread hot path (#7609) (51b4bd4f37) by @brenelz\n\n### Refactor\n\n- solid-router: move off sharedConfig onto Solid 2.0 public hydration APIs (solid-js rc.13) (#8569) (665e9d86a4) by @ryansolid\n- solid: retire solid-router-ssr-query — native channels carry the Router + Query pairing (#8193) (5a6935f2d5) by @ryansolid\n\n### Chore\n\n- solid: bump to solid-js 2.0.1 and @solidjs/vite-plugin 3.0.1 (#8946) (b81b95577d) by @brenelz\n- deps: update vite to 8.3.8 for GHSA-p4f5-76q4-ffq7 (#8955) (11b3bcb36d) by @DogPawHat\n- bump next to 16.4.6 for critical CVEs (2a5293f75b) by @brenelz\n- drop changesets merged in from main (7826dfa406) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.21 and @solidjs/vite-plugin 3.0.0-next.57 (#8885) (04e5e4d9e2) by @brenelz\n- pnpm: upgrade to pnpm 12 (#8912) (113b1a1f08) by @schiller-manuel\n- solid: bump to solid-js 2.0.0-rc.20 and @solidjs/vite-plugin 3.0.0-next.54 (#8837) (887caaf00c) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.16 and @solidjs/vite-plugin 3.0.0-next.51 (#8751) (acd08ef685) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.9 and @solidjs/vite-plugin 3.0.0-next.44 (#8467) (0dc3a9e3a5) by @brenelz\n- solid: bump @tanstack/solid-query to 6.0.0-rc.4 (#8465) (2946ffff52) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.8 and @solidjs/vite-plugin 3.0.0-next.43 (#8348) (8981eb7877) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.4 and @solidjs/vite-plugin 3.0.0-next.35 (#8189) (22fd367d81) by @brenelz\n- solid: bump to solid-js 2.0.0-rc.2 and @solidjs/vite-plugin 3.0.0-next.32 (#8166) (eaa2e8d5ce) by @brenelz\n- e2e: migrate selective-ssr pending-min route to Solid 2 onSettled (5c400bc32e) by @brenelz\n- bump @tanstack/solid-query to 6.0.0-beta.5 (#7702) (e56bb22fc3) by @brenelz\n- upgrade solid-js to 2.0.0-beta.15 (#7688) (259efbe530) by @brenelz\n- remove unneeded changesets (144ddc748e) by @brenelz\n- fix tests (545866dd47) by @brenelz\n- sync main (440a0c9270)\n- solid router v2 pre main sync (#7517) (0a7e958c80) by @brenelz\n- bump to solid v2 beta 10 (#7284) (401272e306) by @brenelz\n- solid v2 beta 8 (#7241) (b3fedfcd4e) by @brenelz\n- upgrade Solid to v2 beta.7 (#7210) (2332fb26f9) by @brenelz\n- sync main to pre-release branch (#7106) (bb6285d888) by @birkskyum\n- merge main to solid v2 (#7105) (14d39cea3e) by @birkskyum\n- bump solid-query and vite-plugin-solid (#7103) (15652a590d) by @birkskyum\n- upgrade solid to 2.0.0-beta.5 (#7102) (bf15f69973) by @brenelz\n- bump to solidjs/signals 0.13.8 (#7076) (5cdb8115df) by @brenelz\n- bump solid-query to 6.0.0-alpha.2 (#7020) (e9e805b744) by @2wheeh\n- bump solid-query to 6.0.0-alpha.1 (#7016) (0fb8dfa67b) by @birkskyum\n- sync main branch with store refactor (#7001) (72323492af) by @brenelz\n- use solid-query v6.0.0-alpha.0 (#6989) (f5023cac3d) by @birkskyum\n- bump solid-refresh, fix deepEqual (#6910) (9ce7f97ef2) by @brenelz\n- more fixes (32b9dfb25a) by @brenelz\n\n### Build\n\n- bundle packages with rolldown (#6931) (b95b1061d3) by @birkskyum\n\n\n## Packages\n\n- @tanstack/solid-router@2.0.0-rc.11\n- @tanstack/solid-router-devtools@2.0.0-rc.9\n- @tanstack/solid-router-ssr-query@2.0.0-rc.9\n- @tanstack/solid-start@2.0.0-rc.11\n- @tanstack/solid-start-client@2.0.0-rc.11\n- @tanstack/solid-start-server@2.0.0-rc.11\n",
-    "breaking": false,
-    "impact": "low",
+    "breaking": true,
+    "impact": "medium",
     "migration": {
-      "required": false,
-      "summary": "",
-      "steps": []
+      "required": true,
+      "summary": "@tanstack/solid-router-ssr-queryの廃止およびSolid 2.0への移行に伴う各種更新が必要です。",
+      "steps": [
+        "@tanstack/solid-router-ssr-query をプロジェクトから削除し、RouterとQueryのネイティブ連携に移行してください。",
+        "カスタム server-fn ID を使用している場合は、HTTP規格に適合する識別子へ修正してください。",
+        "Solid 2.0 RC関連パッケージおよび Vite などの依存ライブラリを最新版へアップデートしてください。"
+      ]
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "solid-2-integration-features",
+        "category": "feature",
+        "title": "Solid 2.0への各種新機能統合",
+        "summary": "observe tier連携、サーバー関数レスポンスメタデータ消費、ネイティブSSRマッチ転送、useHeadレジストリの導入などSolid 2.0に対応する機能を追加しました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "retire-solid-router-ssr-query",
+        "category": "breaking",
+        "title": "solid-router-ssr-queryパッケージの廃止",
+        "summary": "RouterとQueryの連携がネイティブチャネルで処理されるようになったため、solid-router-ssr-queryが廃止されました。",
+        "impact": "medium",
+        "breaking": true
+      },
+      {
+        "id": "start-plugin-core-server-fn-id-validation",
+        "category": "bugfix",
+        "title": "カスタムserver-fn IDの検証強化",
+        "summary": "HTTP経由で動作しない不正なカスタムserver-fn IDを拒否し、予約外文字セット以外を使用するIDの非推奨化を行いました。",
+        "impact": "medium",
+        "breaking": false
+      },
+      {
+        "id": "performance-improvements",
+        "category": "performance",
+        "title": "マニフェスト処理およびLinkコンポーネントの高速化",
+        "summary": "Rsbuildマニフェストパスにおけるモジュールカウントの最適化およびSolid RouterのLinkプロパティ展開時のパフォーマンス向上を実施しました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "dependency-updates-vite-solid",
+        "category": "other",
+        "title": "依存ライブラリのセキュリティ修正と更新",
+        "summary": "Vite 8.3.8へのアップデートによる脆弱性対応のほか、Solid 2.0関連パッケージやpnpm 12への更新を行いました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#450840186",
@@ -2944,7 +3249,17 @@
       "summary": "",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "dep-update-1.169.6",
+        "category": "other",
+        "title": "依存関係の更新",
+        "summary": "@tanstack/start-plugin-core および @tanstack/react-start-rsc の依存関係を最新バージョンに更新しました。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#450840009",
@@ -2958,10 +3273,28 @@
     "impact": "low",
     "migration": {
       "required": false,
-      "summary": "",
+      "summary": "移行作業は必要ありません。",
       "steps": []
     },
-    "changes": []
+    "changes": [
+      {
+        "id": "8889",
+        "category": "bugfix",
+        "title": "Rsbuild開発時の外部サーバー環境におけるSSRスタイルシートリンクの修正",
+        "summary": "ビルドプロセスの外部でサーバー環境が実行される場合（rsbuild-plugin-cloudflareを用いたworkerdなど）において、Rsbuild開発時のSSRにスタイルシートリンクが含まれるように修正されました。",
+        "impact": "low",
+        "breaking": false
+      },
+      {
+        "id": "8892",
+        "category": "bugfix",
+        "title": "Rsbuild + RSC開発時のSSRスタイルシートリンクの修正",
+        "summary": "React Server Componentsを使用したRsbuild開発時に、SSRでスタイルシートリンクが含まれない問題を修正しました。クライアントビルド完了時にサーバーマニフェストモジュールを再構築するように改善されています。",
+        "impact": "low",
+        "breaking": false
+      }
+    ],
+    "aiAnalyzed": true
   },
   {
     "id": "TanStack/router#450839951",
